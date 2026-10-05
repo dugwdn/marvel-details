@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+# Sitemaps
+Sitemap: https://marvel-details.workers.dev/sitemap.xml
+
+# Crawl delay (optional, not all bots respect)
+Crawl-delay: 0
+Request-rate: 30/60
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /

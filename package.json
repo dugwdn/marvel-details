@@ -1,0 +1,22 @@
+{
+  "name": "marvel-details",
+  "version": "1.0.0",
+  "description": "Hidden details and analysis from Marvel movies",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "keywords": [
+    "marvel",
+    "mcu",
+    "easter-eggs",
+    "analysis"
+  ],
+  "author": "Doug",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

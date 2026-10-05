@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/robots.txt",
+    "/ads.txt",
+    "/sitemap.xml",
+    "/*.html",
+    "/articles/*",
+    "/movies/*"
+  ]
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details You Missed - Hidden Details from Marvel Movies</title>
+    <meta name="description" content="Discover hidden details, easter eggs, and analysis from Marvel movies. Featuring in-depth articles on Iron Man, The Avengers, Endgame, and more.">
+    <meta name="keywords" content="marvel easter eggs, iron man details, avengers hidden details, mcu analysis">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Details You Missed - Hidden Marvel Movie Details">
+    <meta property="og:description" content="Discover hidden details, easter eggs, and analysis from Marvel movies.">
+    <meta property="og:url" content="https://marvel-details.workers.dev/">
+    <meta property="og:image" content="https://marvel-details.workers.dev/og-image.jpg">
+    <meta property="og:site_name" content="Details You Missed">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Details You Missed",
+        "url": "https://marvel-details.workers.dev/",
+        "description": "Hidden details and analysis from Marvel movies",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://marvel-details.workers.dev/search?q={search_term_string}"
+            }
+        }
+    }
+    </script>
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #222;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background: #f0f0f0;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: #e0e0e0;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .article-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: #000;
+        }
+
+        .article-card .meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .article-card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .ad-slot {
+            background: #f9f9f9;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .movie-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .movie-card-content {
+            padding: 1.5rem;
+        }
+
+        .movie-card h3 {
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        .movie-card .details-count {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #ffc107;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Details You Missed</h1>
+        <p>Hidden details, easter eggs & analysis from Marvel movies</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/articles">Articles</a>
+        <a href="/movies">Movies</a>
+        <a href="/about">About</a>
+        <a href="/more">More</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Newest Findings</h2>
+
+        <div class="article-grid">
+            <a href="/articles/iron-man-2-green-drink" class="article-card">
+                <h3>What Is the Green Drink Tony Stark Drinks in Iron Man 2?</h3>
+                <div class="meta">By Alex Continuity • Oct 5, 2026</div>
+                <p>Explore the chlorophyll drink Tony consumes for palladium poisoning and how it connects to Age of Ultron.</p>
+            </a>
+
+            <a href="/articles/avengers-loki-scepter-mind-stone" class="article-card">
+                <h3>The Scepter's Secret: How the Mind Stone Corrupted Loki</h3>
+                <div class="meta">By Maya Dialogue • Oct 4, 2026</div>
+                <p>Evidence from The Avengers showing how the Mind Stone influenced Loki's choices.</p>
+            </a>
+
+            <a href="/articles/endgame-final-portal-detail" class="article-card">
+                <h3>The Hidden Detail in Avengers Endgame's Final Portal Scene</h3>
+                <div class="meta">By Ross Props • Oct 3, 2026</div>
+                <p>A subtle visual detail that reveals something about the quantum realm connection.</p>
+            </a>
+        </div>
+
+        <div class="ad-slot">
+            <strong>Advertisement Slot 1</strong><br>300x250 or 728x90 ad placement
+        </div>
+
+        <h2 class="section-title">Featured Movies</h2>
+
+        <div class="movie-grid">
+            <a href="/movies/iron-man-1" class="movie-card">
+                <div style="background: #1a1a1a; height: 150px; display: flex; align-items: center; justify-content: center; color: #ffc107;">
+                    Iron Man (2008)
+                </div>
+                <div class="movie-card-content">
+                    <h3>Iron Man</h3>
+                    <p><span class="details-count">8 Details</span></p>
+                    <p>Easter eggs, deleted scenes, and hidden continuity details.</p>
+                </div>
+            </a>
+
+            <a href="/movies/iron-man-2" class="movie-card">
+                <div style="background: #1a1a1a; height: 150px; display: flex; align-items: center; justify-content: center; color: #ffc107;">
+                    Iron Man 2 (2010)
+                </div>
+                <div class="movie-card-content">
+                    <h3>Iron Man 2</h3>
+                    <p><span class="details-count">9 Details</span></p>
+                    <p>Tony's poisoning arc and hidden Avengers references.</p>
+                </div>
+            </a>
+
+            <a href="/movies/iron-man-3" class="movie-card">
+                <div style="background: #1a1a1a; height: 150px; display: flex; align-items: center; justify-content: center; color: #ffc107;">
+                    Iron Man 3 (2013)
+                </div>
+                <div class="movie-card-content">
+                    <h3>Iron Man 3</h3>
+                    <p><span class="details-count">7 Details</span></p>
+                    <p>PTSD themes and the Mandarin twist explained.</p>
+                </div>
+            </a>
+
+            <a href="/movies/avengers-1" class="movie-card">
+                <div style="background: #1a1a1a; height: 150px; display: flex; align-items: center; justify-content: center; color: #ffc107;">
+                    The Avengers (2012)
+                </div>
+                <div class="movie-card-content">
+                    <h3>The Avengers</h3>
+                    <p><span class="details-count">12 Details</span></p>
+                    <p>Character setup details and Thanos references.</p>
+                </div>
+            </a>
+
+            <a href="/movies/endgame" class="movie-card">
+                <div style="background: #1a1a1a; height: 150px; display: flex; align-items: center; justify-content: center; color: #ffc107;">
+                    Endgame (2019)
+                </div>
+                <div class="movie-card-content">
+                    <h3>Avengers: Endgame</h3>
+                    <p><span class="details-count">15 Details</span></p>
+                    <p>Time heist details and callback moments analyzed.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="ad-slot">
+            <strong>Advertisement Slot 2</strong><br>300x250 or 728x90 ad placement
+        </div>
+
+        <h2>How It Works</h2>
+        <p>We analyze Marvel movies in depth, finding the hidden details, easter eggs, and continuity threads that connect the MCU. Each article focuses on one specific detail with sources, timestamps, and connections to other films.</p>
+
+        <p>Whether it's a character's callback line, a subtle visual element, or a deleted scene that changed the story, Details You Missed explores the craft behind these films.</p>
+
+        <div class="ad-slot">
+            <strong>Advertisement Slot 3</strong><br>300x250 or 728x90 ad placement
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Details You Missed. Not affiliated with Marvel or Disney.</p>
+        <p><a href="/about" style="color: #ffc107; text-decoration: none;">About</a> | <a href="/articles" style="color: #ffc107; text-decoration: none;">All Articles</a> | <a href="/sitemap.xml" style="color: #ffc107; text-decoration: none;">Sitemap</a></p>
+        <p class="disclaimer">Articles are AI-assisted and fact-checked. <a href="/about" style="color: #ffc107;">Learn more about our writers.</a></p>
+    </footer>
+</body>
+</html>

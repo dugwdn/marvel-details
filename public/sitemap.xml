@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home Page -->
+    <url>
+        <loc>https://marvel-details.workers.dev/</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Main Pages -->
+    <url>
+        <loc>https://marvel-details.workers.dev/about</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/movies</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Article Pages -->
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/iron-man-2-green-drink</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/avengers-loki-scepter-mind-stone</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/endgame-final-portal-detail</loc>
+        <lastmod>2026-10-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/iron-man-1-first-armor-test</loc>
+        <lastmod>2026-10-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/avengers-black-widow-intel</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/iron-man-3-deleted-scene-mandarin</loc>
+        <lastmod>2026-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/endgame-final-fight-continuity</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/avengers-post-credits-setup</loc>
+        <lastmod>2026-09-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/iron-man-2-whiplash-technology</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/articles/endgame-quantum-realm-color</loc>
+        <lastmod>2026-09-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Movie Hub Pages -->
+    <url>
+        <loc>https://marvel-details.workers.dev/movies/iron-man-1</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/movies/iron-man-2</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/movies/iron-man-3</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/movies/avengers-1</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://marvel-details.workers.dev/movies/endgame</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+</urlset>
