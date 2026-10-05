@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rabbit Holes - Marvel Details</title>
+  <meta name="description" content="Explore thematic deep dives into MCU character arcs, plot implications, and hidden connections. Progressive disclosure for casual to expert-level analysis.">
+  <meta name="theme-color" content="#dc143c">
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23dc143c'>🕳️</text></svg>">
+  <link rel="stylesheet" href="/css/rabbit-holes.css">
+</head>
+<body>
+  <div class="holes-container">
+    <div class="holes-header">
+      <h1>Rabbit Holes</h1>
+      <p>Explore thematic deep dives into the MCU. Pick your difficulty level and dive in.</p>
+    </div>
+
+    <div class="search-filter-section">
+      <div class="search-box">
+        <label for="hole-search">Search Holes</label>
+        <input
+          type="text"
+          id="hole-search"
+          placeholder="Search by title, character, or topic..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-group">
+          <label for="difficulty-filter">Difficulty Level</label>
+          <select id="difficulty-filter">
+            <option value="all">All Levels</option>
+            <option value="casual">Casual (10-12 min)</option>
+            <option value="intermediate">Intermediate (12-15 min)</option>
+            <option value="advanced">Advanced (14-20 min)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Filter by Movies</label>
+          <div class="movie-filters">
+            <div class="movie-filters-list">
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="iron-man-1" id="movie-im1">
+                <label for="movie-im1">Iron Man (2008)</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="iron-man-2" id="movie-im2">
+                <label for="movie-im2">Iron Man 2</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="iron-man-3" id="movie-im3">
+                <label for="movie-im3">Iron Man 3</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="avengers-1" id="movie-av1">
+                <label for="movie-av1">The Avengers</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="avengers-age-of-ultron" id="movie-aou">
+                <label for="movie-aou">Age of Ultron</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="captain-america-civil-war" id="movie-cw">
+                <label for="movie-cw">Civil War</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="avengers-infinity-war" id="movie-iw">
+                <label for="movie-iw">Infinity War</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="avengers-endgame" id="movie-eg">
+                <label for="movie-eg">Endgame</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="thor-1" id="movie-thor1">
+                <label for="movie-thor1">Thor</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="thor-2-dark-world" id="movie-thor2">
+                <label for="movie-thor2">Dark World</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="thor-3-ragnarok" id="movie-thor3">
+                <label for="movie-thor3">Ragnarok</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="multiverse-of-madness" id="movie-mom">
+                <label for="movie-mom">Multiverse of Madness</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="ant-man-quantumania" id="movie-amq">
+                <label for="movie-amq">Ant-Man: Quantumania</label>
+              </div>
+              <div class="movie-filter-item">
+                <input type="checkbox" name="movie-filter" value="loki-series" id="movie-loki">
+                <label for="movie-loki">Loki Series</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-count"></div>
+
+    <div id="holes-container">
+      <!-- Populated by JavaScript -->
+    </div>
+  </div>
+
+  <script src="/js/rabbit-holes.js"></script>
+</body>
+</html>

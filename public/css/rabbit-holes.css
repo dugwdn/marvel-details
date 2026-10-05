@@ -1,0 +1,624 @@
+/**
+ * Rabbit Holes - Marvel Details Styling
+ * Deep dives with progressive disclosure and responsive grid layout
+ */
+
+/* Core Layout */
+.holes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.holes-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.holes-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.holes-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-box {
+  margin-bottom: 1.5rem;
+}
+
+.search-box label,
+.filter-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+#hole-search {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#hole-search:focus {
+  outline: none;
+  border-color: #dc143c;
+  box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
+}
+
+/* Filter Row */
+.filter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #dc143c;
+  box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
+}
+
+.filter-group select:hover {
+  border-color: #999;
+}
+
+/* Movie Filter Checkboxes */
+.movie-filters {
+  margin-top: 1rem;
+}
+
+.movie-filters-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.movie-filter-item {
+  display: flex;
+  align-items: center;
+}
+
+.movie-filter-item input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.movie-filter-item label {
+  margin: 0;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Result Count */
+#result-count {
+  display: block;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid Layout */
+#holes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  #holes-container {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hole Card Styling */
+.hole-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.hole-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-color: #dc143c;
+}
+
+.hole-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hole-card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.hole-card-header h3 a {
+  color: #dc143c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hole-card-header h3 a:hover {
+  color: #a00;
+  text-decoration: underline;
+}
+
+/* Difficulty Badges */
+.difficulty-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.difficulty-casual {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.difficulty-intermediate {
+  background-color: #ffe0b2;
+  color: #e65100;
+}
+
+.difficulty-advanced {
+  background-color: #ffcccc;
+  color: #b71c1c;
+}
+
+/* Hole Content */
+.hole-tagline {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  margin: 0 0 0.75rem 0;
+}
+
+.hole-summary {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Hole Metadata */
+.hole-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hole-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hole-meta strong {
+  color: #1a1a1a;
+}
+
+/* Characters List */
+.hole-characters {
+  margin-bottom: 1rem;
+}
+
+.hole-characters strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+}
+
+.characters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.char-tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Actions */
+.hole-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.btn-explore {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background-color: #dc143c;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-explore:hover {
+  background-color: #a00;
+}
+
+.btn-expand-levels {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  background-color: transparent;
+  color: #dc143c;
+  border: 1px solid #dc143c;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-expand-levels:hover {
+  background-color: #dc143c;
+  color: white;
+}
+
+/* Expanded Card State */
+.hole-card.expanded {
+  grid-column: 1 / -1;
+}
+
+/* Levels Container */
+.levels-container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Level Styling */
+.level-container {
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #dc143c;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.level-1 {
+  border-left-color: #4caf50;
+}
+
+.level-2 {
+  border-left-color: #ff9800;
+}
+
+.level-3 {
+  border-left-color: #dc143c;
+}
+
+/* Level Toggle Button */
+.level-toggle {
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.level-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+.level-number {
+  display: inline-block;
+  font-weight: 700;
+  color: #dc143c;
+  min-width: 60px;
+}
+
+.level-1 .level-number {
+  color: #4caf50;
+}
+
+.level-2 .level-number {
+  color: #ff9800;
+}
+
+.level-3 .level-number {
+  color: #dc143c;
+}
+
+.level-title {
+  flex-grow: 1;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.toggle-icon {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #dc143c;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.level-1 .toggle-icon {
+  color: #4caf50;
+}
+
+.level-2 .toggle-icon {
+  color: #ff9800;
+}
+
+.level-3 .toggle-icon {
+  color: #dc143c;
+}
+
+/* Level Content */
+.level-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+}
+
+.level-content.expanded {
+  max-height: 2000px;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.level-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* No Results */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.no-results p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.no-results-hint {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* Error Message */
+.error-message {
+  grid-column: 1 / -1;
+  background-color: #ffebee;
+  border: 1px solid #ef5350;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.error-message p {
+  color: #c62828;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .holes-header h1 {
+    font-size: 2rem;
+  }
+
+  .hole-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hole-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-explore {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-expand-levels {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-filter-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .hole-meta {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .movie-filters-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .holes-header h1 {
+    color: #e0e0e0;
+  }
+
+  .search-filter-section {
+    background: #2a2a2a;
+  }
+
+  #hole-search {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+
+  #hole-search:focus {
+    border-color: #dc143c;
+  }
+
+  .filter-group select {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+
+  .hole-card {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+
+  .hole-card-header h3 {
+    color: #e0e0e0;
+  }
+
+  .hole-tagline {
+    color: #aaa;
+  }
+
+  .hole-summary {
+    color: #ccc;
+  }
+
+  .hole-meta {
+    color: #999;
+    border-bottom-color: #444;
+  }
+
+  .hole-meta strong {
+    color: #e0e0e0;
+  }
+
+  .char-tag {
+    background-color: #1a1a1a;
+    color: #ddd;
+  }
+
+  .levels-container {
+    border-top-color: #444;
+  }
+
+  .level-container {
+    background-color: #1a1a1a;
+  }
+
+  .level-toggle:hover {
+    background-color: #1a1a1a;
+  }
+
+  .level-title {
+    color: #e0e0e0;
+  }
+
+  .level-content p {
+    color: #bbb;
+  }
+
+  .no-results p {
+    color: #aaa;
+  }
+
+  .no-results-hint {
+    color: #777;
+  }
+
+  .error-message {
+    background-color: #330000;
+    border-color: #662222;
+  }
+
+  .error-message p {
+    color: #ff8888;
+  }
+}
