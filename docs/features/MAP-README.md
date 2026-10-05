@@ -4,7 +4,7 @@
 
 The Universe Map is an interactive network visualization that displays the interconnected relationships between characters, movies, artifacts, and events in the Marvel Cinematic Universe (MCU). It uses the Vis.js library to render an animated, physics-based network graph.
 
-**Live URL:** `https://marvel-details.workers.dev/map`
+**Live URL:** `https://marvel-details.pages.dev/map`
 
 ## Data Structure
 

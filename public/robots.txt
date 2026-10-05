@@ -4,7 +4,7 @@ Disallow: /admin
 Disallow: /private
 
 # Sitemaps
-Sitemap: https://marvel-details.workers.dev/sitemap.xml
+Sitemap: https://marvel-details.pages.dev/sitemap.xml
 
 # Crawl delay (optional, not all bots respect)
 Crawl-delay: 0
