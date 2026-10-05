@@ -7,7 +7,7 @@ his accounts; the rest Claude does on a branch with a PR.
 1. **Doug: publish PR #1.** It fixes the blank map, dark-mode text, the
    catch-all redirect and the old addresses, and removes 77 links to pages
    that don't exist (7 unwritten articles, related-article links on 34
-   callback pages, Contact, More and writer links). It also adds a link
+   callback pages, Contact, More and writer links), adds a favicon, and adds a link
    check that runs on every PR. Until it's published, the live map is blank.
 2. **Doug: GA4.** Create a property (or pick one) and send the
    measurement ID; Claude swaps it into the pages.
@@ -23,13 +23,8 @@ his accounts; the rest Claude does on a branch with a PR.
    Black Widow's intel, the Iron Man 3 Mandarin scene, Endgame's final
    fight, the Avengers post-credits scene, Whiplash's whips, the Quantum
    Realm's color), each with sources, then list them again.
-6. Add a favicon (every page currently requests `/favicon.ico` and gets a 404).
-7. Remove the unused Workers files (`src/`, `wrangler.toml`) and the
-   leftover summary files (`BUILD_SUMMARY.txt`, `PHASE1_SUMMARY.txt`,
-   `FILE_STRUCTURE.txt`, `MANIFEST.md`, `QUICKSTART.md`,
-   `DEPLOY_INSTRUCTIONS.md`); `RUNBOOK.md` replaces them.
 
 ## Later
-8. Phase 2 films, picked by search demand (Keyword Planner) rather than
+6. Phase 2 films, picked by search demand (Keyword Planner) rather than
    release order.
-9. Phase 3: ads (AdSense) once traffic justifies it; real `ads.txt`.
+7. Phase 3: ads (AdSense) once traffic justifies it; real `ads.txt`.

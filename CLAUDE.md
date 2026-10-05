@@ -31,13 +31,11 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
-  not people. No favicon.
-- `src/index.js` and `wrangler.toml` are left over from a Workers plan and
-  are not used by Pages.
+  not people.
 
 ## Plan
-See `ROADMAP.md`. Next without Doug: write the 7 missing articles, add a
-favicon, remove leftover files. Waiting on Doug: publish PR #1, a real GA4 ID, the domain
+See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
+Waiting on Doug: publish PR #1, a real GA4 ID, the domain
 move, and the pen-name question.
 
 ## Working rules

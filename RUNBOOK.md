@@ -5,7 +5,7 @@ How to preview, publish, roll back and fix the live site.
 ## Preview on the laptop
 ```
 cd C:\Users\doug\Documents\marvel-details
-npx wrangler pages dev public --port 8788
+npm run dev        (same as: npx wrangler pages dev public --port 8788)
 ```
 Open http://localhost:8788. This behaves like Pages, including 404s.
 

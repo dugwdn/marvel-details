@@ -14,7 +14,7 @@ Revisit if that becomes a regular chore.
 by direct upload with wrangler from Doug's laptop.
 **Why:** free, global, and Doug's other sites already live there.
 **Cost:** no automatic deploy on merge; someone runs the publish command.
-(The first plan was Cloudflare Workers; `src/index.js` is left from it.)
+(The first plan was Cloudflare Workers; those files were removed.)
 
 ## ADR-003: Feature data in JSON, read in the browser (2026-10-05)
 **Decision:** each feature loads `/data/<feature>.json` with `fetch`.

@@ -39,8 +39,9 @@ change the matching page.
 - Pages "pretty URLs": `/movies/endgame.html` redirects to `/movies/endgame`.
 - With PR #1: `404.html` handles unknown addresses (without it, Pages
   serves the home page for every unknown address).
-- `src/index.js` and `wrangler.toml` are from an earlier Workers plan and
-  aren't used. Remove them once the Pages setup is settled.
+- The repo has no Workers code; an earlier Workers setup (`src/index.js`,
+  `wrangler.toml`) was removed in favor of Pages. `npm run dev` and
+  `npm run deploy` wrap the wrangler Pages commands.
 
 ## Styling
 Each feature has its own stylesheet with a `prefers-color-scheme: dark`
