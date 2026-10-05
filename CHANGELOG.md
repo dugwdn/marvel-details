@@ -4,6 +4,11 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
+- Newest-movie banner (not live yet): a big home page banner for
+  Spider-Man: Brand New Day linking to a new easter eggs article
+  (`/articles/spider-man-brand-new-day-easter-eggs`). Each reported egg is
+  labeled "Reported" until we check it. Banner art is our own abstract
+  red gradient and city silhouette: no characters, logos or posters.
 - New look (not live yet): in the style Marvel fans expect. Light content
   area with black bars (dark mode follows the device), bold condensed
   uppercase headings (Barlow Condensed), red accent, black top bar
