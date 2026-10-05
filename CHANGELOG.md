@@ -4,6 +4,9 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
+- Green drink article: the Age of Ultron return and the "different shade"
+  idea are now marked unconfirmed; placeholder source links replaced with
+  real ones.
 - Ads: three AdSense boxes on every page, hidden until filled; real
   `ads.txt`; AdSense account meta tag. Placeholder "Advertisement Slot"
   boxes removed.
