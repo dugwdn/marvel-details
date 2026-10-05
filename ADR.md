@@ -35,3 +35,7 @@ colors, linked on every feature page.
 **Why:** the feature stylesheets darkened their cards but not the page, so
 headings were light-on-light for anyone using dark mode.
 **Cost:** one more stylesheet request per feature page.
+
+
+## ADR-006: Marvel-fan look, built from our own parts (2026-10-05)
+Doug wants the site to feel like Marvel's own site because the visitors are Marvel fans, without using anything illegally. Decision: a dark theme with bold condensed uppercase type, a single red accent and image-style poster tiles, all in `public/css/theme.css`, loaded last on every page. We use free fonts (Oswald, Inter), a type-only wordmark "DETAILS YOU MISSED" and no Marvel logos, artwork, screenshots or the red box logo shape. A general style (dark, bold, red) is not protected; a confusingly similar logo or copied assets would be. The footer and About page keep "not affiliated with Marvel or Disney".
