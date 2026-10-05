@@ -4,6 +4,9 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
+- **Live:** published commit ecf0b8b (PRs #1, #2, #3, #4) to
+  https://marvel-details.pages.dev from Doug's laptop. Checked: home, map
+  (draws), scenes, green drink article, 404 on a made-up address, ads.txt.
 - Green drink article: the Age of Ultron return and the "different shade"
   idea are now marked unconfirmed; placeholder source links replaced with
   real ones.
