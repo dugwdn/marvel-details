@@ -61,7 +61,7 @@
 
 #scene-search:focus {
   outline: none;
-  border-color: #ffc107;
+  border-color: #e0303c;
   box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
 }
 
@@ -90,7 +90,7 @@
 
 .filter-group select:focus {
   outline: none;
-  border-color: #ffc107;
+  border-color: #e0303c;
   box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
 }
 
@@ -124,7 +124,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-left: 4px solid #ffc107;
+  border-left: 4px solid #e0303c;
 }
 
 .scene-card:hover {
@@ -397,7 +397,7 @@
 
   #scene-search:focus,
   .filter-group select:focus {
-    border-color: #ffc107;
+    border-color: #e0303c;
   }
 
   .scene-card-header {
