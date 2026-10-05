@@ -1,19 +1,31 @@
-/* Site theme: dark, bold, comic-movie feel that fans expect, built from our
-   own choices. Original wordmark (plain type, no logo image), free Google
-   fonts (Oswald for headings, Inter for text), one red accent. No Marvel
-   logos, art or assets. Loaded last on every page so it wins over the
-   pages' inline styles. */
+/* Site theme in the style Marvel fans know (black bars, condensed
+   uppercase type, one red accent), built only from our own parts: a
+   type-only wordmark, free Google fonts (Barlow Condensed for headings,
+   Barlow for text, both DIN-like), our own red. No Marvel logos, art,
+   fonts, code or assets. Light content area by default; dark when the
+   visitor's device is in dark mode. Header, nav and footer stay black in
+   both. Loaded last on every page so it wins over inline styles. */
 :root {
-  --dym-bg: #0e0e11;
-  --dym-surface: #18181d;
-  --dym-surface-2: #212128;
-  --dym-line: #2e2e37;
-  --dym-text: #ececf1;
-  --dym-muted: #a6a6b3;
+  --dym-bg: #f2f2f3;
+  --dym-surface: #ffffff;
+  --dym-surface-2: #ebebee;
+  --dym-line: #d9d9de;
+  --dym-text: #151517;
+  --dym-muted: #5c5c66;
   --dym-red: #e0303c;
   --dym-red-dark: #b3202b;
-  --dym-head: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-  --dym-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --dym-head: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  --dym-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dym-bg: #0e0e11;
+    --dym-surface: #18181d;
+    --dym-surface-2: #212128;
+    --dym-line: #2e2e37;
+    --dym-text: #ececf1;
+    --dym-muted: #a6a6b3;
+  }
 }
 
 html body {
@@ -110,7 +122,7 @@ html body .article-card:hover, html body .movie-card:hover, html body [class*="-
   border-color: var(--dym-red);
   box-shadow: 0 10px 24px rgba(0,0,0,.5);
 }
-html body .article-card h3, html body .article-card h3 a { color: #fff; }
+html body .article-card h3, html body .article-card h3 a { color: var(--dym-text); }
 
 /* Muted text that pages set in light-mode grays */
 html body p, html body li, html body .description, html body .movie-detail,
@@ -127,7 +139,7 @@ html body small, html body .article-card .meta, html body .article-card p {
 /* Buttons and filters */
 html body button, html body .filter-btn, html body .back-button {
   background: var(--dym-surface-2);
-  color: #fff;
+  color: var(--dym-text);
   border: 1px solid var(--dym-line);
   font-family: var(--dym-head);
   text-transform: uppercase;
@@ -170,7 +182,7 @@ html body .movie-card > div[style] {
   padding: 0 .75rem;
 }
 html body .movie-card-content { background: var(--dym-surface); }
-html body .movie-card h3, html body .movie-card-content h3 { color: #fff; }
+html body .movie-card h3, html body .movie-card-content h3 { color: var(--dym-text); }
 html body .movie-card .details-count { color: var(--dym-red); }
 
 /* Panels that pages set to white or light gray */
@@ -215,15 +227,15 @@ html body .map-panel-left *, html body .map-panel-right * {
 }
 html body .character-card .character-role, html body .hole-card .difficulty-badge,
 html body .scene-card .format-badge, html body .callback-card .callback-type,
-html body .callback-card .tag, html body .hole-card .char-tag { color: #fff !important; }
+html body .callback-card .tag, html body .hole-card .char-tag { color: var(--dym-text) !important; }
 html body .character-role, html body .difficulty-badge { color: #fff !important; background: var(--dym-red-dark) !important; }
 html body .format-badge, html body .char-tag, html body .tag, html body .arc-stage { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line); }
 html body .read-more, html body .source-link, html body .stat-number, html body .pen-name { color: var(--dym-red) !important; }
 html body footer p, html body footer { color: var(--dym-muted) !important; }
 html body .article-card p, html body .timestamp, html body .hole-tagline, html body .scene-where { color: var(--dym-muted) !important; }
-html body .map-container button, html body .zoom-controls button, html body [class*="zoom"] button { background: var(--dym-surface-2) !important; color: #fff !important; border: 1px solid var(--dym-line) !important; }
+html body .map-container button, html body .zoom-controls button, html body [class*="zoom"] button { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line) !important; }
 html body .map-container .loading, html body #map .loading, html body .map-loading { background: transparent !important; color: var(--dym-muted) !important; }
-html body #zoom-in, html body #zoom-out, html body #reset-zoom { background: var(--dym-surface-2) !important; color: #fff !important; border: 1px solid var(--dym-line) !important; }
+html body #zoom-in, html body #zoom-out, html body #reset-zoom { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line) !important; }
 html body #stats-container, html body #stats-container * { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; }
 html body select, html body input { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line) !important; }
 html body .movie-card > div:first-child:not(.movie-card-content) {
@@ -237,3 +249,19 @@ html body .movie-card-image { background: linear-gradient(160deg, var(--dym-red-
 @media (max-width: 600px) {
   html body > nav a, html body nav:not(.navigation) a { margin: 0 .5rem; padding: .35rem 0; display: inline-block; font-size: .85rem; }
 }
+
+/* Black bars keep white text in both modes */
+html body > header h1, html body > header h1 *, html body > nav a, html body nav:not(.navigation) a { color: #fff !important; }
+html body > header p { color: #b9b9c2 !important; }
+html body footer, html body footer p { color: #b9b9c2 !important; }
+html body footer a { color: #fff !important; }
+
+/* Light-mode fixes found by the contrast scan */
+html body .character-card .character-role, html body .hole-card .difficulty-badge,
+html body div.character-role, html body span.difficulty-badge { color: #fff !important; background: var(--dym-red-dark) !important; }
+html body header.page-header, html body header.page-header * { color: #fff !important; }
+html body header.page-header p { color: #b9b9c2 !important; }
+html body footer .disclaimer { background: transparent !important; }
+html body .navigation .nav-link { color: var(--dym-red) !important; }
+html body .chapter-title-level { color: var(--dym-muted) !important; }
+html body .expand-icon { color: var(--dym-red) !important; }

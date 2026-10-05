@@ -4,8 +4,9 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
-- New look (not live yet): dark theme in the style Marvel fans expect.
-  Bold condensed uppercase headings (Oswald), red accent, black top bar
+- New look (not live yet): in the style Marvel fans expect. Light content
+  area with black bars (dark mode follows the device), bold condensed
+  uppercase headings (Barlow Condensed), red accent, black top bar
   with our own type-only wordmark, red-to-black poster tiles for movies.
   Original: no Marvel logos, art or assets. `public/css/theme.css`.
 - **Live:** published commit ecf0b8b (PRs #1, #2, #3, #4) to
