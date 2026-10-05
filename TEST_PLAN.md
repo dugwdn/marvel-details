@@ -3,8 +3,9 @@
 Last updated 2026-10-05.
 
 ## Automated
-None in the repo yet. Roadmap item 7 adds a link check that fails when a
-page links to an address with no file behind it, and runs it on every PR.
+With PR #1: `node tools/check-links.mjs` fails when a page in `public/`
+links to a site address with no file behind it, or the sitemap lists one.
+The "Check links" GitHub workflow runs it on every pull request.
 
 ## Before every publish
 1. Preview with `npx wrangler pages dev public --port 8788` (see RUNBOOK).

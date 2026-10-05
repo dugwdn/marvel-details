@@ -26,8 +26,8 @@ each item also has its own static detail page.
 **Decision:** remove `_redirects` (`/* /index.html 200`) and add `404.html`.
 **Why:** the catch-all made every mistyped or missing address show the home
 page with a 200, which hides broken links and reads as "soft 404" to Google.
-**Cost:** existing links to unwritten articles now show the 404 page until
-those links are fixed (roadmap item 2).
+**Cost:** links to unwritten articles would now show the 404 page, so PR #1
+also removes them and adds a link check that fails a PR on any new one.
 
 ## ADR-005: Shared dark-mode page base (2026-10-05, PR #1)
 **Decision:** `css/style.css` holds the dark page background and text

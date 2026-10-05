@@ -10,7 +10,8 @@ merged-but-unpublished work.
   previous production upload was commit 3aad3a3, from before the features.)
 - **Not live (PR #1, draft):** Universe Map draws again; readable dark mode
   on feature pages; real 404 page; sitemap and robots point at
-  marvel-details.pages.dev; feature READMEs moved to `docs/features/`.
+  marvel-details.pages.dev; feature READMEs moved to `docs/features/`;
+  77 links to pages that don't exist removed; link check on every PR.
 - Added the standard docs: CLAUDE.md, PRD, TRD, ADR, ROADMAP, RUNBOOK,
   TEST_PLAN, CHANGELOG.
 

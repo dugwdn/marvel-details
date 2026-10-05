@@ -26,18 +26,18 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Open draft PR #1** fixes the blank Universe Map, unreadable dark-mode
   text, the catch-all redirect that turned every bad address into the home
   page, and the sitemap/robots pointing at a non-existent workers.dev host.
-  Not published yet.
-- **Known gaps:** about 50 internal links point to articles or pages that
-  don't exist (the articles index lists 10, only 3 are written; every
-  callback links a "read more" article). GA4 is a placeholder
-  (`G-XXXXXXXXXX`). The About page and bylines name four "house writers"
-  (Alex Continuity, Maya Dialogue, and others) that are pen names, not people.
+  It also removes 77 links to pages that don't exist and adds a link check
+  (`tools/check-links.mjs`, run on every PR). Not published yet.
+- **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
+  placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
+  writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
+  not people. No favicon.
 - `src/index.js` and `wrangler.toml` are left over from a Workers plan and
   are not used by Pages.
 
 ## Plan
-See `ROADMAP.md`. Next without Doug: fix the broken links, then write the
-missing articles. Waiting on Doug: publish PR #1, a real GA4 ID, the domain
+See `ROADMAP.md`. Next without Doug: write the 7 missing articles, add a
+favicon, remove leftover files. Waiting on Doug: publish PR #1, a real GA4 ID, the domain
 move, and the pen-name question.
 
 ## Working rules
