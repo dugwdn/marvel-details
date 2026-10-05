@@ -1,5 +1,5 @@
-// Writes the same site menu into every page in public/, so all pages share
-// one set of big menu buttons (styled in public/css/style.css).
+// Writes the same brand banner and site menu into every page in public/, so
+// all pages share one look (styled in public/css/style.css).
 // Run after adding a page or changing the menu: node tools/menu.mjs
 // Safe to run again: it replaces the menu it wrote last time.
 import fs from 'node:fs';
@@ -39,8 +39,36 @@ export function menuFor(rel) {
   return `<nav class="site-nav" aria-label="Main menu">\n${links.join('\n')}\n    </nav>`;
 }
 
+// Magnifying glass with a "!" in it: the site's own mark, drawn here.
+const ICON =
+  '<svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true">' +
+  '<path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/>' +
+  '<path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/>' +
+  '<circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/>' +
+  '<circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/>' +
+  '<path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/>' +
+  '<circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg>';
+
+// The brand banner. It carries the page's <h1> only when the page has no
+// other one (the home page, for example), so pages keep a single h1.
+export function brandFor(html) {
+  const tag = /<h1[\s>]/.test(html) ? 'p' : 'h1';
+  return (
+    '<header class="site-brand">\n' +
+    `        <${tag} class="site-brand-title"><a class="site-brand-link" href="/">${ICON}` +
+    '<span class="site-brand-name">Details <em>You</em><br>Missed</span></a></' + tag + '>\n' +
+    '        <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>\n' +
+    '    </header>'
+  );
+}
+
 export function addMenu(html, rel) {
-  const menu = menuFor(rel);
+  // Drop the banner from a previous run and the old plain "Details You Missed"
+  // headers, then write one fresh banner straight above the menu.
+  html = html
+    .replace(/\s*<header class="site-brand">[\s\S]*?<\/header>/, '')
+    .replace(/\s*<header>\s*<h1>Details You Missed<\/h1>[\s\S]*?<\/header>/, '');
+  const menu = `${brandFor(html)}\n    ${menuFor(rel)}`;
   // Our own menu from a previous run, or the plain <nav> the old pages had.
   // Other navs (like the callbacks' prev/next "navigation") have a class and stay.
   const existing = /<nav class="site-nav"[^>]*>[\s\S]*?<\/nav>|<nav>[\s\S]*?<\/nav>/;

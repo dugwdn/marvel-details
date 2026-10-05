@@ -28,7 +28,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   page, and the sitemap/robots pointing at a non-existent workers.dev host.
   It also removes 77 links to pages that don't exist and adds a link check
   (`tools/check-links.mjs`, run on every PR). Not published yet.
-- **Site menu:** one shared menu of big comic-style buttons on every page,
+- **Brand banner and site menu:** one shared banner and menu of big comic-style buttons on every page,
   written into each page by `node tools/menu.mjs` (run it after adding a
   page). Styles are in `public/css/style.css`; uses the Bangers web font.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
