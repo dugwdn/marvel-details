@@ -1,0 +1,420 @@
+/**
+ * Deleted Scenes Registry - Styling
+ * Clean, responsive design for the deleted scenes feature
+ */
+
+/* Core Styles */
+.scenes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.scenes-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.scenes-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.scenes-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-box {
+  margin-bottom: 1.5rem;
+}
+
+.search-box label,
+.filter-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+#scene-search {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+#scene-search:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+/* Filter Groups */
+.filter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+}
+
+.filter-group select:hover {
+  border-color: #ccc;
+}
+
+/* Result Count */
+#result-count {
+  display: block;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Scenes Container and Cards */
+#scenes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.scene-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 4px solid #ffc107;
+}
+
+.scene-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.scene-card-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.scene-card-header h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.scene-formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.format-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.format-dvd {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.format-blu-ray {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.format-disney+ {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+/* Scene Details */
+.scene-card > p,
+.scene-card > div {
+  padding: 0 1.5rem;
+}
+
+.scene-movie {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 1rem 1.5rem 0.75rem;
+}
+
+.scene-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.75rem 1.5rem;
+}
+
+.scene-details {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.detail-item {
+  display: block;
+}
+
+.detail-item strong {
+  color: #333;
+}
+
+.scene-where {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.75rem 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+.scene-where strong {
+  color: #333;
+}
+
+.scene-synopsis {
+  color: #777;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.75rem 1.5rem 1.5rem;
+  flex-grow: 1;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 8px;
+  grid-column: 1 / -1;
+}
+
+.no-results p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.no-results-hint {
+  font-size: 0.95rem;
+  color: #999;
+}
+
+/* Error Message */
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 1.5rem;
+  border-radius: 8px;
+  grid-column: 1 / -1;
+}
+
+.error-message p {
+  margin: 0;
+}
+
+/* Movie Scenes Page */
+.movie-scenes-page .scene-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.movie-scenes-count {
+  text-align: center;
+  color: #777;
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scenes-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #scenes-container {
+    grid-template-columns: 1fr;
+  }
+
+  .search-filter-section {
+    padding: 1.5rem;
+  }
+
+  .scene-card {
+    border-left-width: 3px;
+  }
+
+  .scene-card-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scenes-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .scenes-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .scenes-header p {
+    font-size: 0.95rem;
+  }
+
+  .search-filter-section {
+    padding: 1rem;
+  }
+
+  .scene-card {
+    border-radius: 4px;
+  }
+
+  .scene-card-header {
+    padding: 1rem;
+  }
+
+  .scene-card-header h3 {
+    font-size: 1rem;
+  }
+
+  .scene-formats {
+    gap: 0.25rem;
+  }
+
+  .format-badge {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .scene-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .scene-card {
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .search-filter-section,
+  .scene-card,
+  .no-results {
+    background: #2a2a2a;
+    color: #e0e0e0;
+  }
+
+  .scene-card-header h3,
+  .scene-movie strong,
+  .detail-item strong,
+  .scene-where strong {
+    color: #e0e0e0;
+  }
+
+  .scenes-header h1 {
+    color: #e0e0e0;
+  }
+
+  .scenes-header p,
+  .scene-description,
+  .scene-where {
+    color: #b0b0b0;
+  }
+
+  .scene-details,
+  .scene-synopsis {
+    color: #999;
+  }
+
+  #scene-search,
+  .filter-group select {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+
+  #scene-search:focus,
+  .filter-group select:focus {
+    border-color: #ffc107;
+  }
+
+  .scene-card-header {
+    border-bottom-color: #444;
+  }
+
+  .scene-where,
+  .scene-card-header {
+    border-color: #444;
+  }
+
+  #result-count {
+    color: #999;
+  }
+
+  .error-message {
+    background: #5d2c2c;
+    color: #ffb3b3;
+  }
+}
