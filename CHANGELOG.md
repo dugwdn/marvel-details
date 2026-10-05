@@ -4,6 +4,12 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
+- Menu (not live): every page now has the same menu of big comic-style
+  buttons (Home, Articles, Movies, Deleted Scenes, Callbacks, Characters,
+  Universe Map, Rabbit Holes, About), with the current section in yellow.
+  Pages that had no menu (callbacks, map, rabbit holes, 404) now have one.
+  Written by `tools/menu.mjs`; styles in `public/css/style.css`.
+- **Live:** published commit ecf0b8b (green drink fixes, ads, project docs).
 - Green drink article: the Age of Ultron return and the "different shade"
   idea are now marked unconfirmed; placeholder source links replaced with
   real ones.
