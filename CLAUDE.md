@@ -13,7 +13,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-05)
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
-  `marvel-details`, production branch `phase-1-build`, commit 1b05021,
+  `marvel-details`, production branch `phase-1-build`, commit ecf0b8b,
   published by direct upload from Doug's laptop with wrangler).
 - **marveldetails.com is not this site yet.** The domain still serves Doug's
   older Wix site (which carries a Google Search Console verification tag).
@@ -28,6 +28,9 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   page, and the sitemap/robots pointing at a non-existent workers.dev host.
   It also removes 77 links to pages that don't exist and adds a link check
   (`tools/check-links.mjs`, run on every PR). Not published yet.
+- **Site menu:** one shared menu of big comic-style buttons on every page,
+  written into each page by `node tools/menu.mjs` (run it after adding a
+  page). Styles are in `public/css/style.css`; uses the Bangers web font.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,

@@ -43,3 +43,102 @@
     color: #ff6b7d;
   }
 }
+
+/* Site menu: big comic-panel buttons. Every page carries the same
+   <nav class="site-nav"> block (written by tools/menu.mjs).
+   "html body" outranks the plain "nav a" rules still inline on older pages.
+   Original design; no studio logos, fonts or trade dress. */
+html body nav.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem 1rem;
+  margin: 0;
+  padding: 1.25rem 1rem 1.5rem;
+  background-color: #14141f;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.6px);
+  background-size: 14px 14px;
+  border-bottom: 5px solid #000;
+  text-align: center;
+}
+
+html body nav.site-nav a {
+  --hero: #e23636;
+  --hero-ink: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  margin: 0;
+  padding: 0.55rem 1.3rem 0.45rem;
+  background: var(--hero);
+  color: var(--hero-ink);
+  border: 3px solid #000;
+  border-radius: 6px;
+  box-shadow: 5px 5px 0 #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+  transform: rotate(-1.5deg);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* Each button gets its own hero color; the tilt alternates like panels. */
+html body nav.site-nav a:nth-child(2n) { transform: rotate(1.5deg); }
+html body nav.site-nav a:nth-child(9n+2) { --hero: #1e66d0; }
+html body nav.site-nav a:nth-child(9n+3) { --hero: #2e9e44; }
+html body nav.site-nav a:nth-child(9n+4) { --hero: #7b3fc4; }
+html body nav.site-nav a:nth-child(9n+5) { --hero: #e8731a; }
+html body nav.site-nav a:nth-child(9n+6) { --hero: #0f9aa8; }
+html body nav.site-nav a:nth-child(9n+7) { --hero: #c2185b; }
+html body nav.site-nav a:nth-child(9n+8) { --hero: #3f51b5; }
+html body nav.site-nav a:nth-child(9n+9) { --hero: #5d6b7a; }
+
+html body nav.site-nav a:hover,
+html body nav.site-nav a:focus-visible {
+  color: var(--hero-ink);
+  transform: translate(-3px, -3px) rotate(0deg) scale(1.06);
+  box-shadow: 9px 9px 0 #000;
+}
+
+html body nav.site-nav a:active {
+  transform: translate(3px, 3px) rotate(0deg);
+  box-shadow: 1px 1px 0 #000;
+}
+
+html body nav.site-nav a:focus-visible {
+  outline: 3px solid #ffd60a;
+  outline-offset: 4px;
+}
+
+/* The page you're on: yellow, like the "POW!" panel. */
+html body nav.site-nav a[aria-current] {
+  --hero: #ffd60a;
+  --hero-ink: #111;
+  text-shadow: none;
+}
+
+@media (max-width: 640px) {
+  html body nav.site-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    padding: 0.9rem 16px 1.1rem;
+  }
+
+  html body nav.site-nav a {
+    min-height: 3.1rem;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.3rem 0.3rem;
+    box-shadow: 4px 4px 0 #000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body nav.site-nav a { transition: none; }
+}
