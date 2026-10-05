@@ -1,0 +1,517 @@
+{
+  "nodes": [
+    {
+      "id": "movie-iron-man-1",
+      "label": "Iron Man",
+      "type": "movie",
+      "phase": 1,
+      "color": "#FFD700",
+      "year": 2008,
+      "description": "The film that started it all. Tony Stark is captured and builds his first armor."
+    },
+    {
+      "id": "movie-iron-man-2",
+      "label": "Iron Man 2",
+      "type": "movie",
+      "phase": 1,
+      "color": "#FFD700",
+      "year": 2010,
+      "description": "Tony faces new threats as his armor technology becomes unstable."
+    },
+    {
+      "id": "movie-iron-man-3",
+      "label": "Iron Man 3",
+      "type": "movie",
+      "phase": 2,
+      "color": "#FFD700",
+      "year": 2013,
+      "description": "Tony deals with PTSD and faces the Mandarin threat."
+    },
+    {
+      "id": "movie-avengers-1",
+      "label": "The Avengers",
+      "type": "movie",
+      "phase": 1,
+      "color": "#FFD700",
+      "year": 2012,
+      "description": "Earth's mightiest heroes assemble to fight Loki and his alien army."
+    },
+    {
+      "id": "movie-endgame",
+      "label": "Endgame",
+      "type": "movie",
+      "phase": 3,
+      "color": "#FFD700",
+      "year": 2019,
+      "description": "The final battle against Thanos and the quest to undo the Snap."
+    },
+    {
+      "id": "char-tony-stark",
+      "label": "Tony Stark",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "Genius billionaire philanthropist who becomes Iron Man."
+    },
+    {
+      "id": "char-steve-rogers",
+      "label": "Steve Rogers",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "Captain America, the leader of the Avengers."
+    },
+    {
+      "id": "char-thor-odinson",
+      "label": "Thor Odinson",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "God of Thunder and Prince of Asgard."
+    },
+    {
+      "id": "char-loki-laufeyson",
+      "label": "Loki Laufeyson",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "God of Mischief and Thor's adoptive brother, wielder of the Mind Stone."
+    },
+    {
+      "id": "char-natasha-romanoff",
+      "label": "Natasha Romanoff",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "Black Widow, master spy and hand-to-hand combatant."
+    },
+    {
+      "id": "char-bruce-banner",
+      "label": "Bruce Banner",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "Scientist who becomes the powerful Hulk when enraged."
+    },
+    {
+      "id": "char-thanos",
+      "label": "Thanos",
+      "type": "character",
+      "phase": 3,
+      "color": "#FF6B6B",
+      "description": "The Mad Titan seeking to balance the universe with the Infinity Stones."
+    },
+    {
+      "id": "char-pepper-potts",
+      "label": "Pepper Potts",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "CEO of Stark Industries and Tony's love interest."
+    },
+    {
+      "id": "char-obadiah-stane",
+      "label": "Obadiah Stane",
+      "type": "character",
+      "phase": 1,
+      "color": "#FF6B6B",
+      "description": "Stark Industries executive who becomes Iron Monger."
+    },
+    {
+      "id": "artifact-iron-suit-mk1",
+      "label": "Iron Suit Mark I",
+      "type": "artifact",
+      "phase": 1,
+      "color": "#20B2AA",
+      "description": "Tony's first crude armor built in captivity from scrap metal."
+    },
+    {
+      "id": "artifact-iron-suit-mk47",
+      "label": "Iron Suit Mark XLVII",
+      "type": "artifact",
+      "phase": 2,
+      "color": "#20B2AA",
+      "description": "Advanced armor used in later Avengers battles."
+    },
+    {
+      "id": "artifact-mind-stone",
+      "label": "Mind Stone",
+      "type": "artifact",
+      "phase": 1,
+      "color": "#20B2AA",
+      "description": "One of the six Infinity Stones, embedded in Loki's scepter."
+    },
+    {
+      "id": "artifact-arc-reactor",
+      "label": "Arc Reactor",
+      "type": "artifact",
+      "phase": 1,
+      "color": "#20B2AA",
+      "description": "Power source keeping Tony Stark alive and powering his armor."
+    },
+    {
+      "id": "artifact-time-stone",
+      "label": "Time Stone",
+      "type": "artifact",
+      "phase": 3,
+      "color": "#20B2AA",
+      "description": "Infinity Stone that controls time, protected by Doctor Strange."
+    },
+    {
+      "id": "artifact-infinity-gauntlet",
+      "label": "Infinity Gauntlet",
+      "type": "artifact",
+      "phase": 3,
+      "color": "#20B2AA",
+      "description": "Glove that holds all six Infinity Stones and grants ultimate power."
+    },
+    {
+      "id": "event-battle-ny",
+      "label": "Battle of New York",
+      "type": "event",
+      "phase": 1,
+      "color": "#9370DB",
+      "description": "Loki and his alien army attack New York; the Avengers respond."
+    },
+    {
+      "id": "event-sokovia-accords",
+      "label": "Sokovia Accords",
+      "type": "event",
+      "phase": 2,
+      "color": "#9370DB",
+      "description": "Political conflict leading to the Avengers splitting into two factions."
+    },
+    {
+      "id": "event-avengers-civil-war",
+      "label": "Avengers Civil War",
+      "type": "event",
+      "phase": 2,
+      "color": "#9370DB",
+      "description": "Tony and Steve lead opposing teams of Avengers."
+    },
+    {
+      "id": "event-snap",
+      "label": "The Snap",
+      "type": "event",
+      "phase": 3,
+      "color": "#9370DB",
+      "description": "Thanos snaps his fingers and eliminates half of all life in the universe."
+    },
+    {
+      "id": "event-final-battle",
+      "label": "Final Battle vs Thanos",
+      "type": "event",
+      "phase": 3,
+      "color": "#9370DB",
+      "description": "Avengers fight Thanos to reverse the Snap and save the universe."
+    }
+  ],
+  "edges": [
+    {
+      "from": "char-tony-stark",
+      "to": "movie-iron-man-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "movie-iron-man-2",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "movie-iron-man-3",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "movie-avengers-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "movie-endgame",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "artifact-iron-suit-mk1",
+      "label": "creates",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "artifact-arc-reactor",
+      "label": "invents",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "char-pepper-potts",
+      "label": "loves",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "event-battle-ny",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-steve-rogers",
+      "to": "movie-avengers-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-steve-rogers",
+      "to": "movie-endgame",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-steve-rogers",
+      "to": "event-battle-ny",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-steve-rogers",
+      "to": "char-tony-stark",
+      "label": "conflicts with",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thor-odinson",
+      "to": "movie-avengers-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thor-odinson",
+      "to": "movie-endgame",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thor-odinson",
+      "to": "char-loki-laufeyson",
+      "label": "brother of",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thor-odinson",
+      "to": "event-battle-ny",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-loki-laufeyson",
+      "to": "movie-avengers-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-loki-laufeyson",
+      "to": "artifact-mind-stone",
+      "label": "wields",
+      "strength": "strong"
+    },
+    {
+      "from": "char-loki-laufeyson",
+      "to": "event-battle-ny",
+      "label": "leads attack",
+      "strength": "strong"
+    },
+    {
+      "from": "char-natasha-romanoff",
+      "to": "movie-avengers-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-natasha-romanoff",
+      "to": "movie-endgame",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-natasha-romanoff",
+      "to": "event-battle-ny",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-bruce-banner",
+      "to": "movie-avengers-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-bruce-banner",
+      "to": "movie-endgame",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-bruce-banner",
+      "to": "event-battle-ny",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thanos",
+      "to": "movie-endgame",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thanos",
+      "to": "event-snap",
+      "label": "executes",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thanos",
+      "to": "artifact-infinity-gauntlet",
+      "label": "wields",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thanos",
+      "to": "event-final-battle",
+      "label": "fights",
+      "strength": "strong"
+    },
+    {
+      "from": "char-obadiah-stane",
+      "to": "movie-iron-man-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-obadiah-stane",
+      "to": "char-tony-stark",
+      "label": "betrays",
+      "strength": "strong"
+    },
+    {
+      "from": "char-pepper-potts",
+      "to": "movie-iron-man-1",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-pepper-potts",
+      "to": "movie-iron-man-2",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-pepper-potts",
+      "to": "movie-iron-man-3",
+      "label": "appears in",
+      "strength": "strong"
+    },
+    {
+      "from": "artifact-iron-suit-mk1",
+      "to": "movie-iron-man-1",
+      "label": "featured in",
+      "strength": "strong"
+    },
+    {
+      "from": "artifact-iron-suit-mk47",
+      "to": "movie-avengers-1",
+      "label": "featured in",
+      "strength": "strong"
+    },
+    {
+      "from": "artifact-arc-reactor",
+      "to": "char-tony-stark",
+      "label": "powers",
+      "strength": "strong"
+    },
+    {
+      "from": "artifact-mind-stone",
+      "to": "event-battle-ny",
+      "label": "drives",
+      "strength": "strong"
+    },
+    {
+      "from": "artifact-infinity-gauntlet",
+      "to": "event-snap",
+      "label": "enables",
+      "strength": "strong"
+    },
+    {
+      "from": "artifact-infinity-gauntlet",
+      "to": "artifact-time-stone",
+      "label": "contains",
+      "strength": "strong"
+    },
+    {
+      "from": "movie-iron-man-1",
+      "to": "event-battle-ny",
+      "label": "leads to",
+      "strength": "weak"
+    },
+    {
+      "from": "movie-avengers-1",
+      "to": "event-battle-ny",
+      "label": "depicts",
+      "strength": "strong"
+    },
+    {
+      "from": "event-snap",
+      "to": "event-final-battle",
+      "label": "leads to",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "event-snap",
+      "label": "responds to",
+      "strength": "strong"
+    },
+    {
+      "from": "char-steve-rogers",
+      "to": "event-snap",
+      "label": "responds to",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "event-final-battle",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-steve-rogers",
+      "to": "event-final-battle",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-thor-odinson",
+      "to": "event-final-battle",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-natasha-romanoff",
+      "to": "event-final-battle",
+      "label": "participates in",
+      "strength": "strong"
+    },
+    {
+      "from": "char-bruce-banner",
+      "to": "event-final-battle",
+      "label": "participates in",
+      "strength": "strong"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Universe Map - Connected Universe Visualization</title>
+    <meta name="description" content="Explore the interconnected MCU universe with our interactive network visualization. See how characters, movies, artifacts, and events connect across the Marvel Cinematic Universe.">
+    <meta name="keywords" content="MCU, Marvel Cinematic Universe, network graph, connections, characters, movies, timeline">
+    <link rel="stylesheet" href="/css/map.css">
+</head>
+<body>
+    <div class="map-container">
+        <!-- Left Panel: Network Visualization -->
+        <div class="map-panel-left">
+            <div id="network-container"></div>
+            <div class="map-controls">
+                <button id="zoom-in" title="Zoom In" aria-label="Zoom In">+</button>
+                <button id="zoom-out" title="Zoom Out" aria-label="Zoom Out">−</button>
+                <button id="reset-zoom" title="Reset View" aria-label="Reset View">↺</button>
+            </div>
+        </div>
+
+        <!-- Right Panel: Sidebar Controls and Details -->
+        <div class="map-panel-right">
+            <!-- Controls Section -->
+            <div class="sidebar-section controls-section">
+                <h2>Filters & Search</h2>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Search by name..."
+                        aria-label="Search nodes"
+                    >
+                    <button id="search-clear" aria-label="Clear search" title="Clear">✕</button>
+                </div>
+
+                <!-- Type Filter -->
+                <div class="filter-group">
+                    <label>Node Types:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="type-filter" value="movie" checked>
+                            <span class="color-dot" style="background-color: #FFD700;"></span>
+                            Movies
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="type-filter" value="character" checked>
+                            <span class="color-dot" style="background-color: #FF6B6B;"></span>
+                            Characters
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="type-filter" value="artifact" checked>
+                            <span class="color-dot" style="background-color: #20B2AA;"></span>
+                            Artifacts
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="type-filter" value="event" checked>
+                            <span class="color-dot" style="background-color: #9370DB;"></span>
+                            Events
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Phase Filter -->
+                <div class="filter-group">
+                    <label>MCU Phases:</label>
+                    <div class="phase-slider">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="phase-filter" value="1" checked>
+                            Phase 1
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="phase-filter" value="2" checked>
+                            Phase 2
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="phase-filter" value="3" checked>
+                            Phase 3
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="statistics">
+                    <h3>Network Statistics</h3>
+                    <div id="stats-container">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Section -->
+            <div class="sidebar-section details-section" id="details-section" style="display: none;">
+                <button id="close-details" class="close-button" aria-label="Close details">✕</button>
+                <div id="node-details"></div>
+                <div id="connections-list"></div>
+            </div>
+
+            <!-- Welcome Section -->
+            <div class="sidebar-section welcome-section" id="welcome-section">
+                <h3>Welcome to the Universe Map</h3>
+                <p>Click on any node in the network to explore its details and connections. Use the filters to focus on specific types and phases of the MCU.</p>
+                <p><strong>Node Types:</strong></p>
+                <ul>
+                    <li><span class="color-dot" style="background-color: #FFD700;"></span> Movies</li>
+                    <li><span class="color-dot" style="background-color: #FF6B6B;"></span> Characters</li>
+                    <li><span class="color-dot" style="background-color: #20B2AA;"></span> Artifacts</li>
+                    <li><span class="color-dot" style="background-color: #9370DB;"></span> Events</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="/js/shared-data.js"></script>
+    <script src="/js/map-sidebar.js"></script>
+    <script src="/js/universe-map.js"></script>
+</body>
+</html>

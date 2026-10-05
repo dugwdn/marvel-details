@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreshadowing & Callbacks - Marvel Details</title>
+    <meta name="description" content="Explore foreshadowing and callbacks across the Marvel Cinematic Universe Phase 1. Track how hints planted in early films pay off in later stories.">
+    <meta name="keywords" content="Marvel, MCU, callbacks, foreshadowing, Easter eggs, phase 1, continuity">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/callbacks.css">
+    <style>
+        .callbacks-page {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+            color: #333;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d63447;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .page-header h1 {
+                color: #ddd;
+            }
+
+            .page-header p {
+                color: #aaa;
+            }
+        }
+    </style>
+</head>
+<body data-feature="callbacks">
+    <div class="callbacks-page">
+        <header class="page-header">
+            <h1>Foreshadowing & Callbacks</h1>
+            <p>Explore how the MCU plants hints and pays them off. Track the connections between films and discover the layers of storytelling that make the Marvel Cinematic Universe so intricate.</p>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Callbacks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Phase 1 Films</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Story Types</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search and Filter Bar -->
+        <div class="callbacks-search-bar">
+            <div class="search-input-group">
+                <input type="text" id="callback-search" placeholder="Search callbacks, characters, or themes...">
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">Type:</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter-type="setup">Setup</button>
+                    <button class="filter-btn" data-filter-type="payoff">Payoff</button>
+                    <button class="filter-btn" data-filter-type="dialogue">Dialogue</button>
+                    <button class="filter-btn" data-filter-type="visual-motif">Visual Motif</button>
+                    <button class="filter-btn" data-filter-type="thematic">Thematic</button>
+                    <button class="filter-btn" data-filter-type="plot-twist">Plot Twist</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">Movies:</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter-movie="iron-man-1 → iron-man-2">IM1 → IM2</button>
+                    <button class="filter-btn" data-filter-movie="iron-man-1 → avengers-1">IM1 → Avengers</button>
+                    <button class="filter-btn" data-filter-movie="avengers-1 → endgame">Avengers → Endgame</button>
+                </div>
+            </div>
+
+            <button class="clear-filters-btn" id="clear-filters">Clear All Filters</button>
+        </div>
+
+        <!-- Results -->
+        <div id="callbacks-results"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/shared-data.js"></script>
+    <script src="/js/callbacks.js"></script>
+</body>
+</html>
