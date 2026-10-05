@@ -99,7 +99,7 @@ If you're adding scenes for a movie not yet supported:
 3. Add entries to `sitemap.xml`:
    ```xml
    <url>
-       <loc>https://marvel-details.workers.dev/scenes/{movie-slug}-scenes</loc>
+       <loc>https://marvel-details.pages.dev/scenes/{movie-slug}-scenes</loc>
        <lastmod>2026-10-05</lastmod>
        <changefreq>monthly</changefreq>
        <priority>0.8</priority>

@@ -36,19 +36,10 @@ class UniverseMap {
    * Load data from shared data hub
    */
   async loadData() {
-    return new Promise((resolve) => {
-      if (window.marvelData && window.marvelData.hub && window.marvelData.hub.cache.connections) {
-        this.data = window.marvelData.hub.cache.connections;
-        this.processData();
-        resolve();
-      } else {
-        document.addEventListener('marvelDataReady', () => {
-          this.data = window.marvelData.hub.cache.connections;
-          this.processData();
-          resolve();
-        });
-      }
-    });
+    // Load the connections directly: the hub only auto-starts on pages marked
+    // data-feature, so waiting for its ready event alone left the map blank.
+    this.data = await window.marvelData.hub.loadConnections();
+    this.processData();
   }
 
   /**
