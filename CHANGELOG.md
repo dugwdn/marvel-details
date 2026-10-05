@@ -4,6 +4,10 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
+- Brand banner (not live): a big "Details You Missed" comic banner
+  (sunburst, the site's own magnifying-glass mark, yellow lettering) on
+  every page, plus comic lettering on headings and comic-panel cards, back
+  buttons, section titles and footer.
 - Menu (not live): every page now has the same menu of big comic-style
   buttons (Home, Articles, Movies, Deleted Scenes, Callbacks, Characters,
   Universe Map, Rabbit Holes, About), with the current section in yellow.
