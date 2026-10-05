@@ -4,6 +4,9 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
+- Ads: three AdSense boxes on every page, hidden until filled; real
+  `ads.txt`; AdSense account meta tag. Placeholder "Advertisement Slot"
+  boxes removed.
 - **Live:** published commit 1b05021 to https://marvel-details.pages.dev.
   All five features are now online: Deleted Scenes Registry, Foreshadowing
   and Callbacks, Character Arc Tracker, Universe Map, Rabbit Holes. (The

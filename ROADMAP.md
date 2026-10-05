@@ -27,4 +27,5 @@ his accounts; the rest Claude does on a branch with a PR.
 ## Later
 6. Phase 2 films, picked by search demand (Keyword Planner) rather than
    release order.
-7. Phase 3: ads (AdSense) once traffic justifies it; real `ads.txt`.
+7. Ads are built in (hidden until filled). Doug: add marvel-details.pages.dev
+   (or the final domain) in AdSense > Sites and send the three slot numbers.

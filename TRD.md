@@ -50,4 +50,10 @@ depend on. The home, movie and article pages are light only.
 
 ## Analytics and ads
 - GA4 tag on the home page and one article, ID still `G-XXXXXXXXXX`.
-- `ads.txt` is a placeholder; ad slots are empty boxes for Phase 3.
+- Ads: `js/ads.js` (loaded on every page but 404) loads AdSense for
+  ca-pub-7178251279168670 and places three boxes: below the top, mid-page
+  (pages long enough to have one) and before the footer. Boxes stay hidden
+  until AdSense fills them. Slot numbers go in `SLOTS` at the top of
+  `js/ads.js`; until then only Auto ads (if turned on in AdSense) can show.
+  `ads.txt` lists the publisher ID. Every page has the
+  `google-adsense-account` meta tag.
