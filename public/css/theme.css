@@ -265,3 +265,23 @@ html body footer .disclaimer { background: transparent !important; }
 html body .navigation .nav-link { color: var(--dym-red) !important; }
 html body .chapter-title-level { color: var(--dym-muted) !important; }
 html body .expand-icon { color: var(--dym-red) !important; }
+
+/* Newest-movie promo banner (home). Abstract art only: no characters, logos, posters or emblems. */
+html body .promo-banner { position: relative; overflow: hidden; color: #fff; background: linear-gradient(115deg, #7a0f18 0%, var(--dym-red-dark) 30%, #2a0b10 62%, #0b0f24 100%); min-height: 340px; display: flex; align-items: center; border-bottom: 4px solid var(--dym-red); }
+html body .promo-art { position: absolute; inset: 0; pointer-events: none;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 300' preserveAspectRatio='none'%3E%3Cpath fill='rgba(0,0,0,0.38)' d='M0 300V210h40v-30h30v50h35V150h20v-20h30v20h20v80h40V170h55v-40h15v-30h10v30h15v40h30v60h35V120h45v110h30V190h40v-70h20v-25h8v25h22v70h35v60h40V160h45v70h30V200h45v100z'/%3E%3Cpath fill='rgba(0,0,0,0.55)' d='M0 300v-40h60v-35h45v45h50v-60h40v60h55v-25h50v-50h30v75h45v-40h60v50h40v-70h35v70h55v-30h45v45h40v-35h55v-25h45v60h50v-30h50v65z'/%3E%3C/svg%3E") right bottom / 62% 62% no-repeat,
+    repeating-linear-gradient(115deg, rgba(255,255,255,.06) 0 2px, transparent 2px 46px),
+    radial-gradient(circle at 82% 30%, rgba(224,48,60,.45), transparent 45%); }
+@media (max-width: 600px) { html body .promo-art { background-size: 100% 45%, auto, auto; } }
+html body .promo-inner { position: relative; width: 100%; max-width: 1600px; margin: 0 auto; padding: 3rem 2rem; }
+html body .promo-kicker { display: inline-block; background: var(--dym-red); color: #fff !important; font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; padding: .3rem .7rem; margin-bottom: 1rem; }
+html body .promo-title { font-family: var(--dym-head); font-weight: 800; text-transform: uppercase; color: #fff !important; font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: .95; letter-spacing: .01em; margin: 0 0 1rem; max-width: 14ch; text-shadow: 0 2px 18px rgba(0,0,0,.45); }
+html body .promo-sub { color: #f1f1f4 !important; font-size: 1.15rem; max-width: 46ch; margin: 0 0 1.6rem; }
+html body .promo-cta { display: inline-block; background: #fff; color: #111 !important; font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: .85rem 1.6rem; text-decoration: none; border: 2px solid #fff; }
+html body .promo-cta:hover, html body .promo-cta:focus { background: transparent; color: #fff !important; }
+@media (max-width: 600px) {
+  html body .promo-banner { min-height: 300px; }
+  html body .promo-inner { padding: 2rem 16px; }
+  html body .promo-sub { font-size: 1rem; }
+}
