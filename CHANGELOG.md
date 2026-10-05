@@ -4,6 +4,10 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
+- Hero menu (not live yet): the top menu is now big slanted red buttons
+  with white borders and a gold drop shadow on a red halftone-dot bar.
+  Hover turns a button gold. On phones the buttons wrap to more rows
+  instead of scrolling sideways. Our own design, no Marvel assets.
 - Newest-movie banner (not live yet): a big home page banner for
   Spider-Man: Brand New Day linking to a new easter eggs article
   (`/articles/spider-man-brand-new-day-easter-eggs`). Each reported egg is
