@@ -246,9 +246,6 @@ html body .movie-card > div:first-child:not(.movie-card-content) {
   letter-spacing: .04em;
 }
 html body .movie-card-image { background: linear-gradient(160deg, var(--dym-red-dark) 0%, #3a0d12 45%, #000 100%) !important; color: #fff !important; font-family: var(--dym-head); text-transform: uppercase; letter-spacing: .04em; }
-@media (max-width: 600px) {
-  html body > nav a, html body nav:not(.navigation) a { margin: 0 .5rem; padding: .35rem 0; display: inline-block; font-size: .85rem; }
-}
 
 /* Black bars keep white text in both modes */
 html body > header h1, html body > header h1 *, html body > nav a, html body nav:not(.navigation) a { color: #fff !important; }
@@ -285,3 +282,37 @@ html body .promo-cta:hover, html body .promo-cta:focus { background: transparent
   html body .promo-inner { padding: 2rem 16px; }
   html body .promo-sub { font-size: 1rem; }
 }
+
+/* Hero menu: big slanted comic-style buttons on a halftone bar (theme-park energy, our own design) */
+html body > nav, html body nav:not(.navigation) {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .9rem 1.1rem;
+  padding: 1.3rem 16px 1.5rem;
+  background-color: #000;
+  background-image: radial-gradient(rgba(224,48,60,.38) 1.4px, transparent 1.6px), radial-gradient(rgba(224,48,60,.18) 1.4px, transparent 1.6px);
+  background-size: 14px 14px, 14px 14px; background-position: 0 0, 7px 7px;
+  border-bottom: 4px solid var(--dym-red);
+}
+html body > nav a, html body nav:not(.navigation) a {
+  display: inline-block; margin: 0; padding: .6rem 1.45rem;
+  font-family: var(--dym-head); font-weight: 800; font-size: 1.3rem; line-height: 1.1;
+  letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+  color: #fff !important; text-shadow: 2px 2px 0 rgba(0,0,0,.55);
+  background: linear-gradient(180deg, var(--dym-red) 0%, #a8141f 100%);
+  border: 3px solid #fff; border-radius: 4px;
+  box-shadow: 6px 6px 0 #ffc61a;
+  transform: skewX(-10deg);
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+html body > nav a:hover, html body nav:not(.navigation) a:hover,
+html body > nav a:focus-visible, html body nav:not(.navigation) a:focus-visible {
+  background: #ffc61a; color: #000 !important; text-shadow: none; border-color: #000;
+  box-shadow: 9px 9px 0 var(--dym-red);
+  transform: skewX(-10deg) translate(-3px, -3px);
+  outline: none;
+}
+html body > nav a:active, html body nav:not(.navigation) a:active { transform: skewX(-10deg) translate(2px, 2px); box-shadow: 2px 2px 0 #ffc61a; }
+@media (max-width: 600px) {
+  html body > nav, html body nav:not(.navigation) { gap: .7rem .8rem; padding: 1rem 16px 1.2rem; }
+  html body > nav a, html body nav:not(.navigation) a { font-size: 1.05rem; padding: .5rem .95rem; box-shadow: 4px 4px 0 #ffc61a; }
+}
+@media (prefers-reduced-motion: reduce) { html body > nav a, html body nav:not(.navigation) a { transition: none; } }
