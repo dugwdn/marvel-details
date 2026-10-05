@@ -2,11 +2,10 @@
   "name": "marvel-details",
   "version": "1.0.0",
   "description": "Hidden details and analysis from Marvel movies",
-  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
+    "dev": "wrangler pages dev public --port 8788",
+    "deploy": "wrangler pages deploy public --project-name marvel-details --branch phase-1-build"
   },
   "keywords": [
     "marvel",
