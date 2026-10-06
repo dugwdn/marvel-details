@@ -177,7 +177,7 @@ class MapSidebarController {
       html += `
         <div class="meta-item">
           <div class="meta-label">Phase</div>
-          <div class="meta-value">${node.phase}</div>
+          <div class="meta-value">${this.escapeHtml(String(node.phase))}</div>
         </div>
       `;
     }
@@ -185,11 +185,16 @@ class MapSidebarController {
       html += `
         <div class="meta-item">
           <div class="meta-label">Year</div>
-          <div class="meta-value">${node.year}</div>
+          <div class="meta-value">${this.escapeHtml(String(node.year))}</div>
         </div>
       `;
     }
     html += '</div>';
+
+    // Link to the site page for this movie or character, when one exists.
+    if (node.url) {
+      html += `<p class="node-page"><a class="node-page-link" href="${this.escapeHtml(node.url)}">Open the ${this.escapeHtml(node.label)} page &rarr;</a></p>`;
+    }
 
     nodeDetailsDiv.innerHTML = html;
 
@@ -203,9 +208,8 @@ class MapSidebarController {
         connectionsHtml += `
           <div class="connection-item">
             <div class="connection-label">${this.escapeHtml(edge.label)}</div>
-            <div class="connection-node" data-node-id="${targetNode.id}" role="button" tabindex="0">
-              ${this.escapeHtml(targetNode.label)}
-            </div>
+            <button type="button" class="connection-node" data-node-id="${this.escapeHtml(targetNode.id)}"
+                    aria-label="Show ${this.escapeHtml(targetNode.label)} on the map">${this.escapeHtml(targetNode.label)}</button>
           </div>
         `;
       });
@@ -218,9 +222,8 @@ class MapSidebarController {
         connectionsHtml += `
           <div class="connection-item">
             <div class="connection-label">${this.escapeHtml(edge.label)}</div>
-            <div class="connection-node" data-node-id="${sourceNode.id}" role="button" tabindex="0">
-              ${this.escapeHtml(sourceNode.label)}
-            </div>
+            <button type="button" class="connection-node" data-node-id="${this.escapeHtml(sourceNode.id)}"
+                    aria-label="Show ${this.escapeHtml(sourceNode.label)} on the map">${this.escapeHtml(sourceNode.label)}</button>
           </div>
         `;
       });
@@ -236,14 +239,18 @@ class MapSidebarController {
           detail: { nodeId }
         }));
       });
-
-      el.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          el.click();
-        }
-      });
     });
+  }
+
+  /**
+   * List the sources the map's facts were checked against.
+   */
+  showSources(sources) {
+    const list = document.getElementById('map-sources');
+    if (!list || !Array.isArray(sources)) return;
+    list.innerHTML = sources.map(src =>
+      `<li><a href="${this.escapeHtml(src.url)}" target="_blank" rel="noopener">${this.escapeHtml(src.name)}</a></li>`
+    ).join('');
   }
 
   /**
@@ -300,8 +307,8 @@ class MapSidebarController {
    */
   escapeHtml(text) {
     const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    div.textContent = text == null ? '' : String(text);
+    return div.innerHTML.replace(/"/g, '&quot;');
   }
 
   /**

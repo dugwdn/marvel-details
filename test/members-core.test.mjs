@@ -109,13 +109,14 @@ test('a full list stays under the 16 KB cap', () => {
 });
 
 test('found counter counts only details that exist in the data', () => {
-  assert.deepEqual([catalog.scene.length, catalog.callback.length, catalog.rabbit.length], [21, 40, 8]);
+  // Counts come from the data files; every list must have something in it.
+  for (const kind of ['scene', 'callback', 'rabbit']) assert.ok(catalog[kind].length > 0, kind);
   const found = { 'scene:im1-scene-001': 1, 'callback:cb-001': 1, 'callback:cb-002': 1, 'callback:cb-999': 1, 'rabbit:mind-stone-corruption': 1 };
   const st = foundStats(found, catalog);
-  assert.equal(st.total, 69);
+  assert.equal(st.total, catalog.scene.length + catalog.callback.length + catalog.rabbit.length);
   assert.equal(st.found, 4);
-  assert.equal(st.pct, 6);
-  assert.deepEqual(st.byKind.callback, { found: 2, total: 40 });
+  assert.equal(st.pct, Math.round((4 / st.total) * 100));
+  assert.deepEqual(st.byKind.callback, { found: 2, total: catalog.callback.length });
   assert.deepEqual(foundStats({}, {}), { found: 0, total: 0, pct: 0, byKind: { scene: { found: 0, total: 0 }, callback: { found: 0, total: 0 }, rabbit: { found: 0, total: 0 } } });
 });
 

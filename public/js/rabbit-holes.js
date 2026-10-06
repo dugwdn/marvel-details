@@ -40,7 +40,9 @@ class RabbitHolesRegistry {
       throw new Error(`Failed to load rabbit holes: ${response.statusText}`);
     }
     const data = await response.json();
+    this.films = data.films || {};
     this.allHoles = data.rabbitHoles || [];
+    this.buildMovieFilters();
     this.filteredHoles = [...this.allHoles];
   }
 
@@ -49,7 +51,6 @@ class RabbitHolesRegistry {
    */
   setupEventListeners() {
     const difficultyFilter = document.getElementById('difficulty-filter');
-    const movieFilters = document.querySelectorAll('input[name="movie-filter"]');
     const searchInput = document.getElementById('hole-search');
 
     if (difficultyFilter) {
@@ -59,8 +60,9 @@ class RabbitHolesRegistry {
       });
     }
 
-    movieFilters.forEach(checkbox => {
-      checkbox.addEventListener('change', (e) => {
+    const movieList = document.querySelector('.movie-filters-list');
+    if (movieList) movieList.addEventListener('change', (e) => {
+      if (e.target && e.target.name === 'movie-filter') {
         if (e.target.checked) {
           this.currentFilters.movies.push(e.target.value);
         } else {
@@ -69,7 +71,7 @@ class RabbitHolesRegistry {
           );
         }
         this.applyFilters();
-      });
+      }
     });
 
     if (searchInput) {
@@ -103,7 +105,7 @@ class RabbitHolesRegistry {
 
       // Search term filter
       if (this.currentFilters.searchTerm) {
-        const searchFields = `${hole.title} ${hole.tagline} ${hole.summary} ${hole.relatedCharacters.join(' ')}`.toLowerCase();
+        const searchFields = `${hole.title} ${hole.tagline} ${hole.summary} ${this.characterNames(hole).join(' ')} ${hole.movies.map(m => this.filmName(m)).join(' ')}`.toLowerCase();
         if (!searchFields.includes(this.currentFilters.searchTerm)) {
           return false;
         }
@@ -129,6 +131,7 @@ class RabbitHolesRegistry {
           <p class="no-results-hint">Try adjusting your search or filters.</p>
         </div>
       `;
+      this.updateResultCount();
       return;
     }
 
@@ -143,11 +146,13 @@ class RabbitHolesRegistry {
   createHoleCard(hole) {
     const difficultyClass = `difficulty-${hole.difficulty}`;
     const difficultyLabel = this.difficultyLabel(hole.difficulty);
+    const href = `/rabbit-holes/${encodeURIComponent(hole.slug)}`;
+    const theoryLevels = hole.chapters.filter(c => c.kind === 'theory').length;
 
     return `
-      <div class="hole-card" data-hole-id="${hole.id}">
+      <article class="hole-card" data-hole-id="${this.escapeHtml(hole.id)}">
         <div class="hole-card-header">
-          <h3><a href="/rabbit-holes/${hole.slug}.html">${this.escapeHtml(hole.title)}</a></h3>
+          <h3><a href="${href}">${this.escapeHtml(hole.title)}</a></h3>
           <span class="difficulty-badge ${difficultyClass}">${difficultyLabel}</span>
         </div>
         <p class="hole-tagline">${this.escapeHtml(hole.tagline)}</p>
@@ -157,22 +162,68 @@ class RabbitHolesRegistry {
             <strong>Read time:</strong> ${hole.readTime} min
           </span>
           <span class="movie-count">
-            <strong>Movies:</strong> ${hole.movies.length}
+            <strong>Sources:</strong> ${(hole.sources || []).length}
           </span>
+          ${theoryLevels ? `<span class="theory-count"><strong>Fan theory:</strong> ${theoryLevels} level${theoryLevels > 1 ? 's' : ''}, labelled</span>` : ''}
+        </div>
+        <div class="hole-films">
+          <strong>Films and series:</strong>
+          ${hole.movies.map(m => this.filmHtml(m)).join(', ')}
         </div>
         <div class="hole-characters">
           <strong>Characters:</strong>
           <div class="characters-list">
-            ${hole.relatedCharacters.map(char =>
-              `<span class="char-tag">${this.escapeHtml(char)}</span>`
-            ).join('')}
+            ${hole.relatedCharacters.map(c => this.characterHtml(c)).join('')}
           </div>
         </div>
         <div class="hole-actions">
-          <a href="/rabbit-holes/${hole.slug}.html" class="btn-explore">Explore Hole</a>
+          <a href="${href}" class="btn-explore">Explore this rabbit hole</a>
         </div>
-      </div>
+      </article>
     `;
+  }
+
+  /**
+   * A film or series name; only the films with a hub page on this site link.
+   */
+  filmName(slug) {
+    return (this.films[slug] && this.films[slug].name) || slug;
+  }
+
+  filmHtml(slug) {
+    const film = this.films[slug];
+    const name = this.escapeHtml(this.filmName(slug));
+    return film && film.hub ? `<a href="${film.hub}">${name}</a>` : `<span>${name}</span>`;
+  }
+
+  /**
+   * A character tag; it links only when the character has a page here.
+   */
+  characterNames(hole) {
+    return hole.relatedCharacters.map(c => (typeof c === 'string' ? c : c.name));
+  }
+
+  characterHtml(c) {
+    const name = this.escapeHtml(typeof c === 'string' ? c : c.name);
+    return c && c.page
+      ? `<a class="char-tag" href="/characters/${encodeURIComponent(c.page)}">${name}</a>`
+      : `<span class="char-tag">${name}</span>`;
+  }
+
+  /**
+   * Build the film filter checkboxes from the films the rabbit holes use.
+   */
+  buildMovieFilters() {
+    const list = document.querySelector('.movie-filters-list');
+    if (!list) return;
+    const used = new Set(this.allHoles.flatMap(h => h.movies));
+    const slugs = Object.keys(this.films).filter(s => used.has(s));
+    list.innerHTML = slugs.map((slug, i) => `
+      <div class="movie-filter-item">
+        <input type="checkbox" name="movie-filter" value="${this.escapeHtml(slug)}" id="movie-f${i}">
+        <label for="movie-f${i}">${this.escapeHtml(this.filmName(slug))}</label>
+      </div>
+    `).join('');
   }
 
   /**
@@ -340,7 +391,7 @@ class RabbitHolesRegistry {
   getUniqueCharacters() {
     const charSet = new Set();
     this.allHoles.forEach(hole => {
-      hole.relatedCharacters.forEach(char => charSet.add(char));
+      this.characterNames(hole).forEach(char => charSet.add(char));
     });
     return Array.from(charSet).sort();
   }
@@ -399,9 +450,8 @@ class RabbitHolesRegistry {
         score += sharedMovies.length * 3;
 
         // Shared characters
-        const sharedChars = hole.relatedCharacters.filter(c =>
-          h.relatedCharacters.includes(c)
-        );
+        const otherChars = this.characterNames(h);
+        const sharedChars = this.characterNames(hole).filter(c => otherChars.includes(c));
         score += sharedChars.length * 2;
 
         return { hole: h, score };

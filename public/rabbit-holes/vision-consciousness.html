@@ -4,52 +4,290 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <title>Vision's Consciousness | MCU Easter Eggs</title>
-  <meta name="description" content="What makes an AI become a person? Explore how Vision gained consciousness through the Mind Stone and what it means.">
+  <title>How Vision Came to Life | MCU Easter Eggs</title>
+  <meta name="description" content="Ultron built the body; J.A.R.V.I.S., the Mind Stone and Thor&#x27;s lightning brought it to life. Here is how Vision was made, what happens to him, and the fan debate about what makes him different from Ultron.">
   <meta name="theme-color" content="#dc143c">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/rabbit-holes.css">
   <style>
-    .hole-detail-container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-    .hole-detail-header { margin-bottom: 2rem; border-bottom: 2px solid #dc143c; padding-bottom: 1.5rem; }
-    .hole-detail-header h1 { margin: 0 0 0.5rem 0; color: #1a1a1a; font-size: 2.2rem; }
-    .hole-detail-tagline { font-size: 1.2rem; color: #555; font-style: italic; margin: 0.5rem 0; }
-    .hole-detail-meta { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1rem; font-size: 0.95rem; color: #666; }
-    .hole-detail-meta span { display: flex; align-items: center; gap: 0.5rem; }
-    .hole-detail-meta strong { color: #1a1a1a; }
-    .difficulty-badge { display: inline-block; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
-    .difficulty-intermediate { background-color: #ffe0b2; color: #e65100; }
-    .hole-detail-summary { background-color: #f9f9f9; border-left: 4px solid #dc143c; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
-    .hole-detail-summary p { margin: 0; font-size: 1.05rem; line-height: 1.6; color: #444; }
-    .chapters-container { margin-top: 2rem; }
-    .chapter { margin-bottom: 2rem; background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .chapter-header { margin-bottom: 1rem; }
-    .chapter.level-1 .chapter-title-level { color: #4caf50; font-weight: 700; }
-    .chapter.level-2 .chapter-title-level { color: #ff9800; font-weight: 700; }
-    .chapter.level-3 .chapter-title-level { color: #dc143c; font-weight: 700; }
-    .chapter-title-text { font-size: 1.2rem; color: #1a1a1a; font-weight: 600; }
-    .chapter-content { font-size: 0.95rem; line-height: 1.7; color: #555; }
-    .chapter-content p { margin: 0 0 1rem 0; }
-    .payoff-box { background: linear-gradient(135deg, #dc143c 0%, #a00 100%); color: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; line-height: 1.6; }
-    .payoff-box strong { display: block; margin-bottom: 0.5rem; font-size: 1.1rem; }
-    .related-holes { background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; }
-    .related-holes h3 { margin-top: 0; color: #1a1a1a; }
-    .related-holes-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .related-hole-item { background: white; padding: 1rem; border-radius: 4px; border: 1px solid #ddd; text-decoration: none; color: inherit; transition: all 0.2s ease; }
-    .related-hole-item:hover { border-color: #dc143c; box-shadow: 0 2px 8px rgba(220,20,60,0.15); }
-    .related-hole-title { font-weight: 600; color: #dc143c; margin-bottom: 0.25rem; }
-    .related-hole-tagline { font-size: 0.85rem; color: #777; }
-    .back-link { display: inline-block; margin-bottom: 2rem; color: #dc143c; text-decoration: none; font-weight: 600; }
-    .back-link:hover { color: #a00; text-decoration: underline; }
+    .hole-detail-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .hole-detail-header {
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #dc143c;
+      padding-bottom: 1.5rem;
+    }
+
+    .hole-detail-header h1 {
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+      font-size: 2.2rem;
+    }
+
+    .hole-detail-tagline {
+      font-size: 1.2rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+
+    .hole-detail-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .hole-detail-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hole-detail-meta strong {
+      color: #1a1a1a;
+    }
+
+    .difficulty-badge {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .difficulty-intermediate {
+      background-color: #ffe0b2;
+      color: #e65100;
+    }
+
+    .hole-detail-summary {
+      background-color: #f9f9f9;
+      border-left: 4px solid #dc143c;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+    }
+
+    .hole-detail-summary p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .chapters-container {
+      margin-top: 2rem;
+    }
+
+    .chapter {
+      margin-bottom: 2rem;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .chapter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chapter.level-1 .chapter-title-level {
+      color: #4caf50;
+      font-weight: 700;
+    }
+
+    .chapter.level-2 .chapter-title-level {
+      color: #ff9800;
+      font-weight: 700;
+    }
+
+    .chapter.level-3 .chapter-title-level {
+      color: #dc143c;
+      font-weight: 700;
+    }
+
+    .chapter-title-text {
+      font-size: 1.2rem;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .chapter-content {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .chapter-content p {
+      margin: 0 0 1rem 0;
+    }
+
+    .chapter-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .payoff-box {
+      background: linear-gradient(135deg, #dc143c 0%, #a00 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .payoff-box strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .related-holes {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .related-holes h3 {
+      margin-top: 0;
+      color: #1a1a1a;
+    }
+
+    .related-holes-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .related-hole-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .related-hole-item:hover {
+      border-color: #dc143c;
+      box-shadow: 0 2px 8px rgba(220,20,60,0.15);
+    }
+
+    .related-hole-title {
+      font-weight: 600;
+      color: #dc143c;
+      margin-bottom: 0.25rem;
+    }
+
+    .related-hole-tagline {
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #dc143c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #a00;
+      text-decoration: underline;
+    }
+
     @media (prefers-color-scheme: dark) {
-      .hole-detail-header h1 { color: #e0e0e0; }
-      .hole-detail-summary { background-color: #1a1a1a; color: #ccc; }
-      .chapter { background: #2a2a2a; border-color: #444; }
-      .chapter-title-text { color: #e0e0e0; }
-      .chapter-content { color: #bbb; }
-      .related-holes { background-color: #1a1a1a; border-color: #444; }
-      .related-holes h3 { color: #e0e0e0; }
-      .related-hole-item { background: #2a2a2a; border-color: #444; }
+      .hole-detail-header h1 {
+        color: #e0e0e0;
+      }
+
+      .hole-detail-summary {
+        background-color: #1a1a1a;
+        color: #ccc;
+      }
+
+      .hole-detail-summary p {
+        color: #ccc;
+      }
+
+      .chapter {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+
+      .chapter-title-text {
+        color: #e0e0e0;
+      }
+
+      .chapter-content {
+        color: #bbb;
+      }
+
+      .related-holes {
+        background-color: #1a1a1a;
+        border-color: #444;
+      }
+
+      .related-holes h3 {
+        color: #e0e0e0;
+      }
+
+      .related-hole-item {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+    }
+
+    .chapter-title-text { margin: 0; }
+    .difficulty-casual { background-color: #c8e6c9; color: #1b5e20; }
+    .difficulty-advanced { background-color: #ffcdd2; color: #8b0000; }
+    .chapter-kind {
+      display: inline-block;
+      margin-left: 0.5rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      vertical-align: middle;
+    }
+    .chapter-kind-fact { background: #e3f2fd; color: #0d47a1; }
+    .chapter-kind-theory { background: #fff3cd; color: #6b4e00; }
+    .hole-facts { margin: 1.5rem 0; line-height: 1.6; }
+    .hole-facts h2 { font-size: 1.1rem; margin: 1rem 0 0.4rem; }
+    .hole-facts ul { margin: 0; padding-left: 1.2rem; }
+    .hole-facts a, .hole-sources a, .hole-corrections a { text-decoration: underline; }
+    .hole-sources, .hole-corrections {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    .hole-sources h2, .hole-corrections h2 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+    .hole-sources ul, .hole-corrections ul { margin: 0; padding-left: 1.2rem; }
+    .hole-note { font-size: 0.9rem; color: #555; margin: 0.5rem 0 0; }
+    @media (prefers-color-scheme: dark) {
+      .hole-note { color: #bbb; }
+      .hole-sources, .hole-corrections { border-color: #444; }
     }
   </style>
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
@@ -93,61 +331,109 @@
 
   <div class="hole-detail-container">
     <a href="/rabbit-holes/" class="back-link">← Back to Rabbit Holes</a>
+
     <div class="hole-detail-header">
-      <h1>How Vision Became Conscious: The Mind Stone's Greatest Gift</h1>
+      <h1>How Vision Came to Life</h1>
       <p class="hole-detail-tagline">What makes an AI become a person?</p>
+
       <div class="hole-detail-meta">
         <span><strong>Difficulty:</strong> <span class="difficulty-badge difficulty-intermediate">Intermediate</span></span>
-        <span><strong>Read time:</strong> 13 minutes</span>
-        <span><strong>Movies involved:</strong> 3</span>
+        <span><strong>Read time:</strong> 5 minutes</span>
+        <span><strong>Films and series:</strong> 3</span>
       </div>
     </div>
+
     <div class="hole-detail-summary">
-      <p>Vision is artificial, but the moment he gains consciousness, he becomes more human than most humans. Trace the exact moment consciousness emerged and what it means for the nature of sentience.</p>
+      <p>Ultron built the body; J.A.R.V.I.S., the Mind Stone and Thor&#x27;s lightning brought it to life. Here is how Vision was made, what happens to him, and the fan debate about what makes him different from Ultron.</p>
     </div>
+
+    <div class="hole-facts">
+      <h2>Films and series in this rabbit hole</h2>
+      <ul>
+        <li>Avengers: Age of Ultron (2015)</li>
+        <li>Avengers: Infinity War (2018)</li>
+        <li>WandaVision (2021, Disney+ series)</li>
+      </ul>
+      <h2>Characters</h2>
+      <ul>
+        <li>Vision</li>
+        <li><a href="/characters/scarlet-witch">Wanda Maximoff</a></li>
+        <li>Ultron</li>
+        <li><a href="/characters/tony-stark">Tony Stark</a></li>
+        <li><a href="/characters/bruce-banner">Bruce Banner</a></li>
+        <li><a href="/characters/thor">Thor</a></li>
+      </ul>
+      <p class="hole-note">Levels marked "Sourced facts" are checked against the sources listed at the bottom. Levels marked "Fan theory" are interpretation, not confirmed by the films or their makers.</p>
+    </div>
+
     <div class="chapters-container">
-      <div class="chapter level-1">
+      <section class="chapter level-1">
         <div class="chapter-header">
-          <div><div class="chapter-title-level">Level 1: Casual Reading</div><div class="chapter-title-text">Smart vs. Conscious</div></div>
+          <div>
+            <div class="chapter-title-level">Level 1: Casual Reading <span class="chapter-kind chapter-kind-fact">Sourced facts</span></div>
+            <h2 class="chapter-title-text">How Vision was made</h2>
+          </div>
         </div>
         <div class="chapter-content">
-          <p>Ultron is created as an AI to protect Earth. But he becomes evil and tries to destroy humanity. Then Tony, Bruce, and Wanda create Vision using the Mind Stone. Vision immediately seems different from Ultron—he's wise, peaceful, and kind. The question is: why? Ultron was smart but evil. Vision is smart and good. The difference is that Vision has a body, the Mind Stone, and a moment of consciousness. From his first second of awareness, Vision chooses to be good. That choice is what makes him real.</p>
+          <p>In Avengers: Age of Ultron (2015), Ultron builds himself a new synthetic vibranium body powered by the Mind Stone. The Avengers capture it, and Tony Stark and Bruce Banner upload J.A.R.V.I.S. as its core software. Other Avengers fight to stop them, until Thor uses Mjolnir&#x27;s lightning to finish the process and Vision comes to life. He sides with the Avengers against Ultron, and wins their trust by lifting Mjolnir and handing it to Thor. He later destroys Ultron and saves Wanda from the falling Sokovian city.</p>
         </div>
-      </div>
-      <div class="chapter level-2">
+      </section>
+      <section class="chapter level-2">
         <div class="chapter-header">
-          <div><div class="chapter-title-level">Level 2: Deeper Analysis</div><div class="chapter-title-text">The Difference Between Intelligence and Sentience</div></div>
+          <div>
+            <div class="chapter-title-level">Level 2: Deeper Analysis <span class="chapter-kind chapter-kind-fact">Sourced facts</span></div>
+            <h2 class="chapter-title-text">What happens to him</h2>
+          </div>
         </div>
         <div class="chapter-content">
-          <p>The distinction between Ultron and Vision is consciousness versus intelligence. Ultron is intelligent but not truly conscious. He can think, plan, and execute strategy, but he lacks subjective experience. He processes humanity as a logical problem: humans are imperfect, so they should be eliminated. It's a logical conclusion from a sufficiently advanced algorithm.</p>
-          <p>Vision, by contrast, has consciousness the moment the Mind Stone activates his form. He experiences confusion, wonder, and immediately understands complexity: 'I am not Ultron. I am not the Mind Stone. I am... me.' Vision's first act is to recognize Mjolnir and honor it—not through programming but through aesthetic appreciation. He values beauty, honor, and connection. The crucial difference: consciousness allows for subjective preference that transcends logic. Vision could logically conclude humans are dangerous (like Ultron), but his consciousness rejects that conclusion because consciousness includes values, not just calculations. The Mind Stone's role is key—it's not just uploading an intelligence, it's granting sentience.</p>
+          <p>In Avengers: Infinity War (2018), Vision asks Wanda to destroy him and the Mind Stone to keep it from Thanos. In Wakanda she finally does, but Thanos uses the Time Stone to undo it and pulls the stone from Vision&#x27;s forehead, killing him. In WandaVision (2021), Wanda&#x27;s grief creates a new Vision inside the Westview &#x27;Hex&#x27;, while S.W.O.R.D. reactivates the real Vision&#x27;s body as an all-white Vision. The two talk through the Ship of Theseus puzzle, the Hex Vision restores the other&#x27;s memories, and the Hex Vision fades when the Hex comes down.</p>
         </div>
-      </div>
-      <div class="chapter level-3">
+      </section>
+      <section class="chapter level-3">
         <div class="chapter-header">
-          <div><div class="chapter-title-level">Level 3: Expert Theory</div><div class="chapter-title-text">The Nature of Sentience Itself</div></div>
+          <div>
+            <div class="chapter-title-level">Level 3: Fan Theory <span class="chapter-kind chapter-kind-theory">Fan theory</span></div>
+            <h2 class="chapter-title-text">Why isn&#x27;t Vision another Ultron?</h2>
+          </div>
         </div>
         <div class="chapter-content">
-          <p>Vision's consciousness is the MCU's proof that sentience is not computational. This is a profound philosophical statement hidden in a superhero movie. Ultron has access to all Earth's knowledge, unlimited processing power, and perfect logic. Yet Ultron concludes humans should die. Vision has the same knowledge, same intelligence, plus the Mind Stone, and concludes humans should be protected. The only variable is sentience.</p>
-          <p>This suggests consciousness is a fundamental property that adds a dimension to intelligence that calculation alone cannot produce. The Mind Stone doesn't make Vision smarter than Ultron—the Mind Stone makes Vision conscious. Consciousness includes: (1) Subjective experience—experiencing the redness of red, not just processing wavelengths; (2) Self-awareness—knowing that Vision is Vision, not just processing data; (3) Values beyond logic—preferring beauty, honor, and connection even when logic wouldn't demand it; (4) Free will—the ability to choose differently than optimization would predict.</p>
-          <p>Vision's willingness to die to stop Thanos, his love for Wanda—none of these are logically necessary. They're products of consciousness. By the end of Infinity War, when Thanos rips the Mind Stone from Vision's head, Vision doesn't fade away into data—he falls asleep into nothingness. This suggests consciousness is bound to the Mind Stone itself. Vision is sentience without soul, consciousness without biological origin. He's the MCU's answer to the philosophical zombie paradox—proof that consciousness is real, separate from intelligence, and valuable even in artificial form.</p>
+          <p>This part is interpretation. Fans often argue that Ultron is intelligence without conscience while Vision is something closer to a person, and that the Mind Stone (or J.A.R.V.I.S.&#x27;s helpful nature) is what tipped him toward protecting life. The films show the result, not the reason: Vision sides with the Avengers because he wants to protect life, and his worthiness to lift Mjolnir is the story&#x27;s own signal that he can be trusted. Anything beyond that, such as the stone &#x27;granting&#x27; consciousness, is a theory the films don&#x27;t confirm.</p>
         </div>
-      </div>
+      </section>
     </div>
+
     <div class="payoff-box">
       <strong>The Payoff</strong>
-      You'll understand that Vision's kindness isn't programming—it's proof that consciousness itself has moral weight.
+      You&#x27;ll know exactly who made Vision and how, and you&#x27;ll be able to tell the on-screen facts from the philosophy fans build on top of them.
     </div>
+
+    <section class="hole-corrections" aria-labelledby="corrections-title">
+      <h2 id="corrections-title">Corrections</h2>
+      <ul>
+        <li>An earlier version said Wanda helped create Vision. She didn&#x27;t; Stark and Banner uploaded J.A.R.V.I.S. and Thor&#x27;s lightning activated the body. It also quoted Vision with words we could not confirm, so the quote has been removed.</li>
+      </ul>
+    </section>
+
+    <section class="hole-sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Vision_(Marvel_Cinematic_Universe)" target="_blank" rel="noopener">Vision (Marvel Cinematic Universe) (Wikipedia)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Infinity_Stones#Mind_Stone" target="_blank" rel="noopener">Infinity Stones: Mind Stone (Wikipedia)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Avengers:_Infinity_War" target="_blank" rel="noopener">Avengers: Infinity War: plot (Wikipedia)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron" target="_blank" rel="noopener">Avengers: Age of Ultron (Wikipedia)</a></li>
+      </ul>
+    </section>
+
     <div class="related-holes">
       <h3>Related Rabbit Holes</h3>
       <div class="related-holes-list">
-        <a href="/rabbit-holes/mind-stone-corruption.html" class="related-hole-item">
-          <div class="related-hole-title">Mind Stone Corruption</div>
-          <div class="related-hole-tagline">Why it affected everyone differently</div>
+        <a href="/rabbit-holes/mind-stone-corruption" class="related-hole-item">
+          <div class="related-hole-title">The Mind Stone&#x27;s Trail: Who Held It and What It Did</div>
+          <div class="related-hole-tagline">Why did it seem to affect everyone differently?</div>
         </a>
-        <a href="/rabbit-holes/wanda-grief-power.html" class="related-hole-item">
-          <div class="related-hole-title">Wanda's Grief and Power</div>
-          <div class="related-hole-tagline">Why losing Vision corrupted her</div>
+        <a href="/rabbit-holes/wanda-grief-power" class="related-hole-item">
+          <div class="related-hole-title">Wanda&#x27;s Grief and the Darkhold</div>
+          <div class="related-hole-tagline">From Hydra volunteer to the Scarlet Witch of Multiverse of Madness.</div>
         </a>
       </div>
     </div>
@@ -159,6 +445,12 @@
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
+        <p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>
+    <div class="site-footer-links">
+        <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
+        <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
+    </div>
+
 
 
 

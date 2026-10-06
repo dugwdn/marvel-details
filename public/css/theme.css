@@ -1093,3 +1093,19 @@ html body .dir-photo img { display: block; width: 100%; height: auto; border: 2p
 html body .dir-photo figcaption { font-size: .875rem; line-height: 1.3; color: var(--dym-muted); margin-top: .25rem; overflow-wrap: anywhere; }
 html body .dir-item::after { content: ""; display: block; clear: both; }
 @media (prefers-color-scheme: dark) { html body .dir-photo img { border-color: #fff; } }
+
+/* Movie hubs (tools/build-hubs.mjs): sources, "read more" buttons, link lists.
+   Only cards with a real page get a button; fact cards stay plain. */
+html body .hub-source { font-size: .875rem; color: var(--dym-muted); margin-top: .5rem; }
+html body .hub-source a { color: var(--dym-link); }
+html body a.hub-more {
+  display: inline-block; margin-left: .3rem; padding: .05rem .55rem; white-space: nowrap;
+  background: #ffd60a; color: #111 !important; border: 2px solid #000; box-shadow: 2px 2px 0 #000;
+  font-weight: 700; text-decoration: none;
+}
+html body a.hub-more:hover, html body a.hub-more:focus-visible { background: #fff; }
+html body div.detail-item h3:not(:has(a)) { cursor: default; }
+html body ul.hub-links { list-style: none; padding: 0; margin: .6rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: .5rem 1.2rem; }
+html body ul.hub-links li { padding: .3rem 0; border-bottom: 1px dashed var(--dym-muted); }
+html body ul.hub-links a { color: var(--dym-link); font-weight: 600; }
+html body ul.hub-links .hub-note { color: var(--dym-muted); font-size: .875rem; }

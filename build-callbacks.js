@@ -8,6 +8,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { addMenu } from './tools/menu.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -32,32 +33,76 @@ function escapeHtml(text) {
     '"': '&quot;',
     "'": '&#039;'
   };
-  return text.replace(/[&<>"']/g, m => map[m]);
+  return String(text ?? '').replace(/[&<>"']/g, m => map[m]);
 }
 
-function generateCharactersList(characters) {
-  return characters.map(char => `<li>${escapeHtml(char)}</li>`).join('');
+const publicDir = path.join(__dirname, 'public');
+const pageExists = (rel) => fs.existsSync(path.join(publicDir, rel));
+const characterPages = callbacksData.characterPages || {};
+
+// A character gets a link only when its page exists; everyone else stays plain text.
+function generateCharactersList(characters = []) {
+  return characters.map(char => {
+    const slug = characterPages[char];
+    return slug && pageExists(`characters/${slug}.html`)
+      ? `<li><a href="/characters/${slug}">${escapeHtml(char)}</a></li>`
+      : `<li>${escapeHtml(char)}</li>`;
+  }).join('');
 }
 
-function generateArticlesList(articles) {
-  return articles.map(article => `<li><a href="/articles/${article}.html">${escapeHtml(article)}</a></li>`).join('');
+function articleTitle(slug) {
+  const html = fs.readFileSync(path.join(publicDir, 'articles', `${slug}.html`), 'utf8');
+  const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || slug;
+  return title.replace(/\s*\|\s*MCU Easter Eggs\s*$/i, '').trim();
 }
 
-function generateCallbackPage(callback) {
+// Only articles that have a page are listed.
+function generateArticlesList(articles = []) {
+  return articles
+    .filter(slug => pageExists(`articles/${slug}.html`))
+    .map(slug => `<li><a href="/articles/${slug}">${escapeHtml(articleTitle(slug))}</a></li>`)
+    .join('');
+}
+
+// Scene locator (no invented timestamps). Missing locator = nothing shown.
+function sceneHtml(part) {
+  return part.scene ? `<span class="timestamp">Scene: ${escapeHtml(part.scene)}</span>` : '';
+}
+
+function sourceHtml(source) {
+  if (!source || !/^https:\/\//.test(source.url || '')) return '';
+  return `<p class="callback-source">Source: <a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.name || source.url)}</a></p>`;
+}
+
+function generateCallbackPage(callback, prev, next) {
   const foreshadowMovie = movies[callback.foreshadow.movieId];
   const fulfillmentMovie = movies[callback.fulfillment.movieId];
 
   const charactersHtml = generateCharactersList(callback.relatedCharacters);
   const articlesHtml = generateArticlesList(callback.relatedArticles);
+  const articlesBlock = articlesHtml ? `
+                <div class="metadata-item">
+                    <h3>Related Articles</h3>
+                    <ul class="metadata-list">
+                        ${articlesHtml}
+                    </ul>
+                </div>` : '';
+  const prevLink = prev
+    ? `<a href="/callbacks/callback-${prev.id}" class="nav-link prev">← ${escapeHtml(prev.title)}</a>`
+    : '<a href="/callbacks/" class="nav-link prev">← All Callbacks</a>';
+  const nextLink = next
+    ? `<a href="/callbacks/callback-${next.id}" class="nav-link">${escapeHtml(next.title)} →</a>`
+    : '<a href="/callbacks/" class="nav-link">All Callbacks →</a>';
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>${escapeHtml(callback.title)} | MCU Easter Eggs</title>
     <meta name="description" content="${escapeHtml(callback.explanation.substring(0, 150))}...">
-    <meta name="keywords" content="Marvel, MCU, callback, ${callback.type}, ${foreshadowMovie.title}, ${fulfillmentMovie.title}">
+    <meta name="keywords" content="Marvel, MCU, callback, ${escapeHtml(callback.type)}, ${escapeHtml(foreshadowMovie.title)}, ${escapeHtml(fulfillmentMovie.title)}">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/callbacks.css">
     <style>
@@ -296,7 +341,19 @@ function generateCallbackPage(callback) {
                 border-color: #444;
             }
         }
+
+        .callback-source {
+            margin: 1rem 0 0 0;
+            font-size: 0.95rem;
+        }
+
+        .callback-source a {
+            color: var(--dym-link, #a72535);
+            font-weight: 600;
+        }
     </style>
+    <meta name="google-adsense-account" content="ca-pub-7178251279168670">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="callback-detail-page">
@@ -304,7 +361,7 @@ function generateCallbackPage(callback) {
 
         <header class="detail-header">
             <h1>${escapeHtml(callback.title)}</h1>
-            <span class="type-badge">${callback.type}</span>
+            <span class="type-badge">${escapeHtml(callback.type)}</span>
         </header>
 
         <!-- Foreshadow Section -->
@@ -312,7 +369,7 @@ function generateCallbackPage(callback) {
             <h2><span class="section-icon">⚡</span> Foreshadowed In</h2>
             <div class="movie-detail">
                 <div class="movie-title">${escapeHtml(foreshadowMovie.title)} (${foreshadowMovie.year})</div>
-                <span class="timestamp">Timestamp: ${callback.foreshadow.timestamp}</span>
+                ${sceneHtml(callback.foreshadow)}
                 <p class="description">${escapeHtml(callback.foreshadow.description)}</p>
             </div>
         </section>
@@ -322,7 +379,7 @@ function generateCallbackPage(callback) {
             <h2><span class="section-icon">✓</span> Fulfilled In</h2>
             <div class="movie-detail">
                 <div class="movie-title">${escapeHtml(fulfillmentMovie.title)} (${fulfillmentMovie.year})</div>
-                <span class="timestamp">Timestamp: ${callback.fulfillment.timestamp}</span>
+                ${sceneHtml(callback.fulfillment)}
                 <p class="description">${escapeHtml(callback.fulfillment.description)}</p>
             </div>
         </section>
@@ -333,6 +390,7 @@ function generateCallbackPage(callback) {
             <div class="explanation-box">
                 <p>${escapeHtml(callback.explanation)}</p>
             </div>
+            ${sourceHtml(callback.source)}
         </section>
 
         <!-- Metadata -->
@@ -343,38 +401,50 @@ function generateCallbackPage(callback) {
                     <ul class="metadata-list">
                         ${charactersHtml}
                     </ul>
-                </div>
-                <div class="metadata-item">
-                    <h3>Related Articles</h3>
-                    <ul class="metadata-list">
-                        ${articlesHtml}
-                    </ul>
-                </div>
+                </div>${articlesBlock}
             </div>
         </section>
 
         <!-- Navigation -->
         <nav class="navigation">
-            <a href="/callbacks/" class="nav-link prev">← All Callbacks</a>
-            <a href="/callbacks/" class="nav-link">Next →</a>
+            ${prevLink}
+            ${nextLink}
         </nav>
     </div>
+    <script src="/js/ads.js" defer></script>
+    <footer>
+    </footer>
 </body>
 </html>`;
 
-  return html;
+  // Site banner, menu, GA4, member and search scripts and footer links:
+  // the same chrome tools/menu.mjs writes into every page.
+  return addMenu(html, `callbacks/callback-${callback.id}.html`);
 }
 
 // Create callback pages
-const callbacksDir = path.join(__dirname, 'public/callbacks');
+const callbacksDir = path.join(publicDir, 'callbacks');
+const list = callbacksData.callbacks;
+const keep = new Set();
 
-callbacksData.callbacks.forEach((callback, index) => {
+list.forEach((callback, index) => {
+  for (const part of [callback.foreshadow, callback.fulfillment]) {
+    if (!movies[part.movieId]) throw new Error(`${callback.id}: unknown movieId ${part.movieId}`);
+  }
   const filename = `callback-${callback.id}.html`;
-  const filepath = path.join(callbacksDir, filename);
-  const html = generateCallbackPage(callback);
-
-  fs.writeFileSync(filepath, html, 'utf8');
+  keep.add(filename);
+  const html = generateCallbackPage(callback, list[index - 1], list[index + 1]);
+  fs.writeFileSync(path.join(callbacksDir, filename), html, 'utf8');
   console.log(`✓ Created ${filename}`);
 });
 
-console.log(`\n✓ Generated ${callbacksData.callbacks.length} callback pages`);
+// Pages for callbacks that were removed from the data are deleted
+// (their addresses redirect to /callbacks/ via public/_redirects).
+for (const name of fs.readdirSync(callbacksDir)) {
+  if (/^callback-cb-\d+\.html$/.test(name) && !keep.has(name)) {
+    fs.unlinkSync(path.join(callbacksDir, name));
+    console.log(`✗ Removed ${name}`);
+  }
+}
+
+console.log(`\n✓ Generated ${list.length} callback pages`);

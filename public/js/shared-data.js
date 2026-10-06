@@ -68,6 +68,8 @@ const MarvelDataHub = {
       const response = await fetch('/data/callbacks.json');
       const data = await response.json();
       this.cache.callbacks = data.callbacks || [];
+      // Character name -> slug of an existing /characters/ page (others stay plain text).
+      this.cache.callbackCharacterPages = data.characterPages || {};
       return this.cache.callbacks;
     } catch (error) {
       console.error('Error loading callbacks:', error);
@@ -225,6 +227,13 @@ const MarvelDataHub = {
   getCallbackArticles(callbackId) {
     const callback = (this.cache.callbacks || []).find(cb => cb.id === callbackId);
     return callback ? callback.relatedArticles : [];
+  },
+
+  /**
+   * Character name -> /characters/ page slug, for callback character links
+   */
+  getCallbackCharacterPages() {
+    return this.cache.callbackCharacterPages || {};
   },
 
   /**
