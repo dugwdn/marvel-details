@@ -635,3 +635,67 @@ html body #node-details:not(:empty) {
 html body #node-details .node-title { color: #9be6ff !important; font-family: var(--dym-head); text-transform: uppercase; letter-spacing: .08em; }
 html body #node-details .node-type { background: rgba(76,201,255,.12); color: #ffb347 !important; border: 1px solid rgba(76,201,255,.35); }
 html body #node-details .node-description, html body #node-details p, html body #node-details li { color: #cfe9f5 !important; }
+
+/* Popup buttons and steps: the journey reads as numbered steps, and each
+   similar character is a full button that opens its own file. Text wraps
+   instead of being cut off. Our own HUD design. */
+html body .character-modal-content .arc-stages {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem;
+  list-style: none; margin: 0; padding: 0; counter-reset: none;
+}
+html body .character-modal-content .arc-stage {
+  position: relative; display: flex; align-items: center; gap: .6rem; min-height: 3.2rem;
+  padding: .55rem .8rem .55rem .6rem; margin: 0;
+  background: linear-gradient(135deg, rgba(76,201,255,.16), rgba(76,201,255,.04)) !important;
+  border: 1px solid rgba(76,201,255,.55); border-left: 1px solid rgba(76,201,255,.55);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  font: 600 .95rem/1.15 var(--dym-head); letter-spacing: .05em; text-transform: uppercase;
+  color: #e6f8ff !important; overflow-wrap: anywhere;
+}
+html body .character-modal-content .arc-step {
+  flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  background: #ffb347; color: #071726; font: 800 1rem/1 var(--dym-head);
+  box-shadow: 0 0 10px rgba(255,179,71,.6);
+}
+html body .character-modal-content .arc-stage:last-child {
+  border-color: #ffb347; background: linear-gradient(135deg, rgba(255,179,71,.22), rgba(255,179,71,.05)) !important;
+}
+
+html body .character-modal-content .modal-stat { position: relative; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); }
+html body .character-modal-content .stat-label { font-size: .78rem; overflow-wrap: anywhere; }
+
+html body .character-modal-content .similar-arc-item {
+  display: flex; flex-direction: column; align-items: stretch; gap: .4rem; width: 100%;
+  padding: .85rem 1rem; text-align: left; cursor: pointer; font: inherit;
+  background: linear-gradient(135deg, rgba(76,201,255,.12), rgba(76,201,255,.03)) !important;
+  border: 1px solid rgba(76,201,255,.45); border-left: 4px solid #4cc9ff; border-radius: 3px;
+  color: #d8f3ff; transition: background .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+html body .character-modal-content .similar-arc-item:hover,
+html body .character-modal-content .similar-arc-item:focus-visible {
+  background: linear-gradient(135deg, rgba(76,201,255,.24), rgba(76,201,255,.08)) !important;
+  border-left-color: #ffb347; box-shadow: 0 0 18px rgba(76,201,255,.35); transform: translateX(3px); outline: none;
+}
+html body .character-modal-content .similar-arc-item:focus-visible { outline: 2px solid #ffb347; outline-offset: 2px; }
+html body .character-modal-content .similar-name { margin: 0; font: 700 1.1rem/1.1 var(--dym-head); letter-spacing: .06em; text-transform: uppercase; }
+html body .character-modal-content .similar-match { display: flex; align-items: center; gap: .5rem; margin: 0; font-size: .8rem; color: #9fd8ee !important; }
+html body .character-modal-content .similarity-bar { flex: 1; }
+html body .character-modal-content .similar-thesis { margin: 0; font-size: .88rem; line-height: 1.4; font-style: normal; color: #cfe9f5 !important; }
+html body .character-modal-content .similar-open {
+  align-self: flex-start; margin-top: .2rem; padding: .25rem .6rem;
+  font: 700 .78rem/1 var(--dym-head); letter-spacing: .14em; text-transform: uppercase;
+  color: #071726; background: #ffb347; border-radius: 2px;
+}
+
+html body .character-modal-close {
+  display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; line-height: 1;
+  background: rgba(76,201,255,.08); box-shadow: 0 0 12px rgba(76,201,255,.3);
+}
+
+@media (max-width: 640px) {
+  html body .character-modal-content .arc-stages { grid-template-columns: 1fr 1fr; }
+  html body .character-modal-content .arc-stage { font-size: .85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .character-modal-content .similar-arc-item { transition: none; }
+}

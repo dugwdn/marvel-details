@@ -364,11 +364,11 @@ class CharacterArcTracker {
 
             <div class="modal-section">
               <h3>Character Journey</h3>
-              <div class="arc-stages">
-                ${char.arcStages.map(stage => `
-                  <div class="arc-stage">${this.escapeHtml(stage)}</div>
+              <ol class="arc-stages">
+                ${char.arcStages.map((stage, i) => `
+                  <li class="arc-stage"><span class="arc-step">${i + 1}</span><span class="arc-stage-name">${this.escapeHtml(stage)}</span></li>
                 `).join('')}
-              </div>
+              </ol>
             </div>
 
             <div class="modal-stats-grid">
@@ -444,18 +444,24 @@ class CharacterArcTracker {
         return;
       }
 
+      // Each similar character is a button that opens its own popup.
       container.innerHTML = similar.map(item => `
-        <div class="similar-arc-item">
-          <p class="similar-name">${this.escapeHtml(item.character.heroName)}</p>
-          <p class="similar-match">
+        <button type="button" class="similar-arc-item" data-slug="${item.character.slug}"
+                aria-label="Open ${this.escapeHtml(item.character.heroName)}">
+          <span class="similar-name">${this.escapeHtml(item.character.heroName)}</span>
+          <span class="similar-match">
             <span class="similarity-bar">
               <span class="similarity-fill" style="width: ${item.similarity}%"></span>
             </span>
             ${item.similarity}% match
-          </p>
-          <p class="similar-thesis">${this.escapeHtml(item.character.arcThesis.substring(0, 60))}...</p>
-        </div>
+          </span>
+          <span class="similar-thesis">${this.escapeHtml(item.character.arcThesis)}</span>
+          <span class="similar-open" aria-hidden="true">Open file ▸</span>
+        </button>
       `).join('');
+      container.querySelectorAll('.similar-arc-item').forEach(btn => {
+        btn.addEventListener('click', () => this.openModal(btn.dataset.slug));
+      });
     } catch (error) {
       console.error('Error loading similar arcs:', error);
       container.innerHTML = '<p class="error">Could not load similar characters.</p>';
