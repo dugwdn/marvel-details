@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
 import { htmlFiles } from '../tools/check-links.mjs';
 
-const root = new URL('../public', import.meta.url).pathname;
+const root = fileURLToPath(new URL('../public', import.meta.url));
 const src = fs.readFileSync(`${root}/js/ads.js`, 'utf8');
 
 test('every ad box carries the AdSense slot and publisher', () => {

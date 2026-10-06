@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { htmlFiles } from '../tools/check-links.mjs';
 
 const more = fs.readFileSync(new URL('../public/more/index.html', import.meta.url), 'utf8');
@@ -16,7 +17,7 @@ test('More from us page lists our live sites and never names a person', () => {
 });
 
 test('every page footer says More from us and links /more/', () => {
-  for (const f of htmlFiles(new URL('../public', import.meta.url).pathname)) {
+  for (const f of htmlFiles(fileURLToPath(new URL('../public', import.meta.url)))) {
     const h = fs.readFileSync(f, 'utf8');
     if (!h.includes('site-footer-projects')) continue;
     assert.ok(h.includes('<strong>More from us:</strong>') && h.includes('href="/more/"'), f);
