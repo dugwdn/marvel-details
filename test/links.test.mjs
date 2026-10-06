@@ -6,9 +6,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { htmlFiles, exists, brokenLinks } from '../tools/check-links.mjs';
 
-const ROOT = new URL('../public', import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL('../public', import.meta.url));
 const pages = htmlFiles(ROOT).map((f) => ({ rel: path.relative(ROOT, f), html: fs.readFileSync(f, 'utf8') }));
 const data = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', p), 'utf8'));
 
