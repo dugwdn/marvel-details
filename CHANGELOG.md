@@ -4,10 +4,16 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-05
-- Hero menu (not live yet): the top menu is now big slanted red buttons
-  with white borders and a gold drop shadow on a red halftone-dot bar.
-  Hover turns a button gold. On phones the buttons wrap to more rows
-  instead of scrolling sideways. Our own design, no Marvel assets.
+- Brand banner (not live): a big "Details You Missed" comic banner
+  (sunburst, the site's own magnifying-glass mark, yellow lettering) on
+  every page, plus comic lettering on headings and comic-panel cards, back
+  buttons, section titles and footer.
+- Menu (not live): every page now has the same menu of big comic-style
+  buttons (Home, Articles, Movies, Deleted Scenes, Callbacks, Characters,
+  Universe Map, Rabbit Holes, About), with the current section in yellow.
+  Pages that had no menu (callbacks, map, rabbit holes, 404) now have one.
+  Written by `tools/menu.mjs`; styles in `public/css/theme.css`.
+  Replaces the red hero menu from PR #9.
 - Newest-movie banner (not live yet): a big home page banner for
   Spider-Man: Brand New Day linking to a new easter eggs article
   (`/articles/spider-man-brand-new-day-easter-eggs`). Each reported egg is

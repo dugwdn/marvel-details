@@ -26,6 +26,9 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
   real 404, sitemap/robots, link check on every PR), PR #3 ad boxes (hidden
   until AdSense fills them) and PR #4 green drink corrections.
+- **Brand banner and site menu:** one shared comic-style banner and menu
+  of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
+  page). Styles are in `public/css/theme.css`; uses the Bangers web font.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
