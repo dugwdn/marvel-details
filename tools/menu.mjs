@@ -155,6 +155,20 @@ export function versionAssets(html, root = ROOT) {
     });
 }
 
+// Ad placeholders: pages that load js/ads.js get the top box (below the
+// menu) and the end box (above the footer) written into the HTML, with
+// data-ad-placeholder so the site-health robot can count them without
+// running scripts. Boxes a page writes by hand (the home page) are kept.
+export const adBox = (name) =>
+  `<div class="ad-box" data-ad-box="${name}" data-ad-placeholder="${name}" data-ad-stamp><div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div></div>`;
+export function addAdBoxes(html) {
+  html = html.replace(/\n?[ \t]*<div class="ad-box" data-ad-box="\w+" data-ad-placeholder="\w+" data-ad-stamp>.*?<\/div><\/div>/g, '');
+  if (!html.includes('/js/ads.js')) return html;
+  if (!html.includes('data-ad-box="top"')) html = html.replace(/(<nav class="site-nav"[\s\S]*?<\/nav>)/, `$1\n    ${adBox('top')}`);
+  if (!html.includes('data-ad-box="end"') && /<footer[\s>]/.test(html)) html = html.replace(/(\n?)([ \t]*)(<footer[\s>])/, `$1$2${adBox('end')}\n$2$3`);
+  return html;
+}
+
 export function addMenu(html, rel) {
   // Drop the banner from a previous run and the old plain "Details You Missed"
   // (or "MCU Easter Eggs")
@@ -197,7 +211,7 @@ export function addMenu(html, rel) {
   } else {
     html = html.replace(/(<\/body>)/, `    <footer>\n${FOOTER}\n    </footer>\n$1`);
   }
-  return versionAssets(html);
+  return versionAssets(addAdBoxes(html));
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === SELF) {
