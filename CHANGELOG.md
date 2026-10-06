@@ -4,6 +4,12 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Universe Map window (not live): /map/ opens as a full-screen window over
+  the site with a big yellow "Back to the site" button, a close button and
+  Esc, all returning to the page the visitor came from (or home). New space
+  look: starfield and grid backdrop, glowing nodes, light outlined labels,
+  cyan links, dark HUD sidebar. Fixes the long white hover bar that printed
+  raw <strong>/<br/> code: hover tips are now a dark, wrapping card.
 - Comic panels site-wide (not live yet): movie hubs (details two across
   with yellow caption headings), callback pages (speech-bubble scene
   notes), rabbit-hole chapters, character pages and the About page now use
