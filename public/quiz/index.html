@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>Marvel Quiz: Test Your MCU Knowledge, Easy to Insanely Hard | MCU Easter Eggs</title>
     <meta name="description" content="Free Marvel movie quiz: 82 MCU trivia questions across four levels, from Sidekick (easy) to Inevitable (insanely hard). Earn points, rank up from Recruit to Inevitable, and see the answer behind every question.">
@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://mcueastereggs.com/quiz/">
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/theme.css?v=ea4ccf41">
+    <link rel="stylesheet" href="/css/theme.css?v=106c557a">
     <link rel="stylesheet" href="/css/quiz.css?v=8f489b91">
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "Marvel Quiz: Test Your MCU Knowledge", "url": "https://mcueastereggs.com/quiz/", "description": "A free Marvel movie quiz with four levels from easy to insanely hard. Earn points, rank up and learn the answer behind every question.", "isPartOf": {"@type": "WebSite", "name": "MCU Easter Eggs", "url": "https://mcueastereggs.com/"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How hard is the Marvel quiz?", "acceptedAnswer": {"@type": "Answer", "text": "There are four levels: Sidekick (easy), Hero (medium), Avenger (hard) and Inevitable (insanely hard, with a 15-second timer). Each round is 10 questions picked at random from 82 total."}}, {"@type": "Question", "name": "How do quiz points work?", "acceptedAnswer": {"@type": "Answer", "text": "Each right answer earns the level's points (10, 20, 40 or 75). Three or more right in a row adds a 50% streak bonus, and a perfect round adds five answers' worth of bonus points. Points add up to your quiz rank, from Recruit to Inevitable."}}, {"@type": "Question", "name": "Do I need an account to play?", "acceptedAnswer": {"@type": "Answer", "text": "No. Anyone can play and your points are kept on this device. Sign in with Google if you want your points and rank on every device."}}]}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,7 @@
         <p class="site-brand-title"><a class="site-brand-link" href="/" aria-label="MCU Easter Eggs home"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">MCU <em>Easter</em> Eggs</span></a></p>
         <div class="site-search" hidden>
             <label class="site-search-label" for="site-q">Search the site</label>
-            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">
+            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">
             <ul id="site-results" class="site-results" role="listbox" aria-label="Search results" hidden></ul>
         </div>
         <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>
@@ -172,5 +172,6 @@
     <script type="module" src="/js/quiz.js?v=c5824b67"></script>
     <script type="module" src="/js/members.js?v=25ce0410"></script>
     <script type="module" src="/js/search.js?v=3f64106c"></script>
+    <script type="module" src="/js/keyboard.js?v=bd0f7407"></script>
 </body>
 </html>

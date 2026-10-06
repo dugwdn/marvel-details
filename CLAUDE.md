@@ -58,9 +58,36 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   needs at least 20. The page's level cards and rank table are written into
   the HTML, so update `public/quiz/index.html` if levels or ranks change.
   Menu: Quiz replaced About (About is in the footer legal line).
+- **Typing boxes (2026-10-06, branch `keyboard-fit`):** every page loads
+  `/js/keyboard.js` and lets Android shrink the page around the keyboard;
+  every search box asks for a small keyboard and has a visible label. See
+  "Typing boxes and the keyboard" below. On-screen check: 16 failing before,
+  0 after.
 - **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
   anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
   Never add a card that looks clickable without a link behind it.
+
+## Typing boxes and the keyboard (standing rule, Doug 2026-10-06)
+"Ensure that any time a text input field is needed. That the input field
+itself, and anything else needed to understand what is supposed to go into
+that field is visible. And that we keep the keyboard as small as possible."
+`node tools/menu.mjs` gives every page
+`<script type="module" src="/js/keyboard.js"></script>` and adds
+`interactive-widget=resizes-content` to its viewport tag. `public/js/keyboard.js`
+keeps the focused box's group (its label, the heading, its button; the biggest
+group that fits above the keyboard and below the sticky header, or
+`data-kb-block` on a group) in view by scrolling, or by sliding a fixed
+window (the Universe Map) up, undone when the box loses focus. Every typing
+box has a visible label (a placeholder alone isn't enough) and asks for a
+small keyboard: `inputmode`, `enterkeyhint`, `autocomplete="off"`,
+`autocorrect="off"`, `spellcheck="false"`, `autocapitalize` (`off` for
+searches, `words` for names). Sign-in fields, if ever added, keep their real
+`autocomplete` token (email, current-password) so one tap fills them.
+The header search box lives in `brandFor` in `tools/menu.mjs`; the Character
+List box in `tools/build-directory.py`. `test/keyboard.test.mjs` enforces the
+tags and attributes; `scripts/keyboard-check.mjs` taps every box at 390x640
+with a 300px keyboard (add a line to its `CASES` for a new box; run it against
+`npm run dev` or `python3 -m http.server -d public 8788`).
 
 ## Plan
 See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: write the 7 missing articles, finish PR #28 media, keep link checks green.

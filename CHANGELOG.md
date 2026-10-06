@@ -3,6 +3,21 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (Typing boxes and the on-screen keyboard, not live yet)
+- Doug's standing rule: every typing box, and what tells you what to type in
+  it, stays in view while the device keyboard is out, and the keyboard is as
+  small as possible. Every page loads `/js/keyboard.js` and its viewport tag
+  has `interactive-widget=resizes-content` (both written by
+  `node tools/menu.mjs`).
+- The header search, Characters, Character List, Deleted Scenes, Callbacks,
+  Rabbit Holes and Universe Map search boxes ask for the search keyboard with
+  a Search key and no suggestion bar or autofill. The header search shows its
+  "Search the site" label when opened on a small or touch screen; Callbacks
+  and the Universe Map search got a visible label.
+- `test/keyboard.test.mjs` checks the tags and attributes;
+  `scripts/keyboard-check.mjs` taps each box at 390x640 with a 300px
+  keyboard (16 failing before, 0 after).
+
 ## 2026-10-06 (Home spotlight filled in, not live yet)
 - Home page "Faces of the MCU" spotlight: the empty space beside the photo
   now shows the character's arc line, abilities and skills, closest allies,

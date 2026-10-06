@@ -100,7 +100,7 @@ page = f'''<!DOCTYPE html>
 
         <form class="dir-controls" role="search" onsubmit="return false">
             <label class="dir-field dir-search"><span>Search</span>
-                <input type="search" id="dir-q" placeholder="Name or actor, like Loki or Hiddleston" autocomplete="off"></label>
+                <input type="search" id="dir-q" placeholder="Name or actor, like Loki or Hiddleston" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></label>
             <label class="dir-field"><span>Appears in</span>
                 <select id="dir-t"><option value="">Any movie or series</option><optgroup label="Movies">{opts_f}</optgroup><optgroup label="Disney+ series">{opts_s}</optgroup></select></label>
             <label class="dir-field"><span>Show</span>
