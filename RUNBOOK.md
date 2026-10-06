@@ -20,7 +20,7 @@ npx wrangler pages deploy public --project-name marvel-details --branch phase-1-
 preview at `https://<branch>.marvel-details.pages.dev` instead.
 
 After publishing, check:
-1. https://marvel-details.pages.dev/ and each feature: `/scenes/`,
+1. https://mcueastereggs.com/ (and marvel-details.pages.dev) and each feature: `/scenes/`,
    `/callbacks/`, `/characters/`, `/map/` (the graph draws), `/rabbit-holes/`.
 2. A made-up address shows "That page isn't here" (after PR #1).
 3. `npx wrangler pages deployment list --project-name marvel-details`
@@ -43,7 +43,7 @@ Check: `https://<site>/api/auth` lists the provider, and `/account` shows its
 button after the 13+ box. The database tables already exist; if the database
 is ever rebuilt, run `npx wrangler d1 migrations apply marvel-details --remote`.
 
-## Member perks sync (after PRs #18 and #21 are both merged)
+## Member perks sync (PRs #18 and #21 are merged and live)
 The perks work without this; it lets signed-in members keep their list on
 every device. Add the `saves` table once, then publish:
 ```
