@@ -114,19 +114,21 @@ async function checkRank() {
   } catch { /* data didn't load; try again next time */ }
 }
 
-function updateChip() {
-  const link = document.querySelector('nav.site-nav a[href="/me/"]');
-  const title = ls.get(RANK_CACHE);
-  if (!link || !title || !Object.keys(state.found).length) return;
-  let chip = link.querySelector('.dym-rank-chip');
-  if (!chip) {
-    chip = document.createElement('span');
-    chip.className = 'dym-rank-chip';
-    link.appendChild(chip);
-  }
-  chip.textContent = title;
-  link.setAttribute('aria-label', `My Marvel, rank ${title}`);
+// The member chip in the header bar: "Found X of 69 · Rank: Civilian",
+// a link to My Marvel. The totals come from the same data files as My Marvel.
+async function updateChip() {
+  const link = document.querySelector('.site-member');
+  const text = link && link.querySelector('.site-member-text');
+  if (!text) return;
+  try {
+    const { stats, rank } = await progress();
+    const title = rank.current.title;
+    text.innerHTML = `<span class="site-member-word">Found </span><b>${stats.found}</b><span class="site-member-word"> of </span><span class="site-member-slash" aria-hidden="true">/</span><b>${stats.total}</b><span class="site-member-rank"><span class="site-member-sep" aria-hidden="true"> · </span>Rank: <b>${esc(title)}</b></span>`;
+    link.setAttribute('aria-label', `My Marvel: found ${stats.found} of ${stats.total} hidden details, rank ${title}`);
+    link.classList.add('is-ready');
+  } catch { /* data didn't load: the plain "My Marvel" link stays */ }
 }
+document.addEventListener('dym:change', () => { updateChip(); });
 
 function toast(html, sub) {
   document.querySelector('.dym-toast')?.remove();
@@ -376,21 +378,6 @@ function decorate() {
     if (h) {
       const meta = h.parentElement.querySelector('.article-meta');
       (meta || h).after(actionRow(saveButton(`article:${m[1]}`, () => ({ title: titleOf(h), url: `/articles/${m[1]}` }))));
-    }
-  }
-
-  // Home: one small line with the found counter and rank.
-  if (path === '/') {
-    const anchor = document.querySelector('.container');
-    if (anchor) {
-      const p = document.createElement('p');
-      p.className = 'dym-found-line';
-      anchor.prepend(p);
-      const paint = () => progress().then(({ stats, rank }) => {
-        p.innerHTML = `<a href="/me/">You've found <strong>${stats.found} of ${stats.total}</strong> hidden details · Rank: <strong>${esc(rank.current.title)}</strong></a>`;
-      }).catch(() => p.remove());
-      document.addEventListener('dym:change', paint);
-      paint();
     }
   }
 
