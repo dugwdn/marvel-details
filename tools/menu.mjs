@@ -32,6 +32,13 @@ const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
 const MEMBERS = '<script type="module" src="/js/members.js"></script>';
 const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a></p>';
 
+// Footer with project backlinks and Web Design Nerd credit
+const FOOTER =
+  '<div class="site-footer-links">\n' +
+  '        <p class="site-footer-projects"><strong>More from Doug:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a></p>\n' +
+  '        <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>\n' +
+  '    </div>';
+
 // rel is the page's path inside public/, with forward slashes.
 export function menuFor(rel) {
   const section = rel === 'index.html' ? '' : rel.replace(/\.html$/, '').split('/')[0];
@@ -86,6 +93,15 @@ export function addMenu(html, rel) {
   html = html.replace(/<p class="site-legal">[\s\S]*?<\/p>/, PRIVACY);
   if (/<footer[\s>]/.test(html) && !/href="\/privacy\/?"/.test(html)) {
     html = html.replace(/(<footer[^>]*>)([\s\S]*?)(\s*)<\/footer>/, (all, open, inner, ws) => `${open}${inner}${inner.includes('\n') ? '\n        ' : ''}${PRIVACY}${ws}</footer>`);
+  }
+  // Add footer with project links and Web Design Nerd credit.
+  // Remove from a previous run first.
+  html = html.replace(/\s*<div class="site-footer-links">[\s\S]*?<\/div>\n(\s*)<\/footer>/, '\n$1</footer>');
+  // Add it before the closing footer tag if a footer exists, or create one before </body>.
+  if (/<\/footer>/.test(html)) {
+    html = html.replace(/(\s*)<\/footer>/, `\n    ${FOOTER}\n$1</footer>`);
+  } else {
+    html = html.replace(/(<\/body>)/, `    <footer>\n${FOOTER}\n    </footer>\n$1`);
   }
   return html;
 }
