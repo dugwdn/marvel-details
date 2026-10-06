@@ -11,7 +11,16 @@ merged-but-unpublished work.
   `/credits`, and a sitemap entry.
 - Menu: Coming Soon takes the slot My Marvel had, so the menu stays ten
   buttons with no orphan. My Marvel is still one tap away in the header chip.
-- `tools/menu.mjs` no longer adds a blank line to every footer each run.
+- `tools/menu.mjs` no longer adds a blank line or a second copy of the
+  project links to footers when it runs again (the 404 page had two).
+
+## 2026-10-06 (GA4 privacy settings, not live yet)
+- GA4 now has one on/off spot: `GA_ID` in `tools/menu.mjs`. Empty or a
+  placeholder like `G-XXXXXXXXXX` means no Google tag is written into any
+  page. Every page's tag now sets ad consent to denied, turns off Google
+  signals and ad personalization, and sends the page address without its
+  `?query` or `#hash`. Privacy page says so in plain words.
+  `test/analytics.test.mjs` checks off, on and the stripped address.
 
 ## 2026-10-06 (images and trailers, live 2026-10-06 as bd1f6f4)
 - Photo and video credits: `/credits` (built by `node tools/build-credits.mjs`

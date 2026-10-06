@@ -34,17 +34,32 @@ const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
 const MEMBERS = '<script type="module" src="/js/members.js"></script>';
 const SEARCH = '<script type="module" src="/js/search.js"></script>';
 // Google Analytics 4 for mcueastereggs.com: counts visits and pages read.
-// Standard snippet, no user id or personal data is ever passed to it.
+// THE ONE PLACE FOR THE GA4 ID. Empty (or a placeholder like G-XXXXXXXXXX)
+// means analytics is off: no Google tag is written into any page.
+// After changing it run `node tools/menu.mjs` and deploy.
 export const GA_ID = 'G-NESPZD6XSQ';
-const GA =
-  '<!-- GA4 -->\n' +
-  `    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>\n` +
-  '    <script>\n' +
-  '        window.dataLayer = window.dataLayer || [];\n' +
-  '        function gtag(){dataLayer.push(arguments);}\n' +
-  "        gtag('js', new Date());\n" +
-  `        gtag('config', '${GA_ID}');\n` +
-  '    </script>';
+
+// A real GA4 ID is G- plus letters and digits, and not the X-filled placeholder.
+export function gaEnabled(id) {
+  return /^G-[A-Z0-9]{4,}$/.test(id || '') && !/^G-X+$/.test(id);
+}
+
+// The snippet for one ID, or '' when analytics is off. Privacy defaults: no
+// Google signals, no ad personalization, ad consent denied, and the page
+// address is sent without its query string or #hash.
+export function gaSnippet(id) {
+  if (!gaEnabled(id)) return '';
+  return '<!-- GA4 -->\n' +
+    `    <script async src="https://www.googletagmanager.com/gtag/js?id=${id}"></script>\n` +
+    '    <script>\n' +
+    '        window.dataLayer = window.dataLayer || [];\n' +
+    '        function gtag(){dataLayer.push(arguments);}\n' +
+    "        gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });\n" +
+    "        gtag('js', new Date());\n" +
+    `        gtag('config', '${id}', { allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname });\n` +
+    '    </script>';
+}
+const GA = gaSnippet(GA_ID);
 const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>';
 
 // Footer with project backlinks and Web Design Nerd credit
@@ -131,27 +146,28 @@ export function addMenu(html, rel) {
   html = existing.test(html)
     ? html.replace(existing, menu)
     : html.replace(/(<body[^>]*>)/, `$1\n    ${menu}\n`);
-  // One GA4 snippet per page: drop any earlier one (hand-written or ours), then write it.
+  // One GA4 snippet per page: drop any earlier one (hand-written or ours), then
+  // write it, or write nothing when GA_ID is empty (analytics off).
   html = html
     .replace(/[ \t]*<!-- GA4 -->[ \t]*\n?/g, '')
     .replace(/[ \t]*<script async src="https:\/\/www\.googletagmanager\.com\/gtag\/js[^"]*"><\/script>[ \t]*\n?/g, '')
     .replace(/[ \t]*<script>\s*window\.dataLayer[\s\S]*?<\/script>[ \t]*\n?/g, '')
-    .replace('</head>', `    ${GA}\n</head>`);
+    .replace('</head>', GA ? `    ${GA}\n</head>` : '</head>');
   if (!html.includes('family=Bangers')) html = html.replace('</head>', `    ${FONT}\n</head>`);
   if (!html.includes('/css/theme.css')) html = html.replace('</head>', `    ${STYLE}\n</head>`);
   if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
   if (!html.includes('/js/search.js')) html = html.replace('</body>', `    ${SEARCH}\n</body>`);
+  // Remove the project links from a previous run (every copy) first.
+  html = html.replace(/\n[ \t]*<div class="site-footer-links">[\s\S]*?<\/div>/g, '');
   // Pages with a footer get a Privacy link in it (once).
   html = html.replace(/<p class="site-legal">[\s\S]*?<\/p>/, PRIVACY);
   if (/<footer[\s>]/.test(html) && !/href="\/privacy\/?"/.test(html)) {
     html = html.replace(/(<footer[^>]*>)([\s\S]*?)(\s*)<\/footer>/, (all, open, inner, ws) => `${open}${inner}${inner.includes('\n') ? '\n        ' : ''}${PRIVACY}${ws}</footer>`);
   }
   // Add footer with project links and Web Design Nerd credit.
-  // Remove from a previous run first.
-  html = html.replace(/\s*<div class="site-footer-links">[\s\S]*?<\/div>\n(\s*)<\/footer>/, '$1</footer>');
   // Add it before the closing footer tag if a footer exists, or create one before </body>.
   if (/<\/footer>/.test(html)) {
-    html = html.replace(/(\s*)<\/footer>/, `\n    ${FOOTER}\n$1</footer>`);
+    html = html.replace(/(\s*)<\/footer>/, `\n    ${FOOTER}$1</footer>`);
   } else {
     html = html.replace(/(<\/body>)/, `    <footer>\n${FOOTER}\n    </footer>\n$1`);
   }

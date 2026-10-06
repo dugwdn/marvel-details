@@ -301,8 +301,9 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
         gtag('js', new Date());
-        gtag('config', 'G-NESPZD6XSQ');
+        gtag('config', 'G-NESPZD6XSQ', { allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname });
     </script>
 </head>
 <body>
@@ -443,7 +444,7 @@
   </div>
     <script src="/js/ads.js" defer></script>
     <script type="module" src="/js/members.js"></script>
-    <footer>
+    <footer><p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>
     <div class="site-footer-links">
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
