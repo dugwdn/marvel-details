@@ -3,6 +3,17 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06
+- Trailers and actor photos (not live yet): each of the 5 movie pages and
+  the Spider-Man: Brand New Day article now play the official trailer with
+  YouTube's own embedded player (Marvel Entertainment, Sony's Spider-Man
+  channel, or Movieclips for Iron Man 1 and 2, which have no studio upload).
+  The 10 character pages show a free-license photo of the actor from
+  Wikimedia Commons, credited with photographer and license
+  (`public/img/actors/`). No studio posters or stills.
+- Home menu button darkened to #c62828 so its white text passes 4.5:1.
+- **Live:** published commit 9f67a72 (comic look, Brand New Day banner).
+
 ## 2026-10-05
 - Brand banner (not live): a big "Details You Missed" comic banner
   (sunburst, the site's own magnifying-glass mark, yellow lettering) on

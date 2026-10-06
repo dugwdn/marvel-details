@@ -29,6 +29,10 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Brand banner and site menu:** one shared comic-style banner and menu
   of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
   page). Styles are in `public/css/theme.css`; uses the Bangers web font.
+- **Images rule:** no studio posters, stills or character art (copyright;
+  ads at risk). Trailers are YouTube embeds of official uploads; actor photos
+  are free-license Wikimedia Commons files with a credit line. IMDb text and
+  photos can't be copied; plain facts (dates, cast) can be stated.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
