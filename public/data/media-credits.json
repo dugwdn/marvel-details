@@ -2754,6 +2754,51 @@
     "Iron Man"
    ],
    "factSource": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)#Filming"
+  },
+  {
+   "id": "xu-wenwu",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/xu-wenwu.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/xu-wenwu-240.webp",
+    "480": "/img/actors/dir/xu-wenwu.webp"
+   },
+   "subject": "Tony Leung Chiu-wai",
+   "alt": "Tony Leung Chiu-wai, who plays Xu Wenwu",
+   "author": "Dick Thomas Johnson from Tokyo, Japan",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tony_Leung_as_the_President_of_the_International_Competition_Jury_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2024_(54578353950).jpg",
+   "changes": "cropped and resized",
+   "role": "plays",
+   "character": "xu-wenwu"
+  },
+  {
+   "id": "cleveland-public-square",
+   "kind": "place",
+   "page": "/",
+   "file": "/img/places/cleveland-public-square.webp",
+   "width": 960,
+   "height": 600,
+   "srcset": {
+    "480": "/img/places/cleveland-public-square-480.webp",
+    "960": "/img/places/cleveland-public-square.webp"
+   },
+   "subject": "Public Square, Cleveland, Ohio",
+   "alt": "Public Square, Cleveland, Ohio",
+   "author": "Cards84664",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Public_Square_Cleveland_2022.png",
+   "changes": "cropped and resized",
+   "caption": "Part of the square was turned into Stuttgart, Germany, for Loki's scene in The Avengers; nearby East 9th Street stood in for New York's 42nd Street.",
+   "films": [
+    "The Avengers"
+   ],
+   "factSource": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)#Filming"
   }
  ],
  "videos": [
