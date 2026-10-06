@@ -1207,3 +1207,41 @@ html body .has-hero > .film-hero-pair { float: none; width: 100%; margin: 1.25re
   html body .film-trailer-btn .yt-icon::after { left: 20px; top: 14px; border-width: 11px 0 11px 17px; }
   html body .film-trailer-btn .yt-film { font-size: 1.25rem; }
 }
+
+/* Character arc timeline, opened milestone (Doug, 2026-10-06). The generic
+   comic-panel rule above matches every .detail-section, so each label/value
+   pair inside an opened milestone became its own bordered, rotated panel
+   inside a light box. Here the opened milestone is ONE comic panel and the
+   pairs inside it are plain rows with a yellow caption label. */
+html body .milestone-details {
+  margin: .9rem 0 0 !important; padding: 1.1rem 1.2rem !important;
+  background: var(--dym-surface) !important; color: var(--dym-text) !important;
+  border: 3px solid #000 !important; border-radius: 3px !important; box-shadow: 5px 5px 0 #000 !important;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.4rem;
+}
+html body .milestone-details .detail-section {
+  margin: 0 !important; padding: 0 !important; transform: none !important;
+  background: none !important; border: 0 !important; box-shadow: none !important; border-radius: 0 !important;
+  min-width: 0;
+}
+html body .milestone-details .detail-section:nth-child(3),
+html body .milestone-details .detail-section:last-child { grid-column: 1 / -1; }
+html body .milestone-details .detail-section h4 {
+  display: inline-block; margin: 0 0 .35rem !important; padding: .15rem .55rem .05rem;
+  background: #ffd60a; color: #111 !important; border: 2px solid #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: 1rem; letter-spacing: .06em; line-height: 1.2; text-transform: uppercase;
+}
+html body .milestone-details .detail-section p {
+  margin: 0 !important; color: var(--dym-text) !important; font-size: 1rem; line-height: 1.55;
+}
+html body .milestone-details .detail-section p.tagline { font-style: italic; color: var(--dym-muted) !important; }
+@media (prefers-color-scheme: dark) {
+  html body .milestone-details { border-color: #f2f2f2 !important; box-shadow: 5px 5px 0 var(--dym-red) !important; }
+}
+@media (max-width: 600px) {
+  html body .milestone-details { grid-template-columns: 1fr; padding: 1rem !important; }
+  html body .timeline-milestone { padding-left: 40px !important; }
+}
+/* The page already shows "Character Arc Timeline" and the thesis above the
+   timeline, so the script's own repeat of both is hidden on character pages. */
+html body .timeline-section .timeline-header { display: none; }

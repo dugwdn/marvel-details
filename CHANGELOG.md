@@ -3,6 +3,16 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (Character page timeline cleanup, not live yet)
+- Character pages (all 20): opening a timeline milestone showed each line
+  (Movie, Key Moment, Description, Emotional State, Arc Stage, Tagline) as
+  its own dark box with a thick offset border inside a light box, with big
+  gaps. The site-wide comic-panel rule in theme.css was matching those
+  inner rows. Now the opened milestone is one comic panel with yellow caption
+  labels, two columns on desktop and one on phones, in light and dark mode.
+- Removed the repeated "Character Arc Timeline" title and thesis line the
+  timeline script printed under the page's own heading.
+
 ## 2026-10-06 (Movie headers with media, credits on one page, not live yet)
 - Movie pages, deleted-scene pages and callback pages: the header box now has
   the official trailer (click to play; its cover is the film's cast photos)
