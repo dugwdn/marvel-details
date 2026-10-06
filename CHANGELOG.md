@@ -4,6 +4,11 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Articles as comic strips (not live yet): each article section is now a
+  comic panel with a yellow caption box for its heading, scene notes are
+  speech bubbles, panels sit two across on desktop and stack on phones.
+  Panels are written by `python3 tools/comic-panels.py` (run it after
+  adding an article).
 - Popups (not live yet): the character popup on /characters/ and the
   Universe Map hover tips and node panel now look like a dark holographic
   AI-assistant screen (dark glass, cyan glow, amber accents) instead of a
