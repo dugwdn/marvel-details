@@ -1041,3 +1041,23 @@ html body .dym-done-note { font-weight: 700; }
 }
 html body .character-favorite-btn { color: var(--dym-muted); }
 html body .character-favorite-btn.favorited { color: var(--dym-red); }
+/* The shared sign-in panel (public/js/account.js) inside My Marvel */
+html body .dym-account .muted { color: var(--dym-muted); }
+html body .dym-account .acct-age { display: flex; gap: .6rem; align-items: center; font-weight: 600; margin: .8rem 0; cursor: pointer; }
+html body .dym-account .acct-age input { width: 1.25rem; height: 1.25rem; accent-color: var(--dym-red); }
+html body .dym-account .acct-btns { display: grid; gap: .7rem; margin: .8rem 0; max-width: 400px; }
+html body .dym-account .acct-btn {
+  display: block; width: 100%; padding: .7rem 1rem .6rem; text-align: center; text-decoration: none; cursor: pointer;
+  border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 #000; font-family: var(--dym-head); font-weight: 700; font-size: 1rem; letter-spacing: .05em; text-transform: uppercase;
+}
+html body .dym-account .acct-btn.fb { background: #1877f2; color: #fff !important; }
+html body .dym-account .acct-btn.x { background: #000; color: #fff !important; }
+html body .dym-account .acct-btn.quiet { background: #fff; color: #111 !important; max-width: 400px; }
+html body .dym-account .acct-google { min-height: 44px; display: flex; justify-content: flex-start; }
+html body .dym-account .acct-note { background: #ffd60a; color: #111; border: 3px solid #000; padding: .6rem .8rem; }
+html body .dym-account details summary { cursor: pointer; margin-top: .8rem; color: var(--dym-red); font-weight: 600; }
+html body .dym-sync-status { color: var(--dym-muted); font-size: .9rem; }
+@media (prefers-color-scheme: dark) {
+  html body .dym-account .acct-btn { border-color: #f2f2f2; box-shadow: 3px 3px 0 var(--dym-red); }
+  html body .dym-account details summary { color: #ff6b74; }
+}

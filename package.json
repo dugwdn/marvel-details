@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "wrangler pages dev public --port 8788",
     "deploy": "wrangler pages deploy public --project-name marvel-details --branch phase-1-build",
-    "test": "node --test",
-    "check-links": "node tools/check-links.mjs"
+    "test": "node --test test/*.test.mjs"
   },
   "keywords": [
     "marvel",
@@ -18,6 +17,6 @@
   "author": "Doug",
   "license": "MIT",
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.78.0"
   }
 }

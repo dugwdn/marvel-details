@@ -52,13 +52,14 @@ account; an account only carries it to other devices.
    a rank chip on the My Marvel menu button and a promotion toast.
 - **My Marvel** (`/me/`): phone-first, Back arrow, explanations open in
   place, noindex and not in the sitemap.
-- **Accounts:** Google sign-in only, 13 or older (checkbox), we keep
-  Google's account number and first name, never email. Delete any time.
+- **Accounts:** the site's sign-in (ADR-007: Google first, plus Facebook
+  and X, 13 or older, id and first name only, never email). Signed-in
+  members' lists sync across devices; deleting the account deletes the list.
 - Success: share of visitors who save, mark or star something (needs GA4
   events later); share who sign in.
 
 ## Not building (for now)
-- Comments, email (weekly digest), or other sign-in providers.
+- Comments, email (weekly digest).
 - Storing email addresses or anything beyond the member list above.
 - Video or copied film stills (copyright).
 - A framework or build pipeline.
@@ -66,8 +67,8 @@ account; an account only carries it to other devices.
 
 ## Changes to this PRD
 - 2026-10-06: "Accounts ... anything that stores visitor data" moved out of
-  "Not building" into the new Members section (local-first perks, optional
-  Google sign-in, sub + first name only).
+  "Not building" into the new Members section (local-first perks; sync for
+  members signed in with the site's sign-in, ADR-007/ADR-008).
 
 ## Open questions for Doug
 - Rank titles use Marvel character names (trademark question; see the PR).

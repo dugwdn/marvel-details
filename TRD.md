@@ -40,8 +40,12 @@ change the matching page.
 - Pages "pretty URLs": `/movies/endgame.html` redirects to `/movies/endgame`.
 - With PR #1: `404.html` handles unknown addresses (without it, Pages
   serves the home page for every unknown address).
-- The repo has no Workers code; an earlier Workers setup (`src/index.js`,
-  `wrangler.toml`) was removed in favor of Pages. `npm run dev` and
+- Sign-in (ADR-007): Pages Functions in `functions/` answer `/api/auth/*`
+  only (`public/_routes.json`); D1 database `marvel-details` (binding `DB`,
+  schema in `migrations/`). `wrangler.toml` holds the Pages settings, the D1
+  binding and the public `GOOGLE_CLIENT_ID`; Facebook and X ids and secrets
+  are Pages secrets. An earlier Workers setup (`src/index.js`) was removed in
+  favor of Pages. `npm run dev` and
   `npm run deploy` wrap the wrangler Pages commands.
 
 ## Styling
@@ -59,37 +63,31 @@ depend on. The home, movie and article pages are light only.
   `ads.txt` lists the publisher ID. Every page has the
   `google-adsense-account` meta tag.
 
-## Members (member-perks PR)
+## Members (PR #21, ADR-008; stacks on the sign-in, ADR-007)
 **Files**
 ```
 public/js/members-core.js   pure logic: state shape, sanitize, merge, found
                             counter, rank math. Used by the browser, the
-                            Functions and the tests (ES module, no DOM).
+                            sync Function and the tests (ES module, no DOM).
 public/js/members.js        page code (ES module, on every page via
                             tools/menu.mjs): buttons, spoiler blur, found
-                            tracking, rank chip and toast, /me/, sign-in, sync
+                            tracking, rank chip and toast, /me/, sync
 public/data/ranks.json      rank ladder: titles, minPct thresholds, reasons
 public/me/index.html        My Marvel (noindex, not in the sitemap)
-public/privacy/index.html   what is stored
-functions/api/me.js         GET  /api/me
-functions/api/auth/google.js POST /api/auth/google  {credential, over13}
-functions/api/auth/signout.js POST /api/auth/signout
-functions/api/auth/delete.js  POST /api/auth/delete
-functions/api/sync.js       GET/PUT /api/sync
-lib/google-auth.js          Google ID token check (JWKS + WebCrypto, claims)
-lib/members-server.js       JSON replies, cookie, session lookup
-migrations/0001_members.sql D1 tables users, sessions, saves
-wrangler.toml               pages_build_output_dir = "public", D1 binding DB
-test/*.test.js              node --test (npm test)
+functions/api/sync.js       GET/PUT /api/sync (uses who() from
+                            functions/_lib/auth.js for the session)
+migrations/0002_member_saves.sql  table saves (user_id = users.id)
+test/members-core.test.mjs, test/sync.test.mjs
 ```
 **Local state** (localStorage key `dym-members-v1`): `seen`, `saved`,
 `favs` as `{id: {on, t}}` (t = ms; on:false is a dated removal), `saved`
 items also carry title and url, `found` as `{"kind:id": t}` (kinds scene,
 callback, rabbit), `settings.hideSpoilers` with its own t, `rankSeen` (the
 highest rank already announced). The old `characterFavorites` key is folded
-in once. `dym-signed-in` marks a browser with a session, so pages only call
-the API for signed-in members (sync at most once a minute per tab, plus 1.5 s
-after a change).
+in once. `dym-signed-in` marks a browser with a session (set on /me/ and
+/account from `GET /api/auth`), so other pages only call the API for
+signed-in members (sync at most once a minute per tab, plus 1.5 s after a
+change).
 **Found counter:** totals come from `deleted-scenes.json` (21),
 `callbacks.json` (40) and `rabbit-holes.json` (8) = 69. Only ids present in
 today's data count. A rank needs ceil(minPct% x total) details; 100% needs all.
@@ -99,18 +97,9 @@ the post-credits text (the page's film). Deleted scenes: the card body
 (`data-movie-id`, or the film in the page address). Callbacks: the setup
 part (foreshadow film), payoff part (fulfillment film) and the explanation
 (both), via `callbacks.json`.
-**API:** Functions only run for `/api/*` (`public/_routes.json`). Writes must
-be `application/json` and same-origin (CSRF guard). Sign-in needs
-`over13: true`. The ID token is verified with Google's keys from
-`https://www.googleapis.com/oauth2/v3/certs` (cached per Cache-Control, at
-most 6 h): alg RS256, signature, aud = `GOOGLE_CLIENT_ID`, iss
-accounts.google.com, exp/iat with 60 s skew. Stored: `sub`, `given_name`
-(40 chars). Session: 32 random bytes in cookie `__Host-dym_session`
-(HttpOnly, Secure, SameSite=Lax, 30 days); D1 keeps its SHA-256. PUT
-/api/sync merges the device's data into the stored copy (same `merge` as the
-browser), drops removals older than 180 days, refuses over 16 KB (413) and
-returns the result. Without `GOOGLE_CLIENT_ID` or the `DB` binding,
-/api/me says `signInAvailable: false` and the page shows "Sign-in is coming
-soon; your list is saved on this device."
-**Third-party script:** `https://accounts.google.com/gsi/client`, loaded on
-/me/ only after the 13+ box is ticked.
+**Sync API:** `PUT /api/sync {data}` needs the sign-in cookie, JSON, and (when
+the browser sends one) a same-site Origin. It merges the device's data into
+the stored copy (same `merge` as the browser), drops removals older than 180
+days, refuses over 16 KB (413) and returns the result. `POST
+/api/auth/delete` also deletes the `saves` row. My Marvel shows the shared
+sign-in panel (`fillSignIn` from `public/js/account.js`).

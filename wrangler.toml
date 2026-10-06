@@ -1,14 +1,20 @@
-# Cloudflare Pages settings for marvel-details. `wrangler pages deploy`
-# reads this file: public/ is the site, functions/ is the member API.
+# Cloudflare Pages settings for marvel-details (read by `wrangler pages deploy`
+# and `wrangler pages dev`). Secrets (FACEBOOK_APP_SECRET, X_CLIENT_SECRET) are
+# set with `npx wrangler pages secret put NAME --project-name marvel-details`,
+# never written here.
 name = "marvel-details"
 pages_build_output_dir = "public"
-compatibility_date = "2025-09-01"
+compatibility_date = "2026-09-01"
 
-# Member accounts database (D1). DOUG: replace the database_id below with the
-# id printed by `npx wrangler d1 create marvel-details-members` (see
-# RUNBOOK.md, "Member accounts"). Deploys fail until this is a real id.
+[vars]
+# Google's client ID is public by design (it sits in every page that shows the
+# button). Empty = Google sign-in is off. Facebook and X ids go in as secrets
+# with their app secrets.
+GOOGLE_CLIENT_ID = ""
+
+# Accounts and sessions (migrations/). Created 2026-10-06.
 [[d1_databases]]
 binding = "DB"
-database_name = "marvel-details-members"
-database_id = "REPLACE-WITH-DATABASE-ID-FROM-wrangler-d1-create"
+database_name = "marvel-details"
+database_id = "4bb656b4-ca84-4b65-9f4d-179585909b94"
 migrations_dir = "migrations"

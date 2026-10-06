@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>Sign in | Details You Missed</title>
+    <meta name="description" content="Sign in to Details You Missed with Google, Facebook or X to join the discussions on Marvel movie details.">
+    <meta name="robots" content="noindex">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
+        .container { max-width: 1600px; margin: 0 auto; padding: 2rem 16px; }
+        .content { max-width: 560px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 8px; }
+        h1 { font-size: 2rem; margin-bottom: .75rem; }
+        h2 { font-size: 1.2rem; margin: 1.5rem 0 .5rem; }
+        p { margin-bottom: 1rem; }
+        .muted { color: #666; font-size: .95rem; }
+        .acct-age { display: flex; gap: .6rem; align-items: center; font-weight: 600; margin: 1rem 0; cursor: pointer; }
+        .acct-age input { width: 22px; height: 22px; }
+        .acct-btns { display: grid; gap: .75rem; margin: 1rem 0; }
+        .acct-btn { display: block; text-align: center; padding: .8rem 1rem; border-radius: 6px; font-weight: 600; text-decoration: none; color: #fff; border: 0; font-size: 1rem; cursor: pointer; width: 100%; }
+        .acct-btn.fb { background: #1877f2; }
+        .acct-btn.x { background: #000; }
+        .acct-btn.quiet { background: #eee; color: #222; }
+        .acct-google { min-height: 44px; display: flex; justify-content: center; }
+        .acct-note { background: #fff3cd; border-left: 4px solid #e0303c; padding: .75rem 1rem; border-radius: 6px; }
+        details summary { cursor: pointer; margin-top: 1rem; }
+        footer { background: #222; color: #fff; text-align: center; padding: 2rem; margin-top: 3rem; }
+        @media (prefers-color-scheme: dark) {
+            body { background: #111; color: #eee; }
+            .content { background: #1c1c1c; }
+            .muted { color: #aaa; }
+            .acct-btn.quiet { background: #333; color: #eee; }
+            .acct-note { background: #3a3220; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+    <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+    <header class="site-brand">
+        <p class="site-brand-title"><a class="site-brand-link" href="/"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">Details <em>You</em><br>Missed</span></a></p>
+        <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>
+    </header>
+    <nav class="site-nav" aria-label="Main menu">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/movies/">Movies</a>
+        <a href="/scenes/">Deleted Scenes</a>
+        <a href="/callbacks/">Callbacks</a>
+        <a href="/characters/">Characters</a>
+        <a href="/map/">Universe Map</a>
+        <a href="/rabbit-holes/">Rabbit Holes</a>
+        <a href="/about">About</a>
+        <a href="/me/">My Marvel</a>
+    </nav>
+    <main class="container">
+        <div class="content">
+            <h1>Sign in</h1>
+            <div id="account" aria-live="polite"><p class="muted">Loading…</p></div>
+            <h2>What we keep</h2>
+            <p class="muted">Only the id and first name the account you pick gives us, and a sign-in cookie on this device. Never your email or password, and we never post anything for you. Delete your account here any time and it is gone. <a href="/privacy">Privacy</a></p>
+        </div>
+    </main>
+    <footer><p>&copy; 2026 Details You Missed. Not affiliated with Marvel or Disney.</p></footer>
+    <script type="module">
+        import { fillSignIn } from '/js/account.js';
+        fillSignIn(document.getElementById('account'));
+    </script>
+    <script type="module" src="/js/members.js"></script>
+</body>
+</html>

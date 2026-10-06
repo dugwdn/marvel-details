@@ -4,18 +4,20 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
-- Member perks (not live yet, draft PR): "Seen it" on movie hubs with an
-  optional "Hide spoilers for movies I haven't seen" blur; Save on articles,
-  deleted scenes, callbacks, characters, rabbit holes and movie hubs; a star
-  for favorite characters (the old heart on /characters/ now uses the same
-  list); "You've found X of Y hidden details" with a rank ladder from
-  Civilian to The Watcher (`public/data/ranks.json`), a rank chip on the
-  menu and a promotion pop-up; a My Marvel page (`/me/`, new menu button)
-  and a Privacy page (`/privacy/`, linked from page footers). Works with no
-  account. Optional Google sign-in (13+) syncs it via Pages Functions and
-  D1; only Google's account number and first name are stored, never email.
-  Sign-in shows "coming soon" until Doug sets it up (RUNBOOK). `npm test`
-  added and run by the PR workflow. robots.txt blocks `/api/`.
+- Member perks (not live yet, PR #21, stacks on the sign-in PR #18):
+  "Seen it" on movie hubs with an optional "Hide spoilers for movies I
+  haven't seen" blur; Save on articles, deleted scenes, callbacks,
+  characters, rabbit holes and movie hubs; a star for favorite characters
+  (the old heart on /characters/ now uses the same list); "You've found X of
+  Y hidden details" with a rank ladder from Civilian to The Watcher
+  (`public/data/ranks.json`), a rank chip on the menu and a promotion
+  pop-up; a My Marvel page (`/me/`, new menu button) and a Privacy link in
+  page footers. Works with no account; signed-in members get it synced to
+  their account (`/api/sync`, `saves` table). robots.txt blocks `/api/`.
+- Sign-in (not live yet, ADR-007): `/account` page with Google (button and
+  One Tap), Facebook and X, each shown once its keys are set, and a /privacy
+  page (Meta needs one to go live). Accounts in the
+  `marvel-details` D1 database. Ready for the discussions.
 - MCU Character List (not live): new page /characters/all/ with 797 main
   and recurring characters from all 38 released MCU movies and 21 Disney+
   series seasons. Each shows who plays them, their first appearance and

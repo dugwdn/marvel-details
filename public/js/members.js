@@ -395,6 +395,13 @@ function decorate() {
   }
 
   if (path === '/me/') renderMe();
+  if (path === '/account') {
+    // The sign-in page redraws its panel after signing in or out; follow it.
+    const check = () => import('./account.js').then((m) => m.account()).then((a) => noteAccount(a.user)).catch(() => {});
+    const panel = document.getElementById('account');
+    if (panel) new MutationObserver(check).observe(panel, { childList: true });
+    check();
+  }
   applySpoilers();
   updateChip();
 }
@@ -504,113 +511,54 @@ function renderMe() {
 }
 
 // ---------- account (optional Google sign-in) ----------
-const post = (url, body) => fetch(url, {
-  method: url.endsWith('/sync') ? 'PUT' : 'POST',
+const put = (body) => fetch('/api/sync', {
+  method: 'PUT',
   credentials: 'same-origin',
   headers: { 'content-type': 'application/json' },
-  body: JSON.stringify(body || {}),
+  body: JSON.stringify(body),
 });
+
+// The sign-in itself is the site's shared one (public/js/account.js and
+// /account, Google first plus Facebook and X). My Marvel shows the same panel;
+// once someone is signed in, their list syncs to the account.
+function noteAccount(user) {
+  if (user) {
+    const first = ls.get(SIGNED) !== '1';
+    ls.set(SIGNED, '1');
+    if (first) syncNow(true);
+  } else {
+    ls.del(SIGNED);
+  }
+}
 
 async function initAccount() {
   const box = document.getElementById('dym-account');
+  const status = document.getElementById('dym-sync-status');
   if (!box) return;
-  let me = null;
-  try {
-    const r = await fetch('/api/me', { credentials: 'same-origin' });
-    if (r.ok && (r.headers.get('content-type') || '').includes('json')) me = await r.json();
-  } catch { /* offline or no API: fine */ }
-
-  if (!me || !me.signInAvailable) {
+  let mod = null;
+  try { mod = await import('./account.js'); } catch { /* not deployed */ }
+  if (!mod) {
+    box.innerHTML = '<p class="dym-soon">Sign-in is coming soon; your list is saved on this device.</p>';
+    return;
+  }
+  const a = await mod.account();
+  const p = a.providers || {};
+  if (!a.user && !(p.google || p.facebook || p.x)) {
     ls.del(SIGNED);
     box.innerHTML = '<p class="dym-soon">Sign-in is coming soon; your list is saved on this device.</p>';
     return;
   }
-  if (me.signedIn) {
-    ls.set(SIGNED, '1');
-    box.innerHTML = `
-      <p>Signed in as <strong>${esc(me.firstName || 'you')}</strong>. Your list follows you to any device where you sign in.</p>
-      <p class="dym-sync-status" aria-live="polite"></p>
-      <div class="dym-actions">
-        <button type="button" class="dym-btn" id="dym-signout">Sign out</button>
-        <button type="button" class="dym-btn dym-danger" id="dym-delete">Delete account</button>
-      </div>
-      <div class="dym-confirm" id="dym-delete-confirm" hidden>
-        <p>This deletes your account and the copy of your list we keep. The list on this device stays (you can clear it below).</p>
-        <button type="button" class="dym-btn dym-danger" id="dym-delete-yes">Yes, delete my account</button>
-        <button type="button" class="dym-btn" id="dym-delete-no">Keep it</button>
-      </div>`;
-    const status = box.querySelector('.dym-sync-status');
-    syncNow(true).then((ok) => { status.textContent = ok ? 'Synced.' : 'Could not sync right now; your list is safe on this device.'; });
-    box.querySelector('#dym-signout').addEventListener('click', async () => {
-      try { await post('/api/auth/signout'); } catch { /* the cookie expires anyway */ }
-      ls.del(SIGNED);
-      initAccount();
-    });
-    box.querySelector('#dym-delete').addEventListener('click', () => { box.querySelector('#dym-delete-confirm').hidden = false; });
-    box.querySelector('#dym-delete-no').addEventListener('click', () => { box.querySelector('#dym-delete-confirm').hidden = true; });
-    box.querySelector('#dym-delete-yes').addEventListener('click', async () => {
-      try {
-        const r = await post('/api/auth/delete');
-        if (!r.ok && r.status !== 401) throw new Error();
-        ls.del(SIGNED);
-        await initAccount();
-        box.insertAdjacentHTML('afterbegin', '<p class="dym-done-note">Your account is deleted.</p>');
-      } catch {
-        status.textContent = 'Could not delete right now. Please try again.';
-      }
-    });
-    return;
-  }
-
-  ls.del(SIGNED);
-  box.innerHTML = `
-    <p>Sign in to keep your list on your phone and computer. We keep only your Google account number and first name, never your email. <a href="/privacy/">Privacy</a></p>
-    <label class="dym-switch"><input type="checkbox" id="dym-over13"> <span>I'm 13 or older</span></label>
-    <div id="dym-gsi" class="dym-gsi" hidden></div>
-    <p class="dym-sync-status" aria-live="polite"></p>`;
-  const over = box.querySelector('#dym-over13');
-  const slot = box.querySelector('#dym-gsi');
-  const status = box.querySelector('.dym-sync-status');
-  over.addEventListener('change', async () => {
-    slot.hidden = !over.checked;
-    if (!over.checked || slot.dataset.ready) return;
-    try {
-      await loadScript('https://accounts.google.com/gsi/client');
-      window.google.accounts.id.initialize({
-        client_id: me.clientId,
-        ux_mode: 'popup',
-        auto_select: false,
-        callback: async ({ credential }) => {
-          status.textContent = 'Signing in…';
-          try {
-            const r = await post('/api/auth/google', { credential, over13: over.checked });
-            const body = await r.json().catch(() => ({}));
-            if (!r.ok) throw new Error(body.error || 'Sign-in failed.');
-            ls.set(SIGNED, '1');
-            await syncNow(true);
-            initAccount();
-          } catch (err) {
-            status.textContent = err.message || 'Sign-in failed. Please try again.';
-          }
-        },
-      });
-      const dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      window.google.accounts.id.renderButton(slot, { theme: dark ? 'filled_black' : 'outline', size: 'large', text: 'signin_with', shape: 'pill' });
-      slot.dataset.ready = '1';
-    } catch {
-      status.textContent = 'Google sign-in did not load. Check your connection and try again.';
-    }
-  });
-}
-
-function loadScript(src) {
-  return new Promise((resolve, reject) => {
-    const s = document.createElement('script');
-    s.src = src;
-    s.async = true;
-    s.onload = resolve;
-    s.onerror = reject;
-    document.head.appendChild(s);
+  const paintStatus = async (user) => {
+    if (!status) return;
+    if (!user) { status.textContent = ''; return; }
+    status.textContent = 'Syncing…';
+    status.textContent = (await syncNow(true)) ? 'Your list is synced to your account.' : 'Could not sync right now; your list is safe on this device.';
+  };
+  noteAccount(a.user);
+  paintStatus(a.user);
+  await mod.fillSignIn(box, {
+    why: 'Sign in to keep your list on your phone and computer.',
+    onChange: (user) => { noteAccount(user); paintStatus(user); },
   });
 }
 
@@ -628,7 +576,7 @@ async function syncNow(force = false) {
   if (!force && Date.now() - last < 60_000) return true;
   clearTimeout(syncTimer);
   try {
-    const r = await post('/api/sync', { data: core.compact(state) });
+    const r = await put({ data: core.compact(state) });
     if (r.status === 401) { ls.del(SIGNED); return false; }
     if (!r.ok) return false;
     const body = await r.json();

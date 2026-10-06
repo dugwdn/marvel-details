@@ -11,5 +11,5 @@ jobs:
         with:
           node-version: 22
       - run: node tools/check-links.mjs
-      - name: Unit tests (member perks)
-        run: npm test
+      # Sign-in tests (functions/_lib/auth.js), no install needed.
+      - run: node --test test/*.test.mjs

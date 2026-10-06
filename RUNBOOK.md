@@ -26,48 +26,30 @@ After publishing, check:
 3. `npx wrangler pages deployment list --project-name marvel-details`
    shows the new commit as Production.
 
-## Member accounts (one-time setup, needs Doug)
-The member perks work without this; it switches on Google sign-in and sync.
-Do steps 1 to 4 before the first deploy that includes the member-perks PR:
-`wrangler.toml` points at the D1 database, so a deploy fails while it still
-says `REPLACE-WITH-DATABASE-ID...`.
+## Sign-in keys (once per provider)
+Google's client ID goes in `wrangler.toml` under `[vars]` (it is public).
+Facebook and X are secrets, typed on the laptop from the repo folder:
+```
+npx wrangler pages secret put FACEBOOK_APP_ID --project-name marvel-details
+npx wrangler pages secret put FACEBOOK_APP_SECRET --project-name marvel-details
+npx wrangler pages secret put X_CLIENT_ID --project-name marvel-details
+npx wrangler pages secret put X_CLIENT_SECRET --project-name marvel-details
+```
+Each asks for the value; paste it and press Enter. Then publish again.
+Check: `https://<site>/api/auth` lists the provider, and `/account` shows its
+button after the 13+ box. The database tables already exist; if the database
+is ever rebuilt, run `npx wrangler d1 migrations apply marvel-details --remote`.
 
-1. **Create the database** (from the repo folder):
-   ```
-   npx wrangler d1 create marvel-details-members
-   ```
-   Copy the `database_id` it prints into `wrangler.toml` (replace
-   `REPLACE-WITH-DATABASE-ID-FROM-wrangler-d1-create`), commit that change.
-2. **Create the tables:**
-   ```
-   npx wrangler d1 migrations apply marvel-details-members --remote
-   ```
-3. **Google client ID:** Google Cloud console > APIs & Services > OAuth
-   consent screen (External; app name "Details You Missed"; your support
-   email; no extra scopes). Then Credentials > Create credentials > OAuth
-   client ID > Web application. Authorized JavaScript origins:
-   `https://marvel-details.pages.dev` and `http://localhost:8788` (add
-   `https://marveldetails.com` after the domain moves). No redirect URI is
-   needed. Copy the client ID (ends in `.apps.googleusercontent.com`).
-4. **Give it to the site:**
-   ```
-   npx wrangler pages secret put GOOGLE_CLIENT_ID --project-name marvel-details
-   ```
-   and paste the client ID. (Dashboard alternative: Workers & Pages >
-   marvel-details > Settings > Variables and Secrets > Add, type Secret.
-   The client ID isn't really secret; the secret type is used because
-   `wrangler.toml` now manages plain variables.)
-5. **Deploy** as in "Publish" above, then open https://marvel-details.pages.dev/me/:
-   the account box should show "I'm 13 or older" and, once ticked, the
-   Google button. Sign in, save something, open /me/ on another device.
-
-To switch sign-in off again: delete the `GOOGLE_CLIENT_ID` secret and
-redeploy; lists stay on each device.
-Local preview with the API: `npx wrangler d1 migrations apply
-marvel-details-members --local`, then `npx wrangler pages dev --port 8788
---binding GOOGLE_CLIENT_ID=<client id>`.
-Look at the data: `npx wrangler d1 execute marvel-details-members --remote
---command "SELECT COUNT(*) FROM users"`.
+## Member perks sync (after PRs #18 and #21 are both merged)
+The perks work without this; it lets signed-in members keep their list on
+every device. Add the `saves` table once, then publish:
+```
+npx wrangler d1 migrations apply marvel-details --remote
+```
+Do this before (or right after) the first deploy that includes PR #21:
+until the table exists, `/api/sync` and "Delete my account" return errors.
+Check: sign in on /me/, save something, open /me/ on another device.
+Look at the data: `npx wrangler d1 execute marvel-details --remote --command "SELECT COUNT(*) FROM saves"`.
 
 ## Roll back
 Cloudflare dashboard > Workers & Pages > marvel-details > Deployments >
@@ -78,12 +60,9 @@ pick the last good one > the three-dot menu > **Rollback to this deployment**.
   did that. Check the file exists in `public/` and was in the upload.
 - **Universe Map is blank:** open the browser console; the map needs
   `/data/connections.json` and the vis-network script from jsDelivr.
-- **Deploy fails mentioning D1 / database_id:** `wrangler.toml` still has
-  the placeholder id; do "Member accounts" steps 1 and 2.
-- **My Marvel says "Sign-in is coming soon":** `GOOGLE_CLIENT_ID` isn't set
-  for production, or the D1 binding is missing; check
-  `npx wrangler pages secret list --project-name marvel-details`.
-- **Google button says the origin isn't allowed:** add the site address to
-  the client ID's Authorized JavaScript origins (step 3).
+- **My Marvel says "Sign-in is coming soon":** no sign-in provider is set
+  up yet (see "Sign-in keys"); the perks still work on each device.
+- **My Marvel can't sync / Delete my account fails:** the `saves` table is
+  missing; run the migration in "Member perks sync".
 - **wrangler asks to log in:** run `npx wrangler login` on the laptop and
   sign in as Doug (Doug does this step).

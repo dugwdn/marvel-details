@@ -18,12 +18,11 @@ his accounts; the rest Claude does on a branch with a PR.
 4. **Doug: pen names.** Decide how the pen-name "house writers" (Alex
    Continuity, Maya Dialogue and others) are presented.
 
-5a. **Doug: member perks PR.** Review the draft PR (Seen it, Save,
-   favorites, found counter and ranks, My Marvel, optional Google sign-in).
-   Before merging and deploying: create the D1 database, put its id in
-   `wrangler.toml`, run the migration and set `GOOGLE_CLIENT_ID` (RUNBOOK
-   "Member accounts"). Ask a lawyer about rank titles using Marvel
-   character names.
+5a. **Doug: member perks PR #21.** Review it after the sign-in PR #18
+   (it stacks on #18 and merges after it). Then run
+   `npx wrangler d1 migrations apply marvel-details --remote` and publish
+   (RUNBOOK "Member perks sync"). Ask a lawyer about rank titles using
+   Marvel character names.
 
 ## Next
 5. Write the 7 articles PR #1 took off the articles index (first armor,

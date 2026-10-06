@@ -30,7 +30,7 @@ const FONT =
 const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
 // Member perks (Seen it, Save, favorites, found counter): one module per page.
 const MEMBERS = '<script type="module" src="/js/members.js"></script>';
-const PRIVACY = '<p class="site-legal"><a href="/privacy/">Privacy</a></p>';
+const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a></p>';
 
 // rel is the page's path inside public/, with forward slashes.
 export function menuFor(rel) {
@@ -83,7 +83,8 @@ export function addMenu(html, rel) {
   if (!html.includes('/css/theme.css')) html = html.replace('</head>', `    ${STYLE}\n</head>`);
   if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
   // Pages with a footer get a Privacy link in it (once).
-  if (/<footer[\s>]/.test(html) && !html.includes('href="/privacy/"')) {
+  html = html.replace(/<p class="site-legal">[\s\S]*?<\/p>/, PRIVACY);
+  if (/<footer[\s>]/.test(html) && !/href="\/privacy\/?"/.test(html)) {
     html = html.replace(/(<footer[^>]*>)([\s\S]*?)(\s*)<\/footer>/, (all, open, inner, ws) => `${open}${inner}${inner.includes('\n') ? '\n        ' : ''}${PRIVACY}${ws}</footer>`);
   }
   return html;
