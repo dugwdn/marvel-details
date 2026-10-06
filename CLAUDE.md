@@ -11,7 +11,7 @@ A free, static fan site about hidden details in Marvel movies, branded
 "Details You Missed." Phase 1 covers Iron Man 1 to 3, The Avengers and
 Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
-## Current state (2026-10-05)
+## Current state (2026-10-06)
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
   `marvel-details`, production branch `phase-1-build`, commit ecf0b8b,
   published by direct upload from Doug's laptop with wrangler).
@@ -39,10 +39,26 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
   not people.
+- **Member perks (branch `member-perks`, draft PR, not live):** Seen it
+  (watch tracker + optional spoiler blur), Save (saved list), favorite
+  characters (star), a hidden-details found counter with a rank ladder
+  (Civilian to The Watcher, `public/data/ranks.json`) and a My Marvel page
+  (`/me/`, noindex). Local-first: kept in the browser (localStorage), no
+  account needed. Optional Google sign-in syncs it through Pages Functions
+  (`functions/api/*`) and a D1 database `marvel-details-members`; we store
+  only Google's `sub` and first name, never email. New `/privacy/` page.
+  Logic shared by browser, server and tests is `public/js/members-core.js`;
+  page code is `public/js/members.js` (added to every page by
+  `node tools/menu.mjs`). Tests: `npm test`. Until Doug sets up D1 and
+  `GOOGLE_CLIENT_ID` (RUNBOOK "Member accounts"), sign-in shows "coming
+  soon" and everything else works.
 
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
-Waiting on Doug: a real GA4 ID, AdSense slot numbers, and the domain move.
+Waiting on Doug: a real GA4 ID, AdSense slot numbers, the domain move, and
+for member sync: review the member-perks PR, create the D1 database, put its
+id in `wrangler.toml`, make a Google OAuth client ID (RUNBOOK). Note:
+`wrangler.toml` now exists, so deploys fail until its D1 id is real.
 
 ## Working rules
 - Project-wide rules (branch and PR, never merge or deploy without Doug's

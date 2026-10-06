@@ -11,3 +11,5 @@ jobs:
         with:
           node-version: 22
       - run: node tools/check-links.mjs
+      - name: Unit tests (member perks)
+        run: npm test

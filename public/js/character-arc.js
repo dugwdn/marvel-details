@@ -40,27 +40,30 @@ class CharacterArcTracker {
   }
 
   /**
-   * Load favorites from localStorage
+   * Favorites live in the member store (public/js/members.js, saved on this
+   * device and synced when signed in). That script loads as a module, so it
+   * may arrive after this one: read its saved copy directly until it's ready.
    */
   async loadFavorites() {
-    try {
-      const stored = localStorage.getItem('characterFavorites');
-      if (stored) {
-        this.favorites = new Set(JSON.parse(stored));
-      }
-    } catch (error) {
-      console.warn('Could not load favorites:', error);
-    }
+    this.favorites = new Set(this.readStoredFavorites());
+    const refresh = () => {
+      if (!window.dymMembers) return;
+      this.favorites = new Set(window.dymMembers.favIds());
+      this.render();
+    };
+    document.addEventListener('dym:ready', refresh);
+    document.addEventListener('dym:change', refresh);
   }
 
-  /**
-   * Save favorites to localStorage
-   */
-  saveFavorites() {
+  readStoredFavorites() {
+    if (window.dymMembers) return window.dymMembers.favIds();
     try {
-      localStorage.setItem('characterFavorites', JSON.stringify(Array.from(this.favorites)));
+      const store = JSON.parse(localStorage.getItem('dym-members-v1') || '{}');
+      const favs = Object.keys(store.favs || {}).filter((id) => store.favs[id].on);
+      const old = JSON.parse(localStorage.getItem('characterFavorites') || '[]');
+      return [...favs, ...old];
     } catch (error) {
-      console.warn('Could not save favorites:', error);
+      return [];
     }
   }
 
@@ -254,9 +257,10 @@ class CharacterArcTracker {
           </div>
           <button class="character-favorite-btn ${isFavorite ? 'favorited' : ''}"
                   data-slug="${char.slug}"
-                  title="Add to favorites"
+                  title="${isFavorite ? 'Favorite (tap to remove)' : 'Add to favorites'}"
+                  aria-pressed="${isFavorite ? 'true' : 'false'}"
                   aria-label="Favorite ${char.heroName}">
-            ♡
+            ${isFavorite ? '★' : '☆'}
           </button>
         </div>
         <div class="character-role ${roleClass}">
@@ -282,13 +286,15 @@ class CharacterArcTracker {
     const character = await MarvelDataHub.findCharacter(slug);
     if (!character) return;
 
+    if (window.dymMembers) {
+      window.dymMembers.toggleFav(character.id); // fires dym:change, which re-renders
+      return;
+    }
     if (this.favorites.has(character.id)) {
       this.favorites.delete(character.id);
     } else {
       this.favorites.add(character.id);
     }
-
-    this.saveFavorites();
     this.render();
   }
 

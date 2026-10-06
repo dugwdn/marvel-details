@@ -729,3 +729,139 @@ html body .disclaimer * { color: #111 !important; }
   html body div.detail-item, html body .detail-section, html body .chapter { transform: none !important; }
 }
 html body div.detail-item h3 a, html body .detail-section > :is(h2, h3) a { color: #111 !important; text-decoration: underline; text-decoration-thickness: 2px; }
+
+/* Member perks (public/js/members.js): Save, Seen it and Favorite buttons,
+   the spoiler blur, the rank chip in the menu, the promotion toast and the
+   My Marvel page (/me/). Same comic look: black borders, hard shadows,
+   Bangers caps, yellow for "on". Readable in light and dark. */
+html body .dym-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .7rem; margin: .9rem 0 .4rem; }
+html body .dym-btn {
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 2.6rem; margin: 0;
+  padding: .45rem 1rem .35rem; cursor: pointer;
+  background: #fff; color: #111; border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: 1.1rem; font-weight: 400;
+  letter-spacing: .05em; line-height: 1; text-transform: uppercase;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+html body .dym-btn:hover { background: #fff; color: #111; border-color: #000; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 #000; }
+html body .dym-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #000; }
+html body .dym-btn:focus-visible, html body .dym-reveal:focus-visible, html body .dym-switch input:focus-visible { outline: 3px solid #1e66d0; outline-offset: 3px; }
+html body .dym-btn[aria-pressed="true"], html body .dym-btn[aria-pressed="true"]:hover { background: #ffd60a; color: #111; --dym-ico-fill: currentColor; }
+html body .dym-btn-sm { min-height: 2.2rem; padding: .3rem .65rem .2rem; font-size: .95rem; box-shadow: 2px 2px 0 #000; }
+html body .dym-btn { color: #111 !important; }
+html body .dym-btn.dym-danger, html body .dym-btn.dym-danger:hover { background: var(--dym-red-dark); color: #fff !important; }
+html body .dym-ico { width: 1em; height: 1em; flex: none; }
+html body .scene-card-header .dym-btn, html body .callback-header .dym-btn, html body .hole-card-header .dym-btn { margin-left: auto; flex: none; }
+html body .scene-card-header, html body .callback-header, html body .hole-card-header { flex-wrap: wrap; gap: .5rem; }
+html body .dym-switch { display: inline-flex; align-items: center; gap: .5rem; margin: .4rem 0; cursor: pointer; font-weight: 600; }
+html body .dym-switch input { width: 1.25rem; height: 1.25rem; accent-color: var(--dym-red); flex: none; }
+@media (prefers-color-scheme: dark) {
+  html body .dym-btn { box-shadow: 3px 3px 0 var(--dym-red); }
+  html body .dym-btn-sm { box-shadow: 2px 2px 0 var(--dym-red); }
+  html body .dym-btn:hover { box-shadow: 4px 4px 0 var(--dym-red); }
+}
+
+/* Deleted-scene cards: members.js groups everything under the title in one
+   box (so it blurs as one); keep the card's own spacing. */
+html body .scene-card > .dym-scene-body { padding: 0; flex: 1 1 auto; }
+html body .scene-card .dym-scene-body > :is(p, div) { padding: 0 1.5rem; }
+
+/* Spoiler blur: details from films not marked Seen, until tapped */
+html body .dym-spoiler { position: relative; }
+html body .dym-spoiler > :not(.dym-reveal) { filter: blur(7px); user-select: none; pointer-events: none; }
+html body .dym-reveal {
+  position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center;
+  width: 100%; margin: 0; padding: .5rem; background: transparent !important; border: 0 !important; cursor: pointer;
+}
+html body .dym-reveal span {
+  padding: .35rem .7rem .25rem; background: #111; color: #fff !important; border: 2px solid #ffd60a; border-radius: 4px;
+  font-family: var(--dym-body); font-size: .9rem; font-weight: 600; letter-spacing: 0; text-transform: none; line-height: 1.3; text-align: center;
+}
+
+/* Rank chip on the My Marvel menu button */
+html body nav.site-nav a .dym-rank-chip {
+  display: block; margin-left: .45rem; padding: .2rem .4rem .1rem; background: #fff; color: #111 !important; border: 2px solid #000; border-radius: 3px;
+  font-family: var(--dym-head); font-size: .7rem; font-weight: 700; letter-spacing: .06em; line-height: 1.1; text-shadow: none; white-space: nowrap;
+}
+@media (max-width: 640px) {
+  html body nav.site-nav a:has(.dym-rank-chip) { flex-direction: column; gap: .2rem; }
+  html body nav.site-nav a .dym-rank-chip { margin-left: 0; font-size: .62rem; }
+}
+
+/* Home page line */
+html body .dym-found-line { margin: 0 0 1.5rem; }
+html body .dym-found-line a {
+  display: inline-block; padding: .4rem .8rem .3rem; background: #ffd60a; color: #111 !important; border: 3px solid #000; box-shadow: 3px 3px 0 #000;
+  font-weight: 500; text-decoration: none;
+}
+html body .dym-found-line a:hover { background: #ffe55c; }
+
+/* Promotion toast */
+html body .dym-toast {
+  position: fixed; left: 50%; bottom: 16px; z-index: 1000; width: min(420px, calc(100% - 32px)); transform: translateX(-50%);
+  padding: 1rem 2.6rem 1rem 1.1rem; background: #ffd60a; color: #111; border: 4px solid #000; box-shadow: 6px 6px 0 #000; border-radius: 4px;
+}
+html body .dym-toast p { margin: 0 0 .35rem; color: #111 !important; }
+html body .dym-toast .dym-toast-title { font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: 1.5rem; letter-spacing: .05em; line-height: 1.15; }
+html body .dym-toast .dym-toast-sub { font-size: .9rem; line-height: 1.4; }
+html body .dym-toast a { color: #111 !important; font-weight: 700; }
+html body .dym-toast .dym-toast-close { position: absolute; top: .3rem; right: .4rem; background: transparent; border: 0; color: #111; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+@media (prefers-reduced-motion: no-preference) {
+  html body .dym-toast-pop { animation: dym-pop .45s cubic-bezier(.2, 1.4, .4, 1); }
+  @keyframes dym-pop { from { opacity: 0; transform: translate(-50%, 20px) scale(.85) rotate(-3deg); } to { opacity: 1; transform: translate(-50%, 0) scale(1) rotate(0); } }
+}
+@media (prefers-reduced-motion: reduce) { html body .dym-btn { transition: none; } }
+
+/* Footer privacy link */
+html body footer .site-legal { margin: .4rem 0 0; font-size: .85rem; }
+
+/* My Marvel page */
+html body .dym-back { display: inline-block; margin: .25rem 0 1rem; text-decoration: none; }
+html body .dym-page-title { margin: 0 0 .3rem; font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: clamp(2.2rem, 9vw, 3.4rem); letter-spacing: .05em; line-height: 1; }
+html body .dym-intro { margin: 0 0 1.6rem; color: var(--dym-muted); }
+html body .dym-panel {
+  margin: 0 0 1.8rem; padding: 1.1rem 1.1rem 1.2rem; border-radius: 3px;
+  background-color: var(--dym-surface); background-image: radial-gradient(rgba(0,0,0,.07) 1px, transparent 1.3px); background-size: 9px 9px;
+  border: 4px solid #000; box-shadow: 7px 7px 0 #000;
+}
+html body .dym-panel > h2 {
+  display: inline-block; margin: 0 0 .8rem; padding: .25rem .75rem .15rem; background: #ffd60a; color: #111 !important; border: 3px solid #000; box-shadow: 3px 3px 0 #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: 1.3rem; letter-spacing: .05em; line-height: 1.15;
+}
+html body .dym-panel > h2::after { display: none; }
+html body .dym-panel p { margin: 0 0 .6rem; }
+html body .dym-kicker { color: var(--dym-muted); font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: .85rem; }
+html body .dym-rank-title { font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1; letter-spacing: .04em; color: var(--dym-red); margin: .1rem 0 .4rem !important; }
+html body .dym-rank-reason { font-size: .98rem; }
+html body .dym-bar { height: 16px; margin: .8rem 0 .4rem; background: var(--dym-surface-2); border: 3px solid #000; border-radius: 3px; overflow: hidden; }
+html body .dym-bar span { display: block; height: 100%; background: repeating-linear-gradient(-45deg, var(--dym-red) 0 8px, var(--dym-red-dark) 8px 16px); }
+html body .dym-count { margin-top: 1rem !important; font-size: 1.05rem; }
+html body .dym-breakdown { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin: .3rem 0 0; padding: 0; list-style: none; font-size: .95rem; }
+html body .dym-list, html body .dym-movie-list { margin: 0 0 .6rem; padding: 0; list-style: none; }
+html body .dym-list li, html body .dym-movie-list li { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .6rem; padding: .6rem 0; border-bottom: 2px dashed var(--dym-line); }
+html body .dym-list li:last-child, html body .dym-movie-list li:last-child { border-bottom: 0; }
+html body .dym-list li > a, html body .dym-movie-list li > a { font-weight: 600; }
+html body .dym-list .dym-btn, html body .dym-movie-list .dym-btn { margin-left: auto; }
+html body .dym-kind { padding: .1rem .4rem; background: var(--dym-surface-2); border: 1px solid var(--dym-line); border-radius: 3px; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--dym-muted); }
+html body .dym-year, html body .dym-small, html body .dym-need { color: var(--dym-muted); font-size: .88rem; }
+html body .dym-star { color: var(--dym-red); }
+html body .dym-empty, html body .dym-soon { color: var(--dym-muted); }
+html body .dym-explain { margin-top: .8rem; }
+html body .dym-explain summary { cursor: pointer; font-weight: 600; color: var(--dym-red); padding: .3rem 0; }
+html body .dym-explain[open] summary { margin-bottom: .4rem; }
+html body .dym-ladder { margin: .6rem 0 .8rem; padding-left: 1.4rem; }
+html body .dym-ladder li { margin: 0 0 .55rem; }
+html body .dym-ladder .dym-why { display: block; font-size: .88rem; color: var(--dym-muted); }
+html body .dym-ladder .dym-here strong { color: var(--dym-red); }
+html body .dym-ladder .dym-here strong::after { content: "  ← you"; font-weight: 600; }
+html body .dym-confirm { margin-top: .8rem; padding: .8rem; border: 3px dashed var(--dym-red); }
+html body .dym-confirm .dym-btn { margin: .3rem .5rem 0 0; }
+html body .dym-gsi { margin: .6rem 0; min-height: 44px; }
+html body .dym-done-note { font-weight: 700; }
+@media (prefers-color-scheme: dark) {
+  html body .dym-panel { background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1.3px); border-color: #f2f2f2; box-shadow: 7px 7px 0 var(--dym-red); }
+  html body .dym-bar { border-color: #f2f2f2; }
+  html body .dym-rank-title, html body .dym-ladder .dym-here strong, html body .dym-explain summary, html body .dym-star { color: #ff6b74; }
+}
+html body .character-favorite-btn { color: var(--dym-muted); }
+html body .character-favorite-btn.favorited { color: var(--dym-red); }

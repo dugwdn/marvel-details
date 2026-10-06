@@ -1,6 +1,6 @@
 # Marvel Details: roadmap
 
-Last updated 2026-10-05. Work top to bottom. "Doug" items need his OK or
+Last updated 2026-10-06. Work top to bottom. "Doug" items need his OK or
 his accounts; the rest Claude does on a branch with a PR.
 
 ## Now
@@ -18,6 +18,13 @@ his accounts; the rest Claude does on a branch with a PR.
 4. **Doug: pen names.** Decide how the pen-name "house writers" (Alex
    Continuity, Maya Dialogue and others) are presented.
 
+5a. **Doug: member perks PR.** Review the draft PR (Seen it, Save,
+   favorites, found counter and ranks, My Marvel, optional Google sign-in).
+   Before merging and deploying: create the D1 database, put its id in
+   `wrangler.toml`, run the migration and set `GOOGLE_CLIENT_ID` (RUNBOOK
+   "Member accounts"). Ask a lawyer about rank titles using Marvel
+   character names.
+
 ## Next
 5. Write the 7 articles PR #1 took off the articles index (first armor,
    Black Widow's intel, the Iron Man 3 Mandarin scene, Endgame's final
@@ -25,6 +32,9 @@ his accounts; the rest Claude does on a branch with a PR.
    Realm's color), each with sources, then list them again.
 
 ## Later
+- Members: "New since your last visit" on favorite characters (needs
+  added/updated dates in `characters.json`); GA4 events for Save/Seen/sign-in;
+  a weekly email only if Doug wants it (would mean storing email: new ADR).
 6. Phase 2 films, picked by search demand (Keyword Planner) rather than
    release order.
 7. Ads are built in (hidden until filled). Doug: add marvel-details.pages.dev

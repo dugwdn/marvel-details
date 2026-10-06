@@ -1,0 +1,14 @@
+# Cloudflare Pages settings for marvel-details. `wrangler pages deploy`
+# reads this file: public/ is the site, functions/ is the member API.
+name = "marvel-details"
+pages_build_output_dir = "public"
+compatibility_date = "2025-09-01"
+
+# Member accounts database (D1). DOUG: replace the database_id below with the
+# id printed by `npx wrangler d1 create marvel-details-members` (see
+# RUNBOOK.md, "Member accounts"). Deploys fail until this is a real id.
+[[d1_databases]]
+binding = "DB"
+database_name = "marvel-details-members"
+database_id = "REPLACE-WITH-DATABASE-ID-FROM-wrangler-d1-create"
+migrations_dir = "migrations"

@@ -4,6 +4,18 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Member perks (not live yet, draft PR): "Seen it" on movie hubs with an
+  optional "Hide spoilers for movies I haven't seen" blur; Save on articles,
+  deleted scenes, callbacks, characters, rabbit holes and movie hubs; a star
+  for favorite characters (the old heart on /characters/ now uses the same
+  list); "You've found X of Y hidden details" with a rank ladder from
+  Civilian to The Watcher (`public/data/ranks.json`), a rank chip on the
+  menu and a promotion pop-up; a My Marvel page (`/me/`, new menu button)
+  and a Privacy page (`/privacy/`, linked from page footers). Works with no
+  account. Optional Google sign-in (13+) syncs it via Pages Functions and
+  D1; only Google's account number and first name are stored, never email.
+  Sign-in shows "coming soon" until Doug sets it up (RUNBOOK). `npm test`
+  added and run by the PR workflow. robots.txt blocks `/api/`.
 - Characters (not live yet): 20 characters instead of 10. New: Thanos,
   Spider-Man, War Machine, Captain Marvel, Doctor Strange, Black Panther,
   Scarlet Witch, Ant-Man, Nebula and Obadiah Stane, each with a page,
