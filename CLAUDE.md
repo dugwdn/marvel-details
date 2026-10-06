@@ -28,9 +28,14 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
   real 404, sitemap/robots, link check on every PR), PR #3 ad boxes (hidden
   until AdSense fills them) and PR #4 green drink corrections.
-- **Brand banner and site menu:** one shared comic-style banner and menu
-  of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
-  page). Styles are in `public/css/theme.css`; uses the Bangers web font.
+- **Header (PR fix/readability-header):** one slim sticky bar (logo and
+  name, search box, member chip) plus one row of menu buttons, written into
+  every page by `node tools/menu.mjs` (run it after adding a page; it also
+  writes `public/data/search-pages.json` for the search box). Styles are in
+  `public/css/theme.css`; Bangers web font. Search is `public/js/search.js`,
+  the chip is filled by `members.js`. Colors: text on its own background must
+  hold WCAG AA; red text uses `--dym-link`, never `--dym-red`;
+  `test/contrast.test.mjs` checks the pairs.
 - **More from us:** `/more/` (`public/more/index.html`, hand-written) lists our other live sites; the footer written by `tools/menu.mjs` says "More from us" and links it. Never name a person in this wording. Keep the list in step with the other sites' More pages.
 - **Articles are comic strips:** after adding an article, run
   `python3 tools/comic-panels.py` to wrap its sections in panels.

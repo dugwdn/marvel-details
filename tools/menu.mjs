@@ -30,6 +30,7 @@ const FONT =
 const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
 // Member perks (Seen it, Save, favorites, found counter): one module per page.
 const MEMBERS = '<script type="module" src="/js/members.js"></script>';
+const SEARCH = '<script type="module" src="/js/search.js"></script>';
 // Google Analytics 4 for mcueastereggs.com: counts visits and pages read.
 // Standard snippet, no user id or personal data is ever passed to it.
 export const GA_ID = 'G-NESPZD6XSQ';
@@ -72,17 +73,46 @@ const ICON =
   '<path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/>' +
   '<circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg>';
 
-// The brand banner. It carries the page's <h1> only when the page has no
-// other one (the home page, for example), so pages keep a single h1.
+// The compact header bar: logo and name on the left, a search box in the
+// middle and the member chip on the right ("Found X of 69 · Rank"; the numbers
+// are filled in by public/js/members.js, search by public/js/search.js, so
+// without JavaScript it is just a "My Marvel" link and the search stays
+// hidden). It carries the page's <h1> only when the page has no other one
+// (the home page, for example), so pages keep a single h1. The bar sticks to
+// the top of the screen and stays slim; the menu below it scrolls away.
 export function brandFor(html) {
   const tag = /<h1[\s>]/.test(html) ? 'p' : 'h1';
   return (
-    '<header class="site-brand">\n' +
-    `        <${tag} class="site-brand-title"><a class="site-brand-link" href="/">${ICON}` +
-    '<span class="site-brand-name">MCU <em>Easter</em><br>Eggs</span></a></' + tag + '>\n' +
-    '        <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>\n' +
+    '<header class="site-brand site-bar">\n' +
+    `        <${tag} class="site-brand-title"><a class="site-brand-link" href="/" aria-label="MCU Easter Eggs home">${ICON}` +
+    '<span class="site-brand-name">MCU <em>Easter</em> Eggs</span></a></' + tag + '>\n' +
+    '        <div class="site-search" hidden>\n' +
+    '            <label class="site-search-label" for="site-q">Search the site</label>\n' +
+    '            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">\n' +
+    '            <ul id="site-results" class="site-results" role="listbox" aria-label="Search results" hidden></ul>\n' +
+    '        </div>\n' +
+    '        <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>\n' +
+    '        <a class="site-member" href="/me/"><span class="site-member-text">My Marvel</span></a>\n' +
     '    </header>'
   );
+}
+
+// Titles and one-line descriptions of the articles and movie pages, for the
+// search box (the other things it searches already have JSON data files).
+export function searchPages(root = ROOT) {
+  const out = [];
+  for (const [dir, kind] of [['articles', 'Article'], ['movies', 'Movie']]) {
+    const folder = path.join(root, dir);
+    if (!fs.existsSync(folder)) continue;
+    for (const name of fs.readdirSync(folder).sort()) {
+      if (!name.endsWith('.html') || name === 'index.html') continue;
+      const html = fs.readFileSync(path.join(folder, name), 'utf8');
+      const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
+      const desc = (html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
+      out.push({ t: title.replace(/\s*[|\u2013-]\s*MCU Easter Eggs\s*$/i, '').trim(), u: `/${dir}/${name.replace(/\.html$/, '')}`, k: kind, d: desc });
+    }
+  }
+  return out;
 }
 
 export function addMenu(html, rel) {
@@ -90,7 +120,7 @@ export function addMenu(html, rel) {
   // (or "MCU Easter Eggs")
   // headers, then write one fresh banner straight above the menu.
   html = html
-    .replace(/\s*<header class="site-brand">[\s\S]*?<\/header>/, '')
+    .replace(/\s*<header class="site-brand[^"]*">[\s\S]*?<\/header>/, '')
     .replace(/\s*<header>\s*<h1>(?:Details You Missed|MCU Easter Eggs)<\/h1>[\s\S]*?<\/header>/, '');
   const menu = `${brandFor(html)}\n    ${menuFor(rel)}`;
   // Our own menu from a previous run, or the plain <nav> the old pages had.
@@ -108,6 +138,7 @@ export function addMenu(html, rel) {
   if (!html.includes('family=Bangers')) html = html.replace('</head>', `    ${FONT}\n</head>`);
   if (!html.includes('/css/theme.css')) html = html.replace('</head>', `    ${STYLE}\n</head>`);
   if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
+  if (!html.includes('/js/search.js')) html = html.replace('</body>', `    ${SEARCH}\n</body>`);
   // Pages with a footer get a Privacy link in it (once).
   html = html.replace(/<p class="site-legal">[\s\S]*?<\/p>/, PRIVACY);
   if (/<footer[\s>]/.test(html) && !/href="\/privacy\/?"/.test(html)) {
@@ -136,5 +167,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === SELF) {
       changed++;
     }
   }
+  const index = JSON.stringify(searchPages());
+  const indexFile = path.join(ROOT, 'data', 'search-pages.json');
+  if (!fs.existsSync(indexFile) || fs.readFileSync(indexFile, 'utf8') !== index) fs.writeFileSync(indexFile, index);
   console.log(`Menu written to ${changed} page(s).`);
 }

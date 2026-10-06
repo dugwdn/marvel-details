@@ -4,6 +4,24 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Readability and a compact header (not live yet, PR fix/readability-header). The
+  header went from a ~375px banner plus menu (550px for visitors with the
+  Bangers font) to a slim sticky bar (logo and name, a search box, a member
+  chip "Found X of 69 · Rank: Civilian" linking to My Marvel) over one row
+  of menu buttons: about 125 to 150px on a desktop, the bar alone (55 to 61px)
+  stays on screen when you scroll. Under 1000px the menu is an even
+  5-column grid, on phones 2 columns; the search box becomes a button that
+  opens it. Search (`public/js/search.js`) runs in the browser over the
+  site's own data files plus `public/data/search-pages.json` (articles and
+  movies, written by `node tools/menu.mjs`); keyboard: "/" focuses it,
+  Up/Down, Enter, Esc. The yellow found-counter line on the home page is gone
+  (it showed white text on yellow in dark mode; the chip replaces it).
+  Contrast fixes to WCAG AA: red link text (4.0:1 light, 3.9:1 dark to 5.9:1
+  and 6.4:1), the footer's "More from Doug:" and the articles footer note (dark
+  on dark, 1.0:1), yellow boxes in dark mode (white on yellow, 1.2:1), the
+  rabbit-hole Explore button, the Universe Map side panel, and all text
+  under 14px. `test/contrast.test.mjs` checks the color pairs in theme.css
+  (part of `npm test`).
 - Google Analytics 4 (`G-NESPZD6XSQ`) on every page (not live until deployed): `tools/menu.mjs` writes the one standard snippet into every page, replacing the placeholder; Privacy page says plainly it counts visits and pages read, with no names or emails sent; `test/analytics.test.mjs` checks one tag per page.
 - More from us (not live until Doug batches the deploy): a /more/ page listing our other 12 live sites, and the footer on every page now says "More from us" with a link to it (it said "More from Doug"). Test: `test/more.test.mjs`.
 - Rebrand: "Details You Missed" became "MCU Easter Eggs" everywhere (banner, titles, meta, footers, JSON-LD, tools); canonical URLs and sitemap use mcueastereggs.com; menu no longer leaves an orphan button (one row 1000px+, even grid below). ADR-009.
