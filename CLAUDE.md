@@ -1,4 +1,4 @@
-# Marvel Details (Details You Missed)
+# MCU Easter Eggs (repo: marvel-details)
 
 Read this first. It says what the project is, where it runs, and what's next.
 The other standard docs: `PRD.md` (what and why), `TRD.md` (how it's built),
@@ -8,10 +8,11 @@ The other standard docs: `PRD.md` (what and why), `TRD.md` (how it's built),
 
 ## What it is
 A free, static fan site about hidden details in Marvel movies, branded
-"Details You Missed." Phase 1 covers Iron Man 1 to 3, The Avengers and
+"MCU Easter Eggs" (renamed from "Details You Missed" on 2026-10-06, ADR-009). Phase 1 covers Iron Man 1 to 3, The Avengers and
 Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-06)
+- **Rebrand (ADR-009):** the site is MCU Easter Eggs at https://mcueastereggs.com (canonical, sitemap, JSON-LD); the old name is gone from all pages and tools. Menu is one row at 1000px+ and an even grid below.
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
   `marvel-details`, production branch `phase-1-build`, commit e69809a since 2026-10-06,
   published by direct upload from Doug's laptop with wrangler).

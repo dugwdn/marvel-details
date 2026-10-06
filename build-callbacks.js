@@ -55,7 +55,7 @@ function generateCallbackPage(callback) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escapeHtml(callback.title)} - Marvel Details</title>
+    <title>${escapeHtml(callback.title)} | MCU Easter Eggs</title>
     <meta name="description" content="${escapeHtml(callback.explanation.substring(0, 150))}...">
     <meta name="keywords" content="Marvel, MCU, callback, ${callback.type}, ${foreshadowMovie.title}, ${fulfillmentMovie.title}">
     <link rel="stylesheet" href="/css/style.css">

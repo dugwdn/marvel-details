@@ -67,7 +67,7 @@ export function brandFor(html) {
   return (
     '<header class="site-brand">\n' +
     `        <${tag} class="site-brand-title"><a class="site-brand-link" href="/">${ICON}` +
-    '<span class="site-brand-name">Details <em>You</em><br>Missed</span></a></' + tag + '>\n' +
+    '<span class="site-brand-name">MCU <em>Easter</em><br>Eggs</span></a></' + tag + '>\n' +
     '        <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>\n' +
     '    </header>'
   );
@@ -75,10 +75,11 @@ export function brandFor(html) {
 
 export function addMenu(html, rel) {
   // Drop the banner from a previous run and the old plain "Details You Missed"
+  // (or "MCU Easter Eggs")
   // headers, then write one fresh banner straight above the menu.
   html = html
     .replace(/\s*<header class="site-brand">[\s\S]*?<\/header>/, '')
-    .replace(/\s*<header>\s*<h1>Details You Missed<\/h1>[\s\S]*?<\/header>/, '');
+    .replace(/\s*<header>\s*<h1>(?:Details You Missed|MCU Easter Eggs)<\/h1>[\s\S]*?<\/header>/, '');
   const menu = `${brandFor(html)}\n    ${menuFor(rel)}`;
   // Our own menu from a previous run, or the plain <nav> the old pages had.
   // Other navs (like the callbacks' prev/next "navigation") have a class and stay.
