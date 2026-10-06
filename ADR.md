@@ -80,3 +80,21 @@ Marvel character names (lawyer list).
 
 ## ADR-009: The brand is MCU Easter Eggs (2026-10-06)
 Doug chose the name MCU Easter Eggs on 2026-10-06 after buying mcueastereggs.com. This supersedes the earlier "Details You Missed" name (CLAUDE.md, ADR-006's type-only wordmark "DETAILS YOU MISSED") and the earlier note to keep Marvel/MCU out of the brand. The old name no longer appears on any page, title, meta tag, JSON-LD block, footer or tool output. Canonical URLs, og:url, sitemap, robots and JSON-LD now use https://mcueastereggs.com; marvel-details.pages.dev keeps working as the same site. The banner reads MCU EASTER EGGS in the same comic style. Menu: one row at 1000px and wider, an even grid below (5 columns, then 2), never a sideways scroll. Risk: "MCU" and Marvel references in a brand name raise a trademark question; it is added to the lawyer list (`Marvel-Details/lawyer-questions.md`). The site still says it is not affiliated with Marvel or Disney.
+
+## ADR-011: The quiz has its own rank, kept in the member data (2026-10-06)
+- **Decision:** quiz points build a separate quiz rank (Recruit to
+  Inevitable, `ranks` in `public/data/quiz.json`). They do not change the
+  hidden-details rank (Civilian to The Watcher), which measures how much of
+  the site someone has explored.
+- **Why:** the details rank is a share of a fixed set of details; points are
+  open-ended. Mixing them would let a few quiz rounds jump someone to The
+  Watcher without reading anything. Two ladders stay simple to explain.
+- **Storage:** `quiz { points, games, best }` in the same local-first state as
+  the other perks (ADR-008), so it syncs with no database change. Two devices
+  merge by keeping the larger number, so points from rounds played on two
+  devices while signed out are not added together (accepted: simple and can't
+  double count).
+- **Facts:** every question names its film, the scene, and a link about the
+  film; answers must be checkable on screen. Rank titles are plain words, no
+  characters.
+

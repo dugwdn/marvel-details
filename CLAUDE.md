@@ -32,6 +32,13 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Movie hubs** are built by `node tools/build-hubs.mjs` from
   `public/data/movie-hubs.json` (every detail needs a source URL; trailer
   blocks and figures on the page are kept). Run `node tools/menu.mjs` after.
+- **Quiz (`/quiz/`, ADR-011):** questions, levels, quiz ranks and film
+  sources are all in `public/data/quiz.json`; logic in `public/js/quiz-core.js`
+  (tested by `test/quiz.test.mjs`), page script `public/js/quiz.js`. To add a
+  question, add it to the JSON with a film key and a scene note; every level
+  needs at least 20. The page's level cards and rank table are written into
+  the HTML, so update `public/quiz/index.html` if levels or ranks change.
+  Menu: Quiz replaced About (About is in the footer legal line).
 - **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
   anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
   Never add a card that looks clickable without a link behind it.

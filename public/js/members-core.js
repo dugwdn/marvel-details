@@ -9,6 +9,7 @@
 //   found  { "kind:key": t }                        hidden details opened
 //   settings { hideSpoilers, t }                    last write wins
 //   rankSeen  number                                highest rank already announced
+//   quiz  { points, games, best: { tierId: n } }    quiz totals (/quiz/)
 // "on: false" entries are tombstones, so a removal on one device beats an
 // older add on another. Times (t) are milliseconds since 1970.
 
@@ -29,7 +30,27 @@ export const SAVE_KINDS = ['article', 'scene', 'callback', 'character', 'rabbit'
 export const FOUND_KINDS = ['scene', 'callback', 'rabbit'];
 
 export function emptyState() {
-  return { v: VERSION, seen: {}, saved: {}, favs: {}, found: {}, settings: { hideSpoilers: false, t: 0 }, rankSeen: 0 };
+  return { v: VERSION, seen: {}, saved: {}, favs: {}, found: {}, settings: { hideSpoilers: false, t: 0 }, rankSeen: 0, quiz: emptyQuiz() };
+}
+export function emptyQuiz() {
+  return { points: 0, games: 0, best: {} };
+}
+const QUIZ_MAX = 10_000_000;
+function sanitizeQuiz(q) {
+  const out = emptyQuiz();
+  if (!q || typeof q !== 'object') return out;
+  out.points = Math.min(num(q.points), QUIZ_MAX);
+  out.games = Math.min(num(q.games), QUIZ_MAX);
+  if (q.best && typeof q.best === 'object') {
+    for (const [k, v] of Object.entries(q.best).slice(0, 10)) if (ID.test(k)) out.best[k] = Math.min(num(v), QUIZ_MAX);
+  }
+  return out;
+}
+// Quiz totals only grow, so two devices merge by keeping the larger number.
+function mergeQuiz(a, b) {
+  const best = { ...a.best };
+  for (const [k, v] of Object.entries(b.best)) best[k] = Math.max(best[k] || 0, v);
+  return { points: Math.max(a.points, b.points), games: Math.max(a.games, b.games), best };
 }
 
 const ID = /^[a-z0-9][a-z0-9-]{0,79}$/;
@@ -74,6 +95,7 @@ export function sanitize(input) {
   const s = input.settings;
   if (s && typeof s === 'object') out.settings = { hideSpoilers: s.hideSpoilers === true, t: num(s.t) };
   out.rankSeen = Math.min(num(input.rankSeen), 50);
+  out.quiz = sanitizeQuiz(input.quiz);
   return out;
 }
 
@@ -108,6 +130,7 @@ export function merge(local, remote) {
     found,
     settings: b.settings.t > a.settings.t ? b.settings : a.settings,
     rankSeen: Math.max(a.rankSeen, b.rankSeen),
+    quiz: mergeQuiz(a.quiz, b.quiz),
   };
 }
 
