@@ -51,6 +51,8 @@ export function loadMedia() {
   const titleInfo = new Map(mcu.titles.map((t) => [t.title, t]));
   const byPage = new Map(mcu.characters.filter((c) => c.page).map((c) => [c.page, c]));
   const byId = new Map(mcu.characters.map((c) => [c.id, c]));
+  const spotlight = read('data/spotlight.json').characters;
+  const arcs = new Map(read('data/characters.json').characters.map((c) => [`/characters/${c.slug}`, c]));
   // One photo per character: the list portrait, or the photo on the character's own page.
   const faces = [];
   const seen = new Set();
@@ -65,7 +67,32 @@ export function loadMedia() {
     .map((v) => ({ ...v, date: titleInfo.get(v.film).date, kind: titleInfo.get(v.film).kind }))
     .sort((a, b) => b.date.localeCompare(a.date));
   const places = credits.images.filter((i) => i.kind === 'place' || /^\/img\/places\//.test(i.file));
-  return { credits, mcu, faces, trailers, places, byPage };
+  return { credits, mcu, faces, trailers, places, byPage, byId, spotlight, arcs };
+}
+
+// Spotlight panel: everything links to a real page. A film with a movie hub goes to the hub;
+// any other title goes to the character list filtered to that title (/characters/all/?in=N).
+// A character goes to their own page, or to their row on the character list.
+const HUB_BY_TITLE = Object.fromEntries(Object.entries(HUB_FILMS).map(([id, t]) => [t, `/movies/${id}`]));
+export const titleHref = (m, title) => HUB_BY_TITLE[title] || `/characters/all/?in=${m.mcu.titles.findIndex((t) => t.title === title)}`;
+export const charHref = (c) => c.page || `/characters/all/#${c.id}`;
+const shortName = (c) => c.name.replace(/^(.*?) \/ .*$/, '$1').replace(/^Harold "Happy" Hogan$/, 'Happy Hogan');
+
+function spotInfo(m, f) {
+  const extra = (m.spotlight || {})[f.c.id];
+  const arc = m.arcs.get(f.c.page);
+  const year = (t) => (m.mcu.titles.find((x) => x.title === t) || {}).date?.slice(0, 4);
+  const link = (href, text, cls = 'spot-chip') => `<a class="${cls}" href="${href}">${esc(text)}</a>`;
+  const people = (ids) => ids.map((id) => m.byId.get(id)).filter(Boolean).map((c) => link(charHref(c), shortName(c))).join('');
+  const rows = [];
+  if (extra?.skills?.length) rows.push(['Abilities and skills', extra.skills.map((x) => `<span class="spot-chip spot-chip-plain">${esc(x)}</span>`).join('')]);
+  if (extra?.allies?.length) rows.push(['Closest allies', people(extra.allies)]);
+  if (extra?.enemies?.length) rows.push(['Biggest enemies', people(extra.enemies)]);
+  const titles = [...f.c.titles].sort((a, b) => (year(a) || '').localeCompare(year(b) || ''));
+  rows.push([`MCU movies and shows (${titles.length})`, titles.map((t) => link(titleHref(m, t), `${t} (${year(t)})`)).join('')]);
+  return `${arc?.arcThesis ? `<p class="spot-arc">${esc(arc.arcThesis)}.</p>` : ''}
+                <dl class="spot-facts">${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+                <p class="spot-cta"><a href="${charHref(f.c)}">${f.c.page ? 'Full character page' : 'See them on the character list'} ›</a></p>`;
 }
 
 // Doug 2026-10-06: no source or license lines next to photos and trailers. Every credit
@@ -113,10 +140,11 @@ export function homeTop(m) {
   return `<section class="media-faces" aria-labelledby="faces-title">
         <h2 class="section-title" id="faces-title">Faces of the MCU</h2>
         <p class="media-lead">The actors behind ${m.faces.length} characters, in real life. Tap a face to see the character.</p>
-        <div class="faces-spotlight" data-rotate="6000" aria-roledescription="carousel" aria-label="Actor spotlight">
+        <div class="faces-spotlight" data-rotate="8000" aria-roledescription="carousel" aria-label="Actor spotlight">
             ${spot.map((f, i) => `<div class="spot-slide"${i ? ' hidden' : ''} aria-roledescription="slide" aria-label="${i + 1} of ${spot.length}">
             ${face(f, '(max-width: 640px) 60vw, 280px', i === 0)}
-            <div class="spot-text"><p class="spot-kicker">Spotlight</p><h3><a href="${f.href}">${esc(f.c.name)}</a></h3><p>${f.img.role === 'voices' ? 'Voiced' : 'Played'} by ${esc(f.img.subject)}. In ${f.c.titles.length} MCU titles, first in ${esc(f.c.first)}.</p></div>
+            <div class="spot-text"><p class="spot-kicker">Spotlight</p><h3><a href="${f.href}">${esc(f.c.name)}</a></h3><p class="spot-sub">${f.img.role === 'voices' ? 'Voiced' : 'Played'} by ${esc(f.img.subject)}. In ${f.c.titles.length} MCU titles, first in <a href="${titleHref(m, f.c.first)}">${esc(f.c.first)}</a>.</p>
+                ${spotInfo(m, f)}</div>
             </div>`).join('\n            ')}
             <div class="spot-controls"><button type="button" class="spot-prev" aria-label="Previous actor">‹</button><button type="button" class="spot-pause" aria-label="Pause">❚❚</button><button type="button" class="spot-next" aria-label="Next actor">›</button></div>
         </div>

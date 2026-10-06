@@ -1157,11 +1157,33 @@ html body .spot-text h3 a { color: #fff; text-decoration: none; }
 html body .spot-text h3 a:hover { color: #ff6b74; }
 html body .spot-text p { color: #ddd !important; font-size: 1.1rem; }
 html body .spot-kicker { font-family: var(--dym-head); text-transform: uppercase; letter-spacing: .08em; color: #ff6b74 !important; font-size: .95rem !important; }
+html body .faces-spotlight { display: grid; padding-bottom: 4.5rem; }
+/* Slides share one grid cell, so the box keeps the tallest slide's height and the page does not jump as it rotates. */
+html body .spot-slide { grid-area: 1 / 1; align-items: start; align-content: start; }
+html body .spot-slide[hidden] { display: grid !important; visibility: hidden; }
+html body .spot-text { min-width: 0; }
+html body .spot-text .spot-sub a { color: #fff; text-decoration: underline; text-decoration-color: #ff6b74; }
+html body .spot-arc { font-style: italic; color: #bbb !important; font-size: 1rem !important; margin: 0 0 1rem; }
+html body .spot-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem 1.5rem; margin: 0; }
+html body .spot-facts > div:last-child { grid-column: 1 / -1; }
+html body .spot-facts dt { font-family: var(--dym-head); text-transform: uppercase; letter-spacing: .06em; font-size: .9rem; color: #ffd23f; margin-bottom: .35rem; }
+html body .spot-facts dd { margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+html body .spot-chip { display: inline-block; padding: .3rem .65rem; border: 2px solid #fff; border-radius: 999px; background: #000; color: #fff; font-size: .9rem; line-height: 1.2; text-decoration: none; max-width: 100%; overflow-wrap: anywhere; }
+html body a.spot-chip:hover, html body a.spot-chip:focus-visible { background: var(--dym-red); border-color: var(--dym-red); color: #fff; }
+html body .spot-chip-plain { border-color: #555; background: #1c1c22; color: #ddd; }
+html body .spot-cta { margin: 1.1rem 0 0; }
+html body .spot-cta a { display: inline-block; padding: .55rem 1rem; background: #ffd23f; color: #000; border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 var(--dym-red); font-family: var(--dym-head); font-weight: 700; text-decoration: none; }
+html body .spot-cta a:hover, html body .spot-cta a:focus-visible { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--dym-red); }
 html body .spot-controls { position: absolute; right: 1rem; bottom: 1rem; display: flex; gap: .5rem; }
 html body .spot-controls button { width: 44px; height: 44px; border-radius: 50%; border: 2px solid #fff; background: #000; color: #fff; font-size: 1.2rem; cursor: pointer; }
 html body .spot-controls button:hover, html body .spot-controls button:focus-visible { background: var(--dym-red); }
 @media (max-width: 640px) {
   html body .spot-slide { grid-template-columns: 1fr; text-align: center; }
+  html body .spot-facts { text-align: left; grid-template-columns: 1fr; }
+  /* Phones: each slide is its own height, so a short one has no empty band under it. */
+  html body .spot-slide[hidden] { display: none !important; }
+  html body .spot-slide .face-tile { max-width: 180px; }
+  html body .spot-text h3 { overflow-wrap: anywhere; }
   html body .spot-slide .face-tile { max-width: 220px; margin: 0 auto; }
   html body .faces-spotlight { padding-bottom: 4.5rem; }
   /* On phones the wall is a swipeable row, so 48 faces don't make the page 6,000px long. */
