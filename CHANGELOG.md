@@ -12,11 +12,14 @@ merged-but-unpublished work.
   Lone Pine, California on the Iron Man hub (where Tony's capture was
   filmed) and the Unisphere in Flushing Meadows on the Iron Man 2 hub (the
   real park behind the Stark Expo).
-- Removed the Iron Man (2008) and Iron Man 2 trailer embeds: they were
-  uploads from Rotten Tomatoes Classic Trailers and Movieclips, not Marvel's
-  or the studio's own channel. The Avengers, Iron Man 3 and Endgame hubs and
-  the Spider-Man article keep their official trailers (checked with YouTube's
-  oembed).
+- Trailers: Doug widened the rule (ADR-010) to official Marvel, Disney and Sony
+  channels plus licensed trailer channels (Movieclips, Rotten Tomatoes,
+  Fandango). All five movie hubs keep a trailer (Iron Man and Iron Man 2 from
+  Movieclips channels; no Marvel upload could be verified) and the Endgame,
+  Avengers and Iron Man 2 articles now embed theirs. All checked with oembed.
+- Character list: 7 small credited portraits (Sebastian Stan, Cobie Smulders,
+  Anthony Mackie, Benedict Wong, Dave Bautista, John Slattery, Kat Dennings)
+  from the MCU Character List builder reading `media-credits.json`.
 - New test `test/media.test.mjs` (license, size, alt text, visible credit,
   official channel, nocookie, lazy and titled iframes).
 

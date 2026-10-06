@@ -46,9 +46,8 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Images and trailers (PR on `feat/images-and-trailers`, not live):**
   rule in ADR-010. All media is listed in `public/data/media-credits.json`;
   `node tools/build-credits.mjs` rebuilds `/credits`, then `node tools/menu.mjs`.
-  Official trailers: Avengers, Iron Man 3, Endgame, Spider-Man article. Iron
-  Man 1 and 2 have none (only non-official uploads found). 20 character
-  portraits plus 2 place photos (Iron Man hubs). `test/media.test.mjs` checks it.
+  Trailers on all 5 hubs and 4 articles (official or licensed channels). 20
+  character portraits, 7 list portraits, 2 place photos (Iron Man hubs). `test/media.test.mjs` checks it.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is live in the code (`G-NESPZD6XSQ`, written into every page by

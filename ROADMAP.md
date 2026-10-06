@@ -24,9 +24,8 @@ his accounts; the rest Claude does on a branch with a PR.
    Marvel character names.
 
 ## Next
-- Official trailers for Iron Man (2008) and Iron Man 2: Marvel Entertainment
-  has no film-trailer upload we could verify, so those hubs have none. Add
-  them if Marvel or Paramount's own channel posts one (check with oembed).
+- Swap the Iron Man and Iron Man 2 trailers for Marvel's own uploads if they appear.
+- Finish portraits for the top 60 characters in the list (53 left) and location photos for the Avengers, Iron Man 3 and Endgame hubs: Wikimedia's API rate-limited us for hours, so these wait for a run with `/tmp`-style batching (8 actors a request, 20 s apart).
 - A Coming Soon page with official trailers for confirmed titles (there is no
   /upcoming/ page yet).
 - More free-license pictures for articles, callbacks and scenes only where a
