@@ -3,6 +3,17 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (Coming Soon restored, not live yet)
+- Coming Soon (`/upcoming/`) is back. It was added in PR #22 but its commit
+  never reached `phase-1-build`, so the live site gave a 404. Restored with
+  the MCU Easter Eggs name and mcueastereggs.com address, its two official
+  Marvel Entertainment trailers listed in `media-credits.json` and on
+  `/credits`, and a sitemap entry.
+- Menu: Coming Soon takes the slot My Marvel had, so the menu stays ten
+  buttons with no orphan. My Marvel is still one tap away in the header chip.
+- `tools/menu.mjs` no longer adds a blank line or a second copy of the
+  project links to footers when it runs again (the 404 page had two).
+
 ## 2026-10-06 (GA4 privacy settings, not live yet)
 - GA4 now has one on/off spot: `GA_ID` in `tools/menu.mjs`. Empty or a
   placeholder like `G-XXXXXXXXXX` means no Google tag is written into any
@@ -11,7 +22,7 @@ merged-but-unpublished work.
   `?query` or `#hash`. Privacy page says so in plain words.
   `test/analytics.test.mjs` checks off, on and the stripped address.
 
-## 2026-10-06 (images and trailers, not live yet)
+## 2026-10-06 (images and trailers, live 2026-10-06 as bd1f6f4)
 - Photo and video credits: `/credits` (built by `node tools/build-credits.mjs`
   from `public/data/media-credits.json`), linked from every footer next to
   Privacy. All 20 character portraits were re-checked against Wikimedia

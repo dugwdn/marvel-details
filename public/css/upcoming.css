@@ -1,0 +1,36 @@
+/* Upcoming Marvel movies and shows (/upcoming/). */
+.up-main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 16px 3rem; }
+.up-head { padding: 1.4rem 1.5rem; margin-bottom: 2rem; }
+.up-head h1 { font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-weight: 400; letter-spacing: .04em; font-size: clamp(2.1rem, 6vw, 3.4rem); line-height: 1.05; margin: 0 0 .7rem; }
+.up-head p { margin: 0 0 .6rem; font-size: 1.08rem; line-height: 1.55; }
+.up-main .detail-section { margin-bottom: 2.6rem; padding: 2rem 1.4rem 1.3rem; }
+.up-main .detail-section p { line-height: 1.6; margin: 0 0 .9rem; }
+.up-main .detail-section a { color: var(--dym-red-dark); font-weight: 600; }
+.up-badge {
+  display: inline-block; padding: .08rem .45rem; margin-right: .2rem; border: 2px solid #000; vertical-align: .08em;
+  font: 700 .74rem/1.35 var(--dym-head); letter-spacing: .06em; text-transform: uppercase;
+}
+html body .up-badge-confirmed { background: #1b7a34; color: #fff !important; }
+html body .up-badge-reported { background: #ffd60a; color: #111 !important; }
+html body .up-badge-rumor { background: #6a1b9a; color: #fff !important; }
+.up-key { font-size: .98rem !important; }
+.up-table-wrap { overflow-x: auto; }
+.up-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.up-table th, .up-table td { text-align: left; padding: .6rem .6rem; border-bottom: 2px solid var(--dym-line); vertical-align: top; }
+.up-table th { font-family: var(--dym-head); text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
+.up-item { padding: .4rem 0 .6rem; border-bottom: 2px dashed var(--dym-line); margin-bottom: .9rem; }
+.up-item:last-child { border-bottom: 0; margin-bottom: 0; }
+.up-item h3 { font-family: var(--dym-head); font-weight: 800; font-size: 1.3rem; margin: .3rem 0 .5rem; }
+.up-foot { font-weight: 600; }
+.up-foot a { color: var(--dym-red-dark); }
+@media (prefers-color-scheme: dark) {
+  .up-main .detail-section a, .up-foot a { color: #ff8a92; }
+  .up-badge { border-color: #f2f2f2; }
+}
+@media (max-width: 600px) {
+  .up-table thead { display: none; }
+  .up-table, .up-table tbody, .up-table tr, .up-table td { display: block; width: 100%; }
+  .up-table tr { padding: .6rem 0; border-bottom: 2px solid var(--dym-line); }
+  .up-table td { border: 0; padding: .15rem 0; }
+  .up-table td:first-child { font-weight: 700; font-size: 1.08rem; }
+}
