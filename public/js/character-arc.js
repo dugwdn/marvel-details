@@ -180,20 +180,14 @@ class CharacterArcTracker {
     const sorted = [...this.filteredCharacters];
 
     switch (this.currentSort) {
-      case 'arc-length':
-        sorted.sort((a, b) => b.arcLength - a.arcLength);
-        break;
-      case 'appearances':
-        sorted.sort((a, b) => b.appearances - a.appearances);
-        break;
-      case 'kill-count':
-        sorted.sort((a, b) => b.killCount - a.killCount);
-        break;
       case 'name':
-        sorted.sort((a, b) => a.fullName.localeCompare(b.fullName));
+        sorted.sort((a, b) => a.heroName.localeCompare(b.heroName));
         break;
-      case 'complexity':
-        sorted.sort((a, b) => (b.nearDeathExperiences + b.betrayalsByAllies) - (a.nearDeathExperiences + a.betrayalsByAllies));
+      case 'first-appearance':
+        sorted.sort((a, b) => a.firstYear - b.firstYear || a.heroName.localeCompare(b.heroName));
+        break;
+      case 'site-films':
+        sorted.sort((a, b) => b.siteFilms.length - a.siteFilms.length || a.heroName.localeCompare(b.heroName));
         break;
       default:
         // Keep original order
@@ -271,10 +265,10 @@ class CharacterArcTracker {
         <p class="character-thesis">${this.escapeHtml(char.arcThesis)}</p>
         <div class="character-stats">
           <span class="stat-item">
-            <strong>${char.appearances}</strong> appearances
+            First seen: <strong>${this.escapeHtml(char.firstFilm)}</strong> (${char.firstYear})
           </span>
           <span class="stat-item">
-            <strong>${char.arcLength}</strong> year arc
+            In <strong>${char.siteFilms.length}</strong> of our 5 films
           </span>
         </div>
       </div>
@@ -373,28 +367,14 @@ class CharacterArcTracker {
 
             <div class="modal-stats-grid">
               <div class="modal-stat">
-                <span class="stat-label">Appearances</span>
-                <span class="stat-value">${char.appearances}</span>
+                <span class="stat-label">First MCU film</span>
+                <span class="stat-value">${this.escapeHtml(char.firstFilm)} (${char.firstYear})</span>
+                ${char.firstNote ? `<span class="stat-note">${this.escapeHtml(char.firstNote)}</span>` : ''}
               </div>
               <div class="modal-stat">
-                <span class="stat-label">Arc Length</span>
-                <span class="stat-value">${char.arcLength} years</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Kill Count</span>
-                <span class="stat-value">${char.killCount}</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Near-Death</span>
-                <span class="stat-value">${char.nearDeathExperiences}</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Times Saved</span>
-                <span class="stat-value">${char.timesSavedUniverse}</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Betrayals</span>
-                <span class="stat-value">${char.betrayalsByAllies}</span>
+                <span class="stat-label">In our 5 films</span>
+                <span class="stat-value">${char.siteFilms.length}</span>
+                <span class="stat-note">${this.escapeHtml(char.siteFilms.join(', '))}</span>
               </div>
             </div>
 
@@ -405,12 +385,6 @@ class CharacterArcTracker {
                 <li><strong>Role Type:</strong> ${MarvelDataHub.formatRoleName(char.role)}</li>
                 ${char.loveInterests.length > 0 ? `
                   <li><strong>Love Interests:</strong> ${this.escapeHtml(char.loveInterests.join(', '))}</li>
-                ` : ''}
-                ${char.armorVariations > 0 ? `
-                  <li><strong>Armor Variations:</strong> ${char.armorVariations}</li>
-                ` : ''}
-                ${char.timesMindsControlled > 0 ? `
-                  <li><strong>Times Mind-Controlled:</strong> ${char.timesMindsControlled}</li>
                 ` : ''}
               </ul>
             </div>

@@ -8,6 +8,15 @@ merged-but-unpublished work.
   One Tap), Facebook and X, each shown once its keys are set, and a /privacy
   page (Meta needs one to go live). Accounts in the
   `marvel-details` D1 database. Ready for the discussions.
+- Characters (not live yet): 20 characters instead of 10. New: Thanos,
+  Spider-Man, War Machine, Captain Marvel, Doctor Strange, Black Panther,
+  Scarlet Witch, Ant-Man, Nebula and Obadiah Stane, each with a page,
+  timeline and credited Wikimedia Commons actor photo. Removed the made-up
+  numbers (kill counts, "times saved the universe", near-death counts and
+  others). Cards, popups and pages now show facts you can check: first MCU
+  film and which of our 5 films the character is in. Fixed wrong timeline
+  points (Hawkeye's first film is Thor, not Iron Man 2; Happy Hogan isn't
+  in The Avengers; others in Black Widow, Hulk and Pepper Potts).
 - Comic panels site-wide (not live yet): movie hubs (details two across
   with yellow caption headings), callback pages (speech-bubble scene
   notes), rabbit-hole chapters, character pages and the About page now use

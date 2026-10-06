@@ -470,31 +470,19 @@ const MarvelDataHub = {
     }
     factors += 30;
 
-    // Similar arc lengths (within 2 appearances)
-    if (Math.abs(char1.arcLength - char2.arcLength) <= 2) {
-      similarity += 25;
-    }
-    factors += 25;
-
-    // Similar appearance counts (within 1-2)
-    if (Math.abs(char1.appearances - char2.appearances) <= 2) {
-      similarity += 20;
-    }
-    factors += 20;
+    // Shared films on this site (overlap of the two film lists)
+    const films1 = new Set(char1.siteFilms || []);
+    const films2 = new Set(char2.siteFilms || []);
+    const shared = [...films1].filter(f => films2.has(f)).length;
+    const union = new Set([...films1, ...films2]).size;
+    similarity += union ? Math.round(50 * shared / union) : 0;
+    factors += 50;
 
     // Both have love interests or both don't
     if ((char1.loveInterests.length > 0) === (char2.loveInterests.length > 0)) {
-      similarity += 15;
+      similarity += 20;
     }
-    factors += 15;
-
-    // Similar scale of experiences (near-death, betrayals, etc)
-    const totalExp1 = char1.nearDeathExperiences + char1.betrayalsByAllies;
-    const totalExp2 = char2.nearDeathExperiences + char2.betrayalsByAllies;
-    if (Math.abs(totalExp1 - totalExp2) <= 2) {
-      similarity += 10;
-    }
-    factors += 10;
+    factors += 20;
 
     return Math.round((similarity / factors) * 100);
   },
