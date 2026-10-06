@@ -65,7 +65,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
-Waiting on Doug: AdSense slot numbers, the domain move, the
+Waiting on Doug: deploying the ad slot (`7081225657` is in `js/ads.js`), the domain move, the
 sign-in keys (PR #18) and, once PRs #18 and #21 are merged,
 `npx wrangler d1 migrations apply marvel-details --remote` for the `saves`
 table (RUNBOOK "Member perks sync").

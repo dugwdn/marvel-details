@@ -4,6 +4,12 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Ads filled (not live yet, PR feat/ad-slot): all three ad boxes use the AdSense
+  responsive display unit `7081225657` (publisher ca-pub-7178251279168670).
+  Still labeled "Advertisement", hidden until filled (zero height, full width so
+  AdSense can size it), room reserved when filled, never on My Marvel (ads.js
+  removed from `/me/`; sign-in and account never had it), still at most three
+  per page. New `test/ads.test.mjs`.
 - Readability and a compact header (not live yet, PR fix/readability-header). The
   header went from a ~375px banner plus menu (550px for visitors with the
   Bangers font) to a slim sticky bar (logo and name, a search box, a member

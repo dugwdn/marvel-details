@@ -58,8 +58,9 @@ depend on. The home, movie and article pages are light only.
 - Ads: `js/ads.js` (loaded on every page but 404) loads AdSense for
   ca-pub-7178251279168670 and places three boxes: below the top, mid-page
   (pages long enough to have one) and before the footer. Boxes stay hidden
-  until AdSense fills them. Slot numbers go in `SLOTS` at the top of
-  `js/ads.js`; until then only Auto ads (if turned on in AdSense) can show.
+  until AdSense fills them. All three use one responsive display unit,
+  `SLOT` (`7081225657`) at the top of `js/ads.js`; not on `/account` or
+  `/me/`. `test/ads.test.mjs` checks slot, publisher and exclusions.
   `ads.txt` lists the publisher ID. Every page has the
   `google-adsense-account` meta tag.
 

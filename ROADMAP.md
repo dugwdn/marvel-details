@@ -35,5 +35,5 @@ his accounts; the rest Claude does on a branch with a PR.
   a weekly email only if Doug wants it (would mean storing email: new ADR).
 6. Phase 2 films, picked by search demand (Keyword Planner) rather than
    release order.
-7. Ads are built in (hidden until filled). Doug: add marvel-details.pages.dev
-   (or the final domain) in AdSense > Sites and send the three slot numbers.
+7. Ads are built in (hidden until filled). Slot `7081225657` is in; Doug: deploy,
+   and keep the site (or final domain) listed in AdSense > Sites.

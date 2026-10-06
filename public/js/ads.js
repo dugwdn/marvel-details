@@ -1,10 +1,13 @@
 // Ads: three AdSense boxes per page (below the top, mid-page, page end).
 // Each box stays hidden until AdSense actually fills it, so empty or
-// unapproved slots never show a blank space. To turn a box on, put the
-// data-ad-slot number from AdSense into SLOTS below.
+// unapproved slots never show a blank space. All three boxes reuse the one
+// responsive display unit from AdSense (mcueastereggs.com, 2026-10-06).
 (function () {
+  // Never on sign-in, account or My Marvel pages.
+  if (/^\/(account|me)(\/|\.html|$)/.test(location.pathname)) return;
   var CLIENT = 'ca-pub-7178251279168670';
-  var SLOTS = { top: '', mid: '', end: '' };
+  var SLOT = '7081225657';
+  var SLOTS = { top: SLOT, mid: SLOT, end: SLOT };
 
   var s = document.createElement('script');
   s.async = true;
@@ -14,8 +17,11 @@
 
   var css = document.createElement('style');
   css.textContent =
-    '.ad-box{display:none;margin:2rem auto;max-width:1600px;text-align:center}' +
-    '.ad-box:has(ins[data-ad-status="filled"]){display:block}' +
+    // Unfilled: zero height but still full width (AdSense can't size a unit
+    // inside display:none). Filled: shown with room reserved for the unit.
+    '.ad-box{height:0;overflow:hidden;margin:0 auto;max-width:1600px;text-align:center}' +
+    '.ad-box:has(ins[data-ad-status="filled"]){height:auto;overflow:visible;margin:2rem auto}' +
+    '.ad-box ins.adsbygoogle{min-height:100px}' +
     '.ad-box .ad-label{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:.25rem}';
   document.head.appendChild(css);
 
