@@ -13,7 +13,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-05)
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
-  `marvel-details`, production branch `phase-1-build`, commit ecf0b8b,
+  `marvel-details`, production branch `phase-1-build`, commit 40e9492 since 2026-10-06,
   published by direct upload from Doug's laptop with wrangler).
 - **marveldetails.com is not this site yet.** The domain still serves Doug's
   older Wix site (which carries a Google Search Console verification tag).
