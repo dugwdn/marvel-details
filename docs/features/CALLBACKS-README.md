@@ -60,7 +60,7 @@ Add the new callback to `/sitemap.xml`:
 
 ```xml
 <url>
-    <loc>https://marvel-details.pages.dev/callbacks/callback-cb-NNN.html</loc>
+    <loc>https://mcueastereggs.com/callbacks/callback-cb-NNN.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -1,4 +1,4 @@
-// Sign-in on Details You Missed (ADR-008): Google first (button plus One Tap),
+// Sign-in on MCU Easter Eggs (ADR-008): Google first (button plus One Tap),
 // then Facebook and X. Server side: functions/_lib/auth.js. A provider shows up
 // only once its settings are in place. Reading the site never needs an account.
 

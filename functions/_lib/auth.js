@@ -1,4 +1,4 @@
-// Sign-in for Details You Missed (ADR-008). Ported from the Party Games Arcade's
+// Sign-in for MCU Easter Eggs (ADR-008). Ported from the Party Games Arcade's
 // src/auth.ts so both sites work the same way. Our own small sign-in on Pages
 // Functions + D1: free, no other service, and the members stay ours.
 //   Google: Google's button (and One Tap) hands the page an ID token; we check

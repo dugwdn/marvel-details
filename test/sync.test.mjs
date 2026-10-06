@@ -21,7 +21,7 @@ function fakeD1() {
   return { raw: db, prepare: (sql) => stmt(sql), batch: async (list) => { for (const s of list) await s.run(); return []; } };
 }
 
-const ORIGIN = 'https://marvel-details.pages.dev';
+const ORIGIN = 'https://mcueastereggs.com';
 async function member(DB, id = 'u1', token = 'tok-' + id) {
   DB.raw.prepare('INSERT INTO users (id, provider, sub, name, created) VALUES (?, ?, ?, ?, ?)').run(id, 'google', 'sub-' + id, 'Doug', Date.now());
   DB.raw.prepare('INSERT INTO sessions (hash, user_id, expires) VALUES (?, ?, ?)').run(await hashToken(token), id, Date.now() + 864e5);

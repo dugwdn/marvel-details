@@ -57,11 +57,11 @@ page = f'''<!DOCTYPE html>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>{e(title)}</title>
     <meta name="description" content="{e(desc)}">
-    <link rel="canonical" href="https://marvel-details.pages.dev/characters/all/">
+    <link rel="canonical" href="https://mcueastereggs.com/characters/all/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{e(title)}">
     <meta property="og:description" content="{e(desc)}">
-    <meta property="og:url" content="https://marvel-details.pages.dev/characters/all/">
+    <meta property="og:url" content="https://mcueastereggs.com/characters/all/">
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/theme.css">
@@ -97,7 +97,7 @@ page = f'''<!DOCTYPE html>
     </main>
 
     <footer>
-        <p>&copy; 2026 Details You Missed. Fan site, not affiliated with Marvel or Disney. <a href="/about">About</a></p>
+        <p>&copy; 2026 MCU Easter Eggs. Fan site, not affiliated with Marvel or Disney. <a href="/about">About</a></p>
     </footer>
 
     <script src="/js/directory.js"></script>

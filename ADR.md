@@ -74,3 +74,6 @@ un-find, settings are last-write-wins. Deleting the account deletes the
 sign-in for the whole site; no new service or bill.
 **Cost:** sync only for signed-in members; the list size cap; rank titles use
 Marvel character names (lawyer list).
+
+## ADR-009: The brand is MCU Easter Eggs (2026-10-06)
+Doug chose the name MCU Easter Eggs on 2026-10-06 after buying mcueastereggs.com. This supersedes the earlier "Details You Missed" name (CLAUDE.md, ADR-006's type-only wordmark "DETAILS YOU MISSED") and the earlier note to keep Marvel/MCU out of the brand. The old name no longer appears on any page, title, meta tag, JSON-LD block, footer or tool output. Canonical URLs, og:url, sitemap, robots and JSON-LD now use https://mcueastereggs.com; marvel-details.pages.dev keeps working as the same site. The banner reads MCU EASTER EGGS in the same comic style. Menu: one row at 1000px and wider, an even grid below (5 columns, then 2), never a sideways scroll. Risk: "MCU" and Marvel references in a brand name raise a trademark question; it is added to the lawyer list (`Marvel-Details/lawyer-questions.md`). The site still says it is not affiliated with Marvel or Disney.

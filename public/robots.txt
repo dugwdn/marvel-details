@@ -5,7 +5,7 @@ Disallow: /private
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://marvel-details.pages.dev/sitemap.xml
+Sitemap: https://mcueastereggs.com/sitemap.xml
 
 # Crawl delay (optional, not all bots respect)
 Crawl-delay: 0

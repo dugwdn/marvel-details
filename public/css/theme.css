@@ -288,12 +288,11 @@ html body .promo-cta:hover, html body .promo-cta:focus { background: transparent
    "html body" outranks the plain "nav a" rules still inline on older pages.
    Original design; no studio logos, fonts or trade dress. */
 html body nav.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.9rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.8rem;
   margin: 0;
-  padding: 1.25rem 1rem 1.5rem;
+  padding: 1.1rem 16px 1.3rem;
   background-color: #14141f;
   background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.6px);
   background-size: 14px 14px;
@@ -307,9 +306,12 @@ html body nav.site-nav a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.25rem;
+  min-height: 3.1rem;
+  min-width: 0;
   margin: 0;
-  padding: 0.55rem 1.3rem 0.45rem;
+  padding: 0.45rem 0.4rem 0.35rem;
+  text-align: center;
+  overflow-wrap: normal;
   background: var(--hero);
   color: var(--hero-ink);
   border: 3px solid #000;
@@ -362,29 +364,43 @@ html body nav.site-nav a[aria-current] {
   text-shadow: none;
 }
 
-@media (max-width: 640px) {
+/* Menu layout: 1000px and wider is ONE row (no scrolling, labels wrap inside
+   their buttons); narrower is an even grid, 5 columns, then 2 under 640px
+   (an odd last button spans the full row so none sits alone). */
+@media (min-width: 1000px) {
   html body nav.site-nav {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.6rem;
-    padding: 0.9rem 16px 1.1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 1.1rem 12px 1.3rem;
   }
-
   html body nav.site-nav a {
-    min-height: 3.1rem;
-    font-size: 1.1rem;
-    padding: 0.4rem 0.3rem 0.3rem;
-    text-align: center;
-    overflow-wrap: anywhere;
+    flex: 1 1 0;
+    font-size: clamp(0.78rem, 1.05vw, 1.3rem);
+    letter-spacing: 0.01em;
+    padding: 0.45rem 0.2rem 0.35rem;
     box-shadow: 4px 4px 0 #000;
   }
+}
+
+@media (max-width: 640px) {
+  html body nav.site-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+  html body nav.site-nav a {
+    font-size: clamp(0.95rem, 4.6vw, 1.2rem);
+    letter-spacing: 0.03em;
+    box-shadow: 4px 4px 0 #000;
+  }
+  html body nav.site-nav a:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html body nav.site-nav a { transition: none; }
 }
 
-/* Brand layer: the "Details You Missed" banner on every page plus comic
+/* Brand layer: the "MCU Easter Eggs" banner on every page plus comic
    touches on headings, cards, back buttons and the footer, so the brand
    shows up everywhere, theme-park style. Original artwork only. */
 html body header.site-brand {
