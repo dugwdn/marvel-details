@@ -14,6 +14,8 @@
   --dym-muted: #5c5c66;
   --dym-red: #e0303c;
   --dym-red-dark: #b3202b;
+  --dym-link: #b3202b;        /* red used as TEXT: 5.9:1 on --dym-bg */
+  --dym-link-hover: #8a1520;
   --dym-head: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
   --dym-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
@@ -25,6 +27,8 @@
     --dym-line: #2e2e37;
     --dym-text: #ececf1;
     --dym-muted: #a6a6b3;
+    --dym-link: #ff6b74;      /* 6.4:1 on --dym-surface */
+    --dym-link-hover: #ffa3a9;
   }
 }
 
@@ -44,8 +48,8 @@ html body .section-title, html body .movie-title, html body .chapter-title-text 
 html body h1 { font-weight: 700; }
 html body h2, html body h3 { font-weight: 600; }
 
-html body a { color: var(--dym-red); }
-html body a:hover { color: #ff5a64; }
+html body a { color: var(--dym-link); }
+html body a:hover { color: var(--dym-link-hover); }
 
 /* Top bar and wordmark */
 html body > header:not(.site-brand), html body header:first-of-type:not(.site-brand):not(.detail-header):not(.hole-detail-header):not(.character-header):not(.movie-header) {
@@ -83,7 +87,7 @@ html body > nav a, html body nav:not(.navigation) a, html body .nav-link {
   font-size: .95rem;
   text-decoration: none;
 }
-html body > nav a:hover, html body nav:not(.navigation) a:hover, html body .nav-link:hover { color: var(--dym-red); }
+html body > nav a:hover, html body nav:not(.navigation) a:hover, html body .nav-link:hover { color: var(--dym-link); }
 
 /* Section headings get a short red underline, not a full-width rule */
 html body .section-title {
@@ -157,7 +161,7 @@ html body input, html body select {
 
 /* Back link */
 html body .back-link { color: var(--dym-muted); }
-html body .back-link:hover { color: var(--dym-red); }
+html body .back-link:hover { color: var(--dym-link); }
 
 /* Footer */
 html body footer {
@@ -183,7 +187,7 @@ html body .movie-card > div[style] {
 }
 html body .movie-card-content { background: var(--dym-surface); }
 html body .movie-card h3, html body .movie-card-content h3 { color: var(--dym-text); }
-html body .movie-card .details-count { color: var(--dym-red); }
+html body .movie-card .details-count { color: var(--dym-link); }
 
 /* Panels that pages set to white or light gray */
 html body .article-container, html body .article-item, html body .next-article,
@@ -200,7 +204,7 @@ html body .foreshadow, html body .fulfillment, html body .container > div:not([c
 }
 html body .statistics div, html body .map-panel-right div:not([class*="badge"]) { background-color: var(--dym-surface-2); }
 html body .next-article { border-left: 4px solid var(--dym-red); }
-html body .next-article .label { color: var(--dym-red); }
+html body .next-article .label { color: var(--dym-link); }
 html body .timestamp { background: var(--dym-surface-2); color: var(--dym-muted); }
 
 /* Text the pages set dark */
@@ -214,8 +218,8 @@ html body .clear-filters-btn, html body .read-more, html body .details-count {
   color: var(--dym-text);
 }
 html body .hole-tagline, html body .scene-where, html body .character-actor { color: var(--dym-muted); }
-html body .read-more, html body .source-link, html body .stat-number, html body .details-count { color: var(--dym-red); }
-html body .pen-name { color: var(--dym-red); }
+html body .read-more, html body .source-link, html body .stat-number, html body .details-count { color: var(--dym-link); }
+html body .pen-name { color: var(--dym-link); }
 
 /* Feature pages set heading and label colors with stronger selectors */
 html body h1, html body h2, html body h3, html body h4, html body label,
@@ -230,7 +234,7 @@ html body .scene-card .format-badge, html body .callback-card .callback-type,
 html body .callback-card .tag, html body .hole-card .char-tag { color: var(--dym-text) !important; }
 html body .character-role, html body .difficulty-badge { color: #fff !important; background: var(--dym-red-dark) !important; }
 html body .format-badge, html body .char-tag, html body .tag, html body .arc-stage { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line); }
-html body .read-more, html body .source-link, html body .stat-number, html body .pen-name { color: var(--dym-red) !important; }
+html body .read-more, html body .source-link, html body .stat-number, html body .pen-name { color: var(--dym-link) !important; }
 html body footer p, html body footer { color: var(--dym-muted) !important; }
 html body .article-card p, html body .timestamp, html body .hole-tagline, html body .scene-where { color: var(--dym-muted) !important; }
 html body .map-container button, html body .zoom-controls button, html body [class*="zoom"] button { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line) !important; }
@@ -259,9 +263,9 @@ html body div.character-role, html body span.difficulty-badge { color: #fff !imp
 html body header.page-header, html body header.page-header * { color: #fff !important; }
 html body header.page-header p { color: #b9b9c2 !important; }
 html body footer .disclaimer { background: transparent !important; }
-html body .navigation .nav-link { color: var(--dym-red) !important; }
+html body .navigation .nav-link { color: var(--dym-link) !important; }
 html body .chapter-title-level { color: var(--dym-muted) !important; }
-html body .expand-icon { color: var(--dym-red) !important; }
+html body .expand-icon { color: var(--dym-link) !important; }
 
 /* Newest-movie promo banner (home). Abstract art only: no characters, logos, posters or emblems. */
 html body .promo-banner { position: relative; overflow: hidden; color: #fff; background: linear-gradient(115deg, #7a0f18 0%, var(--dym-red-dark) 30%, #2a0b10 62%, #0b0f24 100%); min-height: 340px; display: flex; align-items: center; border-bottom: 4px solid var(--dym-red); }
@@ -272,7 +276,7 @@ html body .promo-art { position: absolute; inset: 0; pointer-events: none;
     radial-gradient(circle at 82% 30%, rgba(224,48,60,.45), transparent 45%); }
 @media (max-width: 600px) { html body .promo-art { background-size: 100% 45%, auto, auto; } }
 html body .promo-inner { position: relative; width: 100%; max-width: 1600px; margin: 0 auto; padding: 3rem 2rem; }
-html body .promo-kicker { display: inline-block; background: var(--dym-red); color: #fff !important; font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; padding: .3rem .7rem; margin-bottom: 1rem; }
+html body .promo-kicker { display: inline-block; background: var(--dym-red-dark); color: #fff !important; font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .875rem; padding: .3rem .7rem; margin-bottom: 1rem; }
 html body .promo-title { font-family: var(--dym-head); font-weight: 800; text-transform: uppercase; color: #fff !important; font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: .95; letter-spacing: .01em; margin: 0 0 1rem; max-width: 14ch; text-shadow: 0 2px 18px rgba(0,0,0,.45); }
 html body .promo-sub { color: #f1f1f4 !important; font-size: 1.15rem; max-width: 46ch; margin: 0 0 1.6rem; }
 html body .promo-cta { display: inline-block; background: #fff; color: #111 !important; font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: .85rem 1.6rem; text-decoration: none; border: 2px solid #fff; }
@@ -283,52 +287,97 @@ html body .promo-cta:hover, html body .promo-cta:focus { background: transparent
   html body .promo-sub { font-size: 1rem; }
 }
 
-/* Site menu: big comic-panel buttons. Every page carries the same
-   <nav class="site-nav"> block (written by tools/menu.mjs).
-   "html body" outranks the plain "nav a" rules still inline on older pages.
-   Original design; no studio logos, fonts or trade dress. */
+/* Header (written into every page by tools/menu.mjs): a slim sticky bar
+   (logo and name left, search in the middle, member chip right), then the
+   menu as one row of comic buttons. About 125px tall on a desktop, the bar
+   alone (never more than 64px) stays when you scroll. Original design; no
+   studio logos, fonts or trade dress. */
+html body header.site-bar {
+  position: sticky; top: 0; z-index: 60;
+  display: flex; align-items: center; gap: 1rem;
+  min-height: 60px; margin: 0; padding: .4rem 1rem; box-sizing: border-box;
+  background-color: #d7261e;
+  background-image: radial-gradient(rgba(0, 0, 0, .22) 1.6px, transparent 1.7px);
+  background-size: 12px 12px;
+  border-bottom: 4px solid #000;
+  text-align: left;
+}
+html body .site-brand-title { margin: 0; font-size: inherit; line-height: 1; flex: none; }
+html body .site-brand-link {
+  display: inline-flex; align-items: center; gap: .55rem; color: inherit; text-decoration: none;
+  transition: transform .15s ease;
+}
+html body .site-brand-link:hover, html body .site-brand-link:focus-visible { transform: scale(1.04); }
+html body .site-brand-link:focus-visible { outline: 3px solid #ffd60a; outline-offset: 4px; }
+html body .site-brand-icon { flex: none; width: 2.6rem; height: auto; filter: drop-shadow(2px 2px 0 #000); }
+html body .site-brand-name {
+  display: block; font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: 2rem; font-weight: 400;
+  letter-spacing: .04em; line-height: 1; white-space: nowrap; text-transform: uppercase;
+  color: #ffd60a; -webkit-text-stroke: 1.5px #000; paint-order: stroke fill; text-shadow: 3px 3px 0 #000;
+}
+html body .site-brand-name em { font-style: normal; color: #fff; }
+
+/* Search */
+html body .site-search { position: relative; flex: 1 1 auto; max-width: 560px; margin: 0 auto; }
+html body .site-search[hidden], html body .site-search-toggle[hidden] { display: none; }
+html body .site-search-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+html body input.site-search-input {
+  display: block; width: 100%; box-sizing: border-box; min-height: 2.75rem; margin: 0; padding: .45rem .9rem;
+  background: #fff !important; color: #111 !important; border: 3px solid #000 !important; border-radius: 6px; box-shadow: 3px 3px 0 #000;
+  font: 600 1rem/1.2 var(--dym-body);
+}
+html body input.site-search-input::placeholder { color: #4a4a55; opacity: 1; }
+html body input.site-search-input:focus-visible { outline: 3px solid #ffd60a; outline-offset: 2px; }
+html body .site-results {
+  position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 70; margin: 0; padding: .3rem; list-style: none;
+  background: #fff; color: #111; border: 3px solid #000; border-radius: 6px; box-shadow: 5px 5px 0 #000; max-height: 70vh; overflow-y: auto;
+}
+html body .site-results[hidden] { display: none; }
+html body .site-results li { margin: 0; padding: 0; color: #111 !important; }
+html body .site-results a {
+  display: flex; align-items: baseline; gap: .6rem; padding: .5rem .6rem; color: #111 !important; text-decoration: none; border-radius: 4px;
+  font-size: 1rem; line-height: 1.25;
+}
+html body .site-results li[aria-selected="true"] a, html body .site-results a:hover { background: #ffd60a; }
+html body .site-result-kind {
+  flex: none; min-width: 6.2rem; font: 700 .875rem/1.2 var(--dym-head); letter-spacing: .08em; text-transform: uppercase; color: #8e1620;
+}
+html body .site-result-title { font-weight: 600; color: #111; }
+html body .site-result-none { padding: .6rem; font-size: 1rem; color: #111 !important; }
+html body .site-search-toggle {
+  flex: none; display: none; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; margin: 0 0 0 auto; padding: 0;
+  background: #fff; color: #111; border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 #000; cursor: pointer;
+}
+html body .site-search-toggle svg { width: 1.4rem; height: 1.4rem; }
+html body .site-search-toggle:focus-visible { outline: 3px solid #ffd60a; outline-offset: 2px; }
+
+/* Member chip: found counter and rank. White on near-black, yellow numbers. */
+html body .site-member {
+  flex: none; display: inline-flex; align-items: center; min-height: 2.75rem; box-sizing: border-box; padding: .3rem .8rem;
+  background: #111; color: #fff !important; border: 3px solid #000; outline: 2px solid #ffd60a; outline-offset: -5px; border-radius: 6px; box-shadow: 3px 3px 0 #000;
+  font: 600 1rem/1.15 var(--dym-body); text-decoration: none; white-space: nowrap;
+}
+html body .site-member b { color: #ffd60a; font-weight: 800; }
+html body .site-member:hover { background: #000; }
+html body .site-member:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+html body .site-member-text { color: #fff; }
+html body .site-member-slash { display: none; }
+
+/* The menu: one row of comic buttons. */
 html body nav.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.9rem 1rem;
-  margin: 0;
-  padding: 1.25rem 1rem 1.5rem;
-  background-color: #14141f;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.6px);
-  background-size: 14px 14px;
-  border-bottom: 5px solid #000;
-  text-align: center;
+  display: flex; flex-wrap: nowrap; gap: .5rem; margin: 0; padding: .6rem 12px .75rem; box-sizing: border-box;
+  background-color: #14141f; background-image: radial-gradient(rgba(255, 255, 255, .09) 1.5px, transparent 1.6px); background-size: 14px 14px;
+  border-bottom: 5px solid #000; text-align: center;
 }
-
 html body nav.site-nav a {
-  --hero: #c62828;
-  --hero-ink: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3.25rem;
-  margin: 0;
-  padding: 0.55rem 1.3rem 0.45rem;
-  background: var(--hero);
-  color: var(--hero-ink);
-  border: 3px solid #000;
-  border-radius: 6px;
-  box-shadow: 5px 5px 0 #000;
-  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
-  font-size: 1.45rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 0 #000;
-  transform: rotate(-1.5deg);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  --hero: #c62828; --hero-ink: #fff;
+  flex: 1 1 0; display: inline-flex; align-items: center; justify-content: center; min-width: 0; min-height: 2.6rem; margin: 0; padding: .35rem .25rem .25rem;
+  text-align: center; background: var(--hero); color: var(--hero-ink);
+  border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: clamp(.95rem, 1.15vw, 1.35rem); font-weight: 400;
+  letter-spacing: .03em; line-height: 1; text-decoration: none; text-transform: uppercase; text-shadow: 2px 2px 0 #000;
+  transition: transform .12s ease, box-shadow .12s ease;
 }
-
-/* Each button gets its own hero color; the tilt alternates like panels. */
-html body nav.site-nav a:nth-child(2n) { transform: rotate(1.5deg); }
 html body nav.site-nav a:nth-child(9n+2) { --hero: #1e66d0; }
 html body nav.site-nav a:nth-child(9n+3) { --hero: #217a35; }
 html body nav.site-nav a:nth-child(9n+4) { --hero: #7b3fc4; }
@@ -337,137 +386,54 @@ html body nav.site-nav a:nth-child(9n+6) { --hero: #0b7783; }
 html body nav.site-nav a:nth-child(9n+7) { --hero: #c2185b; }
 html body nav.site-nav a:nth-child(9n+8) { --hero: #3f51b5; }
 html body nav.site-nav a:nth-child(9n+9) { --hero: #5d6b7a; }
-
-html body nav.site-nav a:hover,
-html body nav.site-nav a:focus-visible {
-  color: var(--hero-ink);
-  transform: translate(-3px, -3px) rotate(0deg) scale(1.06);
-  box-shadow: 9px 9px 0 #000;
-}
-
-html body nav.site-nav a:active {
-  transform: translate(3px, 3px) rotate(0deg);
-  box-shadow: 1px 1px 0 #000;
-}
-
-html body nav.site-nav a:focus-visible {
-  outline: 3px solid #ffd60a;
-  outline-offset: 4px;
-}
-
+html body nav.site-nav a:hover, html body nav.site-nav a:focus-visible { color: var(--hero-ink); transform: translate(-2px, -2px); box-shadow: 5px 5px 0 #000; }
+html body nav.site-nav a:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #000; }
+html body nav.site-nav a:focus-visible { outline: 3px solid #ffd60a; outline-offset: 3px; }
 /* The page you're on: yellow, like the "POW!" panel. */
-html body nav.site-nav a[aria-current] {
-  --hero: #ffd60a;
-  --hero-ink: #111;
-  text-shadow: none;
-}
+html body nav.site-nav a[aria-current] { --hero: #ffd60a; --hero-ink: #111; text-shadow: none; }
 
+/* Under 1000px the menu is an even grid with no orphan: 5 columns, then
+   2 columns on phones. The bar loses the search box (a button opens it). */
+@media (max-width: 999px) {
+  html body nav.site-nav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .5rem; }
+  html body nav.site-nav a { font-size: clamp(1rem, 2.1vw, 1.25rem); }
+}
+@media (max-width: 800px) {
+  html body .site-brand-name { font-size: 1.6rem; }
+  html body .site-search-toggle { display: inline-flex; }
+  html body .site-search { display: none; }
+  html body header.site-bar.search-open .site-search {
+    display: block; position: absolute; left: 0; right: 0; top: 100%; max-width: none; margin: 0; padding: .5rem 1rem .6rem;
+    background: #d7261e; border-bottom: 4px solid #000;
+  }
+  html body header.site-bar.search-open .site-results { left: 1rem; right: 1rem; top: calc(100% - .1rem); }
+}
 @media (max-width: 640px) {
-  html body nav.site-nav {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.6rem;
-    padding: 0.9rem 16px 1.1rem;
-  }
-
-  html body nav.site-nav a {
-    min-height: 3.1rem;
-    font-size: 1.1rem;
-    padding: 0.4rem 0.3rem 0.3rem;
-    text-align: center;
-    overflow-wrap: anywhere;
-    box-shadow: 4px 4px 0 #000;
-  }
+  html body header.site-bar { gap: .5rem; padding: .35rem .6rem; min-height: 52px; }
+  html body .site-brand-icon { width: 2.1rem; }
+  html body .site-brand-name { font-size: 1.35rem; -webkit-text-stroke-width: 1px; text-shadow: 2px 2px 0 #000; }
+  html body .site-member { padding: .25rem .55rem; font-size: .9375rem; min-height: 2.5rem; }
+  html body .site-member-rank, html body .site-member-word { display: none; }
+  html body .site-member-slash { display: inline; }
+  html body .site-search-toggle { width: 2.5rem; height: 2.5rem; }
+  html body nav.site-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; padding: .4rem 10px .5rem; }
+  html body nav.site-nav a { min-height: 2.05rem; padding: .2rem .2rem .1rem; font-size: 1.05rem; border-width: 2px; box-shadow: 2px 2px 0 #000; }
 }
-
+@media (max-width: 420px) {
+  html body .site-brand-icon { display: none; }
+  html body .site-brand-name { font-size: 1.3rem; }
+}
 @media (prefers-reduced-motion: reduce) {
-  html body nav.site-nav a { transition: none; }
+  html body nav.site-nav a, html body .site-brand-link { transition: none; }
+}
+@media (prefers-color-scheme: dark) {
+  html body .site-results { background: #f2f2f3; }
 }
 
-/* Brand layer: the "Details You Missed" banner on every page plus comic
+
+/* Brand layer: the "MCU Easter Eggs" banner on every page plus comic
    touches on headings, cards, back buttons and the footer, so the brand
    shows up everywhere, theme-park style. Original artwork only. */
-html body header.site-brand {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 1.6rem 1rem 1.4rem;
-  text-align: center;
-  color: #fff;
-  background-color: #d7261e;
-  background-image:
-    radial-gradient(rgba(0, 0, 0, 0.22) 1.6px, transparent 1.7px),
-    repeating-conic-gradient(from 0deg at 50% 60%, #e8361f 0deg 9deg, #f2701c 9deg 18deg);
-  background-size: 12px 12px, 100% 100%;
-  border-bottom: 5px solid #000;
-}
-
-html body .site-brand-title {
-  margin: 0;
-  font-size: inherit;
-  line-height: 1;
-}
-
-html body .site-brand-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: inherit;
-  text-decoration: none;
-  transform: rotate(-2deg);
-  transition: transform 0.15s ease;
-}
-
-html body .site-brand-link:hover,
-html body .site-brand-link:focus-visible {
-  transform: rotate(0deg) scale(1.04);
-}
-
-html body .site-brand-link:focus-visible {
-  outline: 3px solid #ffd60a;
-  outline-offset: 6px;
-}
-
-html body .site-brand-icon {
-  flex: none;
-  width: clamp(3.2rem, 9vw, 5.5rem);
-  height: auto;
-  filter: drop-shadow(4px 4px 0 #000);
-}
-
-html body .site-brand-name {
-  display: block;
-  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
-  font-size: clamp(2.6rem, 8.5vw, 5.4rem);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 0.92;
-  text-align: left;
-  text-transform: uppercase;
-  color: #ffd60a;
-  -webkit-text-stroke: 2px #000;
-  paint-order: stroke fill;
-  text-shadow: 5px 5px 0 #000;
-}
-
-html body .site-brand-name em {
-  font-style: normal;
-  color: #fff;
-}
-
-html body .site-brand-tag {
-  display: inline-block;
-  margin: 1rem 0 0;
-  padding: 0.35rem 1rem 0.25rem;
-  background: #000;
-  color: #fff !important;
-  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
-  font-size: clamp(1rem, 2.6vw, 1.35rem);
-  letter-spacing: 0.08em;
-  opacity: 1;
-  transform: skew(-8deg);
-}
-
 /* Headings everywhere speak in the same comic lettering. */
 html body h1,
 html body h2 {
@@ -549,13 +515,13 @@ html body > footer {
 html body .trailer-block { margin: 2rem auto; max-width: 960px; }
 html body .trailer-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border: 3px solid #000; box-shadow: 6px 6px 0 #000; border-radius: 6px; overflow: hidden; }
 html body .trailer-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-html body .trailer-credit { font-size: .85rem; color: var(--dym-muted); margin-top: .75rem; }
+html body .trailer-credit { font-size: .875rem; color: var(--dym-muted); margin-top: .75rem; }
 @media (prefers-color-scheme: dark) { html body .trailer-frame { border-color: #fff; box-shadow: 6px 6px 0 var(--dym-red); } }
 
 /* Actor photos on character pages (free-license photos from Wikimedia Commons, credited) */
 html body .actor-photo { float: right; width: 220px; margin: 0 0 1rem 1.5rem; }
 html body .actor-photo img { display: block; width: 100%; height: auto; border: 3px solid #000; box-shadow: 6px 6px 0 #000; border-radius: 6px; background: #fff; transform: rotate(1.5deg); }
-html body .actor-photo figcaption { font-size: .75rem; line-height: 1.35; color: var(--dym-muted); margin-top: .75rem; }
+html body .actor-photo figcaption { font-size: .875rem; line-height: 1.35; color: var(--dym-muted); margin-top: .75rem; }
 html body .character-header::after { content: ""; display: block; clear: both; }
 @media (max-width: 640px) { html body .actor-photo { float: none; width: 180px; margin: 1rem auto; } }
 @media (prefers-color-scheme: dark) { html body .actor-photo img { border-color: #fff; box-shadow: 6px 6px 0 var(--dym-red); } }
@@ -581,7 +547,7 @@ html body .character-modal-content .modal-header {
 }
 html body .character-modal-content .modal-header::before {
   content: "IDENTITY FILE"; position: absolute; top: .6rem; left: 2rem;
-  font: 600 .7rem/1 var(--dym-head); letter-spacing: .3em; color: #ffb347;
+  font: 600 .875rem/1 var(--dym-head); letter-spacing: .3em; color: #ffb347;
 }
 html body .character-modal-content h2 {
   font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
@@ -611,7 +577,7 @@ html body .character-modal-content .stat-value {
 }
 html body .character-modal-content .modal-stats-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 html body .character-modal-content .modal-stat .stat-value { font-size: 1.35rem; line-height: 1.25; overflow-wrap: anywhere; }
-html body .character-modal-content .stat-note { display: block; margin-top: .5rem; font-size: .85rem; line-height: 1.4; color: #cfeefb; }
+html body .character-modal-content .stat-note { display: block; margin-top: .5rem; font-size: .875rem; line-height: 1.4; color: #cfeefb; }
 html body .character-modal-content .modal-fact-list li { border-bottom-color: rgba(76,201,255,.18); }
 html body .character-modal-content .similar-arc-item {
   background: rgba(76,201,255,.06); border-left: 3px solid rgba(76,201,255,.5); border-radius: 2px;
@@ -755,7 +721,7 @@ html body .character-modal-content .arc-stage:last-child {
 }
 
 html body .character-modal-content .modal-stat { position: relative; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); }
-html body .character-modal-content .stat-label { font-size: .78rem; overflow-wrap: anywhere; }
+html body .character-modal-content .stat-label { font-size: .875rem; overflow-wrap: anywhere; }
 
 html body .character-modal-content .similar-arc-item {
   display: flex; flex-direction: column; align-items: stretch; gap: .4rem; width: 100%;
@@ -771,12 +737,12 @@ html body .character-modal-content .similar-arc-item:focus-visible {
 }
 html body .character-modal-content .similar-arc-item:focus-visible { outline: 2px solid #ffb347; outline-offset: 2px; }
 html body .character-modal-content .similar-name { margin: 0; font: 700 1.1rem/1.1 var(--dym-head); letter-spacing: .06em; text-transform: uppercase; }
-html body .character-modal-content .similar-match { display: flex; align-items: center; gap: .5rem; margin: 0; font-size: .8rem; color: #9fd8ee !important; }
+html body .character-modal-content .similar-match { display: flex; align-items: center; gap: .5rem; margin: 0; font-size: .875rem; color: #9fd8ee !important; }
 html body .character-modal-content .similarity-bar { flex: 1; }
 html body .character-modal-content .similar-thesis { margin: 0; font-size: .88rem; line-height: 1.4; font-style: normal; color: #cfe9f5 !important; }
 html body .character-modal-content .similar-open {
   align-self: flex-start; margin-top: .2rem; padding: .25rem .6rem;
-  font: 700 .78rem/1 var(--dym-head); letter-spacing: .14em; text-transform: uppercase;
+  font: 700 .875rem/1 var(--dym-head); letter-spacing: .14em; text-transform: uppercase;
   color: #071726; background: #ffb347; border-radius: 2px;
 }
 
@@ -787,7 +753,7 @@ html body .character-modal-close {
 
 @media (max-width: 640px) {
   html body .character-modal-content .arc-stages { grid-template-columns: 1fr 1fr; }
-  html body .character-modal-content .arc-stage { font-size: .85rem; }
+  html body .character-modal-content .arc-stage { font-size: .875rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html body .character-modal-content .similar-arc-item { transition: none; }
@@ -886,7 +852,7 @@ html body div.vis-tooltip {
 }
 html body .map-tip-title { display: block; margin-bottom: .25rem; color: #9be6ff !important; font: 700 1.05rem/1.1 var(--dym-head); letter-spacing: .06em; text-transform: uppercase; }
 html body .map-tip-text { margin: 0 0 .35rem; color: #d8f3ff !important; }
-html body .map-tip-meta { margin: 0; color: #ffb347 !important; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+html body .map-tip-meta { margin: 0; color: #ffb347 !important; font-size: .875rem; letter-spacing: .08em; text-transform: uppercase; }
 
 @media (max-width: 768px) {
   html body .map-overlay { inset: 0; border-radius: 0; border-width: 0; }
@@ -954,24 +920,6 @@ html body .dym-reveal span {
   font-family: var(--dym-body); font-size: .9rem; font-weight: 600; letter-spacing: 0; text-transform: none; line-height: 1.3; text-align: center;
 }
 
-/* Rank chip on the My Marvel menu button */
-html body nav.site-nav a .dym-rank-chip {
-  display: block; margin-left: .45rem; padding: .2rem .4rem .1rem; background: #fff; color: #111 !important; border: 2px solid #000; border-radius: 3px;
-  font-family: var(--dym-head); font-size: .7rem; font-weight: 700; letter-spacing: .06em; line-height: 1.1; text-shadow: none; white-space: nowrap;
-}
-@media (max-width: 640px) {
-  html body nav.site-nav a:has(.dym-rank-chip) { flex-direction: column; gap: .2rem; }
-  html body nav.site-nav a .dym-rank-chip { margin-left: 0; font-size: .62rem; }
-}
-
-/* Home page line */
-html body .dym-found-line { margin: 0 0 1.5rem; }
-html body .dym-found-line a {
-  display: inline-block; padding: .4rem .8rem .3rem; background: #ffd60a; color: #111 !important; border: 3px solid #000; box-shadow: 3px 3px 0 #000;
-  font-weight: 500; text-decoration: none;
-}
-html body .dym-found-line a:hover { background: #ffe55c; }
-
 /* Promotion toast */
 html body .dym-toast {
   position: fixed; left: 50%; bottom: 16px; z-index: 1000; width: min(420px, calc(100% - 32px)); transform: translateX(-50%);
@@ -988,8 +936,38 @@ html body .dym-toast .dym-toast-close { position: absolute; top: .3rem; right: .
 }
 @media (prefers-reduced-motion: reduce) { html body .dym-btn { transition: none; } }
 
+/* Readability pass (Doug, 2026-10-06). Rules of thumb, checked by
+   test/contrast.test.mjs: text on its own background is 4.5:1 or better
+   (3:1 for large text), red used as text is --dym-link, never --dym-red, and
+   body text is never under 14px. */
+/* Yellow comic boxes always hold near-black ink, in light and dark mode
+   (the dark-mode text rules above would otherwise turn it white on yellow). */
+html body :is(.dir-cta, .dym-toast, .acct-note, .dym-panel > h2, .section-title, .back-button, .map-back, .comic-panel > h2, div.detail-item h3, .detail-section > h2, .detail-section > h3) :is(p, strong, span, li, a, em, b),
+html body .dym-toast, html body .acct-note { color: #111 !important; }
+/* The footer is always dark: everything in it is light ink. */
+html body footer :is(p, li, span, small, em) { color: #c9c9d4 !important; }
+html body footer :is(strong, b) { color: #ffd60a !important; }
+html body footer a { color: #fff !important; }
+html body footer .site-footer-credit a { color: #ffd60a !important; }
+html body footer .disclaimer { background: transparent !important; border: 0 !important; box-shadow: none !important; transform: none; padding: 0 !important; }
+html body footer .disclaimer, html body footer .disclaimer * { color: #c9c9d4 !important; }
+html body footer .disclaimer a { color: #fff !important; text-decoration: underline; }
+/* Buttons and badges that sat dark text on crimson */
+html body a.btn-explore, html body .btn-explore { background: var(--dym-red-dark) !important; color: #fff !important; }
+html body .promo-kicker, html body .character-role, html body .difficulty-badge { background: var(--dym-red-dark) !important; color: #fff !important; }
+/* Small labels: 14px at least */
+html body :is(.dir-badge-full, .dir-badge-tag, .type-badge, .format-badge, .char-tag, .tag, .timestamp, .difficulty-badge, .character-role, .dym-kind, .dym-year, .dym-small, .dym-need, .stat-label, .trailer-credit, .actor-photo figcaption, small) { font-size: max(.875rem, 14px); }
+html body .dym-ladder .dym-why, html body .dym-sync-status { font-size: .9375rem; }
+html body :is(.meta, .article-meta, .meta-label, .detail-item strong, .detail-item span, .callback-type, .milestone-year, .arc-stage, .expand-icon, .dir-count, .related-hole-tagline, .ad-label, .disclaimer, .disclaimer a, footer .site-legal, .character-meta, .hole-detail-meta, .detail-item .detail-label, .meta strong, .detail-item > strong, .detail-item strong, .scene-details .detail-item, .characters strong, .articles strong, .milestone-info strong, .milestone-info span) { font-size: .875rem !important; }
+html body ::placeholder { color: var(--dym-muted); opacity: 1; }
+/* The Universe Map's side panel is dark glass in both modes */
+html body #node-details :is(h2, h3, h4, label, strong, span, li, p, div:not(.node-type)) { color: #cfe9f5; }
+html body .map-panel-right :is(h2, h3, h4) { color: #9be6ff !important; }
+html body .sidebar-section :is(p, strong, li, span, label) { color: #cfe9f5 !important; }
+html body .sidebar-section :is(h2, h3, h4) { color: #9be6ff !important; }
+
 /* Footer privacy link */
-html body footer .site-legal { margin: .4rem 0 0; font-size: .85rem; }
+html body footer .site-legal { margin: .4rem 0 0; font-size: .875rem; }
 
 /* Footer project links and Web Design Nerd credit */
 html body .site-footer-links {
@@ -1017,7 +995,7 @@ html body .site-footer-projects a:hover {
 }
 html body .site-footer-credit {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: .875rem;
   font-weight: 500;
 }
 html body .site-footer-credit a {
@@ -1045,8 +1023,8 @@ html body .dym-panel > h2 {
 }
 html body .dym-panel > h2::after { display: none; }
 html body .dym-panel p { margin: 0 0 .6rem; }
-html body .dym-kicker { color: var(--dym-muted); font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: .85rem; }
-html body .dym-rank-title { font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1; letter-spacing: .04em; color: var(--dym-red); margin: .1rem 0 .4rem !important; }
+html body .dym-kicker { color: var(--dym-muted); font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: .875rem; }
+html body .dym-rank-title { font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1; letter-spacing: .04em; color: var(--dym-link); margin: .1rem 0 .4rem !important; }
 html body .dym-rank-reason { font-size: .98rem; }
 html body .dym-bar { height: 16px; margin: .8rem 0 .4rem; background: var(--dym-surface-2); border: 3px solid #000; border-radius: 3px; overflow: hidden; }
 html body .dym-bar span { display: block; height: 100%; background: repeating-linear-gradient(-45deg, var(--dym-red) 0 8px, var(--dym-red-dark) 8px 16px); }
@@ -1057,17 +1035,17 @@ html body .dym-list li, html body .dym-movie-list li { display: flex; flex-wrap:
 html body .dym-list li:last-child, html body .dym-movie-list li:last-child { border-bottom: 0; }
 html body .dym-list li > a, html body .dym-movie-list li > a { font-weight: 600; }
 html body .dym-list .dym-btn, html body .dym-movie-list .dym-btn { margin-left: auto; }
-html body .dym-kind { padding: .1rem .4rem; background: var(--dym-surface-2); border: 1px solid var(--dym-line); border-radius: 3px; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--dym-muted); }
+html body .dym-kind { padding: .1rem .4rem; background: var(--dym-surface-2); border: 1px solid var(--dym-line); border-radius: 3px; font-size: .875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--dym-muted); }
 html body .dym-year, html body .dym-small, html body .dym-need { color: var(--dym-muted); font-size: .88rem; }
-html body .dym-star { color: var(--dym-red); }
+html body .dym-star { color: var(--dym-link); }
 html body .dym-empty, html body .dym-soon { color: var(--dym-muted); }
 html body .dym-explain { margin-top: .8rem; }
-html body .dym-explain summary { cursor: pointer; font-weight: 600; color: var(--dym-red); padding: .3rem 0; }
+html body .dym-explain summary { cursor: pointer; font-weight: 600; color: var(--dym-link); padding: .3rem 0; }
 html body .dym-explain[open] summary { margin-bottom: .4rem; }
 html body .dym-ladder { margin: .6rem 0 .8rem; padding-left: 1.4rem; }
 html body .dym-ladder li { margin: 0 0 .55rem; }
 html body .dym-ladder .dym-why { display: block; font-size: .88rem; color: var(--dym-muted); }
-html body .dym-ladder .dym-here strong { color: var(--dym-red); }
+html body .dym-ladder .dym-here strong { color: var(--dym-link); }
 html body .dym-ladder .dym-here strong::after { content: "  ← you"; font-weight: 600; }
 html body .dym-confirm { margin-top: .8rem; padding: .8rem; border: 3px dashed var(--dym-red); }
 html body .dym-confirm .dym-btn { margin: .3rem .5rem 0 0; }
@@ -1076,10 +1054,9 @@ html body .dym-done-note { font-weight: 700; }
 @media (prefers-color-scheme: dark) {
   html body .dym-panel { background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1.3px); border-color: #f2f2f2; box-shadow: 7px 7px 0 var(--dym-red); }
   html body .dym-bar { border-color: #f2f2f2; }
-  html body .dym-rank-title, html body .dym-ladder .dym-here strong, html body .dym-explain summary, html body .dym-star { color: #ff6b74; }
-}
+  }
 html body .character-favorite-btn { color: var(--dym-muted); }
-html body .character-favorite-btn.favorited { color: var(--dym-red); }
+html body .character-favorite-btn.favorited { color: var(--dym-link); }
 /* The shared sign-in panel (public/js/account.js) inside My Marvel */
 html body .dym-account .muted { color: var(--dym-muted); }
 html body .dym-account .acct-age { display: flex; gap: .6rem; align-items: center; font-weight: 600; margin: .8rem 0; cursor: pointer; }
@@ -1094,19 +1071,25 @@ html body .dym-account .acct-btn.x { background: #000; color: #fff !important; }
 html body .dym-account .acct-btn.quiet { background: #fff; color: #111 !important; max-width: 400px; }
 html body .dym-account .acct-google { min-height: 44px; display: flex; justify-content: flex-start; }
 html body .dym-account .acct-note { background: #ffd60a; color: #111; border: 3px solid #000; padding: .6rem .8rem; }
-html body .dym-account details summary { cursor: pointer; margin-top: .8rem; color: var(--dym-red); font-weight: 600; }
+html body .dym-account details summary { cursor: pointer; margin-top: .8rem; color: var(--dym-link); font-weight: 600; }
 html body .dym-sync-status { color: var(--dym-muted); font-size: .9rem; }
 @media (prefers-color-scheme: dark) {
   html body .dym-account .acct-btn { border-color: #f2f2f2; box-shadow: 3px 3px 0 var(--dym-red); }
-  html body .dym-account details summary { color: #ff6b74; }
 }
 
 /* Real-world photos on movie pages (free-license, credited) and the Credits page */
 html body .place-photo { margin: 1.5rem auto; max-width: 720px; }
 html body .place-photo img { display: block; width: 100%; height: auto; border: 3px solid #000; box-shadow: 6px 6px 0 #000; border-radius: 6px; background: #fff; }
-html body .place-photo figcaption { font-size: .85rem; line-height: 1.45; color: var(--dym-muted); margin-top: .75rem; }
+html body .place-photo figcaption { font-size: .875rem; line-height: 1.45; color: var(--dym-muted); margin-top: .75rem; }
 html body .place-photo figcaption strong { color: inherit; }
 @media (prefers-color-scheme: dark) { html body .place-photo img { border-color: #fff; box-shadow: 6px 6px 0 var(--dym-red); } }
 html body .credits-list { list-style: none; padding: 0; margin: 1rem 0 2rem; display: grid; gap: .75rem; }
 html body .credits-list li { background: #fff; border-left: 4px solid var(--dym-red, #e0303c); border-radius: 6px; padding: .75rem 1rem; overflow-wrap: anywhere; }
 @media (prefers-color-scheme: dark) { html body .credits-list li { background: #1c1c1c; } }
+
+/* Small credited portraits in the MCU character list */
+html body .dir-photo { float: right; width: 140px; margin: 0 0 .5rem .75rem; }
+html body .dir-photo img { display: block; width: 100%; height: auto; border: 2px solid #000; border-radius: 4px; background: #fff; }
+html body .dir-photo figcaption { font-size: .875rem; line-height: 1.3; color: var(--dym-muted); margin-top: .25rem; overflow-wrap: anywhere; }
+html body .dir-item::after { content: ""; display: block; clear: both; }
+@media (prefers-color-scheme: dark) { html body .dir-photo img { border-color: #fff; } }

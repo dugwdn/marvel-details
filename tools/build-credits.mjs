@@ -21,7 +21,7 @@ const html = `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <title>Photo and Video Credits | Details You Missed</title>
+    <title>Photo and Video Credits | MCU Easter Eggs</title>
     <meta name="description" content="Who took each photo on the site, the license it is under, and where each trailer comes from.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,7 +40,7 @@ const html = `<!DOCTYPE html>
     <main class="container">
         <div class="content">
             <h1>Photo and Video Credits</h1>
-            <p>We never use studio posters, film stills or character art. Photos here are free-license pictures from Wikimedia Commons, credited to the people who took them. Trailers are official uploads, played with YouTube's own player.</p>
+            <p>We never use studio posters, film stills or character art. Photos here are free-license pictures from Wikimedia Commons, credited to the people who took them. Trailers are YouTube videos from official Marvel and Sony channels or licensed trailer channels, played with YouTube's own player. We never host video.</p>
             <h2>Photos (${data.images.length})</h2>
             <ul class="credits-list">
             ${imgs}

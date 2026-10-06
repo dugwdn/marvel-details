@@ -243,14 +243,117 @@
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unisphere-2_(27835155267).jpg"
+  },
+  {
+   "page": "/characters/all",
+   "file": "/img/actors/dir/james-bucky-barnes.jpg",
+   "width": 200,
+   "height": 267,
+   "subject": "Sebastian Stan",
+   "character": "james-bucky-barnes",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sebastian_Stan-64526.jpg"
+  },
+  {
+   "page": "/characters/all",
+   "file": "/img/actors/dir/maria-hill.jpg",
+   "width": 200,
+   "height": 264,
+   "subject": "Cobie Smulders",
+   "character": "maria-hill",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cobie_Smulders_by_Gage_Skidmore_3.jpg"
+  },
+  {
+   "page": "/characters/all",
+   "file": "/img/actors/dir/sam-wilson.jpg",
+   "width": 200,
+   "height": 300,
+   "subject": "Anthony Mackie",
+   "character": "sam-wilson",
+   "author": "Quejaytee",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anthony_Mackie_on_the_Green_Carpet_at_the_2025_Zurich_Film_Festival_03_(cropped).jpg"
+  },
+  {
+   "page": "/characters/all",
+   "file": "/img/actors/dir/wong.jpg",
+   "width": 200,
+   "height": 219,
+   "subject": "Benedict Wong",
+   "character": "wong",
+   "author": "Peter Guenzel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Benedict_Wong_2023_by_Peter_Guenzel_02.jpg"
+  },
+  {
+   "page": "/characters/all",
+   "file": "/img/actors/dir/drax-the-destroyer.jpg",
+   "width": 200,
+   "height": 316,
+   "subject": "Dave Bautista",
+   "character": "drax-the-destroyer",
+   "author": "Super Festivals",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dave_Bautista_Photo_Op_GalaxyCon_Minneapolis_2019.jpg"
+  },
+  {
+   "page": "/characters/all",
+   "file": "/img/actors/dir/howard-stark.jpg",
+   "width": 200,
+   "height": 283,
+   "subject": "John Slattery",
+   "character": "howard-stark",
+   "author": "Romina Espinosa",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:JohnSlattery08.jpg"
+  },
+  {
+   "page": "/characters/all",
+   "file": "/img/actors/dir/darcy-lewis.jpg",
+   "width": 200,
+   "height": 250,
+   "subject": "Kat Dennings",
+   "character": "darcy-lewis",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kat_Dennings_-_The_40-Year-Old-Virgin.jpg"
   }
  ],
  "videos": [
+  {
+   "page": "/movies/iron-man-1",
+   "youtubeId": "8ugaeA-nMTc",
+   "title": "Iron Man (2008) Trailer #1 | Movieclips Classic Trailers",
+   "channel": "Rotten Tomatoes Classic Trailers",
+   "kind": "licensed",
+   "sourceUrl": "https://www.youtube.com/watch?v=8ugaeA-nMTc",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/movies/iron-man-2",
+   "youtubeId": "BoohRoVA9WQ",
+   "title": "Iron Man 2 Official Trailer #1 (2010) - Marvel Movie HD",
+   "channel": "Movieclips",
+   "kind": "licensed",
+   "sourceUrl": "https://www.youtube.com/watch?v=BoohRoVA9WQ",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
   {
    "page": "/movies/avengers-1",
    "youtubeId": "eOrNdBpGMv8",
    "title": "Marvel's The Avengers- Trailer (OFFICIAL)",
    "channel": "Marvel Entertainment",
+   "kind": "official",
    "sourceUrl": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
    "verified": "2026-10-06 via youtube.com/oembed"
   },
@@ -259,6 +362,7 @@
    "youtubeId": "f_h95mEd4TI",
    "title": "Marvel's Iron Man 3 Domestic Trailer (OFFICIAL)",
    "channel": "Marvel Entertainment",
+   "kind": "official",
    "sourceUrl": "https://www.youtube.com/watch?v=f_h95mEd4TI",
    "verified": "2026-10-06 via youtube.com/oembed"
   },
@@ -267,6 +371,7 @@
    "youtubeId": "TcMBFSGVi1c",
    "title": "Marvel Studios' Avengers: Endgame - Official Trailer",
    "channel": "Marvel Entertainment",
+   "kind": "official",
    "sourceUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
    "verified": "2026-10-06 via youtube.com/oembed"
   },
@@ -275,7 +380,35 @@
    "youtubeId": "8TZMtslA3UY",
    "title": "SPIDER-MAN: BRAND NEW DAY - Official Trailer (HD)",
    "channel": "Spider-Man (Sony Pictures official channel)",
+   "kind": "official",
    "sourceUrl": "https://www.youtube.com/watch?v=8TZMtslA3UY",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/articles/endgame-final-portal-detail",
+   "youtubeId": "TcMBFSGVi1c",
+   "title": "Marvel Studios' Avengers: Endgame - Official Trailer",
+   "channel": "Marvel Entertainment",
+   "kind": "official",
+   "sourceUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/articles/avengers-loki-scepter-mind-stone",
+   "youtubeId": "eOrNdBpGMv8",
+   "title": "Marvel's The Avengers- Trailer (OFFICIAL)",
+   "channel": "Marvel Entertainment",
+   "kind": "official",
+   "sourceUrl": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/articles/iron-man-2-green-drink",
+   "youtubeId": "BoohRoVA9WQ",
+   "title": "Iron Man 2 Official Trailer #1 (2010) - Marvel Movie HD",
+   "channel": "Movieclips",
+   "kind": "licensed",
+   "sourceUrl": "https://www.youtube.com/watch?v=BoohRoVA9WQ",
    "verified": "2026-10-06 via youtube.com/oembed"
   }
  ]

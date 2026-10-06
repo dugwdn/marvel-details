@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <title>Photo and Video Credits | Details You Missed</title>
+    <title>Photo and Video Credits | MCU Easter Eggs</title>
     <meta name="description" content="Who took each photo on the site, the license it is under, and where each trailer comes from.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,14 +18,28 @@
         @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } .content { background: #1c1c1c; } }
     </style>
     <link rel="stylesheet" href="/css/theme.css">
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NESPZD6XSQ');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
 </head>
 <body>
-    <header class="site-brand">
-        <p class="site-brand-title"><a class="site-brand-link" href="/"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">Details <em>You</em><br>Missed</span></a></p>
-        <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>
+    <header class="site-brand site-bar">
+        <p class="site-brand-title"><a class="site-brand-link" href="/" aria-label="MCU Easter Eggs home"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">MCU <em>Easter</em> Eggs</span></a></p>
+        <div class="site-search" hidden>
+            <label class="site-search-label" for="site-q">Search the site</label>
+            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">
+            <ul id="site-results" class="site-results" role="listbox" aria-label="Search results" hidden></ul>
+        </div>
+        <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>
+        <a class="site-member" href="/me/"><span class="site-member-text">My Marvel</span></a>
     </header>
     <nav class="site-nav" aria-label="Main menu">
         <a href="/">Home</a>
@@ -43,8 +57,8 @@
     <main class="container">
         <div class="content">
             <h1>Photo and Video Credits</h1>
-            <p>We never use studio posters, film stills or character art. Photos here are free-license pictures from Wikimedia Commons, credited to the people who took them. Trailers are official uploads, played with YouTube's own player.</p>
-            <h2>Photos (22)</h2>
+            <p>We never use studio posters, film stills or character art. Photos here are free-license pictures from Wikimedia Commons, credited to the people who took them. Trailers are YouTube videos from official Marvel and Sony channels or licensed trailer channels, played with YouTube's own player. We never host video.</p>
+            <h2>Photos (29)</h2>
             <ul class="credits-list">
             <li><strong>Paul Rudd</strong><br>Photo: Bryan Berlin, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Paul_Rudd_at_the_2026_New_York_Film_Festival-003.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/ant-man">/characters/ant-man</a>.</li>
             <li><strong>Chadwick Boseman</strong><br>Photo: Gage Skidmore, <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="nofollow noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Chadwick_Boseman_by_Gage_Skidmore_July_2017_(cropped).jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/black-panther">/characters/black-panther</a>.</li>
@@ -68,21 +82,34 @@
             <li><strong>Don Cheadle</strong><br>Photo: PhilipRomanoPhoto, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:DonCheadle-byPhilipRomano2.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/war-machine">/characters/war-machine</a>.</li>
             <li><strong>Alabama Hills near Lone Pine, California (Iron Man filming area)</strong><br>Photo: steveberardi, <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="nofollow noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Alabamahills.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/movies/iron-man-1">/movies/iron-man-1</a>.</li>
             <li><strong>Unisphere, Flushing Meadows-Corona Park, Queens (real place behind the Stark Expo)</strong><br>Photo: Ajay Suresh, <a href="https://creativecommons.org/licenses/by/2.0" rel="nofollow noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Unisphere-2_(27835155267).jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/movies/iron-man-2">/movies/iron-man-2</a>.</li>
+            <li><strong>Sebastian Stan</strong><br>Photo: Harald Krichel, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Sebastian_Stan-64526.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/all">/characters/all</a>.</li>
+            <li><strong>Cobie Smulders</strong><br>Photo: Gage Skidmore, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="nofollow noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Cobie_Smulders_by_Gage_Skidmore_3.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/all">/characters/all</a>.</li>
+            <li><strong>Anthony Mackie</strong><br>Photo: Quejaytee, <a href="https://creativecommons.org/licenses/by/4.0" rel="nofollow noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Anthony_Mackie_on_the_Green_Carpet_at_the_2025_Zurich_Film_Festival_03_(cropped).jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/all">/characters/all</a>.</li>
+            <li><strong>Benedict Wong</strong><br>Photo: Peter Guenzel, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Benedict_Wong_2023_by_Peter_Guenzel_02.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/all">/characters/all</a>.</li>
+            <li><strong>Dave Bautista</strong><br>Photo: Super Festivals, <a href="https://creativecommons.org/licenses/by/2.0" rel="nofollow noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Dave_Bautista_Photo_Op_GalaxyCon_Minneapolis_2019.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/all">/characters/all</a>.</li>
+            <li><strong>John Slattery</strong><br>Photo: Romina Espinosa, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="nofollow noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:JohnSlattery08.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/all">/characters/all</a>.</li>
+            <li><strong>Kat Dennings</strong><br>Photo: Kevin Paul, <a href="https://creativecommons.org/licenses/by/4.0" rel="nofollow noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Kat_Dennings_-_The_40-Year-Old-Virgin.jpg" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="/characters/all">/characters/all</a>.</li>
             </ul>
-            <h2>Trailers (4)</h2>
+            <h2>Trailers (9)</h2>
             <ul class="credits-list">
+            <li><strong>Iron Man (2008) Trailer #1 | Movieclips Classic Trailers</strong><br>Channel: Rotten Tomatoes Classic Trailers, <a href="https://www.youtube.com/watch?v=8ugaeA-nMTc" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/movies/iron-man-1">/movies/iron-man-1</a>.</li>
+            <li><strong>Iron Man 2 Official Trailer #1 (2010) - Marvel Movie HD</strong><br>Channel: Movieclips, <a href="https://www.youtube.com/watch?v=BoohRoVA9WQ" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/movies/iron-man-2">/movies/iron-man-2</a>.</li>
             <li><strong>Marvel's The Avengers- Trailer (OFFICIAL)</strong><br>Channel: Marvel Entertainment, <a href="https://www.youtube.com/watch?v=eOrNdBpGMv8" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/movies/avengers-1">/movies/avengers-1</a>.</li>
             <li><strong>Marvel's Iron Man 3 Domestic Trailer (OFFICIAL)</strong><br>Channel: Marvel Entertainment, <a href="https://www.youtube.com/watch?v=f_h95mEd4TI" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/movies/iron-man-3">/movies/iron-man-3</a>.</li>
             <li><strong>Marvel Studios' Avengers: Endgame - Official Trailer</strong><br>Channel: Marvel Entertainment, <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/movies/endgame">/movies/endgame</a>.</li>
             <li><strong>SPIDER-MAN: BRAND NEW DAY - Official Trailer (HD)</strong><br>Channel: Spider-Man (Sony Pictures official channel), <a href="https://www.youtube.com/watch?v=8TZMtslA3UY" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/articles/spider-man-brand-new-day-easter-eggs">/articles/spider-man-brand-new-day-easter-eggs</a>.</li>
+            <li><strong>Marvel Studios' Avengers: Endgame - Official Trailer</strong><br>Channel: Marvel Entertainment, <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/articles/endgame-final-portal-detail">/articles/endgame-final-portal-detail</a>.</li>
+            <li><strong>Marvel's The Avengers- Trailer (OFFICIAL)</strong><br>Channel: Marvel Entertainment, <a href="https://www.youtube.com/watch?v=eOrNdBpGMv8" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/articles/avengers-loki-scepter-mind-stone">/articles/avengers-loki-scepter-mind-stone</a>.</li>
+            <li><strong>Iron Man 2 Official Trailer #1 (2010) - Marvel Movie HD</strong><br>Channel: Movieclips, <a href="https://www.youtube.com/watch?v=BoohRoVA9WQ" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="/articles/iron-man-2-green-drink">/articles/iron-man-2-green-drink</a>.</li>
             </ul>
             <p>Not affiliated with Marvel or Disney. The same list is in <a href="/data/media-credits.json">media-credits.json</a>.</p>
         </div>
     </main>
     <script type="module" src="/js/members.js"></script>
+    <script type="module" src="/js/search.js"></script>
     <footer>
 <div class="site-footer-links">
-        <p class="site-footer-projects"><strong>More from Doug:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a></p>
+        <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
     </footer>

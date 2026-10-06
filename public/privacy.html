@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <title>Privacy | Details You Missed</title>
-    <meta name="description" content="What Details You Missed keeps about readers and members, and how to delete your account.">
+    <title>Privacy | MCU Easter Eggs</title>
+    <meta name="description" content="What MCU Easter Eggs keeps about readers and members, and how to delete your account.">
         <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
@@ -38,11 +38,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
     <link rel="stylesheet" href="/css/theme.css">
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NESPZD6XSQ');
+    </script>
 </head>
 <body>
-    <header class="site-brand">
-        <p class="site-brand-title"><a class="site-brand-link" href="/"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">Details <em>You</em><br>Missed</span></a></p>
-        <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>
+    <header class="site-brand site-bar">
+        <p class="site-brand-title"><a class="site-brand-link" href="/" aria-label="MCU Easter Eggs home"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">MCU <em>Easter</em> Eggs</span></a></p>
+        <div class="site-search" hidden>
+            <label class="site-search-label" for="site-q">Search the site</label>
+            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">
+            <ul id="site-results" class="site-results" role="listbox" aria-label="Search results" hidden></ul>
+        </div>
+        <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>
+        <a class="site-member" href="/me/"><span class="site-member-text">My Marvel</span></a>
     </header>
     <nav class="site-nav" aria-label="Main menu">
         <a href="/">Home</a>
@@ -61,7 +75,7 @@
             <h1>Privacy</h1>
             <p class="muted">Updated October 6, 2026.</p>
             <h2>Reading the site</h2>
-            <p>You can read everything here without an account. Like most sites, we count visits with Google Analytics, and Google AdSense shows ads that may use cookies to pick what you see. You can turn off personalized ads at <a href="https://adssettings.google.com">Google's ad settings</a>.</p>
+            <p>You can read everything here without an account. Like most sites, we use Google Analytics (Google's visit counter) to count visits and see which pages are read. We never send it names or email addresses, and signing in is not shared with it. Also, Google AdSense shows ads that may use cookies to pick what you see. You can turn off personalized ads at <a href="https://adssettings.google.com">Google's ad settings</a>.</p>
             <h2>If you make an account</h2>
             <p>You can sign in with Google, Facebook or X. We keep only the id and first name that account gives us, plus a sign-in cookie on your device. We never get your password, we don't keep your email, and we never post anything for you. Accounts are for people 13 or older.</p>
             <h2>My Marvel: your lists</h2>
@@ -72,13 +86,19 @@
             <p>Questions: <a href="mailto:doug@webdesignnerd.com">doug@webdesignnerd.com</a>.</p>
         </div>
     </main>
-    <footer><p>&copy; 2026 Details You Missed. Not affiliated with Marvel or Disney.</p><p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>
+    <footer><p>&copy; 2026 MCU Easter Eggs. Not affiliated with Marvel or Disney.</p><p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>
     <div class="site-footer-links">
-        <p class="site-footer-projects"><strong>More from Doug:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a></p>
+        <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
 
+
+
+
+
+
 </footer>
     <script type="module" src="/js/members.js"></script>
+    <script type="module" src="/js/search.js"></script>
 </body>
 </html>

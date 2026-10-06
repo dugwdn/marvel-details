@@ -75,14 +75,8 @@ sign-in for the whole site; no new service or bill.
 **Cost:** sync only for signed-in members; the list size cap; rank titles use
 Marvel character names (lawyer list).
 
-## ADR-009: Trailers only from official channels; photos only with a credit (2026-10-06)
-**Decision:** a trailer is embedded only if YouTube's oembed names Marvel
-Entertainment (or the studio's own channel) as author and the title matches
-the film; embeds use youtube-nocookie.com, lazy-loaded, with a title. A photo
-is used only if it is CC BY, CC BY-SA, CC0 or public domain on Wikimedia
-Commons, with the artist and license read from Commons' metadata, a visible
-credit line, and a row in `public/data/media-credits.json` (which builds
-`/credits`). A test enforces it. **Why:** studio stills and fan uploads risk
-copyright claims and the AdSense review. **Cost:** Iron Man (2008) and Iron
-Man 2 have no trailer for now (only Movieclips-type uploads were found); some
-pages have no picture rather than a weak one.
+## ADR-010: Trailers from official or licensed channels; photos only with a credit (2026-10-06)
+**Decision:** a trailer is embedded only if YouTube's oembed names an official Marvel, Disney or Sony channel, or a licensed trailer channel (Movieclips, Rotten Tomatoes Trailers or Classic Trailers, Fandango), as author and the title matches the film; embeds use youtube-nocookie.com, lazy-loaded, with a title, and we never host video. Doug widened this from official-only the same day (no Marvel upload of the Iron Man or Iron Man 2 trailers could be verified). A photo is used only if it is CC BY, CC BY-SA, CC0 or public domain on Wikimedia Commons, with the artist and license read from Commons' metadata, a visible credit line, and a row in `public/data/media-credits.json` (which builds `/credits`). No studio posters or stills. A test enforces it. **Why:** studio stills risk copyright claims and the AdSense review. **Cost:** some pages have no picture rather than a weak one.
+
+## ADR-009: The brand is MCU Easter Eggs (2026-10-06)
+Doug chose the name MCU Easter Eggs on 2026-10-06 after buying mcueastereggs.com. This supersedes the earlier "Details You Missed" name (CLAUDE.md, ADR-006's type-only wordmark "DETAILS YOU MISSED") and the earlier note to keep Marvel/MCU out of the brand. The old name no longer appears on any page, title, meta tag, JSON-LD block, footer or tool output. Canonical URLs, og:url, sitemap, robots and JSON-LD now use https://mcueastereggs.com; marvel-details.pages.dev keeps working as the same site. The banner reads MCU EASTER EGGS in the same comic style. Menu: one row at 1000px and wider, an even grid below (5 columns, then 2), never a sideways scroll. Risk: "MCU" and Marvel references in a brand name raise a trademark question; it is added to the lawyer list (`Marvel-Details/lawyer-questions.md`). The site still says it is not affiliated with Marvel or Disney.

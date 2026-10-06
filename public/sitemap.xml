@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Home Page -->
     <url>
-        <loc>https://marvel-details.pages.dev/</loc>
+        <loc>https://mcueastereggs.com/</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,21 +10,21 @@
 
     <!-- Main Pages -->
     <url>
-        <loc>https://marvel-details.pages.dev/about</loc>
+        <loc>https://mcueastereggs.com/about</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/articles</loc>
+        <loc>https://mcueastereggs.com/articles</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/movies</loc>
+        <loc>https://mcueastereggs.com/movies</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -32,21 +32,21 @@
 
     <!-- Article Pages -->
     <url>
-        <loc>https://marvel-details.pages.dev/articles/iron-man-2-green-drink</loc>
+        <loc>https://mcueastereggs.com/articles/iron-man-2-green-drink</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/articles/avengers-loki-scepter-mind-stone</loc>
+        <loc>https://mcueastereggs.com/articles/avengers-loki-scepter-mind-stone</loc>
         <lastmod>2026-10-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/articles/endgame-final-portal-detail</loc>
+        <loc>https://mcueastereggs.com/articles/endgame-final-portal-detail</loc>
         <lastmod>2026-10-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -61,35 +61,35 @@
 
     <!-- Movie Hub Pages -->
     <url>
-        <loc>https://marvel-details.pages.dev/movies/iron-man-1</loc>
+        <loc>https://mcueastereggs.com/movies/iron-man-1</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/movies/iron-man-2</loc>
+        <loc>https://mcueastereggs.com/movies/iron-man-2</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/movies/iron-man-3</loc>
+        <loc>https://mcueastereggs.com/movies/iron-man-3</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/movies/avengers-1</loc>
+        <loc>https://mcueastereggs.com/movies/avengers-1</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/movies/endgame</loc>
+        <loc>https://mcueastereggs.com/movies/endgame</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
@@ -97,7 +97,7 @@
 
     <!-- Universe Map Page -->
     <url>
-        <loc>https://marvel-details.pages.dev/map</loc>
+        <loc>https://mcueastereggs.com/map</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -105,42 +105,42 @@
 
     <!-- Deleted Scenes Pages -->
     <url>
-        <loc>https://marvel-details.pages.dev/scenes</loc>
+        <loc>https://mcueastereggs.com/scenes</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/scenes/iron-man-1-scenes</loc>
+        <loc>https://mcueastereggs.com/scenes/iron-man-1-scenes</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/scenes/iron-man-2-scenes</loc>
+        <loc>https://mcueastereggs.com/scenes/iron-man-2-scenes</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/scenes/iron-man-3-scenes</loc>
+        <loc>https://mcueastereggs.com/scenes/iron-man-3-scenes</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/scenes/avengers-1-scenes</loc>
+        <loc>https://mcueastereggs.com/scenes/avengers-1-scenes</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/scenes/endgame-scenes</loc>
+        <loc>https://mcueastereggs.com/scenes/endgame-scenes</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -148,287 +148,287 @@
 
     <!-- Callbacks Pages -->
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks</loc>
+        <loc>https://mcueastereggs.com/callbacks</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-001.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-001.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-002.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-002.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-003.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-003.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-004.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-004.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-005.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-005.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-006.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-006.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-007.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-007.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-008.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-008.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-009.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-009.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-010.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-010.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-011.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-011.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-012.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-012.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-013.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-013.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-014.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-014.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-015.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-015.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-016.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-016.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-017.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-017.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-018.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-018.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-019.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-019.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-020.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-020.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-021.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-021.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-022.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-022.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-023.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-023.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-024.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-024.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-025.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-025.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-026.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-026.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-027.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-027.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-028.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-028.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-029.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-029.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-030.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-030.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-031.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-031.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-032.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-032.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-033.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-033.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-034.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-034.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-035.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-035.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-036.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-036.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-037.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-037.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-038.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-038.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-039.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-039.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/callbacks/callback-cb-040.html</loc>
+        <loc>https://mcueastereggs.com/callbacks/callback-cb-040.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -436,154 +436,154 @@
 
     <!-- Character Arc Tracker Pages -->
     <url>
-        <loc>https://marvel-details.pages.dev/characters/</loc>
+        <loc>https://mcueastereggs.com/characters/</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/all/</loc>
+        <loc>https://mcueastereggs.com/characters/all/</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/tony-stark</loc>
+        <loc>https://mcueastereggs.com/characters/tony-stark</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/steve-rogers</loc>
+        <loc>https://mcueastereggs.com/characters/steve-rogers</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/thor</loc>
+        <loc>https://mcueastereggs.com/characters/thor</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/loki</loc>
+        <loc>https://mcueastereggs.com/characters/loki</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/black-widow</loc>
+        <loc>https://mcueastereggs.com/characters/black-widow</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/hawkeye</loc>
+        <loc>https://mcueastereggs.com/characters/hawkeye</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/bruce-banner</loc>
+        <loc>https://mcueastereggs.com/characters/bruce-banner</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/nick-fury</loc>
+        <loc>https://mcueastereggs.com/characters/nick-fury</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/pepper-potts</loc>
+        <loc>https://mcueastereggs.com/characters/pepper-potts</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/happy-hogan</loc>
+        <loc>https://mcueastereggs.com/characters/happy-hogan</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/thanos</loc>
+        <loc>https://mcueastereggs.com/characters/thanos</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/spider-man</loc>
+        <loc>https://mcueastereggs.com/characters/spider-man</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/war-machine</loc>
+        <loc>https://mcueastereggs.com/characters/war-machine</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/captain-marvel</loc>
+        <loc>https://mcueastereggs.com/characters/captain-marvel</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/doctor-strange</loc>
+        <loc>https://mcueastereggs.com/characters/doctor-strange</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/black-panther</loc>
+        <loc>https://mcueastereggs.com/characters/black-panther</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/scarlet-witch</loc>
+        <loc>https://mcueastereggs.com/characters/scarlet-witch</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/ant-man</loc>
+        <loc>https://mcueastereggs.com/characters/ant-man</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/nebula</loc>
+        <loc>https://mcueastereggs.com/characters/nebula</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/characters/obadiah-stane</loc>
+        <loc>https://mcueastereggs.com/characters/obadiah-stane</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -591,81 +591,87 @@
 
     <!-- Rabbit Holes Pages -->
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/mind-stone-corruption.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/mind-stone-corruption.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/tonys-sacrifice-foreshadowed.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/tonys-sacrifice-foreshadowed.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/lokis-redemption-arc.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/lokis-redemption-arc.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/multiverse-implications.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/multiverse-implications.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/vision-consciousness.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/vision-consciousness.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/steve-rogers-timeline.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/steve-rogers-timeline.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/wanda-grief-power.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/wanda-grief-power.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://marvel-details.pages.dev/rabbit-holes/family-bonds-asgard.html</loc>
+        <loc>https://mcueastereggs.com/rabbit-holes/family-bonds-asgard.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://marvel-details.pages.dev/articles/spider-man-brand-new-day-easter-eggs</loc>
+        <loc>https://mcueastereggs.com/articles/spider-man-brand-new-day-easter-eggs</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://marvel-details.pages.dev/privacy</loc>
+        <loc>https://mcueastereggs.com/privacy</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.2</priority>
     </url>
     <url>
-        <loc>https://marvel-details.pages.dev/credits</loc>
+        <loc>https://mcueastereggs.com/more/</loc>
+        <lastmod>2026-10-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/credits</loc>
         <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.2</priority>

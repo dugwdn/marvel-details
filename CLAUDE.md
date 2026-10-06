@@ -1,4 +1,4 @@
-# Marvel Details (Details You Missed)
+# MCU Easter Eggs (repo: marvel-details)
 
 Read this first. It says what the project is, where it runs, and what's next.
 The other standard docs: `PRD.md` (what and why), `TRD.md` (how it's built),
@@ -8,10 +8,11 @@ The other standard docs: `PRD.md` (what and why), `TRD.md` (how it's built),
 
 ## What it is
 A free, static fan site about hidden details in Marvel movies, branded
-"Details You Missed." Phase 1 covers Iron Man 1 to 3, The Avengers and
+"MCU Easter Eggs" (renamed from "Details You Missed" on 2026-10-06, ADR-009). Phase 1 covers Iron Man 1 to 3, The Avengers and
 Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-06)
+- **Rebrand (ADR-009):** the site is MCU Easter Eggs at https://mcueastereggs.com (canonical, sitemap, JSON-LD); the old name is gone from all pages and tools. Menu is one row at 1000px+ and an even grid below.
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
   `marvel-details`, production branch `phase-1-build`, commit e69809a since 2026-10-06,
   published by direct upload from Doug's laptop with wrangler).
@@ -27,9 +28,15 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
   real 404, sitemap/robots, link check on every PR), PR #3 ad boxes (hidden
   until AdSense fills them) and PR #4 green drink corrections.
-- **Brand banner and site menu:** one shared comic-style banner and menu
-  of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
-  page). Styles are in `public/css/theme.css`; uses the Bangers web font.
+- **Header (PR fix/readability-header):** one slim sticky bar (logo and
+  name, search box, member chip) plus one row of menu buttons, written into
+  every page by `node tools/menu.mjs` (run it after adding a page; it also
+  writes `public/data/search-pages.json` for the search box). Styles are in
+  `public/css/theme.css`; Bangers web font. Search is `public/js/search.js`,
+  the chip is filled by `members.js`. Colors: text on its own background must
+  hold WCAG AA; red text uses `--dym-link`, never `--dym-red`;
+  `test/contrast.test.mjs` checks the pairs.
+- **More from us:** `/more/` (`public/more/index.html`, hand-written) lists our other live sites; the footer written by `tools/menu.mjs` says "More from us" and links it. Never name a person in this wording. Keep the list in step with the other sites' More pages.
 - **Articles are comic strips:** after adding an article, run
   `python3 tools/comic-panels.py` to wrap its sections in panels.
 - **Images rule:** no studio posters, stills or character art (copyright;
@@ -37,13 +44,15 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   are free-license Wikimedia Commons files with a credit line. IMDb text and
   photos can't be copied; plain facts (dates, cast) can be stated.
 - **Images and trailers (PR on `feat/images-and-trailers`, not live):**
-  rule in ADR-009. All media is listed in `public/data/media-credits.json`;
+  rule in ADR-010. All media is listed in `public/data/media-credits.json`;
   `node tools/build-credits.mjs` rebuilds `/credits`, then `node tools/menu.mjs`.
   Official trailers: Avengers, Iron Man 3, Endgame, Spider-Man article. Iron
   Man 1 and 2 have none (only non-official uploads found). 20 character
   portraits plus 2 place photos (Iron Man hubs). `test/media.test.mjs` checks it.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
+- **Known gaps:** only 3 of the 10 planned articles are written. GA4 is live in the code (`G-NESPZD6XSQ`, written into every page by
+  `tools/menu.mjs`; `test/analytics.test.mjs` checks it) once published. The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
   not people.
 - **Member perks (PR #21, stacks on sign-in PR #18, not live, ADR-008):**
@@ -64,7 +73,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
-Waiting on Doug: a real GA4 ID, AdSense slot numbers, the domain move, the
+Waiting on Doug: deploying the ad slot (`7081225657` is in `js/ads.js`), the domain move, the
 sign-in keys (PR #18) and, once PRs #18 and #21 are merged,
 `npx wrangler d1 migrations apply marvel-details --remote` for the `saves`
 table (RUNBOOK "Member perks sync").

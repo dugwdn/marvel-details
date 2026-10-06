@@ -10,7 +10,8 @@ import { htmlFiles } from '../tools/check-links.mjs';
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const credits = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/media-credits.json'), 'utf8'));
 const FREE = /^(CC BY(-SA)? [0-9.]+|CC0.*|Public domain)$/;
-const OFFICIAL = /^(Marvel Entertainment|Spider-Man \(Sony Pictures official channel\))$/;
+// Doug 2026-10-06: official Marvel/Sony/Disney channels, plus the licensed trailer channels.
+const OFFICIAL = /^(Marvel Entertainment|Marvel Studios|Disney Plus|Spider-Man \(Sony Pictures official channel\)|Sony Pictures Entertainment|Movieclips|Movieclips Trailers|Rotten Tomatoes Trailers|Rotten Tomatoes Classic Trailers|Fandango)$/;
 
 test('every credited image is a free license, under 200 KB and 1200 px wide', () => {
   for (const i of credits.images) {
@@ -38,7 +39,7 @@ test('every photo on a page is credited, has size, alt text and a visible credit
   }
 });
 
-test('every embedded video is a credited official upload, nocookie, lazy and titled', () => {
+test('every embedded video is a credited official or licensed-channel upload, nocookie, lazy and titled', () => {
   const ids = new Map(credits.videos.map((v) => [v.youtubeId, v]));
   for (const v of credits.videos) assert.match(v.channel, OFFICIAL, v.youtubeId);
   for (const file of htmlFiles(ROOT)) {
