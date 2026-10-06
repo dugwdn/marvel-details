@@ -23,7 +23,7 @@ The member-perks tests run in the same `npm test`:
 ## Before every publish
 1. Preview with `npx wrangler pages dev public --port 8788` (see RUNBOOK).
 2. Each feature loads and its list fills in: scenes (21), callbacks (40),
-   characters (10), rabbit holes (8), map (25 nodes, 51 links in the
+   characters (20), rabbit holes (8), map (25 nodes, 51 links in the
    sidebar statistics).
 3. The browser console shows no errors on those five pages.
 4. Dark mode (device or browser set to dark): headings, labels and body
@@ -47,7 +47,7 @@ The member-perks tests run in the same `npm test`:
    my account work.
 
 ## After publishing
-Repeat checks 2 and 5 on https://marvel-details.pages.dev.
+Repeat checks 2 and 5 on https://mcueastereggs.com and https://marvel-details.pages.dev. Also check View Source has G-NESPZD6XSQ and /more/ loads.
 
 ## Last results
 - 2026-10-06, member-perks branch (stacked on sign-in): `npm test` all

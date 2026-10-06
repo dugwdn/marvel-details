@@ -30,6 +30,9 @@ merged-but-unpublished work.
   (opens every page in Chromium, checks every link after scripts run and flags
   "Read more →" text that isn't a link).
 
+## 2026-10-06 (audit)
+- Live check: both addresses serve commit 79366ad. Merged to `phase-1-build` but not deployed: #24 More from us, #25 GA4 (G-NESPZD6XSQ), #26 compact header with search, #27 AdSense slot 7081225657. Docs brought up to date (CLAUDE.md, ROADMAP, TRD, PRD, TEST_PLAN, RUNBOOK).
+
 ## 2026-10-06
 - Ads filled (not live yet, PR feat/ad-slot): all three ad boxes use the AdSense
   responsive display unit `7081225657` (publisher ca-pub-7178251279168670).
@@ -56,9 +59,9 @@ merged-but-unpublished work.
   under 14px. `test/contrast.test.mjs` checks the color pairs in theme.css
   (part of `npm test`).
 - Google Analytics 4 (`G-NESPZD6XSQ`) on every page (not live until deployed): `tools/menu.mjs` writes the one standard snippet into every page, replacing the placeholder; Privacy page says plainly it counts visits and pages read, with no names or emails sent; `test/analytics.test.mjs` checks one tag per page.
-- More from us (not live until Doug batches the deploy): a /more/ page listing our other 12 live sites, and the footer on every page now says "More from us" with a link to it (it said "More from Doug"). Test: `test/more.test.mjs`.
+- More from us (merged, not deployed): a /more/ page listing our other 12 live sites, and the footer on every page now says "More from us" with a link to it (it said "More from Doug"). Test: `test/more.test.mjs`.
 - Rebrand: "Details You Missed" became "MCU Easter Eggs" everywhere (banner, titles, meta, footers, JSON-LD, tools); canonical URLs and sitemap use mcueastereggs.com; menu no longer leaves an orphan button (one row 1000px+, even grid below). ADR-009.
-- Member perks (not live yet, PR #21, stacks on the sign-in PR #18):
+- Member perks (live in 79366ad, PR #21):
   "Seen it" on movie hubs with an optional "Hide spoilers for movies I
   haven't seen" blur; Save on articles, deleted scenes, callbacks,
   characters, rabbit holes and movie hubs; a star for favorite characters
@@ -68,11 +71,11 @@ merged-but-unpublished work.
   pop-up; a My Marvel page (`/me/`, new menu button) and a Privacy link in
   page footers. Works with no account; signed-in members get it synced to
   their account (`/api/sync`, `saves` table). robots.txt blocks `/api/`.
-- Sign-in (not live yet, ADR-007): `/account` page with Google (button and
+- Sign-in (live in 79366ad, ADR-007; Google on, Facebook and X off): `/account` page with Google (button and
   One Tap), Facebook and X, each shown once its keys are set, and a /privacy
   page (Meta needs one to go live). Accounts in the
   `marvel-details` D1 database. Ready for the discussions.
-- MCU Character List (not live): new page /characters/all/ with 797 main
+- MCU Character List (live in 79366ad): new page /characters/all/ with 797 main
   and recurring characters from all 38 released MCU movies and 21 Disney+
   series seasons. Each shows who plays them, their first appearance and
   every title they are in, with search, an "appears in" filter and
@@ -120,7 +123,7 @@ merged-but-unpublished work.
   Wikimedia Commons, credited with photographer and license
   (`public/img/actors/`). No studio posters or stills.
 - Home menu button darkened to #c62828 so its white text passes 4.5:1.
-- **Live:** published commit 9f67a72 (comic look, Brand New Day banner).
+- Earlier publish: 9f67a72 (comic look, Brand New Day banner). Current live: 79366ad.
 
 ## 2026-10-05
 - Brand banner (not live): a big "Details You Missed" comic banner

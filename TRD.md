@@ -24,7 +24,7 @@ public/
 Each feature reads its own JSON file from `/data/` in the browser.
 `js/shared-data.js` is a small hub (`window.marvelData.hub`) that loads and
 caches scenes, callbacks and connections, and indexes the map links.
-Counts on 2026-10-05: 21 deleted scenes, 40 callbacks, 10 characters,
+Counts on 2026-10-06: 21 deleted scenes, 40 callbacks, 20 characters (plus the 797-entry list in `mcu-characters.json`),
 8 rabbit holes, 25 map nodes and 51 links.
 
 The detail pages (`callbacks/callback-cb-001.html` and so on) are separate
@@ -36,7 +36,7 @@ change the matching page.
 
 ## Hosting
 - Cloudflare Pages project `marvel-details`, direct upload (no Git link).
-  Production branch `phase-1-build`. Address https://marvel-details.pages.dev.
+  Production branch `phase-1-build`. Addresses https://mcueastereggs.com and https://marvel-details.pages.dev. Live deploy on 2026-10-06: 79366ad.
 - Pages "pretty URLs": `/movies/endgame.html` redirects to `/movies/endgame`.
 - With PR #1: `404.html` handles unknown addresses (without it, Pages
   serves the home page for every unknown address).
@@ -64,7 +64,7 @@ depend on. The home, movie and article pages are light only.
   `ads.txt` lists the publisher ID. Every page has the
   `google-adsense-account` meta tag.
 
-## Members (PR #21, ADR-008; stacks on the sign-in, ADR-007)
+## Members (PR #21, live in 79366ad, ADR-008; built on the sign-in, ADR-007)
 **Files**
 ```
 public/js/members-core.js   pure logic: state shape, sanitize, merge, found
