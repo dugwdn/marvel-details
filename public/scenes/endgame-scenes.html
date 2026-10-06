@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>Avengers: Endgame (2019) Deleted Scenes | Extended Cuts & Bonus Content</title>
-    <meta name="description" content="Discover all deleted scenes from Avengers: Endgame (2019). Find extended cuts, character moments, and bonus content on DVD, Blu-ray, and Disney+.">
+    <meta name="description" content="Discover all deleted scenes from Avengers: Endgame (2019). Find extended cuts, character moments, and bonus content on home video.">
 
     <script type="application/ld+json">
     {
@@ -84,7 +84,7 @@
         <div class="movie-header">
             <h2>Avengers: Endgame (2019) - Deleted Scenes</h2>
             <p><strong>Release:</strong> April 26, 2019 | <strong>Director:</strong> Anthony & Joe Russo | <strong>Studio:</strong> Marvel Studios / Disney</p>
-            <p>Explore the bonus content and deleted scenes from Avengers: Endgame, featuring extended time heist planning, character farewells, and expanded final battle sequences.</p>
+            <p>The six deleted scenes released with the Avengers: Endgame Blu-ray and digital bonus features, with the source we checked for each one.</p>
         </div>
 
         <div class="movie-scenes-count" id="movie-count">Loading scenes...</div>
@@ -106,49 +106,13 @@
 
 
 
+
+
     </footer>
 
     <script src="/js/deleted-scenes.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            try {
-                const response = await fetch('/data/deleted-scenes.json');
-                const data = await response.json();
-                const scenes = data.deletedScenes.filter(s => s.movieId === 'endgame');
-
-                const container = document.getElementById('movie-scenes-list');
-                const countEl = document.getElementById('movie-count');
-
-                if (scenes.length === 0) {
-                    container.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #999;">No deleted scenes found for this movie.</p>';
-                    countEl.textContent = 'No deleted scenes available';
-                    return;
-                }
-
-                countEl.textContent = `Showing ${scenes.length} deleted scene${scenes.length !== 1 ? 's' : ''}`;
-
-                container.innerHTML = scenes.map(scene => `
-                    <div class="scene-card" data-scene-id="${scene.id}">
-                        <div class="scene-card-header">
-                            <h3>${scene.title}</h3>
-                            <div class="scene-formats">
-                                ${scene.format.map(f => `<span class="format-badge format-${f}">${f === 'dvd' ? 'DVD' : f === 'blu-ray' ? 'Blu-ray' : 'Disney+'}</span>`).join('')}
-                            </div>
-                        </div>
-                        <p class="scene-description">${scene.description}</p>
-                        <div class="scene-details">
-                            <span class="detail-item"><strong>Runtime:</strong> ${scene.runtime}</span>
-                            <span class="detail-item"><strong>Type:</strong> ${scene.significance}</span>
-                        </div>
-                        <p class="scene-where"><strong>Where to Watch:</strong> ${scene.whereToWatch}</p>
-                        <p class="scene-synopsis"><em>${scene.synopsis}</em></p>
-                    </div>
-                `).join('');
-            } catch (error) {
-                console.error('Error loading deleted scenes:', error);
-                document.getElementById('movie-scenes-list').innerHTML = '<p style="color: #c62828;">Error loading scenes. Please try again.</p>';
-            }
-        });
+        SceneCards.renderMovie('endgame');
     </script>
     <script src="/js/ads.js" defer></script>
     <script type="module" src="/js/members.js"></script>

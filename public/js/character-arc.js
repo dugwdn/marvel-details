@@ -3,6 +3,21 @@
  * Handles the grid view, modal preview, filtering, sorting, and favorites
  */
 
+// Films with a hub page on this site. Other films are shown as plain text.
+const FILM_HUBS = {
+  'Iron Man': '/movies/iron-man-1',
+  'Iron Man 2': '/movies/iron-man-2',
+  'Iron Man 3': '/movies/iron-man-3',
+  'The Avengers': '/movies/avengers-1',
+  "Marvel's The Avengers": '/movies/avengers-1',
+  'Avengers: Endgame': '/movies/endgame'
+};
+
+function filmHubFor(name) {
+  const bare = String(name || '').replace(/\s*\(\d{4}\)\s*$/, '').trim();
+  return FILM_HUBS[bare] || null;
+}
+
 class CharacterArcTracker {
   constructor() {
     this.allCharacters = [];
@@ -223,10 +238,9 @@ class CharacterArcTracker {
       .map(char => this.createCharacterCard(char))
       .join('');
 
-    // Add event listeners to cards
-    container.querySelectorAll('.character-card').forEach(card => {
-      const slug = card.dataset.slug;
-      card.addEventListener('click', () => this.openModal(slug));
+    // "Quick look" buttons open the summary popup; the name links to the full page.
+    container.querySelectorAll('.character-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => this.openModal(btn.dataset.slug));
     });
 
     // Add event listeners to favorite buttons
@@ -252,10 +266,10 @@ class CharacterArcTracker {
       <div class="character-card" data-slug="${char.slug}" data-id="${char.id}">
         <div class="character-card-header">
           <div class="character-info">
-            <h3>${this.escapeHtml(char.heroName)}</h3>
+            <h3><a class="character-page-link" href="/characters/${encodeURIComponent(char.slug)}">${this.escapeHtml(char.heroName)}</a></h3>
             <p class="character-actor">${this.escapeHtml(char.actor)}</p>
           </div>
-          <button class="character-favorite-btn ${isFavorite ? 'favorited' : ''}"
+          <button type="button" class="character-favorite-btn ${isFavorite ? 'favorited' : ''}"
                   data-slug="${char.slug}"
                   title="${isFavorite ? 'Favorite (tap to remove)' : 'Add to favorites'}"
                   aria-pressed="${isFavorite ? 'true' : 'false'}"
@@ -274,6 +288,11 @@ class CharacterArcTracker {
           <span class="stat-item">
             In <strong>${char.siteFilms.length}</strong> of our 5 films
           </span>
+        </div>
+        <div class="character-card-actions">
+          <a class="character-full-link" href="/characters/${encodeURIComponent(char.slug)}">Full arc timeline</a>
+          <button type="button" class="character-quick-btn" data-slug="${this.escapeHtml(char.slug)}"
+                  aria-label="Quick look at ${this.escapeHtml(char.heroName)}">Quick look</button>
         </div>
       </div>
     `;
@@ -319,6 +338,7 @@ class CharacterArcTracker {
     const closeBtn = modal.querySelector('.character-modal-close');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => this.closeModal());
+      closeBtn.focus();
     }
 
     // Set up similar arcs section
@@ -352,7 +372,7 @@ class CharacterArcTracker {
             <h2>${this.escapeHtml(char.heroName)}</h2>
             <p class="modal-full-name">${this.escapeHtml(char.fullName)}</p>
           </div>
-          <button class="character-modal-close" aria-label="Close">×</button>
+          <button type="button" class="character-modal-close" aria-label="Close">×</button>
         </div>
 
         <div class="modal-body">
@@ -380,7 +400,7 @@ class CharacterArcTracker {
               <div class="modal-stat">
                 <span class="stat-label">In our 5 films</span>
                 <span class="stat-value">${char.siteFilms.length}</span>
-                <span class="stat-note">${this.escapeHtml(char.siteFilms.join(', '))}</span>
+                <span class="stat-note">${char.siteFilms.map(f => this.filmHtml(f)).join(', ')}</span>
               </div>
             </div>
 
@@ -395,6 +415,8 @@ class CharacterArcTracker {
               </ul>
             </div>
           </div>
+
+          <p class="modal-full-page"><a href="/characters/${encodeURIComponent(char.slug)}">Read ${this.escapeHtml(char.heroName)}'s full arc timeline &rarr;</a></p>
 
           <div class="modal-sidebar">
             <div class="modal-section">
@@ -473,6 +495,15 @@ class CharacterArcTracker {
     if (container) {
       container.innerHTML = `<div class="error-message"><p>${this.escapeHtml(message)}</p></div>`;
     }
+  }
+
+  /**
+   * A film name, linked to its hub page when the site has one.
+   */
+  filmHtml(name) {
+    const hub = filmHubFor(name);
+    const text = this.escapeHtml(name);
+    return hub ? `<a href="${hub}">${text}</a>` : text;
   }
 
   /**

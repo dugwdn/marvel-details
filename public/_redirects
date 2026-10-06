@@ -1,0 +1,19 @@
+# Other common addresses for the movie hubs (tools/build-hubs.mjs builds the hubs).
+/movies/the-avengers /movies/avengers-1 301
+/movies/avengers /movies/avengers-1 301
+/movies/avengers-2012 /movies/avengers-1 301
+/movies/iron-man /movies/iron-man-1 301
+/movies/iron-man-2008 /movies/iron-man-1 301
+/movies/avengers-endgame /movies/endgame 301
+/callbacks/callback-cb-014 /callbacks/ 301
+/callbacks/callback-cb-014.html /callbacks/ 301
+/callbacks/callback-cb-015 /callbacks/ 301
+/callbacks/callback-cb-015.html /callbacks/ 301
+/callbacks/callback-cb-019 /callbacks/ 301
+/callbacks/callback-cb-019.html /callbacks/ 301
+/callbacks/callback-cb-027 /callbacks/ 301
+/callbacks/callback-cb-027.html /callbacks/ 301
+/callbacks/callback-cb-036 /callbacks/ 301
+/callbacks/callback-cb-036.html /callbacks/ 301
+/callbacks/callback-cb-037 /callbacks/ 301
+/callbacks/callback-cb-037.html /callbacks/ 301

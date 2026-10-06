@@ -7,7 +7,8 @@
       "phase": 1,
       "color": "#FFD700",
       "year": 2008,
-      "description": "The film that started it all. Tony Stark is captured and builds his first armor."
+      "description": "The film that started it all. Tony Stark is captured and builds his first armor.",
+      "url": "/movies/iron-man-1"
     },
     {
       "id": "movie-iron-man-2",
@@ -16,7 +17,8 @@
       "phase": 1,
       "color": "#FFD700",
       "year": 2010,
-      "description": "Tony faces new threats as his armor technology becomes unstable."
+      "description": "Tony goes public as Iron Man, while the palladium core of the arc reactor that keeps him alive is slowly poisoning him.",
+      "url": "/movies/iron-man-2"
     },
     {
       "id": "movie-iron-man-3",
@@ -25,7 +27,8 @@
       "phase": 2,
       "color": "#FFD700",
       "year": 2013,
-      "description": "Tony deals with PTSD and faces the Mandarin threat."
+      "description": "Tony struggles with PTSD and panic attacks after New York and hunts 'the Mandarin', who turns out to be an actor fronting for Aldrich Killian.",
+      "url": "/movies/iron-man-3"
     },
     {
       "id": "movie-avengers-1",
@@ -34,7 +37,8 @@
       "phase": 1,
       "color": "#FFD700",
       "year": 2012,
-      "description": "Earth's mightiest heroes assemble to fight Loki and his alien army."
+      "description": "Earth's mightiest heroes assemble to fight Loki and his alien army.",
+      "url": "/movies/avengers-1"
     },
     {
       "id": "movie-endgame",
@@ -43,7 +47,8 @@
       "phase": 3,
       "color": "#FFD700",
       "year": 2019,
-      "description": "The final battle against Thanos and the quest to undo the Snap."
+      "description": "The final battle against Thanos and the quest to undo the Snap.",
+      "url": "/movies/endgame"
     },
     {
       "id": "char-tony-stark",
@@ -51,7 +56,8 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "Genius billionaire philanthropist who becomes Iron Man."
+      "description": "Genius billionaire philanthropist who becomes Iron Man.",
+      "url": "/characters/tony-stark"
     },
     {
       "id": "char-steve-rogers",
@@ -59,7 +65,8 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "Captain America, the leader of the Avengers."
+      "description": "Captain America, the leader of the Avengers.",
+      "url": "/characters/steve-rogers"
     },
     {
       "id": "char-thor-odinson",
@@ -67,7 +74,8 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "God of Thunder and Prince of Asgard."
+      "description": "God of Thunder and Prince of Asgard.",
+      "url": "/characters/thor"
     },
     {
       "id": "char-loki-laufeyson",
@@ -75,7 +83,8 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "God of Mischief and Thor's adoptive brother, wielder of the Mind Stone."
+      "description": "God of Mischief and Thor's adoptive brother. In The Avengers he carries the scepter that holds the Mind Stone.",
+      "url": "/characters/loki"
     },
     {
       "id": "char-natasha-romanoff",
@@ -83,7 +92,8 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "Black Widow, master spy and hand-to-hand combatant."
+      "description": "Black Widow, master spy and hand-to-hand combatant.",
+      "url": "/characters/black-widow"
     },
     {
       "id": "char-bruce-banner",
@@ -91,15 +101,17 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "Scientist who becomes the powerful Hulk when enraged."
+      "description": "Scientist who becomes the powerful Hulk when enraged.",
+      "url": "/characters/bruce-banner"
     },
     {
       "id": "char-thanos",
       "label": "Thanos",
       "type": "character",
-      "phase": 3,
+      "phase": 1,
       "color": "#FF6B6B",
-      "description": "The Mad Titan seeking to balance the universe with the Infinity Stones."
+      "description": "The Mad Titan who collects the Infinity Stones to wipe out half of all life. First seen in The Avengers' mid-credits scene (2012).",
+      "url": "/characters/thanos"
     },
     {
       "id": "char-pepper-potts",
@@ -107,7 +119,8 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "CEO of Stark Industries and Tony's love interest."
+      "description": "Tony's assistant, then CEO of Stark Industries (from Iron Man 2), and later his wife.",
+      "url": "/characters/pepper-potts"
     },
     {
       "id": "char-obadiah-stane",
@@ -115,7 +128,8 @@
       "type": "character",
       "phase": 1,
       "color": "#FF6B6B",
-      "description": "Stark Industries executive who becomes Iron Monger."
+      "description": "Stark Industries executive who becomes Iron Monger.",
+      "url": "/characters/obadiah-stane"
     },
     {
       "id": "artifact-iron-suit-mk1",
@@ -126,12 +140,12 @@
       "description": "Tony's first crude armor built in captivity from scrap metal."
     },
     {
-      "id": "artifact-iron-suit-mk47",
-      "label": "Iron Suit Mark XLVII",
+      "id": "artifact-iron-suit-mk7",
+      "label": "Iron Man Mark VII",
       "type": "artifact",
-      "phase": 2,
+      "phase": 1,
       "color": "#20B2AA",
-      "description": "Advanced armor used in later Avengers battles."
+      "description": "The armor that assembles around Tony from sensor bracelets. He switches to it in The Avengers after the Mark VI is badly damaged."
     },
     {
       "id": "artifact-mind-stone",
@@ -147,7 +161,7 @@
       "type": "artifact",
       "phase": 1,
       "color": "#20B2AA",
-      "description": "Power source keeping Tony Stark alive and powering his armor."
+      "description": "Tony and Yinsen build a small arc reactor in the cave in Iron Man to power the electromagnet that keeps shrapnel from his heart; it also powers his armor."
     },
     {
       "id": "artifact-time-stone",
@@ -155,15 +169,15 @@
       "type": "artifact",
       "phase": 3,
       "color": "#20B2AA",
-      "description": "Infinity Stone that controls time, protected by Doctor Strange."
+      "description": "Infinity Stone that controls time, kept in the Eye of Agamotto, which Doctor Strange wears."
     },
     {
       "id": "artifact-infinity-gauntlet",
       "label": "Infinity Gauntlet",
       "type": "artifact",
-      "phase": 3,
+      "phase": 2,
       "color": "#20B2AA",
-      "description": "Glove that holds all six Infinity Stones and grants ultimate power."
+      "description": "Glove that holds all six Infinity Stones. Thanos first puts it on in the mid-credits scene of Age of Ultron (2015)."
     },
     {
       "id": "event-battle-ny",
@@ -177,17 +191,17 @@
       "id": "event-sokovia-accords",
       "label": "Sokovia Accords",
       "type": "event",
-      "phase": 2,
+      "phase": 3,
       "color": "#9370DB",
-      "description": "Political conflict leading to the Avengers splitting into two factions."
+      "description": "UN rules to oversee the Avengers, from Captain America: Civil War (2016). Tony supports them; Steve doesn't."
     },
     {
       "id": "event-avengers-civil-war",
       "label": "Avengers Civil War",
       "type": "event",
-      "phase": 2,
+      "phase": 3,
       "color": "#9370DB",
-      "description": "Tony and Steve lead opposing teams of Avengers."
+      "description": "In Captain America: Civil War (2016) the Avengers split over the Sokovia Accords, with Tony and Steve on opposite sides."
     },
     {
       "id": "event-snap",
@@ -203,7 +217,7 @@
       "type": "event",
       "phase": 3,
       "color": "#9370DB",
-      "description": "Avengers fight Thanos to reverse the Snap and save the universe."
+      "description": "The battle at the end of Endgame against a Thanos who came forward from 2014; it ends when Tony uses the Stones and dies."
     }
   ],
   "edges": [
@@ -246,7 +260,7 @@
     {
       "from": "char-tony-stark",
       "to": "artifact-arc-reactor",
-      "label": "invents",
+      "label": "builds",
       "strength": "strong"
     },
     {
@@ -424,7 +438,7 @@
       "strength": "strong"
     },
     {
-      "from": "artifact-iron-suit-mk47",
+      "from": "artifact-iron-suit-mk7",
       "to": "movie-avengers-1",
       "label": "featured in",
       "strength": "strong"
@@ -438,7 +452,7 @@
     {
       "from": "artifact-mind-stone",
       "to": "event-battle-ny",
-      "label": "drives",
+      "label": "used in",
       "strength": "strong"
     },
     {
@@ -456,7 +470,7 @@
     {
       "from": "movie-iron-man-1",
       "to": "event-battle-ny",
-      "label": "leads to",
+      "label": "sets up the Avengers Initiative",
       "strength": "weak"
     },
     {
@@ -503,8 +517,8 @@
     },
     {
       "from": "char-natasha-romanoff",
-      "to": "event-final-battle",
-      "label": "participates in",
+      "to": "event-snap",
+      "label": "responds to",
       "strength": "strong"
     },
     {
@@ -512,6 +526,62 @@
       "to": "event-final-battle",
       "label": "participates in",
       "strength": "strong"
+    },
+    {
+      "from": "event-sokovia-accords",
+      "to": "event-avengers-civil-war",
+      "label": "leads to",
+      "strength": "strong"
+    },
+    {
+      "from": "char-tony-stark",
+      "to": "event-avengers-civil-war",
+      "label": "leads one side",
+      "strength": "strong"
+    },
+    {
+      "from": "char-steve-rogers",
+      "to": "event-avengers-civil-war",
+      "label": "leads the other side",
+      "strength": "strong"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Avengers: Endgame: plot (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+    },
+    {
+      "name": "The Avengers (2012 film): plot (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+    },
+    {
+      "name": "Iron Man (2008 film): plot (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)"
+    },
+    {
+      "name": "Iron Man 2: plot (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Iron_Man_2"
+    },
+    {
+      "name": "Iron Man 3: plot (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Iron_Man_3"
+    },
+    {
+      "name": "Iron Man's armor (Marvel Cinematic Universe) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Iron_Man%27s_armor_(Marvel_Cinematic_Universe)"
+    },
+    {
+      "name": "Infinity Stones (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Infinity_Stones"
+    },
+    {
+      "name": "Avengers: Age of Ultron: plot (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron"
+    },
+    {
+      "name": "Captain America: Civil War: plot (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Captain_America:_Civil_War"
     }
   ]
 }

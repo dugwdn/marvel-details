@@ -15,6 +15,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+    <style>
+        /* Connected nodes are buttons that jump to that node on the map. */
+        #connections-list .connection-node {
+            display: inline; background: none; border: 0; padding: 0; margin: 0;
+            font: inherit; font-weight: 500; color: inherit; text-align: left;
+            cursor: pointer; text-decoration: underline;
+        }
+        .node-page { margin: 10px 0 0; }
+        .node-page-link, .map-sources a { color: inherit; text-decoration: underline; font-weight: 600; }
+        .map-sources { margin: 4px 0 0; padding-left: 18px; font-size: 0.85rem; }
+    </style>
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
     <script>
@@ -156,6 +167,9 @@
                     <li><span class="color-dot" style="background-color: #20B2AA;"></span> Artifacts</li>
                     <li><span class="color-dot" style="background-color: #9370DB;"></span> Events</li>
                 </ul>
+                <p>Movies and characters that have a page on this site get an "Open the page" link in their details.</p>
+                <p><strong>Sources:</strong> the map's facts were checked against these pages.</p>
+                <ul id="map-sources" class="map-sources"></ul>
             </div>
         </div>
     </div>
@@ -174,11 +188,9 @@
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
-        <p class="site-legal"><a href="/privacy">Privacy</a></p>
-    <div class="site-footer-links">
-        <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
-        <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
-    </div>
+
+
+
 
 
 

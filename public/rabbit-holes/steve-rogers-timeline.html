@@ -4,52 +4,290 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <title>Steve Rogers' Timeline Problem | MCU Easter Eggs</title>
-  <meta name="description" content="Did he create alternate timelines or live his own timeline? One ending, infinite interpretations about Cap's final moment.">
+  <title>Steve Rogers&#x27; Ending: Which Timeline Did He Live In? | MCU Easter Eggs</title>
+  <meta name="description" content="At the end of Endgame, Steve returns the Stones, stays in the past with Peggy Carter, and turns up old to hand his shield to Sam Wilson. Did he make a new timeline or live in the main one? Even the people who made the film disagree.">
   <meta name="theme-color" content="#dc143c">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/rabbit-holes.css">
   <style>
-    .hole-detail-container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-    .hole-detail-header { margin-bottom: 2rem; border-bottom: 2px solid #dc143c; padding-bottom: 1.5rem; }
-    .hole-detail-header h1 { margin: 0 0 0.5rem 0; color: #1a1a1a; font-size: 2.2rem; }
-    .hole-detail-tagline { font-size: 1.2rem; color: #555; font-style: italic; margin: 0.5rem 0; }
-    .hole-detail-meta { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1rem; font-size: 0.95rem; color: #666; }
-    .hole-detail-meta span { display: flex; align-items: center; gap: 0.5rem; }
-    .hole-detail-meta strong { color: #1a1a1a; }
-    .difficulty-badge { display: inline-block; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
-    .difficulty-advanced { background-color: #ffcccc; color: #b71c1c; }
-    .hole-detail-summary { background-color: #f9f9f9; border-left: 4px solid #dc143c; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
-    .hole-detail-summary p { margin: 0; font-size: 1.05rem; line-height: 1.6; color: #444; }
-    .chapters-container { margin-top: 2rem; }
-    .chapter { margin-bottom: 2rem; background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .chapter-header { margin-bottom: 1rem; }
-    .chapter.level-1 .chapter-title-level { color: #4caf50; font-weight: 700; }
-    .chapter.level-2 .chapter-title-level { color: #ff9800; font-weight: 700; }
-    .chapter.level-3 .chapter-title-level { color: #dc143c; font-weight: 700; }
-    .chapter-title-text { font-size: 1.2rem; color: #1a1a1a; font-weight: 600; }
-    .chapter-content { font-size: 0.95rem; line-height: 1.7; color: #555; }
-    .chapter-content p { margin: 0 0 1rem 0; }
-    .payoff-box { background: linear-gradient(135deg, #dc143c 0%, #a00 100%); color: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; line-height: 1.6; }
-    .payoff-box strong { display: block; margin-bottom: 0.5rem; font-size: 1.1rem; }
-    .related-holes { background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-top: 2rem; }
-    .related-holes h3 { margin-top: 0; color: #1a1a1a; }
-    .related-holes-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .related-hole-item { background: white; padding: 1rem; border-radius: 4px; border: 1px solid #ddd; text-decoration: none; color: inherit; transition: all 0.2s ease; }
-    .related-hole-item:hover { border-color: #dc143c; box-shadow: 0 2px 8px rgba(220,20,60,0.15); }
-    .related-hole-title { font-weight: 600; color: #dc143c; margin-bottom: 0.25rem; }
-    .related-hole-tagline { font-size: 0.85rem; color: #777; }
-    .back-link { display: inline-block; margin-bottom: 2rem; color: #dc143c; text-decoration: none; font-weight: 600; }
-    .back-link:hover { color: #a00; text-decoration: underline; }
+    .hole-detail-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .hole-detail-header {
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #dc143c;
+      padding-bottom: 1.5rem;
+    }
+
+    .hole-detail-header h1 {
+      margin: 0 0 0.5rem 0;
+      color: #1a1a1a;
+      font-size: 2.2rem;
+    }
+
+    .hole-detail-tagline {
+      font-size: 1.2rem;
+      color: #555;
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+
+    .hole-detail-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .hole-detail-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hole-detail-meta strong {
+      color: #1a1a1a;
+    }
+
+    .difficulty-badge {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .difficulty-intermediate {
+      background-color: #ffe0b2;
+      color: #e65100;
+    }
+
+    .hole-detail-summary {
+      background-color: #f9f9f9;
+      border-left: 4px solid #dc143c;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+    }
+
+    .hole-detail-summary p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .chapters-container {
+      margin-top: 2rem;
+    }
+
+    .chapter {
+      margin-bottom: 2rem;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .chapter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chapter.level-1 .chapter-title-level {
+      color: #4caf50;
+      font-weight: 700;
+    }
+
+    .chapter.level-2 .chapter-title-level {
+      color: #ff9800;
+      font-weight: 700;
+    }
+
+    .chapter.level-3 .chapter-title-level {
+      color: #dc143c;
+      font-weight: 700;
+    }
+
+    .chapter-title-text {
+      font-size: 1.2rem;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .chapter-content {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .chapter-content p {
+      margin: 0 0 1rem 0;
+    }
+
+    .chapter-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .payoff-box {
+      background: linear-gradient(135deg, #dc143c 0%, #a00 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .payoff-box strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .related-holes {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .related-holes h3 {
+      margin-top: 0;
+      color: #1a1a1a;
+    }
+
+    .related-holes-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .related-hole-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .related-hole-item:hover {
+      border-color: #dc143c;
+      box-shadow: 0 2px 8px rgba(220,20,60,0.15);
+    }
+
+    .related-hole-title {
+      font-weight: 600;
+      color: #dc143c;
+      margin-bottom: 0.25rem;
+    }
+
+    .related-hole-tagline {
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #dc143c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: #a00;
+      text-decoration: underline;
+    }
+
     @media (prefers-color-scheme: dark) {
-      .hole-detail-header h1 { color: #e0e0e0; }
-      .hole-detail-summary { background-color: #1a1a1a; color: #ccc; }
-      .chapter { background: #2a2a2a; border-color: #444; }
-      .chapter-title-text { color: #e0e0e0; }
-      .chapter-content { color: #bbb; }
-      .related-holes { background-color: #1a1a1a; border-color: #444; }
-      .related-holes h3 { color: #e0e0e0; }
-      .related-hole-item { background: #2a2a2a; border-color: #444; }
+      .hole-detail-header h1 {
+        color: #e0e0e0;
+      }
+
+      .hole-detail-summary {
+        background-color: #1a1a1a;
+        color: #ccc;
+      }
+
+      .hole-detail-summary p {
+        color: #ccc;
+      }
+
+      .chapter {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+
+      .chapter-title-text {
+        color: #e0e0e0;
+      }
+
+      .chapter-content {
+        color: #bbb;
+      }
+
+      .related-holes {
+        background-color: #1a1a1a;
+        border-color: #444;
+      }
+
+      .related-holes h3 {
+        color: #e0e0e0;
+      }
+
+      .related-hole-item {
+        background: #2a2a2a;
+        border-color: #444;
+      }
+    }
+
+    .chapter-title-text { margin: 0; }
+    .difficulty-casual { background-color: #c8e6c9; color: #1b5e20; }
+    .difficulty-advanced { background-color: #ffcdd2; color: #8b0000; }
+    .chapter-kind {
+      display: inline-block;
+      margin-left: 0.5rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      vertical-align: middle;
+    }
+    .chapter-kind-fact { background: #e3f2fd; color: #0d47a1; }
+    .chapter-kind-theory { background: #fff3cd; color: #6b4e00; }
+    .hole-facts { margin: 1.5rem 0; line-height: 1.6; }
+    .hole-facts h2 { font-size: 1.1rem; margin: 1rem 0 0.4rem; }
+    .hole-facts ul { margin: 0; padding-left: 1.2rem; }
+    .hole-facts a, .hole-sources a, .hole-corrections a { text-decoration: underline; }
+    .hole-sources, .hole-corrections {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    .hole-sources h2, .hole-corrections h2 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+    .hole-sources ul, .hole-corrections ul { margin: 0; padding-left: 1.2rem; }
+    .hole-note { font-size: 0.9rem; color: #555; margin: 0.5rem 0 0; }
+    @media (prefers-color-scheme: dark) {
+      .hole-note { color: #bbb; }
+      .hole-sources, .hole-corrections { border-color: #444; }
     }
   </style>
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
@@ -93,60 +331,105 @@
 
   <div class="hole-detail-container">
     <a href="/rabbit-holes/" class="back-link">← Back to Rabbit Holes</a>
+
     <div class="hole-detail-header">
-      <h1>Steve Rogers' Timeline Problem: One Ending, Infinite Interpretations</h1>
-      <p class="hole-detail-tagline">Did he create alternate timelines or live his own timeline?</p>
+      <h1>Steve Rogers&#x27; Ending: Which Timeline Did He Live In?</h1>
+      <p class="hole-detail-tagline">The directors and the writers gave different answers.</p>
+
       <div class="hole-detail-meta">
         <span><strong>Difficulty:</strong> <span class="difficulty-badge difficulty-advanced">Advanced</span></span>
-        <span><strong>Read time:</strong> 14 minutes</span>
-        <span><strong>Movies involved:</strong> 2</span>
+        <span><strong>Read time:</strong> 5 minutes</span>
+        <span><strong>Films and series:</strong> 3</span>
       </div>
     </div>
+
     <div class="hole-detail-summary">
-      <p>Steve's ending in Endgame breaks its own time travel rules. Either he lived in secret for 70 years, or he created alternate timelines, or he's from a different universe. The truth is more complicated than any single explanation.</p>
+      <p>At the end of Endgame, Steve returns the Stones, stays in the past with Peggy Carter, and turns up old to hand his shield to Sam Wilson. Did he make a new timeline or live in the main one? Even the people who made the film disagree.</p>
     </div>
+
+    <div class="hole-facts">
+      <h2>Films and series in this rabbit hole</h2>
+      <ul>
+        <li>Captain America: The First Avenger (2011)</li>
+        <li>Captain America: Civil War (2016)</li>
+        <li><a href="/movies/endgame">Avengers: Endgame (2019)</a></li>
+      </ul>
+      <h2>Characters</h2>
+      <ul>
+        <li><a href="/characters/steve-rogers">Steve Rogers</a></li>
+        <li>Peggy Carter</li>
+        <li>Sam Wilson</li>
+        <li><a href="/characters/bruce-banner">Bruce Banner</a></li>
+      </ul>
+      <p class="hole-note">Levels marked "Sourced facts" are checked against the sources listed at the bottom. Levels marked "Fan theory" are interpretation, not confirmed by the films or their makers.</p>
+    </div>
+
     <div class="chapters-container">
-      <div class="chapter level-1">
+      <section class="chapter level-1">
         <div class="chapter-header">
-          <div><div class="chapter-title-level">Level 1: Casual Reading</div><div class="chapter-title-text">The Paradox</div></div>
+          <div>
+            <div class="chapter-title-level">Level 1: Casual Reading <span class="chapter-kind chapter-kind-fact">Sourced facts</span></div>
+            <h2 class="chapter-title-text">What the film shows</h2>
+          </div>
         </div>
         <div class="chapter-content">
-          <p>In Endgame, Steve goes back to 1945 to return the Stones and presumably say goodbye to Peggy. But when he comes back (old), he's clearly lived an entire life in the past. The question is: if he lived in the past, did he create an alternate timeline, or did he live in his own timeline the whole time? The movie seems to say he lived in an alternate timeline and then returned to the present. But that doesn't make sense—if he lived in an alternate timeline, he wouldn't age the same way he did.</p>
+          <p>After the final battle in Avengers: Endgame (2019), Steve Rogers takes the Infinity Stones and Mjolnir back to their proper times. He doesn&#x27;t come back the way he left. Instead an elderly Steve is found nearby, and he passes his shield, and the name Captain America, to Sam Wilson. He has stayed in the past with Peggy Carter, married her, and lived a full life. The last scene shows the two of them dancing, the dance he promised her in Captain America: The First Avenger (2011).</p>
         </div>
-      </div>
-      <div class="chapter level-2">
+      </section>
+      <section class="chapter level-2">
         <div class="chapter-header">
-          <div><div class="chapter-title-level">Level 2: Deeper Analysis</div><div class="chapter-title-text">The Three Interpretations</div></div>
+          <div>
+            <div class="chapter-title-level">Level 2: Deeper Analysis <span class="chapter-kind chapter-kind-fact">Sourced facts</span></div>
+            <h2 class="chapter-title-text">Two official answers</h2>
+          </div>
         </div>
         <div class="chapter-content">
-          <p>There are three possible interpretations of Steve's ending: (1) The Alternate Timeline Theory: Steve lived in a branched 1945 timeline from 1945-2015 (70 years), then somehow jumped forward to 2023 to return the Stones. This breaks the movie's own rules—the Ancient One said branches must be 'fixed' by returning Stones to the exact moment they were taken. Steve would have created a permanent branch where Cap never returns for decades. (2) The Closed Loop Theory: Steve was always in the timeline. From 2023 Steve's perspective, he travels to 1945 and lives until 2015, when he somehow returns to 2023. But this would mean 2023 Steve meeting old Steve is them encountering themselves in the same timeline after Steve aged 70 years in 23 days—temporally impossible in a consistent timeline. (3) The Hidden Timeline Theory: Steve lived in a hidden timeline all along, accelerated or normal speed, and returned at the exact moment that timeline synced with the main MCU timeline.</p>
-          <p>The movie intentionally doesn't clarify which one is true. The Russos have given conflicting interviews about this. This ambiguity suggests the MCU's time travel rules might be more flexible than stated, or Steve's ending is genuinely paradoxical.</p>
+          <p>Endgame&#x27;s own rule (explained by Bruce Banner) is that changing the past creates an alternate reality. The directors, Joe and Anthony Russo, have said Steve did create a new timeline when he stayed with Peggy, and later found a way back to the main timeline as an old man. The writers, Christopher Markus and Stephen McFeely, have said Steve found a way to break the rules and lived with Peggy in the main timeline, which would mean two Steves existed at once; they said both were at Peggy&#x27;s funeral in Captain America: Civil War (2016). Wikipedia&#x27;s Steve Rogers article records both answers.</p>
         </div>
-      </div>
-      <div class="chapter level-3">
+      </section>
+      <section class="chapter level-3">
         <div class="chapter-header">
-          <div><div class="chapter-title-level">Level 3: Expert Theory</div><div class="chapter-title-text">The Superposition Ending</div></div>
+          <div>
+            <div class="chapter-title-level">Level 3: Fan Theory <span class="chapter-kind chapter-kind-theory">Fan theory</span></div>
+            <h2 class="chapter-title-text">Picking a side</h2>
+          </div>
         </div>
         <div class="chapter-content">
-          <p>Steve's timeline is paradoxical by design—it's the MCU's acknowledgment that time travel creates unfixable problems. Here's the deeper theory: Steve's fate is both true and false simultaneously until observed. When Steve decides to return the Stones and live with Peggy, he sets up a quantum superposition. In one timeline, he returns and creates a branch. In another timeline, he was always there. The Bead on a String model of time (where each moment coexists rather than flowing) explains this: Steve's present (2023) and his past (1945) are on the same string. When he goes back, he's not moving through time; he's stepping sideways on the string to the 1945 bead and living there. He then walks forward along the string through 70 years, arriving at a 1945 that becomes 2015 in that local timeline. But from the 2023 perspective, he's been gone 23 minutes.</p>
-          <p>The Stones themselves might facilitate this—they're cosmic constants that exist outside normal time. By returning them to specific moments, Steve isn't erasing branches; he's ensuring timeline consistency by keeping the Stones' histories intact. His own timeline remains paradoxical because he doesn't technically have to be there. But he chose to be, and that choice ripples backwards and forwards simultaneously. In practical MCU terms: Steve lived in the past, aged naturally, and eventually synced back to the present. But he also created a timeline where he never went to the future at all. Multiple truths coexist. The MCU is acknowledging that its time travel rules create paradoxes it can't resolve—and that's okay. Steve's ending is proof that some questions don't have clean answers.</p>
+          <p>This part is fan debate. The directors&#x27; answer fits Endgame&#x27;s stated time-travel rule but leaves open how Steve got back. The writers&#x27; answer explains the old man on the bench neatly but bends the rule the film set up. The film never shows how he returned, so there&#x27;s no on-screen evidence that settles it. Both readings are made by people who worked on the film, so neither is &#x27;wrong&#x27;; it&#x27;s fair to say the question is genuinely unresolved.</p>
         </div>
-      </div>
+      </section>
     </div>
+
     <div class="payoff-box">
       <strong>The Payoff</strong>
-      You'll grapple with the same paradox the MCU never fully solves—but understand why it matters that Steve chose this path anyway.
+      You&#x27;ll know exactly what the film shows, and that the &#x27;which timeline&#x27; question has two official answers, not one.
     </div>
+
+    <section class="hole-corrections" aria-labelledby="corrections-title">
+      <h2 id="corrections-title">Corrections</h2>
+      <ul>
+        <li>An earlier version described a &#x27;Bead on a String&#x27; model, a &#x27;quantum superposition&#x27; and timings such as &#x27;70 years in 23 days&#x27;. None of those come from the film or its makers, so they have been removed.</li>
+      </ul>
+    </section>
+
+    <section class="hole-sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Steve_Rogers_(Marvel_Cinematic_Universe)" target="_blank" rel="noopener">Steve Rogers (Marvel Cinematic Universe) (Wikipedia)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Avengers:_Endgame" target="_blank" rel="noopener">Avengers: Endgame: plot (Wikipedia)</a></li>
+      </ul>
+    </section>
+
     <div class="related-holes">
       <h3>Related Rabbit Holes</h3>
       <div class="related-holes-list">
-        <a href="/rabbit-holes/multiverse-implications.html" class="related-hole-item">
-          <div class="related-hole-title">Multiverse Implications</div>
-          <div class="related-hole-tagline">What Endgame's time heist broke</div>
+        <a href="/rabbit-holes/multiverse-implications" class="related-hole-item">
+          <div class="related-hole-title">Did Endgame&#x27;s Time Heist Break the Multiverse?</div>
+          <div class="related-hole-tagline">What Endgame, Loki and the later films say, and what they don&#x27;t.</div>
         </a>
-        <a href="/rabbit-holes/tonys-sacrifice-foreshadowed.html" class="related-hole-item">
-          <div class="related-hole-title">Tony's Sacrifice</div>
-          <div class="related-hole-tagline">Foreshadowed from the start</div>
+        <a href="/rabbit-holes/tonys-sacrifice-foreshadowed" class="related-hole-item">
+          <div class="related-hole-title">Tony&#x27;s Sacrifice: Was It Set Up from the Start?</div>
+          <div class="related-hole-tagline">What the films show, what the filmmakers said, and what is only a fan reading.</div>
         </a>
       </div>
     </div>
@@ -158,11 +441,9 @@
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
-        <p class="site-legal"><a href="/privacy">Privacy</a></p>
-    <div class="site-footer-links">
-        <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
-        <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
-    </div>
+
+
+
 
 
 

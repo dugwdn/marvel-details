@@ -40,6 +40,7 @@ class UniverseMap {
     // data-feature, so waiting for its ready event alone left the map blank.
     this.data = await window.marvelData.hub.loadConnections();
     this.processData();
+    if (typeof mapSidebar !== 'undefined' && mapSidebar) mapSidebar.showSources(this.data.sources);
   }
 
   /**
@@ -58,6 +59,7 @@ class UniverseMap {
       phase: node.phase,
       description: node.description,
       year: node.year,
+      url: node.url,
       shape: this.getNodeShape(node.type),
       size: this.getNodeSize(node.type),
       // Light labels with a dark outline so they read on the dark map.
@@ -540,91 +542,10 @@ class MapSidebar {
   }
 
   static showNodeDetails(node, connections) {
-    const detailsSection = document.getElementById('details-section');
-    const welcomeSection = document.getElementById('welcome-section');
-    const nodeDetailsDiv = document.getElementById('node-details');
-    const connectionsList = document.getElementById('connections-list');
-
-    // Hide welcome, show details
-    if (detailsSection) detailsSection.style.display = 'block';
-    if (welcomeSection) welcomeSection.style.display = 'none';
-
-    // Build node details HTML
-    let html = `
-      <div class="node-header">
-        <div class="node-title">${node.label}</div>
-        <span class="node-type">${node.type.charAt(0).toUpperCase() + node.type.slice(1)}</span>
-      </div>
-    `;
-
-    if (node.description) {
-      html += `<div class="node-description">${node.description}</div>`;
-    }
-
-    html += '<div class="node-meta">';
-    if (node.phase) {
-      html += `
-        <div class="meta-item">
-          <div class="meta-label">Phase</div>
-          <div class="meta-value">${node.phase}</div>
-        </div>
-      `;
-    }
-    if (node.year) {
-      html += `
-        <div class="meta-item">
-          <div class="meta-label">Year</div>
-          <div class="meta-value">${node.year}</div>
-        </div>
-      `;
-    }
-    html += '</div>';
-
-    if (nodeDetailsDiv) {
-      nodeDetailsDiv.innerHTML = html;
-    }
-
-    // Build connections HTML
-    let connectionsHtml = '';
-
-    if (connections.outgoing.length > 0) {
-      connectionsHtml += '<div class="connections-title">Connected To:</div>';
-      connections.outgoing.forEach(({ node: connNode, edge }) => {
-        connectionsHtml += `
-          <div class="connection-item">
-            <div class="connection-label">${edge.label}</div>
-            <div class="connection-node" data-node-id="${connNode.id}">
-              ${connNode.label}
-            </div>
-          </div>
-        `;
-      });
-    }
-
-    if (connections.incoming.length > 0) {
-      connectionsHtml += '<div class="connections-title">Connected From:</div>';
-      connections.incoming.forEach(({ node: sourceNode, edge }) => {
-        connectionsHtml += `
-          <div class="connection-item">
-            <div class="connection-label">${edge.label}</div>
-            <div class="connection-node" data-node-id="${sourceNode.id}">
-              ${sourceNode.label}
-            </div>
-          </div>
-        `;
-      });
-    }
-
-    if (connectionsList) {
-      connectionsList.innerHTML = connectionsHtml;
-
-      // Add click handlers to connection nodes
-      connectionsList.querySelectorAll('.connection-node').forEach(el => {
-        el.addEventListener('click', () => {
-          const nodeId = el.dataset.nodeId;
-          universalMap.selectNode(nodeId);
-        });
-      });
+    // One renderer for the details panel: MapSidebarController in map-sidebar.js
+    // escapes the text, uses real buttons and links the node's page if it has one.
+    if (typeof mapSidebar !== 'undefined' && mapSidebar) {
+      mapSidebar.showNodeDetails(node, connections);
     }
   }
 

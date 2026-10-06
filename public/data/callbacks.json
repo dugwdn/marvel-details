@@ -1,114 +1,164 @@
 {
+  "note": "Each callback names a source page that supports both scenes or the link between them. Scene locators are plain descriptions, not timestamps. Fact-checked 2026-10-06.",
+  "characterPages": {
+    "Tony Stark": "tony-stark",
+    "Pepper Potts": "pepper-potts",
+    "Obadiah Stane": "obadiah-stane",
+    "Nick Fury": "nick-fury",
+    "Natasha Romanoff": "black-widow",
+    "James Rhodes": "war-machine",
+    "Bruce Banner": "bruce-banner",
+    "Clint Barton": "hawkeye",
+    "Steve Rogers": "steve-rogers",
+    "Thor": "thor",
+    "Loki": "loki",
+    "Thanos": "thanos",
+    "Happy Hogan": "happy-hogan"
+  },
   "callbacks": [
     {
       "id": "cb-001",
-      "title": "Arc Reactor Origins",
-      "type": "setup",
+      "title": "Proof That Tony Stark Has a Heart",
+      "type": "payoff",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "00:45:30",
-        "description": "Tony creates a glowing arc reactor in a cave using a car battery and scraps"
+        "scene": "After Tony's new reactor is fitted",
+        "description": "Pepper has Tony's original arc reactor mounted in a glass case engraved \"Proof that Tony Stark has a heart\" and gives it to him."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:49:15",
-        "description": "Tony creates a new infinity stone-powered arc reactor to defeat Thanos"
+        "scene": "Tony's funeral",
+        "description": "At the lakeside funeral, Pepper sets that same engraved reactor on a wreath of flowers and lets it float out onto the water."
       },
-      "explanation": "The cave arc reactor becomes the blueprint for Tony's entire journey. Endgame closes the loop with Tony recreating it at the highest stakes to save the universe.",
-      "relatedCharacters": ["Tony Stark", "Yinsen"],
-      "relatedArticles": ["iron-man-arc-reactor-evolution", "endgame-tony-sacrifice"]
+      "explanation": "The first object that kept Tony alive becomes his memorial. The engraving that started as Pepper's joke in 2008 reads very differently eleven years later.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Pepper Potts"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Den of Geek: Avengers: Endgame - Who Was in That Important Spoiler Scene",
+        "url": "https://www.denofgeek.com/movies/avengers-endgame-tony-stark-ending-scene/"
+      }
     },
     {
       "id": "cb-002",
-      "title": "Iron Man Armor Legacy",
-      "type": "visual-motif",
+      "title": "The Icing Problem",
+      "type": "setup",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:20:00",
-        "description": "Tony flies the Mark II armor for the first time; the suit freezes at high altitude"
+        "scene": "Tony's first high-altitude test flight",
+        "description": "Testing his new suit, Tony climbs too high and the armor ices up and stops working, a weakness he learns about the hard way."
       },
       "fulfillment": {
-        "movieId": "iron-man-3",
-        "movieTitle": "Iron Man 3",
-        "movieYear": 2013,
-        "timestamp": "00:30:45",
-        "description": "Tony flies the Mark XLII at high altitude with similar freezing issues mentioned"
+        "movieId": "iron-man-1",
+        "movieTitle": "Iron Man",
+        "movieYear": 2008,
+        "scene": "Final fight with Obadiah Stane",
+        "description": "Tony leads Stane's copied armor high into the sky, where it ices up: the same flaw Tony ran into on his test flight."
       },
-      "explanation": "The early armor limitation (freezing at altitude) becomes a recurring problem Tony must overcome, showing his continuous engineering evolution across three films.",
-      "relatedCharacters": ["Tony Stark", "JARVIS"],
-      "relatedArticles": ["iron-man-armor-progression"]
+      "explanation": "The setup and payoff sit in the same film. According to the film's production history, the ending was rewritten late to call back to the freezing flaw because the first cut of the final act was just two robots punching each other.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Obadiah Stane"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Iron Man (2008 film), Post-production",
+        "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)#Post-production"
+      }
     },
     {
       "id": "cb-003",
       "title": "Obadiah Stane's Betrayal",
-      "type": "setup",
+      "type": "plot-twist",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "00:15:20",
-        "description": "Obadiah Stane is introduced as Tony's father's old friend and trusted partner at Stark Industries"
+        "scene": "Tony's return from Afghanistan",
+        "description": "Obadiah Stane, Howard Stark's old partner who runs the company, warns Tony that quitting weapons will ruin Stark Industries, and keeps asking about Tony's new work."
       },
       "fulfillment": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:45:00",
-        "description": "Obadiah is revealed to be the arms dealer and attempts to kill Tony using his technology"
+        "scene": "Stane's attack at Tony's home",
+        "description": "Stane is revealed to have been selling weapons to the Ten Rings and hiring them to kill Tony. He steals the reactor from Tony's chest to power his own armor."
       },
-      "explanation": "While resolved in Iron Man 1, this sets the template for Tony's trust issues that plague him throughout the MCU. His betrayal by those he trusts drives his paranoia in later films.",
-      "relatedCharacters": ["Tony Stark", "Obadiah Stane"],
-      "relatedArticles": ["iron-man-stane-betrayal"]
+      "explanation": "The father figure who seemed to be protecting the company was the one who arranged Tony's capture. Both halves happen inside the first film.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Obadiah Stane"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Iron Man (2008 film), Plot",
+        "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)#Plot"
+      }
     },
     {
       "id": "cb-004",
-      "title": "JARVIS AI Relationship",
-      "type": "dialogue",
-      "foreshadow": {
-        "movieId": "iron-man-1",
-        "movieTitle": "Iron Man",
-        "movieYear": 2008,
-        "timestamp": "00:25:30",
-        "description": "Tony speaks to JARVIS with casual familiarity, treating the AI as a trusted companion"
-      },
-      "fulfillment": {
-        "movieId": "avengers-1",
-        "movieTitle": "The Avengers",
-        "movieYear": 2012,
-        "timestamp": "00:55:00",
-        "description": "Tony risks his life trusting JARVIS with complex calculations during the Battle of New York"
-      },
-      "explanation": "Tony's trust in JARVIS as his closest confidant becomes central to the Avengers campaign, showing how his arc reactor technology has given him a unique kind of companionship.",
-      "relatedCharacters": ["Tony Stark", "JARVIS"],
-      "relatedArticles": ["jarvis-vision-transformation"]
-    },
-    {
-      "id": "cb-005",
-      "title": "Pepper Potts Romance",
+      "title": "J.A.R.V.I.S. Flies the Suit",
       "type": "setup",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:15:00",
-        "description": "Tony develops romantic feelings for Pepper Potts; she helps him place the arc reactor"
+        "scene": "Tony's home workshop",
+        "description": "J.A.R.V.I.S. debuts as the AI that runs Tony's house and his Iron Man suits."
       },
       "fulfillment": {
         "movieId": "iron-man-3",
         "movieTitle": "Iron Man 3",
         "movieYear": 2013,
-        "timestamp": "01:50:00",
-        "description": "Pepper is given Extremis powers and becomes a key player in defeating Killian"
+        "scene": "Escape from Malibu and the oil-rig battle",
+        "description": "J.A.R.V.I.S. flies the damaged suit, with Tony inside, to Tennessee after the house is destroyed, and later remote-controls dozens of Iron Man suits in the final battle."
       },
-      "explanation": "Pepper's role evolves from love interest to active participant in Tony's superhero world. The vulnerability he shows in IM1 becomes her vulnerability in IM3.",
-      "relatedCharacters": ["Tony Stark", "Pepper Potts"],
-      "relatedArticles": ["pepper-potts-character-arc"]
+      "explanation": "The workshop helper from the first film ends up doing the flying himself. By Iron Man 3 the suits can fight with nobody inside them.",
+      "relatedCharacters": [
+        "Tony Stark"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: J.A.R.V.I.S.",
+        "url": "https://en.wikipedia.org/wiki/J.A.R.V.I.S."
+      }
+    },
+    {
+      "id": "cb-005",
+      "title": "Tony and Pepper",
+      "type": "setup",
+      "foreshadow": {
+        "movieId": "iron-man-1",
+        "movieTitle": "Iron Man",
+        "movieYear": 2008,
+        "scene": "Replacing the arc reactor",
+        "description": "Pepper reaches into Tony's chest to swap his arc reactor at his request, and the two grow closer through the film."
+      },
+      "fulfillment": {
+        "movieId": "iron-man-2",
+        "movieTitle": "Iron Man 2",
+        "movieYear": 2010,
+        "scene": "After the Stark Expo battle",
+        "description": "After Tony saves her from an exploding drone, Pepper and Tony kiss for the first time and admit their feelings."
+      },
+      "explanation": "The first film keeps the romance as subtext. The sequel pays it off. Iron Man 3 then has them living together.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Pepper Potts"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Pepper Potts (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Pepper_Potts_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-006",
@@ -118,19 +168,25 @@
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:10:30",
-        "description": "Yinsen sacrifices himself to give Tony time to escape in the Mark I armor"
+        "scene": "The cave escape",
+        "description": "Yinsen, the doctor who saved Tony's life, runs at the Ten Rings to buy time while the Mark I suit powers up, and dies."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:50:00",
-        "description": "Tony sacrifices himself to save the universe from Thanos"
+        "scene": "Final battle",
+        "description": "Tony takes the Infinity Stones into his own armor and uses them to wipe out Thanos and his army, fatally injuring himself."
       },
-      "explanation": "Yinsen's death teaches Tony the power of sacrifice. Eleven years later, Tony honors this lesson by making the ultimate sacrifice to save the universe, completing his character arc.",
-      "relatedCharacters": ["Tony Stark", "Yinsen"],
-      "relatedArticles": ["endgame-tony-sacrifice", "iron-man-themes-sacrifice"]
+      "explanation": "Tony's story as Iron Man begins with someone dying so he can live and ends with Tony dying so others can live.",
+      "relatedCharacters": [
+        "Tony Stark"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Tony Stark (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-007",
@@ -140,327 +196,350 @@
         "movieId": "iron-man-2",
         "movieTitle": "Iron Man 2",
         "movieYear": 2010,
-        "timestamp": "00:05:00",
-        "description": "Ivan Vanko is imprisoned; his father died because of Tony Stark's weapons business"
+        "scene": "Opening scene in Russia",
+        "description": "Mourning his father Anton, Ivan Vanko watches Tony reveal himself as Iron Man on the news and builds his own arc reactor from his father's old Stark blueprints."
       },
       "fulfillment": {
         "movieId": "iron-man-2",
         "movieTitle": "Iron Man 2",
         "movieYear": 2010,
-        "timestamp": "02:05:00",
-        "description": "Vanko creates a Whiplash suit powered by arc reactor technology to challenge Tony"
+        "scene": "Monaco race and the Stark Expo battle",
+        "description": "Vanko attacks Tony at the Monaco Grand Prix with electrified whips, then returns at the Expo in armor with an army of drones. Nick Fury explains that Howard Stark had Anton deported for trying to sell the reactor."
       },
-      "explanation": "This establishes the pattern of Tony's weapons creating enemies. The collateral damage from his past business haunts him directly.",
-      "relatedCharacters": ["Tony Stark", "Ivan Vanko"],
-      "relatedArticles": ["iron-man-2-vanko-conflict"]
+      "explanation": "The villain is the Stark family's past coming back: the same reactor technology, from the partner Howard pushed out.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Ivan Vanko"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Iron Man 2, Plot",
+        "url": "https://en.wikipedia.org/wiki/Iron_Man_2#Plot"
+      }
     },
     {
       "id": "cb-008",
-      "title": "Stark Industries Weapons Legacy",
+      "title": "Stark Industries' Weapons Legacy",
       "type": "thematic",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "00:08:00",
-        "description": "Tony realizes his Jericho missile killed innocent people and vows to change"
+        "scene": "Press conference after Tony's return",
+        "description": "After being wounded by one of his own company's missiles in Afghanistan, Tony announces that Stark Industries will stop making weapons."
       },
       "fulfillment": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:10:00",
-        "description": "Tony's arc reactor weapons technology is weaponized by Shield and used against humanity"
+        "scene": "Argument on the Helicarrier",
+        "description": "Tony and Steve find out that S.H.I.E.L.D. plans to use the Tesseract to build weapons, and the team turns on itself."
       },
-      "explanation": "Tony's attempt to stop weapons manufacturing never fully succeeds. His technology continues to be used as a weapon, reinforcing his guilt and paranoia.",
-      "relatedCharacters": ["Tony Stark"],
-      "relatedArticles": ["iron-man-weapons-guilt"]
+      "explanation": "The man who walked away from making weapons finds his new allies planning to make them.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Nick Fury"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Tony Stark (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-009",
-      "title": "The Tesseract Connection",
+      "title": "The Avengers Initiative",
       "type": "setup",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:58:00",
-        "description": "Post-credits scene hints at a larger power behind the scenes (Fury enters)"
+        "scene": "Post-credits scene",
+        "description": "Nick Fury visits Tony at home, tells him he has become part of a bigger universe, and says he wants to talk about the \"Avenger Initiative\"."
       },
       "fulfillment": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:15:00",
-        "description": "The Tesseract is revealed as a powerful cosmic cube that opens a portal for aliens"
+        "scene": "After Loki steals the Tesseract",
+        "description": "Fury reactivates the Avengers Initiative and brings in Steve Rogers, Bruce Banner and Tony to go after Loki."
       },
-      "explanation": "The post-credits scene introduces the universe-spanning conspiracy. The Avengers film confirms that S.H.I.E.L.D. has been studying cosmic threats all along.",
-      "relatedCharacters": ["Nick Fury", "Loki"],
-      "relatedArticles": ["avengers-loki-scepter-mind-stone"]
+      "explanation": "This was Samuel L. Jackson's first appearance as Fury. The team he mentions in 2008 finally assembles four years later.",
+      "relatedCharacters": [
+        "Nick Fury",
+        "Tony Stark"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Nick Fury (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Nick_Fury_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-010",
-      "title": "Tony's Arrogance",
+      "title": "\"I Am Iron Man\" Has Consequences",
       "type": "dialogue",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "00:12:00",
-        "description": "Tony says 'I am Iron Man' to the press, revealing his identity to the world"
+        "scene": "Final press conference",
+        "description": "Tony drops the cover story he was given and tells the press that he is Iron Man."
       },
       "fulfillment": {
         "movieId": "iron-man-2",
         "movieTitle": "Iron Man 2",
         "movieYear": 2010,
-        "timestamp": "00:02:00",
-        "description": "Tony's public identity attracts government attention and dangerous enemies worldwide"
+        "scene": "Opening scenes",
+        "description": "Ivan Vanko sees the reveal on the news and starts building his own reactor, and Tony is pressed to hand his armor over to the government."
       },
-      "explanation": "This arrogant choice creates complications throughout Iron Man 2, where his identity is exploited by Vanko and the government. The decision haunts him throughout the MCU.",
-      "relatedCharacters": ["Tony Stark"],
-      "relatedArticles": ["iron-man-identity-consequences"]
+      "explanation": "Without a secret identity, Tony's technology and life are public. The sequel is built on the trouble that causes.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Ivan Vanko"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Iron Man 2, Plot",
+        "url": "https://en.wikipedia.org/wiki/Iron_Man_2#Plot"
+      }
     },
     {
       "id": "cb-011",
-      "title": "Rhodey's Military Connection",
+      "title": "Rhodey's Suit",
       "type": "setup",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "00:35:00",
-        "description": "Tony's best friend Rhodey is introduced as a U.S. Air Force officer"
+        "scene": "Throughout",
+        "description": "James \"Rhodey\" Rhodes, an Air Force officer and Tony's best friend, is introduced as Tony's military contact. Director Jon Favreau cast Terrence Howard partly because he could play War Machine in a sequel."
       },
       "fulfillment": {
         "movieId": "iron-man-2",
         "movieTitle": "Iron Man 2",
         "movieYear": 2010,
-        "timestamp": "01:35:00",
-        "description": "Rhodey is pressured by the military to steal the Mark II armor, creating conflict"
+        "scene": "Tony's birthday party",
+        "description": "Rhodes, now played by Don Cheadle, puts on one of Tony's suits to stop a drunk Tony and takes it to the Air Force. Weaponized, it becomes War Machine."
       },
-      "explanation": "Rhodey's military loyalty becomes a source of tension with Tony. This sets up the larger conflict in later MCU films about government control of superhuman forces.",
-      "relatedCharacters": ["Tony Stark", "James Rhodey Rhodes"],
-      "relatedArticles": ["iron-man-2-rhodey-conflict"]
+      "explanation": "Planned from the first film: the friend in uniform becomes the second armored hero. His military loyalty is what puts the suit in the government's hands.",
+      "relatedCharacters": [
+        "James Rhodes",
+        "Tony Stark"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: James Rhodes (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/James_Rhodes_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-012",
-      "title": "Phil Coulson's Persistence",
-      "type": "dialogue",
+      "title": "Agent Coulson's First Case",
+      "type": "setup",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:52:00",
-        "description": "Phil Coulson from S.H.I.E.L.D. interviews Tony about his time in captivity"
+        "scene": "Throughout",
+        "description": "Agent Phil Coulson, the first S.H.I.E.L.D. agent seen in the MCU, wants to debrief Tony on his captivity and later helps Pepper go after Obadiah Stane."
       },
       "fulfillment": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:15:00",
-        "description": "Coulson's death at Loki's hands becomes a rallying cry for the Avengers"
+        "scene": "Loki's escape from the Helicarrier",
+        "description": "Coulson is killed by Loki, and Fury uses his death to make the Avengers work together."
       },
-      "explanation": "Coulson's first appearance establishes him as a key S.H.I.E.L.D. operative. His death in Avengers 1 proves that the threats are real and dangerous, uniting the team.",
-      "relatedCharacters": ["Phil Coulson", "Tony Stark"],
-      "relatedArticles": ["coulson-mcu-arc"]
+      "explanation": "A small part in 2008 grew across Iron Man 2 and Thor until his death brought the team together.",
+      "relatedCharacters": [
+        "Phil Coulson",
+        "Tony Stark",
+        "Loki"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Phil Coulson",
+        "url": "https://en.wikipedia.org/wiki/Phil_Coulson"
+      }
     },
     {
       "id": "cb-013",
-      "title": "Natasha Romanoff's Infiltration",
+      "title": "Natalie Rushman Is Natasha Romanoff",
       "type": "setup",
       "foreshadow": {
         "movieId": "iron-man-2",
         "movieTitle": "Iron Man 2",
         "movieYear": 2010,
-        "timestamp": "00:50:00",
-        "description": "Natasha is introduced undercover as Pepper's assistant; she's placed by S.H.I.E.L.D. to monitor Tony"
+        "scene": "Tony hires a new assistant",
+        "description": "\"Natalie Rushman\" becomes Tony's new personal assistant when Pepper becomes CEO. Fury later reveals she is S.H.I.E.L.D. agent Natasha Romanoff."
       },
       "fulfillment": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:20:00",
-        "description": "Natasha is fully revealed as Black Widow and becomes a key member of the Avengers"
+        "scene": "Throughout",
+        "description": "Natasha recruits Bruce Banner, frees Clint Barton from Loki's control and uses Loki's scepter to close the portal over New York."
       },
-      "explanation": "Natasha's introduction as a spy sets up her role in the MCU. Her transition from S.H.I.E.L.D. agent to trusted Avenger shows growth and earned trust.",
-      "relatedCharacters": ["Natasha Romanoff", "Pepper Potts"],
-      "relatedArticles": ["black-widow-mcu-arc"]
-    },
-    {
-      "id": "cb-014",
-      "title": "Stark Tower Technology",
-      "type": "visual-motif",
-      "foreshadow": {
-        "movieId": "iron-man-1",
-        "movieTitle": "Iron Man",
-        "movieYear": 2008,
-        "timestamp": "01:55:00",
-        "description": "Tony's penthouse in Los Angeles is shown with cutting-edge technology"
-      },
-      "fulfillment": {
-        "movieId": "avengers-1",
-        "movieTitle": "The Avengers",
-        "movieYear": 2012,
-        "timestamp": "00:55:00",
-        "description": "Stark Tower in New York becomes the hub for Avengers operations with AI systems"
-      },
-      "explanation": "Tony's personal tech infrastructure evolves into a superweapon. The tower becomes central to MCU operations and a target for enemies throughout the franchise.",
-      "relatedCharacters": ["Tony Stark", "JARVIS"],
-      "relatedArticles": ["stark-tower-significance"]
-    },
-    {
-      "id": "cb-015",
-      "title": "Loki's Scepter",
-      "type": "setup",
-      "foreshadow": {
-        "movieId": "avengers-1",
-        "movieTitle": "The Avengers",
-        "movieYear": 2012,
-        "timestamp": "02:20:00",
-        "description": "Loki's scepter is revealed to contain the Mind Stone; it affects Bruce Banner"
-      },
-      "fulfillment": {
-        "movieId": "iron-man-3",
-        "movieTitle": "Iron Man 3",
-        "movieYear": 2013,
-        "timestamp": "00:10:00",
-        "description": "The Mind Stone's influence is indirectly referenced in discussions of enhanced individuals"
-      },
-      "explanation": "The scepter's power and the Mind Stone become crucial to understanding powered individuals. Though IM3 doesn't focus on it, the Extremis soldiers echo the theme of superhuman enhancement.",
-      "relatedCharacters": ["Loki", "Tony Stark"],
-      "relatedArticles": ["avengers-loki-scepter-mind-stone"]
+      "explanation": "The undercover spy from Iron Man 2 becomes one of the six founding Avengers.",
+      "relatedCharacters": [
+        "Natasha Romanoff",
+        "Tony Stark"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Natasha Romanoff (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Natasha_Romanoff_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-016",
-      "title": "The Tesseract's Power",
+      "title": "The Tesseract Comes Back",
       "type": "visual-motif",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:05:00",
-        "description": "The Tesseract glows with cosmic energy as S.H.I.E.L.D. studies it in Project Pegasus"
+        "scene": "Opening at the S.H.I.E.L.D. research base",
+        "description": "Erik Selvig is studying the Tesseract for S.H.I.E.L.D. when it opens a portal and Loki comes through and steals it."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "01:25:00",
-        "description": "The Tesseract (Space Stone) is identified as one of six Infinity Stones; it's used for time travel"
+        "scene": "The time heist",
+        "description": "Tony and Scott fail to take the 2012 Tesseract after the Battle of New York, so Tony and Steve travel to 1970 and take it from Camp Lehigh instead."
       },
-      "explanation": "The Tesseract becomes foundational to the Infinity Stones plot. Endgame reveals that all the cosmic mysteries point to these six powerful objects.",
-      "relatedCharacters": ["Nick Fury", "Tony Stark"],
-      "relatedArticles": ["infinity-stones-explained"]
+      "explanation": "Endgame goes back to the very case and the very cube from The Avengers. The first attempt fails and the team has to look for it even further back.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Steve Rogers",
+        "Loki"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Infinity Stones, Space Stone",
+        "url": "https://en.wikipedia.org/wiki/Infinity_Stones#Space_Stone"
+      }
     },
     {
       "id": "cb-017",
-      "title": "Bruce Banner's Rage",
+      "title": "Bruce Banner's Anger",
       "type": "thematic",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:00:00",
-        "description": "Bruce warns the team that the Hulk is triggered by anger and fear"
+        "scene": "Battle of New York",
+        "description": "After losing control on the Helicarrier, Bruce tells Steve that his secret is that he is \"always angry\", and becomes the Hulk on purpose."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "00:30:00",
-        "description": "Bruce has achieved balance with the Hulk, showing years of internal struggle and growth"
+        "scene": "Five years after the Blip",
+        "description": "Bruce has merged his mind with the Hulk's body, keeping the Hulk form while staying himself."
       },
-      "explanation": "Banner's journey from uncontrolled rage to acceptance shows character development. In Endgame, he's the most balanced version of himself, merging human and Hulk.",
-      "relatedCharacters": ["Bruce Banner", "The Hulk"],
-      "relatedArticles": ["bruce-banner-character-arc"]
+      "explanation": "In The Avengers Bruce learns to choose when to change. By Endgame the two sides have become one person.",
+      "relatedCharacters": [
+        "Bruce Banner",
+        "Steve Rogers"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Bruce Banner (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Bruce_Banner_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-018",
-      "title": "Clint Barton's Skill",
+      "title": "Clint and Natasha",
       "type": "setup",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:45:00",
-        "description": "Clint Barton is introduced as Hawkeye, a master archer with perfect aim"
+        "scene": "Helicarrier attack",
+        "description": "Clint Barton spends most of the film under Loki's mind control until Natasha fights him and frees him."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:15:00",
-        "description": "Clint's archery skills are essential to the time heist plan in retrieving stones"
+        "scene": "Vormir",
+        "description": "To get the Soul Stone, one of them has to give up their life. Each tries to be the one, and Natasha dies so Clint can bring the Stone back."
       },
-      "explanation": "Hawkeye's skills are underestimated but prove invaluable. His role evolves from supporting player to crucial member in the endgame.",
-      "relatedCharacters": ["Clint Barton", "Natasha Romanoff"],
-      "relatedArticles": ["hawkeye-mcu-role"]
-    },
-    {
-      "id": "cb-019",
-      "title": "Thor's Arrival",
-      "type": "setup",
-      "foreshadow": {
-        "movieId": "avengers-1",
-        "movieTitle": "The Avengers",
-        "movieYear": 2012,
-        "timestamp": "00:30:00",
-        "description": "Thor arrives on Earth to stop Loki; he's revealed as an alien god from another realm"
-      },
-      "fulfillment": {
-        "movieId": "endgame",
-        "movieTitle": "Avengers: Endgame",
-        "movieYear": 2019,
-        "timestamp": "00:15:00",
-        "description": "Thor has spent years adjusting to Earth and is now a core member of the Avengers"
-      },
-      "explanation": "Thor's introduction as a cosmic force expands the MCU beyond Earth. By Endgame, he's fully integrated into the team despite his alien origin.",
-      "relatedCharacters": ["Thor", "Loki"],
-      "relatedArticles": ["thor-earth-integration"]
+      "explanation": "In 2012 Natasha saves Clint's mind. In Endgame she saves his life, at the cost of her own.",
+      "relatedCharacters": [
+        "Clint Barton",
+        "Natasha Romanoff"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Clint Barton (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Clint_Barton_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-020",
-      "title": "Loki's Ambition",
-      "type": "dialogue",
+      "title": "Loki and the Tesseract",
+      "type": "payoff",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "02:30:00",
-        "description": "Loki declares 'I am burdened with glorious purpose' in his final confrontation with Thor"
+        "scene": "Opening and ending",
+        "description": "Loki comes to Earth through the Tesseract and steals it. At the end, Thor takes Loki and the Tesseract back to Asgard."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "00:25:00",
-        "description": "An alternate timeline Loki escapes during the time heist, leading to future MCU storylines"
+        "scene": "The time heist in 2012",
+        "description": "When the heist goes wrong, the Tesseract lands at the 2012 Loki's feet. He grabs it and escapes through a portal."
       },
-      "explanation": "Loki's singular focus on conquest and purpose echoes throughout the MCU. The alternate timeline Loki from Endgame sets up his redemption in later stories.",
-      "relatedCharacters": ["Loki", "Thor"],
-      "relatedArticles": ["loki-character-arc"]
+      "explanation": "Endgame gives the 2012 Loki a second chance at the cube and lets him escape. That version of Loki is the one picked up later in the Loki TV series (2021).",
+      "relatedCharacters": [
+        "Loki",
+        "Thor",
+        "Tony Stark"
+      ],
+      "relatedArticles": [
+        "avengers-loki-scepter-mind-stone"
+      ],
+      "source": {
+        "name": "Wikipedia: Loki (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Loki_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-021",
-      "title": "Iron Man's Leadership",
+      "title": "The Trip Through the Wormhole",
       "type": "thematic",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:30:00",
-        "description": "Tony provides strategic leadership during the Battle of New York; he leads the team"
+        "scene": "End of the Battle of New York",
+        "description": "Tony grabs the nuclear missile fired at Manhattan and flies it through the wormhole in what looks like a one-way trip. The Hulk catches him as he falls back."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:45:00",
-        "description": "Tony devises and executes the time heist strategy that defeats Thanos"
+        "scene": "Final battle",
+        "description": "Tony takes the Stones and uses them against Thanos and his army, and this time the sacrifice costs him his life."
       },
-      "explanation": "From arrogant individual to team leader, Tony's evolution culminates in his final strategic sacrifice for the greater good.",
-      "relatedCharacters": ["Tony Stark"],
-      "relatedArticles": ["tony-stark-leadership"]
+      "explanation": "The Avengers shows Tony willing to die for everyone else. Endgame finishes the act he survived the first time.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Bruce Banner"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Tony Stark (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-022",
@@ -470,151 +549,175 @@
         "movieId": "iron-man-3",
         "movieTitle": "Iron Man 3",
         "movieYear": 2013,
-        "timestamp": "00:20:00",
-        "description": "Aldrich Killian is introduced as a brilliant scientist whom Tony snubbed years ago at a rooftop party"
+        "scene": "Opening: New Year's Eve 1999",
+        "description": "At a New Year's Eve party in 1999, Aldrich Killian, then disabled, asks Tony to join his company A.I.M., and Tony brushes him off."
       },
       "fulfillment": {
         "movieId": "iron-man-3",
         "movieTitle": "Iron Man 3",
         "movieYear": 2013,
-        "timestamp": "01:50:00",
-        "description": "Killian is revealed as the mastermind behind the Mandarin terrorism, seeking revenge on Tony"
+        "scene": "The Miami reveal",
+        "description": "Thirteen years later, Killian turns out to be the mastermind behind the Mandarin attacks, after using Extremis to cure his own disability."
       },
-      "explanation": "This callback highlights that Tony's past arrogance creates present enemies. A ten-year-old snub leads to an elaborate revenge plot.",
-      "relatedCharacters": ["Tony Stark", "Aldrich Killian"],
-      "relatedArticles": ["iron-man-3-killian-revenge"]
+      "explanation": "One careless brush-off in 1999 becomes the villain's whole reason for the plot.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Aldrich Killian"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Iron Man 3, Plot",
+        "url": "https://en.wikipedia.org/wiki/Iron_Man_3#Plot"
+      }
     },
     {
       "id": "cb-023",
-      "title": "Extremis Enhancement",
-      "type": "visual-motif",
+      "title": "Extremis Has a Flaw",
+      "type": "setup",
       "foreshadow": {
         "movieId": "iron-man-3",
         "movieTitle": "Iron Man 3",
         "movieYear": 2013,
-        "timestamp": "00:45:00",
-        "description": "Killian demonstrates Extremis technology on his subordinates, granting superhuman healing and fire powers"
+        "scene": "The Tennessee investigation",
+        "description": "Tony finds out the \"Mandarin bombings\" were really soldiers on Extremis whose bodies rejected it and exploded, covered up to hide the treatment's flaws."
       },
       "fulfillment": {
-        "movieId": "endgame",
-        "movieTitle": "Avengers: Endgame",
-        "movieYear": 2019,
-        "timestamp": "01:00:00",
-        "description": "Pepper Potts is revealed to have absorbed Extremis powers in IM3, which she retains through Endgame"
+        "movieId": "iron-man-3",
+        "movieTitle": "Iron Man 3",
+        "movieYear": 2013,
+        "scene": "Oil-rig battle and ending",
+        "description": "Pepper, injected with Extremis by Killian, survives a deadly fall because of it and kills Killian. Afterwards Tony helps stabilize the Extremis in her."
       },
-      "explanation": "Extremis transforms Pepper from civilian to enhanced individual. By Endgame, she's a capable fighter alongside Tony, showing how IM3's plot points persist in the MCU.",
-      "relatedCharacters": ["Pepper Potts", "Aldrich Killian"],
-      "relatedArticles": ["extremis-technology-explained"]
+      "explanation": "The flaw that makes Extremis a weapon is the danger hanging over Pepper. The film ends with Tony fixing it for her rather than for Killian.",
+      "relatedCharacters": [
+        "Pepper Potts",
+        "Tony Stark",
+        "Aldrich Killian"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Iron Man 3, Plot",
+        "url": "https://en.wikipedia.org/wiki/Iron_Man_3#Plot"
+      }
     },
     {
       "id": "cb-024",
-      "title": "Tony's PTSD",
+      "title": "Tony's Panic Attacks",
       "type": "thematic",
       "foreshadow": {
-        "movieId": "iron-man-3",
-        "movieTitle": "Iron Man 3",
-        "movieYear": 2013,
-        "timestamp": "00:10:00",
-        "description": "Tony suffers from insomnia and panic attacks following the events of The Avengers"
-      },
-      "fulfillment": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "02:30:00",
-        "description": "The alien invasion through the Tesseract portal is traumatic for Tony, who fears cosmic threats"
+        "scene": "End of the Battle of New York",
+        "description": "Tony flies through the wormhole into space, sees the alien fleet and blacks out before falling back to Earth."
       },
-      "explanation": "IM3 reveals the lasting psychological impact of fighting aliens. Tony's paranoia and need for control stem directly from trauma. This sets up his arc in later MCU films.",
-      "relatedCharacters": ["Tony Stark", "Pepper Potts"],
-      "relatedArticles": ["tony-stark-ptsd-arc"]
+      "fulfillment": {
+        "movieId": "iron-man-3",
+        "movieTitle": "Iron Man 3",
+        "movieYear": 2013,
+        "scene": "Throughout",
+        "description": "Months later Tony has post-traumatic stress, panic attacks and insomnia from the invasion, and copes by building dozens of suits."
+      },
+      "explanation": "Iron Man 3 treats the climax of The Avengers as something Tony has not got over, and builds his story around it.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Pepper Potts"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Iron Man 3, Plot",
+        "url": "https://en.wikipedia.org/wiki/Iron_Man_3#Plot"
+      }
     },
     {
       "id": "cb-025",
-      "title": "The Mandarin's False Identity",
+      "title": "The Mandarin Is an Actor",
       "type": "plot-twist",
       "foreshadow": {
         "movieId": "iron-man-3",
         "movieTitle": "Iron Man 3",
         "movieYear": 2013,
-        "timestamp": "00:30:00",
-        "description": "News reports show a masked terrorist called 'The Mandarin' taking responsibility for bombings"
+        "scene": "The Mandarin's TV broadcasts",
+        "description": "A terrorist called the Mandarin claims a series of bombings in videos broadcast around the world."
       },
       "fulfillment": {
         "movieId": "iron-man-3",
         "movieTitle": "Iron Man 3",
         "movieYear": 2013,
-        "timestamp": "01:45:00",
-        "description": "The Mandarin is revealed to be an actor named Trevor Slattery; Killian created the persona"
+        "scene": "The Miami hideout",
+        "description": "Tony finds that the Mandarin is Trevor Slattery, an English actor hired by Killian and A.I.M. to play the part and cover up the Extremis explosions."
       },
-      "explanation": "The twist subverts expectations. The terror is real, but the face behind it is a fiction created by corporate interests, adding a layer of corporate espionage to superhero action.",
-      "relatedCharacters": ["The Mandarin", "Trevor Slattery", "Aldrich Killian"],
-      "relatedArticles": ["iron-man-3-mandarin-twist"]
+      "explanation": "The terrorist in the broadcasts is a performance, and the real villain is the businessman behind it.",
+      "relatedCharacters": [
+        "Trevor Slattery",
+        "Aldrich Killian",
+        "Tony Stark"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Trevor Slattery",
+        "url": "https://en.wikipedia.org/wiki/Trevor_Slattery"
+      }
     },
     {
       "id": "cb-026",
-      "title": "Pepper's Sacrifice",
+      "title": "Pepper Ends the Fight",
       "type": "payoff",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:15:00",
-        "description": "Pepper helps place the arc reactor in Tony's chest, risking her own safety"
+        "scene": "Final fight on the Stark Industries roof",
+        "description": "Outmatched by Stane, Tony tells Pepper to overload the building's big arc reactor. The surge sends Stane falling into it and kills him."
       },
       "fulfillment": {
         "movieId": "iron-man-3",
         "movieTitle": "Iron Man 3",
         "movieYear": 2013,
-        "timestamp": "01:50:00",
-        "description": "Pepper is exposed to Extremis and gains powers; she sacrifices her humanity to save Tony"
+        "scene": "Oil-rig battle",
+        "description": "With Tony cornered by Killian, Pepper, now with Extremis powers, attacks Killian and kills him."
       },
-      "explanation": "Pepper's willingness to help Tony comes full circle. She evolves from supporting character to active participant, ultimately gaining abilities that make her equal to Tony.",
-      "relatedCharacters": ["Tony Stark", "Pepper Potts"],
-      "relatedArticles": ["pepper-potts-character-arc"]
-    },
-    {
-      "id": "cb-027",
-      "title": "Avengers Tower Hub",
-      "type": "visual-motif",
-      "foreshadow": {
-        "movieId": "avengers-1",
-        "movieTitle": "The Avengers",
-        "movieYear": 2012,
-        "timestamp": "01:35:00",
-        "description": "Stark Tower is established as the Avengers' base of operations post-Battle of New York"
-      },
-      "fulfillment": {
-        "movieId": "endgame",
-        "movieTitle": "Avengers: Endgame",
-        "movieYear": 2019,
-        "timestamp": "00:35:00",
-        "description": "The remaining Avengers gather at the Compound (formerly Stark Tower) to plan their final assault"
-      },
-      "explanation": "Stark Tower evolves from Tony's personal headquarters to the Avengers' symbol of unity and hope. By Endgame, it's where Earth's heroes make their last stand.",
-      "relatedCharacters": ["Tony Stark"],
-      "relatedArticles": ["stark-tower-avengers-hub"]
+      "explanation": "In both films Tony cannot finish the main villain himself and Pepper does. In Iron Man 3 she does it in the fight herself.",
+      "relatedCharacters": [
+        "Pepper Potts",
+        "Tony Stark",
+        "Obadiah Stane",
+        "Aldrich Killian"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Pepper Potts (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Pepper_Potts_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-028",
-      "title": "Cap's Defrosting",
+      "title": "Cap, Out of Time",
       "type": "setup",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:05:00",
-        "description": "Captain America is revealed to have been frozen since World War II; he's out of time and place"
+        "scene": "Steve's introduction",
+        "description": "After nearly 70 years frozen in ice (shown at the end of Captain America: The First Avenger), Steve is still adjusting to a world where most people he knew are gone when Fury brings him in."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:58:00",
-        "description": "Aged Steve Rogers chooses to go back in time and live in the past with Peggy Carter"
+        "scene": "Ending",
+        "description": "After returning the Stones, Steve stays in the past and lives his life with Peggy Carter. He comes back an old man and passes his shield to Sam Wilson."
       },
-      "explanation": "Cap's fish-out-of-water status in the modern world is resolved when he finally gets to return to his own time and be with the woman he loves.",
-      "relatedCharacters": ["Steve Rogers", "Peggy Carter"],
-      "relatedArticles": ["captain-america-arc"]
+      "explanation": "The man out of time finally goes back to his own time and gets the life he lost.",
+      "relatedCharacters": [
+        "Steve Rogers",
+        "Peggy Carter"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Steve Rogers (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Steve_Rogers_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-029",
@@ -624,261 +727,303 @@
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "02:35:00",
-        "description": "A post-credits scene shows Thanos smiling; Loki's master is revealed to be watching Earth"
+        "scene": "Mid-credits scene",
+        "description": "The Other reports the failed attack on Earth to his master. The film does not name him; Kevin Feige confirmed it was Thanos."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "00:45:00",
-        "description": "Thanos is defeated after years of planning his assault on the Avengers"
+        "scene": "Opening and final battle",
+        "description": "Thor kills the present-day Thanos early in the film. A 2014 Thanos then follows the Avengers to the present and is wiped out by Tony in the final battle."
       },
-      "explanation": "The Avengers' first mission sets up the ultimate threat. Everything from Avengers 1 onwards builds to the Thanos conflict resolved in Endgame.",
-      "relatedCharacters": ["Thanos", "Loki"],
-      "relatedArticles": ["thanos-endgame-arc"]
+      "explanation": "Thanos was teased in a few seconds in 2012 and was not defeated until 2019.",
+      "relatedCharacters": [
+        "Thanos",
+        "Loki",
+        "Tony Stark",
+        "Thor"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Thanos (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Thanos_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-030",
-      "title": "The Battle of New York",
+      "title": "Back to the Battle of New York",
       "type": "visual-motif",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "02:00:00",
-        "description": "New York City is invaded by aliens through a wormhole; the city is nearly destroyed"
+        "scene": "Battle of New York",
+        "description": "The Chitauri pour through a portal over Stark Tower and the six Avengers fight them across Manhattan."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:35:00",
-        "description": "The Final Battle brings heroes from all timelines to fight Thanos in New York again"
+        "scene": "The time heist",
+        "description": "Bruce, Scott, Steve and Tony travel back to New York in 2012, during Loki's attack, to steal the Space, Mind and Time Stones from that day."
       },
-      "explanation": "New York becomes the symbolic battleground for the MCU. Where the Avengers first united against invasion, they make their final stand against extinction.",
-      "relatedCharacters": ["Tony Stark", "Steve Rogers", "Thor"],
-      "relatedArticles": ["battle-of-new-york-final-battle"]
+      "explanation": "Endgame walks back into the 2012 battle, with the 2012 versions of the heroes still in the scene.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Steve Rogers",
+        "Bruce Banner",
+        "Loki"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Avengers: Endgame, Plot",
+        "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame#Plot"
+      }
     },
     {
       "id": "cb-031",
-      "title": "Agent Coulson's Sacrifice",
+      "title": "Coulson Meets His Hero",
       "type": "payoff",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:00:00",
-        "description": "Coulson is shown as a dedicated S.H.I.E.L.D. operative, devoted to the Avengers initiative"
+        "scene": "On the Helicarrier",
+        "description": "Coulson, who grew up idolizing Captain America, finally meets Steve Rogers."
       },
       "fulfillment": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:50:00",
-        "description": "Coulson is killed by Loki, which motivates the Avengers to work together"
+        "scene": "After Loki's escape",
+        "description": "Loki kills Coulson with the scepter, and Fury uses Coulson's death to get the divided heroes to fight as one team."
       },
-      "explanation": "Coulson's death proves the stakes are real and unites the team. His sacrifice makes the Avengers understand they must trust each other to survive.",
-      "relatedCharacters": ["Phil Coulson", "Loki"],
-      "relatedArticles": ["coulson-sacrifice-avengers"]
+      "explanation": "Making Coulson the team's biggest fan makes his death hit harder, and it is what brings the group together.",
+      "relatedCharacters": [
+        "Phil Coulson",
+        "Steve Rogers",
+        "Loki",
+        "Nick Fury"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Phil Coulson",
+        "url": "https://en.wikipedia.org/wiki/Phil_Coulson"
+      }
     },
     {
       "id": "cb-032",
-      "title": "Infinity Stone #1: Space",
+      "title": "Infinity Stone: Space",
       "type": "setup",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:05:00",
-        "description": "The Tesseract (Space Stone) is studied by S.H.I.E.L.D. and harnesses unlimited cosmic power"
+        "scene": "Throughout",
+        "description": "The Tesseract is described as a powerful energy source of unknown potential. The film never calls it an Infinity Stone; Kevin Feige later said it holds the Space Stone."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "01:25:00",
-        "description": "The Space Stone is identified as one of the six Infinity Stones used to undo Thanos's snap"
+        "scene": "Return from the heist",
+        "description": "The Space Stone goes into the Nano Gauntlet Tony builds, and Bruce uses the gauntlet to bring back everyone Thanos erased."
       },
-      "explanation": "The Tesseract's true nature as an Infinity Stone is revealed years after its introduction. It becomes essential to understanding cosmic balance.",
-      "relatedCharacters": ["Nick Fury", "Thanos"],
-      "relatedArticles": ["infinity-stones-explained"]
+      "explanation": "The glowing cube that drives the first team-up is part of the tool that undoes the Blip.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Bruce Banner",
+        "Loki"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Infinity Stones",
+        "url": "https://en.wikipedia.org/wiki/Infinity_Stones"
+      }
     },
     {
       "id": "cb-033",
-      "title": "Infinity Stone #2: Mind",
+      "title": "Infinity Stone: Mind",
       "type": "setup",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:15:00",
-        "description": "Loki's scepter glows with otherworldly power and controls people's minds"
+        "scene": "Opening at the S.H.I.E.L.D. base",
+        "description": "Loki uses his scepter to take control of Erik Selvig and Clint Barton. The film does not say what powers it; Avengers: Age of Ultron (2015) shows the Mind Stone inside."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "01:25:00",
-        "description": "The Mind Stone inside Loki's scepter is revealed as Infinity Stone #2"
+        "scene": "The time heist at Stark Tower",
+        "description": "Steve takes the 2012 scepter, with the Mind Stone in it, from Hydra sleeper agents inside S.H.I.E.L.D., and later uses it to knock out his 2012 self."
       },
-      "explanation": "The scepter's power explained years later. It's one of six cosmic objects that define reality itself.",
-      "relatedCharacters": ["Loki", "Thanos"],
-      "relatedArticles": ["loki-scepter-mind-stone"]
+      "explanation": "The mind-control weapon from 2012 becomes one of the six Stones the team needs.",
+      "relatedCharacters": [
+        "Loki",
+        "Steve Rogers",
+        "Clint Barton"
+      ],
+      "relatedArticles": [
+        "avengers-loki-scepter-mind-stone"
+      ],
+      "source": {
+        "name": "Wikipedia: Infinity Stones",
+        "url": "https://en.wikipedia.org/wiki/Infinity_Stones"
+      }
     },
     {
       "id": "cb-034",
-      "title": "Hulk's Strength",
+      "title": "Banner and the Stones",
       "type": "thematic",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:00:00",
-        "description": "The Hulk is established as the most powerful Avenger in raw strength"
+        "scene": "Natasha recruits Bruce in Kolkata",
+        "description": "S.H.I.E.L.D. brings Bruce in because his gamma radiation expertise can track the Tesseract."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "01:00:00",
-        "description": "Professor Hulk uses his combined power and intelligence to reverse Thanos's snap"
+        "scene": "Return from the heist",
+        "description": "Bruce, now merged with the Hulk, wears the Nano Gauntlet with all six Stones and brings back everyone lost in the Blip."
       },
-      "explanation": "The Hulk's raw power is finally put to good use. Bruce's intellectual approach combined with Hulk's strength saves the universe.",
-      "relatedCharacters": ["Bruce Banner", "The Hulk"],
-      "relatedArticles": ["hulk-endgame-reversal"]
+      "explanation": "The scientist hired to track one Stone ends up being the one who uses all six of them to save people.",
+      "relatedCharacters": [
+        "Bruce Banner",
+        "Natasha Romanoff"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Bruce Banner (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Bruce_Banner_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-035",
-      "title": "Captain America's Resolve",
-      "type": "thematic",
-      "foreshadow": {
-        "movieId": "avengers-1",
-        "movieTitle": "The Avengers",
-        "movieYear": 2012,
-        "timestamp": "00:55:00",
-        "description": "Steve Rogers is shown as a leader who makes tough calls and stands by his principles"
-      },
-      "fulfillment": {
-        "movieId": "endgame",
-        "movieTitle": "Avengers: Endgame",
-        "movieYear": 2019,
-        "timestamp": "02:45:00",
-        "description": "Cap leads the final assault on Thanos, standing against impossible odds with unwavering conviction"
-      },
-      "explanation": "Cap's moral compass and leadership are consistent throughout. By Endgame, his principles guide the entire team to victory.",
-      "relatedCharacters": ["Steve Rogers"],
-      "relatedArticles": ["captain-america-endgame"]
-    },
-    {
-      "id": "cb-036",
-      "title": "Iron Man's Redemption",
-      "type": "payoff",
-      "foreshadow": {
-        "movieId": "iron-man-1",
-        "movieTitle": "Iron Man",
-        "movieYear": 2008,
-        "timestamp": "00:08:00",
-        "description": "Tony realizes his weapons hurt innocent people and vows to change his ways"
-      },
-      "fulfillment": {
-        "movieId": "endgame",
-        "movieTitle": "Avengers: Endgame",
-        "movieYear": 2019,
-        "timestamp": "02:50:00",
-        "description": "Tony sacrifices himself with the Infinity Stones to save the universe from harm"
-      },
-      "explanation": "Eleven years of character development culminates in Tony's ultimate redemption. He stops using weapons to harm and uses power to save.",
-      "relatedCharacters": ["Tony Stark"],
-      "relatedArticles": ["tony-stark-redemption-arc"]
-    },
-    {
-      "id": "cb-037",
-      "title": "Loki's Relatable Motivation",
+      "title": "Avengers... Assemble",
       "type": "dialogue",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "00:30:00",
-        "description": "Loki reveals he was exiled by Thanos and wants to conquer Earth to prove his worth"
+        "scene": "Throughout",
+        "description": "The team forms, but nobody says the comics' rallying cry \"Avengers assemble\". Kevin Feige felt it did not fit the film, and Age of Ultron (2015) cut Cap off mid-line."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "00:25:00",
-        "description": "Time-heist Loki escapes and begins a journey toward redemption in later MCU stories"
+        "scene": "Final battle (the portals scene)",
+        "description": "With every returned hero gathered behind him, Steve finally says \"Avengers... assemble\" before the charge against Thanos's army."
       },
-      "explanation": "Loki's desire for approval and belonging, hinted in Avengers 1, becomes the core of his character arc that spans the MCU.",
-      "relatedCharacters": ["Loki", "Thanos"],
-      "relatedArticles": ["loki-character-redemption"]
+      "explanation": "Marvel held the comics' most famous line back for seven years and used it once the full team was assembled.",
+      "relatedCharacters": [
+        "Steve Rogers"
+      ],
+      "relatedArticles": [
+        "endgame-final-portal-detail"
+      ],
+      "source": {
+        "name": "Wikipedia: \"Avengers assemble\" scene",
+        "url": "https://en.wikipedia.org/wiki/Avengers_assemble_scene"
+      }
     },
     {
       "id": "cb-038",
-      "title": "Tony's Technology",
+      "title": "From Scraps to the Nano Gauntlet",
       "type": "visual-motif",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "00:45:00",
-        "description": "Tony's arc reactor and armor represent the pinnacle of human engineering"
+        "scene": "The cave",
+        "description": "Held captive, Tony and Yinsen build a small arc reactor and the first armored suit out of the weapons parts around them."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:48:00",
-        "description": "Tony builds a device to harness all six Infinity Stones, the ultimate expression of human genius"
+        "scene": "The time heist and final battle",
+        "description": "Tony works out time travel, helps build the Nano Gauntlet that holds the six Stones, and in the end moves the Stones into his own armor."
       },
-      "explanation": "From the cave reactor to the Infinity Gauntlet, Tony's technological progression defines his character. His final creation saves the universe.",
-      "relatedCharacters": ["Tony Stark"],
-      "relatedArticles": ["tony-stark-technology-arc"]
+      "explanation": "Tony's story starts and ends with him building his way out of a situation nobody else can get out of.",
+      "relatedCharacters": [
+        "Tony Stark"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Wikipedia: Tony Stark (Marvel Cinematic Universe)",
+        "url": "https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)"
+      }
     },
     {
       "id": "cb-039",
-      "title": "The Team Theme",
+      "title": "The Team Assembles",
       "type": "thematic",
       "foreshadow": {
         "movieId": "avengers-1",
         "movieTitle": "The Avengers",
         "movieYear": 2012,
-        "timestamp": "01:40:00",
-        "description": "The Avengers learn they must work together or lose to Loki's forces"
+        "scene": "Battle of New York",
+        "description": "After fighting each other on the Helicarrier, six heroes fight together for the first time against Loki's invasion."
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:35:00",
-        "description": "Heroes from across the MCU unite for the final battle, proving that together they're unstoppable"
+        "scene": "Final battle (the portals scene)",
+        "description": "Sorcerers' portals open and the returned heroes, the Guardians, the Ravagers and the armies of Wakanda and Asgard arrive to face Thanos."
       },
-      "explanation": "From first reluctant assembly to final unified stand. The Avengers' journey from conflicted individuals to a true team is the heart of the MCU.",
-      "relatedCharacters": ["All Avengers"],
-      "relatedArticles": ["avengers-unity-theme"]
+      "explanation": "The first team-up is six heroes. Endgame's assembly brings in almost everyone the MCU had introduced by then.",
+      "relatedCharacters": [
+        "Steve Rogers",
+        "Tony Stark",
+        "Thor",
+        "Bruce Banner",
+        "Natasha Romanoff",
+        "Clint Barton"
+      ],
+      "relatedArticles": [
+        "endgame-final-portal-detail"
+      ],
+      "source": {
+        "name": "Wikipedia: \"Avengers assemble\" scene",
+        "url": "https://en.wikipedia.org/wiki/Avengers_assemble_scene"
+      }
     },
     {
       "id": "cb-040",
-      "title": "Hope and Legacy",
-      "type": "thematic",
+      "title": "\"And I Am Iron Man\"",
+      "type": "dialogue",
       "foreshadow": {
         "movieId": "iron-man-1",
         "movieTitle": "Iron Man",
         "movieYear": 2008,
-        "timestamp": "01:58:00",
-        "description": "Tony survives his capture and emerges as a hero; the world learns to hope"
+        "scene": "Final press conference",
+        "description": "Tony ends the first film by telling the world \"I am Iron Man.\""
       },
       "fulfillment": {
         "movieId": "endgame",
         "movieTitle": "Avengers: Endgame",
         "movieYear": 2019,
-        "timestamp": "02:58:00",
-        "description": "Tony's legacy lives on through his sacrifice; the next generation of heroes emerges"
+        "scene": "Final battle",
+        "description": "In the final battle Tony takes the Stones from Thanos, says \"I am Iron Man\" and snaps his fingers."
       },
-      "explanation": "From a selfish billionaire to a selfless hero, Tony's entire journey is about learning to hope for something beyond himself. His legacy inspires the next generation.",
-      "relatedCharacters": ["Tony Stark", "Next Generation Heroes"],
-      "relatedArticles": ["tony-stark-legacy"]
+      "explanation": "Tony's first and last big lines are the same words. The Endgame line was not in the original script; it was added in post-production and shot in reshoots.",
+      "relatedCharacters": [
+        "Tony Stark",
+        "Thanos"
+      ],
+      "relatedArticles": [],
+      "source": {
+        "name": "Screen Rant: Avengers: Endgame Crowd Shocked By Tony Stark's I Am Iron Man Scene",
+        "url": "https://screenrant.com/avengers-endgame-iron-man-scene-crowd-reaction/"
+      }
     }
   ]
 }

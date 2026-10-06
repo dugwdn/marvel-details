@@ -3,6 +3,33 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (working links and real info, not live yet)
+- Movie pages: the cards under "Hidden Details & Easter Eggs" looked like
+  buttons but most led nowhere (only 1 to 2 per page had a page behind them)
+  and their text was teaser filler. All 5 hubs are now built by
+  `node tools/build-hubs.mjs` from `public/data/movie-hubs.json`: 47 real
+  details, each with a source link; correct credits scenes (Iron Man 2's is
+  Coulson finding the hammer; The Avengers has two; Endgame has none, only a
+  sound); runtime and release facts; and working link lists to that film's
+  deleted scenes, callbacks, characters and rabbit holes. Back button goes to
+  All movies. Short addresses like /movies/the-avengers redirect.
+- Deleted scenes: the 21 entries were made up (titles, runtimes, a
+  "director's cut" that doesn't exist). Replaced by the 40 real home-media
+  deleted scenes, each with a source; runtimes only where a source gives one.
+- Callbacks: all 40 timestamps were invented and removed; 34 corrected and
+  sourced, 6 false ones removed (their old addresses redirect to /callbacks/).
+- Rabbit holes and Universe Map: false claims fixed (e.g. the Mind Stone is
+  not in Iron Man 2), theory labelled as theory, sources listed; 54 map links.
+  Character cards, map panel items and rabbit hole headers that looked
+  clickable are now real links or buttons, or no longer look clickable.
+- Articles: Loki article had Thor: The Dark World before The Avengers (fixed);
+  the Endgame portal article's unsourced "VFX supervisor" claim is marked
+  not confirmed.
+- New `test/links.test.mjs` (empty or "#" links, missing pages, missing
+  #anchors, data links, sourced hub details) and `node tools/crawl-site.mjs`
+  (opens every page in Chromium, checks every link after scripts run and flags
+  "Read more →" text that isn't a link).
+
 ## 2026-10-06 (audit)
 - Live check: both addresses serve commit 79366ad. Merged to `phase-1-build` but not deployed: #24 More from us, #25 GA4 (G-NESPZD6XSQ), #26 compact header with search, #27 AdSense slot 7081225657. Docs brought up to date (CLAUDE.md, ROADMAP, TRD, PRD, TEST_PLAN, RUNBOOK).
 

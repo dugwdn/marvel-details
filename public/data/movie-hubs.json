@@ -1,0 +1,559 @@
+{
+  "note": "Movie hub content. Every fact needs a source the reader can open. Rebuild: node tools/build-hubs.mjs && node tools/menu.mjs",
+  "films": [
+    {
+      "id": "iron-man-1",
+      "title": "Iron Man",
+      "year": 2008,
+      "facts": {
+        "usRelease": "May 2, 2008",
+        "directors": [
+          "Jon Favreau"
+        ],
+        "runtimeMinutes": 126,
+        "source": {
+          "name": "Wikipedia: Iron Man (2008 film)",
+          "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)"
+        }
+      },
+      "summary": "Arms dealer Tony Stark is captured in Afghanistan, escapes in a suit of armor he builds from scrap, and comes home to rethink what his company makes. The film launched the Marvel Cinematic Universe.",
+      "details": [
+        {
+          "title": "The jets chasing Iron Man use the call signs Whiplash 1 and Whiplash 2",
+          "text": "When Tony flies home from the village rescue, the Air Force sends two F-22s after him, and their radio call signs are Whiplash 1 and Whiplash 2. Jon Favreau confirmed the names were a deliberate nod to the comic book villain Whiplash, and in the same interview he also pointed to Captain America's shield on Tony's workbench as another planted reference. A version of Whiplash went on to be the villain of Iron Man 2.",
+          "source": {
+            "name": "Ain't It Cool News (Quint interview with Jon Favreau, part 2)",
+            "url": "https://www.aintitcool.com/node/38906"
+          }
+        },
+        {
+          "title": "Captain America's shield is sitting in Tony's workshop",
+          "text": "When Pepper walks in on Tony struggling to get out of his armor (the 'not the worst thing you've caught me doing' scene), a partly hidden Captain America shield can be spotted in the background. Captain America would not appear on screen until 2011.",
+          "source": {
+            "name": "/Film",
+            "url": "https://www.slashfilm.com/759283/the-captain-america-easter-egg-in-iron-man-that-you-may-have-missed/"
+          },
+          "link": {
+            "href": "/characters/steve-rogers",
+            "label": "More on Steve Rogers"
+          }
+        },
+        {
+          "title": "A cut version of Fury's scene mentioned Hulk, Spider-Man and mutants",
+          "text": "Kevin Feige showed an unused take of the post-credits scene at the Saturn Awards in 2019. In it, Nick Fury complains about gamma accidents, radioactive bug bites and assorted mutants, a nod to the Hulk, Spider-Man and the X-Men. At the time, Sony held the film rights to Spider-Man and Fox held the X-Men, and the released scene only says Tony is part of a bigger universe.",
+          "source": {
+            "name": "GamesRadar+",
+            "url": "https://www.gamesradar.com/marvel-deleted-post-credits-x-men-spider-man-avengers-initiative/"
+          },
+          "link": {
+            "href": "/characters/nick-fury",
+            "label": "More on Nick Fury"
+          }
+        },
+        {
+          "title": "Stan Lee's cameo: Tony mistakes him for Hugh Hefner",
+          "text": "On the red carpet at a gala, Tony breezes past a grey-haired man in a dressing gown with a pipe and several young women, and greets him as 'Hef'. The man turns around and it is Stan Lee, co-creator of Iron Man. It set the pattern of Lee being mistaken for someone else that Iron Man 2 repeated.",
+          "source": {
+            "name": "Empire",
+            "url": "https://www.empireonline.com/movies/features/stan-lee-marvel-cameos-updated/"
+          }
+        },
+        {
+          "title": "The 'box of scraps' scientist came back 11 years later",
+          "text": "The Stark Industries scientist who gets yelled at by Obadiah Stane because Tony built his suit in a cave with a box of scraps is William Ginter Riva, played by Peter Billingsley. Billingsley explained that the middle and last names were nods to crew members. Riva returns in Spider-Man: Far From Home (2019) as one of the former Stark employees helping Quentin Beck build Mysterio.",
+          "source": {
+            "name": "Vulture",
+            "url": "https://www.vulture.com/2019/07/peter-billingsley-on-his-iron-man-and-spider-man-characters.html"
+          },
+          "link": {
+            "href": "/characters/obadiah-stane",
+            "label": "More on Obadiah Stane"
+          }
+        },
+        {
+          "title": "A Rage Against the Machine guitarist plays one of the cave guards",
+          "text": "One of the terrorist guards in the cave camp is Tom Morello of Rage Against the Machine. He has no lines and is quickly knocked out by the first, scrap-built suit. Morello also played guitar on part of the film's score.",
+          "source": {
+            "name": "Blabbermouth.net",
+            "url": "https://blabbermouth.net/news/rage-against-the-machine-guitarist-faces-iron-man/"
+          }
+        },
+        {
+          "title": "A cut Dubai party scene included a Ghostface Killah cameo",
+          "text": "Favreau said that a whole party sequence set in Dubai was filmed, placed between Tony's first flight back to Afghanistan and the rest of the story. It was removed because it slowed the film down. The cut footage included a cameo from rapper Ghostface Killah as someone Tony knew.",
+          "source": {
+            "name": "SuperHeroHype (interview with Jon Favreau)",
+            "url": "https://www.superherohype.com/features/96427-exclusive-an-in-depth-iron-man-talk-with-jon-favreau"
+          }
+        },
+        {
+          "title": "Shot in the hangar where Howard Hughes built the Spruce Goose",
+          "text": "The production was based in Playa Vista, Los Angeles, inside the huge wooden hangar that was turned into a soundstage, where Howard Hughes built his Spruce Goose flying boat. It is a fitting home for a film about a billionaire engineer building his own flying machine.",
+          "source": {
+            "name": "Esquire",
+            "url": "https://www.esquire.com/news-politics/a2074/esq0307downeyjr/"
+          }
+        },
+        {
+          "title": "The 1966 cartoon theme song plays in the film",
+          "text": "Alongside Ramin Djawadi's guitar-heavy score, the film uses a big band arrangement of the theme song from the 1966 cartoon The Marvel Super Heroes. The arrangement was made by John O'Brien and Rick Boston, who often work with Favreau.",
+          "source": {
+            "name": "Wikipedia: Iron Man (2008 film)",
+            "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)"
+          }
+        }
+      ],
+      "creditsScenes": [
+        {
+          "when": "Post-credits",
+          "text": "Tony comes home to find his security system bypassed and Nick Fury (Samuel L. Jackson) waiting in his living room. Fury tells him he has become part of a bigger universe and that he wants to talk about the Avenger Initiative.",
+          "source": {
+            "name": "CNET",
+            "url": "https://www.cnet.com/culture/entertainment/marvel-cinematic-universe-post-credits-scenes-ranked-as-shang-chi-hits-theaters/"
+          }
+        }
+      ]
+    },
+    {
+      "id": "iron-man-2",
+      "title": "Iron Man 2",
+      "year": 2010,
+      "facts": {
+        "usRelease": "May 7, 2010",
+        "directors": [
+          "Jon Favreau"
+        ],
+        "runtimeMinutes": 125,
+        "source": {
+          "name": "Wikipedia: Iron Man 2",
+          "url": "https://en.wikipedia.org/wiki/Iron_Man_2"
+        }
+      },
+      "summary": "Now publicly known as Iron Man, Tony Stark is being poisoned by the reactor that keeps him alive while a vengeful Russian physicist and a jealous rival arms maker come after him. S.H.I.E.L.D. moves in closer, bringing Black Widow with it.",
+      "details": [
+        {
+          "title": "Tony uses a Captain America shield to level his particle accelerator",
+          "text": "While Tony is building the particle accelerator in his workshop, Agent Coulson comes across a half-finished Captain America shield and asks Tony if he knows what it is. Tony just takes it and wedges it under his equipment to keep it level. It is a much less subtle version of the shield cameo from the first film, a year before Captain America: The First Avenger.",
+          "source": {
+            "name": "/Film",
+            "url": "https://www.slashfilm.com/759283/the-captain-america-easter-egg-in-iron-man-that-you-may-have-missed/"
+          },
+          "link": {
+            "href": "/characters/steve-rogers",
+            "label": "More on Steve Rogers"
+          }
+        },
+        {
+          "title": "The Tesseract is sketched in Howard Stark's notebook",
+          "text": "When Tony flips through his father's old notebook, one page has a drawing of a cube. Kevin Feige told Wired that he asked Favreau to have the prop maker add it without ever mentioning it in the film, because Howard Stark was planned as a character in Captain America. The cube is the Tesseract, which drives the plots of Captain America: The First Avenger and The Avengers.",
+          "source": {
+            "name": "/Film",
+            "url": "https://www.slashfilm.com/520990/easter-egg-cosmic-cube-appears-iron-man-2/"
+          }
+        },
+        {
+          "title": "The S.H.I.E.L.D. map flags New Mexico and Greenland",
+          "text": "In the scene at S.H.I.E.L.D.'s base, the screens around Tony and Fury include an activity map of places the agency is watching. New Mexico is marked, matching the post-credits hammer discovery, and there is a marker in Greenland, where Captain America's plane went down in 1945. Fans read other markers as teases for later films too.",
+          "source": {
+            "name": "Screen Rant",
+            "url": "https://screenrant.com/iron-man-2-shield-map-mcu-easter-eggs-explained/"
+          },
+          "link": {
+            "href": "/characters/nick-fury",
+            "label": "More on Nick Fury"
+          }
+        },
+        {
+          "title": "The kid in the Iron Man mask is Peter Parker",
+          "text": "At the Stark Expo, a young boy wearing an Iron Man mask stands up to a Hammer drone, and Iron Man swoops down to save him with a quick 'nice work, kid'. Fans long guessed the boy was a young Peter Parker. In 2017 Tom Holland confirmed it, saying he had just checked with Kevin Feige.",
+          "source": {
+            "name": "Gizmodo",
+            "url": "https://gizmodo.com/tom-holland-confirms-that-peter-parker-appeared-in-iron-1796423390"
+          },
+          "link": {
+            "href": "/characters/spider-man",
+            "label": "More on Spider-Man"
+          }
+        },
+        {
+          "title": "Stan Lee's cameo: this time he is mistaken for Larry King",
+          "text": "As Tony walks through a crowd of fans at the Expo, Stan Lee appears dressed like talk show host Larry King and is called Larry. It continues the running joke from the first film, where Tony mistook Lee for Hugh Hefner.",
+          "source": {
+            "name": "Empire",
+            "url": "https://www.empireonline.com/movies/features/stan-lee-marvel-cameos-updated/"
+          }
+        },
+        {
+          "title": "Elon Musk's name is painted on one of the Monaco race cars",
+          "text": "The yellow Kodak race car in the Monaco sequence carries the driver name 'Elon Musk'. Musk also let the filmmakers use his SpaceX facility in Hawthorne, California, as Hammer Industries, and he has a cameo of his own in the film.",
+          "source": {
+            "name": "The New York Times (Wheels blog)",
+            "url": "https://wheels.blogs.nytimes.com/2010/05/07/iron-man-2-and-the-fate-of-the-rolls-royce/"
+          }
+        },
+        {
+          "title": "Rolls-Royce built two identical Phantoms just to be wrecked",
+          "text": "The Rolls-Royce sliced apart by Whiplash was really cut up in advance, rigged with charges and glued back together. Rolls-Royce built two matching Phantoms for the film, each costing $438,000. Most of the 'Monaco' race was shot on a recreated circuit in the parking lot of Downey Studios in California, after Formula One boss Bernie Ecclestone overruled permission to film on the real track.",
+          "source": {
+            "name": "The New York Times (Wheels blog)",
+            "url": "https://wheels.blogs.nytimes.com/2010/05/07/iron-man-2-and-the-fate-of-the-rolls-royce/"
+          }
+        },
+        {
+          "title": "The film was shot under the fake title 'Rasputin'",
+          "text": "Iron Man 2 used the working title Rasputin. One of its sets, at the Sepulveda Dam in Los Angeles, was a five-story wall of stacked shipping containers, and the permit was issued to 'Rasputin Locations', which led bloggers to work out what was being filmed.",
+          "source": {
+            "name": "Los Angeles Daily News",
+            "url": "https://www.dailynews.com/2009/05/21/shipping-containers-at-sepulveda-dam-used-for-iron-man-2-shoot/"
+          }
+        },
+        {
+          "title": "Mickey Rourke paid for Whiplash's gold teeth and bird himself",
+          "text": "Ivan Vanko's tattoos, gold teeth and pet cockatoo were Mickey Rourke's own ideas. He paid $20,000 for the teeth and bought the bird with his own money.",
+          "source": {
+            "name": "Daily Record",
+            "url": "https://www.dailyrecord.co.uk/entertainment/celebrity/iron-man-2-star-mickey-1057474"
+          }
+        },
+        {
+          "title": "Thor's director shot the post-credits scene",
+          "text": "The closing hammer scene was filmed on the set of Thor (2011) and directed by that film's director, Kenneth Branagh, not Favreau. Favreau said it was shot with anamorphic lenses to match the look of Thor.",
+          "source": {
+            "name": "Wikipedia: Iron Man 2 (citing the DVD commentary)",
+            "url": "https://en.wikipedia.org/wiki/Iron_Man_2"
+          },
+          "link": {
+            "href": "/characters/thor",
+            "label": "More on Thor"
+          }
+        }
+      ],
+      "creditsScenes": [
+        {
+          "when": "Post-credits",
+          "text": "Agent Phil Coulson drives up to a huge crater in the New Mexico desert and calls in to report that they have found it. The camera then shows a large hammer, Mjolnir, sitting in the middle of the crater, setting up Thor.",
+          "source": {
+            "name": "Variety",
+            "url": "https://variety.com/lists/marvel-studios-post-credits-scenes-ranked/"
+          }
+        }
+      ]
+    },
+    {
+      "id": "avengers-1",
+      "title": "The Avengers",
+      "year": 2012,
+      "facts": {
+        "usRelease": "May 4, 2012",
+        "directors": [
+          "Joss Whedon"
+        ],
+        "runtimeMinutes": 143,
+        "source": {
+          "name": "Wikipedia: The Avengers (2012 film)",
+          "url": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+        }
+      },
+      "summary": "Nick Fury pulls Iron Man, Captain America, Thor, the Hulk, Black Widow and Hawkeye into one uneasy team when Loki steals the Tesseract and opens the door to an alien invasion of New York. It is the film that closed Phase One and showed a shared movie universe could actually work.",
+      "details": [
+        {
+          "title": "The shawarma scene was shot the day after the world premiere",
+          "text": "The quiet scene of the team eating shawarma was not on the shooting schedule. Robert Downey Jr. hinted at it during an April 12, 2012 press event, a day after the world premiere, saying the cast would get back together that same day to film one last bit. That makes it one of the very few MCU scenes filmed after the movie had already premiered.",
+          "source": {
+            "name": "Collider",
+            "url": "https://collider.com/avengers-shawarma-post-credits-scene/"
+          }
+        },
+        {
+          "title": "Chris Evans hides a fake jaw behind his hand while the others eat",
+          "text": "By the time of the shawarma shoot, Evans had grown a beard for Snowpiercer. To hide it, he was fitted with a prosthetic jaw, which Joss Whedon compared to the oversized chin in Dick Tracy. That is why Captain America rests his hand over his face and doesn't eat anything in the scene.",
+          "source": {
+            "name": "CinemaBlend (Whedon on the Marvel Directors' Roundtable)",
+            "url": "https://www.cinemablend.com/superheroes/marvel-cinematic-universe/theres-a-viral-insider-detail-in-the-avengers-infamous-shawarma-scene-and-it-involves-chris-evans"
+          }
+        },
+        {
+          "title": "A shawarma shop was planted behind Tony's crash landing",
+          "text": "Once the post-credits scene was added, the editors went back and placed a shawarma restaurant near the spot where Iron Man crash-lands earlier in the Battle of New York. Look behind Tony after he flies through the Leviathan and tumbles into a bus stop. Co-editor Jeffrey Ford described the fix in an oral history of the battle.",
+          "source": {
+            "name": "Thrillist: The Battle of New York, an 'Avengers' Oral History",
+            "url": "https://www.thrillist.com/entertainment/nation/the-avengers-battle-of-new-york-joss-whedon"
+          }
+        },
+        {
+          "title": "Putting Thanos in the credits scene was Joss Whedon's idea",
+          "text": "Kevin Feige told /Film that the Thanos tease came from Whedon, a lifelong fan of the character. Whedon pointed to Jim Starlin's 1970s Avengers Annual and Marvel Two-in-One Annual stories, and said someone had to be pulling Loki's strings, so it had to be Thanos. Marvel said yes, years before Thanos became the center of the Infinity Saga.",
+          "source": {
+            "name": "/Film: Joss Whedon and Kevin Feige explain the origin of 'The Avengers' post script",
+            "url": "https://slashfilm.com/exclusive-joss-whedon-kevin-feige-explain-origin-the-avengers-post-script/"
+          }
+        },
+        {
+          "title": "The shawarma scene grew out of a night after filming Angel",
+          "text": "At San Diego Comic-Con in 2016, Whedon traced the scene to the day he filmed Fred's death in Angel season 5. After that exhausting shoot, he went for drinks with Amy Acker and Alexis Denisof, and the three of them just sat there in tired silence. He said that memory became the Avengers tag. Denisof also plays the Other in this film's mid-credits scene.",
+          "source": {
+            "name": "CBR",
+            "url": "https://www.cbr.com/joss-whedons-favorite-angel-death-led-to-the-avengers-post-credits-scene/"
+          }
+        },
+        {
+          "title": "Coulson's death scene twice earned the film an R rating",
+          "text": "Kevin Feige said the first cuts sent to the MPAA came back rated R two times, and Marvel had to make changes to get a PG-13. In the US version you never see the tip of Loki's scepter come out of Coulson's chest. A version shown mostly in Europe did show it going through.",
+          "source": {
+            "name": "Digital Spy",
+            "url": "https://www.digitalspy.com/movies/a27162197/avengers-original-cut-coulson-death/"
+          }
+        },
+        {
+          "title": "This Hulk is modeled on Mark Ruffalo, down to his teeth",
+          "text": "ILM built this film's Hulk around Ruffalo's own look and performance instead of a cartoon design. Visual effects supervisor Jeff White said the Hulk draws on Ruffalo's motion capture and on-set work, right down to his eyes, teeth and tongue.",
+          "source": {
+            "name": "Animation World Network: Getting Animated Over The Avengers",
+            "url": "https://www.awn.com/vfxworld/getting-animated-over-avengers"
+          }
+        },
+        {
+          "title": "The film was shot under the working title 'Group Hug'",
+          "text": "To keep a low profile during production, The Avengers was made under the code name 'Group Hug.' The sequel later used 'After Party,' and Infinity War used 'Mary Lou.'",
+          "source": {
+            "name": "Screen Rant",
+            "url": "https://screenrant.com/avengers-infinity-war-working-title/"
+          }
+        }
+      ],
+      "creditsScenes": [
+        {
+          "when": "Mid-credits",
+          "text": "The Other, the Chitauri's go-between, reports to his master about the failed attack on Earth, and the master turns toward the camera. The film never names him, but Kevin Feige talked about the moment 'when Thanos turned around', and Joss Whedon said putting Thanos there was his idea.",
+          "source": {
+            "name": "/Film: Joss Whedon and Kevin Feige explain the origin of 'The Avengers' post script",
+            "url": "https://slashfilm.com/exclusive-joss-whedon-kevin-feige-explain-origin-the-avengers-post-script/"
+          }
+        },
+        {
+          "when": "Post-credits",
+          "text": "After Tony's earlier suggestion to go and get shawarma, the team sits in a shawarma restaurant and eats in tired silence. Whedon pitched it late, it was filmed after the premiere, and co-editor Jeffrey Ford said he cut it in on the back of a camera truck just in time for theaters.",
+          "source": {
+            "name": "Thrillist: The Battle of New York, an 'Avengers' Oral History",
+            "url": "https://www.thrillist.com/entertainment/nation/the-avengers-battle-of-new-york-joss-whedon"
+          }
+        }
+      ]
+    },
+    {
+      "id": "iron-man-3",
+      "title": "Iron Man 3",
+      "year": 2013,
+      "facts": {
+        "usRelease": "May 3, 2013",
+        "directors": [
+          "Shane Black"
+        ],
+        "runtimeMinutes": 130,
+        "source": {
+          "name": "Wikipedia: Iron Man 3",
+          "url": "https://en.wikipedia.org/wiki/Iron_Man_3"
+        }
+      },
+      "summary": "Shaken by the Battle of New York, Tony Stark loses his home and most of his tech to a terrorist called the Mandarin and has to rely on his own wits to fight back. The film borrows heavily from the Extremis comics.",
+      "details": [
+        {
+          "title": "The 'barrel of monkeys' rescue used real skydivers",
+          "text": "When Air Force One is ripped open and Iron Man catches the falling passengers, the people in the air are members of the Red Bull Skydiving Team, jumping in business clothes with parachutes hidden underneath. One team member stood in for Iron Man and another filmed in free fall with a helmet-mounted camera. Digital Domain's supervisor said 90 to 95 percent of the people on screen in the sequence are the real skydivers.",
+          "source": {
+            "name": "The Hollywood Reporter",
+            "url": "https://www.hollywoodreporter.com/movies/movie-news/iron-man-3-red-bull-2-452228/"
+          }
+        },
+        {
+          "title": "The President is named after the writer of Extremis",
+          "text": "William Sadler's President Matthew Ellis is named after Warren Ellis, who wrote the Extremis comic story that the film draws on most.",
+          "source": {
+            "name": "Wikipedia: Iron Man 3",
+            "url": "https://en.wikipedia.org/wiki/Iron_Man_3"
+          }
+        },
+        {
+          "title": "Rhodey's Iron Patriot suit comes from a comic book villain",
+          "text": "The government rebrands War Machine as the red, white and blue Iron Patriot. In the comics, the Iron Patriot armor was worn by Norman Osborn, the Green Goblin. The writers also borrowed names of unrelated Marvel comics characters, such as Eric Savin and Jack Taggart, for Killian's soldiers.",
+          "source": {
+            "name": "Wikipedia: Iron Man 3",
+            "url": "https://en.wikipedia.org/wiki/Iron_Man_3"
+          },
+          "link": {
+            "href": "/characters/war-machine",
+            "label": "More on War Machine"
+          }
+        },
+        {
+          "title": "Trevor Slattery was supposed to blow himself up",
+          "text": "Co-writer Drew Pearce said one version that was filmed had Trevor steal an Extremis injector, stagger onto the oil rig during the final battle, inject himself and explode. Pearce called it the most Monty Python beat they had. The team kept Trevor alive instead, and he returned in the 2014 Marvel One-Shot All Hail the King, which Pearce wrote and directed.",
+          "source": {
+            "name": "Collider (interview with Drew Pearce)",
+            "url": "https://collider.com/drew-pearce-all-hail-the-king-runaways-movie-interview/"
+          }
+        },
+        {
+          "title": "The Christmas setting was not Shane Black's idea",
+          "text": "Many Shane Black films take place at Christmas, including Lethal Weapon and Kiss Kiss Bang Bang, so the holiday setting looks like his trademark. Black said he actually resisted it this time, and co-writer Drew Pearce talked him into it.",
+          "source": {
+            "name": "/Film",
+            "url": "https://www.slashfilm.com/why-iron-man-3-is-a-christmas-movie/"
+          }
+        },
+        {
+          "title": "Stan Lee's pageant-judge cameo was cut in half",
+          "text": "Stan Lee appears briefly as a beauty pageant judge, eagerly holding up a score of 10. Lee later posted a video apology to fans saying his cameo had been much funnier, but it was cut in half because the film ran long.",
+          "source": {
+            "name": "ComicBook.com",
+            "url": "https://comicbook.com/news/stan-lee-apologizes-in-regards-to-iron-man-3/"
+          }
+        },
+        {
+          "title": "Jenna Ortega is the Vice President's daughter",
+          "text": "Before she became a star, Jenna Ortega had a tiny role as the Vice President's daughter and is on screen only for a moment. Ortega said Marvel cut all her lines and even took her character's name away.",
+          "source": {
+            "name": "Variety",
+            "url": "https://variety.com/2025/film/news/jenna-ortega-iron-man-3-marvel-took-lines-out-1236338440/"
+          }
+        },
+        {
+          "title": "China got its own cut with extra scenes and Fan Bingbing",
+          "text": "Iron Man 3 was made with Beijing-based DMG Entertainment. Every version includes actor Wang Xueqi and scenes shot in Beijing, but the version released in China added bonus footage and an appearance by star Fan Bingbing.",
+          "source": {
+            "name": "The Hollywood Reporter",
+            "url": "https://www.hollywoodreporter.com/news/chinese-iron-man-3-cut-431747"
+          }
+        },
+        {
+          "title": "Tony's helmet display was modeled on maps of the human brain",
+          "text": "The designers of the heads-up display inside the helmet took inspiration from medical MRI pattern recognition and from connectograms, the circular charts scientists use to map the brain's white-matter connections.",
+          "source": {
+            "name": "Helena Barbas, 'VR, AR, MR Simulations and Inspirations from Iron Man 3' (2017)",
+            "url": "https://helenabarbas.net/papers/2017_VR_AR_MR_Simulation_IronMan_H_Barbas.pdf"
+          }
+        },
+        {
+          "title": "Rose Hill is a real town, just not in Tennessee",
+          "text": "Tony crash-lands in 'Rose Hill, Tennessee', where he meets Harley Keener. The scenes were filmed in Rose Hill, North Carolina, in August 2012, and the filmmakers wrote that real town's name into the script.",
+          "source": {
+            "name": "Wikipedia: Iron Man 3",
+            "url": "https://en.wikipedia.org/wiki/Iron_Man_3"
+          }
+        }
+      ],
+      "creditsScenes": [
+        {
+          "when": "Post-credits",
+          "text": "It turns out Tony's narration of the whole film was told to Bruce Banner (Mark Ruffalo), who dozed off near the very beginning. Once Banner is awake, Tony starts telling the story all over again.",
+          "source": {
+            "name": "Wikipedia: Mid-credits and post-credits scenes in the Marvel Cinematic Universe",
+            "url": "https://en.wikipedia.org/wiki/Mid-credits_and_post-credits_scenes_in_the_Marvel_Cinematic_Universe"
+          }
+        }
+      ]
+    },
+    {
+      "id": "endgame",
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "facts": {
+        "usRelease": "April 26, 2019",
+        "directors": [
+          "Anthony Russo",
+          "Joe Russo"
+        ],
+        "runtimeMinutes": 181,
+        "source": {
+          "name": "Wikipedia: Avengers: Endgame",
+          "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+        }
+      },
+      "summary": "Five years after Thanos wiped out half of all life, the surviving Avengers find a way to travel back through their own history for one last attempt to undo the damage. It closes the 22-film Infinity Saga and says goodbye to several of the heroes who started it.",
+      "details": [
+        {
+          "title": "Cap finally says 'Avengers assemble', four years after Ultron cut him off",
+          "text": "Age of Ultron ends with Captain America saying 'Avengers...' before the film cuts to the credits. Joss Whedon said he made sure Chris Evans was never filmed saying the full line, so no executive could add the missing word later. Endgame finally lets Cap finish it when the portals open before the last battle.",
+          "source": {
+            "name": "CinemaBlend: The final line of Age of Ultron explained by Joss Whedon",
+            "url": "https://www.cinemablend.com/new/Final-Line-Avengers-Age-Ultron-Explained-By-Joss-Whedon-71295.html"
+          }
+        },
+        {
+          "title": "Evans meant to shout the line, but the quiet first take stuck",
+          "text": "Evans said the line almost seemed to need shouting and he planned to yell it on the first take. Instead he went low and let the army roar around him. The Russos told him that was the one and to skip the shouted version, and Evans said he isn't sure a shouted take was ever filmed.",
+          "source": {
+            "name": "Screen Rant (Evans to MTV News)",
+            "url": "https://screenrant.com/endgame-avengers-assemble-line-scene-chris-evans-explained/"
+          }
+        },
+        {
+          "title": "Cap lifting Mjolnir pays off the Age of Ultron party scene",
+          "text": "At the party in Age of Ultron, every Avenger tries to lift Thor's hammer. When Steve tries, Mjolnir moves very slightly and Thor looks briefly worried. Anthony Russo said that in the directors' heads, Steve realized then that he could lift it and held back out of respect for Thor. Joe Russo said that moment is where the big Endgame payoff came from.",
+          "source": {
+            "name": "CBR: Russo Bros. explain Captain America and Thor's big Endgame moment",
+            "url": "https://www.cbr.com/avengers-endgame-captain-america-mjolnir-worthy-thor/"
+          }
+        },
+        {
+          "title": "The writers disagree: Cap wasn't fully worthy in Ultron",
+          "text": "Screenwriters Christopher Markus and Stephen McFeely see it differently from the Russos. During a 2020 watch-along, Markus wrote that Steve wasn't completely worthy yet in Age of Ultron, because he was still keeping the truth about Tony's parents' deaths a secret. So both readings come from the filmmakers.",
+          "source": {
+            "name": "Inside the Magic",
+            "url": "https://insidethemagic.net/2020/04/captain-america-mjolnir-ultron-ne1/"
+          }
+        },
+        {
+          "title": "Stan Lee's 1970 cameo is the last one he filmed",
+          "text": "When Tony and Steve travel back to the 1970s, a digitally de-aged Stan Lee drives past dressed as a hippie and shouts 'Make love, not war!' His car has a bumper sticker with his catchphrase \"'Nuff Said.\" The Russo brothers confirmed it was the last cameo Lee filmed before he died in 2018.",
+          "source": {
+            "name": "MovieWeb: Endgame directors break down Stan Lee's final MCU cameo",
+            "url": "https://movieweb.com/avengers-endgame-stan-lee-cameo-final-mcu-details/"
+          }
+        },
+        {
+          "title": "The grieving man in the support group is director Joe Russo",
+          "text": "Early on, in a grief support group, a man talks about going on his first date since losing his male partner when half of all life vanished. That man is co-director Joe Russo, who is usually credited as Gozie Agbo in his small roles. Deadline called him the first openly gay character in a Disney/Marvel film, and Russo said the directors wanted one of them to play the part.",
+          "source": {
+            "name": "Deadline",
+            "url": "https://deadline.com/2019/04/avengers-endgame-marvel-first-openly-gay-character-directors-joe-russo-anthony-russo-discuss-1202601583/"
+          }
+        },
+        {
+          "title": "The 2012 Hulk in the time heist is the original 2012 model",
+          "text": "For the return to the 2012 Battle of New York, the effects team pulled the old Hulk digital sculpt from The Avengers, re-rigged it and gave it newer shaders. The Hulk there matches how he looked in 2012, not his Ragnarok redesign. Several cast members were also lightly de-aged to match their 2012 selves.",
+          "source": {
+            "name": "befores & afters (VFX supervisor Dan DeLeeuw)",
+            "url": "https://beforesandafters.com/2019/05/18/how-vfx-channeled-back-to-the-future-for-endgames-trip-to-new-york/"
+          }
+        },
+        {
+          "title": "Thanos's creator Jim Starlin has a cameo",
+          "text": "Jim Starlin, the comics creator who invented Thanos, appears as one of the grieving people in the film. That gives the man behind the villain a small part in the movie that ends Thanos's story.",
+          "source": {
+            "name": "Wikipedia: Avengers: Endgame (citing Entertainment Weekly)",
+            "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+          }
+        },
+        {
+          "title": "2026's Endgame Encore adds new scenes that set up Doomsday",
+          "text": "In September 2026 Marvel put the film back in theaters as Avengers: Endgame Encore, with four new scenes shot during the making of Avengers: Doomsday. In the extended ending, Loki in a TVA uniform knocks on Steve and Peggy's door during their dance. Other new scenes show Doctor Doom breaking into Bruce Banner's underground hideout and the TVA watching the multiverse collapse.",
+          "source": {
+            "name": "Variety",
+            "url": "https://variety.com/2026/film/news/avengers-endgame-encore-new-scenes-doctor-doom-hulk-loki-1236873843/"
+          }
+        },
+        {
+          "title": "Encore turns the final clang into Doctor Doom forging his mask",
+          "text": "In 2019, the only thing after the credits was a clanging sound fans took to be Tony hammering his first armor in Iron Man. Encore keeps that sound but adds quick shots of Doctor Doom, also played by Robert Downey Jr., forging his metal mask. Joe Russo said the shot was meant to be almost identical to the original to show a duality between good and evil.",
+          "source": {
+            "name": "Empire: Endgame Encore's new scenes explained by the Russo brothers",
+            "url": "https://www.empireonline.com/movies/features/avengers-endgame-encore-new-scenes-explained-by-russo-brothers/"
+          }
+        }
+      ],
+      "creditsScenes": [],
+      "creditsNote": "The original 2019 release has no mid- or post-credits scene. As the score fades at the very end, you can hear only a faint metal clanging, widely read as Tony Stark forging his first armor in the cave in Iron Man (source: Den of Geek, https://www.denofgeek.com/movies/avengers-endgame-post-credits-sound-explained/). The 2019 'With Bonus Content' re-release added about seven minutes after the credits, including a Stan Lee tribute and a deleted scene (source: IGN, https://www.ign.com/articles/2019/06/20/avengers-endgame-rerelease-release-date-runtime-new-footage-description). The 2026 Endgame Encore re-release adds a credits scene of Doctor Doom confronting Bruce Banner and puts images of Doom forging his mask over the closing clang (source: Variety, https://variety.com/2026/film/news/avengers-endgame-encore-new-scenes-doctor-doom-hulk-loki-1236873843/)."
+    }
+  ]
+}
