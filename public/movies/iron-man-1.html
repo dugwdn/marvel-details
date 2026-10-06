@@ -33,7 +33,7 @@
     </style>
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/theme.css?v=1d24c027">
+    <link rel="stylesheet" href="/css/theme.css?v=74136a6b">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
@@ -75,8 +75,28 @@
         <!-- Built by tools/build-hubs.mjs from public/data/movie-hubs.json. Edit the data, not this block. -->
         <a href="/movies/" class="back-button">← All movies</a>
 
-        <div class="movie-header">
+        <div class="movie-header has-hero">
             <h2>Iron Man (2008)</h2>
+            <!-- media:film-hero -->
+            <div class="film-hero">
+            <div class="yt-tile film-trailer">
+                <button type="button" class="yt-play film-trailer-btn" data-yt="8ugaeA-nMTc" data-title="Iron Man (2008) Trailer #1 | Movieclips Classic Trailers" aria-label="Play the official trailer: Iron Man (2008)">
+                    <span class="film-mosaic" aria-hidden="true"><img src="/img/actors/tony-stark.jpg" alt="" width="500" height="750" loading="lazy" decoding="async"><img src="/img/actors/pepper-potts.jpg" alt="" width="500" height="625" loading="lazy" decoding="async"><img src="/img/actors/obadiah-stane.jpg" alt="" width="500" height="631" loading="lazy" decoding="async"><img src="/img/actors/happy-hogan.jpg" alt="" width="500" height="741" loading="lazy" decoding="async"></span>
+                    <span class="yt-kind">Watch the official trailer</span>
+                    <span class="yt-film">Iron Man (2008)</span>
+                    <span class="yt-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <ul class="film-cast" aria-label="Cast of Iron Man">
+                <li><a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="fc-name">Iron Man</span><span class="fc-actor">Robert Downey Jr.</span></a></li>
+                <li><a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="fc-name">Virginia &quot;Pepper&quot; Potts</span><span class="fc-actor">Gwyneth Paltrow</span></a></li>
+                <li><a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="fc-name">Obadiah Stane</span><span class="fc-actor">Jeff Bridges</span></a></li>
+                <li><a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="fc-name">Harold &quot;Happy&quot; Hogan</span><span class="fc-actor">Jon Favreau</span></a></li>
+                <li><a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" alt="Clark Gregg" width="480" height="640" loading="lazy" decoding="async"><span class="fc-name">Phil Coulson</span><span class="fc-actor">Clark Gregg</span></a></li>
+                <li class="fc-more"><a href="#cast"><span>+5</span> more</a></li>
+            </ul>
+        </div>
+            <!-- /media:film-hero -->
             <p><strong>Release (US):</strong> May 2, 2008 | <strong>Director:</strong> Jon Favreau | <strong>Runtime:</strong> 126 minutes</p>
             <p>Arms dealer Tony Stark is captured in Afghanistan, escapes in a suit of armor he builds from scrap, and comes home to rethink what his company makes. The film launched the Marvel Cinematic Universe.</p>
             <p class="hub-source">Source: <a href="https://en.wikipedia.org/wiki/Iron_Man_(2008_film)" target="_blank" rel="noopener">Wikipedia: Iron Man (2008 film)</a></p>
@@ -84,69 +104,350 @@
 
         <figure class="place-photo">
             <img src="/img/places/alabama-hills-lone-pine.jpg" alt="Sunrise light on the snowy Sierra Nevada peaks above the rounded orange boulders of the Alabama Hills in California" width="960" height="656" loading="lazy">
-            <figcaption><strong>Where Tony is captured.</strong> Tony Stark's capture was filmed at Lone Pine, California, in the Owens Valley. This is the nearby Alabama Hills with the Sierra Nevada behind. Photo: steveberardi, <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="nofollow">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Alabamahills.jpg" rel="nofollow">Wikimedia Commons</a>. See <a href="/credits">all credits</a>.</figcaption>
+            <figcaption><strong>Where Tony is captured.</strong> Tony Stark's capture was filmed at Lone Pine, California, in the Owens Valley. This is the nearby Alabama Hills with the Sierra Nevada behind.</figcaption>
         </figure>
 
-        <section class="trailer-block">
-            <h3 class="section-title">Official Trailer</h3>
-            <div class="trailer-frame">
-                <iframe src="https://www.youtube-nocookie.com/embed/8ugaeA-nMTc" title="Iron Man (2008) official trailer" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <p class="trailer-credit">Trailer from the Rotten Tomatoes Classic Trailers (Movieclips) YouTube channel, played with YouTube's own player.</p>
-        </section>
-
-        <section class="media-gallery">
+        <section class="media-gallery" id="cast">
             <h3 class="section-title">The Cast in Real Life</h3>
             <div class="faces-wall">
             <figure class="face-tile">
                 <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
-                <figcaption>Photo: Daltoncitys, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Samuel_L._Jackson_attending_the_World_premier_of_%22Argylle%22_in_London_,_January_2024_(cropped2).jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
-                <figcaption>Photo: PhilipRomano, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:RobertDowneyJr-byPhilipRomano7_(cropped).jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/war-machine"><img src="/img/actors/war-machine.jpg" alt="Don Cheadle" width="500" height="751" loading="lazy" decoding="async"><span class="face-name">James &quot;Rhodey&quot; Rhodes</span><span class="face-actor">Don Cheadle</span></a>
-                <figcaption>Photo: PhilipRomanoPhoto, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:DonCheadle-byPhilipRomano2.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
-                <figcaption>Photo: Eva Rinaldi, <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="nofollow noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Jon_Favreau_2016.jpeg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
-                <figcaption>Photo: Kevin Paul, <a href="https://creativecommons.org/licenses/by/4.0" rel="nofollow noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Gwyneth_Paltrow_-_Marty_Supreme.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
-                <figcaption>Photo: Super Festivals, <a href="https://creativecommons.org/licenses/by/4.0" rel="nofollow noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Clark_Gregg_Photo_Op_GalaxyCon_Raleigh_2025.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
-                <figcaption>Photo: PhilipRomano, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:PaulBettany-byPhilipRomano.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
-                <figcaption>Photo: Gage Skidmore, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="nofollow noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Jeff_Bridges_by_Gage_Skidmore_4.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
-                <figcaption>Photo: Colleen Sturtevant, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Leslie_Bibb_83rd_Venice_Film_Festival_2.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
-                <figcaption>Photo: Shaun_Toub_2011.jpg MingleMediaTVNetwork *derivative work: Sirab, <a href="https://creativecommons.org/licenses/by/2.0" rel="nofollow noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Shaun_Toub_2011_cropped.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             <figure class="face-tile">
                 <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
-                <figcaption>Photo: Dominick D, <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="nofollow noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Peter_Billingsley_at_ATX_TV_Festival_2014_Sullivan_and_Son.jpg" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
             </figure>
             </div>
             <div class="places-grid">
             <figure class="place-photo place-tile">
                 <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
-                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume. Photo: OMCV, <a href="https://commons.wikimedia.org/wiki/Commons:Public_domain" rel="nofollow noopener">Public domain</a>, <a href="https://commons.wikimedia.org/wiki/File:Point_Dume_Climbing.JPG" rel="nofollow noopener">Wikimedia Commons</a></figcaption>
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="media-gallery" id="cast">
+            <h3 class="section-title">The Cast in Real Life</h3>
+            <div class="faces-wall">
+            <figure class="face-tile">
+                <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/war-machine"><img src="/img/actors/war-machine.jpg" alt="Don Cheadle" width="500" height="751" loading="lazy" decoding="async"><span class="face-name">James &quot;Rhodey&quot; Rhodes</span><span class="face-actor">Don Cheadle</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
+            </figure>
+            </div>
+            <div class="places-grid">
+            <figure class="place-photo place-tile">
+                <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="media-gallery" id="cast">
+            <h3 class="section-title">The Cast in Real Life</h3>
+            <div class="faces-wall">
+            <figure class="face-tile">
+                <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/war-machine"><img src="/img/actors/war-machine.jpg" alt="Don Cheadle" width="500" height="751" loading="lazy" decoding="async"><span class="face-name">James &quot;Rhodey&quot; Rhodes</span><span class="face-actor">Don Cheadle</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
+            </figure>
+            </div>
+            <div class="places-grid">
+            <figure class="place-photo place-tile">
+                <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="media-gallery" id="cast">
+            <h3 class="section-title">The Cast in Real Life</h3>
+            <div class="faces-wall">
+            <figure class="face-tile">
+                <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
+            </figure>
+            </div>
+            <div class="places-grid">
+            <figure class="place-photo place-tile">
+                <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="media-gallery" id="cast">
+            <h3 class="section-title">The Cast in Real Life</h3>
+            <div class="faces-wall">
+            <figure class="face-tile">
+                <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
+            </figure>
+            </div>
+            <div class="places-grid">
+            <figure class="place-photo place-tile">
+                <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="media-gallery" id="cast">
+            <h3 class="section-title">The Cast in Real Life</h3>
+            <div class="faces-wall">
+            <figure class="face-tile">
+                <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
+            </figure>
+            </div>
+            <div class="places-grid">
+            <figure class="place-photo place-tile">
+                <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="media-gallery" id="cast">
+            <h3 class="section-title">The Cast in Real Life</h3>
+            <div class="faces-wall">
+            <figure class="face-tile">
+                <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
+            </figure>
+            </div>
+            <div class="places-grid">
+            <figure class="place-photo place-tile">
+                <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section class="media-gallery" id="cast">
+            <h3 class="section-title">The Cast in Real Life</h3>
+            <div class="faces-wall">
+            <figure class="face-tile">
+                <a href="/characters/tony-stark"><img src="/img/actors/tony-stark.jpg" alt="Robert Downey Jr." width="500" height="750" loading="lazy" decoding="async"><span class="face-name">Tony Stark / Iron Man</span><span class="face-actor">Robert Downey Jr.</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/pepper-potts"><img src="/img/actors/pepper-potts.jpg" alt="Gwyneth Paltrow" width="500" height="625" loading="lazy" decoding="async"><span class="face-name">Virginia &quot;Pepper&quot; Potts</span><span class="face-actor">Gwyneth Paltrow</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/obadiah-stane"><img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy" decoding="async"><span class="face-name">Obadiah Stane</span><span class="face-actor">Jeff Bridges</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/happy-hogan"><img src="/img/actors/happy-hogan.jpg" alt="Jon Favreau" width="500" height="741" loading="lazy" decoding="async"><span class="face-name">Harold &quot;Happy&quot; Hogan</span><span class="face-actor">Jon Favreau</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#phil-coulson"><img src="/img/actors/dir/phil-coulson.webp" srcset="/img/actors/dir/phil-coulson-240.webp 240w, /img/actors/dir/phil-coulson.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Clark Gregg, who plays Phil Coulson" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Phil Coulson</span><span class="face-actor">Clark Gregg</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#ho-yinsen"><img src="/img/actors/dir/ho-yinsen.webp" srcset="/img/actors/dir/ho-yinsen-240.webp 240w, /img/actors/dir/ho-yinsen.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Shaun Toub, who plays Ho Yinsen" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Ho Yinsen</span><span class="face-actor">Shaun Toub</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/nick-fury"><img src="/img/actors/nick-fury.jpg" alt="Samuel L. Jackson" width="500" height="634" loading="lazy" decoding="async"><span class="face-name">Nick Fury</span><span class="face-actor">Samuel L. Jackson</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#j-a-r-v-i-s"><img src="/img/actors/dir/j-a-r-v-i-s.webp" srcset="/img/actors/dir/j-a-r-v-i-s-240.webp 240w, /img/actors/dir/j-a-r-v-i-s.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Paul Bettany, who voices J.A.R.V.I.S." width="480" height="640" loading="lazy" decoding="async"><span class="face-name">J.A.R.V.I.S.</span><span class="face-actor">Paul Bettany</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#christine-everhart"><img src="/img/actors/dir/christine-everhart.webp" srcset="/img/actors/dir/christine-everhart-240.webp 240w, /img/actors/dir/christine-everhart.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Leslie Bibb, who plays Christine Everhart" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">Christine Everhart</span><span class="face-actor">Leslie Bibb</span></a>
+            </figure>
+            <figure class="face-tile">
+                <a href="/characters/all/#william-ginter-riva"><img src="/img/actors/dir/william-ginter-riva.webp" srcset="/img/actors/dir/william-ginter-riva-240.webp 240w, /img/actors/dir/william-ginter-riva.webp 480w" sizes="(max-width: 640px) 30vw, 160px" alt="Peter Billingsley, who plays William Ginter Riva" width="480" height="640" loading="lazy" decoding="async"><span class="face-name">William Ginter Riva</span><span class="face-actor">Peter Billingsley</span></a>
+            </figure>
+            </div>
+            <div class="places-grid">
+            <figure class="place-photo place-tile">
+                <img src="/img/places/point-dume-malibu.webp" srcset="/img/places/point-dume-malibu-480.webp 480w, /img/places/point-dume-malibu.webp 960w" sizes="(max-width: 640px) 100vw, 480px" alt="Point Dume, Malibu, California" width="960" height="600" loading="lazy" decoding="async">
+                <figcaption><strong>Point Dume, Malibu, California</strong> Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.</figcaption>
             </figure>
             </div>
         </section>
@@ -277,7 +578,7 @@
 
     </div>
 
-    <footer><p>&copy; 2026 MCU Easter Eggs. Not affiliated with Marvel or Disney.</p><p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>
+    <footer><p>&copy; 2026 MCU Easter Eggs. Not affiliated with Marvel or Disney.</p><p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Photos and Credits</a></p>
     <div class="site-footer-links">
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>

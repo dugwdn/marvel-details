@@ -116,3 +116,14 @@ Doug chose the name MCU Easter Eggs on 2026-10-06 after buying mcueastereggs.com
   named `media/fetch-*`), which commits the photos back to the branch.
 - **Why:** one list keeps `/credits` complete, the tests can check every page
   against it, and adding media is a data edit plus one command.
+
+## ADR-013: Photo and trailer credits live on one page, not under each photo (2026-10-06)
+Doug: "way too much info about the source. no sourcing info needed." Captions
+under photos and channel lines under trailers are gone. Every credit (author,
+license, Commons file, YouTube channel) stays complete on /credits, which every
+footer links to as "Photos and Credits"; `test/media.test.mjs` fails if a page
+shows a source line or a page with media lacks that link. Whether a credits
+page is enough attribution for CC BY/BY-SA is on the lawyer list; until then
+the page lists every photo in full. Media in headers: pages about a film carry
+its trailer and cast photos inside the header box (`addFilmHeroes` in
+tools/build-media.mjs, also called by build-hubs.mjs and build-callbacks.js).

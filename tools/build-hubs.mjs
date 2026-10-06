@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { addFilmHeroes } from './build-media.mjs';
 import { exists } from './check-links.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
@@ -144,6 +145,7 @@ export function build() {
     fs.writeFileSync(file, html.slice(0, start) + hubBody(film, site, keep) + html.slice(end));
     console.log(`movies/${film.id}.html: ${film.details.length} details, ${film.creditsScenes.length} credits scenes`);
   }
+  addFilmHeroes(); // trailer + cast photos inside each movie header
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) build();

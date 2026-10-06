@@ -62,8 +62,8 @@ export function gaSnippet(id) {
     '    </script>';
 }
 const GA = gaSnippet(GA_ID);
-const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>';
-const PRIVACY_ABOUT = '<p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>';
+const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Photos and Credits</a></p>';
+const PRIVACY_ABOUT = '<p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Photos and Credits</a></p>';
 
 // Footer with project backlinks and Web Design Nerd credit
 const FOOTER =

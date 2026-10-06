@@ -1169,3 +1169,41 @@ html body .media-watch-char h3 { font-family: var(--dym-head); font-size: 1.6rem
   html body .face-tile img, html body .yt-play { border-color: #fff; }
 }
 @media (prefers-reduced-motion: reduce) { html body .face-tile img, html body .yt-play { transition: none; } }
+
+/* Film header media (tools/build-media.mjs addFilmHeroes): official trailer with a
+   cast-photo cover, plus a strip of cast faces, inside the movie or callback header. */
+html body .has-hero { display: flow-root; }
+html body .has-hero > .film-hero { float: right; width: min(46%, 560px); margin: 0 0 1rem 2rem; }
+html body .film-hero-pair { display: grid; gap: 1rem; }
+html body .film-trailer-btn { padding: 1rem; overflow: hidden; background: #0b0b0e; }
+html body .film-mosaic { position: absolute; inset: 0; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; }
+html body .film-mosaic img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
+html body .film-mosaic::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(0 0 0 / .05) 30%, rgb(0 0 0 / .85)); }
+html body :is(.movie-header, .detail-header) .film-trailer-btn span:is(.yt-kind, .yt-film) { position: relative; z-index: 1; color: #fff !important; }
+html body .film-trailer-btn .yt-icon { z-index: 1; left: 50%; top: 42%; right: auto; bottom: auto; width: 68px; height: 68px; transform: translate(-50%, -50%); box-shadow: 3px 3px 0 #000; }
+html body .film-trailer-btn .yt-icon::after { left: 25px; top: 19px; border-width: 13px 0 13px 21px; }
+html body .film-trailer-btn .yt-film { padding-right: 0; font-size: 1.5rem; }
+html body .film-cast { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: .75rem .5rem; }
+html body .film-cast li { margin: 0; text-align: center; }
+html body .film-cast a { display: block; color: inherit; text-decoration: none; }
+html body .film-cast img { display: block; width: 64px; height: 64px; margin: 0 auto .3rem; border-radius: 50%; object-fit: cover; object-position: 50% 15%; border: 3px solid #000; box-shadow: 2px 2px 0 #000; background: var(--dym-line); }
+html body .film-cast a:hover img, html body .film-cast a:focus-visible img { box-shadow: 3px 3px 0 var(--dym-red); }
+html body .film-cast .fc-name { display: block; font-weight: 600; font-size: .875rem; line-height: 1.2; }
+html body .film-cast .fc-actor { display: block; font-size: .875rem; line-height: 1.2; opacity: .8; }
+html body .film-cast .fc-more a { display: flex; flex-direction: column; line-height: 1.05; align-items: center; justify-content: center; width: 64px; height: 64px; margin: 0 auto; border-radius: 50%; border: 3px solid #000; background: var(--dym-red); color: #fff; font-weight: 700; font-size: .875rem; }
+html body .has-hero .film-cast .fc-more a { color: #fff !important; }
+@media (max-width: 760px) {
+  html body .has-hero > .film-hero { float: none; width: 100%; margin: 1rem 0 1.25rem; }
+}
+@media (prefers-color-scheme: dark) {
+  html body .film-cast img, html body .film-cast .fc-more a { border-color: #fff; }
+}
+html body .detail-header.has-hero { padding: 1.5rem; }
+html body .has-hero > .film-hero-pair { float: none; width: 100%; margin: 1.25rem 0 0; grid-template-columns: 1fr 1fr; }
+@media (max-width: 760px) {
+  html body .has-hero > .film-hero-pair { grid-template-columns: 1fr; }
+  html body .detail-header.has-hero { padding: 1rem; }
+  html body .film-trailer-btn .yt-icon { top: 34%; width: 54px; height: 54px; }
+  html body .film-trailer-btn .yt-icon::after { left: 20px; top: 14px; border-width: 11px 0 11px 17px; }
+  html body .film-trailer-btn .yt-film { font-size: 1.25rem; }
+}
