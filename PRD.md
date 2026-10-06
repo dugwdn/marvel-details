@@ -24,7 +24,7 @@ the scene and the source, then a reason to keep reading.
 - Five features that link into each other:
   1. Deleted Scenes Registry: what was cut and where to watch it.
   2. Foreshadowing and Callbacks: setups and their payoffs across films.
-  3. Character Arc Tracker: how 10 characters change film to film.
+  3. Character Arc Tracker: how 20 characters change film to film.
   4. Universe Map: an interactive graph of films, characters, items, events.
   5. Rabbit Holes: themed deep dives in three levels of depth.
 - Basic SEO: titles, descriptions, sitemap, robots, structured data.
@@ -74,6 +74,6 @@ account; an account only carries it to other devices.
 - Rank titles use Marvel character names (trademark question; see the PR).
 - Move marveldetails.com from Wix to this site? (Keeps the domain's age
   and existing Search Console property.)
-- GA4: create a property, or reuse one?
+- GA4: property G-NESPZD6XSQ is in the repo; goes live with the next deploy.
 - The four "house writers" are pen names. Keep them, label them clearly as
   pen names, or credit Doug?
