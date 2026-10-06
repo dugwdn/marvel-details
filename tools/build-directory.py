@@ -3,7 +3,7 @@ public/data/mcu-characters.json. Run after changing the data, then run
 node tools/menu.mjs to add the banner and menu:
     python3 tools/build-directory.py && node tools/menu.mjs
 """
-import json, html, pathlib
+import json, html, pathlib, os
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent / 'public'
 data = json.loads((ROOT / 'data/mcu-characters.json').read_text())
@@ -24,6 +24,17 @@ def actor_line(c):
     if voiced: parts.append(('voiced by ' if played else 'Voiced by ') + ', '.join(map(e, voiced)))
     return '; '.join(parts)
 
+# Credited actor portraits (public/data/media-credits.json), one per character page of the list.
+_credits = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 'data', 'media-credits.json')))
+PORTRAITS = {i['character']: i for i in _credits['images'] if i.get('character')}
+
+def portrait(c):
+    p = PORTRAITS.get(c['id'])
+    if not p:
+        return ''
+    return (f'  <figure class="dir-photo"><img src="{p["file"]}" alt="{e(p["subject"])}" width="{p["width"]}" height="{p["height"]}" loading="lazy">'
+            f'<figcaption>Photo: {e(p["author"])}, <a href="{e(p["licenseUrl"])}" rel="nofollow noopener">{e(p["license"])}</a>, <a href="{e(p["sourceUrl"])}" rel="nofollow noopener">Wikimedia Commons</a></figcaption></figure>\n')
+
 def item(c):
     n = len(c['titles'])
     name = e(c['name'])
@@ -37,6 +48,7 @@ def item(c):
         f'<li class="dir-item" id="{c["id"]}" data-s="{e(search)}" data-t="{",".join(str(idx[t]) for t in c["titles"])}" '
         f'data-first="{c["firstDate"]}" data-n="{n}" data-k="{kinds}" data-a="{1 if c["animatedOnly"] else 0}">\n'
         f'  <div class="dir-top"><h3 class="dir-name">{name}</h3><span class="dir-count">{n} {"title" if n == 1 else "titles"}</span></div>\n'
+        + portrait(c) +
         f'  <p class="dir-actor">{actor_line(c)}</p>\n'
         f'  <p class="dir-first">First appearance: <strong>{e(c["first"])} ({year(c["first"])})</strong> {tags}</p>\n'
         + (f'  <details><summary>All {n} titles</summary><ul>{lis}</ul></details>\n' if n > 1 else '')

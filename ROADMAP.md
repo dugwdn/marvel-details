@@ -27,6 +27,17 @@ need his OK, accounts or his laptop; the rest Claude does on a branch with a PR.
    (4 articles exist today.) Run `node tools/menu.mjs` and `python3 tools/comic-panels.py` after.
 
 ## Next
+- Swap the Iron Man and Iron Man 2 trailers for Marvel's own uploads if they appear.
+- Finish portraits for the top 60 characters in the list (53 left) and location photos for the Avengers, Iron Man 3 and Endgame hubs: Wikimedia's API rate-limited us for hours, so these wait for a run with `/tmp`-style batching (8 actors a request, 20 s apart).
+- A Coming Soon page with official trailers for confirmed titles (there is no
+  /upcoming/ page yet).
+- More free-license pictures for articles, callbacks and scenes only where a
+  real place or object fits (Grand Central for The Avengers wasn't confirmed
+  in our sources, so it was skipped).
+5. Write the 7 articles PR #1 took off the articles index (first armor,
+   Black Widow's intel, the Iron Man 3 Mandarin scene, Endgame's final
+   fight, the Avengers post-credits scene, Whiplash's whips, the Quantum
+   Realm's color), each with sources, then list them again.
 - **Coming Soon weekly scan routine:** a weekly check of official sources for
   upcoming MCU releases, feeding a Coming Soon page (`feat/upcoming-page` branch
   holds an early start). Only official dates; unconfirmed items say so.

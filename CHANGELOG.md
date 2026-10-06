@@ -3,6 +3,26 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (images and trailers, not live yet)
+- Photo and video credits: `/credits` (built by `node tools/build-credits.mjs`
+  from `public/data/media-credits.json`), linked from every footer next to
+  Privacy. All 20 character portraits were re-checked against Wikimedia
+  Commons (artist and license) and are listed there.
+- Two real-world photos (free license, credited): the Alabama Hills near
+  Lone Pine, California on the Iron Man hub (where Tony's capture was
+  filmed) and the Unisphere in Flushing Meadows on the Iron Man 2 hub (the
+  real park behind the Stark Expo).
+- Trailers: Doug widened the rule (ADR-010) to official Marvel, Disney and Sony
+  channels plus licensed trailer channels (Movieclips, Rotten Tomatoes,
+  Fandango). All five movie hubs keep a trailer (Iron Man and Iron Man 2 from
+  Movieclips channels; no Marvel upload could be verified) and the Endgame,
+  Avengers and Iron Man 2 articles now embed theirs. All checked with oembed.
+- Character list: 7 small credited portraits (Sebastian Stan, Cobie Smulders,
+  Anthony Mackie, Benedict Wong, Dave Bautista, John Slattery, Kat Dennings)
+  from the MCU Character List builder reading `media-credits.json`.
+- New test `test/media.test.mjs` (license, size, alt text, visible credit,
+  official channel, nocookie, lazy and titled iframes).
+
 ## 2026-10-06 (working links and real info, not live yet)
 - Movie pages: the cards under "Hidden Details & Easter Eggs" looked like
   buttons but most led nowhere (only 1 to 2 per page had a page behind them)

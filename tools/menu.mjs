@@ -43,7 +43,7 @@ const GA =
   "        gtag('js', new Date());\n" +
   `        gtag('config', '${GA_ID}');\n` +
   '    </script>';
-const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a></p>';
+const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>';
 
 // Footer with project backlinks and Web Design Nerd credit
 const FOOTER =

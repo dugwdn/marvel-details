@@ -23,6 +23,11 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Menu and look:** shared comic banner and menu written into each page by `node tools/menu.mjs` (run after adding a page). Articles are comic strips (`python3 tools/comic-panels.py`).
 - **Images rule:** no studio posters, stills or character art (copyright, ads at risk). Allowed: YouTube embeds of official or licensed channels (YouTube's own player), and free-license Wikimedia Commons photos with a credit line. IMDb text and photos can't be copied; plain facts (dates, cast) can be stated.
 - **Known gaps:** 7 articles still unwritten (below). The About page and bylines name "house writers" (pen names, not people): Doug has not decided how to present them. marveldetails.com still serves Doug's old Wix site; moving it waits on Doug. Search Console for mcueastereggs.com not set up.
+- **Images and trailers (PR #28, ADR-010):** all media is listed in
+  `public/data/media-credits.json`; `node tools/build-credits.mjs` rebuilds
+  `/credits`, then `node tools/menu.mjs`. Trailers on all 5 hubs and 4
+  articles (official or licensed channels). 20 character portraits, 7 list
+  portraits, 2 place photos (Iron Man hubs). `test/media.test.mjs` checks it.
 - **Movie hubs** are built by `node tools/build-hubs.mjs` from
   `public/data/movie-hubs.json` (every detail needs a source URL; trailer
   blocks and figures on the page are kept). Run `node tools/menu.mjs` after.
