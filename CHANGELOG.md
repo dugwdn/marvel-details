@@ -3,6 +3,19 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (Marvel quiz, not live yet)
+- New `/quiz/`: 82 questions in four levels, Sidekick (easy), Hero
+  (medium), Avenger (hard) and Inevitable (insanely hard, 15-second timer).
+  Ten shuffled questions a round, the answer, why and where to check it
+  after each one, streak and perfect-round bonuses, and a quiz rank from
+  Recruit to Inevitable by lifetime points. Guests play with no account;
+  the end screen offers Google sign-in to keep points on every device.
+- Quiz points are kept in the member data (`quiz` in `members-core.js`) and
+  sync with the account; My Marvel shows the quiz rank. ADR-011.
+- Menu: Quiz takes About's button (still ten buttons). About moved to the
+  footer line next to Privacy and Credits on every page that had no other
+  About link.
+
 ## 2026-10-06 (Coming Soon restored, not live yet)
 - Coming Soon (`/upcoming/`) is back. It was added in PR #22 but its commit
   never reached `phase-1-build`, so the live site gave a 404. Restored with

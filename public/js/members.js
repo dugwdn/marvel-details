@@ -5,6 +5,7 @@
 // account. Signing in with Google (optional) syncs it through /api/sync.
 // Loaded on every page by tools/menu.mjs as <script type="module">.
 import * as core from './members-core.js';
+import { quizRank } from './quiz-core.js';
 
 const KEY = 'dym-members-v1';
 const SIGNED = 'dym-signed-in'; // "1" while this browser has a session
@@ -95,6 +96,14 @@ const api = {
     state.found[key] = Date.now();
     commit();
     checkRank();
+  },
+  // Called by the quiz (/quiz/) at the end of a round.
+  addQuizResult(tierId, points) {
+    const q = state.quiz;
+    q.points += Math.max(0, Math.floor(points) || 0);
+    q.games += 1;
+    q.best[tierId] = Math.max(q.best[tierId] || 0, points);
+    commit();
   },
   clearDevice() { state = core.emptyState(); ls.del(RANK_CACHE); commit({ sync: false }); },
 };
@@ -491,7 +500,24 @@ function renderMe() {
     $('dym-clear-no')?.addEventListener('click', () => { $('dym-clear-confirm').hidden = true; });
   }
 
-  const paintAll = () => { paintRank(); paintSaved(); paintFavs(); };
+  // Quiz rank (separate ladder, by lifetime quiz points)
+  const paintQuiz = () => {
+    const box = $('dym-quiz');
+    if (!box) return;
+    if (!state.quiz.games) { box.innerHTML = '<p>No quiz played yet. <a href="/quiz/">Take the Marvel quiz</a> to earn points.</p>'; return; }
+    getJSON('/data/quiz.json').then((d) => {
+      const r = quizRank(state.quiz.points, d.ranks);
+      const best = d.tiers.filter((t) => state.quiz.best[t.id]).map((t) => `<li>${esc(t.name)} (${esc(t.level)}): ${state.quiz.best[t.id]}</li>`).join('');
+      box.innerHTML = `
+        <p class="dym-kicker">Quiz rank · ${r.index + 1} of ${d.ranks.length}</p>
+        <p class="dym-rank-title">${esc(r.current.title)}</p>
+        <p class="dym-count"><strong>${state.quiz.points.toLocaleString()}</strong> quiz points from ${state.quiz.games} round${state.quiz.games === 1 ? '' : 's'}</p>
+        ${r.next ? `<p class="dym-next"><strong>${r.toNext.toLocaleString()}</strong> more points to reach <strong>${esc(r.next.title)}</strong></p>` : '<p class="dym-next">Top quiz rank.</p>'}
+        ${best ? `<p>Best rounds:</p><ul class="dym-breakdown">${best}</ul>` : ''}
+        <p><a href="/quiz/">Play another round</a></p>`;
+    }).catch(() => {});
+  };
+  const paintAll = () => { paintRank(); paintQuiz(); paintSaved(); paintFavs(); };
   document.addEventListener('dym:change', paintAll);
   paintAll();
   initAccount();

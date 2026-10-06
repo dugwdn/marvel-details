@@ -11,7 +11,8 @@ const SELF = fileURLToPath(import.meta.url);
 const ROOT = path.join(path.dirname(SELF), '..', 'public');
 
 // Ten buttons so the menu grid has no orphan (5 x 2, or 2 x 5 on phones).
-// My Marvel lives in the header bar's member chip instead.
+// My Marvel lives in the header bar's member chip instead; About moved to the
+// footer's legal line when Quiz took its button (2026-10-06).
 export const MENU = [
   ['Home', '/', ''],
   ['Articles', '/articles/', 'articles'],
@@ -22,7 +23,7 @@ export const MENU = [
   ['Universe Map', '/map/', 'map'],
   ['Rabbit Holes', '/rabbit-holes/', 'rabbit-holes'],
   ['Coming Soon', '/upcoming/', 'upcoming'],
-  ['About', '/about', 'about'],
+  ['Quiz', '/quiz/', 'quiz'],
 ];
 
 const FONT =
@@ -61,6 +62,7 @@ export function gaSnippet(id) {
 }
 const GA = gaSnippet(GA_ID);
 const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>';
+const PRIVACY_ABOUT = '<p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>';
 
 // Footer with project backlinks and Web Design Nerd credit
 const FOOTER =
@@ -159,10 +161,13 @@ export function addMenu(html, rel) {
   if (!html.includes('/js/search.js')) html = html.replace('</body>', `    ${SEARCH}\n</body>`);
   // Remove the project links from a previous run (every copy) first.
   html = html.replace(/\n[ \t]*<div class="site-footer-links">[\s\S]*?<\/div>/g, '');
-  // Pages with a footer get a Privacy link in it (once).
-  html = html.replace(/<p class="site-legal">[\s\S]*?<\/p>/, PRIVACY);
-  if (/<footer[\s>]/.test(html) && !/href="\/privacy\/?"/.test(html)) {
-    html = html.replace(/(<footer[^>]*>)([\s\S]*?)(\s*)<\/footer>/, (all, open, inner, ws) => `${open}${inner}${inner.includes('\n') ? '\n        ' : ''}${PRIVACY}${ws}</footer>`);
+  // Pages with a footer get a Privacy link in it (once), plus About when the
+  // page has no other link to it (the menu no longer has an About button).
+  const rest = html.replace(/<nav class="site-nav"[\s\S]*?<\/nav>/, '').replace(/<p class="site-legal">[\s\S]*?<\/p>/, '');
+  const legal = /href="\/about(\.html)?"/.test(rest) ? PRIVACY : PRIVACY_ABOUT;
+  html = html.replace(/<p class="site-legal">[\s\S]*?<\/p>/, legal);
+  if (/<footer[\s>]/.test(html) && !/<p class="site-legal">/.test(html) && !/href="\/privacy\/?"/.test(html)) {
+    html = html.replace(/(<footer[^>]*>)([\s\S]*?)(\s*)<\/footer>/, (all, open, inner, ws) => `${open}${inner}${inner.includes('\n') ? '\n        ' : ''}${legal}${ws}</footer>`);
   }
   // Add footer with project links and Web Design Nerd credit.
   // Add it before the closing footer tag if a footer exists, or create one before </body>.
