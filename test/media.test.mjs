@@ -33,25 +33,33 @@ test('photos are not credited twice and every list portrait names its character'
   for (const i of credits.images) if (i.character) assert.ok(ids.has(i.character), `${i.file}: unknown character ${i.character}`);
 });
 
-test('every photo on a page is credited, has size, alt text and a visible credit', () => {
+// Doug 2026-10-06: no source or license lines on the pages; credits live on /credits,
+// which every footer links to (the CC licenses need the credit to be reachable).
+test('every photo on a page is in media-credits.json, has size and alt, and no caption credit', () => {
   const credited = new Set(credits.images.map((i) => i.file));
   for (const file of htmlFiles(ROOT)) {
     const html = fs.readFileSync(file, 'utf8');
-    let inFigures = 0;
-    for (const fig of html.matchAll(/<figure class="[^"]*">([\s\S]*?)<\/figure>/g)) {
-      const tag = fig[1].match(/<img[^>]*src="\/img\/[^>]*>/);
-      if (!tag) continue;
-      inFigures++;
-      const img = tag[0];
-      const src = img.match(/src="([^"]+)"/)[1];
+    for (const tag of html.match(/<img[^>]*src="\/img\/[^>]*>/g) || []) {
+      const src = tag.match(/src="([^"]+)"/)[1];
       assert.ok(credited.has(src), `${src} on ${file} is not in media-credits.json`);
-      assert.match(img, /width="\d+"/);
-      assert.match(img, /height="\d+"/);
-      assert.match(img, /alt="[^"]+"/);
-      assert.match(fig[1], /<figcaption>[\s\S]*(CC BY|CC0|Public domain)[\s\S]*<\/figcaption>/, `${src} has no visible credit`);
+      assert.match(tag, /width="\d+"/);
+      assert.match(tag, /height="\d+"/);
+      assert.match(tag, /alt="[^"]*"/, `${src} on ${file} has no alt`);
     }
-    const all = (html.match(/<img[^>]*src="\/img\//g) || []).length;
-    assert.equal(all, inFigures, `${file} has a photo outside a credited figure`);
+    if (path.basename(file) === 'credits.html') continue;
+    assert.ok(!/Wikimedia Commons|CC BY|class="(?:yt|trailer)-credit"/.test(html), `${file} still shows a source line`);
+    if (/<img[^>]*src="\/img\/|data-yt=/.test(html)) assert.match(html, /<a href="\/credits">Photos and Credits<\/a>/, `${file} has media but no footer link to /credits`);
+  }
+});
+
+test('movie, deleted-scene and callback pages have a trailer in the header', () => {
+  const pages = ['movies', 'scenes', 'callbacks'].flatMap((d) => fs.readdirSync(path.join(ROOT, d))
+    .filter((f) => /^(?!index)[a-z0-9-]+\.html$/.test(f)).map((f) => path.join(ROOT, d, f)));
+  assert.ok(pages.length >= 40);
+  for (const file of pages) {
+    const html = fs.readFileSync(file, 'utf8');
+    const head = html.match(/class="(?:movie-header|detail-header) has-hero"[\s\S]*?<!-- \/media:film-hero -->/);
+    assert.ok(head && /class="yt-play film-trailer-btn" data-yt="/.test(head[0]), `${file} has no trailer in its header`);
   }
 });
 

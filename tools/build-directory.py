@@ -24,7 +24,7 @@ def actor_line(c):
     if voiced: parts.append(('voiced by ' if played else 'Voiced by ') + ', '.join(map(e, voiced)))
     return '; '.join(parts)
 
-# Credited actor portraits (public/data/media-credits.json), one per character page of the list.
+# Actor portraits (public/data/media-credits.json; their credits are on /credits), one per character page of the list.
 _credits = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 'data', 'media-credits.json')))
 _pages = {c['page']: c['id'] for c in data['characters'] if c['page']}
 PORTRAITS = {}
@@ -41,7 +41,7 @@ def portrait(c):
     if p.get('srcset'):
         srcset = ' srcset="' + ', '.join(f'{f} {w}w' for w, f in p['srcset'].items()) + '" sizes="140px"'
     return (f'  <figure class="dir-photo"><img src="{p["file"]}"{srcset} alt="{e(p.get("alt") or p["subject"])}" width="{p["width"]}" height="{p["height"]}" loading="lazy" decoding="async">'
-            f'<figcaption>Photo: {e(p["author"])}, <a href="{e(p["licenseUrl"])}" rel="nofollow noopener">{e(p["license"])}</a>, <a href="{e(p["sourceUrl"])}" rel="nofollow noopener">Wikimedia Commons</a></figcaption></figure>\n')
+            '</figure>\n')  # credits live on /credits (Doug 2026-10-06)
 
 def item(c):
     n = len(c['titles'])

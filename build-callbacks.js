@@ -9,6 +9,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { addMenu } from './tools/menu.mjs';
+import { addFilmHeroes } from './tools/build-media.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -447,4 +448,5 @@ for (const name of fs.readdirSync(callbacksDir)) {
   }
 }
 
+addFilmHeroes(); // official trailers in each callback header
 console.log(`\n✓ Generated ${list.length} callback pages`);

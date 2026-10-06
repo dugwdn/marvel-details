@@ -3,6 +3,22 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (Movie headers with media, credits on one page, not live yet)
+- Movie pages, deleted-scene pages and callback pages: the header box now has
+  the official trailer (click to play; its cover is the film's cast photos)
+  and, on movie and deleted-scene pages, a strip of cast faces linking to
+  each character. Callback pages show the trailer of the film that sets it up
+  and the film that pays it off. The separate trailer block lower on movie
+  pages is gone (it moved into the header).
+- Removed every "Photo: author, license, Wikimedia Commons" caption and every
+  "Trailer from ... channel" line across the site (home photo wall, movie
+  galleries, character pages, the character list, articles, Coming Soon).
+  All credits stay complete on /credits, now titled "Photos and Credits" and
+  linked from every footer (ADR-013).
+- Fixed: Iron Man's cast showed Don Cheadle as Rhodey (Terrence Howard played
+  him there), and The Avengers showed Josh Brolin as Thanos (Damion Poitier
+  played him there). `RECAST` in tools/build-media.mjs keeps those photos off.
+
 ## 2026-10-06 (Fresh CSS on every deploy, not live yet)
 - Fixed: after the photos deploy, the home page "Faces of the MCU" spotlight,
   photo wall and trailer rows showed unstyled for visitors who had the site

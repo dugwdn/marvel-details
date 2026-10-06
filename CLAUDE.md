@@ -36,6 +36,13 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   `python3 tools/fetch-media.py` (or push a `media/fetch-*` branch so the
   GitHub Action fetches them: Wikimedia rate-limits cloud IPs). RUNBOOK
   "Add photos or trailers".
+- **Header media and credits (ADR-013):** movie hubs, deleted-scene pages and
+  callback pages carry the official trailer (cover = the film's cast photos)
+  and a cast strip inside the header, written by `addFilmHeroes` in
+  `tools/build-media.mjs` (build-hubs.mjs and build-callbacks.js call it).
+  No photo or trailer shows a source line anywhere; all credits are on
+  `/credits` ("Photos and Credits", in every footer). `RECAST` and `LEADS`
+  in build-media.mjs keep recast actors off a film and put the stars first.
 - **Movie hubs** are built by `node tools/build-hubs.mjs` from
   `public/data/movie-hubs.json` (every detail needs a source URL; trailer
   blocks and figures on the page are kept). Run `node tools/menu.mjs` after.
