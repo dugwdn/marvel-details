@@ -2,8 +2,11 @@ name: Fetch media
 # Fetches the free-license photos listed in tools/media-wanted.json and the
 # official trailers, rebuilds the media sections and commits to the chosen branch.
 # GitHub's runners are not rate-limited by Wikimedia the way shared cloud IPs are.
-# Run it from Actions > Fetch media > Run workflow (pick the branch), then review the PR.
+# Run it from Actions > Fetch media > Run workflow (pick the branch), or push a branch
+# named media/fetch-<anything>; it commits back to that branch. Then open a PR from it.
 on:
+  push:
+    branches: ['media/fetch-*']
   workflow_dispatch:
     inputs:
       trailers:
@@ -26,7 +29,7 @@ jobs:
           python-version: '3.12'
       - run: pip install pillow
       - run: python3 tools/fetch-media.py
-      - if: ${{ inputs.trailers }}
+      - if: ${{ inputs.trailers == true }}
         run: python3 tools/find-trailers.py
       - run: |
           python3 tools/build-directory.py
