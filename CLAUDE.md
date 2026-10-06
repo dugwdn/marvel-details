@@ -23,14 +23,12 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 10),
   Universe Map (`/map/`, 25 nodes and 51 links) and Rabbit Holes
   (`/rabbit-holes/`, 8).
-- **Open draft PR #1** fixes the blank Universe Map, unreadable dark-mode
-  text, the catch-all redirect that turned every bad address into the home
-  page, and the sitemap/robots pointing at a non-existent workers.dev host.
-  It also removes 77 links to pages that don't exist and adds a link check
-  (`tools/check-links.mjs`, run on every PR). Not published yet.
+- Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
+  real 404, sitemap/robots, link check on every PR), PR #3 ad boxes (hidden
+  until AdSense fills them) and PR #4 green drink corrections.
 - **Brand banner and site menu:** one shared comic-style banner and menu
   of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
-  page). Styles are in `public/css/style.css`; uses the Bangers web font.
+  page). Styles are in `public/css/theme.css`; uses the Bangers web font.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
@@ -38,8 +36,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
-Waiting on Doug: publish PR #1, a real GA4 ID, the domain
-move, and the pen-name question.
+Waiting on Doug: a real GA4 ID, AdSense slot numbers, and the domain move.
 
 ## Working rules
 - Project-wide rules (branch and PR, never merge or deploy without Doug's

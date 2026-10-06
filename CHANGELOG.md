@@ -12,8 +12,21 @@ merged-but-unpublished work.
   buttons (Home, Articles, Movies, Deleted Scenes, Callbacks, Characters,
   Universe Map, Rabbit Holes, About), with the current section in yellow.
   Pages that had no menu (callbacks, map, rabbit holes, 404) now have one.
-  Written by `tools/menu.mjs`; styles in `public/css/style.css`.
-- **Live:** published commit ecf0b8b (green drink fixes, ads, project docs).
+  Written by `tools/menu.mjs`; styles in `public/css/theme.css`.
+  Replaces the red hero menu from PR #9.
+- Newest-movie banner (not live yet): a big home page banner for
+  Spider-Man: Brand New Day linking to a new easter eggs article
+  (`/articles/spider-man-brand-new-day-easter-eggs`). Each reported egg is
+  labeled "Reported" until we check it. Banner art is our own abstract
+  red gradient and city silhouette: no characters, logos or posters.
+- New look (not live yet): in the style Marvel fans expect. Light content
+  area with black bars (dark mode follows the device), bold condensed
+  uppercase headings (Barlow Condensed), red accent, black top bar
+  with our own type-only wordmark, red-to-black poster tiles for movies.
+  Original: no Marvel logos, art or assets. `public/css/theme.css`.
+- **Live:** published commit ecf0b8b (PRs #1, #2, #3, #4) to
+  https://marvel-details.pages.dev from Doug's laptop. Checked: home, map
+  (draws), scenes, green drink article, 404 on a made-up address, ads.txt.
 - Green drink article: the Age of Ultron return and the "different shade"
   idea are now marked unconfirmed; placeholder source links replaced with
   real ones.

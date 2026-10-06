@@ -1,0 +1,546 @@
+/* Site theme in the style Marvel fans know (black bars, condensed
+   uppercase type, one red accent), built only from our own parts: a
+   type-only wordmark, free Google fonts (Barlow Condensed for headings,
+   Barlow for text, both DIN-like), our own red. No Marvel logos, art,
+   fonts, code or assets. Light content area by default; dark when the
+   visitor's device is in dark mode. Header, nav and footer stay black in
+   both. Loaded last on every page so it wins over inline styles. */
+:root {
+  --dym-bg: #f2f2f3;
+  --dym-surface: #ffffff;
+  --dym-surface-2: #ebebee;
+  --dym-line: #d9d9de;
+  --dym-text: #151517;
+  --dym-muted: #5c5c66;
+  --dym-red: #e0303c;
+  --dym-red-dark: #b3202b;
+  --dym-head: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  --dym-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dym-bg: #0e0e11;
+    --dym-surface: #18181d;
+    --dym-surface-2: #212128;
+    --dym-line: #2e2e37;
+    --dym-text: #ececf1;
+    --dym-muted: #a6a6b3;
+  }
+}
+
+html body {
+  background: var(--dym-bg);
+  color: var(--dym-text);
+  font-family: var(--dym-body);
+}
+
+html body h1, html body h2, html body h3, html body h4,
+html body .section-title, html body .movie-title, html body .chapter-title-text {
+  font-family: var(--dym-head);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: var(--dym-text);
+}
+html body h1 { font-weight: 700; }
+html body h2, html body h3 { font-weight: 600; }
+
+html body a { color: var(--dym-red); }
+html body a:hover { color: #ff5a64; }
+
+/* Top bar and wordmark */
+html body > header:not(.site-brand), html body header:first-of-type:not(.site-brand):not(.detail-header):not(.hole-detail-header):not(.character-header):not(.movie-header) {
+  background: #000;
+  border-bottom: 4px solid var(--dym-red);
+  padding: 1.25rem 16px;
+  text-align: center;
+}
+html body > header:not(.site-brand) h1 {
+  display: inline-block;
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1;
+  color: #fff;
+  letter-spacing: .04em;
+}
+html body > header:not(.site-brand) h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  margin-top: .35rem;
+  background: linear-gradient(90deg, var(--dym-red) 0 40%, transparent 40%);
+}
+html body > header:not(.site-brand) p { color: var(--dym-muted); margin: .5rem 0 0; }
+
+html body > nav, html body nav:not(.navigation) {
+  background: #000;
+  border-bottom: 1px solid var(--dym-line);
+}
+html body > nav a, html body nav:not(.navigation) a, html body .nav-link {
+  color: #fff;
+  font-family: var(--dym-head);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .95rem;
+  text-decoration: none;
+}
+html body > nav a:hover, html body nav:not(.navigation) a:hover, html body .nav-link:hover { color: var(--dym-red); }
+
+/* Section headings get a short red underline, not a full-width rule */
+html body .section-title {
+  border-bottom: none;
+  position: relative;
+  padding-bottom: .5rem;
+}
+html body .section-title::after {
+  content: "";
+  position: absolute; left: 0; bottom: 0;
+  width: 64px; height: 4px;
+  background: var(--dym-red);
+}
+
+/* Cards and boxes: dark surfaces */
+html body .article-card, html body .movie-card, html body [class*="-card"],
+html body .detail-section, html body .detail-item, html body .explanation-box,
+html body .payoff-box, html body .chapter, html body .subsection,
+html body .metadata-item, html body .meta-item, html body .related-hole-item,
+html body .hole-card, html body .scene-card, html body .character-card,
+html body .timeline-section, html body .filter-group, html body .movie-filter-item,
+html body .detail-header, html body .hole-detail-header, html body .character-header,
+html body .movie-header, html body .callback-card, html body .search-box,
+html body article, html body .content, html body main > section {
+  background: var(--dym-surface);
+  color: var(--dym-text);
+  border-color: var(--dym-line);
+}
+html body .article-card, html body .movie-card, html body [class*="-card"] {
+  border: 1px solid var(--dym-line);
+  border-radius: 6px;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+html body .article-card:hover, html body .movie-card:hover, html body [class*="-card"]:hover {
+  transform: translateY(-3px);
+  border-color: var(--dym-red);
+  box-shadow: 0 10px 24px rgba(0,0,0,.5);
+}
+html body .article-card h3, html body .article-card h3 a { color: var(--dym-text); }
+
+/* Muted text that pages set in light-mode grays */
+html body p, html body li, html body .description, html body .movie-detail,
+html body .meta-value, html body .character-thesis, html body .hole-detail-summary p {
+  color: var(--dym-text);
+}
+html body .timestamp, html body .meta-label, html body .character-meta,
+html body .details-count, html body .hole-detail-meta, html body .hole-detail-tagline,
+html body .related-hole-tagline, html body .article-meta, html body .byline,
+html body small, html body .article-card .meta, html body .article-card p {
+  color: var(--dym-muted);
+}
+
+/* Buttons and filters */
+html body button, html body .filter-btn, html body .back-button {
+  background: var(--dym-surface-2);
+  color: var(--dym-text);
+  border: 1px solid var(--dym-line);
+  font-family: var(--dym-head);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+html body .filter-btn.active, html body button.active, html body .filter-btn:hover, html body .back-button:hover {
+  background: var(--dym-red);
+  border-color: var(--dym-red);
+}
+html body input, html body select {
+  background: var(--dym-surface-2);
+  color: var(--dym-text);
+  border: 1px solid var(--dym-line);
+}
+
+/* Back link */
+html body .back-link { color: var(--dym-muted); }
+html body .back-link:hover { color: var(--dym-red); }
+
+/* Footer */
+html body footer {
+  background: #000;
+  color: var(--dym-muted);
+  border-top: 4px solid var(--dym-red);
+}
+html body footer a { color: #fff; }
+
+/* Ad boxes sit on the dark page */
+html body .ad-box .ad-label { color: var(--dym-muted); }
+
+/* Movie cards: a typographic poster panel (no film art), white title below */
+html body .movie-card > div[style] {
+  background: linear-gradient(160deg, var(--dym-red-dark) 0%, #3a0d12 45%, #000 100%) !important;
+  color: #fff !important;
+  font-family: var(--dym-head);
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  letter-spacing: .04em;
+  text-align: center;
+  padding: 0 .75rem;
+}
+html body .movie-card-content { background: var(--dym-surface); }
+html body .movie-card h3, html body .movie-card-content h3 { color: var(--dym-text); }
+html body .movie-card .details-count { color: var(--dym-red); }
+
+/* Panels that pages set to white or light gray */
+html body .article-container, html body .article-item, html body .next-article,
+html body .scene-reference, html body .callback-explanation, html body .callback-timeline,
+html body .callbacks-search-bar, html body .search-input-group, html body .search-filter-section,
+html body .disclaimer, html body .hole-detail-summary, html body .related-holes,
+html body .map-container, html body .map-panel-left, html body .map-panel-right,
+html body .statistics, html body .statistics > div, html body .movie-detail,
+html body .milestone-header, html body main, html body .error-message,
+html body .foreshadow, html body .fulfillment, html body .container > div:not([class]) {
+  background: var(--dym-surface) !important;
+  color: var(--dym-text);
+  border-color: var(--dym-line);
+}
+html body .statistics div, html body .map-panel-right div:not([class*="badge"]) { background-color: var(--dym-surface-2); }
+html body .next-article { border-left: 4px solid var(--dym-red); }
+html body .next-article .label { color: var(--dym-red); }
+html body .timestamp { background: var(--dym-surface-2); color: var(--dym-muted); }
+
+/* Text the pages set dark */
+html body h1, html body h2, html body h3, html body h4, html body label,
+html body strong, html body li, html body .movie-title, html body .related-hole-title,
+html body .chapter-title-level, html body .stat-number, html body .stat-item,
+html body .filter-label, html body .character-actor, html body .hole-summary,
+html body .hole-tagline, html body .scene-description, html body .scene-where,
+html body .milestone-year, html body .error-message, html body .checkbox-label,
+html body .clear-filters-btn, html body .read-more, html body .details-count {
+  color: var(--dym-text);
+}
+html body .hole-tagline, html body .scene-where, html body .character-actor { color: var(--dym-muted); }
+html body .read-more, html body .source-link, html body .stat-number, html body .details-count { color: var(--dym-red); }
+html body .pen-name { color: var(--dym-red); }
+
+/* Feature pages set heading and label colors with stronger selectors */
+html body h1, html body h2, html body h3, html body h4, html body label,
+html body strong, html body li, html body p, html body .movie-title,
+html body .results-count, html body [id$="count"], html body .no-results,
+html body .character-card *, html body .hole-card *, html body .scene-card *, html body .callback-card *,
+html body .map-panel-left *, html body .map-panel-right * {
+  color: var(--dym-text) !important;
+}
+html body .character-card .character-role, html body .hole-card .difficulty-badge,
+html body .scene-card .format-badge, html body .callback-card .callback-type,
+html body .callback-card .tag, html body .hole-card .char-tag { color: var(--dym-text) !important; }
+html body .character-role, html body .difficulty-badge { color: #fff !important; background: var(--dym-red-dark) !important; }
+html body .format-badge, html body .char-tag, html body .tag, html body .arc-stage { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line); }
+html body .read-more, html body .source-link, html body .stat-number, html body .pen-name { color: var(--dym-red) !important; }
+html body footer p, html body footer { color: var(--dym-muted) !important; }
+html body .article-card p, html body .timestamp, html body .hole-tagline, html body .scene-where { color: var(--dym-muted) !important; }
+html body .map-container button, html body .zoom-controls button, html body [class*="zoom"] button { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line) !important; }
+html body .map-container .loading, html body #map .loading, html body .map-loading { background: transparent !important; color: var(--dym-muted) !important; }
+html body #zoom-in, html body #zoom-out, html body #reset-zoom { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line) !important; }
+html body #stats-container, html body #stats-container * { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; }
+html body select, html body input { background: var(--dym-surface-2) !important; color: var(--dym-text) !important; border: 1px solid var(--dym-line) !important; }
+html body .movie-card > div:first-child:not(.movie-card-content) {
+  background: linear-gradient(160deg, var(--dym-red-dark) 0%, #3a0d12 45%, #000 100%) !important;
+  color: #fff !important;
+  font-family: var(--dym-head);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+html body .movie-card-image { background: linear-gradient(160deg, var(--dym-red-dark) 0%, #3a0d12 45%, #000 100%) !important; color: #fff !important; font-family: var(--dym-head); text-transform: uppercase; letter-spacing: .04em; }
+
+/* Black bars keep white text in both modes */
+html body > header:not(.site-brand) h1, html body > header:not(.site-brand) h1 *, html body > nav:not(.site-nav) a, html body nav:not(.navigation):not(.site-nav) a { color: #fff !important; }
+html body > header:not(.site-brand) p { color: #b9b9c2 !important; }
+html body footer, html body footer p { color: #b9b9c2 !important; }
+html body footer a { color: #fff !important; }
+
+/* Light-mode fixes found by the contrast scan */
+html body .character-card .character-role, html body .hole-card .difficulty-badge,
+html body div.character-role, html body span.difficulty-badge { color: #fff !important; background: var(--dym-red-dark) !important; }
+html body header.page-header, html body header.page-header * { color: #fff !important; }
+html body header.page-header p { color: #b9b9c2 !important; }
+html body footer .disclaimer { background: transparent !important; }
+html body .navigation .nav-link { color: var(--dym-red) !important; }
+html body .chapter-title-level { color: var(--dym-muted) !important; }
+html body .expand-icon { color: var(--dym-red) !important; }
+
+/* Newest-movie promo banner (home). Abstract art only: no characters, logos, posters or emblems. */
+html body .promo-banner { position: relative; overflow: hidden; color: #fff; background: linear-gradient(115deg, #7a0f18 0%, var(--dym-red-dark) 30%, #2a0b10 62%, #0b0f24 100%); min-height: 340px; display: flex; align-items: center; border-bottom: 4px solid var(--dym-red); }
+html body .promo-art { position: absolute; inset: 0; pointer-events: none;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 300' preserveAspectRatio='none'%3E%3Cpath fill='rgba(0,0,0,0.38)' d='M0 300V210h40v-30h30v50h35V150h20v-20h30v20h20v80h40V170h55v-40h15v-30h10v30h15v40h30v60h35V120h45v110h30V190h40v-70h20v-25h8v25h22v70h35v60h40V160h45v70h30V200h45v100z'/%3E%3Cpath fill='rgba(0,0,0,0.55)' d='M0 300v-40h60v-35h45v45h50v-60h40v60h55v-25h50v-50h30v75h45v-40h60v50h40v-70h35v70h55v-30h45v45h40v-35h55v-25h45v60h50v-30h50v65z'/%3E%3C/svg%3E") right bottom / 62% 62% no-repeat,
+    repeating-linear-gradient(115deg, rgba(255,255,255,.06) 0 2px, transparent 2px 46px),
+    radial-gradient(circle at 82% 30%, rgba(224,48,60,.45), transparent 45%); }
+@media (max-width: 600px) { html body .promo-art { background-size: 100% 45%, auto, auto; } }
+html body .promo-inner { position: relative; width: 100%; max-width: 1600px; margin: 0 auto; padding: 3rem 2rem; }
+html body .promo-kicker { display: inline-block; background: var(--dym-red); color: #fff !important; font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; padding: .3rem .7rem; margin-bottom: 1rem; }
+html body .promo-title { font-family: var(--dym-head); font-weight: 800; text-transform: uppercase; color: #fff !important; font-size: clamp(2.4rem, 7vw, 5.5rem); line-height: .95; letter-spacing: .01em; margin: 0 0 1rem; max-width: 14ch; text-shadow: 0 2px 18px rgba(0,0,0,.45); }
+html body .promo-sub { color: #f1f1f4 !important; font-size: 1.15rem; max-width: 46ch; margin: 0 0 1.6rem; }
+html body .promo-cta { display: inline-block; background: #fff; color: #111 !important; font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: .85rem 1.6rem; text-decoration: none; border: 2px solid #fff; }
+html body .promo-cta:hover, html body .promo-cta:focus { background: transparent; color: #fff !important; }
+@media (max-width: 600px) {
+  html body .promo-banner { min-height: 300px; }
+  html body .promo-inner { padding: 2rem 16px; }
+  html body .promo-sub { font-size: 1rem; }
+}
+
+/* Site menu: big comic-panel buttons. Every page carries the same
+   <nav class="site-nav"> block (written by tools/menu.mjs).
+   "html body" outranks the plain "nav a" rules still inline on older pages.
+   Original design; no studio logos, fonts or trade dress. */
+html body nav.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem 1rem;
+  margin: 0;
+  padding: 1.25rem 1rem 1.5rem;
+  background-color: #14141f;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.6px);
+  background-size: 14px 14px;
+  border-bottom: 5px solid #000;
+  text-align: center;
+}
+
+html body nav.site-nav a {
+  --hero: #e23636;
+  --hero-ink: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  margin: 0;
+  padding: 0.55rem 1.3rem 0.45rem;
+  background: var(--hero);
+  color: var(--hero-ink);
+  border: 3px solid #000;
+  border-radius: 6px;
+  box-shadow: 5px 5px 0 #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+  transform: rotate(-1.5deg);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* Each button gets its own hero color; the tilt alternates like panels. */
+html body nav.site-nav a:nth-child(2n) { transform: rotate(1.5deg); }
+html body nav.site-nav a:nth-child(9n+2) { --hero: #1e66d0; }
+html body nav.site-nav a:nth-child(9n+3) { --hero: #217a35; }
+html body nav.site-nav a:nth-child(9n+4) { --hero: #7b3fc4; }
+html body nav.site-nav a:nth-child(9n+5) { --hero: #b85410; }
+html body nav.site-nav a:nth-child(9n+6) { --hero: #0b7783; }
+html body nav.site-nav a:nth-child(9n+7) { --hero: #c2185b; }
+html body nav.site-nav a:nth-child(9n+8) { --hero: #3f51b5; }
+html body nav.site-nav a:nth-child(9n+9) { --hero: #5d6b7a; }
+
+html body nav.site-nav a:hover,
+html body nav.site-nav a:focus-visible {
+  color: var(--hero-ink);
+  transform: translate(-3px, -3px) rotate(0deg) scale(1.06);
+  box-shadow: 9px 9px 0 #000;
+}
+
+html body nav.site-nav a:active {
+  transform: translate(3px, 3px) rotate(0deg);
+  box-shadow: 1px 1px 0 #000;
+}
+
+html body nav.site-nav a:focus-visible {
+  outline: 3px solid #ffd60a;
+  outline-offset: 4px;
+}
+
+/* The page you're on: yellow, like the "POW!" panel. */
+html body nav.site-nav a[aria-current] {
+  --hero: #ffd60a;
+  --hero-ink: #111;
+  text-shadow: none;
+}
+
+@media (max-width: 640px) {
+  html body nav.site-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+    padding: 0.9rem 16px 1.1rem;
+  }
+
+  html body nav.site-nav a {
+    min-height: 3.1rem;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.3rem 0.3rem;
+    text-align: center;
+    overflow-wrap: anywhere;
+    box-shadow: 4px 4px 0 #000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body nav.site-nav a { transition: none; }
+}
+
+/* Brand layer: the "Details You Missed" banner on every page plus comic
+   touches on headings, cards, back buttons and the footer, so the brand
+   shows up everywhere, theme-park style. Original artwork only. */
+html body header.site-brand {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 1.6rem 1rem 1.4rem;
+  text-align: center;
+  color: #fff;
+  background-color: #d7261e;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.22) 1.6px, transparent 1.7px),
+    repeating-conic-gradient(from 0deg at 50% 60%, #e8361f 0deg 9deg, #f2701c 9deg 18deg);
+  background-size: 12px 12px, 100% 100%;
+  border-bottom: 5px solid #000;
+}
+
+html body .site-brand-title {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1;
+}
+
+html body .site-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+  transform: rotate(-2deg);
+  transition: transform 0.15s ease;
+}
+
+html body .site-brand-link:hover,
+html body .site-brand-link:focus-visible {
+  transform: rotate(0deg) scale(1.04);
+}
+
+html body .site-brand-link:focus-visible {
+  outline: 3px solid #ffd60a;
+  outline-offset: 6px;
+}
+
+html body .site-brand-icon {
+  flex: none;
+  width: clamp(3.2rem, 9vw, 5.5rem);
+  height: auto;
+  filter: drop-shadow(4px 4px 0 #000);
+}
+
+html body .site-brand-name {
+  display: block;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
+  font-size: clamp(2.6rem, 8.5vw, 5.4rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 0.92;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffd60a;
+  -webkit-text-stroke: 2px #000;
+  paint-order: stroke fill;
+  text-shadow: 5px 5px 0 #000;
+}
+
+html body .site-brand-name em {
+  font-style: normal;
+  color: #fff;
+}
+
+html body .site-brand-tag {
+  display: inline-block;
+  margin: 1rem 0 0;
+  padding: 0.35rem 1rem 0.25rem;
+  background: #000;
+  color: #fff !important;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
+  font-size: clamp(1rem, 2.6vw, 1.35rem);
+  letter-spacing: 0.08em;
+  opacity: 1;
+  transform: skew(-8deg);
+}
+
+/* Headings everywhere speak in the same comic lettering. */
+html body h1,
+html body h2 {
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+html body .section-title {
+  display: inline-block;
+  padding: 0.2rem 0.9rem 0.1rem;
+  background: #ffd60a;
+  color: #111 !important;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  transform: rotate(-1deg);
+}
+
+/* Cards look like comic panels. */
+html body .article-card,
+html body .movie-card,
+html body .scene-card,
+html body .hole-card,
+html body .callback-card,
+html body .character-card,
+html body .writer-card {
+  border: 3px solid #000;
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 #000;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+html body .article-card:hover,
+html body .movie-card:hover,
+html body .scene-card:hover,
+html body .hole-card:hover,
+html body .callback-card:hover,
+html body .character-card:hover,
+html body .writer-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 #000;
+}
+
+html body .back-button {
+  padding: 0.5rem 1.1rem 0.4rem;
+  background: #ffd60a;
+  color: #111;
+  border: 3px solid #000;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+html body .back-button:hover {
+  background: #ffe55c;
+}
+
+html body > footer {
+  background-color: #14141f;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.6px);
+  background-size: 14px 14px;
+  border-top: 5px solid #ffd60a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body .site-brand-link,
+  html body .article-card,
+  html body .movie-card,
+  html body .scene-card,
+  html body .hole-card,
+  html body .callback-card,
+  html body .character-card,
+  html body .writer-card { transition: none; }
+}
