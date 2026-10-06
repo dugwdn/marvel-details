@@ -13,14 +13,15 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-05)
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
-  `marvel-details`, production branch `phase-1-build`, commit 40e9492 since 2026-10-06,
+  `marvel-details`, production branch `phase-1-build`, commit e69809a since 2026-10-06,
   published by direct upload from Doug's laptop with wrangler).
 - **marveldetails.com is not this site yet.** The domain still serves Doug's
   older Wix site (which carries a Google Search Console verification tag).
   Moving the domain is a live change and waits on Doug.
 - Pages: home, about, 5 movie hubs, 3 articles, plus five features:
   Deleted Scenes Registry (`/scenes/`, 21 scenes), Foreshadowing and
-  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20),
+  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20), MCU Character List
+  (`/characters/all/`, 797, rebuilt by `python3 tools/build-directory.py`),
   Universe Map (`/map/`, 25 nodes and 51 links) and Rabbit Holes
   (`/rabbit-holes/`, 8).
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,

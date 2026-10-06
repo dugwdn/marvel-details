@@ -895,3 +895,13 @@ html body .map-tip-meta { margin: 0; color: #ffb347 !important; font-size: .8rem
   html body .map-overlay-title { font-size: 1.2rem; }
 }
 @media (prefers-reduced-motion: reduce) { html body .map-back { transition: none; } }
+
+/* Link from /characters/ to the full list of every MCU character. */
+html body .dir-cta {
+  display: block; margin: 0 0 2rem; padding: 1rem 1.2rem; background: #ffd60a; color: #111 !important;
+  border: 4px solid #000; box-shadow: 6px 6px 0 #000; border-radius: 3px; text-decoration: none; transform: rotate(-.4deg);
+}
+html body .dir-cta strong { display: block; font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: 1.7rem; letter-spacing: .04em; color: #111 !important; }
+html body .dir-cta span { font-weight: 600; color: #111 !important; }
+html body .dir-cta:hover { transform: rotate(0) translate(-2px, -2px); box-shadow: 8px 8px 0 #000; }
+@media (prefers-color-scheme: dark) { html body .dir-cta { border-color: #f2f2f2; box-shadow: 6px 6px 0 var(--dym-red); } }
