@@ -30,7 +30,7 @@ const FONT =
 const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
 // Member perks (Seen it, Save, favorites, found counter): one module per page.
 const MEMBERS = '<script type="module" src="/js/members.js"></script>';
-const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a></p>';
+const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a> • <a href="/credits">Credits</a></p>';
 
 // Footer with project backlinks and Web Design Nerd credit
 const FOOTER =

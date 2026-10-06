@@ -36,6 +36,12 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   ads at risk). Trailers are YouTube embeds of official uploads; actor photos
   are free-license Wikimedia Commons files with a credit line. IMDb text and
   photos can't be copied; plain facts (dates, cast) can be stated.
+- **Images and trailers (PR on `feat/images-and-trailers`, not live):**
+  rule in ADR-009. All media is listed in `public/data/media-credits.json`;
+  `node tools/build-credits.mjs` rebuilds `/credits`, then `node tools/menu.mjs`.
+  Official trailers: Avengers, Iron Man 3, Endgame, Spider-Man article. Iron
+  Man 1 and 2 have none (only non-official uploads found). 20 character
+  portraits plus 2 place photos (Iron Man hubs). `test/media.test.mjs` checks it.
 - **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,

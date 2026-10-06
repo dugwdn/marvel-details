@@ -1100,3 +1100,13 @@ html body .dym-sync-status { color: var(--dym-muted); font-size: .9rem; }
   html body .dym-account .acct-btn { border-color: #f2f2f2; box-shadow: 3px 3px 0 var(--dym-red); }
   html body .dym-account details summary { color: #ff6b74; }
 }
+
+/* Real-world photos on movie pages (free-license, credited) and the Credits page */
+html body .place-photo { margin: 1.5rem auto; max-width: 720px; }
+html body .place-photo img { display: block; width: 100%; height: auto; border: 3px solid #000; box-shadow: 6px 6px 0 #000; border-radius: 6px; background: #fff; }
+html body .place-photo figcaption { font-size: .85rem; line-height: 1.45; color: var(--dym-muted); margin-top: .75rem; }
+html body .place-photo figcaption strong { color: inherit; }
+@media (prefers-color-scheme: dark) { html body .place-photo img { border-color: #fff; box-shadow: 6px 6px 0 var(--dym-red); } }
+html body .credits-list { list-style: none; padding: 0; margin: 1rem 0 2rem; display: grid; gap: .75rem; }
+html body .credits-list li { background: #fff; border-left: 4px solid var(--dym-red, #e0303c); border-radius: 6px; padding: .75rem 1rem; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) { html body .credits-list li { background: #1c1c1c; } }

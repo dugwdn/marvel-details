@@ -1,0 +1,282 @@
+{
+ "updated": "2026-10-06",
+ "note": "Every image is a free-license Wikimedia Commons photo; every video is an official upload played with youtube-nocookie.com. License checked through the en.wikipedia API (extmetadata).",
+ "images": [
+  {
+   "page": "/characters/ant-man",
+   "file": "/img/actors/ant-man.jpg",
+   "width": 500,
+   "height": 750,
+   "subject": "Paul Rudd",
+   "author": "Bryan Berlin",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paul_Rudd_at_the_2026_New_York_Film_Festival-003.jpg"
+  },
+  {
+   "page": "/characters/black-panther",
+   "file": "/img/actors/black-panther.jpg",
+   "width": 500,
+   "height": 662,
+   "subject": "Chadwick Boseman",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chadwick_Boseman_by_Gage_Skidmore_July_2017_(cropped).jpg"
+  },
+  {
+   "page": "/characters/black-widow",
+   "file": "/img/actors/black-widow.jpg",
+   "width": 500,
+   "height": 667,
+   "subject": "Scarlett Johansson",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scarlett_Johansson-8588.jpg"
+  },
+  {
+   "page": "/characters/bruce-banner",
+   "file": "/img/actors/bruce-banner.jpg",
+   "width": 500,
+   "height": 665,
+   "subject": "Mark Ruffalo",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mark_Ruffalo_(36201774756)_(cropped).jpg"
+  },
+  {
+   "page": "/characters/captain-marvel",
+   "file": "/img/actors/captain-marvel.jpg",
+   "width": 475,
+   "height": 689,
+   "subject": "Brie Larson",
+   "author": "The CW Network",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brie_Larson_at_29th_Critics%27_Choice_Awards_(brightened).jpg"
+  },
+  {
+   "page": "/characters/doctor-strange",
+   "file": "/img/actors/doctor-strange.jpg",
+   "width": 500,
+   "height": 667,
+   "subject": "Benedict Cumberbatch",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Benedict_Cumberbatch-67555.jpg"
+  },
+  {
+   "page": "/characters/happy-hogan",
+   "file": "/img/actors/happy-hogan.jpg",
+   "width": 500,
+   "height": 741,
+   "subject": "Jon Favreau",
+   "author": "Eva Rinaldi",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jon_Favreau_2016.jpeg"
+  },
+  {
+   "page": "/characters/hawkeye",
+   "file": "/img/actors/hawkeye.jpg",
+   "width": 500,
+   "height": 749,
+   "subject": "Jeremy Renner",
+   "author": "Max Surprenant",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeremy_Renner_at_TIFF_2025_(cropped).jpg"
+  },
+  {
+   "page": "/characters/loki",
+   "file": "/img/actors/loki.jpg",
+   "width": 500,
+   "height": 625,
+   "subject": "Tom Hiddleston",
+   "author": "Kevin Payravi",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tom_Hiddleston_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg"
+  },
+  {
+   "page": "/characters/nebula",
+   "file": "/img/actors/nebula.jpg",
+   "width": 500,
+   "height": 667,
+   "subject": "Karen Gillan",
+   "author": "Super Festivals",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karen_Gillan_Photo_Op_GalaxyCon_Des_Moines_2025_(cropped).jpg"
+  },
+  {
+   "page": "/characters/nick-fury",
+   "file": "/img/actors/nick-fury.jpg",
+   "width": 500,
+   "height": 634,
+   "subject": "Samuel L. Jackson",
+   "author": "Daltoncitys",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Samuel_L._Jackson_attending_the_World_premier_of_%22Argylle%22_in_London_,_January_2024_(cropped2).jpg"
+  },
+  {
+   "page": "/characters/obadiah-stane",
+   "file": "/img/actors/obadiah-stane.jpg",
+   "width": 500,
+   "height": 631,
+   "subject": "Jeff Bridges",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeff_Bridges_by_Gage_Skidmore_4.jpg"
+  },
+  {
+   "page": "/characters/pepper-potts",
+   "file": "/img/actors/pepper-potts.jpg",
+   "width": 500,
+   "height": 625,
+   "subject": "Gwyneth Paltrow",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gwyneth_Paltrow_-_Marty_Supreme.jpg"
+  },
+  {
+   "page": "/characters/scarlet-witch",
+   "file": "/img/actors/scarlet-witch.jpg",
+   "width": 500,
+   "height": 592,
+   "subject": "Elizabeth Olsen",
+   "author": "JoshPopov",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:ElizabethOlsen-TIFF2025-02_(cropped).png"
+  },
+  {
+   "page": "/characters/spider-man",
+   "file": "/img/actors/spider-man.jpg",
+   "width": 500,
+   "height": 751,
+   "subject": "Tom Holland",
+   "author": "PhilipRomano",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:TomHolland-byPhilipRomano.jpg"
+  },
+  {
+   "page": "/characters/steve-rogers",
+   "file": "/img/actors/steve-rogers.jpg",
+   "width": 500,
+   "height": 751,
+   "subject": "Chris Evans",
+   "author": "Sara Komatsu",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Evans_at_the_2025_Toronto_International_Film_Festival_(cropped).jpg"
+  },
+  {
+   "page": "/characters/thanos",
+   "file": "/img/actors/thanos.jpg",
+   "width": 500,
+   "height": 750,
+   "subject": "Josh Brolin",
+   "author": "Max Surprenant",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Josh_Brolin_TIFF_2025_(cropped).jpg"
+  },
+  {
+   "page": "/characters/thor",
+   "file": "/img/actors/thor.jpg",
+   "width": 500,
+   "height": 625,
+   "subject": "Chris Hemsworth",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Hemsworth_-_Crime_101.jpg"
+  },
+  {
+   "page": "/characters/tony-stark",
+   "file": "/img/actors/tony-stark.jpg",
+   "width": 500,
+   "height": 750,
+   "subject": "Robert Downey Jr.",
+   "author": "PhilipRomano",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:RobertDowneyJr-byPhilipRomano7_(cropped).jpg"
+  },
+  {
+   "page": "/characters/war-machine",
+   "file": "/img/actors/war-machine.jpg",
+   "width": 500,
+   "height": 751,
+   "subject": "Don Cheadle",
+   "author": "PhilipRomanoPhoto",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:DonCheadle-byPhilipRomano2.jpg"
+  },
+  {
+   "page": "/movies/iron-man-1",
+   "file": "/img/places/alabama-hills-lone-pine.jpg",
+   "width": 960,
+   "height": 656,
+   "subject": "Alabama Hills near Lone Pine, California (Iron Man filming area)",
+   "author": "steveberardi",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alabamahills.jpg"
+  },
+  {
+   "page": "/movies/iron-man-2",
+   "file": "/img/places/unisphere-flushing-meadows.jpg",
+   "width": 960,
+   "height": 720,
+   "subject": "Unisphere, Flushing Meadows-Corona Park, Queens (real place behind the Stark Expo)",
+   "author": "Ajay Suresh",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unisphere-2_(27835155267).jpg"
+  }
+ ],
+ "videos": [
+  {
+   "page": "/movies/avengers-1",
+   "youtubeId": "eOrNdBpGMv8",
+   "title": "Marvel's The Avengers- Trailer (OFFICIAL)",
+   "channel": "Marvel Entertainment",
+   "sourceUrl": "https://www.youtube.com/watch?v=eOrNdBpGMv8",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/movies/iron-man-3",
+   "youtubeId": "f_h95mEd4TI",
+   "title": "Marvel's Iron Man 3 Domestic Trailer (OFFICIAL)",
+   "channel": "Marvel Entertainment",
+   "sourceUrl": "https://www.youtube.com/watch?v=f_h95mEd4TI",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/movies/endgame",
+   "youtubeId": "TcMBFSGVi1c",
+   "title": "Marvel Studios' Avengers: Endgame - Official Trailer",
+   "channel": "Marvel Entertainment",
+   "sourceUrl": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/articles/spider-man-brand-new-day-easter-eggs",
+   "youtubeId": "8TZMtslA3UY",
+   "title": "SPIDER-MAN: BRAND NEW DAY - Official Trailer (HD)",
+   "channel": "Spider-Man (Sony Pictures official channel)",
+   "sourceUrl": "https://www.youtube.com/watch?v=8TZMtslA3UY",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  }
+ ]
+}

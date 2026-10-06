@@ -3,6 +3,23 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (images and trailers, not live yet)
+- Photo and video credits: `/credits` (built by `node tools/build-credits.mjs`
+  from `public/data/media-credits.json`), linked from every footer next to
+  Privacy. All 20 character portraits were re-checked against Wikimedia
+  Commons (artist and license) and are listed there.
+- Two real-world photos (free license, credited): the Alabama Hills near
+  Lone Pine, California on the Iron Man hub (where Tony's capture was
+  filmed) and the Unisphere in Flushing Meadows on the Iron Man 2 hub (the
+  real park behind the Stark Expo).
+- Removed the Iron Man (2008) and Iron Man 2 trailer embeds: they were
+  uploads from Rotten Tomatoes Classic Trailers and Movieclips, not Marvel's
+  or the studio's own channel. The Avengers, Iron Man 3 and Endgame hubs and
+  the Spider-Man article keep their official trailers (checked with YouTube's
+  oembed).
+- New test `test/media.test.mjs` (license, size, alt text, visible credit,
+  official channel, nocookie, lazy and titled iframes).
+
 ## 2026-10-06
 - Member perks (not live yet, PR #21, stacks on the sign-in PR #18):
   "Seen it" on movie hubs with an optional "Hide spoilers for movies I

@@ -74,3 +74,15 @@ un-find, settings are last-write-wins. Deleting the account deletes the
 sign-in for the whole site; no new service or bill.
 **Cost:** sync only for signed-in members; the list size cap; rank titles use
 Marvel character names (lawyer list).
+
+## ADR-009: Trailers only from official channels; photos only with a credit (2026-10-06)
+**Decision:** a trailer is embedded only if YouTube's oembed names Marvel
+Entertainment (or the studio's own channel) as author and the title matches
+the film; embeds use youtube-nocookie.com, lazy-loaded, with a title. A photo
+is used only if it is CC BY, CC BY-SA, CC0 or public domain on Wikimedia
+Commons, with the artist and license read from Commons' metadata, a visible
+credit line, and a row in `public/data/media-credits.json` (which builds
+`/credits`). A test enforces it. **Why:** studio stills and fan uploads risk
+copyright claims and the AdSense review. **Cost:** Iron Man (2008) and Iron
+Man 2 have no trailer for now (only Movieclips-type uploads were found); some
+pages have no picture rather than a weak one.
