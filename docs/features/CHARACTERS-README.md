@@ -22,17 +22,12 @@ Located at `/public/data/characters.json`, this file contains all character data
       "actor": "Actor Name",
       "arcThesis": "Summary of character arc (one sentence)",
       "arcStages": ["Stage 1", "Stage 2", "Stage 3"],
-      "arcLength": 4,
-      "appearances": 10,
-      
-      "killCount": 12,
-      "timesMindsControlled": 0,
-      "armorVariations": 7,
       "loveInterests": ["Name1", "Name2"],
-      "nearDeathExperiences": 4,
-      "timesSavedUniverse": 2,
-      "betrayalsByAllies": 0,
-      
+      "firstFilm": "Iron Man",
+      "firstYear": 2008,
+      "firstNote": "optional, e.g. after-credits scene",
+      "siteFilms": ["Iron Man (2008)", "Avengers: Endgame (2019)"],
+
       "milestones": [
         {
           "id": "m1",
@@ -61,20 +56,17 @@ Located at `/public/data/characters.json`, this file contains all character data
 - **actor**: Actor's full name
 - **arcThesis**: One-sentence summary of what the character learns/becomes
 - **arcStages**: Array of character development stages (3-5 items)
-- **arcLength**: Number of years the arc spans (e.g., 2008-2012 = 4 years)
-- **appearances**: Number of MCU Phase 1 films they appear in
-
-### Stats Fields
-
-These are fun statistics displayed on character cards and modals:
-
-- **killCount**: Approximate number of kills attributed to character
-- **timesMindsControlled**: Number of times character was mind-controlled
-- **armorVariations**: For characters with armor/forms, how many variants
+- **firstFilm / firstYear**: the character's first MCU film (checkable on the film's cast list)
+- **firstNote**: optional note when the first appearance is a cameo or a different actor
+- **siteFilms**: which of the site's 5 films (Iron Man 1 to 3, The Avengers, Endgame) the character appears in
 - **loveInterests**: Array of character names they have romantic connections with
-- **nearDeathExperiences**: Number of near-death moments
-- **timesSavedUniverse**: How many times they saved the universe
-- **betrayalsByAllies**: Number of times betrayed by allies
+
+### No made-up stats
+
+Until 2026-10-06 the file carried kill counts, "times saved the universe",
+near-death counts and similar numbers that had no source. They were removed.
+Only add a number if it can be checked against a scene, a cast list or an
+official source.
 
 ### Milestones
 
@@ -277,8 +269,8 @@ Load scripts:
 - Character Name (A-Z)
 - Arc Length (longest first)
 - Appearances (most films first)
-- Kill Count (most kills first)
-- Complexity (highest emotional drama first)
+- First appearance (earliest MCU film first)
+- Films on this site (most of our 5 films first)
 
 **Search**:
 - Searches across: full name, hero name, arc thesis, actor name
@@ -394,13 +386,13 @@ console.log(heroes.length);  // 6
 
 **Add a new character**:
 1. Add entry to `/data/characters.json` with all fields
-2. Create `/characters/[slug].html` page
+2. Create `/characters/[slug].html` page (copy an existing one), with a credited free-license actor photo in `/img/actors/`
 3. Add entry to `/sitemap.xml`
 4. Character grid will auto-load it
 
 **Change similarity algorithm**:
 - Edit `MarvelDataHub.calculateArcSimilarity()` in `shared-data.js`
-- Adjust the point weights (currently: 30+25+20+15+10=100)
+- Adjust the point weights (currently: same role 30, shared site films 50, love interests 20)
 
 **Add new sort option**:
 1. Add option to `<select id="character-sort">` in index.html
