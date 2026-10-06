@@ -19,6 +19,7 @@ export const MENU = [
   ['Characters', '/characters/', 'characters'],
   ['Universe Map', '/map/', 'map'],
   ['Rabbit Holes', '/rabbit-holes/', 'rabbit-holes'],
+  ['Coming Soon', '/upcoming/', 'upcoming'],
   ['About', '/about', 'about'],
 ];
 

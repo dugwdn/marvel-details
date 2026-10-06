@@ -4,7 +4,15 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
-- MCU Character List (not live): new page /characters/all/ with 797 main
+- Coming Soon page (not live): /upcoming/ lists every upcoming MCU movie
+  and Disney+ series with release dates, official Marvel trailers
+  (VisionQuest, Avengers: Doomsday) and a "What People Are Saying"
+  section. Every item is labeled Confirmed, Reported or Rumor with a link
+  to its source. Leaks are described in our own words only, never as
+  footage, photos or script pages. A weekly Monday news scan keeps it
+  current. New "Coming Soon" menu button; the menu sits in two rows of
+  five on screens 1000px and wider.
+- MCU Character List (live 2026-10-06): new page /characters/all/ with 797 main
   and recurring characters from all 38 released MCU movies and 21 Disney+
   series seasons. Each shows who plays them, their first appearance and
   every title they are in, with search, an "appears in" filter and

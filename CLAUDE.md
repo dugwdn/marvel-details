@@ -13,7 +13,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-05)
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
-  `marvel-details`, production branch `phase-1-build`, commit e69809a since 2026-10-06,
+  `marvel-details`, production branch `phase-1-build`, commit d74b98c since 2026-10-06,
   published by direct upload from Doug's laptop with wrangler).
 - **marveldetails.com is not this site yet.** The domain still serves Doug's
   older Wix site (which carries a Google Search Console verification tag).
@@ -27,6 +27,10 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
   real 404, sitemap/robots, link check on every PR), PR #3 ad boxes (hidden
   until AdSense fills them) and PR #4 green drink corrections.
+- **Coming Soon (`/upcoming/`):** upcoming movies and shows. A weekly
+  routine (Mondays 8:58 ET, trigger trig_01AE9JJojxqk8q2PNEMuhqsc) scans the
+  news and updates it. Label every item Confirmed, Reported or Rumor with a
+  source link. Never host leaked footage, photos or script pages.
 - **Brand banner and site menu:** one shared comic-style banner and menu
   of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
   page). Styles are in `public/css/theme.css`; uses the Bangers web font.

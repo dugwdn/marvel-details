@@ -337,6 +337,9 @@ html body nav.site-nav a:nth-child(9n+6) { --hero: #0b7783; }
 html body nav.site-nav a:nth-child(9n+7) { --hero: #c2185b; }
 html body nav.site-nav a:nth-child(9n+8) { --hero: #3f51b5; }
 html body nav.site-nav a:nth-child(9n+9) { --hero: #5d6b7a; }
+html body nav.site-nav a[href="/upcoming/"] { --hero: #263238; }
+html body nav.site-nav a[href="/about"] { --hero: #5d6b7a; }
+@media (min-width: 1000px) { html body nav.site-nav { display: grid; grid-template-columns: repeat(5, auto); justify-content: center; } }
 
 html body nav.site-nav a:hover,
 html body nav.site-nav a:focus-visible {
