@@ -1,0 +1,42 @@
+name: Fetch media
+# Fetches the free-license photos listed in tools/media-wanted.json and the
+# official trailers, rebuilds the media sections and commits to the chosen branch.
+# GitHub's runners are not rate-limited by Wikimedia the way shared cloud IPs are.
+# Run it from Actions > Fetch media > Run workflow (pick the branch), then review the PR.
+on:
+  workflow_dispatch:
+    inputs:
+      trailers:
+        description: Also look for new trailers
+        type: boolean
+        default: false
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - run: python3 tools/fetch-media.py
+      - if: ${{ inputs.trailers }}
+        run: python3 tools/find-trailers.py
+      - run: |
+          python3 tools/build-directory.py
+          node tools/build-media.mjs
+          node tools/build-credits.mjs
+          node tools/menu.mjs
+          node --test test/*.test.mjs
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public tools
+          git diff --cached --quiet || git commit -m "Fetch media: new credited photos and trailers"
+          git push
