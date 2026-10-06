@@ -19,11 +19,11 @@ merged-but-unpublished work.
   look: starfield and grid backdrop, glowing nodes, light outlined labels,
   cyan links, dark HUD sidebar. Fixes the long white hover bar that printed
   raw <strong>/<br/> code: hover tips are now a dark, wrapping card.
-- Comic panels site-wide (not live yet): movie hubs (details two across
+- Comic panels site-wide (live 2026-10-06): movie hubs (details two across
   with yellow caption headings), callback pages (speech-bubble scene
   notes), rabbit-hole chapters, character pages and the About page now use
   the same black-bordered comic panels as the articles.
-- Articles as comic strips (not live yet): each article section is now a
+- Articles as comic strips (live 2026-10-06): each article section is now a
   comic panel with a yellow caption box for its heading, scene notes are
   speech bubbles, panels sit two across on desktop and stack on phones.
   Panels are written by `python3 tools/comic-panels.py` (run it after
@@ -32,11 +32,11 @@ merged-but-unpublished work.
   numbered steps (last step in amber) and each Similar Arc is a real button
   that opens that character, with its full description instead of one cut
   off at 60 characters. Bigger close button. Nothing overflows on phones.
-- Popups (not live yet): the character popup on /characters/ and the
+- Popups (live 2026-10-06): the character popup on /characters/ and the
   Universe Map hover tips and node panel now look like a dark holographic
   AI-assistant screen (dark glass, cyan glow, amber accents) instead of a
   bright white box. Same look in light and dark mode. Our own design.
-- Trailers and actor photos (not live yet): each of the 5 movie pages and
+- Trailers and actor photos (live 2026-10-06): each of the 5 movie pages and
   the Spider-Man: Brand New Day article now play the official trailer with
   YouTube's own embedded player (Marvel Entertainment, Sony's Spider-Man
   channel, or Movieclips for Iron Man 1 and 2, which have no studio upload).
