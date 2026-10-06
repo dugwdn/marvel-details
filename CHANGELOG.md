@@ -5,7 +5,8 @@ merged-but-unpublished work.
 
 ## 2026-10-06
 - Sign-in (not live yet, ADR-007): `/account` page with Google (button and
-  One Tap), Facebook and X, each shown once its keys are set. Accounts in the
+  One Tap), Facebook and X, each shown once its keys are set, and a /privacy
+  page (Meta needs one to go live). Accounts in the
   `marvel-details` D1 database. Ready for the discussions.
 - Comic panels site-wide (not live yet): movie hubs (details two across
   with yellow caption headings), callback pages (speech-bubble scene
