@@ -3,6 +3,18 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (Home spotlight filled in, not live yet)
+- Home page "Faces of the MCU" spotlight: the empty space beside the photo
+  now shows the character's arc line, abilities and skills, closest allies,
+  biggest enemies and every MCU movie and show they are in, plus a "Full
+  character page" button. Every name and title is a link: the 5 movie hubs
+  go to their page, other titles open the character list filtered to that
+  title (`/characters/all/?in=N`), characters go to their page or their row
+  on the list. Abilities, allies and enemies live in
+  `public/data/spotlight.json` (12 spotlight characters, each with a source
+  article); `test/media.test.mjs` checks the ids and every link. Rotation is
+  8 seconds now since there is more to read.
+
 ## 2026-10-06 (Character page timeline cleanup, not live yet)
 - Character pages (all 20): opening a timeline milestone showed each line
   (Movie, Key Moment, Description, Emotional State, Arc Stage, Tagline) as

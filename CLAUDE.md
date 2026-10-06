@@ -43,6 +43,11 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   No photo or trailer shows a source line anywhere; all credits are on
   `/credits` ("Photos and Credits", in every footer). `RECAST` and `LEADS`
   in build-media.mjs keep recast actors off a film and put the stars first.
+- **Home spotlight:** the "Faces of the MCU" spotlight panel (abilities,
+  allies, enemies, every title linked) comes from `public/data/spotlight.json`
+  plus mcu-characters.json and characters.json, written by `homeTop` in
+  `tools/build-media.mjs`. A character with no spotlight.json entry just shows
+  its titles. Add allies/enemies only as mcu-characters.json ids, with a source.
 - **Movie hubs** are built by `node tools/build-hubs.mjs` from
   `public/data/movie-hubs.json` (every detail needs a source URL; trailer
   blocks and figures on the page are kept). Run `node tools/menu.mjs` after.

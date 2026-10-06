@@ -100,3 +100,27 @@ test('the credits page lists every image and video', () => {
   for (const i of credits.images) assert.ok(html.includes(i.sourceUrl.replace(/&/g, '&amp;')), i.file);
   for (const v of credits.videos) assert.ok(html.includes(v.sourceUrl), v.youtubeId);
 });
+
+// Doug 2026-10-06: the home spotlight shows abilities, allies, enemies and every title, all linked.
+test('spotlight data names real characters and has a source; every spotlight link is a real page', () => {
+  const mcu = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/mcu-characters.json'), 'utf8'));
+  const ids = new Set(mcu.characters.map((c) => c.id));
+  const spot = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/spotlight.json'), 'utf8')).characters;
+  for (const [id, s] of Object.entries(spot)) {
+    assert.ok(ids.has(id), `spotlight: unknown character ${id}`);
+    for (const x of [...s.allies, ...s.enemies]) assert.ok(ids.has(x), `${id}: unknown ally or enemy ${x}`);
+    assert.match(s.source, /^https:\/\//, `${id}: needs a source`);
+  }
+  const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const box = home.slice(home.indexOf('class="faces-spotlight"'), home.indexOf('class="faces-wall"'));
+  const hrefs = [...box.matchAll(/href="([^"]+)"/g)].map((x) => x[1]);
+  assert.ok(hrefs.length > 100, 'spotlight should carry its title, ally and enemy links');
+  for (const h of hrefs) {
+    const q = h.match(/^\/characters\/all\/\?in=(\d+)$/);
+    if (q) { assert.ok(+q[1] < mcu.titles.length, h); continue; }
+    const [p, hash] = h.split('#');
+    const file = p.endsWith('/') ? `${p}index.html` : `${p}.html`;
+    assert.ok(fs.existsSync(path.join(ROOT, file)), `${h}: no page`);
+    if (hash) assert.ok(ids.has(hash), `${h}: no such character row`);
+  }
+});
