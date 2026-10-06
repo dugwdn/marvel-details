@@ -609,6 +609,9 @@ html body .character-modal-content .stat-label { color: #8fc8de; letter-spacing:
 html body .character-modal-content .stat-value {
   color: #9be6ff; font-family: var(--dym-head); text-shadow: 0 0 10px rgba(76,201,255,.6); font-variant-numeric: tabular-nums;
 }
+html body .character-modal-content .modal-stats-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+html body .character-modal-content .modal-stat .stat-value { font-size: 1.35rem; line-height: 1.25; overflow-wrap: anywhere; }
+html body .character-modal-content .stat-note { display: block; margin-top: .5rem; font-size: .85rem; line-height: 1.4; color: #cfeefb; }
 html body .character-modal-content .modal-fact-list li { border-bottom-color: rgba(76,201,255,.18); }
 html body .character-modal-content .similar-arc-item {
   background: rgba(76,201,255,.06); border-left: 3px solid rgba(76,201,255,.5); border-radius: 2px;

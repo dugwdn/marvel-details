@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <title>Steve Rogers - Character Arc Tracker</title>
-    <meta name="description" content="Explore Steve Rogers's character arc across MCU Phase 1. Track their development, milestones, and key moments.">
+    <title>Obadiah Stane - Character Arc Tracker</title>
+    <meta name="description" content="Obadiah Stane&#x27;s MCU character arc: tony&#x27;s mentor and business partner who wanted the company, and the armor, for himself. Milestones and key moments, first film Iron Man (2008).">
+    <meta name="keywords" content="Obadiah Stane, character arc, MCU, Jeff Bridges">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Obadiah Stane - Character Arc Tracker">
+    <meta property="og:description" content="Tony&#x27;s mentor and business partner who wanted the company, and the armor, for himself.">
+    <meta property="og:url" content="https://marvel-details.pages.dev/characters/obadiah-stane">
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/characters.css">
@@ -24,8 +31,8 @@
         }
 
         header {
-            background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
             padding: 3rem 1rem;
             text-align: center;
         }
@@ -37,7 +44,7 @@
 
         header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.8;
         }
 
         nav {
@@ -136,10 +143,11 @@
         .timeline-section h3 {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            border-bottom: 2px solid #2E7D32;
+            border-bottom: 2px solid #e0303c;
             padding-bottom: 1rem;
         }
 
+        /* Timeline Styles */
         .timeline-container {
             position: relative;
         }
@@ -155,7 +163,13 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(to bottom, #2E7D32, #999);
+            background: linear-gradient(to bottom, #FFD700, #999);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 10px;
+            }
         }
 
         .timeline-milestones {
@@ -178,8 +192,8 @@
             height: 22px;
             border-radius: 50%;
             border: 3px solid white;
-            box-shadow: 0 0 0 2px #2E7D32;
-            background: #2E7D32;
+            box-shadow: 0 0 0 2px #FFD700;
+            background: #e0303c;
             z-index: 10;
         }
 
@@ -199,13 +213,13 @@
         }
 
         .milestone-header:hover {
-            border-color: #2E7D32;
-            background: #f9f9f9;
+            border-color: #e0303c;
+            background: #fffef0;
         }
 
         .milestone-year {
             font-weight: bold;
-            color: #2E7D32;
+            color: #e0303c;
             min-width: 50px;
         }
 
@@ -241,7 +255,7 @@
             padding: 1rem;
             background: #f9f9f9;
             border-radius: 6px;
-            border-left: 3px solid #2E7D32;
+            border-left: 3px solid #e0303c;
         }
 
         .detail-section {
@@ -300,6 +314,17 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        @media (max-width: 480px) {
+            nav a {
+                margin: 0 0.75rem;
+                font-size: 0.9rem;
+            }
+
+            .character-meta {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
@@ -310,8 +335,8 @@
 </head>
 <body>
     <header>
-        <h1>Steve Rogers</h1>
-        <p>Captain America - The Soldier Out of Time</p>
+        <h1>Obadiah Stane</h1>
+        <p>Obadiah Stane - from Mentor to Iron Monger</p>
     </header>
     <header class="site-brand">
         <p class="site-brand-title"><a class="site-brand-link" href="/"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">Details <em>You</em><br>Missed</span></a></p>
@@ -333,29 +358,29 @@
         <a href="/characters/" class="back-link">← Back to All Characters</a>
 
         <section class="character-header">
-            <h2>Steve Rogers</h2>
-            <p class="character-thesis">Character arc details loading...</p>
+            <h2>Obadiah Stane</h2>
+            <p class="character-thesis">Tony&#x27;s mentor and business partner who wanted the company, and the armor, for himself</p>
             <figure class="actor-photo">
-                <img src="/img/actors/steve-rogers.jpg" alt="Chris Evans" width="500" height="751" loading="lazy">
-                <figcaption>Chris Evans in real life. Photo: Sara Komatsu, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="nofollow">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Chris_Evans_at_the_2025_Toronto_International_Film_Festival_(cropped).jpg" rel="nofollow">Wikimedia Commons</a>.</figcaption>
+                <img src="/img/actors/obadiah-stane.jpg" alt="Jeff Bridges" width="500" height="631" loading="lazy">
+                <figcaption>Jeff Bridges in real life. Photo: Gage Skidmore, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="nofollow">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Jeff_Bridges_by_Gage_Skidmore_4.jpg" rel="nofollow">Wikimedia Commons</a>.</figcaption>
             </figure>
 
             <div class="character-meta">
                 <div class="meta-item">
                     <span class="meta-label">Actor</span>
-                    <span class="meta-value">Chris Evans</span>
+                    <span class="meta-value">Jeff Bridges</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Role Type</span>
-                    <span class="meta-value">Hero</span>
+                    <span class="meta-value">Villain</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">First MCU Film</span>
-                    <span class="meta-value">Captain America: The First Avenger (2011)</span>
+                    <span class="meta-value">Iron Man (2008)</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">In Our 5 Films</span>
-                    <span class="meta-value">2 of 5: The Avengers (2012), Avengers: Endgame (2019)</span>
+                    <span class="meta-value">1 of 5: Iron Man (2008)</span>
                 </div>
             </div>
         </section>
@@ -370,8 +395,9 @@
         <p>&copy; 2024 Details You Missed. <a href="/about">About</a></p>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        window.characterSlug = 'steve-rogers';
+        window.characterSlug = 'obadiah-stane';
     </script>
     <script src="/js/shared-data.js"></script>
     <script src="/js/timeline.js"></script>

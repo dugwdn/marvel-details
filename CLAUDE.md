@@ -20,7 +20,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   Moving the domain is a live change and waits on Doug.
 - Pages: home, about, 5 movie hubs, 3 articles, plus five features:
   Deleted Scenes Registry (`/scenes/`, 21 scenes), Foreshadowing and
-  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 10),
+  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20),
   Universe Map (`/map/`, 25 nodes and 51 links) and Rabbit Holes
   (`/rabbit-holes/`, 8).
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
