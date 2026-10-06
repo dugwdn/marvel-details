@@ -16,7 +16,15 @@ merged-but-unpublished work.
   D1; only Google's account number and first name are stored, never email.
   Sign-in shows "coming soon" until Doug sets it up (RUNBOOK). `npm test`
   added and run by the PR workflow. robots.txt blocks `/api/`.
-- Characters (not live yet): 20 characters instead of 10. New: Thanos,
+- MCU Character List (not live): new page /characters/all/ with 797 main
+  and recurring characters from all 38 released MCU movies and 21 Disney+
+  series seasons. Each shows who plays them, their first appearance and
+  every title they are in, with search, an "appears in" filter and
+  sorting. Built from public/data/mcu-characters.json by
+  `python3 tools/build-directory.py` (then `node tools/menu.mjs`). Linked
+  from /characters/ and the sitemap. Unreleased titles (Avengers: Doomsday,
+  VisionQuest and others) are left out until they come out.
+- Characters (live 2026-10-06): 20 characters instead of 10. New: Thanos,
   Spider-Man, War Machine, Captain Marvel, Doctor Strange, Black Panther,
   Scarlet Witch, Ant-Man, Nebula and Obadiah Stane, each with a page,
   timeline and credited Wikimedia Commons actor photo. Removed the made-up
@@ -25,20 +33,30 @@ merged-but-unpublished work.
   film and which of our 5 films the character is in. Fixed wrong timeline
   points (Hawkeye's first film is Thor, not Iron Man 2; Happy Hogan isn't
   in The Avengers; others in Black Widow, Hulk and Pepper Potts).
-- Comic panels site-wide (not live yet): movie hubs (details two across
+- Universe Map window (live 2026-10-06): /map/ opens as a full-screen window over
+  the site with a big yellow "Back to the site" button, a close button and
+  Esc, all returning to the page the visitor came from (or home). New space
+  look: starfield and grid backdrop, glowing nodes, light outlined labels,
+  cyan links, dark HUD sidebar. Fixes the long white hover bar that printed
+  raw <strong>/<br/> code: hover tips are now a dark, wrapping card.
+- Comic panels site-wide (live 2026-10-06): movie hubs (details two across
   with yellow caption headings), callback pages (speech-bubble scene
   notes), rabbit-hole chapters, character pages and the About page now use
   the same black-bordered comic panels as the articles.
-- Articles as comic strips (not live yet): each article section is now a
+- Articles as comic strips (live 2026-10-06): each article section is now a
   comic panel with a yellow caption box for its heading, scene notes are
   speech bubbles, panels sit two across on desktop and stack on phones.
   Panels are written by `python3 tools/comic-panels.py` (run it after
   adding an article).
-- Popups (not live yet): the character popup on /characters/ and the
+- Popup buttons (live 2026-10-06): in the character popup the journey is now
+  numbered steps (last step in amber) and each Similar Arc is a real button
+  that opens that character, with its full description instead of one cut
+  off at 60 characters. Bigger close button. Nothing overflows on phones.
+- Popups (live 2026-10-06): the character popup on /characters/ and the
   Universe Map hover tips and node panel now look like a dark holographic
   AI-assistant screen (dark glass, cyan glow, amber accents) instead of a
   bright white box. Same look in light and dark mode. Our own design.
-- Trailers and actor photos (not live yet): each of the 5 movie pages and
+- Trailers and actor photos (live 2026-10-06): each of the 5 movie pages and
   the Spider-Man: Brand New Day article now play the official trailer with
   YouTube's own embedded player (Marvel Entertainment, Sony's Spider-Man
   channel, or Movieclips for Iron Man 1 and 2, which have no studio upload).

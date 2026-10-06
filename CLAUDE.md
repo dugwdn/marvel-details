@@ -13,14 +13,15 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-06)
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
-  `marvel-details`, production branch `phase-1-build`, commit ecf0b8b,
+  `marvel-details`, production branch `phase-1-build`, commit e69809a since 2026-10-06,
   published by direct upload from Doug's laptop with wrangler).
 - **marveldetails.com is not this site yet.** The domain still serves Doug's
   older Wix site (which carries a Google Search Console verification tag).
   Moving the domain is a live change and waits on Doug.
 - Pages: home, about, 5 movie hubs, 3 articles, plus five features:
   Deleted Scenes Registry (`/scenes/`, 21 scenes), Foreshadowing and
-  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20),
+  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20), MCU Character List
+  (`/characters/all/`, 797, rebuilt by `python3 tools/build-directory.py`),
   Universe Map (`/map/`, 25 nodes and 51 links) and Rabbit Holes
   (`/rabbit-holes/`, 8).
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
@@ -59,6 +60,10 @@ Waiting on Doug: a real GA4 ID, AdSense slot numbers, the domain move, and
 for member sync: review the member-perks PR, create the D1 database, put its
 id in `wrangler.toml`, make a Google OAuth client ID (RUNBOOK). Note:
 `wrangler.toml` now exists, so deploys fail until its D1 id is real.
+**Overlap:** draft PR #18 (feat/sign-in) adds a different sign-in (Google,
+Facebook, X) with its own D1 `marvel-details`, `users`/`sessions` tables and
+ADR-007. Only one sign-in should land; the member-perks PR comment suggests
+keeping #18's accounts and adding just the `saves` table and `/api/sync`.
 
 ## Working rules
 - Project-wide rules (branch and PR, never merge or deploy without Doug's

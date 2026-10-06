@@ -729,6 +729,182 @@ html body .disclaimer * { color: #111 !important; }
   html body div.detail-item, html body .detail-section, html body .chapter { transform: none !important; }
 }
 html body div.detail-item h3 a, html body .detail-section > :is(h2, h3) a { color: #111 !important; text-decoration: underline; text-decoration-thickness: 2px; }
+/* Popup buttons and steps: the journey reads as numbered steps, and each
+   similar character is a full button that opens its own file. Text wraps
+   instead of being cut off. Our own HUD design. */
+html body .character-modal-content .arc-stages {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem;
+  list-style: none; margin: 0; padding: 0; counter-reset: none;
+}
+html body .character-modal-content .arc-stage {
+  position: relative; display: flex; align-items: center; gap: .6rem; min-height: 3.2rem;
+  padding: .55rem .8rem .55rem .6rem; margin: 0;
+  background: linear-gradient(135deg, rgba(76,201,255,.16), rgba(76,201,255,.04)) !important;
+  border: 1px solid rgba(76,201,255,.55); border-left: 1px solid rgba(76,201,255,.55);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  font: 600 .95rem/1.15 var(--dym-head); letter-spacing: .05em; text-transform: uppercase;
+  color: #e6f8ff !important; overflow-wrap: anywhere;
+}
+html body .character-modal-content .arc-step {
+  flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%;
+  background: #ffb347; color: #071726; font: 800 1rem/1 var(--dym-head);
+  box-shadow: 0 0 10px rgba(255,179,71,.6);
+}
+html body .character-modal-content .arc-stage:last-child {
+  border-color: #ffb347; background: linear-gradient(135deg, rgba(255,179,71,.22), rgba(255,179,71,.05)) !important;
+}
+
+html body .character-modal-content .modal-stat { position: relative; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); }
+html body .character-modal-content .stat-label { font-size: .78rem; overflow-wrap: anywhere; }
+
+html body .character-modal-content .similar-arc-item {
+  display: flex; flex-direction: column; align-items: stretch; gap: .4rem; width: 100%;
+  padding: .85rem 1rem; text-align: left; cursor: pointer; font: inherit;
+  background: linear-gradient(135deg, rgba(76,201,255,.12), rgba(76,201,255,.03)) !important;
+  border: 1px solid rgba(76,201,255,.45); border-left: 4px solid #4cc9ff; border-radius: 3px;
+  color: #d8f3ff; transition: background .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+html body .character-modal-content .similar-arc-item:hover,
+html body .character-modal-content .similar-arc-item:focus-visible {
+  background: linear-gradient(135deg, rgba(76,201,255,.24), rgba(76,201,255,.08)) !important;
+  border-left-color: #ffb347; box-shadow: 0 0 18px rgba(76,201,255,.35); transform: translateX(3px); outline: none;
+}
+html body .character-modal-content .similar-arc-item:focus-visible { outline: 2px solid #ffb347; outline-offset: 2px; }
+html body .character-modal-content .similar-name { margin: 0; font: 700 1.1rem/1.1 var(--dym-head); letter-spacing: .06em; text-transform: uppercase; }
+html body .character-modal-content .similar-match { display: flex; align-items: center; gap: .5rem; margin: 0; font-size: .8rem; color: #9fd8ee !important; }
+html body .character-modal-content .similarity-bar { flex: 1; }
+html body .character-modal-content .similar-thesis { margin: 0; font-size: .88rem; line-height: 1.4; font-style: normal; color: #cfe9f5 !important; }
+html body .character-modal-content .similar-open {
+  align-self: flex-start; margin-top: .2rem; padding: .25rem .6rem;
+  font: 700 .78rem/1 var(--dym-head); letter-spacing: .14em; text-transform: uppercase;
+  color: #071726; background: #ffb347; border-radius: 2px;
+}
+
+html body .character-modal-close {
+  display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; line-height: 1;
+  background: rgba(76,201,255,.08); box-shadow: 0 0 12px rgba(76,201,255,.3);
+}
+
+@media (max-width: 640px) {
+  html body .character-modal-content .arc-stages { grid-template-columns: 1fr 1fr; }
+  html body .character-modal-content .arc-stage { font-size: .85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .character-modal-content .similar-arc-item { transition: none; }
+}
+
+/* Universe Map as a full-screen window over the site, with a big Back button.
+   Space backdrop, glowing nodes and HUD panels: our own design, no studio art. */
+html body.map-open { overflow: hidden; }
+html body.map-open::before {
+  content: ""; position: fixed; inset: 0; z-index: 999;
+  background: rgba(2, 6, 14, .78); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+}
+html body .map-overlay {
+  position: fixed; inset: 3vh 3vw; z-index: 1000;
+  display: flex; flex-direction: column; overflow: hidden;
+  background: #030b15; border: 2px solid rgba(76,201,255,.7); border-radius: 6px;
+  box-shadow: 0 0 0 6px rgba(76,201,255,.08), 0 0 60px rgba(0,170,255,.35), 0 20px 60px rgba(0,0,0,.6);
+}
+html body .map-overlay-bar {
+  flex: none; display: flex; align-items: center; gap: 1rem;
+  padding: .7rem 1rem; background: linear-gradient(90deg, #0b2236, #050f1b 70%);
+  border-bottom: 1px solid rgba(76,201,255,.45);
+}
+html body .map-back {
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 2.75rem; padding: .45rem 1.1rem .35rem;
+  background: #ffd60a; color: #111 !important; border: 3px solid #000; border-radius: 6px;
+  box-shadow: 4px 4px 0 #000; text-decoration: none; white-space: nowrap;
+  font: 400 1.3rem/1 'Bangers', Impact, 'Arial Black', sans-serif; letter-spacing: .05em; text-transform: uppercase;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+html body .map-back:hover, html body .map-back:focus-visible {
+  transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #000; outline: 3px solid #4cc9ff; outline-offset: 3px;
+}
+html body .map-overlay-title {
+  flex: 1; margin: 0; text-align: center; color: #9be6ff !important;
+  font: 400 clamp(1.4rem, 3vw, 2rem)/1 'Bangers', Impact, 'Arial Black', sans-serif; letter-spacing: .08em;
+  text-shadow: 0 0 14px rgba(76,201,255,.7);
+}
+html body .map-close {
+  display: grid; place-items: center; width: 2.75rem; height: 2.75rem; flex: none;
+  color: #9be6ff !important; text-decoration: none; font-size: 1.9rem; line-height: 1;
+  border: 1px solid rgba(76,201,255,.6); border-radius: 50%; background: rgba(76,201,255,.08);
+}
+html body .map-close:hover, html body .map-close:focus-visible { background: rgba(76,201,255,.25); color: #fff !important; outline: none; }
+
+html body .map-overlay .map-container { flex: 1; min-height: 0; height: auto; background: transparent; }
+html body .map-overlay .map-panel-left {
+  position: relative;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.8), transparent 60%),
+    radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(1.5px 1.5px at 40% 70%, rgba(155,230,255,.8), transparent 60%),
+    radial-gradient(1px 1px at 85% 20%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(ellipse at 50% 45%, rgba(0,120,200,.28), transparent 65%),
+    radial-gradient(ellipse at 15% 90%, rgba(123,63,196,.22), transparent 55%),
+    linear-gradient(rgba(76,201,255,.05) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(76,201,255,.05) 1px, transparent 1px) 0 0 / 48px 48px,
+    #030b15 !important;
+  background-size: 180px 180px, 230px 230px, 300px 300px, 260px 260px, auto, auto, 48px 48px, 48px 48px, auto !important;
+}
+html body .map-overlay #network-container { background: transparent !important; }
+html body .map-overlay .map-panel-right {
+  background: linear-gradient(180deg, #071726, #030b15) !important; border-left: 1px solid rgba(76,201,255,.35);
+}
+html body .map-overlay .map-panel-right h2,
+html body .map-overlay .map-panel-right h3 { color: #9be6ff !important; letter-spacing: .08em; }
+html body .map-overlay .map-panel-right,
+html body .map-overlay .map-panel-right label,
+html body .map-overlay .map-panel-right p,
+html body .map-overlay .map-panel-right li { color: #cfe9f5 !important; }
+html body .map-overlay .map-panel-right div:not([class*="badge"]):not(.color-dot) { background-color: transparent; }
+html body .map-overlay .map-panel-right .sidebar-section,
+html body .map-overlay #stats-container, html body .map-overlay #stats-container * { background: transparent !important; color: #cfe9f5 !important; }
+html body .map-overlay .statistics, html body .map-overlay .statistics div { background: rgba(76,201,255,.05) !important; border-color: rgba(76,201,255,.3) !important; }
+html body .map-overlay .statistics { border: 1px solid rgba(76,201,255,.3); border-radius: 3px; padding: .8rem; }
+html body .map-overlay .map-panel-right input[type="text"] {
+  background: rgba(76,201,255,.08) !important; color: #e6f8ff !important; border: 1px solid rgba(76,201,255,.5) !important;
+}
+html body .map-overlay .map-panel-right input[type="checkbox"] { accent-color: #4cc9ff; }
+
+html body .map-overlay #zoom-in, html body .map-overlay #zoom-out, html body .map-overlay #reset-zoom {
+  width: 2.75rem; height: 2.75rem; font-size: 1.4rem; border-radius: 50% !important;
+  background: rgba(7,23,38,.9) !important; color: #9be6ff !important; border: 1px solid rgba(76,201,255,.7) !important;
+  box-shadow: 0 0 12px rgba(76,201,255,.35);
+}
+html body .map-overlay #zoom-in:hover, html body .map-overlay #zoom-out:hover, html body .map-overlay #reset-zoom:hover {
+  background: rgba(76,201,255,.25) !important; color: #fff !important;
+}
+
+/* Hover tip: vis-network's own style is a white box that never wraps. */
+html body div.vis-tooltip {
+  max-width: 320px; white-space: normal !important; padding: .7rem .85rem !important;
+  background: #061524 !important; color: #d8f3ff !important; border: 1px solid rgba(76,201,255,.7) !important;
+  border-radius: 4px !important; box-shadow: 0 0 18px rgba(0,170,255,.4) !important;
+  font-family: var(--dym-body) !important; font-size: .9rem !important; line-height: 1.4;
+}
+html body .map-tip-title { display: block; margin-bottom: .25rem; color: #9be6ff !important; font: 700 1.05rem/1.1 var(--dym-head); letter-spacing: .06em; text-transform: uppercase; }
+html body .map-tip-text { margin: 0 0 .35rem; color: #d8f3ff !important; }
+html body .map-tip-meta { margin: 0; color: #ffb347 !important; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  html body .map-overlay { inset: 0; border-radius: 0; border-width: 0; }
+  html body .map-overlay-bar { gap: .5rem; padding: .5rem .6rem; }
+  html body .map-back { font-size: 1.05rem; padding: .4rem .7rem .3rem; }
+  html body .map-overlay-title { font-size: 1.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { html body .map-back { transition: none; } }
+
+/* Link from /characters/ to the full list of every MCU character. */
+html body .dir-cta {
+  display: block; margin: 0 0 2rem; padding: 1rem 1.2rem; background: #ffd60a; color: #111 !important;
+  border: 4px solid #000; box-shadow: 6px 6px 0 #000; border-radius: 3px; text-decoration: none; transform: rotate(-.4deg);
+}
+html body .dir-cta strong { display: block; font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: 1.7rem; letter-spacing: .04em; color: #111 !important; }
+html body .dir-cta span { font-weight: 600; color: #111 !important; }
+html body .dir-cta:hover { transform: rotate(0) translate(-2px, -2px); box-shadow: 8px 8px 0 #000; }
+@media (prefers-color-scheme: dark) { html body .dir-cta { border-color: #f2f2f2; box-shadow: 6px 6px 0 var(--dym-red); } }
 
 /* Member perks (public/js/members.js): Save, Seen it and Favorite buttons,
    the spoiler blur, the rank chip in the menu, the promotion toast and the

@@ -348,7 +348,7 @@ function decorate() {
   }
 
   // Characters: star (favorite) and Save on each character page.
-  if ((m = /^\/characters\/([a-z0-9-]+)$/.exec(path))) {
+  if ((m = /^\/characters\/([a-z0-9-]+)$/.exec(path)) && m[1] !== 'all') {
     const id = m[1];
     const h = document.querySelector('.character-header h2, .character-header h1');
     if (h) h.after(actionRow(favButton(id, titleOf(h)), saveButton(`character:${id}`, () => ({ title: titleOf(h), url: `/characters/${id}` }))));
