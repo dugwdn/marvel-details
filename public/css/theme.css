@@ -560,3 +560,78 @@ html body .character-header::after { content: ""; display: block; clear: both; }
 @media (max-width: 640px) { html body .actor-photo { float: none; width: 180px; margin: 1rem auto; } }
 @media (prefers-color-scheme: dark) { html body .actor-photo img { border-color: #fff; box-shadow: 6px 6px 0 var(--dym-red); } }
 
+
+/* Popups as a holographic "AI assistant" screen: dark glass, cyan glow, amber accents.
+   Our own HUD design (no studio interface art). Same look in light and dark mode. */
+html body .character-modal { background: rgba(2, 8, 20, .82); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+html body .character-modal-content {
+  position: relative; color: #d8f3ff; border-radius: 4px;
+  background:
+    repeating-linear-gradient(0deg, rgba(76,201,255,.045) 0 1px, transparent 1px 4px),
+    radial-gradient(circle at 15% 0%, rgba(0,170,255,.18), transparent 55%),
+    linear-gradient(180deg, #071726 0%, #030b15 100%);
+  border: 1px solid rgba(76,201,255,.65);
+  box-shadow: 0 0 0 4px rgba(76,201,255,.08), 0 0 48px rgba(0,170,255,.3), inset 0 0 60px rgba(0,140,255,.1);
+  font-family: var(--dym-body);
+}
+html body .character-modal-content .modal-header {
+  border-bottom: 1px solid rgba(76,201,255,.35);
+  background: linear-gradient(90deg, rgba(76,201,255,.12), transparent 70%);
+  position: relative;
+}
+html body .character-modal-content .modal-header::before {
+  content: "IDENTITY FILE"; position: absolute; top: .6rem; left: 2rem;
+  font: 600 .7rem/1 var(--dym-head); letter-spacing: .3em; color: #ffb347;
+}
+html body .character-modal-content h2 {
+  font-family: var(--dym-head); font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+  color: #9be6ff !important; text-shadow: 0 0 12px rgba(76,201,255,.7); margin-top: .6rem;
+}
+html body .character-modal-content h3 {
+  font-family: var(--dym-head); font-weight: 600; text-transform: uppercase; letter-spacing: .16em;
+  font-size: .95rem; color: #4cc9ff !important;
+}
+html body .character-modal-content h3::before { content: "\25B8  "; color: #ffb347; }
+html body .character-modal-content p, html body .character-modal-content li,
+html body .character-modal-content .modal-full-name { color: #cfe9f5 !important; }
+html body .character-modal-content strong { color: #ffffff !important; }
+html body .character-modal-close { color: #7fdcff; border: 1px solid rgba(76,201,255,.5); border-radius: 50%; font-size: 1.8rem; }
+html body .character-modal-close:hover, html body .character-modal-close:focus-visible { color: #fff; background: rgba(76,201,255,.2); outline: none; }
+html body .character-modal-content .modal-sidebar { border-color: rgba(76,201,255,.25); }
+html body .character-modal-content .arc-stage {
+  background: rgba(76,201,255,.08) !important; color: #e6f8ff !important; border: 1px solid rgba(76,201,255,.3); border-left: 3px solid #ffb347; border-radius: 2px;
+}
+html body .character-modal-content .modal-stat {
+  background: rgba(76,201,255,.06); border: 1px solid rgba(76,201,255,.4); border-radius: 2px;
+  box-shadow: inset 0 0 18px rgba(76,201,255,.12);
+}
+html body .character-modal-content .stat-label { color: #8fc8de; letter-spacing: .14em; }
+html body .character-modal-content .stat-value {
+  color: #9be6ff; font-family: var(--dym-head); text-shadow: 0 0 10px rgba(76,201,255,.6); font-variant-numeric: tabular-nums;
+}
+html body .character-modal-content .modal-fact-list li { border-bottom-color: rgba(76,201,255,.18); }
+html body .character-modal-content .similar-arc-item {
+  background: rgba(76,201,255,.06); border-left: 3px solid rgba(76,201,255,.5); border-radius: 2px;
+}
+html body .character-modal-content .similar-arc-item:hover { background: rgba(76,201,255,.14); border-left-color: #ffb347; }
+html body .character-modal-content .similar-name { color: #ffffff !important; }
+html body .character-modal-content .similar-match, html body .character-modal-content .similar-thesis { color: #a9cfe0 !important; }
+html body .character-modal-content .similarity-bar { background: rgba(76,201,255,.15); }
+html body .character-modal-content .similarity-fill { background: linear-gradient(90deg, #4cc9ff, #9be6ff); box-shadow: 0 0 8px #4cc9ff; }
+@media (prefers-reduced-motion: no-preference) {
+  html body .character-modal.open .character-modal-content { animation: hud-boot .35s ease-out; }
+  @keyframes hud-boot { from { opacity: 0; transform: scale(.97); filter: brightness(1.8); } to { opacity: 1; transform: none; filter: none; } }
+}
+
+/* Universe Map hover tips and the selected-node panel get the same screen */
+html body .vis-network-tooltip {
+  background: #061524 !important; color: #d8f3ff !important; border: 1px solid rgba(76,201,255,.65) !important;
+  box-shadow: 0 0 18px rgba(0,170,255,.35); border-radius: 3px !important; font-family: var(--dym-body);
+}
+html body #node-details:not(:empty) {
+  background: linear-gradient(180deg, #071726, #030b15); color: #d8f3ff; border: 1px solid rgba(76,201,255,.6);
+  box-shadow: 0 0 24px rgba(0,170,255,.25); border-radius: 3px; padding: 1rem;
+}
+html body #node-details .node-title { color: #9be6ff !important; font-family: var(--dym-head); text-transform: uppercase; letter-spacing: .08em; }
+html body #node-details .node-type { background: rgba(76,201,255,.12); color: #ffb347 !important; border: 1px solid rgba(76,201,255,.35); }
+html body #node-details .node-description, html body #node-details p, html body #node-details li { color: #cfe9f5 !important; }
