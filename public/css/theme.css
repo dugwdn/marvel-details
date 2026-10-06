@@ -792,3 +792,106 @@ html body .character-modal-close {
 @media (prefers-reduced-motion: reduce) {
   html body .character-modal-content .similar-arc-item { transition: none; }
 }
+
+/* Universe Map as a full-screen window over the site, with a big Back button.
+   Space backdrop, glowing nodes and HUD panels: our own design, no studio art. */
+html body.map-open { overflow: hidden; }
+html body.map-open::before {
+  content: ""; position: fixed; inset: 0; z-index: 999;
+  background: rgba(2, 6, 14, .78); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+}
+html body .map-overlay {
+  position: fixed; inset: 3vh 3vw; z-index: 1000;
+  display: flex; flex-direction: column; overflow: hidden;
+  background: #030b15; border: 2px solid rgba(76,201,255,.7); border-radius: 6px;
+  box-shadow: 0 0 0 6px rgba(76,201,255,.08), 0 0 60px rgba(0,170,255,.35), 0 20px 60px rgba(0,0,0,.6);
+}
+html body .map-overlay-bar {
+  flex: none; display: flex; align-items: center; gap: 1rem;
+  padding: .7rem 1rem; background: linear-gradient(90deg, #0b2236, #050f1b 70%);
+  border-bottom: 1px solid rgba(76,201,255,.45);
+}
+html body .map-back {
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 2.75rem; padding: .45rem 1.1rem .35rem;
+  background: #ffd60a; color: #111 !important; border: 3px solid #000; border-radius: 6px;
+  box-shadow: 4px 4px 0 #000; text-decoration: none; white-space: nowrap;
+  font: 400 1.3rem/1 'Bangers', Impact, 'Arial Black', sans-serif; letter-spacing: .05em; text-transform: uppercase;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+html body .map-back:hover, html body .map-back:focus-visible {
+  transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #000; outline: 3px solid #4cc9ff; outline-offset: 3px;
+}
+html body .map-overlay-title {
+  flex: 1; margin: 0; text-align: center; color: #9be6ff !important;
+  font: 400 clamp(1.4rem, 3vw, 2rem)/1 'Bangers', Impact, 'Arial Black', sans-serif; letter-spacing: .08em;
+  text-shadow: 0 0 14px rgba(76,201,255,.7);
+}
+html body .map-close {
+  display: grid; place-items: center; width: 2.75rem; height: 2.75rem; flex: none;
+  color: #9be6ff !important; text-decoration: none; font-size: 1.9rem; line-height: 1;
+  border: 1px solid rgba(76,201,255,.6); border-radius: 50%; background: rgba(76,201,255,.08);
+}
+html body .map-close:hover, html body .map-close:focus-visible { background: rgba(76,201,255,.25); color: #fff !important; outline: none; }
+
+html body .map-overlay .map-container { flex: 1; min-height: 0; height: auto; background: transparent; }
+html body .map-overlay .map-panel-left {
+  position: relative;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.8), transparent 60%),
+    radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(1.5px 1.5px at 40% 70%, rgba(155,230,255,.8), transparent 60%),
+    radial-gradient(1px 1px at 85% 20%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(ellipse at 50% 45%, rgba(0,120,200,.28), transparent 65%),
+    radial-gradient(ellipse at 15% 90%, rgba(123,63,196,.22), transparent 55%),
+    linear-gradient(rgba(76,201,255,.05) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(76,201,255,.05) 1px, transparent 1px) 0 0 / 48px 48px,
+    #030b15 !important;
+  background-size: 180px 180px, 230px 230px, 300px 300px, 260px 260px, auto, auto, 48px 48px, 48px 48px, auto !important;
+}
+html body .map-overlay #network-container { background: transparent !important; }
+html body .map-overlay .map-panel-right {
+  background: linear-gradient(180deg, #071726, #030b15) !important; border-left: 1px solid rgba(76,201,255,.35);
+}
+html body .map-overlay .map-panel-right h2,
+html body .map-overlay .map-panel-right h3 { color: #9be6ff !important; letter-spacing: .08em; }
+html body .map-overlay .map-panel-right,
+html body .map-overlay .map-panel-right label,
+html body .map-overlay .map-panel-right p,
+html body .map-overlay .map-panel-right li { color: #cfe9f5 !important; }
+html body .map-overlay .map-panel-right div:not([class*="badge"]):not(.color-dot) { background-color: transparent; }
+html body .map-overlay .map-panel-right .sidebar-section,
+html body .map-overlay #stats-container, html body .map-overlay #stats-container * { background: transparent !important; color: #cfe9f5 !important; }
+html body .map-overlay .statistics, html body .map-overlay .statistics div { background: rgba(76,201,255,.05) !important; border-color: rgba(76,201,255,.3) !important; }
+html body .map-overlay .statistics { border: 1px solid rgba(76,201,255,.3); border-radius: 3px; padding: .8rem; }
+html body .map-overlay .map-panel-right input[type="text"] {
+  background: rgba(76,201,255,.08) !important; color: #e6f8ff !important; border: 1px solid rgba(76,201,255,.5) !important;
+}
+html body .map-overlay .map-panel-right input[type="checkbox"] { accent-color: #4cc9ff; }
+
+html body .map-overlay #zoom-in, html body .map-overlay #zoom-out, html body .map-overlay #reset-zoom {
+  width: 2.75rem; height: 2.75rem; font-size: 1.4rem; border-radius: 50% !important;
+  background: rgba(7,23,38,.9) !important; color: #9be6ff !important; border: 1px solid rgba(76,201,255,.7) !important;
+  box-shadow: 0 0 12px rgba(76,201,255,.35);
+}
+html body .map-overlay #zoom-in:hover, html body .map-overlay #zoom-out:hover, html body .map-overlay #reset-zoom:hover {
+  background: rgba(76,201,255,.25) !important; color: #fff !important;
+}
+
+/* Hover tip: vis-network's own style is a white box that never wraps. */
+html body div.vis-tooltip {
+  max-width: 320px; white-space: normal !important; padding: .7rem .85rem !important;
+  background: #061524 !important; color: #d8f3ff !important; border: 1px solid rgba(76,201,255,.7) !important;
+  border-radius: 4px !important; box-shadow: 0 0 18px rgba(0,170,255,.4) !important;
+  font-family: var(--dym-body) !important; font-size: .9rem !important; line-height: 1.4;
+}
+html body .map-tip-title { display: block; margin-bottom: .25rem; color: #9be6ff !important; font: 700 1.05rem/1.1 var(--dym-head); letter-spacing: .06em; text-transform: uppercase; }
+html body .map-tip-text { margin: 0 0 .35rem; color: #d8f3ff !important; }
+html body .map-tip-meta { margin: 0; color: #ffb347 !important; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  html body .map-overlay { inset: 0; border-radius: 0; border-width: 0; }
+  html body .map-overlay-bar { gap: .5rem; padding: .5rem .6rem; }
+  html body .map-back { font-size: 1.05rem; padding: .4rem .7rem .3rem; }
+  html body .map-overlay-title { font-size: 1.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { html body .map-back { transition: none; } }

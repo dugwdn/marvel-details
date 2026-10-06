@@ -13,6 +13,12 @@ merged-but-unpublished work.
   film and which of our 5 films the character is in. Fixed wrong timeline
   points (Hawkeye's first film is Thor, not Iron Man 2; Happy Hogan isn't
   in The Avengers; others in Black Widow, Hulk and Pepper Potts).
+- Universe Map window (not live): /map/ opens as a full-screen window over
+  the site with a big yellow "Back to the site" button, a close button and
+  Esc, all returning to the page the visitor came from (or home). New space
+  look: starfield and grid backdrop, glowing nodes, light outlined labels,
+  cyan links, dark HUD sidebar. Fixes the long white hover bar that printed
+  raw <strong>/<br/> code: hover tips are now a dark, wrapping card.
 - Comic panels site-wide (not live yet): movie hubs (details two across
   with yellow caption headings), callback pages (speech-bubble scene
   notes), rabbit-hole chapters, character pages and the About page now use
