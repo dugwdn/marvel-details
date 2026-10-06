@@ -54,6 +54,16 @@ until the table exists, `/api/sync` and "Delete my account" return errors.
 Check: sign in on /me/, save something, open /me/ on another device.
 Look at the data: `npx wrangler d1 execute marvel-details --remote --command "SELECT COUNT(*) FROM saves"`.
 
+## Add photos or trailers
+1. Photos: add a row to `tools/media-wanted.json` (a portrait names the
+   character and actors; a place names its Wikipedia article and a
+   `factSource` link for the film fact). Trailers are found for every title in
+   `public/data/mcu-characters.json`.
+2. Run `python3 tools/fetch-media.py` (and `python3 tools/find-trailers.py`),
+   then `python3 tools/build-directory.py && node tools/build-media.mjs && node tools/build-credits.mjs && node tools/menu.mjs`.
+3. If Wikimedia answers 429, push the branch as `media/fetch-<name>` instead:
+   the `Fetch media` GitHub Action does steps 2 and commits the result.
+
 ## Roll back
 Cloudflare dashboard > Workers & Pages > marvel-details > Deployments >
 pick the last good one > the three-dot menu > **Rollback to this deployment**.
