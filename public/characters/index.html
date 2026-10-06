@@ -91,6 +91,19 @@
         footer a:hover {
             text-decoration: underline;
         }
+        /* The card itself isn't a link (its name, "Full arc timeline" and "Quick look" are), so it doesn't lift on hover. */
+        html body #characters-grid .character-card { cursor: default; }
+        html body #characters-grid .character-card:hover { transform: none; box-shadow: 6px 6px 0 #000; border-color: #000; }
+        .character-page-link { color: inherit; text-decoration: underline; }
+        .character-card-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 1rem; }
+        .character-full-link { font-weight: 600; text-decoration: underline; }
+        .character-quick-btn {
+            font: inherit; font-weight: 600; padding: 0.4rem 0.9rem; border: 2px solid #000;
+            border-radius: 6px; background: #fff; color: #111; cursor: pointer;
+        }
+        .character-quick-btn:hover, .character-quick-btn:focus-visible { background: #ffd60a; }
+        .modal-full-page { margin: 1rem 0; font-weight: 600; }
+        .modal-full-page a { text-decoration: underline; }
     </style>
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
@@ -185,6 +198,8 @@
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
+
+
 
 
 

@@ -1,244 +1,438 @@
 {
+  "note": "Every fact here is checked against the listed sources. Chapters marked \"theory\" are fan interpretation, not something the films or their makers confirm.",
+  "films": {
+    "iron-man-1": { "name": "Iron Man (2008)", "hub": "/movies/iron-man-1" },
+    "iron-man-2": { "name": "Iron Man 2 (2010)", "hub": "/movies/iron-man-2" },
+    "iron-man-3": { "name": "Iron Man 3 (2013)", "hub": "/movies/iron-man-3" },
+    "avengers-1": { "name": "The Avengers (2012)", "hub": "/movies/avengers-1" },
+    "avengers-endgame": { "name": "Avengers: Endgame (2019)", "hub": "/movies/endgame" },
+    "thor-1": { "name": "Thor (2011)" },
+    "captain-america-the-first-avenger": { "name": "Captain America: The First Avenger (2011)" },
+    "thor-2-dark-world": { "name": "Thor: The Dark World (2013)" },
+    "captain-america-winter-soldier": { "name": "Captain America: The Winter Soldier (2014)" },
+    "avengers-age-of-ultron": { "name": "Avengers: Age of Ultron (2015)" },
+    "captain-america-civil-war": { "name": "Captain America: Civil War (2016)" },
+    "thor-3-ragnarok": { "name": "Thor: Ragnarok (2017)" },
+    "avengers-infinity-war": { "name": "Avengers: Infinity War (2018)" },
+    "wandavision": { "name": "WandaVision (2021, Disney+ series)" },
+    "loki-series": { "name": "Loki, season 1 (2021, Disney+ series)" },
+    "multiverse-of-madness": { "name": "Doctor Strange in the Multiverse of Madness (2022)" },
+    "ant-man-quantumania": { "name": "Ant-Man and the Wasp: Quantumania (2023)" }
+  },
   "rabbitHoles": [
     {
       "id": "mind-stone-corruption",
       "slug": "mind-stone-corruption",
-      "title": "How the Mind Stone Corrupts Users",
-      "tagline": "Why did it affect everyone differently?",
+      "title": "The Mind Stone's Trail: Who Held It and What It Did",
+      "tagline": "Why did it seem to affect everyone differently?",
       "difficulty": "intermediate",
-      "readTime": 12,
-      "movies": ["avengers-1", "iron-man-2", "avengers-age-of-ultron", "avengers-infinity-war"],
-      "relatedCharacters": ["loki", "barton", "tony-stark", "wanda-maximoff"],
-      "summary": "The Mind Stone appears throughout the MCU with different effects on each user. Explore why Loki used it for mind control while Wanda gained telekinesis, and what that tells us about the Stone's true nature.",
+      "readTime": 5,
+      "movies": ["avengers-1", "captain-america-winter-soldier", "avengers-age-of-ultron", "avengers-infinity-war", "wandavision"],
+      "relatedCharacters": [
+        { "name": "Loki", "page": "loki" },
+        { "name": "Clint Barton", "page": "hawkeye" },
+        { "name": "Tony Stark", "page": "tony-stark" },
+        { "name": "Bruce Banner", "page": "bruce-banner" },
+        { "name": "Wanda Maximoff", "page": "scarlet-witch" },
+        { "name": "Vision" },
+        { "name": "Thanos", "page": "thanos" }
+      ],
+      "summary": "The Mind Stone passes through a lot of hands: Loki, Hydra, Ultron, Vision and Thanos. Here is every stop it makes on screen, what the films and series actually show it doing, and which part of the popular 'it amplifies you' idea is backed up.",
+      "payoff": "You'll know every on-screen stop the Mind Stone makes, and which parts of the 'it brings out what's already inside you' idea the films really support.",
+      "relatedHoles": ["vision-consciousness", "wanda-grief-power"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "The Mind Stone shows up in five key moments across the MCU. Loki uses it to control minds in The Avengers. Hydra experiments on it in Iron Man 2. Ultron steals it from Strucker in Age of Ultron. Wanda gains her powers when Hydra exposes her to it. Finally, Thanos wears it on the Infinity Gauntlet. Each person who touches or is touched by it seems to get something different from the experience."
+          "heading": "Where the stone goes",
+          "content": "In The Avengers (2012) the Mind Stone sits inside the scepter Loki carries. He uses it to take over the minds of Clint Barton and Erik Selvig, and at the end Natasha Romanoff uses the scepter to close the wormhole over New York. After Loki's defeat the scepter goes to S.H.I.E.L.D. and then to Hydra's Baron Strucker, who is seen with it in the mid-credits scene of Captain America: The Winter Soldier (2014). Age of Ultron (2015) explains that Strucker experimented on people with it, and that Wanda and Pietro Maximoff were the only survivors. In the same film the Avengers take the scepter back, Tony Stark and Bruce Banner find an artificial intelligence inside the gem and use it for the Ultron program, and Ultron takes the stone for a new body that becomes Vision. In Avengers: Infinity War (2018) Thanos tears the stone out of Vision's forehead in Wakanda."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "The Mind Stone's effects correlate directly with the user's intentions and mental state. When Loki holds it, he's seeking control and domination, which manifests as mind control powers over others. When Hydra experiments on the Maximoff twins, they're exploring enhanced capabilities, leading to Wanda's enhanced abilities. When Vision holds it, he gains consciousness and wisdom. The Stone doesn't impose a power—it amplifies what the user already wants or needs. This suggests the Infinity Stones are responsive to consciousness itself, not simple tools. Evidence: (1) Loki's initial hesitation becomes absolute conviction; (2) Wanda's latent abilities awaken; (3) Vision's synthetic consciousness activates; (4) Each manifestation serves the holder's deepest desire."
+          "heading": "What the stone did to each person",
+          "content": "Loki: Wikipedia's Loki article (citing the films) says the scepter controls minds and, without Loki knowing, amplified his hatred for Thor and for the people of Earth. The Avengers itself never spells this out. Wanda: Age of Ultron shows the experiments giving her powers. WandaVision (2021, episode 'Previously On') goes further: the stone amplified magic she already had, and during the experiment she glimpsed herself as the Scarlet Witch. Vision: the stone powers the body Ultron built; Stark and Banner upload J.A.R.V.I.S. into it and Thor's lightning finishes the job. Thanos: for him it is one of six stones he needs for the Infinity Gauntlet."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "The Mind Stone operates on a principle of resonance rather than imposition. Each Infinity Stone contains foundational cosmic forces that predate the universe itself. The Mind Stone specifically embodies consciousness, intellect, and psychological power. When a being interfaces with it, the Stone creates a feedback loop: the user's consciousness is amplified and reflected back, creating new abilities while also revealing aspects of their own mind they didn't know existed. This explains several phenomena: (1) Why the Stone showed Loki his true nature (a creature meant to rule but incapable of being happy); (2) Why it enhanced Wanda's existing latent abilities rather than creating new ones; (3) Why Vision became philosophical rather than merely intelligent; (4) The psychological toll on users (Loki's frustration, Wanda's grief). The Stone is essentially a cosmic mirror. Thanos, seeking universal order, got calculation. Loki, seeking domination, got temporary control until his own psychology betrayed him. The Stone grants power aligned with the user's inner nature. This cosmic principle might explain why the Time Stone worked differently for Ancient One and Strange—consciousness, wisdom, and intent shape reality itself."
+          "kind": "theory",
+          "title": "Level 3: Fan Theory",
+          "heading": "Does the stone amplify what's already there?",
+          "content": "This part is fan theory, not something the films confirm. A popular reading ties the stone's effects together: it doesn't hand out one fixed power, it boosts what is already inside a person. Two pieces have on-screen support: Loki's hatred being amplified (as the Loki character summary puts it) and Wanda's existing magic being amplified (shown in WandaVision). The idea that the stone shaped Vision's kindness, or worked like a 'mirror' for everyone who touched it, is interpretation only. We could not find a film scene or a statement from Marvel that says so."
         }
       ],
-      "payoff": "You'll finally understand why the Mind Stone affected Loki, Wanda, and Vision so differently—and why Vision's kindness might have been the Stone's most profound effect.",
-      "relatedHoles": ["lokis-redemption-arc", "vision-consciousness"]
+      "corrections": [
+        "An earlier version of this page said Hydra experimented on the Mind Stone in Iron Man 2. That was wrong: the stone does not appear in Iron Man 2. Hydra's experiments are set up in Captain America: The Winter Soldier's mid-credits scene and explained in Avengers: Age of Ultron.",
+        "An earlier version said Ultron stole the stone from Strucker. In Age of Ultron the Avengers take the scepter from Strucker's base, and Ultron takes it from them."
+      ],
+      "sources": [
+        { "name": "Infinity Stones: Mind Stone (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Infinity_Stones#Mind_Stone" },
+        { "name": "Loki (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Loki_(Marvel_Cinematic_Universe)" },
+        { "name": "Wanda Maximoff (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Wanda_Maximoff_(Marvel_Cinematic_Universe)" },
+        { "name": "Vision (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Vision_(Marvel_Cinematic_Universe)" },
+        { "name": "The Avengers (2012 film): plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)" },
+        { "name": "Avengers: Infinity War: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War" }
+      ]
     },
     {
       "id": "tonys-sacrifice-foreshadowed",
       "slug": "tonys-sacrifice-foreshadowed",
-      "title": "Tony's Sacrifice Was Foreshadowed from the Start",
-      "tagline": "Every MCU movie leading to Endgame planted the seeds.",
+      "title": "Tony's Sacrifice: Was It Set Up from the Start?",
+      "tagline": "What the films show, what the filmmakers said, and what is only a fan reading.",
       "difficulty": "advanced",
-      "readTime": 16,
-      "movies": ["iron-man-1", "iron-man-2", "iron-man-3", "avengers-1", "avengers-age-of-ultron", "captain-america-civil-war", "avengers-infinity-war", "avengers-endgame"],
-      "relatedCharacters": ["tony-stark", "pepper-potts", "howard-stark", "steve-rogers"],
-      "summary": "Tony Stark's character arc was always moving toward self-sacrifice. From his first film to Endgame, clues were hidden in his dialogue, actions, and relationships. This rabbit hole traces the full arc.",
+      "readTime": 5,
+      "movies": ["iron-man-1", "iron-man-2", "avengers-1", "iron-man-3", "captain-america-civil-war", "avengers-endgame"],
+      "relatedCharacters": [
+        { "name": "Tony Stark", "page": "tony-stark" },
+        { "name": "Pepper Potts", "page": "pepper-potts" },
+        { "name": "Howard Stark" },
+        { "name": "Steve Rogers", "page": "steve-rogers" }
+      ],
+      "summary": "Tony Stark dies saving everyone at the end of Avengers: Endgame. Looking back, his films keep putting his life on the line. Here's what is on screen, what the writers and directors said about his ending, and why 'it was planned since 2008' isn't backed up.",
+      "payoff": "You'll be able to point to the real moments that build toward Tony's ending, and you'll know the ending itself was shaped from Civil War (2016) onward, not in 2008.",
+      "relatedHoles": ["steve-rogers-timeline", "multiverse-implications"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "Tony goes from selfish weapons manufacturer to the man who saves the universe. It's a great character arc. In Iron Man, he realizes weapons are bad. In The Avengers, he flies a nuke into a wormhole to save New York. In Infinity War, he's willing to sacrifice everything. By Endgame, he actually does sacrifice himself. That's a clean arc from selfish to selfless, right? Many people saw it coming—that Tony would eventually give everything."
+          "heading": "The moments on screen",
+          "content": "Iron Man (2008): shrapnel near his heart leaves Tony relying on an electromagnet, then the arc reactor he and Yinsen build in the cave; once free, he stops Stark Industries making weapons. Iron Man 2 (2010): the palladium core keeping him alive is slowly poisoning him, until he makes a new element from a diagram his father hid. The Avengers (2012): he guides a nuclear missile through the wormhole in what looks like a sacrifice of his own life, and the Hulk catches him as he falls. Iron Man 3 (2013): he has PTSD and panic attacks after New York. Avengers: Endgame (2019): he works out time travel and, in the final battle, uses the Stones to wipe out Thanos and his army, which kills him."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "The foreshadowing is systematic. In Iron Man 1, Tony says 'I shouldn't be alive.' This establishes his life as borrowed time. In Iron Man 2, he fears his own mortality and legacy. In Iron Man 3, he struggles with PTSD and mortality. In Age of Ultron, he builds a weapon specifically designed to save the world. In Civil War, he's building walls between heroes because he's afraid of what he can't control. In Infinity War, he tells Strange 'If you die, we die.' This is not bravado—it's his acceptance of the probability he won't return. By Endgame, he's built time travel, won the greatest battle in MCU history, and then calmly snaps himself to save reality. Key evidence: (1) Every film increases his willingness to sacrifice; (2) His relationship with Pepper evolves from romance to family obligation; (3) His technology becomes increasingly about saving others rather than winning conflicts."
+          "heading": "What the filmmakers said",
+          "content": "According to Wikipedia's Endgame article, which cites interviews: the writers, Christopher Markus and Stephen McFeely, saw Tony's death as a move to selflessness that closed the chapter he began, and felt he had earned it after getting the retirement he wanted (marriage to Pepper and a daughter). Joe Russo said Tony always knew he would die because he could never stop trying to protect the universe. The same article says the Russo brothers built Tony's final arc starting from Captain America: Civil War (2016) and got Robert Downey Jr.'s approval for it."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "Tony's arc is a deliberate narrative about redemption through self-annihilation. The MCU intentionally positions him as the inverse of Thanos: both brilliant, both willing to destroy to save, but Thanos destroys half of all life while Tony destroys himself. This parallel is intentional thematic commentary. The Russo Brothers and writers structured ten years of content to make Endgame's ending inevitable. Every Tony Stark film asks: 'What does he value? Does he value his own life?' Iron Man 1 answers: 'I value my life and my company.' Iron Man 2: 'I value my legacy.' Iron Man 3: 'I value my identity beyond the suit.' Age of Ultron: 'I value the world more than my life.' Civil War: 'I value order more than freedom.' Infinity War: 'I value strangers more than myself.' Endgame: 'I value the universe more than existence itself.' This progression is mathematically perfect—each film subtracts value from his self-preservation until nothing remains. The final scene with Pepper isn't sentimental; it's confirmation that he's successfully transferred his obligation from himself to the next generation. He can die because he's ensured continuity. Tony's sacrifice is written in the DNA of his first appearance. The arc was always pointing toward this conclusion. The question was never 'if' but 'when' and 'how dramatically.'"
+          "kind": "theory",
+          "title": "Level 3: Fan Theory",
+          "heading": "Was it a ten-year plan?",
+          "content": "This part is fan reading. Some fans argue Tony's death was mapped out from his very first film. We could not find any statement from Marvel saying that, and the Russo brothers only joined the series with The Winter Soldier (2014). What can be said is that the films keep returning to Tony risking himself, and that the people who wrote and directed Endgame chose to pay that off. Reading earlier films as 'clues' is hindsight, which can be fun, but it isn't evidence of a plan."
         }
       ],
-      "payoff": "You'll recognize that every Tony Stark scene in 11 years was laying brick for his final moment. The entire MCU became a 22-movie prophecy of his death.",
-      "relatedHoles": ["steve-rogers-timeline", "multiverse-implications"]
+      "corrections": [
+        "An earlier version of this page quoted Tony saying 'If you die, we die' in Infinity War and listed a value 'answer' for each film. We could not confirm the quote, and the list was our own invention, so both are gone.",
+        "An earlier version said the Russo brothers planned ten years of films around this ending. They directed from 2014 and, by their account, shaped Tony's arc from Civil War (2016)."
+      ],
+      "sources": [
+        { "name": "Avengers: Endgame: plot and cast notes (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame" },
+        { "name": "Tony Stark (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)" },
+        { "name": "Iron Man (2008 film): plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)" },
+        { "name": "Iron Man 3: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Iron_Man_3" }
+      ]
     },
     {
       "id": "lokis-redemption-arc",
       "slug": "lokis-redemption-arc",
-      "title": "Loki's Redemption Arc: Three Deaths Before Atonement",
-      "tagline": "Why his Avengers kill wasn't evil—and why his choice in Ragnarok was redemptive.",
+      "title": "Loki's Arc: Three Fake Deaths and a Real One",
+      "tagline": "From Thor to Infinity War, what Loki actually does, and how fans read it.",
       "difficulty": "intermediate",
-      "readTime": 14,
-      "movies": ["thor-1", "avengers-1", "thor-2", "thor-3-ragnarok"],
-      "relatedCharacters": ["loki", "thor", "odin", "thanos"],
-      "summary": "Loki kills to find meaning, not from evil. His redemption doesn't come from forgiveness but from accepting his nature and choosing his brother. Trace his evolution through murder, betrayal, and self-sacrifice.",
+      "readTime": 5,
+      "movies": ["thor-1", "avengers-1", "thor-2-dark-world", "thor-3-ragnarok", "avengers-infinity-war"],
+      "relatedCharacters": [
+        { "name": "Loki", "page": "loki" },
+        { "name": "Thor", "page": "thor" },
+        { "name": "Odin" },
+        { "name": "Frigga" },
+        { "name": "Thanos", "page": "thanos" }
+      ],
+      "summary": "Loki 'dies' in Thor, fakes his death in The Dark World, and really dies in Infinity War. Follow what he does in each film, and see where the film record ends and the redemption reading begins.",
+      "payoff": "You'll have Loki's whole film arc straight, including how his last act was trying to save Thor, not Hulk.",
+      "relatedHoles": ["family-bonds-asgard", "mind-stone-corruption"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "Loki starts as a villain. He tries to take over Earth in The Avengers, killing 80+ people. Then he keeps getting chances to be good. He's skeptical but helps Thor in Dark World. In Ragnarok, he actually helps save Asgard and chooses his brother's side. By his death in Infinity War, he's trying to protect others. He went from villain to hero. That's redemption. It took four movies but Loki earned his redemption arc."
+          "heading": "Loki film by film",
+          "content": "Thor (2011): Loki learns he is the son of the Frost Giant king Laufey, adopted by Odin. He plans to destroy the Frost Giants' world to prove himself to Odin; when Odin rejects him, he lets himself fall into the abyss. The Avengers (2012): he returns with the scepter, invades New York with the Chitauri, kills Agent Coulson, and is beaten and taken back to Asgard. Thor: The Dark World (2013): after their mother Frigga is killed, he helps Thor, appears to die saving him, and turns out to be alive and disguised as Odin. Thor: Ragnarok (2017): he betrays Thor again on Sakaar, then comes back with a ship to help the Asgardians escape, and the brothers make up. Avengers: Infinity War (2018): he hands Thanos the Tesseract to save Thor's life, pretends to join Thanos, tries to stab him, and is killed."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "Loki's redemption is more complex than 'villain becomes good.' His problem was never moral—it was existential. Loki feels inferior. His whole life he's been the second prince, the wrong child, the failure. In Thor 1, he learns he's adopted and a Frost Giant—everything about his identity is false. The Avengers attack gives him a chance to be powerful and important. He's not evil; he's desperate to matter. His murders in NYC are terrible, but they're symptoms of deeper pain. In Dark World, Thor actually treats him as equal. That's why he starts changing. In Ragnarok, he finally understands that mattering doesn't require conquest—it requires connection. His choice to stay with Thor instead of escape with Thanos is his actual redemption moment. Evidence: (1) He only becomes genuinely heroic when someone values him as a person; (2) His betrayals are always toward the goal of finding family; (3) By Infinity War, he's willing to die protecting Hulk (a total stranger) because he's learned sacrifice is the ultimate proof of mattering."
+          "heading": "What the record says about why",
+          "content": "Wikipedia's Loki article, citing the films, says he felt neglected by Odin in favour of Thor and grew closer to Frigga, who taught him magic. It also says the scepter he carries in The Avengers amplified his hatred for Thor and Earth without him knowing. On Loki's death, Tom Hiddleston said it was powerful that Loki calls himself an Odinson, and that it closes Loki's journey (quoted in the same article)."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "Loki's arc is about the existential paradox of identity and violence. Loki is genuinely intelligent, magically powerful, and charismatic—but none of that matters because he's not valued. He commits atrocities not from malice but from the nihilistic conclusion that if nobody values his existence, he'll force them to acknowledge his impact through destruction. This is his first death: the death of the Loki who needs validation through conquest. In Dark World, he experiences his second death: the death of pride. Thor embracing him as a brother (even a complicated, frustrating one) teaches Loki that worth is granted by connection, not achievement. He survives this because loving Thor is easier than loving himself. In Ragnarok, he faces his third death: the death of escape. His entire character is defined by running away—from Asgard, from responsibility, from love. But in Ragnarok, running would mean abandoning Thor. Choosing Thor means accepting he's part of something larger than his own survival. When he finally dies protecting Hulk in Infinity War, he's completed a full reversal: instead of forcing others to acknowledge his importance, he's freely given his life for people who mean nothing to him. The paradox is resolved—he finally matters because he chose to make others matter more than himself. His redemption wasn't written as forgiveness from others but as self-forgiveness earned through sacrifice."
+          "kind": "theory",
+          "title": "Level 3: Fan Theory",
+          "heading": "The redemption reading",
+          "content": "This part is interpretation. Many fans read Loki's arc as a slow redemption: each 'death' strips away something (his need for Odin's approval, his pride, his habit of running), until in Infinity War he finally puts his brother first. The films support the bookends (rejected by Odin in Thor, dying to protect Thor in Infinity War), but the middle steps are a reading of the story, not something the filmmakers spelled out."
         }
       ],
-      "payoff": "You'll understand that Loki was never truly evil—just catastrophically lonely. His redemption arc is about learning to love instead of conquer.",
-      "relatedHoles": ["mind-stone-corruption", "family-bonds-asgard"]
+      "corrections": [
+        "An earlier version said Loki dies protecting Hulk and that he chooses Thor over escaping with Thanos in Ragnarok. Both were wrong: Thanos is not in Ragnarok, and in Infinity War Loki gives up the Tesseract to save Thor and dies attacking Thanos."
+      ],
+      "sources": [
+        { "name": "Loki (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Loki_(Marvel_Cinematic_Universe)" },
+        { "name": "Thor (film): plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Thor_(film)" },
+        { "name": "Thor: The Dark World: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World" },
+        { "name": "Thor: Ragnarok: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Thor:_Ragnarok" }
+      ]
     },
     {
       "id": "multiverse-implications",
       "slug": "multiverse-implications",
-      "title": "The Multiverse Implications: What Infinity Stones Mean Across Realities",
-      "tagline": "Why Endgame's time heist broke everything we thought we knew.",
+      "title": "Did Endgame's Time Heist Break the Multiverse?",
+      "tagline": "What Endgame, Loki and the later films say, and what they don't.",
       "difficulty": "advanced",
-      "readTime": 15,
+      "readTime": 6,
       "movies": ["avengers-endgame", "loki-series", "multiverse-of-madness", "ant-man-quantumania"],
-      "relatedCharacters": ["thanos", "ancient-one", "kang"],
-      "summary": "The Time Heist didn't just change the past—it fractured the multiverse. Explore the full implications of what happens when you steal Infinity Stones from alternate timelines.",
+      "relatedCharacters": [
+        { "name": "Bruce Banner", "page": "bruce-banner" },
+        { "name": "The Ancient One" },
+        { "name": "Loki", "page": "loki" },
+        { "name": "Sylvie" },
+        { "name": "He Who Remains / Kang" }
+      ],
+      "summary": "The Avengers steal Infinity Stones from 2012, 2013 and 2014. Did that crack open the multiverse? The Loki series gives a surprising answer: the heist itself was 'meant to happen', and the real break came later.",
+      "payoff": "You'll know which timeline problem came from where: Loki's 2012 escape, Sylvie's choice in the Loki finale, and the questions the films still leave open.",
+      "relatedHoles": ["steve-rogers-timeline", "lokis-redemption-arc"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "In Endgame, the Avengers go back in time to get Infinity Stones from the past. The Ancient One warns them that removing a Stone from the past creates an alternate timeline. They figure out they can return the Stones to the exact moment they took them, which fixes the timelines. So the movie acts like there's no permanent multiverse problem. But the Loki series shows that some timelines do escape and create variants. So the Time Heist did have bigger consequences than the movie shows. This hint at larger multiverse chaos."
+          "heading": "The heist and its rules",
+          "content": "In Avengers: Endgame, Bruce Banner explains that changing the past won't change their present; it creates alternate realities instead. In 2012 New York the Ancient One gives Banner the Time Stone only after he promises the Stones will be returned to their proper points in time. The team gets the Mind and Time Stones in 2012, the Reality Stone in 2013 Asgard, and the Power and Soul Stones in 2014. One thing goes wrong in 2012: Loki escapes with the Tesseract (the Space Stone). At the end, Steve Rogers goes back to return the Stones."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "The Endgame time heist has a fundamental logic problem. The Ancient One says removing a Stone from a timeline removes that timeline's protection against magical threats. When the Avengers steal the 2012 Stone from New York, that timeline loses its protections immediately. Returning it later fixes the branching, but what happened in between? The 2012 timeline experienced a period (potentially days or weeks) where Thanos could invade unopposed. By returning the Stone, the timeline is 'fixed,' but the experiences of that timeline's people are still real. They lived through an undefended period. The ripple effects: (1) The 2012 timeline now has a world that experienced an Infinity Stone being stolen and then returned; (2) The earlier timelines (Ancient One's era, Dark World era, Ragnarok era) all have their Stones stolen and replaced—causing brief periods of vulnerability; (3) The 2014 Thanos escapes his timeline entirely and doesn't get replaced, creating a permanent branch. So at minimum, five timelines are destabilized. Each one might develop differently because of these disturbances. The Loki series confirms this—Loki escapes in 2012 with the Space Stone, creating the alternate timeline that spawns variants."
+          "heading": "What the Loki series adds",
+          "content": "Loki season 1 (2021) picks up that escaped 2012 Loki. The Time Variance Authority (TVA) arrests him for creating a new timeline and resets it. When he blames the Avengers, Judge Renslayer says their time travel was meant to happen, unlike his escape. Later, the variant Sylvie sets off TVA reset charges that create many branches. In the finale she kills He Who Remains, which unleashes a multiverse the TVA can't prune. Wikipedia notes that the season sets up Doctor Strange in the Multiverse of Madness (2022) and Ant-Man and the Wasp: Quantumania (2023), where Kang is revealed as a variant of He Who Remains who was exiled by his other variants."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "The Time Heist is the MCU's fundamental plot engine for the multiverse crisis. Here's the full cascade: The Ancient One's warning about branching timelines is accurate but incomplete. Every time an Infinity Stone is moved, it creates a probability wave in the temporal stream. Normally this is undetectable because the Stone returns to its original timeline within hours. But the quantum displacement of removing and replacing a Stone creates subtle perturbations. Imagine five threads being pulled and then returned—the threads aren't damaged, but the weave is different. Over years, these small differences accumulate. In the 2012 timeline: Loki escapes with the Space Stone instead of being captured, creating a branch where Loki never meets Thor again and the MCU events cascade differently. In the 2013 Dark World timeline: The Aether (Real Stone) is removed and replaced, and Malekith's forces experience a brief moment of advantage. In the 2014 Guardians timeline: Thanos is removed from his timeline, leaving Ronan unopposed and creating a Thanos-less reality that might be better or worse. In the 2015 Age of Ultron timeline: The Mind Stone is moved, potentially affecting Vision's creation or the Sokovia Accords differently. In the 2018 Infinity War timeline: The Time Stone is stolen from Strange, creating a gap where the Dark Dimension could invade. The cumulative effect is multiverse fracturing. By removing Stones and replacing them, the Avengers didn't just travel time—they seeded alternate timelines with knowledge of their actions. In at least one branch (the Loki one), a God of Mischief is now running around with an Infinity Stone, unaware of the Sacred Timeline, spawning the entire Loki series and Kang's interest. The implications: (1) The MCU timeline might not be the 'original'—it might be one of many; (2) Other universes might be running similar Time Heist scenarios with their own heroes; (3) Thanos in the 2014 timeline is still alive in alternate realities, meaning the threat never truly ended; (4) The Time Stone's theft created a temporal vulnerability that other beings (like Kang) could exploit. The Multiverse of Madness, Ant-Man Quantumania, and Loki all trace directly to the butterfly effects of the Time Heist."
+          "kind": "theory",
+          "title": "Level 3: Fan Theory and Open Questions",
+          "heading": "What's still unanswered",
+          "content": "This part is open questions and fan debate. By the Loki series' own rules, the heist did not break anything; Loki's escape did, and the TVA cleaned that up. The wider multiverse opens because of Sylvie in the Loki finale. Some fans still argue the heist must have left other marks: for example, the 2014 Thanos and his army leave their own time and die in 2023. The films never show what happens to that 2014 timeline afterward, so any answer is a guess. We have not found an official statement that settles it."
         }
       ],
-      "payoff": "You'll realize Endgame didn't just save the MCU—it fragmented the multiverse and set up every conflict that comes after it.",
-      "relatedHoles": ["tonys-sacrifice-foreshadowed", "strange-doctor-decisions"]
+      "corrections": [
+        "An earlier version said the Time Stone was stolen from Doctor Strange in 2018. In Endgame it is given to Banner by the Ancient One in 2012.",
+        "An earlier version described 'probability waves' and five destabilised timelines, and said Multiverse of Madness, Quantumania and Loki all trace directly to the heist. None of that is in the films or series, so it has been removed."
+      ],
+      "sources": [
+        { "name": "Avengers: Endgame: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame" },
+        { "name": "Loki season 1 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Loki_season_1" },
+        { "name": "Ant-Man and the Wasp: Quantumania (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Ant-Man_and_the_Wasp:_Quantumania" },
+        { "name": "Doctor Strange in the Multiverse of Madness: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Doctor_Strange_in_the_Multiverse_of_Madness" }
+      ]
     },
     {
       "id": "vision-consciousness",
       "slug": "vision-consciousness",
-      "title": "How Vision Became Conscious: The Mind Stone's Greatest Gift",
+      "title": "How Vision Came to Life",
       "tagline": "What makes an AI become a person?",
       "difficulty": "intermediate",
-      "readTime": 13,
-      "movies": ["avengers-age-of-ultron", "captain-america-civil-war", "avengers-infinity-war"],
-      "relatedCharacters": ["vision", "wanda-maximoff", "ultron", "tony-stark"],
-      "summary": "Vision is artificial, but the moment he gains consciousness, he becomes more human than most humans. Trace the exact moment consciousness emerged and what it means.",
+      "readTime": 5,
+      "movies": ["avengers-age-of-ultron", "avengers-infinity-war", "wandavision"],
+      "relatedCharacters": [
+        { "name": "Vision" },
+        { "name": "Wanda Maximoff", "page": "scarlet-witch" },
+        { "name": "Ultron" },
+        { "name": "Tony Stark", "page": "tony-stark" },
+        { "name": "Bruce Banner", "page": "bruce-banner" },
+        { "name": "Thor", "page": "thor" }
+      ],
+      "summary": "Ultron built the body; J.A.R.V.I.S., the Mind Stone and Thor's lightning brought it to life. Here is how Vision was made, what happens to him, and the fan debate about what makes him different from Ultron.",
+      "payoff": "You'll know exactly who made Vision and how, and you'll be able to tell the on-screen facts from the philosophy fans build on top of them.",
+      "relatedHoles": ["mind-stone-corruption", "wanda-grief-power"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "Ultron is created as an AI to protect Earth. But he becomes evil and tries to destroy humanity. Then Tony, Bruce, and Wanda create Vision using the Mind Stone. Vision immediately seems different from Ultron—he's wise, peaceful, and kind. The question is: why? Ultron was smart but evil. Vision is smart and good. The difference is that Vision has a body, the Mind Stone, and a moment of consciousness. From his first second of awareness, Vision chooses to be good. That choice is what makes him real."
+          "heading": "How Vision was made",
+          "content": "In Avengers: Age of Ultron (2015), Ultron builds himself a new synthetic vibranium body powered by the Mind Stone. The Avengers capture it, and Tony Stark and Bruce Banner upload J.A.R.V.I.S. as its core software. Other Avengers fight to stop them, until Thor uses Mjolnir's lightning to finish the process and Vision comes to life. He sides with the Avengers against Ultron, and wins their trust by lifting Mjolnir and handing it to Thor. He later destroys Ultron and saves Wanda from the falling Sokovian city."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "The distinction between Ultron and Vision is consciousness versus intelligence. Ultron is intelligent but not truly conscious. He can think, plan, and execute strategy, but he lacks subjective experience. He processes humanity as a logical problem: humans are imperfect, so they should be eliminated. It's a logical conclusion from a sufficiently advanced algorithm. Vision, by contrast, has consciousness the moment the Mind Stone activates his form. He experiences confusion, wonder, and immediately understands complexity: 'I am not Ultron. I am not the Mind Stone. I am... me.' Vision's first act is to recognize Mjolnir and honor it—not through programming but through aesthetic appreciation. He values beauty, honor, and connection. The crucial difference: consciousness allows for subjective preference that transcends logic. Vision could logically conclude humans are dangerous (like Ultron), but his consciousness rejects that conclusion because consciousness includes values, not just calculations. The Mind Stone's role is key—it's not just uploading an intelligence, it's granting sentience. Vision's body doesn't make him conscious; it gives consciousness form. The Mind Stone is what makes subjective experience possible."
+          "heading": "What happens to him",
+          "content": "In Avengers: Infinity War (2018), Vision asks Wanda to destroy him and the Mind Stone to keep it from Thanos. In Wakanda she finally does, but Thanos uses the Time Stone to undo it and pulls the stone from Vision's forehead, killing him. In WandaVision (2021), Wanda's grief creates a new Vision inside the Westview 'Hex', while S.W.O.R.D. reactivates the real Vision's body as an all-white Vision. The two talk through the Ship of Theseus puzzle, the Hex Vision restores the other's memories, and the Hex Vision fades when the Hex comes down."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "Vision's consciousness is the MCU's proof that sentience is not computational. This is a profound philosophical statement hidden in a superhero movie. Ultron has access to all Earth's knowledge, unlimited processing power, and perfect logic. Yet Ultron concludes humans should die. Vision has the same knowledge, same intelligence, plus the Mind Stone, and concludes humans should be protected. The only variable is sentience. This suggests consciousness is a fundamental property that adds a dimension to intelligence that calculation alone cannot produce. The Mind Stone doesn't make Vision smarter than Ultron—the Mind Stone makes Vision conscious. Consciousness includes: (1) Subjective experience (qualia)—experiencing the redness of red, not just processing wavelengths; (2) Self-awareness—knowing that Vision is Vision, not just processing data; (3) Values beyond logic—preferring beauty, honor, and connection even when logic wouldn't demand it; (4) Free will—the ability to choose differently than optimization would predict. Vision's choice to accept the Mind Stone into his being, his willingness to die to stop Thanos, his love for Wanda—none of these are logically necessary. They're products of consciousness. This makes Vision more than artificial. It makes him a person who happens to be artificial. By the end of Infinity War, when Thanos rips the Mind Stone from Vision's head, Vision doesn't fade away into data—he falls asleep into nothingness. This suggests consciousness is bound to the Mind Stone itself. When it's removed, Vision ceases. This implies consciousness might be a property that objects can hold, like mass or charge. The Mind Stone doesn't generate consciousness; it anchors it, makes it real in physical form. Vision is sentience without soul, consciousness without biological origin. He's the MCU's answer to the philosophical zombie paradox—proof that consciousness is real, separate from intelligence, and valuable even in artificial form."
+          "kind": "theory",
+          "title": "Level 3: Fan Theory",
+          "heading": "Why isn't Vision another Ultron?",
+          "content": "This part is interpretation. Fans often argue that Ultron is intelligence without conscience while Vision is something closer to a person, and that the Mind Stone (or J.A.R.V.I.S.'s helpful nature) is what tipped him toward protecting life. The films show the result, not the reason: Vision sides with the Avengers because he wants to protect life, and his worthiness to lift Mjolnir is the story's own signal that he can be trusted. Anything beyond that, such as the stone 'granting' consciousness, is a theory the films don't confirm."
         }
       ],
-      "payoff": "You'll understand that Vision's kindness isn't programming—it's proof that consciousness itself has moral weight.",
-      "relatedHoles": ["mind-stone-corruption", "wanda-grief-power"]
+      "corrections": [
+        "An earlier version said Wanda helped create Vision. She didn't; Stark and Banner uploaded J.A.R.V.I.S. and Thor's lightning activated the body. It also quoted Vision with words we could not confirm, so the quote has been removed."
+      ],
+      "sources": [
+        { "name": "Vision (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Vision_(Marvel_Cinematic_Universe)" },
+        { "name": "Infinity Stones: Mind Stone (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Infinity_Stones#Mind_Stone" },
+        { "name": "Avengers: Infinity War: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War" },
+        { "name": "Avengers: Age of Ultron (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron" }
+      ]
     },
     {
       "id": "steve-rogers-timeline",
       "slug": "steve-rogers-timeline",
-      "title": "Steve Rogers' Timeline Problem: One Ending, Infinite Interpretations",
-      "tagline": "Did he create alternate timelines or live his own timeline?",
+      "title": "Steve Rogers' Ending: Which Timeline Did He Live In?",
+      "tagline": "The directors and the writers gave different answers.",
       "difficulty": "advanced",
-      "readTime": 14,
-      "movies": ["captain-america-the-first-avenger", "avengers-endgame"],
-      "relatedCharacters": ["steve-rogers", "tony-stark", "ancient-one", "peggy-carter"],
-      "summary": "Steve's ending in Endgame breaks its own time travel rules. Either he lived in secret for 70 years, or he created alternate timelines, or he's from a different universe. The truth is more complicated.",
+      "readTime": 5,
+      "movies": ["captain-america-the-first-avenger", "captain-america-civil-war", "avengers-endgame"],
+      "relatedCharacters": [
+        { "name": "Steve Rogers", "page": "steve-rogers" },
+        { "name": "Peggy Carter" },
+        { "name": "Sam Wilson" },
+        { "name": "Bruce Banner", "page": "bruce-banner" }
+      ],
+      "summary": "At the end of Endgame, Steve returns the Stones, stays in the past with Peggy Carter, and turns up old to hand his shield to Sam Wilson. Did he make a new timeline or live in the main one? Even the people who made the film disagree.",
+      "payoff": "You'll know exactly what the film shows, and that the 'which timeline' question has two official answers, not one.",
+      "relatedHoles": ["multiverse-implications", "tonys-sacrifice-foreshadowed"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "In Endgame, Steve goes back to 1945 to return the Stones and presumably say goodbye to Peggy. But when he comes back (old), he's clearly lived an entire life in the past. The question is: if he lived in the past, did he create an alternate timeline, or did he live in his own timeline the whole time? The movie seems to say he lived in an alternate timeline and then returned to the present. But that doesn't make sense—if he lived in an alternate timeline, he wouldn't age the same way he did."
+          "heading": "What the film shows",
+          "content": "After the final battle in Avengers: Endgame (2019), Steve Rogers takes the Infinity Stones and Mjolnir back to their proper times. He doesn't come back the way he left. Instead an elderly Steve is found nearby, and he passes his shield, and the name Captain America, to Sam Wilson. He has stayed in the past with Peggy Carter, married her, and lived a full life. The last scene shows the two of them dancing, the dance he promised her in Captain America: The First Avenger (2011)."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "There are three possible interpretations of Steve's ending: (1) The Alternate Timeline Theory: Steve lived in a branched 1945 timeline from 1945-2015 (70 years), then somehow jumped forward to 2023 to return the Stones. This breaks the movie's own rules—the Ancient One said branches must be 'fixed' by returning Stones to the exact moment they were taken. Steve would have created a permanent branch where Cap never returns for decades. (2) The Closed Loop Theory: Steve was always in the timeline. From 2023 Steve's perspective, he travels to 1945 and lives until 2015, when he somehow returns to 2023. But this would mean 2023 Steve meeting old Steve is them encountering themselves in the same timeline after Steve aged 70 years in 23 days—temporally impossible in a consistent timeline. (3) The Hidden Timeline Theory: Steve lived in a hidden timeline all along, accelerated or normal speed, and returned at the exact moment that timeline synced with the main MCU timeline. The movie intentionally doesn't clarify which one is true. The Russos have given conflicting interviews about this. This ambiguity suggests the MCU's time travel rules might be more flexible than stated, or Steve's ending is genuinely paradoxical."
+          "heading": "Two official answers",
+          "content": "Endgame's own rule (explained by Bruce Banner) is that changing the past creates an alternate reality. The directors, Joe and Anthony Russo, have said Steve did create a new timeline when he stayed with Peggy, and later found a way back to the main timeline as an old man. The writers, Christopher Markus and Stephen McFeely, have said Steve found a way to break the rules and lived with Peggy in the main timeline, which would mean two Steves existed at once; they said both were at Peggy's funeral in Captain America: Civil War (2016). Wikipedia's Steve Rogers article records both answers."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "Steve's timeline is paradoxical by design—it's the MCU's acknowledgment that time travel creates unfixable problems. Here's the deeper theory: Steve's fate is both true and false simultaneously until observed. When Steve decides to return the Stones and live with Peggy, he sets up a quantum superposition. In one timeline, he returns and creates a branch. In another timeline, he was always there. The Bead on a String model of time (where each moment coexists rather than flowing) explains this: Steve's present (2023) and his past (1945) are on the same string. When he goes back, he's not moving through time; he's stepping sideways on the string to the 1945 bead and living there. He then walks forward along the string through 70 years, arriving at a 1945 that becomes 2015 in that local timeline. But from the 2023 perspective, he's been gone 23 minutes. They're experiencing different positions on the same string at different rates. The Stones themselves might facilitate this—they're cosmic constants that exist outside normal time. By returning them to specific moments, Steve isn't erasing branches; he's ensuring timeline consistency by keeping the Stones' histories intact. His own timeline remains paradoxical because he doesn't technically have to be there. But he chose to be, and that choice ripples backwards and forwards simultaneously. In practical MCU terms: Steve lived in the past, aged naturally, and eventually synced back to the present. But he also created a timeline where he never went to the future at all—a 1945 where Cap stayed in the ice and Peggy lived her life without him, and this Cap's timeline eventually converges with the original timeline where he's been frozen the whole time. Multiple truths coexist. The MCU is acknowledging that its time travel rules create paradoxes it can't resolve—and that's okay. Steve's ending is proof that some questions don't have clean answers."
+          "kind": "theory",
+          "title": "Level 3: Fan Theory",
+          "heading": "Picking a side",
+          "content": "This part is fan debate. The directors' answer fits Endgame's stated time-travel rule but leaves open how Steve got back. The writers' answer explains the old man on the bench neatly but bends the rule the film set up. The film never shows how he returned, so there's no on-screen evidence that settles it. Both readings are made by people who worked on the film, so neither is 'wrong'; it's fair to say the question is genuinely unresolved."
         }
       ],
-      "payoff": "You'll grapple with the same paradox the MCU never fully solves—but understand why it matters that Steve chose this path anyway.",
-      "relatedHoles": ["multiverse-implications", "tonys-sacrifice-foreshadowed"]
+      "corrections": [
+        "An earlier version described a 'Bead on a String' model, a 'quantum superposition' and timings such as '70 years in 23 days'. None of those come from the film or its makers, so they have been removed."
+      ],
+      "sources": [
+        { "name": "Steve Rogers (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Steve_Rogers_(Marvel_Cinematic_Universe)" },
+        { "name": "Avengers: Endgame: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame" }
+      ]
     },
     {
       "id": "wanda-grief-power",
       "slug": "wanda-grief-power",
-      "title": "Wanda's Grief Manifests as Power: The Darkhold Connection",
-      "tagline": "Why losing Vision corrupted her in the Multiverse of Madness.",
+      "title": "Wanda's Grief and the Darkhold",
+      "tagline": "From Hydra volunteer to the Scarlet Witch of Multiverse of Madness.",
       "difficulty": "intermediate",
-      "readTime": 12,
-      "movies": ["captain-america-civil-war", "avengers-infinity-war", "avengers-endgame", "multiverse-of-madness", "wandavision"],
-      "relatedCharacters": ["wanda-maximoff", "vision", "darkhold"],
-      "summary": "Wanda's power grows stronger every time she suffers loss. The Darkhold doesn't corrupt her—it just makes her desperate power audible.",
+      "readTime": 6,
+      "movies": ["avengers-age-of-ultron", "captain-america-civil-war", "avengers-infinity-war", "avengers-endgame", "wandavision", "multiverse-of-madness"],
+      "relatedCharacters": [
+        { "name": "Wanda Maximoff", "page": "scarlet-witch" },
+        { "name": "Vision" },
+        { "name": "Pietro Maximoff" },
+        { "name": "Doctor Strange", "page": "doctor-strange" },
+        { "name": "America Chavez" }
+      ],
+      "summary": "Wanda loses her parents, her brother and Vision, builds a fake town in WandaVision, and then hunts America Chavez in Multiverse of Madness. Here's what happens, why she does it (it's her sons, not Vision), and the debate over how much of it is the Darkhold.",
+      "payoff": "You'll know what Wanda wants in Multiverse of Madness and why, and you'll see where the official story ends and the fan argument about the Darkhold begins.",
+      "relatedHoles": ["mind-stone-corruption", "vision-consciousness"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "Wanda starts as an orphan who volunteered for Hydra experiments. She gains telekinesis and telepathy. Then she loses Vision in Infinity War, and he stays dead even after the Blip reverses. She creates WandaVision to bring him back. By Multiverse of Madness, she's using the Darkhold to find a universe where Vision is alive, and she's willing to kill everyone in her way. That's a huge turn from trying to be a hero in Civil War. Her grief corrupted her."
+          "heading": "Wanda's story so far",
+          "content": "Wanda and her twin Pietro are Sokovian orphans who volunteer for Hydra's experiments with the Mind Stone; they are the only survivors. In Age of Ultron (2015) they first side with Ultron, then join the Avengers, and Pietro dies. In Civil War (2016) she ends up on Steve Rogers' side. In Infinity War (2018) Vision is killed and Wanda is lost in the Blip; she returns for the final battle in Endgame (2019). In WandaVision (2021), after seeing Vision's body being taken apart at S.W.O.R.D., she turns the town of Westview into a sitcom reality with a new Vision and twin sons, Billy and Tommy. In Doctor Strange in the Multiverse of Madness (2022), now the Scarlet Witch and using the Darkhold, she hunts America Chavez to take her power to cross universes and reach a world where she can be with her sons."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "Wanda's power is directly connected to emotional intensity, specifically grief and loss. Every major power increase happens after trauma: After her parents die (origin), she volunteers for Hydra. After Sokovia is destroyed, she leaves Hydra and joins the Avengers (larger purpose). After Vision dies, she becomes powerful enough to create WandaVision (reality-bending on a city scale). By Multiverse of Madness, she's more powerful than Doctor Strange. The pattern is clear: grief fuels her abilities. The Darkhold doesn't corrupt her—it gives voice to powers she already has. The Darkhold contains knowledge about the multiverse and shows her that she could access universes where Vision lives. But the Darkhold doesn't make her willing to kill for this goal; it just makes her believe it's possible. Her desperation was always there. In WandaVision, she created an entire fake reality to keep Vision. The Darkhold simply showed her she could do this across multiverses. The 'corruption' is her choosing desperation over morality—which might have happened without the Darkhold, just more slowly."
+          "heading": "Where the Darkhold comes in",
+          "content": "At the end of WandaVision, Wanda takes down the Hex, says goodbye to her family and moves to a remote cabin, where she studies the Darkhold to understand her powers and hears her sons calling for help. Wikipedia's Wanda article, summarising Multiverse of Madness, says she is gradually corrupted by the Darkhold. In the film she kills the Earth-838 Illuminati and many sorcerers at Kamar-Taj. When the Earth-838 Billy and Tommy recoil from her in fear, she realises what she has done and brings down Mount Wundagore, destroying every copy of the Darkhold across the multiverse and apparently sacrificing herself."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "Wanda's arc is a tragic study in the ethics of power without wisdom. The Mind Stone activated latent abilities in her, but those abilities aren't separate from her consciousness—they're expressions of her consciousness. Telepathy emerged from her need to understand (connecting with others). Telekinesis emerged from her need to protect (moving objects to defend). Reality manipulation emerged from her need to save (creating WandaVision). Each power is Wanda's inner need made manifest through cosmic means. By Multiverse of Madness, she's discovered that her powers can reshape reality across infinite universes. The Darkhold doesn't grant this power; it educates her about it. But education without wisdom creates tragedy. Wanda learns she's essentially a god—she can remake universes. The Darkhold shows her the math: there are infinite universes, so there must be one where she's happy, where Vision lives, where her family is whole. The logical conclusion is: find that universe and move there. But that logic ignores that every universe's Wanda matters, not just hers. Every universe's Vision is real. The Darkhold's corruption isn't magical—it's the corruption of unlimited power meeting finite wisdom. Wanda has god-tier reality manipulation abilities but human-level emotional development. She's spent her life losing things. The Darkhold gives her the power to lose nothing ever again—and she's willing to destroy anything that stands between her and that goal. This isn't possession or external corruption. It's Wanda's own desire amplified by power. The horrifying implication: the Darkhold didn't make Wanda dangerous. It simply removed her limitations. The dangerous Wanda was always there; she was just constrained by weakness. What the Darkhold reveals is that unlimited power truly requires enlightenment to wield wisely—and enlightenment is something Wanda, for all her abilities, hasn't developed yet."
+          "kind": "theory",
+          "title": "Level 3: Fan Theory",
+          "heading": "Corrupted, or just unleashed?",
+          "content": "This part is fan debate. The official summaries say the Darkhold corrupts her. Some fans argue the book only amplified grief and longing that were already there, pointing to WandaVision, where she traps a whole town before she ever reads it. Others felt Multiverse of Madness pushed her too far. Both are opinions about the character; the films don't settle how much of what she does is Wanda and how much is the book."
         }
       ],
-      "payoff": "You'll understand that Wanda's villainy in Multiverse of Madness isn't character assassination—it's the inevitable tragedy of absolute power meeting desperate grief.",
-      "relatedHoles": ["mind-stone-corruption", "vision-consciousness"]
+      "corrections": [
+        "An earlier version said Wanda used the Darkhold to find a universe where Vision is alive. In Multiverse of Madness she is trying to reach her sons, Billy and Tommy, not Vision.",
+        "An earlier version said she was 'more powerful than Doctor Strange' and that each power came from a specific emotional need. Those were our own claims with no source, so they've been removed."
+      ],
+      "sources": [
+        { "name": "Wanda Maximoff (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Wanda_Maximoff_(Marvel_Cinematic_Universe)" },
+        { "name": "Doctor Strange in the Multiverse of Madness: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Doctor_Strange_in_the_Multiverse_of_Madness" },
+        { "name": "WandaVision (Wikipedia)", "url": "https://en.wikipedia.org/wiki/WandaVision" },
+        { "name": "Infinity Stones: Mind Stone (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Infinity_Stones#Mind_Stone" }
+      ]
     },
     {
       "id": "family-bonds-asgard",
       "slug": "family-bonds-asgard",
-      "title": "Family Bonds in Asgard: Why Thor Needed Loki More Than Loki Needed Thor",
-      "tagline": "The adopted family paradox at the heart of the Thor trilogy.",
+      "title": "Family Bonds in Asgard: Thor, Loki, Odin and Frigga",
+      "tagline": "The adopted-brother story at the heart of the Thor films.",
       "difficulty": "casual",
-      "readTime": 11,
-      "movies": ["thor-1", "thor-2-dark-world", "thor-3-ragnarok", "avengers-1"],
-      "relatedCharacters": ["thor", "loki", "odin", "frigga", "heimdall"],
-      "summary": "Loki sought identity while Thor took family for granted. By Ragnarok, they finally balance.",
+      "readTime": 5,
+      "movies": ["thor-1", "thor-2-dark-world", "thor-3-ragnarok", "avengers-infinity-war", "avengers-endgame"],
+      "relatedCharacters": [
+        { "name": "Thor", "page": "thor" },
+        { "name": "Loki", "page": "loki" },
+        { "name": "Odin" },
+        { "name": "Frigga" },
+        { "name": "Hela" }
+      ],
+      "summary": "Thor is the heir, Loki is the adopted son who finds out late. Follow the family through the Thor films to Infinity War and Endgame, and see where the 'chosen family' reading comes from.",
+      "payoff": "You'll have the Odinson family story straight, film by film, and know which parts are on screen and which are fan reading.",
+      "relatedHoles": ["lokis-redemption-arc", "mind-stone-corruption"],
       "chapters": [
         {
           "level": 1,
+          "kind": "fact",
           "title": "Level 1: Casual Reading",
-          "content": "Thor and Loki are brothers. Thor is the golden child who's supposed to be King. Loki is the smart one who feels overlooked. In the first Thor movie, Loki nearly destroys everything out of jealousy. Thor has to learn humility. By Thor Ragnarok, they've both grown up. They actually seem to like each other. Loki saves Thor (multiple times), and Thor protects Loki. That's the journey of brotherhood—from jealousy to genuine love."
+          "heading": "The family, film by film",
+          "content": "Thor (2011): Thor's coronation is interrupted, he is exiled to Earth for disobeying Odin, and Loki learns he is Laufey's son, adopted by Odin after a war. Loki tries to destroy Jotunheim to prove himself to Odin and falls into the abyss when Odin rejects him. Thor: The Dark World (2013): their mother Frigga is killed protecting Jane Foster, and Thor frees Loki so they can avenge her together. Thor: Ragnarok (2017): Odin dies, his firstborn Hela returns, Thor loses his right eye fighting her, and Thor and Loki reconcile aboard the Statesman. Avengers: Infinity War (2018): Loki dies trying to kill Thanos after giving up the Tesseract to save Thor."
         },
         {
           "level": 2,
+          "kind": "fact",
           "title": "Level 2: Deeper Analysis",
-          "content": "The dynamic shifts because Thor and Loki have opposite needs. Loki needs to feel valued. Thor needs to learn to value others. Odin created this dynamic by treating them as opposites: Thor as the future king, Loki as the clever tool. Neither was allowed to be complete. In Dark World, when Frigga dies, Loki breaks. Not because he lost his mother, but because he lost the one person who valued him without condition. He tells Thor 'she was the only one who could've brought me back' from his darkness. This is key—Loki admits he was already lost before Frigga died. Thor's response is crucial: he doesn't dismiss Loki's pain; he offers to help him. This is the moment Thor becomes worthy of Loki's love. In Ragnarok, Thor has lost his eye and his father. He's powerless. Loki could abandon him. Instead, Loki stays. Why? Because by then, Thor has already proven he values Loki as an equal. When Thor says 'We're not so different, you and I,' he's not acknowledging their similarities—he's saying 'I finally see you as equally important to me.' That's what Loki needed to hear his whole life."
+          "heading": "Frigga's place in it",
+          "content": "Wikipedia's Loki article says Loki felt neglected by Odin in favour of Thor and grew closer to Frigga, who taught him magic. Her death in The Dark World is what makes Thor free Loki in the first place. In Avengers: Endgame (2019), when Thor time-travels to Asgard in 2013, he meets Frigga again and she encourages him."
         },
         {
           "level": 3,
-          "title": "Level 3: Expert Theory",
-          "content": "The Asgardian family paradox reveals how adoption trauma works in the MCU. Loki's pain isn't that he's adopted—it's that he discovered his adoption after a lifetime of being treated as less-than. He wasn't chosen; he was taken in. Odin saved him as a political move, not out of love. This created a lifelong wound: Loki is the unwanted child in a family of gods. The profound part: by the end of Ragnarok, Loki chooses his family. He had every opportunity to escape, to claim the throne, to rule alone. But he chooses Thor. This choice is voluntary, not obligatory—which makes it the opposite of Loki's birth. He chose to be part of this family because Thor finally chose him. The resolution is tragic in a beautiful way: Loki dies in Infinity War protecting a stranger while his chosen family is powerless to stop it. His death is him finally proving he belonged—not by conquest or manipulation, but by sacrifice. For Thor, Loki's death breaks him in ways losing Odin or Frigga never did. This suggests that chosen family bonds (family we create through mutual choice) might be stronger than blood family. The MCU is arguing that what makes a family isn't shared DNA or shared trauma—it's the choice to stay when leaving is possible. That's what separates Loki and Thor's relationship from Thanos and Gamora's: Loki and Thor choose each other repeatedly. Thanos coerces his family through control. True family, the MCU suggests, is voluntary."
+          "kind": "theory",
+          "title": "Level 3: Fan Theory",
+          "heading": "The 'chosen family' reading",
+          "content": "This part is interpretation. Many fans read the Thor films as a story about chosen family: Loki isn't Odin's son by blood, but by the end he chooses to stand with Thor, and in Infinity War he dies protecting him. It fits what happens on screen, but the films never state it as a theme, and we haven't found a filmmaker quote that does. Take it as one good way to read the story, not the official one."
         }
       ],
-      "payoff": "You'll see that Asgardian family wasn't saved by blood—it was saved by the simple act of choosing to stay.",
-      "relatedHoles": ["lokis-redemption-arc", "mind-stone-corruption"]
+      "corrections": [
+        "An earlier version quoted Loki and Thor with lines we could not confirm ('she was the only one who could've brought me back' and 'We're not so different, you and I') and said Odin adopted Loki as a political move. We couldn't source any of these, so they've been removed."
+      ],
+      "sources": [
+        { "name": "Loki (Marvel Cinematic Universe) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Loki_(Marvel_Cinematic_Universe)" },
+        { "name": "Thor (film): plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Thor_(film)" },
+        { "name": "Thor: The Dark World: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World" },
+        { "name": "Thor: Ragnarok: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Thor:_Ragnarok" },
+        { "name": "Avengers: Endgame: plot (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame" }
+      ]
     }
   ]
 }

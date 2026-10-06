@@ -60,3 +60,11 @@ Repeat checks 2 and 5 on https://marvel-details.pages.dev.
   character and movie pages in dark and light mode flags only colored badges
   on gradient backgrounds (fine) and the outline star on character cards.
   Checks 6 and 7 not run yet.
+
+## Links (2026-10-06)
+- `node --test test/links.test.mjs`: no empty or "#" links, every site address
+  and #anchor exists, every page the data links to exists, every movie hub
+  detail has a source and the hub pages match `movie-hubs.json`.
+- `node tools/crawl-site.mjs` (needs Playwright + Chromium; run locally):
+  loads all pages, checks every link after scripts run, reports script errors
+  and "Read more →" text that isn't a link.

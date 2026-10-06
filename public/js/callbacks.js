@@ -154,7 +154,7 @@ const CallbacksUI = {
       results = results.filter(cb =>
         cb.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
         cb.explanation.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        cb.relatedCharacters.some(c =>
+        (cb.relatedCharacters || []).some(c =>
           c.toLowerCase().includes(this.searchQuery.toLowerCase())
         )
       );
@@ -204,14 +204,15 @@ const CallbacksUI = {
    * Create a single callback card HTML
    */
   createCallbackCard(callback) {
-    const foreshadowMovie = this.movies[callback.foreshadow.movieId];
-    const fulfillmentMovie = this.movies[callback.fulfillment.movieId];
+    const unknown = { title: 'Unknown film', year: '' };
+    const foreshadowMovie = this.movies[callback.foreshadow.movieId] || unknown;
+    const fulfillmentMovie = this.movies[callback.fulfillment.movieId] || unknown;
 
     return `
       <article class="callback-card" id="callback-${callback.id}">
         <div class="callback-header">
           <h3><a href="/callbacks/callback-${callback.id}.html">${this.escapeHtml(callback.title)}</a></h3>
-          <span class="callback-type">${callback.type}</span>
+          <span class="callback-type">${this.escapeHtml(callback.type)}</span>
         </div>
 
         <div class="callback-timeline">
@@ -219,7 +220,7 @@ const CallbacksUI = {
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <strong>${this.escapeHtml(foreshadowMovie.title)}</strong>
-              <span class="timestamp">${callback.foreshadow.timestamp}</span>
+              ${this.sceneHtml(callback.foreshadow)}
               <p>${this.escapeHtml(callback.foreshadow.description)}</p>
             </div>
           </div>
@@ -230,7 +231,7 @@ const CallbacksUI = {
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <strong>${this.escapeHtml(fulfillmentMovie.title)}</strong>
-              <span class="timestamp">${callback.fulfillment.timestamp}</span>
+              ${this.sceneHtml(callback.fulfillment)}
               <p>${this.escapeHtml(callback.fulfillment.description)}</p>
             </div>
           </div>
@@ -238,26 +239,62 @@ const CallbacksUI = {
 
         <div class="callback-explanation">
           <p>${this.escapeHtml(callback.explanation)}</p>
+          ${this.sourceHtml(callback.source)}
         </div>
 
         <div class="callback-meta">
           <div class="characters">
             <strong>Characters:</strong>
-            ${callback.relatedCharacters.map(c =>
-              `<span class="tag character-tag">${this.escapeHtml(c)}</span>`
-            ).join('')}
+            ${(callback.relatedCharacters || []).map(c => this.characterTag(c)).join('')}
           </div>
-          <div class="articles">
-            <strong>Related Articles:</strong>
-            ${callback.relatedArticles.map(a =>
-              `<span class="tag article-tag">${this.escapeHtml(a)}</span>`
-            ).join('')}
-          </div>
+          ${this.articlesHtml(callback.relatedArticles)}
         </div>
 
         <a href="/callbacks/callback-${callback.id}.html" class="read-more">Read Full Callback →</a>
       </article>
     `;
+  },
+
+  /**
+   * Plain scene locator ("Final battle"). Nothing is shown when a callback has none.
+   */
+  sceneHtml(part) {
+    return part && part.scene
+      ? `<span class="timestamp">Scene: ${this.escapeHtml(part.scene)}</span>`
+      : '';
+  },
+
+  /**
+   * Visible "Source:" link for a callback (only real https addresses).
+   */
+  sourceHtml(source) {
+    if (!source || !/^https:\/\//.test(source.url || '')) return '';
+    return `<p class="callback-source">Source: <a href="${this.escapeHtml(source.url)}" target="_blank" rel="noopener">${this.escapeHtml(source.name || source.url)}</a></p>`;
+  },
+
+  /**
+   * Character tag: a link when the character has a page (characterPages in
+   * callbacks.json lists only pages that exist), plain text otherwise.
+   */
+  characterTag(name) {
+    const pages = (window.marvelData.hub.getCallbackCharacterPages && window.marvelData.hub.getCallbackCharacterPages()) || {};
+    const slug = pages[name];
+    return slug
+      ? `<a class="tag character-tag" href="/characters/${encodeURIComponent(slug)}">${this.escapeHtml(name)}</a>`
+      : `<span class="tag character-tag">${this.escapeHtml(name)}</span>`;
+  },
+
+  /**
+   * Related articles as links. callbacks.json only lists slugs that have a
+   * page in /articles/ (test/links.test.mjs checks this); none = no row.
+   */
+  articlesHtml(articles) {
+    const list = (articles || []).filter(a => /^[a-z0-9-]+$/.test(a));
+    if (!list.length) return '';
+    return `<div class="articles">
+            <strong>Related Articles:</strong>
+            ${list.map(a => `<a class="tag article-tag" href="/articles/${a}">${this.escapeHtml(a.replace(/-/g, ' '))}</a>`).join('')}
+          </div>`;
   },
 
   /**
@@ -271,7 +308,7 @@ const CallbacksUI = {
       '"': '&quot;',
       "'": '&#039;'
     };
-    return text.replace(/[&<>"']/g, m => map[m]);
+    return String(text ?? '').replace(/[&<>"']/g, m => map[m]);
   },
 
   /**

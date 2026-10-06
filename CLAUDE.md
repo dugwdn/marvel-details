@@ -20,10 +20,10 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   older Wix site (which carries a Google Search Console verification tag).
   Moving the domain is a live change and waits on Doug.
 - Pages: home, about, 5 movie hubs, 3 articles, plus five features:
-  Deleted Scenes Registry (`/scenes/`, 21 scenes), Foreshadowing and
-  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20), MCU Character List
+  Deleted Scenes Registry (`/scenes/`, 40 real scenes, sourced), Foreshadowing and
+  Callbacks (`/callbacks/`, 34, sourced; `node build-callbacks.js`), Character Arc Tracker (`/characters/`, 20), MCU Character List
   (`/characters/all/`, 797, rebuilt by `python3 tools/build-directory.py`),
-  Universe Map (`/map/`, 25 nodes and 51 links) and Rabbit Holes
+  Universe Map (`/map/`, 25 nodes and 54 links) and Rabbit Holes
   (`/rabbit-holes/`, 8).
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
   real 404, sitemap/robots, link check on every PR), PR #3 ad boxes (hidden
@@ -62,6 +62,12 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Sign-in (2026-10-06, ADR-007):** `/account`, Google first plus Facebook
   and X, Pages Functions + D1 (`functions/`, `migrations/`). Off until each
   provider's keys are set (RUNBOOK "Sign-in keys"). `npm test` runs its tests.
+- **Movie hubs** are built by `node tools/build-hubs.mjs` from
+  `public/data/movie-hubs.json` (every detail needs a source URL; trailer
+  blocks and figures on the page are kept). Run `node tools/menu.mjs` after.
+- **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
+  anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
+  Never add a card that looks clickable without a link behind it.
 
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.

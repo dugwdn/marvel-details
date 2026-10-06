@@ -52,13 +52,6 @@
         <priority>0.8</priority>
     </url>
 
-
-
-
-
-
-
-
     <!-- Movie Hub Pages -->
     <url>
         <loc>https://mcueastereggs.com/movies/iron-man-1</loc>
@@ -246,20 +239,6 @@
     </url>
 
     <url>
-        <loc>https://mcueastereggs.com/callbacks/callback-cb-014.html</loc>
-        <lastmod>2026-10-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://mcueastereggs.com/callbacks/callback-cb-015.html</loc>
-        <lastmod>2026-10-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
         <loc>https://mcueastereggs.com/callbacks/callback-cb-016.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
@@ -275,13 +254,6 @@
 
     <url>
         <loc>https://mcueastereggs.com/callbacks/callback-cb-018.html</loc>
-        <lastmod>2026-10-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://mcueastereggs.com/callbacks/callback-cb-019.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -331,13 +303,6 @@
 
     <url>
         <loc>https://mcueastereggs.com/callbacks/callback-cb-026.html</loc>
-        <lastmod>2026-10-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://mcueastereggs.com/callbacks/callback-cb-027.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -394,20 +359,6 @@
 
     <url>
         <loc>https://mcueastereggs.com/callbacks/callback-cb-035.html</loc>
-        <lastmod>2026-10-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://mcueastereggs.com/callbacks/callback-cb-036.html</loc>
-        <lastmod>2026-10-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://mcueastereggs.com/callbacks/callback-cb-037.html</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

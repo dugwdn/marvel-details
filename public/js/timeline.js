@@ -62,7 +62,7 @@ class CharacterTimeline {
       <div class="timeline-milestone" data-milestone-id="${milestone.id}" data-index="${index}">
         <div class="milestone-dot" style="background-color: ${phaseColor};"></div>
         <div class="milestone-content">
-          <button class="milestone-header" data-milestone-id="${milestone.id}">
+          <button type="button" class="milestone-header" aria-expanded="${isExpanded}" data-milestone-id="${milestone.id}">
             <div class="milestone-year">${milestone.year}</div>
             <div class="milestone-info">
               <strong>${this.escapeHtml(milestone.keyMoment)}</strong>
@@ -86,7 +86,7 @@ class CharacterTimeline {
       <div class="milestone-details">
         <div class="detail-section">
           <h4>Movie</h4>
-          <p>${this.escapeHtml(milestone.movie)} (${milestone.year})</p>
+          <p>${this.movieHtml(milestone.movie)} (${milestone.year})</p>
         </div>
 
         <div class="detail-section">
@@ -132,10 +132,13 @@ class CharacterTimeline {
       });
     });
 
-    // Handle responsive resize
-    window.addEventListener('resize', () => {
-      this.handleResize();
-    });
+    // Handle responsive resize (added once; re-renders call this method again)
+    if (!this.resizeBound) {
+      this.resizeBound = true;
+      window.addEventListener('resize', () => {
+        this.handleResize();
+      });
+    }
   }
 
   /**
@@ -163,7 +166,7 @@ class CharacterTimeline {
    * Handle responsive resize
    */
   handleResize() {
-    const wasDesktop = this.container.classList.contains('timeline-desktop');
+    const wasDesktop = !!this.container.querySelector('.timeline-desktop');
     const isNowDesktop = window.innerWidth >= 768;
 
     if (wasDesktop !== isNowDesktop) {
@@ -202,6 +205,23 @@ class CharacterTimeline {
       return 'emotional-fear';
     }
     return 'emotional-neutral';
+  }
+
+  /**
+   * A film name, linked to its hub page when this site has one.
+   */
+  movieHtml(name) {
+    const hubs = {
+      'Iron Man': '/movies/iron-man-1',
+      'Iron Man 2': '/movies/iron-man-2',
+      'Iron Man 3': '/movies/iron-man-3',
+      'The Avengers': '/movies/avengers-1',
+      "Marvel's The Avengers": '/movies/avengers-1',
+      'Avengers: Endgame': '/movies/endgame'
+    };
+    const hub = hubs[String(name || '').trim()];
+    const text = this.escapeHtml(name);
+    return hub ? `<a href="${hub}">${text}</a>` : text;
   }
 
   /**

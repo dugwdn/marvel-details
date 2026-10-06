@@ -40,7 +40,7 @@ function buildIndex() {
       if (seen.has(u)) return;
       add(c.name, u, 'Character', [].concat(c.actors || [], c.first || '').join(' '));
     });
-    ((v(4) || {}).deletedScenes || []).forEach((s) => add(s.title, `/scenes/${s.movieId}-scenes`, 'Deleted scene', [s.movieTitle, s.description].join(' ')));
+    ((v(4) || {}).deletedScenes || []).forEach((s) => add(s.title, `/scenes/${s.movieId}-scenes#${s.id}`, 'Deleted scene', [s.movieTitle, s.description, s.synopsis].filter(Boolean).join(' ')));
     ((v(5) || {}).rabbitHoles || []).forEach((h) => add(h.title, `/rabbit-holes/${h.slug}`, 'Rabbit hole', [h.tagline, h.summary].join(' ')));
     return items;
   });

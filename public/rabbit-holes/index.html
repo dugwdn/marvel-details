@@ -15,6 +15,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+  <style>
+    /* Cards are not links themselves (the title and button are), so they don't lift on hover. */
+    html body #holes-container .hole-card:hover { transform: none; box-shadow: 6px 6px 0 #000; }
+    .hole-films { margin: 0.5rem 0; line-height: 1.6; }
+    .hole-films a, a.char-tag { text-decoration: underline; }
+    .filter-label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+  </style>
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
     <script>
@@ -51,7 +58,7 @@
   <div class="holes-container">
     <div class="holes-header">
       <h1>Rabbit Holes</h1>
-      <p>Explore thematic deep dives into the MCU. Pick your difficulty level and dive in.</p>
+      <p>Explore thematic deep dives into the MCU. Pick your difficulty level and dive in. Every rabbit hole lists its sources, and anything that is fan theory rather than on-screen fact is labelled as theory.</p>
     </div>
 
     <div class="search-filter-section">
@@ -70,72 +77,18 @@
           <label for="difficulty-filter">Difficulty Level</label>
           <select id="difficulty-filter">
             <option value="all">All Levels</option>
-            <option value="casual">Casual (10-12 min)</option>
-            <option value="intermediate">Intermediate (12-15 min)</option>
-            <option value="advanced">Advanced (14-20 min)</option>
+            <option value="casual">Casual</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
           </select>
         </div>
 
         <div class="filter-group">
-          <label>Filter by Movies</label>
+          <span class="filter-label" id="movie-filter-label">Filter by film or series</span>
           <div class="movie-filters">
             <div class="movie-filters-list">
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="iron-man-1" id="movie-im1">
-                <label for="movie-im1">Iron Man (2008)</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="iron-man-2" id="movie-im2">
-                <label for="movie-im2">Iron Man 2</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="iron-man-3" id="movie-im3">
-                <label for="movie-im3">Iron Man 3</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="avengers-1" id="movie-av1">
-                <label for="movie-av1">The Avengers</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="avengers-age-of-ultron" id="movie-aou">
-                <label for="movie-aou">Age of Ultron</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="captain-america-civil-war" id="movie-cw">
-                <label for="movie-cw">Civil War</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="avengers-infinity-war" id="movie-iw">
-                <label for="movie-iw">Infinity War</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="avengers-endgame" id="movie-eg">
-                <label for="movie-eg">Endgame</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="thor-1" id="movie-thor1">
-                <label for="movie-thor1">Thor</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="thor-2-dark-world" id="movie-thor2">
-                <label for="movie-thor2">Dark World</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="thor-3-ragnarok" id="movie-thor3">
-                <label for="movie-thor3">Ragnarok</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="multiverse-of-madness" id="movie-mom">
-                <label for="movie-mom">Multiverse of Madness</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="ant-man-quantumania" id="movie-amq">
-                <label for="movie-amq">Ant-Man: Quantumania</label>
-              </div>
-              <div class="movie-filter-item">
-                <input type="checkbox" name="movie-filter" value="loki-series" id="movie-loki">
-                <label for="movie-loki">Loki Series</label>
-              </div>
+              <!-- Filled from /data/rabbit-holes.json by /js/rabbit-holes.js -->
+            </div>
             </div>
           </div>
         </div>
@@ -162,6 +115,8 @@
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
+
+
 
 
 
