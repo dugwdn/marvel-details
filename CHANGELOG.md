@@ -4,6 +4,7 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Google Analytics 4 (`G-NESPZD6XSQ`) on every page (not live until deployed): `tools/menu.mjs` writes the one standard snippet into all 96 pages, replacing the placeholder; Privacy page says plainly it counts visits and pages read, with no names or emails sent; `test/analytics.test.mjs` checks one tag per page.
 - Rebrand: "Details You Missed" became "MCU Easter Eggs" everywhere (banner, titles, meta, footers, JSON-LD, tools); canonical URLs and sitemap use mcueastereggs.com; menu no longer leaves an orphan button (one row 1000px+, even grid below). ADR-009.
 - Member perks (not live yet, PR #21, stacks on the sign-in PR #18):
   "Seen it" on movie hubs with an optional "Hide spoilers for movies I

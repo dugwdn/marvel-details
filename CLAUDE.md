@@ -37,8 +37,8 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   ads at risk). Trailers are YouTube embeds of official uploads; actor photos
   are free-license Wikimedia Commons files with a credit line. IMDb text and
   photos can't be copied; plain facts (dates, cast) can be stated.
-- **Known gaps:** only 3 of the 10 planned articles are written. GA4 is a
-  placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
+- **Known gaps:** only 3 of the 10 planned articles are written. GA4 is live in the code (`G-NESPZD6XSQ`, written into every page by
+  `tools/menu.mjs`; `test/analytics.test.mjs` checks it) once published. The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
   not people.
 - **Member perks (PR #21, stacks on sign-in PR #18, not live, ADR-008):**
@@ -59,7 +59,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
-Waiting on Doug: a real GA4 ID, AdSense slot numbers, the domain move, the
+Waiting on Doug: AdSense slot numbers, the domain move, the
 sign-in keys (PR #18) and, once PRs #18 and #21 are merged,
 `npx wrangler d1 migrations apply marvel-details --remote` for the `saves`
 table (RUNBOOK "Member perks sync").

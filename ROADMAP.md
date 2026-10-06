@@ -9,8 +9,7 @@ his accounts; the rest Claude does on a branch with a PR.
    that don't exist (7 unwritten articles, related-article links on 34
    callback pages, Contact, More and writer links), adds a favicon, and adds a link
    check that runs on every PR. Until it's published, the live map is blank.
-2. **Doug: GA4.** Create a property (or pick one) and send the
-   measurement ID; Claude swaps it into the pages.
+2. **GA4: done in code** (`G-NESPZD6XSQ`, every page); goes live at the next deploy.
 3. **Doug: domain.** Decide whether marveldetails.com moves from Wix to this
    site. If yes: add the custom domain in Cloudflare Pages, then Claude
    updates sitemap, robots, canonicals, and submits the sitemap in the

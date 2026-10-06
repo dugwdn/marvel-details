@@ -54,7 +54,7 @@ block. PR #1 adds `css/style.css`, a shared dark page base those blocks
 depend on. The home, movie and article pages are light only.
 
 ## Analytics and ads
-- GA4 tag on the home page and one article, ID still `G-XXXXXXXXXX`.
+- GA4 (`G-NESPZD6XSQ`): one snippet in every page's head, written by `tools/menu.mjs` (replaces any earlier one, so never doubled); no user id or events are sent.
 - Ads: `js/ads.js` (loaded on every page but 404) loads AdSense for
   ca-pub-7178251279168670 and places three boxes: below the top, mid-page
   (pages long enough to have one) and before the footer. Boxes stay hidden
