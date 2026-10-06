@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://mcueastereggs.com/quiz/">
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/theme.css?v=2aa3f067">
+    <link rel="stylesheet" href="/css/theme.css?v=c3d0107d">
     <link rel="stylesheet" href="/css/quiz.css?v=8f489b91">
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "Marvel Quiz: Test Your MCU Knowledge", "url": "https://mcueastereggs.com/quiz/", "description": "A free Marvel movie quiz with four levels from easy to insanely hard. Earn points, rank up and learn the answer behind every question.", "isPartOf": {"@type": "WebSite", "name": "MCU Easter Eggs", "url": "https://mcueastereggs.com/"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How hard is the Marvel quiz?", "acceptedAnswer": {"@type": "Answer", "text": "There are four levels: Sidekick (easy), Hero (medium), Avenger (hard) and Inevitable (insanely hard, with a 15-second timer). Each round is 10 questions picked at random from 82 total."}}, {"@type": "Question", "name": "How do quiz points work?", "acceptedAnswer": {"@type": "Answer", "text": "Each right answer earns the level's points (10, 20, 40 or 75). Three or more right in a row adds a 50% streak bonus, and a perfect round adds five answers' worth of bonus points. Points add up to your quiz rank, from Recruit to Inevitable."}}, {"@type": "Question", "name": "Do I need an account to play?", "acceptedAnswer": {"@type": "Answer", "text": "No. Anyone can play and your points are kept on this device. Sign in with Google if you want your points and rank on every device."}}]}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,6 +52,7 @@
         <a href="/upcoming/">Coming Soon</a>
         <a href="/quiz/" aria-current="page">Quiz</a>
     </nav>
+    <div class="ad-box" data-ad-box="top" data-ad-placeholder="top" data-ad-stamp><div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div></div>
 
     <main class="quiz-main">
         <a href="/" class="back-button" onclick="if (history.length > 1 &amp;&amp; document.referrer.indexOf(location.origin) === 0) { history.back(); return false; }">← Back</a>
@@ -132,7 +133,7 @@
             <p class="quiz-small">Your quiz rank and points also show on <a href="/me/">My Marvel</a>.</p>
         </section>
 
-        <section class="detail-section quiz-panel" aria-labelledby="quiz-how-h">
+        <section class="detail-section quiz-panel" aria-labelledby="quiz-how-h" data-ad-mid>
             <h2 id="quiz-how-h">How scoring and ranks work</h2>
             <p>Each right answer earns the level's points. Get three or more right in a row and every answer after that earns 50% extra. A perfect round of 10 adds a bonus worth five more answers. Wrong answers cost nothing.</p>
             <div class="quiz-table-wrap">
@@ -157,6 +158,7 @@
         </section>
     </main>
 
+    <div class="ad-box" data-ad-box="end" data-ad-placeholder="end" data-ad-stamp><div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div></div>
     <footer>
         <p>&copy; 2026 MCU Easter Eggs. Fan site, not affiliated with Marvel or Disney.</p>
         <p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Photos and Credits</a></p>
@@ -166,7 +168,7 @@
     </div>
     </footer>
 
-    <script src="/js/ads.js?v=3cc8cd1c" defer></script>
+    <script src="/js/ads.js?v=46d2d40a" defer></script>
     <script type="module" src="/js/quiz.js?v=c5824b67"></script>
     <script type="module" src="/js/members.js?v=25ce0410"></script>
     <script type="module" src="/js/search.js?v=3f64106c"></script>

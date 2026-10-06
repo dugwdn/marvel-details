@@ -1,7 +1,13 @@
-// Ads: three AdSense boxes per page (below the top, mid-page, page end).
-// Each box stays hidden until AdSense actually fills it, so empty or
-// unapproved slots never show a blank space. All three boxes reuse the one
-// responsive display unit from AdSense (mcueastereggs.com, 2026-10-06).
+// Ads: three AdSense boxes per page (top = below the menu, mid = mid-page,
+// end = above the footer). Every box always shows: a dashed "Ad space"
+// placeholder with room reserved, so nothing jumps when an ad fills (styles
+// in css/theme.css). When AdSense marks the unit filled, the placeholder look
+// goes and a small "Advertisement" label shows above it. The top and end
+// boxes are written into the HTML by tools/menu.mjs (data-ad-placeholder, so
+// the site-health robot can count them); this script adds any box a page is
+// missing and puts the AdSense unit in each. All three boxes reuse the one
+// responsive display unit (mcueastereggs.com, 2026-10-06). A box with no slot
+// id stays a placeholder (no AdSense push).
 (function () {
   // Never on sign-in, account or My Marvel pages.
   if (/^\/(account|me)(\/|\.html|$)/.test(location.pathname)) return;
@@ -15,61 +21,48 @@
   s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + CLIENT;
   document.head.appendChild(s);
 
-  var css = document.createElement('style');
-  css.textContent =
-    // Unfilled: zero height but still full width (AdSense can't size a unit
-    // inside display:none). Filled: shown with room reserved for the unit.
-    '.ad-box{height:0;overflow:hidden;margin:0 auto;max-width:1600px;text-align:center}' +
-    '.ad-box:has(ins[data-ad-status="filled"]){height:auto;overflow:visible;margin:2rem auto}' +
-    '.ad-box ins.adsbygoogle{min-height:100px}' +
-    '.ad-box .ad-label{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:.25rem}';
-  document.head.appendChild(css);
-
   function box(name) {
     var d = document.createElement('div');
     d.className = 'ad-box';
     d.setAttribute('data-ad-box', name);
-    d.innerHTML = '<div class="ad-label">Advertisement</div>';
-    if (SLOTS[name]) {
-      var ins = document.createElement('ins');
-      ins.className = 'adsbygoogle';
-      ins.style.display = 'block';
-      ins.setAttribute('data-ad-client', CLIENT);
-      ins.setAttribute('data-ad-slot', SLOTS[name]);
-      ins.setAttribute('data-ad-format', 'auto');
-      ins.setAttribute('data-full-width-responsive', 'true');
-      d.appendChild(ins);
-    }
+    d.setAttribute('data-ad-placeholder', name);
+    d.innerHTML = '<div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div>';
     return d;
   }
+  function fill(d, name) {
+    if (!SLOTS[name] || d.querySelector('ins.adsbygoogle')) return;
+    var ins = document.createElement('ins');
+    ins.className = 'adsbygoogle';
+    ins.style.display = 'block';
+    ins.setAttribute('data-ad-client', CLIENT);
+    ins.setAttribute('data-ad-slot', SLOTS[name]);
+    ins.setAttribute('data-ad-format', 'auto');
+    ins.setAttribute('data-full-width-responsive', 'true');
+    d.appendChild(ins);
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+  }
+  function has(name) { return document.querySelector('.ad-box[data-ad-box="' + name + '"]'); }
 
-  var names = ['top', 'mid', 'end'];
-  // Pages built with placeholder boxes: swap each placeholder for a real box.
-  var placeholders = document.querySelectorAll('.ad-slot');
-  var placed = [];
-  placeholders.forEach(function (p, i) {
-    if (i < 3) { var b = box(names[i]); p.replaceWith(b); placed.push(names[i]); }
-    else p.remove();
-  });
-
-  // Other pages: place the boxes that are still missing.
+  // Pages without the boxes in their HTML: place the missing ones.
   var main = document.querySelector('article') || document.querySelector('main') ||
     document.querySelector('.container') || document.body;
   var footer = document.querySelector('footer');
-  var top = document.querySelector('header') || document.querySelector('h1');
-  if (placed.indexOf('top') < 0 && top && top.parentNode) {
-    top.parentNode.insertBefore(box('top'), top.nextSibling);
-  }
-  if (placed.indexOf('mid') < 0 && main.children.length > 3) {
+  var top = document.querySelector('nav.site-nav') || document.querySelector('header') || document.querySelector('h1');
+  if (!has('top') && top && top.parentNode) top.parentNode.insertBefore(box('top'), top.nextSibling);
+  // A page can name its mid spot with data-ad-mid (the quiz does, so the box
+  // never lands between the question and result screens).
+  var midAt = document.querySelector('[data-ad-mid]');
+  if (!has('mid') && midAt && midAt.parentNode) {
+    midAt.parentNode.insertBefore(box('mid'), midAt);
+  } else if (!has('mid') && main.children.length > 3) {
     var kids = main.children;
     main.insertBefore(box('mid'), kids[Math.floor(kids.length / 2)]);
   }
-  if (placed.indexOf('end') < 0) {
+  if (!has('end')) {
     if (footer && footer.parentNode) footer.parentNode.insertBefore(box('end'), footer);
     else document.body.appendChild(box('end'));
   }
 
-  document.querySelectorAll('.ad-box ins.adsbygoogle').forEach(function () {
-    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
-  });
+  var names = ['top', 'mid', 'end'];
+  names.forEach(function (n) { var d = has(n); if (d) fill(d, n); });
 })();

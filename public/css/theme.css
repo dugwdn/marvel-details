@@ -170,9 +170,31 @@ html body footer {
   border-top: 4px solid var(--dym-red);
 }
 html body footer a { color: #fff; }
+/* Long source links in text wrap instead of pushing the page sideways */
+html body p { overflow-wrap: break-word; }
+@media (max-width: 480px) { html body .callbacks-page .page-header h1 { font-size: 2rem; } }
 
-/* Ad boxes sit on the dark page */
-html body .ad-box .ad-label { color: var(--dym-muted); }
+/* Ad boxes (js/ads.js): always shown as a dashed "Ad space" placeholder with
+   room reserved (280px phone, 250px from 768px; text 14px, the site minimum); once AdSense fills the unit
+   the placeholder look goes and the "Advertisement" label shows. */
+html body .ad-box {
+  position: relative; box-sizing: border-box; width: 100%; max-width: 100%;
+  min-height: 280px; margin: 2rem auto; overflow: hidden; text-align: center;
+  border: 1px dashed var(--dym-line); background: var(--dym-surface-2); border-radius: 4px;
+}
+@media (min-width: 768px) { html body .ad-box { min-height: 250px; } }
+html body .ad-box .ad-ph {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-size: .875rem; color: var(--dym-muted); pointer-events: none;
+}
+html body .ad-box .ad-label {
+  display: none; color: var(--dym-muted); font-size: .875rem; letter-spacing: .08em;
+  text-transform: uppercase; margin-bottom: .25rem;
+}
+html body .ad-box ins.adsbygoogle { position: relative; width: 100%; }
+html body .ad-box:has(ins[data-ad-status="filled"]) { border-color: transparent; background: none; }
+html body .ad-box:has(ins[data-ad-status="filled"]) .ad-ph { display: none; }
+html body .ad-box:has(ins[data-ad-status="filled"]) .ad-label { display: block; }
 
 /* Movie cards: a typographic poster panel (no film art), white title below */
 html body .movie-card > div[style] {
