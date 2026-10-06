@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /private
+Disallow: /api/
 
 # Sitemaps
 Sitemap: https://marvel-details.pages.dev/sitemap.xml
@@ -13,7 +14,9 @@ Request-rate: 30/60
 # Google specific
 User-agent: Googlebot
 Allow: /
+Disallow: /api/
 
 # Bing specific
 User-agent: Bingbot
 Allow: /
+Disallow: /api/

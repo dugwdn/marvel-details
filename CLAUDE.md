@@ -11,16 +11,17 @@ A free, static fan site about hidden details in Marvel movies, branded
 "Details You Missed." Phase 1 covers Iron Man 1 to 3, The Avengers and
 Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
-## Current state (2026-10-05)
+## Current state (2026-10-06)
 - **Live at https://marvel-details.pages.dev** (Cloudflare Pages project
-  `marvel-details`, production branch `phase-1-build`, commit ecf0b8b,
+  `marvel-details`, production branch `phase-1-build`, commit e69809a since 2026-10-06,
   published by direct upload from Doug's laptop with wrangler).
 - **marveldetails.com is not this site yet.** The domain still serves Doug's
   older Wix site (which carries a Google Search Console verification tag).
   Moving the domain is a live change and waits on Doug.
 - Pages: home, about, 5 movie hubs, 3 articles, plus five features:
   Deleted Scenes Registry (`/scenes/`, 21 scenes), Foreshadowing and
-  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20),
+  Callbacks (`/callbacks/`, 40), Character Arc Tracker (`/characters/`, 20), MCU Character List
+  (`/characters/all/`, 797, rebuilt by `python3 tools/build-directory.py`),
   Universe Map (`/map/`, 25 nodes and 51 links) and Rabbit Holes
   (`/rabbit-holes/`, 8).
 - Live since 2026-10-05 23:10 UTC: PR #1 fixes (Universe Map, dark mode,
@@ -39,14 +40,28 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   placeholder (`G-XXXXXXXXXX`). The About page and bylines name "house
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
   not people.
-
+- **Member perks (PR #21, stacks on sign-in PR #18, not live, ADR-008):**
+  Seen it (watch tracker + optional spoiler blur), Save (saved list),
+  favorite characters (star), a hidden-details found counter with a rank
+  ladder (Civilian to The Watcher, `public/data/ranks.json`) and a My Marvel
+  page (`/me/`, noindex). Local-first: kept in the browser (localStorage),
+  no account needed. Signed-in members get it synced by `/api/sync`
+  (`functions/api/sync.js`, table `saves` from
+  `migrations/0002_member_saves.sql`, same D1 `marvel-details`). Shared
+  logic: `public/js/members-core.js`; page code: `public/js/members.js`
+  (added to every page by `node tools/menu.mjs`, which also puts a Privacy
+  link in footers). My Marvel reuses the sign-in panel from
+  `public/js/account.js`.
 - **Sign-in (2026-10-06, ADR-007):** `/account`, Google first plus Facebook
   and X, Pages Functions + D1 (`functions/`, `migrations/`). Off until each
   provider's keys are set (RUNBOOK "Sign-in keys"). `npm test` runs its tests.
 
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
-Waiting on Doug: a real GA4 ID, AdSense slot numbers, and the domain move.
+Waiting on Doug: a real GA4 ID, AdSense slot numbers, the domain move, the
+sign-in keys (PR #18) and, once PRs #18 and #21 are merged,
+`npx wrangler d1 migrations apply marvel-details --remote` for the `saves`
+table (RUNBOOK "Member perks sync").
 
 ## Working rules
 - Project-wide rules (branch and PR, never merge or deploy without Doug's

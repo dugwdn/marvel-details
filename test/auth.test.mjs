@@ -8,7 +8,9 @@ import { readCookie, safeBack, cleanName, verifyGoogle, b64url, handleAuth, SESS
 
 function fakeD1() {
   const db = new DatabaseSync(':memory:');
-  db.exec(fs.readFileSync(new URL('../migrations/0001_accounts.sql', import.meta.url), 'utf8'));
+  // Every migration in order (0002 adds the member saves the delete route clears).
+  const dir = new URL('../migrations/', import.meta.url);
+  for (const f of fs.readdirSync(dir).filter(n => n.endsWith('.sql')).sort()) db.exec(fs.readFileSync(new URL(f, dir), 'utf8'));
   const stmt = (sql, args = []) => ({
     bind: (...a) => stmt(sql, a),
     first: async () => db.prepare(sql).get(...args) ?? null,

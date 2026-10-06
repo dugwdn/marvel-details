@@ -58,3 +58,19 @@ planned discussions; reading never needs it.
 - Only `/api/*` runs code (`public/_routes.json`); every page stays static.
 - Microsoft and Apple can be added the same way later; Apple needs the $99/yr
   developer account (Doug's OK).
+
+## ADR-008: Member perks are local-first; sync rides on the site sign-in (2026-10-06)
+**Decision:** the perks (Seen it, Save, favorite characters, found counter
+and ranks) live in the visitor's browser (localStorage) and work with no
+account. Signed-in members (sign-in from ADR-007) get them synced: one JSON
+blob per person in a `saves` table (`migrations/0002_member_saves.sql`) in
+the same D1 database `marvel-details`, keyed by `users.id`, capped at 16 KB,
+read and written by `GET/PUT /api/sync` using ADR-007's session lookup.
+Merging is a union of both sides with "newest change wins" per item
+(removals are kept as dated tombstones so they stick), found details never
+un-find, settings are last-write-wins. Deleting the account deletes the
+`saves` row. Nothing new about the person is stored beyond the list itself.
+**Why:** most visitors never sign up, so the perks must not depend on it; one
+sign-in for the whole site; no new service or bill.
+**Cost:** sync only for signed-in members; the list size cap; rank titles use
+Marvel character names (lawyer list).

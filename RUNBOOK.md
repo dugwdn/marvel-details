@@ -43,6 +43,17 @@ Check: `https://<site>/api/auth` lists the provider, and `/account` shows its
 button after the 13+ box. The database tables already exist; if the database
 is ever rebuilt, run `npx wrangler d1 migrations apply marvel-details --remote`.
 
+## Member perks sync (after PRs #18 and #21 are both merged)
+The perks work without this; it lets signed-in members keep their list on
+every device. Add the `saves` table once, then publish:
+```
+npx wrangler d1 migrations apply marvel-details --remote
+```
+Do this before (or right after) the first deploy that includes PR #21:
+until the table exists, `/api/sync` and "Delete my account" return errors.
+Check: sign in on /me/, save something, open /me/ on another device.
+Look at the data: `npx wrangler d1 execute marvel-details --remote --command "SELECT COUNT(*) FROM saves"`.
+
 ## Roll back
 Cloudflare dashboard > Workers & Pages > marvel-details > Deployments >
 pick the last good one > the three-dot menu > **Rollback to this deployment**.
@@ -52,5 +63,9 @@ pick the last good one > the three-dot menu > **Rollback to this deployment**.
   did that. Check the file exists in `public/` and was in the upload.
 - **Universe Map is blank:** open the browser console; the map needs
   `/data/connections.json` and the vis-network script from jsDelivr.
+- **My Marvel says "Sign-in is coming soon":** no sign-in provider is set
+  up yet (see "Sign-in keys"); the perks still work on each device.
+- **My Marvel can't sync / Delete my account fails:** the `saves` table is
+  missing; run the migration in "Member perks sync".
 - **wrangler asks to log in:** run `npx wrangler login` on the laptop and
   sign in as Doug (Doug does this step).

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>My Marvel | Details You Missed</title>
+    <meta name="description" content="Your seen movies, saved list, favorite characters and hidden-details rank.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { line-height: 1.6; }
+        .me-wrap { max-width: 860px; margin: 0 auto; padding: 1rem 16px 3rem; }
+    </style>
+    <meta name="google-adsense-account" content="ca-pub-7178251279168670">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+</head>
+<body>
+    <header class="site-brand">
+        <p class="site-brand-title"><a class="site-brand-link" href="/"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">Details <em>You</em><br>Missed</span></a></p>
+        <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>
+    </header>
+    <nav class="site-nav" aria-label="Main menu">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/movies/">Movies</a>
+        <a href="/scenes/">Deleted Scenes</a>
+        <a href="/callbacks/">Callbacks</a>
+        <a href="/characters/">Characters</a>
+        <a href="/map/">Universe Map</a>
+        <a href="/rabbit-holes/">Rabbit Holes</a>
+        <a href="/about">About</a>
+        <a href="/me/" aria-current="page">My Marvel</a>
+    </nav>
+
+    <main class="me-wrap">
+        <a href="/" class="back-button dym-back" onclick="if (history.length > 1 &amp;&amp; document.referrer.indexOf(location.origin) === 0) { history.back(); return false; }">← Back</a>
+
+        <h1 class="dym-page-title">My Marvel</h1>
+        <p class="dym-intro">Your rank, the movies you've seen, your saved list and favorite characters. It's kept on this device, no account needed.</p>
+        <noscript><p class="dym-intro">My Marvel needs JavaScript switched on.</p></noscript>
+
+        <section class="dym-panel" aria-labelledby="dym-rank-h">
+            <h2 id="dym-rank-h">Your rank</h2>
+            <div id="dym-rank" class="dym-rank"><p>Counting your hidden details…</p></div>
+            <details class="dym-explain">
+                <summary>How do I rank up?</summary>
+                <p>Every deleted scene, callback and rabbit hole is a hidden detail. A deleted scene counts once its card has been on your screen for a moment; a callback or rabbit hole counts when you open it. The more you find, the higher your rank, from Civilian all the way to The Watcher, who has found every one.</p>
+                <ol id="dym-ladder" class="dym-ladder"></ol>
+                <p class="dym-small">Rank names are characters from the films, used as fan titles. This site is not affiliated with Marvel or Disney.</p>
+            </details>
+        </section>
+
+        <section class="dym-panel" aria-labelledby="dym-movies-h">
+            <h2 id="dym-movies-h">Movies I've seen</h2>
+            <div id="dym-movies"></div>
+            <details class="dym-explain">
+                <summary>What does "Hide spoilers" do?</summary>
+                <p>Mark the movies you've seen. With the switch on, details from a movie you haven't marked are blurred on movie pages, deleted scenes and callbacks. Tap a blurred detail to read it anyway. Rabbit holes aren't blurred because each one covers many films, some outside our five.</p>
+            </details>
+        </section>
+
+        <section class="dym-panel" aria-labelledby="dym-saved-h">
+            <h2 id="dym-saved-h">Saved</h2>
+            <div id="dym-saved"></div>
+        </section>
+
+        <section class="dym-panel" aria-labelledby="dym-favs-h">
+            <h2 id="dym-favs-h">Favorite characters</h2>
+            <div id="dym-favs"></div>
+        </section>
+
+        <section class="dym-panel" aria-labelledby="dym-account-h">
+            <h2 id="dym-account-h">Your account</h2>
+            <div id="dym-account" class="dym-account"><p>Checking…</p></div>
+            <p id="dym-sync-status" class="dym-sync-status" aria-live="polite"></p>
+            <details class="dym-explain">
+                <summary>What do you keep about me?</summary>
+                <p>Without an account, everything stays in this browser on this device; nothing is sent to us. If you sign in (Google, Facebook or X, on this page or the <a href="/account">sign-in page</a>), we keep the id and first name that account gives us, a sign-in cookie, and this list so it can follow you to other devices. Never your email or password. Deleting your account also deletes the list we keep. More on the <a href="/privacy">privacy page</a>.</p>
+            </details>
+            <div class="dym-actions">
+                <button type="button" class="dym-btn dym-btn-sm" id="dym-clear">Clear my list on this device</button>
+            </div>
+            <div class="dym-confirm" id="dym-clear-confirm" hidden>
+                <p>This empties your rank, seen movies, saved list and favorites in this browser. If you're signed in, sign out first or they'll come back from your account.</p>
+                <button type="button" class="dym-btn dym-danger" id="dym-clear-yes">Yes, clear this device</button>
+                <button type="button" class="dym-btn" id="dym-clear-no">Keep it</button>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 Details You Missed. Not affiliated with Marvel or Disney.</p></footer>
+    <script src="/js/ads.js" defer></script>
+    <script type="module" src="/js/members.js"></script>
+</body>
+</html>

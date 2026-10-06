@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
 </head>
-<body>
+<body class="map-open">
     <header class="site-brand">
         <h1 class="site-brand-title"><a class="site-brand-link" href="/"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">Details <em>You</em><br>Missed</span></a></h1>
         <p class="site-brand-tag">Hidden details, easter eggs &amp; analysis from Marvel movies</p>
@@ -31,8 +31,16 @@
         <a href="/map/" aria-current="page">Universe Map</a>
         <a href="/rabbit-holes/">Rabbit Holes</a>
         <a href="/about">About</a>
+        <a href="/me/">My Marvel</a>
     </nav>
 
+    <!-- The map opens as a full-screen window over the site; Back returns to it. -->
+    <div class="map-overlay" id="map-overlay" role="dialog" aria-modal="true" aria-labelledby="map-overlay-title">
+    <div class="map-overlay-bar">
+        <a class="map-back" id="map-back" href="/">&#9664; Back to the site</a>
+        <h2 class="map-overlay-title" id="map-overlay-title">Universe Map</h2>
+        <a class="map-close" id="map-close" href="/" aria-label="Close the map">&times;</a>
+    </div>
     <div class="map-container">
         <!-- Left Panel: Network Visualization -->
         <div class="map-panel-left">
@@ -137,12 +145,15 @@
             </div>
         </div>
     </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vis-network/standalone/umd/vis-network.min.js"></script>
     <script src="/js/shared-data.js"></script>
     <script src="/js/map-sidebar.js"></script>
     <script src="/js/universe-map.js"></script>
+    <script src="/js/map-overlay.js"></script>
     <script src="/js/ads.js" defer></script>
+    <script type="module" src="/js/members.js"></script>
 </body>
 </html>

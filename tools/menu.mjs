@@ -20,6 +20,7 @@ export const MENU = [
   ['Universe Map', '/map/', 'map'],
   ['Rabbit Holes', '/rabbit-holes/', 'rabbit-holes'],
   ['About', '/about', 'about'],
+  ['My Marvel', '/me/', 'me'],
 ];
 
 const FONT =
@@ -27,6 +28,9 @@ const FONT =
   '    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
   '    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">';
 const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
+// Member perks (Seen it, Save, favorites, found counter): one module per page.
+const MEMBERS = '<script type="module" src="/js/members.js"></script>';
+const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a></p>';
 
 // rel is the page's path inside public/, with forward slashes.
 export function menuFor(rel) {
@@ -77,6 +81,12 @@ export function addMenu(html, rel) {
     : html.replace(/(<body[^>]*>)/, `$1\n    ${menu}\n`);
   if (!html.includes('family=Bangers')) html = html.replace('</head>', `    ${FONT}\n</head>`);
   if (!html.includes('/css/theme.css')) html = html.replace('</head>', `    ${STYLE}\n</head>`);
+  if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
+  // Pages with a footer get a Privacy link in it (once).
+  html = html.replace(/<p class="site-legal">[\s\S]*?<\/p>/, PRIVACY);
+  if (/<footer[\s>]/.test(html) && !/href="\/privacy\/?"/.test(html)) {
+    html = html.replace(/(<footer[^>]*>)([\s\S]*?)(\s*)<\/footer>/, (all, open, inner, ws) => `${open}${inner}${inner.includes('\n') ? '\n        ' : ''}${PRIVACY}${ws}</footer>`);
+  }
   return html;
 }
 

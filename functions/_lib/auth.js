@@ -198,6 +198,8 @@ export async function handleAuth(req, env) {
     const user = await who(env.DB, token);
     if (!user) return new Response('not signed in', { status: 401 });
     await env.DB.batch([
+      // Member perks synced to the account (migrations/0002_member_saves.sql).
+      env.DB.prepare('DELETE FROM saves WHERE user_id = ?').bind(user.id),
       env.DB.prepare('DELETE FROM sessions WHERE user_id = ?').bind(user.id),
       env.DB.prepare('DELETE FROM users WHERE id = ?').bind(user.id),
     ]);

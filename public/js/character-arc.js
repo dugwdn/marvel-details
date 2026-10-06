@@ -40,27 +40,30 @@ class CharacterArcTracker {
   }
 
   /**
-   * Load favorites from localStorage
+   * Favorites live in the member store (public/js/members.js, saved on this
+   * device and synced when signed in). That script loads as a module, so it
+   * may arrive after this one: read its saved copy directly until it's ready.
    */
   async loadFavorites() {
-    try {
-      const stored = localStorage.getItem('characterFavorites');
-      if (stored) {
-        this.favorites = new Set(JSON.parse(stored));
-      }
-    } catch (error) {
-      console.warn('Could not load favorites:', error);
-    }
+    this.favorites = new Set(this.readStoredFavorites());
+    const refresh = () => {
+      if (!window.dymMembers) return;
+      this.favorites = new Set(window.dymMembers.favIds());
+      this.render();
+    };
+    document.addEventListener('dym:ready', refresh);
+    document.addEventListener('dym:change', refresh);
   }
 
-  /**
-   * Save favorites to localStorage
-   */
-  saveFavorites() {
+  readStoredFavorites() {
+    if (window.dymMembers) return window.dymMembers.favIds();
     try {
-      localStorage.setItem('characterFavorites', JSON.stringify(Array.from(this.favorites)));
+      const store = JSON.parse(localStorage.getItem('dym-members-v1') || '{}');
+      const favs = Object.keys(store.favs || {}).filter((id) => store.favs[id].on);
+      const old = JSON.parse(localStorage.getItem('characterFavorites') || '[]');
+      return [...favs, ...old];
     } catch (error) {
-      console.warn('Could not save favorites:', error);
+      return [];
     }
   }
 
@@ -254,9 +257,10 @@ class CharacterArcTracker {
           </div>
           <button class="character-favorite-btn ${isFavorite ? 'favorited' : ''}"
                   data-slug="${char.slug}"
-                  title="Add to favorites"
+                  title="${isFavorite ? 'Favorite (tap to remove)' : 'Add to favorites'}"
+                  aria-pressed="${isFavorite ? 'true' : 'false'}"
                   aria-label="Favorite ${char.heroName}">
-            ♡
+            ${isFavorite ? '★' : '☆'}
           </button>
         </div>
         <div class="character-role ${roleClass}">
@@ -282,13 +286,15 @@ class CharacterArcTracker {
     const character = await MarvelDataHub.findCharacter(slug);
     if (!character) return;
 
+    if (window.dymMembers) {
+      window.dymMembers.toggleFav(character.id); // fires dym:change, which re-renders
+      return;
+    }
     if (this.favorites.has(character.id)) {
       this.favorites.delete(character.id);
     } else {
       this.favorites.add(character.id);
     }
-
-    this.saveFavorites();
     this.render();
   }
 
@@ -358,11 +364,11 @@ class CharacterArcTracker {
 
             <div class="modal-section">
               <h3>Character Journey</h3>
-              <div class="arc-stages">
-                ${char.arcStages.map(stage => `
-                  <div class="arc-stage">${this.escapeHtml(stage)}</div>
+              <ol class="arc-stages">
+                ${char.arcStages.map((stage, i) => `
+                  <li class="arc-stage"><span class="arc-step">${i + 1}</span><span class="arc-stage-name">${this.escapeHtml(stage)}</span></li>
                 `).join('')}
-              </div>
+              </ol>
             </div>
 
             <div class="modal-stats-grid">
@@ -418,18 +424,24 @@ class CharacterArcTracker {
         return;
       }
 
+      // Each similar character is a button that opens its own popup.
       container.innerHTML = similar.map(item => `
-        <div class="similar-arc-item">
-          <p class="similar-name">${this.escapeHtml(item.character.heroName)}</p>
-          <p class="similar-match">
+        <button type="button" class="similar-arc-item" data-slug="${item.character.slug}"
+                aria-label="Open ${this.escapeHtml(item.character.heroName)}">
+          <span class="similar-name">${this.escapeHtml(item.character.heroName)}</span>
+          <span class="similar-match">
             <span class="similarity-bar">
               <span class="similarity-fill" style="width: ${item.similarity}%"></span>
             </span>
             ${item.similarity}% match
-          </p>
-          <p class="similar-thesis">${this.escapeHtml(item.character.arcThesis.substring(0, 60))}...</p>
-        </div>
+          </span>
+          <span class="similar-thesis">${this.escapeHtml(item.character.arcThesis)}</span>
+          <span class="similar-open" aria-hidden="true">Open file ▸</span>
+        </button>
       `).join('');
+      container.querySelectorAll('.similar-arc-item').forEach(btn => {
+        btn.addEventListener('click', () => this.openModal(btn.dataset.slug));
+      });
     } catch (error) {
       console.error('Error loading similar arcs:', error);
       container.innerHTML = '<p class="error">Could not load similar characters.</p>';

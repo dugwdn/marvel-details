@@ -60,20 +60,23 @@ class UniverseMap {
       year: node.year,
       shape: this.getNodeShape(node.type),
       size: this.getNodeSize(node.type),
+      // Light labels with a dark outline so they read on the dark map.
       font: {
-        size: 14,
-        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto',
-        color: '#333',
+        size: 15,
+        face: '"Barlow Condensed", "Arial Narrow", Arial, sans-serif',
+        color: '#f2fbff',
+        strokeWidth: 4,
+        strokeColor: '#030b15',
         align: 'center'
       },
       borderWidth: 2,
-      borderWidthSelected: 3,
+      borderWidthSelected: 4,
       shadow: {
         enabled: true,
-        color: 'rgba(0,0,0,0.2)',
-        size: 8,
-        x: 3,
-        y: 3
+        color: node.color || 'rgba(76,201,255,0.6)',
+        size: 18,
+        x: 0,
+        y: 0
       }
     }));
 
@@ -83,14 +86,21 @@ class UniverseMap {
       to: edge.to,
       label: edge.label,
       title: `${edge.label}`,
-      color: edge.strength === 'strong' ? '#666' : '#ccc',
+      color: {
+        color: edge.strength === 'strong' ? 'rgba(76,201,255,0.75)' : 'rgba(76,201,255,0.35)',
+        highlight: '#ffb347',
+        hover: '#9be6ff'
+      },
       width: edge.strength === 'strong' ? 2 : 1,
       smooth: {
         type: 'continuous'
       },
       font: {
         size: 11,
-        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto'
+        face: 'Barlow, system-ui, sans-serif',
+        color: '#a9cfe0',
+        strokeWidth: 3,
+        strokeColor: '#030b15'
       },
       arrows: 'to'
     }));
@@ -130,15 +140,22 @@ class UniverseMap {
    * Create tooltip text for nodes
    */
   createNodeTooltip(node) {
-    let tooltip = `<strong>${node.label}</strong>`;
-    if (node.description) {
-      tooltip += `<br/>${node.description}`;
-    }
-    if (node.year) {
-      tooltip += `<br/>Year: ${node.year}`;
-    }
-    tooltip += `<br/>Phase: ${node.phase}`;
-    return tooltip;
+    // vis-network shows a string title as plain text, which printed the raw
+    // <strong>/<br/> tags in a long white bar. An element renders properly.
+    const tip = document.createElement('div');
+    tip.className = 'map-tip';
+    const add = (tag, cls, text) => {
+      const el = document.createElement(tag);
+      el.className = cls;
+      el.textContent = text;
+      tip.appendChild(el);
+    };
+    add('strong', 'map-tip-title', node.label);
+    if (node.description) add('p', 'map-tip-text', node.description);
+    const meta = [node.year ? `Year ${node.year}` : '', node.phase ? `Phase ${node.phase}` : '']
+      .filter(Boolean).join(' · ');
+    if (meta) add('p', 'map-tip-meta', meta);
+    return tip;
   }
 
   /**

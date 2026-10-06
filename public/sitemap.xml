@@ -443,6 +443,13 @@
     </url>
 
     <url>
+        <loc>https://marvel-details.pages.dev/characters/all/</loc>
+        <lastmod>2026-10-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
         <loc>https://marvel-details.pages.dev/characters/tony-stark</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
@@ -650,5 +657,11 @@
         <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://marvel-details.pages.dev/privacy</loc>
+        <lastmod>2026-10-06</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
     </url>
 </urlset>
