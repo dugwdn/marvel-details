@@ -682,3 +682,47 @@ html body .comic-panel .trailer-block { margin: 1.5rem 0 0; }
   html body .comic-panel, html body .comic-panel:nth-child(even) { transform: none; }
   html body .comic-panel > h2 { font-size: 1.15rem; }
 }
+
+/* Comic panels across the site (movie hubs, callbacks, rabbit holes, character
+   pages, About): the same black-bordered, hard-shadow, halftone panels the
+   articles use. Splash panels lead each page; caption-style headings inside. */
+html body :is(.movie-header, div.detail-item, .detail-header, .detail-section, .hole-detail-header, .hole-detail-summary, .chapter, .character-header, .timeline-section, .about-panel) {
+  position: relative; border-radius: 3px !important;
+  background-color: var(--dym-surface) !important;
+  background-image: radial-gradient(rgba(0,0,0,.07) 1px, transparent 1.3px) !important; background-size: 9px 9px !important;
+  border: 4px solid #000 !important; box-shadow: 7px 7px 0 #000 !important;
+}
+html body :is(.movie-header, .detail-header, .hole-detail-header, .character-header) { background-color: #fff7d1 !important; }
+html body :is(.movie-header, .detail-header, .hole-detail-header, .character-header) :is(p, li, span:not([class*="badge"]):not(.status)) { color: #17171b !important; }
+html body :is(.movie-header, .detail-header, .hole-detail-header, .character-header) :is(h1, h2) { color: #111 !important; }
+html body div.detail-item:nth-child(odd), html body .detail-section:nth-of-type(odd), html body .chapter:nth-child(odd) { transform: rotate(-.3deg); }
+html body div.detail-item:nth-child(even), html body .detail-section:nth-of-type(even), html body .chapter:nth-child(even) { transform: rotate(.3deg); }
+html body .subsection:has(> div.detail-item) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 1.4rem; }
+html body .subsection:has(> div.detail-item) > :not(.detail-item) { grid-column: 1 / -1; }
+html body div.detail-item { margin: 0 !important; padding: 1.2rem 1.3rem !important; }
+html body div.detail-item h3, html body .detail-section > h2, html body .detail-section > h3 {
+  display: inline-block; margin: -2.2rem 0 .8rem -.3rem !important; padding: .25rem .75rem .15rem;
+  background: #ffd60a; color: #111 !important; border: 3px solid #000; box-shadow: 3px 3px 0 #000;
+  font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-weight: 400; font-size: 1.15rem; letter-spacing: .05em; line-height: 1.15;
+  transform: rotate(-1.2deg);
+}
+html body div.detail-item { margin-top: 1.2rem !important; }
+html body .detail-section { padding-top: 2rem !important; margin-top: 2rem !important; }
+html body .detail-section .description, html body .chapter .chapter-content blockquote {
+  position: relative; background: #fff !important; color: #111 !important; border: 3px solid #000; border-radius: 22px; padding: .8rem 1.1rem; box-shadow: 4px 4px 0 #000;
+}
+html body .disclaimer { background: #ffd60a !important; color: #111 !important; border: 3px solid #000 !important; border-left-width: 3px !important; box-shadow: 5px 5px 0 #000; border-radius: 3px !important; transform: rotate(-.4deg); }
+html body .disclaimer * { color: #111 !important; }
+@media (prefers-color-scheme: dark) {
+  html body :is(.movie-header, div.detail-item, .detail-header, .detail-section, .hole-detail-header, .hole-detail-summary, .chapter, .character-header, .timeline-section) {
+    background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1.3px) !important; border-color: #f2f2f2 !important; box-shadow: 7px 7px 0 var(--dym-red) !important;
+  }
+  html body :is(.movie-header, .detail-header, .hole-detail-header, .character-header) { background-color: #2a2416 !important; }
+  html body :is(.movie-header, .detail-header, .hole-detail-header, .character-header) :is(p, li, span:not([class*="badge"]):not(.status)) { color: #ececf1 !important; }
+  html body :is(.movie-header, .detail-header, .hole-detail-header, .character-header) :is(h1, h2) { color: #fff !important; }
+}
+@media (max-width: 700px) {
+  html body .subsection:has(> div.detail-item) { grid-template-columns: 1fr; }
+  html body div.detail-item, html body .detail-section, html body .chapter { transform: none !important; }
+}
+html body div.detail-item h3 a, html body .detail-section > :is(h2, h3) a { color: #111 !important; text-decoration: underline; text-decoration-thickness: 2px; }
