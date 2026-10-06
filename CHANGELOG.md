@@ -4,6 +4,10 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Comic panels site-wide (not live yet): movie hubs (details two across
+  with yellow caption headings), callback pages (speech-bubble scene
+  notes), rabbit-hole chapters, character pages and the About page now use
+  the same black-bordered comic panels as the articles.
 - Articles as comic strips (not live yet): each article section is now a
   comic panel with a yellow caption box for its heading, scene notes are
   speech bubbles, panels sit two across on desktop and stack on phones.
