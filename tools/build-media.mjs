@@ -92,7 +92,7 @@ export function homeTop(m) {
         <div class="faces-spotlight" data-rotate="6000" aria-roledescription="carousel" aria-label="Actor spotlight">
             ${spot.map((f, i) => `<div class="spot-slide"${i ? ' hidden' : ''} aria-roledescription="slide" aria-label="${i + 1} of ${spot.length}">
             ${face(f, '(max-width: 640px) 60vw, 280px', i === 0)}
-            <div class="spot-text"><p class="spot-kicker">Spotlight</p><h3><a href="${f.href}">${esc(f.c.name)}</a></h3><p>Played by ${esc(f.img.subject)}. In ${f.c.titles.length} MCU titles, first in ${esc(f.c.first)}.</p></div>
+            <div class="spot-text"><p class="spot-kicker">Spotlight</p><h3><a href="${f.href}">${esc(f.c.name)}</a></h3><p>${f.img.role === 'voices' ? 'Voiced' : 'Played'} by ${esc(f.img.subject)}. In ${f.c.titles.length} MCU titles, first in ${esc(f.c.first)}.</p></div>
             </div>`).join('\n            ')}
             <div class="spot-controls"><button type="button" class="spot-prev" aria-label="Previous actor">‹</button><button type="button" class="spot-pause" aria-label="Pause">❚❚</button><button type="button" class="spot-next" aria-label="Next actor">›</button></div>
         </div>

@@ -7,8 +7,9 @@ records the credit in public/data/media-credits.json.
     node tools/build-credits.mjs && python3 tools/build-directory.py && node tools/build-media.mjs && node tools/menu.mjs
 
 An item in media-wanted.json is one of:
-  {"id": "groot", "kind": "portrait", "character": "groot", "actors": ["Vin Diesel"]}
-      -> the main photo of the actor's Wikipedia article (first actor that has one)
+  {"id": "groot", "kind": "portrait", "character": "groot", "actors": ["Terry Notary"]}
+      -> the main photo of the actor's Wikipedia article (first actor that has one).
+         List only on-screen actors when there are any; "voice": true when all are voice roles.
   {"id": "cleveland", "kind": "place", "wiki": "East 9th Street", ...}
       -> the main photo of that Wikipedia article
   {"id": "sdcc-2019", "kind": "event", "file": "File:Some photo.jpg", ...}
@@ -219,6 +220,8 @@ def main():
             'sourceUrl': 'https://commons.wikimedia.org/wiki/' + urllib.parse.quote(info['title'].replace(' ', '_'), safe=':/()_,.-\''),
             'changes': 'cropped and resized',
         }
+        if w['kind'] == 'portrait':
+            entry['role'] = 'voices' if w.get('voice') else 'plays'
         for k in ('character', 'caption', 'films', 'pages', 'home', 'factSource'):
             if k in w:
                 entry[k] = w[k]

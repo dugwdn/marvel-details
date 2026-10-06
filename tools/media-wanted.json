@@ -7,8 +7,7 @@
    "character": "thaddeus-thunderbolt-ross",
    "actors": [
     "William Hurt",
-    "Harrison Ford",
-    "Mike McGill"
+    "Harrison Ford"
    ],
    "alt": "{actor}, who plays Thaddeus \"Thunderbolt\" Ross"
   },
@@ -17,9 +16,7 @@
    "kind": "portrait",
    "character": "groot",
    "actors": [
-    "Terry Notary",
-    "Vin Diesel",
-    "Fred Tatasciore"
+    "Terry Notary"
    ],
    "alt": "{actor}, who plays Groot"
   },
@@ -46,8 +43,7 @@
    "kind": "portrait",
    "character": "gamora",
    "actors": [
-    "Zoe Saldaña",
-    "Cynthia McWilliams"
+    "Zoe Saldaña"
    ],
    "alt": "{actor}, who plays Gamora"
   },
@@ -56,8 +52,7 @@
    "kind": "portrait",
    "character": "may-parker",
    "actors": [
-    "Marisa Tomei",
-    "Kari Wahlgren"
+    "Marisa Tomei"
    ],
    "alt": "{actor}, who plays May Parker"
   },
@@ -75,8 +70,7 @@
    "kind": "portrait",
    "character": "okoye",
    "actors": [
-    "Danai Gurira",
-    "Kenna Ramsey"
+    "Danai Gurira"
    ],
    "alt": "{actor}, who plays Okoye"
   },
@@ -87,7 +81,8 @@
    "actors": [
     "Paul Bettany"
    ],
-   "alt": "{actor}, who voices J.A.R.V.I.S."
+   "alt": "{actor}, who voices J.A.R.V.I.S.",
+   "voice": true
   },
   {
    "id": "peggy-carter",
@@ -105,7 +100,8 @@
    "actors": [
     "Seth Green"
    ],
-   "alt": "{actor}, who voices Howard the Duck"
+   "alt": "{actor}, who voices Howard the Duck",
+   "voice": true
   },
   {
    "id": "kraglin-obfonteri",
@@ -121,9 +117,7 @@
    "kind": "portrait",
    "character": "peter-quill",
    "actors": [
-    "Chris Pratt",
-    "Brian T. Delaney",
-    "Mace Montgomery Miskel"
+    "Chris Pratt"
    ],
    "alt": "{actor}, who plays Peter Quill / Star-Lord"
   },
@@ -133,8 +127,7 @@
    "character": "rocket",
    "actors": [
     "Sean Gunn",
-    "Sean Gunn-->",
-    "Bradley Cooper"
+    "Sean Gunn-->"
    ],
    "alt": "{actor}, who plays Rocket"
   },
@@ -154,7 +147,8 @@
    "actors": [
     "Kerry Condon"
    ],
-   "alt": "{actor}, who voices F.R.I.D.A.Y."
+   "alt": "{actor}, who voices F.R.I.D.A.Y.",
+   "voice": true
   },
   {
    "id": "vision",
@@ -179,8 +173,7 @@
    "kind": "portrait",
    "character": "hope-van-dyne",
    "actors": [
-    "Evangeline Lilly",
-    "Madeleine McGraw"
+    "Evangeline Lilly"
    ],
    "alt": "{actor}, who plays Hope van Dyne"
   },
@@ -227,8 +220,7 @@
    "character": "frigga",
    "actors": [
     "Rene Russo",
-    "Chanique Greyling",
-    "Josette Eales"
+    "Chanique Greyling"
    ],
    "alt": "{actor}, who plays Frigga"
   },
@@ -291,8 +283,7 @@
    "kind": "portrait",
    "character": "shuri",
    "actors": [
-    "Letitia Wright",
-    "Ozioma Akagha"
+    "Letitia Wright"
    ],
    "alt": "{actor}, who plays Shuri"
   },
@@ -321,8 +312,7 @@
    "character": "fandral",
    "actors": [
     "Zachary Levi",
-    "Josh Dallas",
-    "Max Mittelman"
+    "Josh Dallas"
    ],
    "alt": "{actor}, who plays Fandral"
   },
@@ -331,8 +321,7 @@
    "kind": "portrait",
    "character": "hogun",
    "actors": [
-    "Tadanobu Asano",
-    "David Chen"
+    "Tadanobu Asano"
    ],
    "alt": "{actor}, who plays Hogun"
   },
@@ -350,8 +339,7 @@
    "kind": "portrait",
    "character": "odin",
    "actors": [
-    "Anthony Hopkins",
-    "Jeff Bergman"
+    "Anthony Hopkins"
    ],
    "alt": "{actor}, who plays Odin"
   },
@@ -360,8 +348,7 @@
    "kind": "portrait",
    "character": "volstagg",
    "actors": [
-    "Ray Stevenson",
-    "Fred Tatasciore"
+    "Ray Stevenson"
    ],
    "alt": "{actor}, who plays Volstagg"
   },
@@ -370,8 +357,7 @@
    "kind": "portrait",
    "character": "johann-schmidt",
    "actors": [
-    "Hugo Weaving",
-    "Ross Marquand"
+    "Hugo Weaving"
    ],
    "alt": "{actor}, who plays Johann Schmidt / Red Skull"
   },
@@ -391,8 +377,7 @@
    "kind": "portrait",
    "character": "carina",
    "actors": [
-    "Ophelia Lovibond",
-    "Kari Wahlgren"
+    "Ophelia Lovibond"
    ],
    "alt": "{actor}, who plays Carina"
   },
@@ -410,8 +395,7 @@
    "kind": "portrait",
    "character": "ultron",
    "actors": [
-    "James Spader",
-    "Ross Marquand"
+    "James Spader"
    ],
    "alt": "{actor}, who plays Ultron"
   },
@@ -469,8 +453,7 @@
    "kind": "portrait",
    "character": "grandmaster",
    "actors": [
-    "Jeff Goldblum",
-    "Matt Friend"
+    "Jeff Goldblum"
    ],
    "alt": "{actor}, who plays Grandmaster"
   },
@@ -561,8 +544,7 @@
    "kind": "portrait",
    "character": "melina-vostokoff",
    "actors": [
-    "Rachel Weisz",
-    "Kari Wahlgren"
+    "Rachel Weisz"
    ],
    "alt": "{actor}, who plays Melina Vostokoff / Black Widow"
   },
@@ -618,8 +600,7 @@
    "kind": "portrait",
    "character": "betty-ross",
    "actors": [
-    "Liv Tyler",
-    "Stephanie Panisello"
+    "Liv Tyler"
    ],
    "alt": "{actor}, who plays Betty Ross"
   },
@@ -757,8 +738,7 @@
    "kind": "portrait",
    "character": "helmut-zemo",
    "actors": [
-    "Daniel Brühl",
-    "Rama Vallury"
+    "Daniel Brühl"
    ],
    "alt": "{actor}, who plays Helmut Zemo"
   },
@@ -831,8 +811,7 @@
    "kind": "portrait",
    "character": "mac-gargan",
    "actors": [
-    "Michael Mando",
-    "Jonathan Medina"
+    "Michael Mando"
    ],
    "alt": "{actor}, who plays Mac Gargan"
   },
@@ -841,8 +820,7 @@
    "kind": "portrait",
    "character": "surtur",
    "actors": [
-    "Taika Waititi",
-    "Clancy Brown"
+    "Taika Waititi"
    ],
    "alt": "{actor}, who plays Surtur"
   },
@@ -860,8 +838,7 @@
    "kind": "portrait",
    "character": "nakia",
    "actors": [
-    "Lupita Nyong'o",
-    "Brittany Adebumola"
+    "Lupita Nyong'o"
    ],
    "alt": "{actor}, who plays Nakia"
   },
@@ -888,8 +865,7 @@
    "kind": "portrait",
    "character": "corvus-glaive",
    "actors": [
-    "Michael James Shaw",
-    "Fred Tatasciore"
+    "Michael James Shaw"
    ],
    "alt": "{actor}, who plays Corvus Glaive"
   },
@@ -994,8 +970,7 @@
    "kind": "portrait",
    "character": "xu-wenwu",
    "actors": [
-    "Tony Leung",
-    "Feodor Chin"
+    "Tony Leung Chiu-wai"
    ],
    "alt": "{actor}, who plays Xu Wenwu"
   },
@@ -1103,8 +1078,7 @@
    "kind": "portrait",
    "character": "laufey",
    "actors": [
-    "Colm Feore",
-    "Andrew Morgado"
+    "Colm Feore"
    ],
    "alt": "{actor}, who plays Laufey"
   },
@@ -1140,8 +1114,7 @@
    "kind": "portrait",
    "character": "malekith",
    "actors": [
-    "Christopher Eccleston",
-    "Steven French"
+    "Christopher Eccleston"
    ],
    "alt": "{actor}, who plays Malekith"
   },
@@ -1164,22 +1137,10 @@
    "alt": "{actor}, who plays Cameron Klein"
   },
   {
-   "id": "east-9th-street-cleveland",
-   "wiki": "East 9th Street (Cleveland)",
-   "subject": "East 9th Street, Cleveland, Ohio",
-   "caption": "Downtown Cleveland stood in for Manhattan in the Battle of New York in The Avengers.",
-   "films": [
-    "The Avengers"
-   ],
-   "factSource": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)#Filming",
-   "kind": "place",
-   "page": "/"
-  },
-  {
    "id": "albuquerque-new-mexico",
    "wiki": "Albuquerque, New Mexico",
    "subject": "Albuquerque, New Mexico",
-   "caption": "The Avengers was mostly shot at Albuquerque Studios here.",
+   "caption": "Principal photography on The Avengers began at Albuquerque Studios here in April 2011.",
    "films": [
     "The Avengers"
    ],
@@ -1191,7 +1152,7 @@
    "id": "wilmington-north-carolina",
    "wiki": "Wilmington, North Carolina",
    "subject": "Wilmington, North Carolina",
-   "caption": "Iron Man 3 was based at EUE/Screen Gems Studios here.",
+   "caption": "Iron Man 3 began filming here at EUE/Screen Gems Studios in May 2012.",
    "films": [
     "Iron Man 3"
    ],
@@ -1203,7 +1164,7 @@
    "id": "pinewood-atlanta-studios",
    "wiki": "Trilith Studios",
    "subject": "Trilith Studios (formerly Pinewood Atlanta Studios), Fayette County, Georgia",
-   "caption": "Avengers: Endgame was filmed here, back to back with Infinity War.",
+   "caption": "Avengers: Endgame was filmed here, then named Pinewood Atlanta Studios, from August 2017 to January 2018.",
    "films": [
     "Avengers: Endgame"
    ],
@@ -1215,14 +1176,25 @@
    "id": "point-dume-malibu",
    "wiki": "Point Dume",
    "subject": "Point Dume, Malibu, California",
-   "caption": "Tony Stark's cliffside house sits on this headland in the films; the house itself was a digital set.",
+   "caption": "Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.",
    "films": [
-    "Iron Man",
-    "Iron Man 3"
+    "Iron Man"
    ],
    "factSource": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)#Filming",
    "kind": "place",
    "page": "/"
+  },
+  {
+   "id": "cleveland-public-square",
+   "kind": "place",
+   "page": "/",
+   "wiki": "Public Square (Cleveland)",
+   "subject": "Public Square, Cleveland, Ohio",
+   "caption": "Part of the square was turned into Stuttgart, Germany, for Loki's scene in The Avengers; nearby East 9th Street stood in for New York's 42nd Street.",
+   "films": [
+    "The Avengers"
+   ],
+   "factSource": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)#Filming"
   }
  ]
 }

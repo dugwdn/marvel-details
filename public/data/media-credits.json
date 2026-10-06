@@ -346,7 +346,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:History_of_Violence_002_(7271227040).jpg",
    "changes": "cropped and resized",
-   "character": "thaddeus-thunderbolt-ross"
+   "character": "thaddeus-thunderbolt-ross",
+   "role": "plays"
   },
   {
    "id": "groot",
@@ -366,7 +367,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Terry_Notary_2018_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "groot"
+   "character": "groot",
+   "role": "plays"
   },
   {
    "id": "phil-coulson",
@@ -386,7 +388,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clark_Gregg_Photo_Op_GalaxyCon_Raleigh_2025.jpg",
    "changes": "cropped and resized",
-   "character": "phil-coulson"
+   "character": "phil-coulson",
+   "role": "plays"
   },
   {
    "id": "heimdall",
@@ -406,7 +409,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Idris_Elba_A_House_of_Dynamite-21_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "heimdall"
+   "character": "heimdall",
+   "role": "plays"
   },
   {
    "id": "gamora",
@@ -426,7 +430,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zoe_Salda%C3%B1a_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "gamora"
+   "character": "gamora",
+   "role": "plays"
   },
   {
    "id": "may-parker",
@@ -446,7 +451,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marisa_Tomei_Photo_Op_GalaxyCon_Raleigh_2024_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "may-parker"
+   "character": "may-parker",
+   "role": "plays"
   },
   {
    "id": "valkyrie",
@@ -466,7 +472,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TessaThompson-byPhilipRomano.jpg",
    "changes": "cropped and resized",
-   "character": "valkyrie"
+   "character": "valkyrie",
+   "role": "plays"
   },
   {
    "id": "okoye",
@@ -486,7 +493,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Danai_Gurira_2024_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "okoye"
+   "character": "okoye",
+   "role": "plays"
   },
   {
    "id": "j-a-r-v-i-s",
@@ -506,7 +514,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:PaulBettany-byPhilipRomano.jpg",
    "changes": "cropped and resized",
-   "character": "j-a-r-v-i-s"
+   "character": "j-a-r-v-i-s",
+   "role": "voices"
   },
   {
    "id": "peggy-carter",
@@ -526,7 +535,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hayley_Atwell_2025_(crop).jpg",
    "changes": "cropped and resized",
-   "character": "peggy-carter"
+   "character": "peggy-carter",
+   "role": "plays"
   },
   {
    "id": "howard-the-duck",
@@ -546,7 +556,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seth_Green_at_San_Diego_Comic_Con_2026-3_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "howard-the-duck"
+   "character": "howard-the-duck",
+   "role": "voices"
   },
   {
    "id": "kraglin-obfonteri",
@@ -566,7 +577,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sean_Gunn_at_Rose_City_Comic_Con_01.jpg",
    "changes": "cropped and resized",
-   "character": "kraglin-obfonteri"
+   "character": "kraglin-obfonteri",
+   "role": "plays"
   },
   {
    "id": "peter-quill",
@@ -586,7 +598,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Pratt_Jurassic_World_Fallen_Kingdom_Japan_Premiere_Red_Carpet_(3x4_cropped).jpg",
    "changes": "cropped and resized",
-   "character": "peter-quill"
+   "character": "peter-quill",
+   "role": "plays"
   },
   {
    "id": "rocket",
@@ -606,7 +619,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sean_Gunn_at_Rose_City_Comic_Con_01.jpg",
    "changes": "cropped and resized",
-   "character": "rocket"
+   "character": "rocket",
+   "role": "plays"
   },
   {
    "id": "yondu-udonta",
@@ -626,7 +640,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_Rooker_Photo_Op_GalaxyCon_Raleigh_2025.jpg",
    "changes": "cropped and resized",
-   "character": "yondu-udonta"
+   "character": "yondu-udonta",
+   "role": "plays"
   },
   {
    "id": "f-r-i-d-a-y",
@@ -646,7 +661,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kerry_Condon_during_an_interview_in_2022_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "f-r-i-d-a-y"
+   "character": "f-r-i-d-a-y",
+   "role": "voices"
   },
   {
    "id": "vision",
@@ -666,7 +682,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:PaulBettany-byPhilipRomano.jpg",
    "changes": "cropped and resized",
-   "character": "vision"
+   "character": "vision",
+   "role": "plays"
   },
   {
    "id": "hank-pym",
@@ -686,7 +703,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:59th_Karlovy_Vary_International_Film_Festival,_Michael_Douglas_09(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "hank-pym"
+   "character": "hank-pym",
+   "role": "plays"
   },
   {
    "id": "hope-van-dyne",
@@ -706,7 +724,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Evangeline_Lilly_(53390939662).jpg",
    "changes": "cropped and resized",
-   "character": "hope-van-dyne"
+   "character": "hope-van-dyne",
+   "role": "plays"
   },
   {
    "id": "ned-leeds",
@@ -726,7 +745,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacob_Batalon_(28035642754)_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "ned-leeds"
+   "character": "ned-leeds",
+   "role": "plays"
   },
   {
    "id": "korg",
@@ -746,7 +766,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taika_Waititi_at_Venice_Film_Festival_2026-4.jpg",
    "changes": "cropped and resized",
-   "character": "korg"
+   "character": "korg",
+   "role": "plays"
   },
   {
    "id": "matt-murdock",
@@ -766,7 +787,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charlie_Cox_at_MCM_Brum_26_04.jpg",
    "changes": "cropped and resized",
-   "character": "matt-murdock"
+   "character": "matt-murdock",
+   "role": "plays"
   },
   {
    "id": "erik-selvig",
@@ -786,7 +808,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stellan_Skarsg%C3%A5rd-9707_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "erik-selvig"
+   "character": "erik-selvig",
+   "role": "plays"
   },
   {
    "id": "frigga",
@@ -806,7 +829,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rene_Russo_1996.jpg",
    "changes": "cropped and resized",
-   "character": "frigga"
+   "character": "frigga",
+   "role": "plays"
   },
   {
    "id": "jane-foster",
@@ -826,7 +850,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NataliePortman.jpg",
    "changes": "cropped and resized",
-   "character": "jane-foster"
+   "character": "jane-foster",
+   "role": "plays"
   },
   {
    "id": "sif",
@@ -846,7 +871,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jaimie_Alexander,_London,_2013_(tone).jpg",
    "changes": "cropped and resized",
-   "character": "sif"
+   "character": "sif",
+   "role": "plays"
   },
   {
    "id": "brock-rumlow",
@@ -866,7 +892,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frank_Grillo_by_Gage_Skidmore_2.jpg",
    "changes": "cropped and resized",
-   "character": "brock-rumlow"
+   "character": "brock-rumlow",
+   "role": "plays"
   },
   {
    "id": "sharon-carter",
@@ -886,7 +913,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emily_VanCamp_at_Televerse_2026.jpg",
    "changes": "cropped and resized",
-   "character": "sharon-carter"
+   "character": "sharon-carter",
+   "role": "plays"
   },
   {
    "id": "ayo",
@@ -906,7 +934,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:MKr348324_Florence_Kasumba_(Bayern-Empfang,_Berlinale_2024).jpg",
    "changes": "cropped and resized",
-   "character": "ayo"
+   "character": "ayo",
+   "role": "plays"
   },
   {
    "id": "mantis",
@@ -926,7 +955,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pom_Klementieff_at_the_2025_Cannes_Film_Festival_02.jpg",
    "changes": "cropped and resized",
-   "character": "mantis"
+   "character": "mantis",
+   "role": "plays"
   },
   {
    "id": "shuri",
@@ -946,7 +976,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Letitia_Wright_at_2025_SXSW_London_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "shuri"
+   "character": "shuri",
+   "role": "plays"
   },
   {
    "id": "yelena-belova",
@@ -966,7 +997,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_Pugh_at_the_2024_Toronto_International_Film_Festival_13_(cropped_2_%E2%80%93_color_adjusted).jpg",
    "changes": "cropped and resized",
-   "character": "yelena-belova"
+   "character": "yelena-belova",
+   "role": "plays"
   },
   {
    "id": "roger-harrington",
@@ -986,7 +1018,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martin_Starr_2016_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "roger-harrington"
+   "character": "roger-harrington",
+   "role": "plays"
   },
   {
    "id": "fandral",
@@ -1006,7 +1039,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zachary_Levi_(54238375564).jpg",
    "changes": "cropped and resized",
-   "character": "fandral"
+   "character": "fandral",
+   "role": "plays"
   },
   {
    "id": "hogun",
@@ -1026,7 +1060,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asano_Tadanobu_from_%22Ravens%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2024_(54577962659).jpg",
    "changes": "cropped and resized",
-   "character": "hogun"
+   "character": "hogun",
+   "role": "plays"
   },
   {
    "id": "jasper-sitwell",
@@ -1046,7 +1081,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maximiliano_Hern%C3%A1ndez_2015.jpg",
    "changes": "cropped and resized",
-   "character": "jasper-sitwell"
+   "character": "jasper-sitwell",
+   "role": "plays"
   },
   {
    "id": "odin",
@@ -1066,7 +1102,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anthony_Hopkins_Red_Sea_Festival_2025_Portrait_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "odin"
+   "character": "odin",
+   "role": "plays"
   },
   {
    "id": "volstagg",
@@ -1086,7 +1123,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ray_Stevenson_March_18,_2014_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "volstagg"
+   "character": "volstagg",
+   "role": "plays"
   },
   {
    "id": "johann-schmidt",
@@ -1106,7 +1144,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hugo_Weaving_2014.jpg",
    "changes": "cropped and resized",
-   "character": "johann-schmidt"
+   "character": "johann-schmidt",
+   "role": "plays"
   },
   {
    "id": "rodriguez",
@@ -1126,27 +1165,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miguel_Ferrer_2015.jpg",
    "changes": "cropped and resized",
-   "character": "rodriguez"
-  },
-  {
-   "id": "carina",
-   "kind": "portrait",
-   "page": "/characters/all",
-   "file": "/img/actors/dir/carina.webp",
-   "width": 480,
-   "height": 640,
-   "srcset": {
-    "240": "/img/actors/dir/carina-240.webp",
-    "480": "/img/actors/dir/carina.webp"
-   },
-   "subject": "Kari Wahlgren",
-   "alt": "Kari Wahlgren, who plays Carina",
-   "author": "TaurusEmerald",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kari_Wahlgren_2025.jpg",
-   "changes": "cropped and resized",
-   "character": "carina"
+   "character": "rodriguez",
+   "role": "plays"
   },
   {
    "id": "taneleer-tivan",
@@ -1166,7 +1186,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Benicio_del_Toro-7624.jpg",
    "changes": "cropped and resized",
-   "character": "taneleer-tivan"
+   "character": "taneleer-tivan",
+   "role": "plays"
   },
   {
    "id": "ultron",
@@ -1186,7 +1207,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:James_Spader_by_Gage_Skidmore.jpg",
    "changes": "cropped and resized",
-   "character": "ultron"
+   "character": "ultron",
+   "role": "plays"
   },
   {
    "id": "cassie-lang",
@@ -1206,7 +1228,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AbbyRyderFortson.jpg",
    "changes": "cropped and resized",
-   "character": "cassie-lang"
+   "character": "cassie-lang",
+   "role": "plays"
   },
   {
    "id": "janet-van-dyne",
@@ -1226,7 +1249,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michelle_Pfeiffer_Ant-Man_%26_The_Wasp_premiere.jpg",
    "changes": "cropped and resized",
-   "character": "janet-van-dyne"
+   "character": "janet-van-dyne",
+   "role": "plays"
   },
   {
    "id": "everett-k-ross",
@@ -1246,7 +1270,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martin_Freeman-5341.jpg",
    "changes": "cropped and resized",
-   "character": "everett-k-ross"
+   "character": "everett-k-ross",
+   "role": "plays"
   },
   {
    "id": "tchaka",
@@ -1266,7 +1291,8 @@
    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dr_John_Kani.jpg",
    "changes": "cropped and resized",
-   "character": "tchaka"
+   "character": "tchaka",
+   "role": "plays"
   },
   {
    "id": "michelle-mj-jones-watson",
@@ -1286,7 +1312,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zendaya-byPhilipRomano.jpg",
    "changes": "cropped and resized",
-   "character": "michelle-mj-jones-watson"
+   "character": "michelle-mj-jones-watson",
+   "role": "plays"
   },
   {
    "id": "grandmaster",
@@ -1306,7 +1333,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeff_Goldblum_by_Gage_Skidmore_3.jpg",
    "changes": "cropped and resized",
-   "character": "grandmaster"
+   "character": "grandmaster",
+   "role": "plays"
   },
   {
    "id": "topaz",
@@ -1326,7 +1354,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rachel_House_by_Gage_Skidmore.jpg",
    "changes": "cropped and resized",
-   "character": "topaz"
+   "character": "topaz",
+   "role": "plays"
   },
   {
    "id": "mbaku",
@@ -1346,7 +1375,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winston_duke_(49562238976).jpg",
    "changes": "cropped and resized",
-   "character": "mbaku"
+   "character": "mbaku",
+   "role": "plays"
   },
   {
    "id": "ramonda",
@@ -1366,7 +1396,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angela_Basset_at_the_2025_Cannes_Film_Festival_04_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "ramonda"
+   "character": "ramonda",
+   "role": "plays"
   },
   {
    "id": "jimmy-woo",
@@ -1386,7 +1417,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Randall_Park_-_Girl_Group_-_TIFF_2026.jpg",
    "changes": "cropped and resized",
-   "character": "jimmy-woo"
+   "character": "jimmy-woo",
+   "role": "plays"
   },
   {
    "id": "monica-rambeau",
@@ -1406,7 +1438,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TeyonahParris-byPhilipRomano.jpg",
    "changes": "cropped and resized",
-   "character": "monica-rambeau"
+   "character": "monica-rambeau",
+   "role": "plays"
   },
   {
    "id": "john-walker",
@@ -1426,7 +1459,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wyatt_Russell_at_Comic_Con_Connections_26_19_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "john-walker"
+   "character": "john-walker",
+   "role": "plays"
   },
   {
    "id": "valentina-allegra-de-fontaine",
@@ -1446,7 +1480,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Julia_Louis-Dreyfus_2019_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "valentina-allegra-de-fontaine"
+   "character": "valentina-allegra-de-fontaine",
+   "role": "plays"
   },
   {
    "id": "alexei-shostakov",
@@ -1466,7 +1501,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:David_Harbour_2025.jpg",
    "changes": "cropped and resized",
-   "character": "alexei-shostakov"
+   "character": "alexei-shostakov",
+   "role": "plays"
   },
   {
    "id": "melina-vostokoff",
@@ -1486,7 +1522,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rachel_Weisz-62940_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "melina-vostokoff"
+   "character": "melina-vostokoff",
+   "role": "plays"
   },
   {
    "id": "peggy-carter-2",
@@ -1506,7 +1543,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hayley_Atwell_2025_(crop).jpg",
    "changes": "cropped and resized",
-   "character": "peggy-carter-2"
+   "character": "peggy-carter-2",
+   "role": "plays"
   },
   {
    "id": "kate-bishop",
@@ -1526,7 +1564,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hailee_Steinfeld_by_Gage_Skidmore.jpg",
    "changes": "cropped and resized",
-   "character": "kate-bishop"
+   "character": "kate-bishop",
+   "role": "plays"
   },
   {
    "id": "wilson-fisk",
@@ -1546,7 +1585,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vincent_D'Onofrio_GalaxyCon_Nashville_052026-4.jpg",
    "changes": "cropped and resized",
-   "character": "wilson-fisk"
+   "character": "wilson-fisk",
+   "role": "plays"
   },
   {
    "id": "riri-williams",
@@ -1566,7 +1606,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DominiqueThorn-byPhilipRomano.jpg",
    "changes": "cropped and resized",
-   "character": "riri-williams"
+   "character": "riri-williams",
+   "role": "plays"
   },
   {
    "id": "christine-everhart",
@@ -1586,7 +1627,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leslie_Bibb_83rd_Venice_Film_Festival_2.jpg",
    "changes": "cropped and resized",
-   "character": "christine-everhart"
+   "character": "christine-everhart",
+   "role": "plays"
   },
   {
    "id": "betty-ross",
@@ -1606,7 +1648,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liv_Tyler_(2016).jpg",
    "changes": "cropped and resized",
-   "character": "betty-ross"
+   "character": "betty-ross",
+   "role": "plays"
   },
   {
    "id": "emil-blonsky",
@@ -1626,7 +1669,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tim_Roth_by_Gage_Skidmore_2.jpg",
    "changes": "cropped and resized",
-   "character": "emil-blonsky"
+   "character": "emil-blonsky",
+   "role": "plays"
   },
   {
    "id": "abraham-erskine",
@@ -1646,7 +1690,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:ConclaveBFILFF101024_(9_of_44)_(54062519935)_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "abraham-erskine"
+   "character": "abraham-erskine",
+   "role": "plays"
   },
   {
    "id": "arnim-zola",
@@ -1666,7 +1711,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toby_Jones_-_EmpireOfLightBFI121022_(30_of_33)_(52448062684).jpg",
    "changes": "cropped and resized",
-   "character": "arnim-zola"
+   "character": "arnim-zola",
+   "role": "plays"
   },
   {
    "id": "trevor-slattery",
@@ -1686,7 +1732,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ben_Kingsley_by_Gage_Skidmore.jpg",
    "changes": "cropped and resized",
-   "character": "trevor-slattery"
+   "character": "trevor-slattery",
+   "role": "plays"
   },
   {
    "id": "pietro-maximoff",
@@ -1706,7 +1753,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aaron_Taylor-Johnson_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "pietro-maximoff"
+   "character": "pietro-maximoff",
+   "role": "plays"
   },
   {
    "id": "cosmo-the-spacedog",
@@ -1726,7 +1774,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maria_Bakalova_by_Gage_Skidmore.jpg",
    "changes": "cropped and resized",
-   "character": "cosmo-the-spacedog"
+   "character": "cosmo-the-spacedog",
+   "role": "plays"
   },
   {
    "id": "jason-quill",
@@ -1746,7 +1795,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gregg_Henry_2016.jpg",
    "changes": "cropped and resized",
-   "character": "jason-quill"
+   "character": "jason-quill",
+   "role": "plays"
   },
   {
    "id": "korath",
@@ -1766,7 +1816,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Djimon_Hounsou_by_Gage_Skidmore_2.jpg",
    "changes": "cropped and resized",
-   "character": "korath"
+   "character": "korath",
+   "role": "plays"
   },
   {
    "id": "laura-barton",
@@ -1786,7 +1837,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_by_Southwest_2019_7_(32449999697)_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "laura-barton"
+   "character": "laura-barton",
+   "role": "plays"
   },
   {
    "id": "ulysses-klaue",
@@ -1806,7 +1858,8 @@
    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andy_Serkis_at_MEGACON_Orlando_2025.png",
    "changes": "cropped and resized",
-   "character": "ulysses-klaue"
+   "character": "ulysses-klaue",
+   "role": "plays"
   },
   {
    "id": "kurt",
@@ -1826,7 +1879,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:David_Dastmalchian_-_Creep_I.E._Con_2026.jpg",
    "changes": "cropped and resized",
-   "character": "kurt"
+   "character": "kurt",
+   "role": "plays"
   },
   {
    "id": "helmut-zemo",
@@ -1846,7 +1900,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:MJK_68238_Daniel_Br%C3%BChl_(Berlinale_2020).jpg",
    "changes": "cropped and resized",
-   "character": "helmut-zemo"
+   "character": "helmut-zemo",
+   "role": "plays"
   },
   {
    "id": "ancient-one",
@@ -1866,7 +1921,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tilda_Swinton_at_Cannes_Film_Festival_02_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "ancient-one"
+   "character": "ancient-one",
+   "role": "plays"
   },
   {
    "id": "christine-palmer",
@@ -1886,7 +1942,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rachel_McAdams_-_Walk_of_Fame.jpg",
    "changes": "cropped and resized",
-   "character": "christine-palmer"
+   "character": "christine-palmer",
+   "role": "plays"
   },
   {
    "id": "ego",
@@ -1906,7 +1963,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kurt_Russell_by_Gage_Skidmore_2.jpg",
    "changes": "cropped and resized",
-   "character": "ego"
+   "character": "ego",
+   "role": "plays"
   },
   {
    "id": "betty-brant",
@@ -1926,7 +1984,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angourie_Rice_-_Finding_Emily.jpg",
    "changes": "cropped and resized",
-   "character": "betty-brant"
+   "character": "betty-brant",
+   "role": "plays"
   },
   {
    "id": "cindy",
@@ -1946,7 +2005,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tiffany_Espensen_on_Red_Carpet_Report_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "cindy"
+   "character": "cindy",
+   "role": "plays"
   },
   {
    "id": "eugene-flash-thompson",
@@ -1966,7 +2026,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tony_Revolori_by_Gage_Skidmore.jpg",
    "changes": "cropped and resized",
-   "character": "eugene-flash-thompson"
+   "character": "eugene-flash-thompson",
+   "role": "plays"
   },
   {
    "id": "mac-gargan",
@@ -1986,7 +2047,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_Mando_at_the_2018_San_Diego_Comic-Con.jpg",
    "changes": "cropped and resized",
-   "character": "mac-gargan"
+   "character": "mac-gargan",
+   "role": "plays"
   },
   {
    "id": "surtur",
@@ -2006,7 +2068,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taika_Waititi_at_Venice_Film_Festival_2026-4.jpg",
    "changes": "cropped and resized",
-   "character": "surtur"
+   "character": "surtur",
+   "role": "plays"
   },
   {
    "id": "njadaka",
@@ -2026,7 +2089,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_B_Jordan_-_Sinners_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "njadaka"
+   "character": "njadaka",
+   "role": "plays"
   },
   {
    "id": "nakia",
@@ -2046,27 +2110,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:LupitaNyongo-byPhilipRomano3.jpg",
    "changes": "cropped and resized",
-   "character": "nakia"
-  },
-  {
-   "id": "corvus-glaive",
-   "kind": "portrait",
-   "page": "/characters/all",
-   "file": "/img/actors/dir/corvus-glaive.webp",
-   "width": 480,
-   "height": 640,
-   "srcset": {
-    "240": "/img/actors/dir/corvus-glaive-240.webp",
-    "480": "/img/actors/dir/corvus-glaive.webp"
-   },
-   "subject": "Fred Tatasciore",
-   "alt": "Fred Tatasciore, who plays Corvus Glaive",
-   "author": "Gage Skidmore",
-   "license": "CC BY-SA 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fred_Tatasciore_in_2025_(cropped).jpg",
-   "changes": "cropped and resized",
-   "character": "corvus-glaive"
+   "character": "nakia",
+   "role": "plays"
   },
   {
    "id": "proxima-midnight",
@@ -2086,7 +2131,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrie_Coon_portrait_at_TIFF_2026.jpg",
    "changes": "cropped and resized",
-   "character": "proxima-midnight"
+   "character": "proxima-midnight",
+   "role": "plays"
   },
   {
    "id": "bill-foster",
@@ -2106,7 +2152,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laurence_Fishburne_at_53rd_Saturn_Awards_2026.jpg",
    "changes": "cropped and resized",
-   "character": "bill-foster"
+   "character": "bill-foster",
+   "role": "plays"
   },
   {
    "id": "maria-rambeau",
@@ -2126,7 +2173,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lashana_Lynch_interview_2019.jpg",
    "changes": "cropped and resized",
-   "character": "maria-rambeau"
+   "character": "maria-rambeau",
+   "role": "plays"
   },
   {
    "id": "soren",
@@ -2146,7 +2194,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sharon_Blynn_2019_by_Glenn_Francis.jpg",
    "changes": "cropped and resized",
-   "character": "soren"
+   "character": "soren",
+   "role": "plays"
   },
   {
    "id": "talos",
@@ -2166,7 +2215,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ben_Mendelsohn_by_Gage_Skidmore.jpg",
    "changes": "cropped and resized",
-   "character": "talos"
+   "character": "talos",
+   "role": "plays"
   },
   {
    "id": "agatha-harkness",
@@ -2186,7 +2236,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kathryn_Hahn_Agatha_All_Along_Premiere_01.png",
    "changes": "cropped and resized",
-   "character": "agatha-harkness"
+   "character": "agatha-harkness",
+   "role": "plays"
   },
   {
    "id": "billy-maximoff",
@@ -2206,7 +2257,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Julian_Hilliard.png",
    "changes": "cropped and resized",
-   "character": "billy-maximoff"
+   "character": "billy-maximoff",
+   "role": "plays"
   },
   {
    "id": "hunter-b-15",
@@ -2226,7 +2278,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wunmi_Mosaku_-_Sinners_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "hunter-b-15"
+   "character": "hunter-b-15",
+   "role": "plays"
   },
   {
    "id": "mobius-m-mobius",
@@ -2246,7 +2299,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Owen_Wilson_Cannes_2011.jpg",
    "changes": "cropped and resized",
-   "character": "mobius-m-mobius"
+   "character": "mobius-m-mobius",
+   "role": "plays"
   },
   {
    "id": "xu-shang-chi",
@@ -2266,27 +2320,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Simu_Liu_by_Gage_Skidmore_2.jpg",
    "changes": "cropped and resized",
-   "character": "xu-shang-chi"
-  },
-  {
-   "id": "xu-wenwu",
-   "kind": "portrait",
-   "page": "/characters/all",
-   "file": "/img/actors/dir/xu-wenwu.webp",
-   "width": 480,
-   "height": 641,
-   "srcset": {
-    "240": "/img/actors/dir/xu-wenwu-240.webp",
-    "480": "/img/actors/dir/xu-wenwu.webp"
-   },
-   "subject": "Feodor Chin",
-   "alt": "Feodor Chin, who plays Xu Wenwu",
-   "author": "File:Comic Con Revolution 2017 - Overwatch Panel (34648444846).jpg: tofuprod derivative work: Pbroks13",
-   "license": "CC BY-SA 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feodor_Chin_at_Comic_Con_Revolution_2017.jpg",
-   "changes": "cropped and resized",
-   "character": "xu-wenwu"
+   "character": "xu-shang-chi",
+   "role": "plays"
   },
   {
    "id": "jack-duquesne",
@@ -2306,7 +2341,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tony_Dalton_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "jack-duquesne"
+   "character": "jack-duquesne",
+   "role": "plays"
   },
   {
    "id": "p-cleary",
@@ -2326,7 +2362,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arian_Moayed_2024_Emmys_03_(cropped).png",
    "changes": "cropped and resized",
-   "character": "p-cleary"
+   "character": "p-cleary",
+   "role": "plays"
   },
   {
    "id": "kamala-khan",
@@ -2346,7 +2383,8 @@
    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iman_Vellani_2022_(2).png",
    "changes": "cropped and resized",
-   "character": "kamala-khan"
+   "character": "kamala-khan",
+   "role": "plays"
   },
   {
    "id": "muneeba-khan",
@@ -2366,7 +2404,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shroff_Sacred_Heart_University_Film_TV_Master_Program_November_2018.jpg",
    "changes": "cropped and resized",
-   "character": "muneeba-khan"
+   "character": "muneeba-khan",
+   "role": "plays"
   },
   {
    "id": "yusuf-khan",
@@ -2386,7 +2425,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mohan_Kapoor.jpg",
    "changes": "cropped and resized",
-   "character": "yusuf-khan"
+   "character": "yusuf-khan",
+   "role": "plays"
   },
   {
    "id": "sheila-rivera",
@@ -2406,7 +2446,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zabryna_Guevara_at_NY_PaleyFest_2014_for_Gotham.jpg",
    "changes": "cropped and resized",
-   "character": "sheila-rivera"
+   "character": "sheila-rivera",
+   "role": "plays"
   },
   {
    "id": "ho-yinsen",
@@ -2426,7 +2467,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shaun_Toub_2011_cropped.jpg",
    "changes": "cropped and resized",
-   "character": "ho-yinsen"
+   "character": "ho-yinsen",
+   "role": "plays"
   },
   {
    "id": "william-ginter-riva",
@@ -2446,7 +2488,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peter_Billingsley_at_ATX_TV_Festival_2014_Sullivan_and_Son.jpg",
    "changes": "cropped and resized",
-   "character": "william-ginter-riva"
+   "character": "william-ginter-riva",
+   "role": "plays"
   },
   {
    "id": "samuel-sterns",
@@ -2466,7 +2509,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tim_Blake_Nelson_2016.jpg",
    "changes": "cropped and resized",
-   "character": "samuel-sterns"
+   "character": "samuel-sterns",
+   "role": "plays"
   },
   {
    "id": "justin-hammer",
@@ -2486,7 +2530,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sam_Rockwell-3953.jpg",
    "changes": "cropped and resized",
-   "character": "justin-hammer"
+   "character": "justin-hammer",
+   "role": "plays"
   },
   {
    "id": "stern",
@@ -2506,7 +2551,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Garry_Shandling_at_the_39th_Emmy_Awards_cropped.jpg",
    "changes": "cropped and resized",
-   "character": "stern"
+   "character": "stern",
+   "role": "plays"
   },
   {
    "id": "laufey",
@@ -2526,7 +2572,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colm_Feore_2013_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "laufey"
+   "character": "laufey",
+   "role": "plays"
   },
   {
    "id": "timothy-dum-dum",
@@ -2546,7 +2593,8 @@
    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neal_McDonough_September_2026_(cropped).jpg",
    "changes": "cropped and resized",
-   "character": "timothy-dum-dum"
+   "character": "timothy-dum-dum",
+   "role": "plays"
   },
   {
    "id": "the-other",
@@ -2566,7 +2614,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alexis_Denisof_at_San_Diego_Comic_Con_2026.jpg",
    "changes": "cropped and resized",
-   "character": "the-other"
+   "character": "the-other",
+   "role": "plays"
   },
   {
    "id": "malekith",
@@ -2586,7 +2635,8 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Christopher_Eccleston_Photo_Op_GalaxyCon_Louisville_2019.jpg",
    "changes": "cropped and resized",
-   "character": "malekith"
+   "character": "malekith",
+   "role": "plays"
   },
   {
    "id": "alexander-pierce",
@@ -2606,7 +2656,8 @@
    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tell_Them_Willie_Boy_Is_Here_%E2%80%93_Robert_Redford_photo.jpg",
    "changes": "cropped and resized",
-   "character": "alexander-pierce"
+   "character": "alexander-pierce",
+   "role": "plays"
   },
   {
    "id": "albuquerque-new-mexico",
@@ -2626,7 +2677,7 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albuquerque,_New_Mexico_skyline.jpg",
    "changes": "cropped and resized",
-   "caption": "The Avengers was mostly shot at Albuquerque Studios here.",
+   "caption": "Principal photography on The Avengers began at Albuquerque Studios here in April 2011.",
    "films": [
     "The Avengers"
    ],
@@ -2650,7 +2701,7 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:BRIDGE_2024-05-07_Cape_Fear_Memorial_Bridge_Press_Conf-831-155_(cropped).jpg",
    "changes": "cropped and resized",
-   "caption": "Iron Man 3 was based at EUE/Screen Gems Studios here.",
+   "caption": "Iron Man 3 began filming here at EUE/Screen Gems Studios in May 2012.",
    "films": [
     "Iron Man 3"
    ],
@@ -2674,7 +2725,7 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TrilithWatertower.jpg",
    "changes": "cropped and resized",
-   "caption": "Avengers: Endgame was filmed here, back to back with Infinity War.",
+   "caption": "Avengers: Endgame was filmed here, then named Pinewood Atlanta Studios, from August 2017 to January 2018.",
    "films": [
     "Avengers: Endgame"
    ],
@@ -2698,10 +2749,9 @@
    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Point_Dume_Climbing.JPG",
    "changes": "cropped and resized",
-   "caption": "Tony Stark's cliffside house sits on this headland in the films; the house itself was a digital set.",
+   "caption": "Exterior shots of Tony Stark's home in Iron Man were added digitally to footage of Point Dume.",
    "films": [
-    "Iron Man",
-    "Iron Man 3"
+    "Iron Man"
    ],
    "factSource": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)#Filming"
   }
