@@ -327,6 +327,2383 @@
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kat_Dennings_-_The_40-Year-Old-Virgin.jpg"
+  },
+  {
+   "id": "thaddeus-thunderbolt-ross",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/thaddeus-thunderbolt-ross.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/thaddeus-thunderbolt-ross-240.webp",
+    "480": "/img/actors/dir/thaddeus-thunderbolt-ross.webp"
+   },
+   "subject": "William Hurt",
+   "alt": "William Hurt, who plays Thaddeus \"Thunderbolt\" Ross",
+   "author": "GabboT",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:History_of_Violence_002_(7271227040).jpg",
+   "changes": "cropped and resized",
+   "character": "thaddeus-thunderbolt-ross"
+  },
+  {
+   "id": "groot",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/groot.webp",
+   "width": 397,
+   "height": 530,
+   "srcset": {
+    "240": "/img/actors/dir/groot-240.webp",
+    "397": "/img/actors/dir/groot.webp"
+   },
+   "subject": "Terry Notary",
+   "alt": "Terry Notary, who plays Groot",
+   "author": "Supercon Conventions",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Terry_Notary_2018_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "groot"
+  },
+  {
+   "id": "phil-coulson",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/phil-coulson.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/phil-coulson-240.webp",
+    "480": "/img/actors/dir/phil-coulson.webp"
+   },
+   "subject": "Clark Gregg",
+   "alt": "Clark Gregg, who plays Phil Coulson",
+   "author": "Super Festivals",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clark_Gregg_Photo_Op_GalaxyCon_Raleigh_2025.jpg",
+   "changes": "cropped and resized",
+   "character": "phil-coulson"
+  },
+  {
+   "id": "heimdall",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/heimdall.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/heimdall-240.webp",
+    "480": "/img/actors/dir/heimdall.webp"
+   },
+   "subject": "Idris Elba",
+   "alt": "Idris Elba, who plays Heimdall",
+   "author": "Bryan Berlin",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Idris_Elba_A_House_of_Dynamite-21_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "heimdall"
+  },
+  {
+   "id": "gamora",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/gamora.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/gamora-240.webp",
+    "480": "/img/actors/dir/gamora.webp"
+   },
+   "subject": "Zoe Saldaña",
+   "alt": "Zoe Saldaña, who plays Gamora",
+   "author": "Kevin Payravi",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zoe_Salda%C3%B1a_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "gamora"
+  },
+  {
+   "id": "may-parker",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/may-parker.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/may-parker-240.webp",
+    "480": "/img/actors/dir/may-parker.webp"
+   },
+   "subject": "Marisa Tomei",
+   "alt": "Marisa Tomei, who plays May Parker",
+   "author": "Super Festivals from Ft. Lauderdale, USA",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marisa_Tomei_Photo_Op_GalaxyCon_Raleigh_2024_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "may-parker"
+  },
+  {
+   "id": "valkyrie",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/valkyrie.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/valkyrie-240.webp",
+    "480": "/img/actors/dir/valkyrie.webp"
+   },
+   "subject": "Tessa Thompson",
+   "alt": "Tessa Thompson, who plays Valkyrie",
+   "author": "PhilipRomanoPhoto",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:TessaThompson-byPhilipRomano.jpg",
+   "changes": "cropped and resized",
+   "character": "valkyrie"
+  },
+  {
+   "id": "okoye",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/okoye.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/okoye-240.webp",
+    "480": "/img/actors/dir/okoye.webp"
+   },
+   "subject": "Danai Gurira",
+   "alt": "Danai Gurira, who plays Okoye",
+   "author": "Gage Skidmore",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Danai_Gurira_2024_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "okoye"
+  },
+  {
+   "id": "j-a-r-v-i-s",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/j-a-r-v-i-s.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/j-a-r-v-i-s-240.webp",
+    "480": "/img/actors/dir/j-a-r-v-i-s.webp"
+   },
+   "subject": "Paul Bettany",
+   "alt": "Paul Bettany, who voices J.A.R.V.I.S.",
+   "author": "PhilipRomano",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:PaulBettany-byPhilipRomano.jpg",
+   "changes": "cropped and resized",
+   "character": "j-a-r-v-i-s"
+  },
+  {
+   "id": "peggy-carter",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/peggy-carter.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/peggy-carter-240.webp",
+    "480": "/img/actors/dir/peggy-carter.webp"
+   },
+   "subject": "Hayley Atwell",
+   "alt": "Hayley Atwell, who plays Peggy Carter",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hayley_Atwell_2025_(crop).jpg",
+   "changes": "cropped and resized",
+   "character": "peggy-carter"
+  },
+  {
+   "id": "howard-the-duck",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/howard-the-duck.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/howard-the-duck-240.webp",
+    "480": "/img/actors/dir/howard-the-duck.webp"
+   },
+   "subject": "Seth Green",
+   "alt": "Seth Green, who voices Howard the Duck",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seth_Green_at_San_Diego_Comic_Con_2026-3_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "howard-the-duck"
+  },
+  {
+   "id": "kraglin-obfonteri",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/kraglin-obfonteri.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/kraglin-obfonteri-240.webp",
+    "480": "/img/actors/dir/kraglin-obfonteri.webp"
+   },
+   "subject": "Sean Gunn",
+   "alt": "Sean Gunn, who plays Kraglin Obfonteri",
+   "author": "Joe Peacock",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sean_Gunn_at_Rose_City_Comic_Con_01.jpg",
+   "changes": "cropped and resized",
+   "character": "kraglin-obfonteri"
+  },
+  {
+   "id": "peter-quill",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/peter-quill.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/peter-quill-240.webp",
+    "480": "/img/actors/dir/peter-quill.webp"
+   },
+   "subject": "Chris Pratt",
+   "alt": "Chris Pratt, who plays Peter Quill / Star-Lord",
+   "author": "Dick Thomas Johnson from Tokyo, Japan",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Pratt_Jurassic_World_Fallen_Kingdom_Japan_Premiere_Red_Carpet_(3x4_cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "peter-quill"
+  },
+  {
+   "id": "rocket",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/rocket.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/rocket-240.webp",
+    "480": "/img/actors/dir/rocket.webp"
+   },
+   "subject": "Sean Gunn",
+   "alt": "Sean Gunn, who plays Rocket",
+   "author": "Joe Peacock",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sean_Gunn_at_Rose_City_Comic_Con_01.jpg",
+   "changes": "cropped and resized",
+   "character": "rocket"
+  },
+  {
+   "id": "yondu-udonta",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/yondu-udonta.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/yondu-udonta-240.webp",
+    "480": "/img/actors/dir/yondu-udonta.webp"
+   },
+   "subject": "Michael Rooker",
+   "alt": "Michael Rooker, who plays Yondu Udonta",
+   "author": "Super Festivals",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_Rooker_Photo_Op_GalaxyCon_Raleigh_2025.jpg",
+   "changes": "cropped and resized",
+   "character": "yondu-udonta"
+  },
+  {
+   "id": "f-r-i-d-a-y",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/f-r-i-d-a-y.webp",
+   "width": 344,
+   "height": 458,
+   "srcset": {
+    "240": "/img/actors/dir/f-r-i-d-a-y-240.webp",
+    "344": "/img/actors/dir/f-r-i-d-a-y.webp"
+   },
+   "subject": "Kerry Condon",
+   "alt": "Kerry Condon, who voices F.R.I.D.A.Y.",
+   "author": "Howard M. Shum",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kerry_Condon_during_an_interview_in_2022_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "f-r-i-d-a-y"
+  },
+  {
+   "id": "vision",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/vision.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/vision-240.webp",
+    "480": "/img/actors/dir/vision.webp"
+   },
+   "subject": "Paul Bettany",
+   "alt": "Paul Bettany, who plays Vision",
+   "author": "PhilipRomano",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:PaulBettany-byPhilipRomano.jpg",
+   "changes": "cropped and resized",
+   "character": "vision"
+  },
+  {
+   "id": "hank-pym",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/hank-pym.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/hank-pym-240.webp",
+    "480": "/img/actors/dir/hank-pym.webp"
+   },
+   "subject": "Michael Douglas",
+   "alt": "Michael Douglas, who plays Hank Pym / Ant-Man",
+   "author": "User:Janbery",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:59th_Karlovy_Vary_International_Film_Festival,_Michael_Douglas_09(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "hank-pym"
+  },
+  {
+   "id": "hope-van-dyne",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/hope-van-dyne.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/hope-van-dyne-240.webp",
+    "480": "/img/actors/dir/hope-van-dyne.webp"
+   },
+   "subject": "Evangeline Lilly",
+   "alt": "Evangeline Lilly, who plays Hope van Dyne",
+   "author": "Super Festivals from Ft. Lauderdale, USA",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Evangeline_Lilly_(53390939662).jpg",
+   "changes": "cropped and resized",
+   "character": "hope-van-dyne"
+  },
+  {
+   "id": "ned-leeds",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ned-leeds.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/ned-leeds-240.webp",
+    "480": "/img/actors/dir/ned-leeds.webp"
+   },
+   "subject": "Jacob Batalon",
+   "alt": "Jacob Batalon, who plays Ned Leeds",
+   "author": "Gage Skidmore from Peoria, AZ, United States of America",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacob_Batalon_(28035642754)_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "ned-leeds"
+  },
+  {
+   "id": "korg",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/korg.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/korg-240.webp",
+    "480": "/img/actors/dir/korg.webp"
+   },
+   "subject": "Taika Waititi",
+   "alt": "Taika Waititi, who plays Korg",
+   "author": "CaseyJNewell",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taika_Waititi_at_Venice_Film_Festival_2026-4.jpg",
+   "changes": "cropped and resized",
+   "character": "korg"
+  },
+  {
+   "id": "matt-murdock",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/matt-murdock.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/matt-murdock-240.webp",
+    "480": "/img/actors/dir/matt-murdock.webp"
+   },
+   "subject": "Charlie Cox",
+   "alt": "Charlie Cox, who plays Matt Murdock",
+   "author": "JaceMerlyn",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charlie_Cox_at_MCM_Brum_26_04.jpg",
+   "changes": "cropped and resized",
+   "character": "matt-murdock"
+  },
+  {
+   "id": "erik-selvig",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/erik-selvig.webp",
+   "width": 480,
+   "height": 641,
+   "srcset": {
+    "240": "/img/actors/dir/erik-selvig-240.webp",
+    "480": "/img/actors/dir/erik-selvig.webp"
+   },
+   "subject": "Stellan Skarsgård",
+   "alt": "Stellan Skarsgård, who plays Erik Selvig",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stellan_Skarsg%C3%A5rd-9707_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "erik-selvig"
+  },
+  {
+   "id": "frigga",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/frigga.webp",
+   "width": 480,
+   "height": 641,
+   "srcset": {
+    "240": "/img/actors/dir/frigga-240.webp",
+    "480": "/img/actors/dir/frigga.webp"
+   },
+   "subject": "Rene Russo",
+   "alt": "Rene Russo, who plays Frigga",
+   "author": "John Mathew Smith & www.celebrity-photos.com from Laurel Maryland, USA",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rene_Russo_1996.jpg",
+   "changes": "cropped and resized",
+   "character": "frigga"
+  },
+  {
+   "id": "jane-foster",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/jane-foster.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/jane-foster-240.webp",
+    "480": "/img/actors/dir/jane-foster.webp"
+   },
+   "subject": "Natalie Portman",
+   "alt": "Natalie Portman, who plays Jane Foster",
+   "author": "Colleen Sturtevant",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:NataliePortman.jpg",
+   "changes": "cropped and resized",
+   "character": "jane-foster"
+  },
+  {
+   "id": "sif",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/sif.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/sif-240.webp",
+    "480": "/img/actors/dir/sif.webp"
+   },
+   "subject": "Jaimie Alexander",
+   "alt": "Jaimie Alexander, who plays Sif",
+   "author": "Richard Goldschmidt, www.piqtured.com Derivative by Keraunoscopia",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jaimie_Alexander,_London,_2013_(tone).jpg",
+   "changes": "cropped and resized",
+   "character": "sif"
+  },
+  {
+   "id": "brock-rumlow",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/brock-rumlow.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/brock-rumlow-240.webp",
+    "480": "/img/actors/dir/brock-rumlow.webp"
+   },
+   "subject": "Frank Grillo",
+   "alt": "Frank Grillo, who plays Brock Rumlow",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frank_Grillo_by_Gage_Skidmore_2.jpg",
+   "changes": "cropped and resized",
+   "character": "brock-rumlow"
+  },
+  {
+   "id": "sharon-carter",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/sharon-carter.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/sharon-carter-240.webp",
+    "480": "/img/actors/dir/sharon-carter.webp"
+   },
+   "subject": "Emily VanCamp",
+   "alt": "Emily VanCamp, who plays Sharon Carter / Agent 13",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emily_VanCamp_at_Televerse_2026.jpg",
+   "changes": "cropped and resized",
+   "character": "sharon-carter"
+  },
+  {
+   "id": "ayo",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ayo.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/ayo-240.webp",
+    "480": "/img/actors/dir/ayo.webp"
+   },
+   "subject": "Florence Kasumba",
+   "alt": "Florence Kasumba, who plays Ayo",
+   "author": "Martin Kraft",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:MKr348324_Florence_Kasumba_(Bayern-Empfang,_Berlinale_2024).jpg",
+   "changes": "cropped and resized",
+   "character": "ayo"
+  },
+  {
+   "id": "mantis",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/mantis.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/mantis-240.webp",
+    "480": "/img/actors/dir/mantis.webp"
+   },
+   "subject": "Pom Klementieff",
+   "alt": "Pom Klementieff, who plays Mantis",
+   "author": "Gabriel Hutchinson",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pom_Klementieff_at_the_2025_Cannes_Film_Festival_02.jpg",
+   "changes": "cropped and resized",
+   "character": "mantis"
+  },
+  {
+   "id": "shuri",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/shuri.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/shuri-240.webp",
+    "480": "/img/actors/dir/shuri.webp"
+   },
+   "subject": "Letitia Wright",
+   "alt": "Letitia Wright, who plays Shuri",
+   "author": "Duk3L1xon",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Letitia_Wright_at_2025_SXSW_London_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "shuri"
+  },
+  {
+   "id": "yelena-belova",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/yelena-belova.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/yelena-belova-240.webp",
+    "480": "/img/actors/dir/yelena-belova.webp"
+   },
+   "subject": "Florence Pugh",
+   "alt": "Florence Pugh, who plays Yelena Belova",
+   "author": "Frank Sun",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_Pugh_at_the_2024_Toronto_International_Film_Festival_13_(cropped_2_%E2%80%93_color_adjusted).jpg",
+   "changes": "cropped and resized",
+   "character": "yelena-belova"
+  },
+  {
+   "id": "roger-harrington",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/roger-harrington.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/roger-harrington-240.webp",
+    "480": "/img/actors/dir/roger-harrington.webp"
+   },
+   "subject": "Martin Starr",
+   "alt": "Martin Starr, who plays Roger Harrington",
+   "author": "Steve Jurvetson",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martin_Starr_2016_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "roger-harrington"
+  },
+  {
+   "id": "fandral",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/fandral.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/fandral-240.webp",
+    "480": "/img/actors/dir/fandral.webp"
+   },
+   "subject": "Zachary Levi",
+   "alt": "Zachary Levi, who plays Fandral",
+   "author": "Tim Blackmon for Galaxy Con",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zachary_Levi_(54238375564).jpg",
+   "changes": "cropped and resized",
+   "character": "fandral"
+  },
+  {
+   "id": "hogun",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/hogun.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/hogun-240.webp",
+    "480": "/img/actors/dir/hogun.webp"
+   },
+   "subject": "Tadanobu Asano",
+   "alt": "Tadanobu Asano, who plays Hogun",
+   "author": "Dick Thomas Johnson from Tokyo, Japan",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asano_Tadanobu_from_%22Ravens%22_at_Red_Carpet_of_the_Tokyo_International_Film_Festival_2024_(54577962659).jpg",
+   "changes": "cropped and resized",
+   "character": "hogun"
+  },
+  {
+   "id": "jasper-sitwell",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/jasper-sitwell.webp",
+   "width": 330,
+   "height": 440,
+   "srcset": {
+    "240": "/img/actors/dir/jasper-sitwell-240.webp",
+    "330": "/img/actors/dir/jasper-sitwell.webp"
+   },
+   "subject": "Maximiliano Hernández",
+   "alt": "Maximiliano Hernández, who plays Jasper Sitwell",
+   "author": "Florida Supercon",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maximiliano_Hern%C3%A1ndez_2015.jpg",
+   "changes": "cropped and resized",
+   "character": "jasper-sitwell"
+  },
+  {
+   "id": "odin",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/odin.webp",
+   "width": 480,
+   "height": 641,
+   "srcset": {
+    "240": "/img/actors/dir/odin-240.webp",
+    "480": "/img/actors/dir/odin.webp"
+   },
+   "subject": "Anthony Hopkins",
+   "alt": "Anthony Hopkins, who plays Odin",
+   "author": "Omar David Sandoval Sida",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anthony_Hopkins_Red_Sea_Festival_2025_Portrait_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "odin"
+  },
+  {
+   "id": "volstagg",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/volstagg.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/volstagg-240.webp",
+    "480": "/img/actors/dir/volstagg.webp"
+   },
+   "subject": "Ray Stevenson",
+   "alt": "Ray Stevenson, who plays Volstagg",
+   "author": "Mingle Media TV",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ray_Stevenson_March_18,_2014_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "volstagg"
+  },
+  {
+   "id": "johann-schmidt",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/johann-schmidt.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/johann-schmidt-240.webp",
+    "480": "/img/actors/dir/johann-schmidt.webp"
+   },
+   "subject": "Hugo Weaving",
+   "alt": "Hugo Weaving, who plays Johann Schmidt / Red Skull",
+   "author": "Siebbi",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hugo_Weaving_2014.jpg",
+   "changes": "cropped and resized",
+   "character": "johann-schmidt"
+  },
+  {
+   "id": "rodriguez",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/rodriguez.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/rodriguez-240.webp",
+    "480": "/img/actors/dir/rodriguez.webp"
+   },
+   "subject": "Miguel Ferrer",
+   "alt": "Miguel Ferrer, who plays Rodriguez",
+   "author": "Red Carpet Report on Mingle Media TV",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miguel_Ferrer_2015.jpg",
+   "changes": "cropped and resized",
+   "character": "rodriguez"
+  },
+  {
+   "id": "carina",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/carina.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/carina-240.webp",
+    "480": "/img/actors/dir/carina.webp"
+   },
+   "subject": "Kari Wahlgren",
+   "alt": "Kari Wahlgren, who plays Carina",
+   "author": "TaurusEmerald",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kari_Wahlgren_2025.jpg",
+   "changes": "cropped and resized",
+   "character": "carina"
+  },
+  {
+   "id": "taneleer-tivan",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/taneleer-tivan.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/taneleer-tivan-240.webp",
+    "480": "/img/actors/dir/taneleer-tivan.webp"
+   },
+   "subject": "Benicio del Toro",
+   "alt": "Benicio del Toro, who plays Taneleer Tivan / The Collector",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Benicio_del_Toro-7624.jpg",
+   "changes": "cropped and resized",
+   "character": "taneleer-tivan"
+  },
+  {
+   "id": "ultron",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ultron.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/ultron-240.webp",
+    "480": "/img/actors/dir/ultron.webp"
+   },
+   "subject": "James Spader",
+   "alt": "James Spader, who plays Ultron",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:James_Spader_by_Gage_Skidmore.jpg",
+   "changes": "cropped and resized",
+   "character": "ultron"
+  },
+  {
+   "id": "cassie-lang",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/cassie-lang.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/cassie-lang-240.webp",
+    "480": "/img/actors/dir/cassie-lang.webp"
+   },
+   "subject": "Abby Ryder Fortson",
+   "alt": "Abby Ryder Fortson, who plays Cassie Lang",
+   "author": "Colleen Sturtevant",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:AbbyRyderFortson.jpg",
+   "changes": "cropped and resized",
+   "character": "cassie-lang"
+  },
+  {
+   "id": "janet-van-dyne",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/janet-van-dyne.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/janet-van-dyne-240.webp",
+    "480": "/img/actors/dir/janet-van-dyne.webp"
+   },
+   "subject": "Michelle Pfeiffer",
+   "alt": "Michelle Pfeiffer, who plays Janet van Dyne / Wasp",
+   "author": "joyparris",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michelle_Pfeiffer_Ant-Man_%26_The_Wasp_premiere.jpg",
+   "changes": "cropped and resized",
+   "character": "janet-van-dyne"
+  },
+  {
+   "id": "everett-k-ross",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/everett-k-ross.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/everett-k-ross-240.webp",
+    "480": "/img/actors/dir/everett-k-ross.webp"
+   },
+   "subject": "Martin Freeman",
+   "alt": "Martin Freeman, who plays Everett K. Ross",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martin_Freeman-5341.jpg",
+   "changes": "cropped and resized",
+   "character": "everett-k-ross"
+  },
+  {
+   "id": "tchaka",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/tchaka.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/tchaka-240.webp",
+    "480": "/img/actors/dir/tchaka.webp"
+   },
+   "subject": "John Kani",
+   "alt": "John Kani, who plays T'Chaka",
+   "author": "Bobbyshabangu",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dr_John_Kani.jpg",
+   "changes": "cropped and resized",
+   "character": "tchaka"
+  },
+  {
+   "id": "michelle-mj-jones-watson",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/michelle-mj-jones-watson.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/michelle-mj-jones-watson-240.webp",
+    "480": "/img/actors/dir/michelle-mj-jones-watson.webp"
+   },
+   "subject": "Zendaya",
+   "alt": "Zendaya, who plays Michelle \"MJ\" Jones-Watson",
+   "author": "PhilipRomano",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zendaya-byPhilipRomano.jpg",
+   "changes": "cropped and resized",
+   "character": "michelle-mj-jones-watson"
+  },
+  {
+   "id": "grandmaster",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/grandmaster.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/grandmaster-240.webp",
+    "480": "/img/actors/dir/grandmaster.webp"
+   },
+   "subject": "Jeff Goldblum",
+   "alt": "Jeff Goldblum, who plays Grandmaster",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeff_Goldblum_by_Gage_Skidmore_3.jpg",
+   "changes": "cropped and resized",
+   "character": "grandmaster"
+  },
+  {
+   "id": "topaz",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/topaz.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/topaz-240.webp",
+    "480": "/img/actors/dir/topaz.webp"
+   },
+   "subject": "Rachel House",
+   "alt": "Rachel House, who plays Topaz",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rachel_House_by_Gage_Skidmore.jpg",
+   "changes": "cropped and resized",
+   "character": "topaz"
+  },
+  {
+   "id": "mbaku",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/mbaku.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/mbaku-240.webp",
+    "480": "/img/actors/dir/mbaku.webp"
+   },
+   "subject": "Winston Duke",
+   "alt": "Winston Duke, who plays M'Baku",
+   "author": "Zach Catanzareti Photo",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winston_duke_(49562238976).jpg",
+   "changes": "cropped and resized",
+   "character": "mbaku"
+  },
+  {
+   "id": "ramonda",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ramonda.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/ramonda-240.webp",
+    "480": "/img/actors/dir/ramonda.webp"
+   },
+   "subject": "Angela Bassett",
+   "alt": "Angela Bassett, who plays Ramonda",
+   "author": "Gabriel Hutchinson",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angela_Basset_at_the_2025_Cannes_Film_Festival_04_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "ramonda"
+  },
+  {
+   "id": "jimmy-woo",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/jimmy-woo.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/jimmy-woo-240.webp",
+    "480": "/img/actors/dir/jimmy-woo.webp"
+   },
+   "subject": "Randall Park",
+   "alt": "Randall Park, who plays Jimmy Woo",
+   "author": "Sarran Hamilton",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Randall_Park_-_Girl_Group_-_TIFF_2026.jpg",
+   "changes": "cropped and resized",
+   "character": "jimmy-woo"
+  },
+  {
+   "id": "monica-rambeau",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/monica-rambeau.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/monica-rambeau-240.webp",
+    "480": "/img/actors/dir/monica-rambeau.webp"
+   },
+   "subject": "Teyonah Parris",
+   "alt": "Teyonah Parris, who plays Monica Rambeau",
+   "author": "PhilipRomano",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:TeyonahParris-byPhilipRomano.jpg",
+   "changes": "cropped and resized",
+   "character": "monica-rambeau"
+  },
+  {
+   "id": "john-walker",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/john-walker.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/john-walker-240.webp",
+    "480": "/img/actors/dir/john-walker.webp"
+   },
+   "subject": "Wyatt Russell",
+   "alt": "Wyatt Russell, who plays John Walker / U.S. Agent",
+   "author": "JaceMerlyn",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wyatt_Russell_at_Comic_Con_Connections_26_19_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "john-walker"
+  },
+  {
+   "id": "valentina-allegra-de-fontaine",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/valentina-allegra-de-fontaine.webp",
+   "width": 480,
+   "height": 641,
+   "srcset": {
+    "240": "/img/actors/dir/valentina-allegra-de-fontaine-240.webp",
+    "480": "/img/actors/dir/valentina-allegra-de-fontaine.webp"
+   },
+   "subject": "Julia Louis-Dreyfus",
+   "alt": "Julia Louis-Dreyfus, who plays Valentina Allegra de Fontaine",
+   "author": "Neil Grabowsky, for the Montclair Film Festival",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Julia_Louis-Dreyfus_2019_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "valentina-allegra-de-fontaine"
+  },
+  {
+   "id": "alexei-shostakov",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/alexei-shostakov.webp",
+   "width": 452,
+   "height": 603,
+   "srcset": {
+    "240": "/img/actors/dir/alexei-shostakov-240.webp",
+    "452": "/img/actors/dir/alexei-shostakov.webp"
+   },
+   "subject": "David Harbour",
+   "alt": "David Harbour, who plays Alexei Shostakov / Red Guardian",
+   "author": "PelucheEn ElEstuche",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:David_Harbour_2025.jpg",
+   "changes": "cropped and resized",
+   "character": "alexei-shostakov"
+  },
+  {
+   "id": "melina-vostokoff",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/melina-vostokoff.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/melina-vostokoff-240.webp",
+    "480": "/img/actors/dir/melina-vostokoff.webp"
+   },
+   "subject": "Rachel Weisz",
+   "alt": "Rachel Weisz, who plays Melina Vostokoff / Black Widow",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rachel_Weisz-62940_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "melina-vostokoff"
+  },
+  {
+   "id": "peggy-carter-2",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/peggy-carter-2.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/peggy-carter-2-240.webp",
+    "480": "/img/actors/dir/peggy-carter-2.webp"
+   },
+   "subject": "Hayley Atwell",
+   "alt": "Hayley Atwell, who plays Peggy Carter / Captain Carter",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hayley_Atwell_2025_(crop).jpg",
+   "changes": "cropped and resized",
+   "character": "peggy-carter-2"
+  },
+  {
+   "id": "kate-bishop",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/kate-bishop.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/kate-bishop-240.webp",
+    "480": "/img/actors/dir/kate-bishop.webp"
+   },
+   "subject": "Hailee Steinfeld",
+   "alt": "Hailee Steinfeld, who plays Kate Bishop",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hailee_Steinfeld_by_Gage_Skidmore.jpg",
+   "changes": "cropped and resized",
+   "character": "kate-bishop"
+  },
+  {
+   "id": "wilson-fisk",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/wilson-fisk.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/wilson-fisk-240.webp",
+    "480": "/img/actors/dir/wilson-fisk.webp"
+   },
+   "subject": "Vincent D'Onofrio",
+   "alt": "Vincent D'Onofrio, who plays Wilson Fisk / Kingpin",
+   "author": "John Manard",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vincent_D'Onofrio_GalaxyCon_Nashville_052026-4.jpg",
+   "changes": "cropped and resized",
+   "character": "wilson-fisk"
+  },
+  {
+   "id": "riri-williams",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/riri-williams.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/riri-williams-240.webp",
+    "480": "/img/actors/dir/riri-williams.webp"
+   },
+   "subject": "Dominique Thorne",
+   "alt": "Dominique Thorne, who plays Riri Williams",
+   "author": "PhilipRomanoPhoto",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:DominiqueThorn-byPhilipRomano.jpg",
+   "changes": "cropped and resized",
+   "character": "riri-williams"
+  },
+  {
+   "id": "christine-everhart",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/christine-everhart.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/christine-everhart-240.webp",
+    "480": "/img/actors/dir/christine-everhart.webp"
+   },
+   "subject": "Leslie Bibb",
+   "alt": "Leslie Bibb, who plays Christine Everhart",
+   "author": "Colleen Sturtevant",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leslie_Bibb_83rd_Venice_Film_Festival_2.jpg",
+   "changes": "cropped and resized",
+   "character": "christine-everhart"
+  },
+  {
+   "id": "betty-ross",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/betty-ross.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/betty-ross-240.webp",
+    "480": "/img/actors/dir/betty-ross.webp"
+   },
+   "subject": "Liv Tyler",
+   "alt": "Liv Tyler, who plays Betty Ross",
+   "author": "Walterlan Papetti",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liv_Tyler_(2016).jpg",
+   "changes": "cropped and resized",
+   "character": "betty-ross"
+  },
+  {
+   "id": "emil-blonsky",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/emil-blonsky.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/emil-blonsky-240.webp",
+    "480": "/img/actors/dir/emil-blonsky.webp"
+   },
+   "subject": "Tim Roth",
+   "alt": "Tim Roth, who plays Emil Blonsky / Abomination",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tim_Roth_by_Gage_Skidmore_2.jpg",
+   "changes": "cropped and resized",
+   "character": "emil-blonsky"
+  },
+  {
+   "id": "abraham-erskine",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/abraham-erskine.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/abraham-erskine-240.webp",
+    "480": "/img/actors/dir/abraham-erskine.webp"
+   },
+   "subject": "Stanley Tucci",
+   "alt": "Stanley Tucci, who plays Abraham Erskine",
+   "author": "Raph_PH",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:ConclaveBFILFF101024_(9_of_44)_(54062519935)_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "abraham-erskine"
+  },
+  {
+   "id": "arnim-zola",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/arnim-zola.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/arnim-zola-240.webp",
+    "480": "/img/actors/dir/arnim-zola.webp"
+   },
+   "subject": "Toby Jones",
+   "alt": "Toby Jones, who plays Arnim Zola",
+   "author": "Ralph_PH",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toby_Jones_-_EmpireOfLightBFI121022_(30_of_33)_(52448062684).jpg",
+   "changes": "cropped and resized",
+   "character": "arnim-zola"
+  },
+  {
+   "id": "trevor-slattery",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/trevor-slattery.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/trevor-slattery-240.webp",
+    "480": "/img/actors/dir/trevor-slattery.webp"
+   },
+   "subject": "Ben Kingsley",
+   "alt": "Ben Kingsley, who plays Trevor Slattery",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ben_Kingsley_by_Gage_Skidmore.jpg",
+   "changes": "cropped and resized",
+   "character": "trevor-slattery"
+  },
+  {
+   "id": "pietro-maximoff",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/pietro-maximoff.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/pietro-maximoff-240.webp",
+    "480": "/img/actors/dir/pietro-maximoff.webp"
+   },
+   "subject": "Aaron Taylor-Johnson",
+   "alt": "Aaron Taylor-Johnson, who plays Pietro Maximoff",
+   "author": "LucaFazPhoto",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aaron_Taylor-Johnson_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "pietro-maximoff"
+  },
+  {
+   "id": "cosmo-the-spacedog",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/cosmo-the-spacedog.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/cosmo-the-spacedog-240.webp",
+    "480": "/img/actors/dir/cosmo-the-spacedog.webp"
+   },
+   "subject": "Maria Bakalova",
+   "alt": "Maria Bakalova, who plays Cosmo the Spacedog",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maria_Bakalova_by_Gage_Skidmore.jpg",
+   "changes": "cropped and resized",
+   "character": "cosmo-the-spacedog"
+  },
+  {
+   "id": "jason-quill",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/jason-quill.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/jason-quill-240.webp",
+    "480": "/img/actors/dir/jason-quill.webp"
+   },
+   "subject": "Gregg Henry",
+   "alt": "Gregg Henry, who plays Jason Quill",
+   "author": "Heroes & Villains",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gregg_Henry_2016.jpg",
+   "changes": "cropped and resized",
+   "character": "jason-quill"
+  },
+  {
+   "id": "korath",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/korath.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/korath-240.webp",
+    "480": "/img/actors/dir/korath.webp"
+   },
+   "subject": "Djimon Hounsou",
+   "alt": "Djimon Hounsou, who plays Korath",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Djimon_Hounsou_by_Gage_Skidmore_2.jpg",
+   "changes": "cropped and resized",
+   "character": "korath"
+  },
+  {
+   "id": "laura-barton",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/laura-barton.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/laura-barton-240.webp",
+    "480": "/img/actors/dir/laura-barton.webp"
+   },
+   "subject": "Linda Cardellini",
+   "alt": "Linda Cardellini, who plays Laura Barton",
+   "author": "Daniel Benavides from Austin, TX",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_by_Southwest_2019_7_(32449999697)_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "laura-barton"
+  },
+  {
+   "id": "ulysses-klaue",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ulysses-klaue.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/ulysses-klaue-240.webp",
+    "480": "/img/actors/dir/ulysses-klaue.webp"
+   },
+   "subject": "Andy Serkis",
+   "alt": "Andy Serkis, who plays Ulysses Klaue",
+   "author": "Fandomuniverse",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andy_Serkis_at_MEGACON_Orlando_2025.png",
+   "changes": "cropped and resized",
+   "character": "ulysses-klaue"
+  },
+  {
+   "id": "kurt",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/kurt.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/kurt-240.webp",
+    "480": "/img/actors/dir/kurt.webp"
+   },
+   "subject": "David Dastmalchian",
+   "alt": "David Dastmalchian, who plays Kurt",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:David_Dastmalchian_-_Creep_I.E._Con_2026.jpg",
+   "changes": "cropped and resized",
+   "character": "kurt"
+  },
+  {
+   "id": "helmut-zemo",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/helmut-zemo.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/helmut-zemo-240.webp",
+    "480": "/img/actors/dir/helmut-zemo.webp"
+   },
+   "subject": "Daniel Brühl",
+   "alt": "Daniel Brühl, who plays Helmut Zemo",
+   "author": "Martin Kraft",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:MJK_68238_Daniel_Br%C3%BChl_(Berlinale_2020).jpg",
+   "changes": "cropped and resized",
+   "character": "helmut-zemo"
+  },
+  {
+   "id": "ancient-one",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ancient-one.webp",
+   "width": 480,
+   "height": 641,
+   "srcset": {
+    "240": "/img/actors/dir/ancient-one-240.webp",
+    "480": "/img/actors/dir/ancient-one.webp"
+   },
+   "subject": "Tilda Swinton",
+   "alt": "Tilda Swinton, who plays Ancient One",
+   "author": "Danielle Varenhorst",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tilda_Swinton_at_Cannes_Film_Festival_02_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "ancient-one"
+  },
+  {
+   "id": "christine-palmer",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/christine-palmer.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/christine-palmer-240.webp",
+    "480": "/img/actors/dir/christine-palmer.webp"
+   },
+   "subject": "Rachel McAdams",
+   "alt": "Rachel McAdams, who plays Christine Palmer",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rachel_McAdams_-_Walk_of_Fame.jpg",
+   "changes": "cropped and resized",
+   "character": "christine-palmer"
+  },
+  {
+   "id": "ego",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ego.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/ego-240.webp",
+    "480": "/img/actors/dir/ego.webp"
+   },
+   "subject": "Kurt Russell",
+   "alt": "Kurt Russell, who plays Ego",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kurt_Russell_by_Gage_Skidmore_2.jpg",
+   "changes": "cropped and resized",
+   "character": "ego"
+  },
+  {
+   "id": "betty-brant",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/betty-brant.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/betty-brant-240.webp",
+    "480": "/img/actors/dir/betty-brant.webp"
+   },
+   "subject": "Angourie Rice",
+   "alt": "Angourie Rice, who plays Betty Brant",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angourie_Rice_-_Finding_Emily.jpg",
+   "changes": "cropped and resized",
+   "character": "betty-brant"
+  },
+  {
+   "id": "cindy",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/cindy.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/cindy-240.webp",
+    "480": "/img/actors/dir/cindy.webp"
+   },
+   "subject": "Tiffany Espensen",
+   "alt": "Tiffany Espensen, who plays Cindy",
+   "author": "Red Carpet Report on Mingle Media TV",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tiffany_Espensen_on_Red_Carpet_Report_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "cindy"
+  },
+  {
+   "id": "eugene-flash-thompson",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/eugene-flash-thompson.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/eugene-flash-thompson-240.webp",
+    "480": "/img/actors/dir/eugene-flash-thompson.webp"
+   },
+   "subject": "Tony Revolori",
+   "alt": "Tony Revolori, who plays Eugene \"Flash\" Thompson",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tony_Revolori_by_Gage_Skidmore.jpg",
+   "changes": "cropped and resized",
+   "character": "eugene-flash-thompson"
+  },
+  {
+   "id": "mac-gargan",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/mac-gargan.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/mac-gargan-240.webp",
+    "480": "/img/actors/dir/mac-gargan.webp"
+   },
+   "subject": "Michael Mando",
+   "alt": "Michael Mando, who plays Mac Gargan",
+   "author": "Gage Skidmore from Peoria, AZ, United States of America",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_Mando_at_the_2018_San_Diego_Comic-Con.jpg",
+   "changes": "cropped and resized",
+   "character": "mac-gargan"
+  },
+  {
+   "id": "surtur",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/surtur.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/surtur-240.webp",
+    "480": "/img/actors/dir/surtur.webp"
+   },
+   "subject": "Taika Waititi",
+   "alt": "Taika Waititi, who plays Surtur",
+   "author": "CaseyJNewell",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taika_Waititi_at_Venice_Film_Festival_2026-4.jpg",
+   "changes": "cropped and resized",
+   "character": "surtur"
+  },
+  {
+   "id": "njadaka",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/njadaka.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/njadaka-240.webp",
+    "480": "/img/actors/dir/njadaka.webp"
+   },
+   "subject": "Michael B. Jordan",
+   "alt": "Michael B. Jordan, who plays N'Jadaka / / Erik \"Killmonger\" Stevens",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_B_Jordan_-_Sinners_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "njadaka"
+  },
+  {
+   "id": "nakia",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/nakia.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/nakia-240.webp",
+    "480": "/img/actors/dir/nakia.webp"
+   },
+   "subject": "Lupita Nyong'o",
+   "alt": "Lupita Nyong'o, who plays Nakia",
+   "author": "PhilipRomano",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:LupitaNyongo-byPhilipRomano3.jpg",
+   "changes": "cropped and resized",
+   "character": "nakia"
+  },
+  {
+   "id": "corvus-glaive",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/corvus-glaive.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/corvus-glaive-240.webp",
+    "480": "/img/actors/dir/corvus-glaive.webp"
+   },
+   "subject": "Fred Tatasciore",
+   "alt": "Fred Tatasciore, who plays Corvus Glaive",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fred_Tatasciore_in_2025_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "corvus-glaive"
+  },
+  {
+   "id": "proxima-midnight",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/proxima-midnight.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/proxima-midnight-240.webp",
+    "480": "/img/actors/dir/proxima-midnight.webp"
+   },
+   "subject": "Carrie Coon",
+   "alt": "Carrie Coon, who plays Proxima Midnight",
+   "author": "K6ka",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrie_Coon_portrait_at_TIFF_2026.jpg",
+   "changes": "cropped and resized",
+   "character": "proxima-midnight"
+  },
+  {
+   "id": "bill-foster",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/bill-foster.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/bill-foster-240.webp",
+    "480": "/img/actors/dir/bill-foster.webp"
+   },
+   "subject": "Laurence Fishburne",
+   "alt": "Laurence Fishburne, who plays Bill Foster",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laurence_Fishburne_at_53rd_Saturn_Awards_2026.jpg",
+   "changes": "cropped and resized",
+   "character": "bill-foster"
+  },
+  {
+   "id": "maria-rambeau",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/maria-rambeau.webp",
+   "width": 391,
+   "height": 521,
+   "srcset": {
+    "240": "/img/actors/dir/maria-rambeau-240.webp",
+    "391": "/img/actors/dir/maria-rambeau.webp"
+   },
+   "subject": "Lashana Lynch",
+   "alt": "Lashana Lynch, who plays Maria Rambeau",
+   "author": "MTV International",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lashana_Lynch_interview_2019.jpg",
+   "changes": "cropped and resized",
+   "character": "maria-rambeau"
+  },
+  {
+   "id": "soren",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/soren.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/soren-240.webp",
+    "480": "/img/actors/dir/soren.webp"
+   },
+   "subject": "Sharon Blynn",
+   "alt": "Sharon Blynn, who plays Soren",
+   "author": "Toglenn",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sharon_Blynn_2019_by_Glenn_Francis.jpg",
+   "changes": "cropped and resized",
+   "character": "soren"
+  },
+  {
+   "id": "talos",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/talos.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/talos-240.webp",
+    "480": "/img/actors/dir/talos.webp"
+   },
+   "subject": "Ben Mendelsohn",
+   "alt": "Ben Mendelsohn, who plays Talos",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ben_Mendelsohn_by_Gage_Skidmore.jpg",
+   "changes": "cropped and resized",
+   "character": "talos"
+  },
+  {
+   "id": "agatha-harkness",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/agatha-harkness.webp",
+   "width": 428,
+   "height": 570,
+   "srcset": {
+    "240": "/img/actors/dir/agatha-harkness-240.webp",
+    "428": "/img/actors/dir/agatha-harkness.webp"
+   },
+   "subject": "Kathryn Hahn",
+   "alt": "Kathryn Hahn, who plays Agatha Harkness / \"Agnes\"",
+   "author": "Our Movie Guide",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kathryn_Hahn_Agatha_All_Along_Premiere_01.png",
+   "changes": "cropped and resized",
+   "character": "agatha-harkness"
+  },
+  {
+   "id": "billy-maximoff",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/billy-maximoff.webp",
+   "width": 355,
+   "height": 473,
+   "srcset": {
+    "240": "/img/actors/dir/billy-maximoff-240.webp",
+    "355": "/img/actors/dir/billy-maximoff.webp"
+   },
+   "subject": "Julian Hilliard",
+   "alt": "Julian Hilliard, who plays Billy Maximoff",
+   "author": "WillFanning",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Julian_Hilliard.png",
+   "changes": "cropped and resized",
+   "character": "billy-maximoff"
+  },
+  {
+   "id": "hunter-b-15",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/hunter-b-15.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/hunter-b-15-240.webp",
+    "480": "/img/actors/dir/hunter-b-15.webp"
+   },
+   "subject": "Wunmi Mosaku",
+   "alt": "Wunmi Mosaku, who plays Hunter B-15",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wunmi_Mosaku_-_Sinners_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "hunter-b-15"
+  },
+  {
+   "id": "mobius-m-mobius",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/mobius-m-mobius.webp",
+   "width": 374,
+   "height": 498,
+   "srcset": {
+    "240": "/img/actors/dir/mobius-m-mobius-240.webp",
+    "374": "/img/actors/dir/mobius-m-mobius.webp"
+   },
+   "subject": "Owen Wilson",
+   "alt": "Owen Wilson, who plays Mobius M. Mobius",
+   "author": "Georges Biard",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Owen_Wilson_Cannes_2011.jpg",
+   "changes": "cropped and resized",
+   "character": "mobius-m-mobius"
+  },
+  {
+   "id": "xu-shang-chi",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/xu-shang-chi.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/xu-shang-chi-240.webp",
+    "480": "/img/actors/dir/xu-shang-chi.webp"
+   },
+   "subject": "Simu Liu",
+   "alt": "Simu Liu, who plays Xu Shang-Chi / Shaun",
+   "author": "Gage Skidmore",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Simu_Liu_by_Gage_Skidmore_2.jpg",
+   "changes": "cropped and resized",
+   "character": "xu-shang-chi"
+  },
+  {
+   "id": "xu-wenwu",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/xu-wenwu.webp",
+   "width": 480,
+   "height": 641,
+   "srcset": {
+    "240": "/img/actors/dir/xu-wenwu-240.webp",
+    "480": "/img/actors/dir/xu-wenwu.webp"
+   },
+   "subject": "Feodor Chin",
+   "alt": "Feodor Chin, who plays Xu Wenwu",
+   "author": "File:Comic Con Revolution 2017 - Overwatch Panel (34648444846).jpg: tofuprod derivative work: Pbroks13",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feodor_Chin_at_Comic_Con_Revolution_2017.jpg",
+   "changes": "cropped and resized",
+   "character": "xu-wenwu"
+  },
+  {
+   "id": "jack-duquesne",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/jack-duquesne.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/jack-duquesne-240.webp",
+    "480": "/img/actors/dir/jack-duquesne.webp"
+   },
+   "subject": "Tony Dalton",
+   "alt": "Tony Dalton, who plays Jack Duquesne",
+   "author": "Milton Martínez / Secretaría de Cultura CDMX",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tony_Dalton_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "jack-duquesne"
+  },
+  {
+   "id": "p-cleary",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/p-cleary.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/p-cleary-240.webp",
+    "480": "/img/actors/dir/p-cleary.webp"
+   },
+   "subject": "Arian Moayed",
+   "alt": "Arian Moayed, who plays P. Cleary",
+   "author": "Max",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arian_Moayed_2024_Emmys_03_(cropped).png",
+   "changes": "cropped and resized",
+   "character": "p-cleary"
+  },
+  {
+   "id": "kamala-khan",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/kamala-khan.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/kamala-khan-240.webp",
+    "480": "/img/actors/dir/kamala-khan.webp"
+   },
+   "subject": "Iman Vellani",
+   "alt": "Iman Vellani, who plays Kamala Khan / Ms. Marvel",
+   "author": "VOA Urdu",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iman_Vellani_2022_(2).png",
+   "changes": "cropped and resized",
+   "character": "kamala-khan"
+  },
+  {
+   "id": "muneeba-khan",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/muneeba-khan.webp",
+   "width": 460,
+   "height": 613,
+   "srcset": {
+    "240": "/img/actors/dir/muneeba-khan-240.webp",
+    "460": "/img/actors/dir/muneeba-khan.webp"
+   },
+   "subject": "Zenobia Shroff",
+   "alt": "Zenobia Shroff, who plays Muneeba Khan",
+   "author": "MetaWiz6702",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shroff_Sacred_Heart_University_Film_TV_Master_Program_November_2018.jpg",
+   "changes": "cropped and resized",
+   "character": "muneeba-khan"
+  },
+  {
+   "id": "yusuf-khan",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/yusuf-khan.webp",
+   "width": 329,
+   "height": 439,
+   "srcset": {
+    "240": "/img/actors/dir/yusuf-khan-240.webp",
+    "329": "/img/actors/dir/yusuf-khan.webp"
+   },
+   "subject": "Mohan Kapur",
+   "alt": "Mohan Kapur, who plays Yusuf Khan",
+   "author": "Bollywood Hungama",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mohan_Kapoor.jpg",
+   "changes": "cropped and resized",
+   "character": "yusuf-khan"
+  },
+  {
+   "id": "sheila-rivera",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/sheila-rivera.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/sheila-rivera-240.webp",
+    "480": "/img/actors/dir/sheila-rivera.webp"
+   },
+   "subject": "Zabryna Guevara",
+   "alt": "Zabryna Guevara, who plays Sheila Rivera",
+   "author": "Dominick D",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zabryna_Guevara_at_NY_PaleyFest_2014_for_Gotham.jpg",
+   "changes": "cropped and resized",
+   "character": "sheila-rivera"
+  },
+  {
+   "id": "ho-yinsen",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/ho-yinsen.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/ho-yinsen-240.webp",
+    "480": "/img/actors/dir/ho-yinsen.webp"
+   },
+   "subject": "Shaun Toub",
+   "alt": "Shaun Toub, who plays Ho Yinsen",
+   "author": "Shaun_Toub_2011.jpg MingleMediaTVNetwork *derivative work: Sirab",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shaun_Toub_2011_cropped.jpg",
+   "changes": "cropped and resized",
+   "character": "ho-yinsen"
+  },
+  {
+   "id": "william-ginter-riva",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/william-ginter-riva.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/william-ginter-riva-240.webp",
+    "480": "/img/actors/dir/william-ginter-riva.webp"
+   },
+   "subject": "Peter Billingsley",
+   "alt": "Peter Billingsley, who plays William Ginter Riva",
+   "author": "Dominick D",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peter_Billingsley_at_ATX_TV_Festival_2014_Sullivan_and_Son.jpg",
+   "changes": "cropped and resized",
+   "character": "william-ginter-riva"
+  },
+  {
+   "id": "samuel-sterns",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/samuel-sterns.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/samuel-sterns-240.webp",
+    "480": "/img/actors/dir/samuel-sterns.webp"
+   },
+   "subject": "Tim Blake Nelson",
+   "alt": "Tim Blake Nelson, who plays Samuel Sterns",
+   "author": "DannyB Photos",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tim_Blake_Nelson_2016.jpg",
+   "changes": "cropped and resized",
+   "character": "samuel-sterns"
+  },
+  {
+   "id": "justin-hammer",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/justin-hammer.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/justin-hammer-240.webp",
+    "480": "/img/actors/dir/justin-hammer.webp"
+   },
+   "subject": "Sam Rockwell",
+   "alt": "Sam Rockwell, who plays Justin Hammer",
+   "author": "Harald Krichel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sam_Rockwell-3953.jpg",
+   "changes": "cropped and resized",
+   "character": "justin-hammer"
+  },
+  {
+   "id": "stern",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/stern.webp",
+   "width": 351,
+   "height": 468,
+   "srcset": {
+    "240": "/img/actors/dir/stern-240.webp",
+    "351": "/img/actors/dir/stern.webp"
+   },
+   "subject": "Garry Shandling",
+   "alt": "Garry Shandling, who plays Stern",
+   "author": "Alan Light",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Garry_Shandling_at_the_39th_Emmy_Awards_cropped.jpg",
+   "changes": "cropped and resized",
+   "character": "stern"
+  },
+  {
+   "id": "laufey",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/laufey.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/laufey-240.webp",
+    "480": "/img/actors/dir/laufey.webp"
+   },
+   "subject": "Colm Feore",
+   "alt": "Colm Feore, who plays Laufey",
+   "author": "Canadian Film Centre from Toronto, Canada",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colm_Feore_2013_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "laufey"
+  },
+  {
+   "id": "timothy-dum-dum",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/timothy-dum-dum.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/timothy-dum-dum-240.webp",
+    "480": "/img/actors/dir/timothy-dum-dum.webp"
+   },
+   "subject": "Neal McDonough",
+   "alt": "Neal McDonough, who plays Timothy \"Dum Dum\" / Dugan",
+   "author": "Steven Sheldon",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neal_McDonough_September_2026_(cropped).jpg",
+   "changes": "cropped and resized",
+   "character": "timothy-dum-dum"
+  },
+  {
+   "id": "the-other",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/the-other.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/the-other-240.webp",
+    "480": "/img/actors/dir/the-other.webp"
+   },
+   "subject": "Alexis Denisof",
+   "alt": "Alexis Denisof, who plays The Other",
+   "author": "Kevin Paul",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alexis_Denisof_at_San_Diego_Comic_Con_2026.jpg",
+   "changes": "cropped and resized",
+   "character": "the-other"
+  },
+  {
+   "id": "malekith",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/malekith.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/malekith-240.webp",
+    "480": "/img/actors/dir/malekith.webp"
+   },
+   "subject": "Christopher Eccleston",
+   "alt": "Christopher Eccleston, who plays Malekith",
+   "author": "Super Festivals",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Christopher_Eccleston_Photo_Op_GalaxyCon_Louisville_2019.jpg",
+   "changes": "cropped and resized",
+   "character": "malekith"
+  },
+  {
+   "id": "alexander-pierce",
+   "kind": "portrait",
+   "page": "/characters/all",
+   "file": "/img/actors/dir/alexander-pierce.webp",
+   "width": 480,
+   "height": 640,
+   "srcset": {
+    "240": "/img/actors/dir/alexander-pierce-240.webp",
+    "480": "/img/actors/dir/alexander-pierce.webp"
+   },
+   "subject": "Robert Redford",
+   "alt": "Robert Redford, who plays Alexander Pierce",
+   "author": "NBC Television",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tell_Them_Willie_Boy_Is_Here_%E2%80%93_Robert_Redford_photo.jpg",
+   "changes": "cropped and resized",
+   "character": "alexander-pierce"
+  },
+  {
+   "id": "albuquerque-new-mexico",
+   "kind": "place",
+   "page": "/",
+   "file": "/img/places/albuquerque-new-mexico.webp",
+   "width": 864,
+   "height": 540,
+   "srcset": {
+    "480": "/img/places/albuquerque-new-mexico-480.webp",
+    "864": "/img/places/albuquerque-new-mexico.webp"
+   },
+   "subject": "Albuquerque, New Mexico",
+   "alt": "Albuquerque, New Mexico",
+   "author": "Quintin Soloviev",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albuquerque,_New_Mexico_skyline.jpg",
+   "changes": "cropped and resized",
+   "caption": "The Avengers was mostly shot at Albuquerque Studios here.",
+   "films": [
+    "The Avengers"
+   ],
+   "factSource": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)#Filming"
+  },
+  {
+   "id": "wilmington-north-carolina",
+   "kind": "place",
+   "page": "/",
+   "file": "/img/places/wilmington-north-carolina.webp",
+   "width": 958,
+   "height": 599,
+   "srcset": {
+    "480": "/img/places/wilmington-north-carolina-480.webp",
+    "958": "/img/places/wilmington-north-carolina.webp"
+   },
+   "subject": "Wilmington, North Carolina",
+   "alt": "Wilmington, North Carolina",
+   "author": "NCDOTcommunications",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:BRIDGE_2024-05-07_Cape_Fear_Memorial_Bridge_Press_Conf-831-155_(cropped).jpg",
+   "changes": "cropped and resized",
+   "caption": "Iron Man 3 was based at EUE/Screen Gems Studios here.",
+   "films": [
+    "Iron Man 3"
+   ],
+   "factSource": "https://en.wikipedia.org/wiki/Iron_Man_3#Filming"
+  },
+  {
+   "id": "pinewood-atlanta-studios",
+   "kind": "place",
+   "page": "/",
+   "file": "/img/places/pinewood-atlanta-studios.webp",
+   "width": 960,
+   "height": 600,
+   "srcset": {
+    "480": "/img/places/pinewood-atlanta-studios-480.webp",
+    "960": "/img/places/pinewood-atlanta-studios.webp"
+   },
+   "subject": "Trilith Studios (formerly Pinewood Atlanta Studios), Fayette County, Georgia",
+   "alt": "Trilith Studios (formerly Pinewood Atlanta Studios), Fayette County, Georgia",
+   "author": "Yoshiman6464",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:TrilithWatertower.jpg",
+   "changes": "cropped and resized",
+   "caption": "Avengers: Endgame was filmed here, back to back with Infinity War.",
+   "films": [
+    "Avengers: Endgame"
+   ],
+   "factSource": "https://en.wikipedia.org/wiki/Avengers:_Endgame#Filming"
+  },
+  {
+   "id": "point-dume-malibu",
+   "kind": "place",
+   "page": "/",
+   "file": "/img/places/point-dume-malibu.webp",
+   "width": 960,
+   "height": 600,
+   "srcset": {
+    "480": "/img/places/point-dume-malibu-480.webp",
+    "960": "/img/places/point-dume-malibu.webp"
+   },
+   "subject": "Point Dume, Malibu, California",
+   "alt": "Point Dume, Malibu, California",
+   "author": "OMCV",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Point_Dume_Climbing.JPG",
+   "changes": "cropped and resized",
+   "caption": "Tony Stark's cliffside house sits on this headland in the films; the house itself was a digital set.",
+   "films": [
+    "Iron Man",
+    "Iron Man 3"
+   ],
+   "factSource": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)#Filming"
   }
  ],
  "videos": [
