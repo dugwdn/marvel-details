@@ -10,7 +10,7 @@ compatibility_date = "2026-09-01"
 # Google's client ID is public by design (it sits in every page that shows the
 # button). Empty = Google sign-in is off. Facebook and X ids go in as secrets
 # with their app secrets.
-GOOGLE_CLIENT_ID = ""
+GOOGLE_CLIENT_ID = "792719591198-5b5sddbkp93carjc9hutco5hrvupb9t3.apps.googleusercontent.com"
 
 # Accounts and sessions (migrations/). Created 2026-10-06.
 [[d1_databases]]

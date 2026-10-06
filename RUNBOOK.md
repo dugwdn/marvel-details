@@ -27,7 +27,10 @@ After publishing, check:
    shows the new commit as Production.
 
 ## Sign-in keys (once per provider)
-Google's client ID goes in `wrangler.toml` under `[vars]` (it is public).
+Google's client ID goes in `wrangler.toml` under `[vars]` (it is public). It is the
+"MCU Easter Eggs website" client in the MCU Easter Eggs Google Cloud project;
+its allowed origins are mcueastereggs.com, www.mcueastereggs.com and
+marvel-details.pages.dev. A new domain must be added there before sign-in works on it.
 Facebook and X are secrets, typed on the laptop from the repo folder:
 ```
 npx wrangler pages secret put FACEBOOK_APP_ID --project-name marvel-details
