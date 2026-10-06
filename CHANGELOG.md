@@ -22,6 +22,10 @@ merged-but-unpublished work.
   speech bubbles, panels sit two across on desktop and stack on phones.
   Panels are written by `python3 tools/comic-panels.py` (run it after
   adding an article).
+- Popup buttons (not live): in the character popup the journey is now
+  numbered steps (last step in amber) and each Similar Arc is a real button
+  that opens that character, with its full description instead of one cut
+  off at 60 characters. Bigger close button. Nothing overflows on phones.
 - Popups (not live yet): the character popup on /characters/ and the
   Universe Map hover tips and node panel now look like a dark holographic
   AI-assistant screen (dark glass, cyan glow, amber accents) instead of a
