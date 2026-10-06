@@ -26,6 +26,20 @@ After publishing, check:
 3. `npx wrangler pages deployment list --project-name marvel-details`
    shows the new commit as Production.
 
+## Sign-in keys (once per provider)
+Google's client ID goes in `wrangler.toml` under `[vars]` (it is public).
+Facebook and X are secrets, typed on the laptop from the repo folder:
+```
+npx wrangler pages secret put FACEBOOK_APP_ID --project-name marvel-details
+npx wrangler pages secret put FACEBOOK_APP_SECRET --project-name marvel-details
+npx wrangler pages secret put X_CLIENT_ID --project-name marvel-details
+npx wrangler pages secret put X_CLIENT_SECRET --project-name marvel-details
+```
+Each asks for the value; paste it and press Enter. Then publish again.
+Check: `https://<site>/api/auth` lists the provider, and `/account` shows its
+button after the 13+ box. The database tables already exist; if the database
+is ever rebuilt, run `npx wrangler d1 migrations apply marvel-details --remote`.
+
 ## Roll back
 Cloudflare dashboard > Workers & Pages > marvel-details > Deployments >
 pick the last good one > the three-dot menu > **Rollback to this deployment**.

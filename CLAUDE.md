@@ -40,6 +40,10 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   writers" (Alex Continuity, Maya Dialogue, and others) that are pen names,
   not people.
 
+- **Sign-in (2026-10-06, ADR-007):** `/account`, Google first plus Facebook
+  and X, Pages Functions + D1 (`functions/`, `migrations/`). Off until each
+  provider's keys are set (RUNBOOK "Sign-in keys"). `npm test` runs its tests.
+
 ## Plan
 See `ROADMAP.md`. Next without Doug: write the 7 missing articles.
 Waiting on Doug: a real GA4 ID, AdSense slot numbers, and the domain move.

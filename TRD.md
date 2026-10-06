@@ -39,8 +39,12 @@ change the matching page.
 - Pages "pretty URLs": `/movies/endgame.html` redirects to `/movies/endgame`.
 - With PR #1: `404.html` handles unknown addresses (without it, Pages
   serves the home page for every unknown address).
-- The repo has no Workers code; an earlier Workers setup (`src/index.js`,
-  `wrangler.toml`) was removed in favor of Pages. `npm run dev` and
+- Sign-in (ADR-007): Pages Functions in `functions/` answer `/api/auth/*`
+  only (`public/_routes.json`); D1 database `marvel-details` (binding `DB`,
+  schema in `migrations/`). `wrangler.toml` holds the Pages settings, the D1
+  binding and the public `GOOGLE_CLIENT_ID`; Facebook and X ids and secrets
+  are Pages secrets. An earlier Workers setup (`src/index.js`) was removed in
+  favor of Pages. `npm run dev` and
   `npm run deploy` wrap the wrangler Pages commands.
 
 ## Styling
