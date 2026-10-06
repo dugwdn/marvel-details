@@ -31,6 +31,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Brand banner and site menu:** one shared comic-style banner and menu
   of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
   page). Styles are in `public/css/theme.css`; uses the Bangers web font.
+- **More from us:** `/more/` (`public/more/index.html`, hand-written) lists our other live sites; the footer written by `tools/menu.mjs` says "More from us" and links it. Never name a person in this wording. Keep the list in step with the other sites' More pages.
 - **Articles are comic strips:** after adding an article, run
   `python3 tools/comic-panels.py` to wrap its sections in panels.
 - **Images rule:** no studio posters, stills or character art (copyright;

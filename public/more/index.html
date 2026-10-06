@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <title>Sign in | MCU Easter Eggs</title>
-    <meta name="description" content="Sign in to MCU Easter Eggs with Google, Facebook or X to join the discussions on Marvel movie details.">
-    <meta name="robots" content="noindex">
-    <style>
+    <title>More from us | MCU Easter Eggs</title>
+    <meta name="description" content="MCU Easter Eggs is one of several free sites made by Web Design Nerd. Here are the others, each with a short note on what it does.">
+    <link rel="canonical" href="https://mcueastereggs.com/more/">
+        <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
         .container { max-width: 1600px; margin: 0 auto; padding: 2rem 16px; }
@@ -34,6 +34,11 @@
             .acct-btn.quiet { background: #333; color: #eee; }
             .acct-note { background: #3a3220; }
         }
+        .more-list { list-style: none; display: grid; gap: .75rem; margin-top: 1rem; }
+        .more-list li { border: 1px solid #ddd; border-radius: 8px; padding: .75rem 1rem; }
+        .more-list a { display: block; font-weight: 700; font-size: 1.1rem; }
+        .more-list span { display: block; color: #666; font-size: .95rem; }
+        @media (prefers-color-scheme: dark) { .more-list li { border-color: #333; } .more-list span { color: #aaa; } }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,23 +64,19 @@
     </nav>
     <main class="container">
         <div class="content">
-            <h1>Sign in</h1>
-            <div id="account" aria-live="polite"><p class="muted">Loading…</p></div>
-            <h2>What we keep</h2>
-            <p class="muted">Only the id and first name the account you pick gives us, and a sign-in cookie on this device. Never your email or password, and we never post anything for you. Delete your account here any time and it is gone. <a href="/privacy">Privacy</a></p>
+            <h1>More from us</h1>
+            <p class="muted">Updated October 6, 2026.</p>
+            <p>MCU Easter Eggs is one of several free sites we make at Web Design Nerd. Here are the others, in case one of them helps you.</p>
+            <ul class="more-list"><li><a href="https://partygamesarcade.com" rel="noopener">Party Games Arcade</a><span>Free party games you play on your phones, with the TV as the board.</span></li><li><a href="https://kidslearningarcade.com" rel="noopener">Kids Learning Arcade</a><span>Free, calm learning games for kids 3 to 11.</span></li><li><a href="https://getrightplace.app" rel="noopener">RightPlace</a><span>Find a table, see the wait, and tell the restaurant you are coming.</span></li><li><a href="https://credibletheories.com" rel="noopener">Credible Theories</a><span>Strange history and big theories, each traced to its original source.</span></li><li><a href="https://webdesignnerd.com" rel="noopener">Web Design Nerd</a><span>Affordable websites and care plans for small businesses.</span></li><li><a href="https://akronhomecosts.com" rel="noopener">Akron Home Costs</a><span>What common home projects cost around Akron, Ohio.</span></li><li><a href="https://getgainsville.app" rel="noopener">Gainsville</a><span>Simple food and nutrition coaching.</span></li><li><a href="https://salesemailtools.com" rel="noopener">Sales Email Tools</a><span>Free checks for sales emails, subject lines and follow-ups.</span></li><li><a href="https://restaurantownertools.com" rel="noopener">Restaurant Owner Tools</a><span>Free calculators for restaurant owners: no-shows, slow nights, happy hour.</span></li><li><a href="https://tradeownerhq.com" rel="noopener">Trade Owner HQ</a><span>Rate and cost tools for plumbers, electricians and other trades.</span></li><li><a href="https://bottleneckstocks.com" rel="noopener">Bottleneck Finder</a><span>Which parts are in short supply, and who makes them.</span></li><li><a href="https://road-trip-weather.noisy-sunset-3f0d.workers.dev" rel="noopener">Road Trip Weather</a><span>The weather you will hit along your drive, hour by hour.</span></li></ul>
         </div>
     </main>
-    <footer><p>&copy; 2026 MCU Easter Eggs. Not affiliated with Marvel or Disney.</p>
+    <footer><p>&copy; 2026 MCU Easter Eggs. Not affiliated with Marvel or Disney.</p><p class="site-legal"><a href="/privacy">Privacy</a></p>
     <div class="site-footer-links">
         <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div>
 
 </footer>
-    <script type="module">
-        import { fillSignIn } from '/js/account.js';
-        fillSignIn(document.getElementById('account'));
-    </script>
     <script type="module" src="/js/members.js"></script>
 </body>
 </html>
