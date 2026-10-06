@@ -30,6 +30,18 @@ const FONT =
 const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
 // Member perks (Seen it, Save, favorites, found counter): one module per page.
 const MEMBERS = '<script type="module" src="/js/members.js"></script>';
+// Google Analytics 4 for mcueastereggs.com: counts visits and pages read.
+// Standard snippet, no user id or personal data is ever passed to it.
+export const GA_ID = 'G-NESPZD6XSQ';
+const GA =
+  '<!-- GA4 -->\n' +
+  `    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>\n` +
+  '    <script>\n' +
+  '        window.dataLayer = window.dataLayer || [];\n' +
+  '        function gtag(){dataLayer.push(arguments);}\n' +
+  "        gtag('js', new Date());\n" +
+  `        gtag('config', '${GA_ID}');\n` +
+  '    </script>';
 const PRIVACY = '<p class="site-legal"><a href="/privacy">Privacy</a></p>';
 
 // Footer with project backlinks and Web Design Nerd credit
@@ -87,6 +99,12 @@ export function addMenu(html, rel) {
   html = existing.test(html)
     ? html.replace(existing, menu)
     : html.replace(/(<body[^>]*>)/, `$1\n    ${menu}\n`);
+  // One GA4 snippet per page: drop any earlier one (hand-written or ours), then write it.
+  html = html
+    .replace(/[ \t]*<!-- GA4 -->[ \t]*\n?/g, '')
+    .replace(/[ \t]*<script async src="https:\/\/www\.googletagmanager\.com\/gtag\/js[^"]*"><\/script>[ \t]*\n?/g, '')
+    .replace(/[ \t]*<script>\s*window\.dataLayer[\s\S]*?<\/script>[ \t]*\n?/g, '')
+    .replace('</head>', `    ${GA}\n</head>`);
   if (!html.includes('family=Bangers')) html = html.replace('</head>', `    ${FONT}\n</head>`);
   if (!html.includes('/css/theme.css')) html = html.replace('</head>', `    ${STYLE}\n</head>`);
   if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
