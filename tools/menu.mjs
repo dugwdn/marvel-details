@@ -2,6 +2,7 @@
 // all pages share one look (styled in public/css/theme.css).
 // Run after adding a page or changing the menu: node tools/menu.mjs
 // Safe to run again: it replaces the menu it wrote last time.
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -134,6 +135,26 @@ export function searchPages(root = ROOT) {
   return out;
 }
 
+// Our own CSS and JS links carry ?v=<first 8 of the file's md5>, so a new
+// deploy is a new address. mcueastereggs.com's Cloudflare zone tells browsers
+// (and its edge) to keep /css and /js for 4 hours; without this a visitor
+// gets new HTML with old CSS, and new sections show up unstyled (2026-10-06).
+const hashes = new Map();
+export function assetVersion(file, root = ROOT) {
+  const full = path.join(root, file);
+  if (!hashes.has(full)) {
+    hashes.set(full, fs.existsSync(full) ? crypto.createHash('md5').update(fs.readFileSync(full)).digest('hex').slice(0, 8) : '');
+  }
+  return hashes.get(full);
+}
+export function versionAssets(html, root = ROOT) {
+  return html.replace(/(<(?:link|script)\b[^>]*?\s(?:href|src)=")(\/(?:css|js)\/[^"?#]+\.(?:css|js))(?:\?v=[0-9a-f]*)?"/g,
+    (all, start, file) => {
+      const v = assetVersion(file, root);
+      return v ? `${start}${file}?v=${v}"` : `${start}${file}"`;
+    });
+}
+
 export function addMenu(html, rel) {
   // Drop the banner from a previous run and the old plain "Details You Missed"
   // (or "MCU Easter Eggs")
@@ -176,7 +197,7 @@ export function addMenu(html, rel) {
   } else {
     html = html.replace(/(<\/body>)/, `    <footer>\n${FOOTER}\n    </footer>\n$1`);
   }
-  return html;
+  return versionAssets(html);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === SELF) {

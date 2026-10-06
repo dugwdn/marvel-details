@@ -3,6 +3,14 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (Fresh CSS on every deploy, not live yet)
+- Fixed: after the photos deploy, the home page "Faces of the MCU" spotlight,
+  photo wall and trailer rows showed unstyled for visitors who had the site
+  open earlier. Cause: mcueastereggs.com's Cloudflare zone keeps /css and /js
+  for 4 hours, so new HTML loaded with old CSS. `node tools/menu.mjs` now adds
+  `?v=<file hash>` to every local CSS and JS link, so each deploy is a fresh
+  address. `test/assets.test.mjs` checks it.
+
 ## 2026-10-06 (More photos and trailers, not live yet)
 - Home page: "Faces of the MCU" (a rotating actor spotlight and a wall of
   credited real-life actor photos, each linking to the character) and "Watch

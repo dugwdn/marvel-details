@@ -82,7 +82,7 @@ test('the home page carries the photo wall, the spotlight and every film trailer
   for (const v of films) assert.ok(html.includes(`data-yt="${v.youtubeId}"`), `${v.film} trailer is missing from the home page`);
   assert.ok((html.match(/class="face-tile"/g) || []).length >= 24, 'photo wall is too small');
   assert.match(html, /class="faces-spotlight"/);
-  assert.match(html, /src="\/js\/media\.js"/);
+  assert.match(html, /src="\/js\/media\.js(\?v=[0-9a-f]{8})?"/);
   // Only the first spotlight photo loads eagerly; everything else waits until it is near the screen.
   assert.equal((html.match(/fetchpriority="high"/g) || []).length, 1);
 });
