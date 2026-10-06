@@ -4,6 +4,10 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
+- Popups (not live yet): the character popup on /characters/ and the
+  Universe Map hover tips and node panel now look like a dark holographic
+  AI-assistant screen (dark glass, cyan glow, amber accents) instead of a
+  bright white box. Same look in light and dark mode. Our own design.
 - Trailers and actor photos (not live yet): each of the 5 movie pages and
   the Spider-Man: Brand New Day article now play the official trailer with
   YouTube's own embedded player (Marvel Entertainment, Sony's Spider-Man
