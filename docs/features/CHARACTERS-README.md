@@ -480,3 +480,20 @@ console.log(heroes.length);  // 6
 **Last Updated**: 2026-10-05  
 **Feature**: 1c - Character Arc Tracker  
 **Phase**: MCU Phase 1
+
+
+## MCU Character List (/characters/all/)
+
+A plain-HTML list of every main and recurring MCU character (797 on
+2026-10-06), so search engines can read it. Data: `public/data/mcu-characters.json`
+(titles with US release dates, then characters with actors, titles, first
+appearance, and `page` when the character has a full page here). The page is
+written by `python3 tools/build-directory.py`; run `node tools/menu.mjs` after.
+Search, filters and sorting are in `public/js/directory.js`; styles in
+`public/css/directory.css`.
+
+Facts only (names, actors, titles, dates), taken from the cast lists compiled
+on Wikipedia, checked 2026-10-06. Only released titles count. To add a new
+movie or season after it comes out: add it to `titles` with its date, add it to
+each character's `titles`, and rebuild. Not covered yet: one-scene roles and
+the Marvel Television shows (Agents of S.H.I.E.L.D., the Netflix series).

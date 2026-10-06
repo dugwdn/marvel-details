@@ -4,7 +4,15 @@ Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
 ## 2026-10-06
-- Characters (not live yet): 20 characters instead of 10. New: Thanos,
+- MCU Character List (not live): new page /characters/all/ with 797 main
+  and recurring characters from all 38 released MCU movies and 21 Disney+
+  series seasons. Each shows who plays them, their first appearance and
+  every title they are in, with search, an "appears in" filter and
+  sorting. Built from public/data/mcu-characters.json by
+  `python3 tools/build-directory.py` (then `node tools/menu.mjs`). Linked
+  from /characters/ and the sitemap. Unreleased titles (Avengers: Doomsday,
+  VisionQuest and others) are left out until they come out.
+- Characters (live 2026-10-06): 20 characters instead of 10. New: Thanos,
   Spider-Man, War Machine, Captain Marvel, Doctor Strange, Black Panther,
   Scarlet Witch, Ant-Man, Nebula and Obadiah Stane, each with a page,
   timeline and credited Wikimedia Commons actor photo. Removed the made-up
@@ -13,7 +21,7 @@ merged-but-unpublished work.
   film and which of our 5 films the character is in. Fixed wrong timeline
   points (Hawkeye's first film is Thor, not Iron Man 2; Happy Hogan isn't
   in The Avengers; others in Black Widow, Hulk and Pepper Potts).
-- Universe Map window (not live): /map/ opens as a full-screen window over
+- Universe Map window (live 2026-10-06): /map/ opens as a full-screen window over
   the site with a big yellow "Back to the site" button, a close button and
   Esc, all returning to the page the visitor came from (or home). New space
   look: starfield and grid backdrop, glowing nodes, light outlined labels,
@@ -28,7 +36,7 @@ merged-but-unpublished work.
   speech bubbles, panels sit two across on desktop and stack on phones.
   Panels are written by `python3 tools/comic-panels.py` (run it after
   adding an article).
-- Popup buttons (not live): in the character popup the journey is now
+- Popup buttons (live 2026-10-06): in the character popup the journey is now
   numbered steps (last step in amber) and each Similar Arc is a real button
   that opens that character, with its full description instead of one cut
   off at 60 characters. Bigger close button. Nothing overflows on phones.
