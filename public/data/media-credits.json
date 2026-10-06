@@ -410,6 +410,24 @@
    "kind": "licensed",
    "sourceUrl": "https://www.youtube.com/watch?v=BoohRoVA9WQ",
    "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/upcoming/",
+   "youtubeId": "sXKnmgmbkoE",
+   "title": "Marvel Television’s VisionQuest | Official Trailer",
+   "channel": "Marvel Entertainment",
+   "kind": "official",
+   "sourceUrl": "https://www.youtube.com/watch?v=sXKnmgmbkoE",
+   "verified": "2026-10-06 via youtube.com/oembed"
+  },
+  {
+   "page": "/upcoming/",
+   "youtubeId": "irVNGjRFZGk",
+   "title": "Avengers: Doomsday | Official Trailer | In Theaters December 18",
+   "channel": "Marvel Entertainment",
+   "kind": "official",
+   "sourceUrl": "https://www.youtube.com/watch?v=irVNGjRFZGk",
+   "verified": "2026-10-06 via youtube.com/oembed"
   }
  ]
 }

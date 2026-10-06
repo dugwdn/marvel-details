@@ -10,6 +10,8 @@ import { htmlFiles } from './check-links.mjs';
 const SELF = fileURLToPath(import.meta.url);
 const ROOT = path.join(path.dirname(SELF), '..', 'public');
 
+// Ten buttons so the menu grid has no orphan (5 x 2, or 2 x 5 on phones).
+// My Marvel lives in the header bar's member chip instead.
 export const MENU = [
   ['Home', '/', ''],
   ['Articles', '/articles/', 'articles'],
@@ -19,8 +21,8 @@ export const MENU = [
   ['Characters', '/characters/', 'characters'],
   ['Universe Map', '/map/', 'map'],
   ['Rabbit Holes', '/rabbit-holes/', 'rabbit-holes'],
+  ['Coming Soon', '/upcoming/', 'upcoming'],
   ['About', '/about', 'about'],
-  ['My Marvel', '/me/', 'me'],
 ];
 
 const FONT =
@@ -146,7 +148,7 @@ export function addMenu(html, rel) {
   }
   // Add footer with project links and Web Design Nerd credit.
   // Remove from a previous run first.
-  html = html.replace(/\s*<div class="site-footer-links">[\s\S]*?<\/div>\n(\s*)<\/footer>/, '\n$1</footer>');
+  html = html.replace(/\s*<div class="site-footer-links">[\s\S]*?<\/div>\n(\s*)<\/footer>/, '$1</footer>');
   // Add it before the closing footer tag if a footer exists, or create one before </body>.
   if (/<\/footer>/.test(html)) {
     html = html.replace(/(\s*)<\/footer>/, `\n    ${FOOTER}\n$1</footer>`);
