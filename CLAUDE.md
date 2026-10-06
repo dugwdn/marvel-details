@@ -29,6 +29,8 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Brand banner and site menu:** one shared comic-style banner and menu
   of big buttons on every page, written into each page by `node tools/menu.mjs` (run it after adding a
   page). Styles are in `public/css/theme.css`; uses the Bangers web font.
+- **Articles are comic strips:** after adding an article, run
+  `python3 tools/comic-panels.py` to wrap its sections in panels.
 - **Images rule:** no studio posters, stills or character art (copyright;
   ads at risk). Trailers are YouTube embeds of official uploads; actor photos
   are free-license Wikimedia Commons files with a credit line. IMDb text and
