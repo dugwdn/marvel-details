@@ -3,6 +3,14 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (GA4 privacy settings, not live yet)
+- GA4 now has one on/off spot: `GA_ID` in `tools/menu.mjs`. Empty or a
+  placeholder like `G-XXXXXXXXXX` means no Google tag is written into any
+  page. Every page's tag now sets ad consent to denied, turns off Google
+  signals and ad personalization, and sends the page address without its
+  `?query` or `#hash`. Privacy page says so in plain words.
+  `test/analytics.test.mjs` checks off, on and the stripped address.
+
 ## 2026-10-06 (images and trailers, not live yet)
 - Photo and video credits: `/credits` (built by `node tools/build-credits.mjs`
   from `public/data/media-credits.json`), linked from every footer next to
