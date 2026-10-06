@@ -8,11 +8,18 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'publ
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/media-credits.json'), 'utf8'));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
+// Where each item shows up. Portraits of list characters also appear on the home page
+// and movie pages (tools/build-media.mjs); film trailers on the home page and character pages.
+const usedOn = (x) => {
+  const pages = [x.page, ...(x.pages || [])];
+  if (x.character || /^\/characters\//.test(x.page)) pages.push('/');
+  return [...new Set(pages)].map((p) => `<a href="${esc(p)}">${p === '/' ? 'home page' : esc(p)}</a>`).join(', ');
+};
 const imgs = data.images.map((i) =>
-  `<li><strong>${esc(i.subject)}</strong><br>Photo: ${esc(i.author)}, <a href="${esc(i.licenseUrl)}" rel="nofollow noopener">${esc(i.license)}</a>, <a href="${esc(i.sourceUrl)}" rel="nofollow noopener">via Wikimedia Commons</a>.<br>Used on <a href="${esc(i.page)}">${esc(i.page)}</a>.</li>`
+  `<li><strong>${esc(i.subject)}</strong><br>Photo: ${esc(i.author)}, <a href="${esc(i.licenseUrl)}" rel="nofollow noopener">${esc(i.license)}</a>, <a href="${esc(i.sourceUrl)}" rel="nofollow noopener">via Wikimedia Commons</a>${i.changes ? ` (${esc(i.changes)})` : ''}.<br>Used on ${usedOn(i)}.</li>`
 ).join('\n            ');
 const vids = data.videos.map((v) =>
-  `<li><strong>${esc(v.title)}</strong><br>Channel: ${esc(v.channel)}, <a href="${esc(v.sourceUrl)}" rel="nofollow noopener">watch on YouTube</a>.<br>Used on <a href="${esc(v.page)}">${esc(v.page)}</a>.</li>`
+  `<li><strong>${esc(v.title)}</strong>${v.film ? ` (${esc(v.film)})` : ''}<br>Channel: ${esc(v.channel)}, <a href="${esc(v.sourceUrl)}" rel="nofollow noopener">watch on YouTube</a>.<br>Used on ${usedOn(v)}${v.film ? ' and the pages of characters in it' : ''}.</li>`
 ).join('\n            ');
 
 const html = `<!DOCTYPE html>

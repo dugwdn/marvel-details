@@ -26,13 +26,21 @@ def actor_line(c):
 
 # Credited actor portraits (public/data/media-credits.json), one per character page of the list.
 _credits = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', 'data', 'media-credits.json')))
-PORTRAITS = {i['character']: i for i in _credits['images'] if i.get('character')}
+_pages = {c['page']: c['id'] for c in data['characters'] if c['page']}
+PORTRAITS = {}
+for _i in _credits['images']:  # list portrait first, else the photo on the character's own page
+    _id = _i.get('character') or _pages.get(_i['page'])
+    if _id and _id not in PORTRAITS:
+        PORTRAITS[_id] = _i
 
 def portrait(c):
     p = PORTRAITS.get(c['id'])
     if not p:
         return ''
-    return (f'  <figure class="dir-photo"><img src="{p["file"]}" alt="{e(p["subject"])}" width="{p["width"]}" height="{p["height"]}" loading="lazy">'
+    srcset = ''
+    if p.get('srcset'):
+        srcset = ' srcset="' + ', '.join(f'{f} {w}w' for w, f in p['srcset'].items()) + '" sizes="140px"'
+    return (f'  <figure class="dir-photo"><img src="{p["file"]}"{srcset} alt="{e(p.get("alt") or p["subject"])}" width="{p["width"]}" height="{p["height"]}" loading="lazy" decoding="async">'
             f'<figcaption>Photo: {e(p["author"])}, <a href="{e(p["licenseUrl"])}" rel="nofollow noopener">{e(p["license"])}</a>, <a href="{e(p["sourceUrl"])}" rel="nofollow noopener">Wikimedia Commons</a></figcaption></figure>\n')
 
 def item(c):

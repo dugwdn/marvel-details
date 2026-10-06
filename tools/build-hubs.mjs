@@ -122,7 +122,7 @@ ${film.details.map(detailCard).join('\n')}
 
 // Trailer blocks and figures (photos with credits) stay as they are on the page.
 export function keptBlocks(container) {
-  const blocks = container.match(/\n[ \t]*<(section class="trailer-block"|figure)[\s\S]*?<\/(section|figure)>/g) || [];
+  const blocks = container.match(/\n[ \t]*(?:<section class="(?:trailer-block|media-gallery)"[\s\S]*?<\/section>|<figure[\s\S]*?<\/figure>)/g) || [];
   return blocks.join('\n') + (blocks.length ? '\n' : '');
 }
 

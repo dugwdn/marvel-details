@@ -3,6 +3,17 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-06 (More photos and trailers, not live yet)
+- Home page: "Faces of the MCU" (a rotating actor spotlight and a wall of
+  credited real-life actor photos, each linking to the character) and "Watch
+  the Trailers" (official trailers for all 38 MCU movies and 21 series,
+  newest first; the player loads only when clicked).
+- Movie hubs: "The Cast in Real Life" photo gallery. Character pages: a row
+  of trailers for every title the character is in.
+- Character list: more actor portraits (fetched and license-checked).
+- New tools: `fetch-media.py`, `find-trailers.py`, `build-media.mjs`, and a
+  `Fetch media` GitHub Action. ADR-012.
+
 ## 2026-10-06 (Marvel quiz, not live yet)
 - New `/quiz/`: 82 questions in four levels, Sidekick (easy), Hero
   (medium), Avenger (hard) and Inevitable (insanely hard, 15-second timer).

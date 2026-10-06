@@ -98,3 +98,21 @@ Doug chose the name MCU Easter Eggs on 2026-10-06 after buying mcueastereggs.com
   film; answers must be checkable on screen. Rank titles are plain words, no
   characters.
 
+
+## ADR-012: All photos and trailers come from one credits file, filled by checked scripts (2026-10-06)
+- **Decision:** `public/data/media-credits.json` is the single list of media.
+  `tools/fetch-media.py` adds photos from `tools/media-wanted.json` only after
+  reading the license from Wikimedia (CC BY, CC BY-SA, CC0 or public domain,
+  hosted on Commons, with an author); it crops and saves two WebP sizes.
+  `tools/find-trailers.py` adds a trailer only when youtube.com/oembed names an
+  ADR-010 channel and the title names the film. `tools/build-media.mjs` writes
+  the home page sections, the cast galleries on movie hubs and the trailer
+  rows on character pages from that file.
+- **Trailer cards** are text and color, with no YouTube thumbnail (a frame
+  shown outside YouTube's player is a film still). A click swaps in the
+  youtube-nocookie player, so a page with 59 trailers loads none up front.
+- **Wikimedia rate-limits shared cloud IPs** (429 with Retry-After up to 600 s),
+  so the fetch also runs as a GitHub Action (`Fetch media`, or push a branch
+  named `media/fetch-*`), which commits the photos back to the branch.
+- **Why:** one list keeps `/credits` complete, the tests can check every page
+  against it, and adding media is a data edit plus one command.

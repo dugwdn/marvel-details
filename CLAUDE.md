@@ -29,6 +29,13 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   `/credits`, then `node tools/menu.mjs`. Trailers on all 5 hubs and 4
   articles (official or licensed channels). 20 character portraits, 7 list
   portraits, 2 place photos (Iron Man hubs). `test/media.test.mjs` checks it.
+- **More media (PR #35, ADR-012):** `node tools/build-media.mjs` writes the
+  home page "Faces of the MCU" and "Watch the Trailers" (59 official
+  trailers), movie-hub cast galleries and character-page trailer rows from
+  media-credits.json. New photos: list them in `tools/media-wanted.json`, run
+  `python3 tools/fetch-media.py` (or push a `media/fetch-*` branch so the
+  GitHub Action fetches them: Wikimedia rate-limits cloud IPs). RUNBOOK
+  "Add photos or trailers".
 - **Movie hubs** are built by `node tools/build-hubs.mjs` from
   `public/data/movie-hubs.json` (every detail needs a source URL; trailer
   blocks and figures on the page are kept). Run `node tools/menu.mjs` after.
