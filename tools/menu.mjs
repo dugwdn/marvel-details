@@ -35,6 +35,13 @@ const STYLE = '<link rel="stylesheet" href="/css/theme.css">';
 // Member perks (Seen it, Save, favorites, found counter): one module per page.
 const MEMBERS = '<script type="module" src="/js/members.js"></script>';
 const SEARCH = '<script type="module" src="/js/search.js"></script>';
+// Typing boxes stay in view above the on-screen keyboard (Doug's standing rule, 2026-10-06; see CLAUDE.md).
+const KEYBOARD = '<script type="module" src="/js/keyboard.js"></script>';
+// Android Chrome shrinks the page above the keyboard instead of covering it.
+export function viewportFor(html) {
+  return html.replace(/<meta name="viewport" content="([^"]*)">/g, (all, c) =>
+    /interactive-widget=/.test(c) ? all : `<meta name="viewport" content="${c}, interactive-widget=resizes-content">`);
+}
 // Google Analytics 4 for mcueastereggs.com: counts visits and pages read.
 // THE ONE PLACE FOR THE GA4 ID. Empty (or a placeholder like G-XXXXXXXXXX)
 // means analytics is off: no Google tag is written into any page.
@@ -108,7 +115,7 @@ export function brandFor(html) {
     '<span class="site-brand-name">MCU <em>Easter</em> Eggs</span></a></' + tag + '>\n' +
     '        <div class="site-search" hidden>\n' +
     '            <label class="site-search-label" for="site-q">Search the site</label>\n' +
-    '            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">\n' +
+    '            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">\n' +
     '            <ul id="site-results" class="site-results" role="listbox" aria-label="Search results" hidden></ul>\n' +
     '        </div>\n' +
     '        <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>\n' +
@@ -194,6 +201,8 @@ export function addMenu(html, rel) {
   if (!html.includes('/css/theme.css')) html = html.replace('</head>', `    ${STYLE}\n</head>`);
   if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
   if (!html.includes('/js/search.js')) html = html.replace('</body>', `    ${SEARCH}\n</body>`);
+  if (!html.includes('/js/keyboard.js')) html = html.replace('</body>', `    ${KEYBOARD}\n</body>`);
+  html = viewportFor(html);
   // Remove the project links from a previous run (every copy) first.
   html = html.replace(/\n[ \t]*<div class="site-footer-links">[\s\S]*?<\/div>/g, '');
   // Pages with a footer get a Privacy link in it (once), plus About when the

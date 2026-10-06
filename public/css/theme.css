@@ -429,6 +429,19 @@ html body nav.site-nav a[aria-current] { --hero: #ffd60a; --hero-ink: #111; text
     background: #d7261e; border-bottom: 4px solid #000;
   }
   html body header.site-bar.search-open .site-results { left: 1rem; right: 1rem; top: calc(100% - .1rem); }
+  /* The opened search shows its label, so what to type stays clear while the keyboard is out. */
+  html body header.site-bar.search-open .site-search-label {
+    position: static; width: auto; height: auto; overflow: visible; clip: auto; display: block; margin: 0 0 .3rem;
+    color: #fff !important; font: 700 1rem/1.2 var(--dym-body); text-shadow: 1px 1px 0 #000;
+  }
+}
+/* Touch screens wider than 800px keep the search in the bar: its label sits beside it. */
+@media (min-width: 801px) and (pointer: coarse) {
+  html body .site-search:not([hidden]) { display: flex; align-items: center; gap: .5rem; }
+  html body .site-search-label {
+    position: static; width: auto; height: auto; overflow: visible; clip: auto; flex: none;
+    color: #fff !important; font: 700 1rem/1.2 var(--dym-body); text-shadow: 1px 1px 0 #000;
+  }
 }
 @media (max-width: 640px) {
   html body header.site-bar { gap: .5rem; padding: .35rem .6rem; min-height: 52px; }
