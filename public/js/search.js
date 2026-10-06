@@ -26,14 +26,14 @@ function buildIndex() {
   ]).then((r) => {
     const v = (i) => (r[i].status === 'fulfilled' ? r[i].value : null);
     const items = [];
-    const add = (t, u, k, extra) => items.push({ t, u, k, hay: norm(t), extra: norm(extra) });
+    const add = (t, u, k, extra, alias = '') => items.push({ t, u, k, hay: norm(`${t} ${alias}`), extra: norm(extra) });
     (v(0) || []).forEach((p) => add(p.t, p.u, p.k, p.d));
     ((v(1) || {}).callbacks || []).forEach((c) => add(c.title, `/callbacks/callback-${c.id}`, 'Callback',
       [c.foreshadow && c.foreshadow.movieTitle, c.fulfillment && c.fulfillment.movieTitle, c.explanation].join(' ')));
     const seen = new Set();
     ((v(2) || {}).characters || []).forEach((c) => {
       seen.add(`/characters/${c.slug}`);
-      add(c.heroName || c.fullName, `/characters/${c.slug}`, 'Character', [c.fullName, c.actor, c.arcThesis].join(' '));
+      add(c.heroName || c.fullName, `/characters/${c.slug}`, 'Character', [c.actor, c.arcThesis].join(' '), c.fullName);
     });
     ((v(3) || {}).characters || []).forEach((c) => {
       const u = c.page || '/characters/all/';
