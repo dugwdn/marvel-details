@@ -1328,6 +1328,13 @@ html body .dym-pop-fb, html body .dym-pop-fallback {
 }
 html body .dym-pop-fallback { background: #fff; color: #111 !important; }
 html body .dym-pop-ico { width: 1.4rem; height: 1.4rem; flex: none; }
+/* A provider not switched on yet: the same button in its final look, dimmed, not clickable. */
+html body .dym-pop-gsoon { background: #1a73e8; color: #fff !important; border: 0; font: 500 1.05rem Roboto, Arial, sans-serif; justify-content: flex-start; padding: 0 3px; }
+html body .dym-pop-gtile { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; background: #fff; border-radius: 4px; flex: none; }
+html body .dym-pop-gsoon .dym-pop-label { flex: 1; text-align: center; }
+html body .dym-pop-soon { opacity: .45; cursor: not-allowed; pointer-events: none; user-select: none; }
+html body .dym-pop-slot { position: relative; }
+html body .dym-pop-tag { position: absolute; z-index: 1; top: -.7rem; right: .5rem; padding: .05rem .45rem; background: #ffd60a; color: #111 !important; border: 2px solid #000; border-radius: 3px; font: 700 .875rem/1.2 var(--dym-body); letter-spacing: .03em; text-transform: uppercase; }
 html body .dym-pop-note { margin: .3rem 0 .6rem; padding: .5rem .7rem; background: #ffd60a; color: #111 !important; border: 3px solid #000; font-weight: 600; }
 html body .dym-pop-small { margin: .4rem 0 .2rem; font-size: .875rem; line-height: 1.45; color: var(--dym-muted); }
 html body .dym-pop-small a, html body .dym-pop-why a { color: var(--dym-link); }

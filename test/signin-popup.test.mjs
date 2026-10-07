@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { WAIT_MS, REST_MS, excludedPage, liveProviders, addTime, restUntil, shouldShow } from '../public/js/signin-popup-core.js';
+import { WAIT_MS, REST_MS, excludedPage, liveProviders, buttons, addTime, restUntil, shouldShow } from '../public/js/signin-popup-core.js';
 
 const NOW = 1_800_000_000_000;
 const on = { google: 'client-id.apps.googleusercontent.com', facebook: false, x: false };
@@ -37,13 +37,17 @@ test('once a visit, then a 3-day rest after closing', () => {
   assert.equal(shouldShow({ ...ready, restedUntil: until, now: NOW + REST_MS + 1 }), true);
 });
 
-test('never with no live provider, and never X', () => {
+test('always Google then Facebook, never X; a provider not on yet is "Coming soon"', () => {
+  assert.deepEqual(buttons(on), [{ id: 'google', live: true }, { id: 'facebook', live: false }], "today's state");
+  assert.deepEqual(buttons({ google: 'id', facebook: true, x: true }), [{ id: 'google', live: true }, { id: 'facebook', live: true }], 'Facebook switches on by itself once its keys are in');
+  assert.deepEqual(buttons(undefined), [{ id: 'google', live: false }, { id: 'facebook', live: false }]);
+  assert.ok(!buttons({ x: true }).some((b) => b.id === 'x'), 'X never shows');
   assert.deepEqual(liveProviders({ google: null, facebook: false, x: true }), []);
-  assert.equal(shouldShow({ ...ready, providers: { google: null, facebook: false, x: true } }), false);
-  assert.deepEqual(liveProviders(on), ['google']);
-  assert.deepEqual(liveProviders({ google: 'id', facebook: true, x: true }), ['google', 'facebook'], 'Facebook appears by itself once its keys are in');
-  assert.deepEqual(liveProviders({ facebook: true }), ['facebook']);
-  assert.deepEqual(liveProviders(undefined), []);
+  assert.deepEqual(liveProviders({ google: 'id', facebook: true, x: true }), ['google', 'facebook']);
+});
+
+test('shows even when no provider is on yet (all buttons dimmed)', () => {
+  assert.equal(shouldShow({ ...ready, providers: { google: null, facebook: false, x: true } }), true);
 });
 
 test('never on the sign-in, My Marvel or privacy pages, or inside RightPlace', () => {
@@ -70,6 +74,13 @@ test('every page loads the pop-up script', () => {
 test('the pop-up offers no X button and says device, not phone', () => {
   const js = fs.readFileSync(new URL('../public/js/signin-popup.js', import.meta.url), 'utf8');
   assert.doesNotMatch(js, /\/api\/auth\/x/);
+  // A "Coming soon" button has no link, is out of Tab order and is marked disabled.
+  for (const m of js.matchAll(/<span class="dym-pop-btn[^"]*dym-pop-soon"[^>]*>/g)) {
+    assert.doesNotMatch(m[0], /href=/);
+    assert.match(m[0], /aria-disabled="true"/);
+    assert.match(m[0], /tabindex="-1"/);
+  }
+  assert.equal([...js.matchAll(/dym-pop-soon"/g)].length, 2, 'both providers have a Coming soon form');
   const copy = [...js.matchAll(/>([^<>${}]{3,})</g)].map((m) => m[1]).join(' ');
   assert.doesNotMatch(copy, /\bphone\b/i);
 });

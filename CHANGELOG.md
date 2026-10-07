@@ -6,9 +6,11 @@ merged-but-unpublished work.
 ## 2026-10-07 (Sign-in pop-up, not live yet)
 - Doug's standing rule: after 12 seconds on the site (added up across pages
   in one visit, only while the tab is in view), a signed-out visitor sees one
-  pop-up, "Create your free account", with a big button for each sign-in
-  that is on right now (Google first, then Facebook once its keys are in;
-  never X). One click goes into the site's own sign-in. Once a visit;
+  pop-up, "Create your free account", with big equal buttons: always Google,
+  then Facebook (never X). A provider that is on is one click into the
+  site's own sign-in; one that isn't on yet (Facebook today) shows dimmed
+  with "Coming soon", not clickable, and switches on by itself once its keys
+  are in. Once a visit;
   closing it (X, backdrop, Esc, Not now, the device's back button) rests it
   for 3 days. Never on `/account`, `/me/`, privacy, inside RightPlace
   (`?from=rightplace`), during a quiz round, or while a typing box has focus.

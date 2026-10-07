@@ -97,13 +97,18 @@ pop up with big, nice, easy buttons ... in one click, they can create the
 account or sign in." And: never pay for a sign-in provider (no X).
 `public/js/signin-popup.js` (loaded on every page by `node tools/menu.mjs`)
 counts visible time in sessionStorage across pages; at 12 s it asks
-`GET /api/auth` and, if no one is signed in and at least one provider is on,
-shows the pop-up: "Create your free account", one line on the perks (Seen it,
-saves, favorites, found-details rank on every device), the 13+ box (the
-site's existing account rule; a click before ticking it shows a note), then
-Google's own button (scaled to 48px) and, once `FACEBOOK_APP_ID` and
-`FACEBOOK_APP_SECRET` are set, Continue with Facebook (`/api/auth/facebook`).
-X is never shown even if its keys exist. Shows once a visit; closing it rests
+`GET /api/auth` and, if no one is signed in, shows the pop-up in its final
+form: "Create your free account", one line on the perks (Seen it, saves,
+favorites, found-details rank on every device), the 13+ box (the site's
+existing account rule; a click before ticking it shows a note), then always
+Google, then Facebook, one equal-size button per row. A provider `/api/auth`
+reports as on is live (Google's own button scaled to 48px; Facebook links to
+`/api/auth/facebook`). One that is off (today Facebook, until
+`FACEBOOK_APP_ID` and `FACEBOOK_APP_SECRET` are set) shows the same button
+dimmed to 45% with a "Coming soon" tag: no link, `aria-disabled`, out of Tab
+order, so it can never lead to an error page; it goes live by itself once
+`/api/auth` reports it. It shows even if no provider is on (all dimmed). X is
+never shown even if its keys exist. Shows once a visit; closing it rests
 it 3 days (localStorage `dym-pop-rest`). Never on `/account`, `/me/`,
 privacy, `?from=rightplace`, during a quiz round, over another dialog, or
 while a typing box has focus. Focus is trapped inside (the rest of the page is

@@ -25,6 +25,16 @@ export function liveProviders(providers) {
   return ORDER.filter((k) => !!p[k]);
 }
 
+/**
+ * Every button the pop-up shows, always Google then Facebook (never X).
+ * live: false means "Coming soon": same size, dimmed, not clickable. It turns
+ * on by itself as soon as /api/auth reports that provider.
+ */
+export function buttons(providers) {
+  const p = providers || {};
+  return ORDER.map((id) => ({ id, live: !!p[id] }));
+}
+
 /** Adds visible time to the running total for this visit. Ignores bad or huge steps (a sleeping laptop). */
 export function addTime(total, stepMs) {
   const t = Number(total) || 0;
@@ -41,13 +51,13 @@ export const restUntil = (now) => now + REST_MS;
  * signedIn: true, false, or null when not known yet (then only the timer is checked
  * so the page knows it is worth asking /api/auth).
  */
-export function shouldShow({ elapsedMs = 0, now = Date.now(), restedUntil = 0, shownThisVisit = false, signedIn = null, providers = null, pathname = '/', search = '', busy = false } = {}) {
+export function shouldShow({ elapsedMs = 0, now = Date.now(), restedUntil = 0, shownThisVisit = false, signedIn = null, pathname = '/', search = '', busy = false } = {}) {
   if (signedIn === true) return false;
   if (shownThisVisit) return false;
   if (excludedPage(pathname, search)) return false;
   if ((Number(restedUntil) || 0) > now) return false;
   if (elapsedMs < WAIT_MS) return false;
   if (busy) return false;
-  if (providers !== null && liveProviders(providers).length === 0) return false;
+  // It shows even before any provider is on (all buttons "Coming soon").
   return true;
 }
