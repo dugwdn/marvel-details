@@ -63,6 +63,8 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   every search box asks for a small keyboard and has a visible label. See
   "Typing boxes and the keyboard" below. On-screen check: 16 failing before,
   0 after.
+- **Sign-in pop-up (2026-10-07, branch `sign-in-popup`, not live):** Doug's
+  standing rule for every site with accounts. See "Sign-in pop-up" below.
 - **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
   anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
   Never add a card that looks clickable without a link behind it.
@@ -88,6 +90,25 @@ List box in `tools/build-directory.py`. `test/keyboard.test.mjs` enforces the
 tags and attributes; `scripts/keyboard-check.mjs` taps every box at 390x640
 with a 300px keyboard (add a line to its `CASES` for a new box; run it against
 `npm run dev` or `python3 -m http.server -d public 8788`).
+
+## Sign-in pop-up (standing rule, Doug 2026-10-07)
+"After ten or fifteen seconds on the website, if a user isn't logged in, a
+pop up with big, nice, easy buttons ... in one click, they can create the
+account or sign in." And: never pay for a sign-in provider (no X).
+`public/js/signin-popup.js` (loaded on every page by `node tools/menu.mjs`)
+counts visible time in sessionStorage across pages; at 12 s it asks
+`GET /api/auth` and, if no one is signed in and at least one provider is on,
+shows the pop-up: "Create your free account", one line on the perks (Seen it,
+saves, favorites, found-details rank on every device), the 13+ box (the
+site's existing account rule; a click before ticking it shows a note), then
+Google's own button (scaled to 48px) and, once `FACEBOOK_APP_ID` and
+`FACEBOOK_APP_SECRET` are set, Continue with Facebook (`/api/auth/facebook`).
+X is never shown even if its keys exist. Shows once a visit; closing it rests
+it 3 days (localStorage `dym-pop-rest`). Never on `/account`, `/me/`,
+privacy, `?from=rightplace`, during a quiz round, over another dialog, or
+while a typing box has focus. Focus is trapped inside (the rest of the page is
+`inert`) and returns where it was; the device's back button closes it. Rules
+live in `public/js/signin-popup-core.js`, tested by `test/signin-popup.test.mjs`.
 
 ## Plan
 See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: write the 7 missing articles, finish PR #28 media, keep link checks green.

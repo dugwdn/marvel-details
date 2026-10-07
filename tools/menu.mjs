@@ -37,6 +37,8 @@ const MEMBERS = '<script type="module" src="/js/members.js"></script>';
 const SEARCH = '<script type="module" src="/js/search.js"></script>';
 // Typing boxes stay in view above the on-screen keyboard (Doug's standing rule, 2026-10-06; see CLAUDE.md).
 const KEYBOARD = '<script type="module" src="/js/keyboard.js"></script>';
+// Sign-in pop-up for signed-out visitors after 12 seconds (Doug's standing rule, 2026-10-07; see CLAUDE.md).
+const SIGNIN_POPUP = '<script type="module" src="/js/signin-popup.js"></script>';
 // Android Chrome shrinks the page above the keyboard instead of covering it.
 export function viewportFor(html) {
   return html.replace(/<meta name="viewport" content="([^"]*)">/g, (all, c) =>
@@ -202,6 +204,7 @@ export function addMenu(html, rel) {
   if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
   if (!html.includes('/js/search.js')) html = html.replace('</body>', `    ${SEARCH}\n</body>`);
   if (!html.includes('/js/keyboard.js')) html = html.replace('</body>', `    ${KEYBOARD}\n</body>`);
+  if (!html.includes('/js/signin-popup.js')) html = html.replace('</body>', `    ${SIGNIN_POPUP}\n</body>`);
   html = viewportFor(html);
   // Remove the project links from a previous run (every copy) first.
   html = html.replace(/\n[ \t]*<div class="site-footer-links">[\s\S]*?<\/div>/g, '');

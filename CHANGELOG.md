@@ -3,6 +3,19 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-07 (Sign-in pop-up, not live yet)
+- Doug's standing rule: after 12 seconds on the site (added up across pages
+  in one visit, only while the tab is in view), a signed-out visitor sees one
+  pop-up, "Create your free account", with a big button for each sign-in
+  that is on right now (Google first, then Facebook once its keys are in;
+  never X). One click goes into the site's own sign-in. Once a visit;
+  closing it (X, backdrop, Esc, Not now, the device's back button) rests it
+  for 3 days. Never on `/account`, `/me/`, privacy, inside RightPlace
+  (`?from=rightplace`), during a quiz round, or while a typing box has focus.
+- `public/js/signin-popup.js` (page) and `public/js/signin-popup-core.js`
+  (rules, tested by `test/signin-popup.test.mjs`); every page loads it via
+  `node tools/menu.mjs`.
+
 ## 2026-10-06 (Typing boxes and the on-screen keyboard, not live yet)
 - Doug's standing rule: every typing box, and what tells you what to type in
   it, stays in view while the device keyboard is out, and the keyboard is as
