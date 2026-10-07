@@ -21,6 +21,11 @@ The member-perks tests run in the same `npm test`:
   saved list with the account.
 
 ## Before every publish
+- Sign-in pop-up (2026-10-07): signed out, in a fresh window, stay 12 s on any
+  page (or 6 s on two pages): the pop-up shows Google, then Facebook (dimmed
+  with "Coming soon" and not clickable until its keys are in), never X. Tick 13+, sign in, it says "You're in". Close it and
+  reload: it stays away for 3 days. It never shows on /account, /me/,
+  privacy, during a quiz round, or while typing in the search box.
 1. Preview with `npx wrangler pages dev public --port 8788` (see RUNBOOK).
 2. Each feature loads and its list fills in: scenes (21), callbacks (40),
    characters (20), rabbit holes (8), map (25 nodes, 51 links in the

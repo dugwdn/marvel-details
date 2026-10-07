@@ -105,6 +105,8 @@ const api = {
     q.best[tierId] = Math.max(q.best[tierId] || 0, points);
     commit();
   },
+  // The sign-in pop-up (signin-popup.js) calls this after a sign-in, so the list starts syncing.
+  noteSignIn(user) { noteAccount(user); },
   clearDevice() { state = core.emptyState(); ls.del(RANK_CACHE); commit({ sync: false }); },
 };
 window.dymMembers = api;

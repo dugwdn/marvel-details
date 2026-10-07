@@ -64,7 +64,7 @@ export async function fillSignIn(box, { why = 'Sign in to join the discussions a
 }
 
 let gsi = null;
-function loadGsi() {
+export function loadGsi() {
   gsi ||= new Promise((ok, no) => {
     const s = document.createElement('script');
     s.src = 'https://accounts.google.com/gsi/client';
