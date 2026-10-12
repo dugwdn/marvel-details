@@ -127,3 +127,18 @@ page is enough attribution for CC BY/BY-SA is on the lawyer list; until then
 the page lists every photo in full. Media in headers: pages about a film carry
 its trailer and cast photos inside the header box (`addFilmHeroes` in
 tools/build-media.mjs, also called by build-hubs.mjs and build-callbacks.js).
+
+## ADR-014: Live Edit, Doug's on-page editor (2026-10-12)
+Doug, after trying it on webdesignnerd.com: "i want it, visible and usable to
+me only of course, on all of my sites". `functions/_middleware.js` runs the
+shared module (`functions/_lib/live-edit/`, copied from dugwdn/wdn-website
+`tools/live-edit/` by its `build.mjs`; edit it there). `?wdn-edit` on any page
+signs Doug in through his WordPress login on webdesignnerd.com, which returns a
+signed one-time pass; this site keeps no passwords or secrets. Edits are
+overrides in KV namespace `marvel-details-live-edit` (binding `LIVE_EDIT`); the
+built pages never change, and pages with no edits pass through untouched.
+Supersedes the "only `/api/*` runs code" line of ADR-007: `public/_routes.json`
+now sends every page to Functions, with `/css/*`, `/js/*`, `/img/*` and
+`/data/*` excluded. Header and footer edits apply on every page; forms, ads and
+the quiz are never editable. To make a wording change permanent, edit the
+source and then use Changes > Original on that edit.
