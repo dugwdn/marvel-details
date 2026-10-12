@@ -3,6 +3,16 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-12 (Weekly news scan, not live yet)
+- Coming Soon page updated from New York Comic Con (October 8): Your
+  Friendly Neighborhood Spider-Man season 2 dated January 13, 2027;
+  Daredevil: Born Again season 3 confirmed as the final season; X-Men '97
+  season 3 (2027); three Marvel Zombies specials (2027, 2028, 2029); new
+  live-action series Zodiac (2028). VisionQuest first-episode screening and
+  early reactions, Doomsday ticket and runtime details, and a Deadline report
+  that Wonder Man won't get a second season. No new title released this week,
+  so the character list is unchanged.
+
 ## 2026-10-07 (Sign-in pop-up, not live yet)
 - Doug's standing rule: after 12 seconds on the site (added up across pages
   in one visit, only while the tab is in view), a signed-out visitor sees one
