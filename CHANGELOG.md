@@ -3,6 +3,11 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-12 (Live Edit, not live yet)
+- Doug can change words and pictures on any page himself: add `?wdn-edit`
+  to an address, sign in through webdesignnerd.com, click **Edit page**.
+  Visitors never see the editor, only his saved changes (ADR-014).
+
 ## 2026-10-12 (Weekly news scan, not live yet)
 - Coming Soon page updated from New York Comic Con (October 8): Your
   Friendly Neighborhood Spider-Man season 2 dated January 13, 2027;

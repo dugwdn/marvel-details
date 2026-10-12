@@ -12,6 +12,12 @@ A free, static fan site about hidden details in Marvel movies, branded
 Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-06, audited overnight)
+
+- **Live Edit (2026-10-12, ADR-014, goes live with the next laptop deploy):**
+  `?wdn-edit` on any page signs Doug in through webdesignnerd.com and shows
+  **Edit page**; edits live in KV `LIVE_EDIT` (`marvel-details-live-edit`) and
+  `functions/_middleware.js` adds them to pages. Module copy in
+  `functions/_lib/live-edit/` (from dugwdn/wdn-website `tools/live-edit/`).
 - **What is live:** https://mcueastereggs.com and https://marvel-details.pages.dev serve the same deploy: commit **79366ad** (PR #23 rebrand, which already carried sign-in #18 and member perks #21). Checked from the sandbox on 2026-10-06: the brand banner reads MCU Easter Eggs, `/me/` returns 200, `/api/auth` answers with Google on and Facebook and X off, GA4 is still the placeholder `G-XXXXXXXXXX`, `/more/` is a 404 and the home page has no search box.
 - **Merged to `phase-1-build` but NOT deployed** (needs Doug's typed laptop line, RUNBOOK "Publish"): #24 More from us (`/more/`, footer link), #25 GA4 `G-NESPZD6XSQ` on every page, #26 compact header with search and member chip plus the readability pass, #27 AdSense slot `7081225657` in `js/ads.js` (ads stay off `/me/` and `/account`). Tip of `phase-1-build` is 3c44f57 plus whatever docs and link fixes merge after it.
 - **Open:** draft PR #28 (`feat/images-and-trailers`: credits page, place photos, official-trailer rule), still being worked on. Stale branches (all merged or superseded, safe for Doug to prune later): design/marvel-style, design/marvel-style-2, docs/live-ecf0b8b, docs/standard-docs, feat/* and fix/* already merged, heroic-menu-buttons, map-popup, popup-buttons, member-perks, `main` (old, not used).

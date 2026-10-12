@@ -18,3 +18,8 @@ binding = "DB"
 database_name = "marvel-details"
 database_id = "4bb656b4-ca84-4b65-9f4d-179585909b94"
 migrations_dir = "migrations"
+
+# Live Edit (Doug's on-page editor, signed in through webdesignnerd.com): edits, pictures, owner sessions. Created 2026-10-12.
+[[kv_namespaces]]
+binding = "LIVE_EDIT"
+id = "23455c5ae5514c9cac0cdee2b8fb0b23"
