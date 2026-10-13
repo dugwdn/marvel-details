@@ -1,8 +1,13 @@
-# Cloudflare Pages settings for marvel-details (read by `wrangler pages deploy`
-# and `wrangler pages dev`). Secrets (FACEBOOK_APP_SECRET, X_CLIENT_SECRET) are
-# set with `npx wrangler pages secret put NAME --project-name marvel-details`,
+# Cloudflare Pages settings for mcueastereggs.com. The Pages project
+# mcueastereggs is connected to this repo and publishes every merge to
+# phase-1-build by itself (no build command, output folder public); `name` must
+# match it. The older upload-only project marvel-details stays as the by-hand
+# fallback (`npm run deploy` passes --project-name, which overrides this name).
+# Secrets (FACEBOOK_APP_SECRET, X_CLIENT_SECRET) are set in the dashboard on
+# mcueastereggs (Settings > Variables and Secrets) or with
+# `npx wrangler pages secret put NAME --project-name mcueastereggs`,
 # never written here.
-name = "marvel-details"
+name = "mcueastereggs"
 pages_build_output_dir = "public"
 compatibility_date = "2026-09-01"
 

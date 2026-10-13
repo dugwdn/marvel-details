@@ -10,6 +10,12 @@ npm run dev        (same as: npx wrangler pages dev public --port 8788)
 Open http://localhost:8788. This behaves like Pages, including 404s.
 
 ## Publish (needs Doug's OK)
+Once the Pages project `mcueastereggs` is connected to this repo (Cloudflare
+dashboard, production branch `phase-1-build`, no build command, output
+`public`) and holds the mcueastereggs.com domain, merging a PR into
+`phase-1-build` is the publish: Cloudflare builds it by itself and nobody runs
+anything. The steps below are the by-hand fallback to the old project.
+
 From the repo folder, on the branch being published (normally
 `phase-1-build` after a PR is merged), with a clean working copy:
 ```
