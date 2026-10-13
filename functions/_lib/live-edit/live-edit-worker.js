@@ -10,6 +10,9 @@
 //
 // Storage: one KV namespace bound as LIVE_EDIT: "items" (every override), "img:<id>" (uploaded
 // pictures), "sess:<hash>" (owner sessions), "used:<nonce>" (spent passes), "key" (the public key).
+// Visitors' page views read "items" from this Worker's memory or Cloudflare's edge cache (kept
+// VISITOR_SECONDS), not from KV: the free plan allows 100,000 KV reads a day across every site, and
+// one read per page view used half of it on 2026-10-13. Only the owner (cookie) reads KV every time.
 //
 // Use:
 //   import { createLiveEdit } from './live-edit/live-edit-worker.js';
@@ -26,6 +29,7 @@ const SESSION_DAYS = 30;
 const MAX_ITEMS = 500;
 const MAX_LEN = 20000;
 const MAX_IMG = 10 * 1024 * 1024;
+const VISITOR_SECONDS = 300; // how long a visitor can see the previous edits after Doug saves (he sees his own at once)
 const IMG_TYPES = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/gif': 'gif', 'image/webp': 'webp', 'image/avif': 'avif' };
 
 // ---- Small helpers ----
@@ -188,6 +192,32 @@ export function createLiveEdit(options = {}) {
     return all && typeof all === 'object' ? all : {};
   }
 
+  // Visitors' copy of "items": memory first (this Worker instance), then the edge cache, then KV.
+  // Cache API calls are free and don't count against KV or Worker limits.
+  const memo = new Map(); // host -> { all, until }
+  const cacheKey = url => new Request(url.origin + '/__live-edit/cached-items');
+  const edgeCache = () => (typeof caches !== 'undefined' && caches.default) || null;
+  async function visitorItems(kv, url, now = Date.now()) {
+    const hit = memo.get(url.host);
+    if (hit && hit.until > now) return hit.all;
+    let all = null;
+    const cache = edgeCache();
+    try { const r = cache && await cache.match(cacheKey(url)); if (r) all = await r.json(); } catch { /* fall back to KV */ }
+    if (!all) {
+      // Older versions are the owner's only, so they never go into the shared copy.
+      all = Object.fromEntries(Object.entries(await items(kv, false)).map(([id, { prev, ...rest }]) => [id, rest]));
+      try { if (cache) await cache.put(cacheKey(url), new Response(JSON.stringify(all), { headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=' + VISITOR_SECONDS } })); } catch { /* still fine without it */ }
+    }
+    memo.set(url.host, { all, until: now + VISITOR_SECONDS * 1000 });
+    return all;
+  }
+  // After a save: this instance and this data center show the new edits at once; others within VISITOR_SECONDS.
+  async function saved(kv, url, all) {
+    await kv.put('items', JSON.stringify(all));
+    memo.set(url.host, { all, until: Date.now() + VISITOR_SECONDS * 1000 });
+    try { const cache = edgeCache(); if (cache) await cache.delete(cacheKey(url)); } catch { /* expires on its own */ }
+  }
+
   const sameOrigin = (req, url) => req.headers.get('origin') === url.origin;
 
   async function handle(req, env) {
@@ -249,7 +279,7 @@ export function createLiveEdit(options = {}) {
       const all = await items(kv, true);
       if (!all[it.id] && Object.keys(all).length >= MAX_ITEMS) return fail('Too many saved changes. Use Original on a few first.');
       all[it.id] = it;
-      await kv.put('items', JSON.stringify(all));
+      await saved(kv, url, all);
       return json(it);
     }
     if (path === 'item' && req.method === 'DELETE') {
@@ -257,7 +287,7 @@ export function createLiveEdit(options = {}) {
       const all = await items(kv, true);
       if (!all[id]) return fail('That change was already removed.', 404);
       delete all[id];
-      await kv.put('items', JSON.stringify(all));
+      await saved(kv, url, all);
       return json({ removed: id });
     }
     if (path === 'upload' && req.method === 'POST') {
@@ -283,7 +313,7 @@ export function createLiveEdit(options = {}) {
     if (url.searchParams.has('wdn-edit') && !isOwner) {
       return Response.redirect(url.origin + '/__live-edit/start?back=' + encodeURIComponent(url.pathname + url.search), 302);
     }
-    const all = await items(kv, isOwner);
+    const all = isOwner ? await items(kv, true) : await visitorItems(kv, url);
     const pagePath = url.pathname || '/';
     const mine = Object.values(all).filter(it => it.scope === '*' || it.scope === pagePath);
     if (!mine.length && !isOwner) return res;
