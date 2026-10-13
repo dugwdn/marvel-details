@@ -57,7 +57,9 @@ const scriptJson = v => JSON.stringify(v).replace(/</g, '\\u003c').replace(/\u20
 const KEEP_TAGS = new Set(['a', 'b', 'strong', 'em', 'i', 'u', 's', 'small', 'sub', 'sup', 'br', 'span', 'mark', 'code', 'abbr', 'time']);
 const escText = s => String(s).replace(/&(?![a-z0-9#]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const escAttr = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-const okHref = h => /^(https?:\/\/|mailto:|tel:|sms:|\/(?!\/)|#)/i.test(h);
+// Web, mail and phone links, site paths, and relative paths like "topics/index.html" (no scheme,
+// so never javascript: or data:). Relative links were once dropped, which emptied every card link.
+const okHref = h => /^(https?:\/\/|mailto:|tel:|sms:|\/(?!\/)|#|\?)/i.test(h) || /^(\.{1,2}\/)*[\w~%-][\w~%.\-\/]*([?#][^\s"'<>]*)?$/.test(h) && !/^[a-z][a-z0-9+.-]*:/i.test(h);
 
 // Rebuilds every tag from scratch: only inline formatting tags survive, links keep only a safe
 // href, target and rel, other tags keep only class; everything else (scripts, styles, handlers,
