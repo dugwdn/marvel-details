@@ -101,3 +101,14 @@ test('cards on movie hubs that look like links are links', () => {
     assert.doesNotMatch(hub.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g, ''), /Read (Full Analysis|more)\s*→/i, f.id);
   }
 });
+
+// Cloudflare Pages redirects /x.html to /x and /dir to /dir/, and Google skips
+// sitemap addresses that redirect ("Page with redirect"), so list the final ones.
+test('sitemap lists each page at the address Cloudflare serves without a redirect', () => {
+  const bad = [];
+  for (const [, loc] of fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8').matchAll(/<loc>https?:\/\/[^/<]+(\/[^<]*)<\/loc>/g)) {
+    if (loc.endsWith('.html')) bad.push(`${loc} (drop .html)`);
+    else if (!loc.endsWith('/') && fs.existsSync(path.join(ROOT, loc, 'index.html'))) bad.push(`${loc} (add /)`);
+  }
+  assert.deepEqual(bad, []);
+});
