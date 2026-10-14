@@ -29,7 +29,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 - **Ads:** AdSense publisher ca-pub-7178251279168670, slot 7081225657 in `js/ads.js`. Since PR `ads-placeholders-2026-10-06` every ad page shows three always-visible dashed "Ad space" boxes (top below the menu, mid, end; 280px phone / 250px desktop, styles in `theme.css`) that turn into the ad once AdSense fills; top and end are written into the HTML by `node tools/menu.mjs` with `data-ad-placeholder`. No ads on `/me/`, `/account`, `/map/` (full-screen map), privacy, credits, more. AdSense is "Getting ready" (not approved).
 - **Menu and look:** shared comic banner and menu written into each page by `node tools/menu.mjs` (run after adding a page, and after any CSS or JS change: it stamps `?v=<file hash>` on CSS and JS links because the zone caches them 4 hours). Articles are comic strips (`python3 tools/comic-panels.py`).
 - **Images rule:** no studio posters, stills or character art (copyright, ads at risk). Allowed: YouTube embeds of official or licensed channels (YouTube's own player), and free-license Wikimedia Commons photos with a credit line. IMDb text and photos can't be copied; plain facts (dates, cast) can be stated.
-- **Known gaps:** 7 articles still unwritten (below). The About page and bylines name "house writers" (pen names, not people): Doug has not decided how to present them. marveldetails.com still serves Doug's old Wix site; moving it waits on Doug. Search Console for mcueastereggs.com not set up yet (2026-10-14: sitemap now lists only final, non-redirecting addresses, checked by test/links.test.mjs).
+- **Known gaps:** 7 articles still unwritten (below). The About page and bylines name "house writers" (pen names, not people): Doug has not decided how to present them. marveldetails.com still serves Doug's old Wix site; moving it waits on Doug. Search Console: mcueastereggs.com is a Domain property in Doug's account; sitemap.xml (91 pages, only final non-redirecting addresses, checked by test/links.test.mjs) submitted 2026-10-14.
 - **Images and trailers (PR #28, ADR-010):** all media is listed in
   `public/data/media-credits.json`; `node tools/build-credits.mjs` rebuilds
   `/credits`, then `node tools/menu.mjs`. Trailers on all 5 hubs and 4
@@ -123,7 +123,7 @@ live in `public/js/signin-popup-core.js`, tested by `test/signin-popup.test.mjs`
 
 ## Plan
 See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: write the 7 missing articles, finish PR #28 media, keep link checks green.
-Waiting on Doug: the typed deploy line, Facebook and X sign-in keys, Search Console and sitemap for mcueastereggs.com, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
+Waiting on Doug: the typed deploy line, Facebook and X sign-in keys, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
 
 ## Working rules
 - Project-wide rules (branch and PR, never merge or deploy without Doug's
