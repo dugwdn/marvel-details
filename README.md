@@ -3,6 +3,7 @@
 A static fan site about hidden details in Marvel movies, live at
 https://mcueastereggs.com (also marvel-details.pages.dev). Not affiliated with Marvel Studios or Disney.
 
+How it was built, why, and how to take over: [HANDOFF.md](HANDOFF.md).
 Start with [CLAUDE.md](CLAUDE.md) for the current state and plan.
 To preview or publish, see [RUNBOOK.md](RUNBOOK.md).
 

@@ -1,6 +1,7 @@
 # MCU Easter Eggs (repo: marvel-details)
 
 Read this first. It says what the project is, where it runs, and what's next.
+Handoff (how it was built, why, how to take over): `HANDOFF.md`.
 The other standard docs: `PRD.md` (what and why), `TRD.md` (how it's built),
 `ADR.md` (decisions), `ROADMAP.md`, `RUNBOOK.md` (how to deploy and fix),
 `TEST_PLAN.md`, `CHANGELOG.md`. Feature details are in `docs/features/`
@@ -13,6 +14,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-10-06, audited overnight)
 
+- HANDOFF.md added 2026-10-15 (how it was built, why, how to take over).
 - **Live Edit (2026-10-12, ADR-014, goes live with the next laptop deploy):**
   `?wdn-edit` on any page signs Doug in through webdesignnerd.com and shows
   **Edit page**; edits live in KV `LIVE_EDIT` (`marvel-details-live-edit`) and
@@ -133,6 +135,7 @@ See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: writ
 Waiting on Doug: his member id in MOD_MEMBERS and the Turnstile keys (boards), the typed deploy line, Facebook and X sign-in keys, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
 
 ## Working rules
+- **HANDOFF.md (Doug, 2026-10-15, standing):** update HANDOFF.md in the same PR as any change to hosting, domain/DNS, the data model or migrations, the build/deploy path, scheduled jobs, outside services, or a key decision (new ADR).
 - Project-wide rules (branch and PR, never merge or deploy without Doug's
   OK, plain-English replies, most-traffic wins for names and wording) come
   from the Business HQ project.
