@@ -142,7 +142,7 @@ export function homeTop(m) {
         <p class="media-lead">The actors behind ${m.faces.length} characters, in real life. Tap a face to see the character.</p>
         <div class="faces-spotlight" data-rotate="8000" aria-roledescription="carousel" aria-label="Actor spotlight">
             ${spot.map((f, i) => `<div class="spot-slide"${i ? ' hidden' : ''} aria-roledescription="slide" aria-label="${i + 1} of ${spot.length}">
-            ${face(f, '(max-width: 640px) 60vw, 280px', i === 0)}
+            ${face(f, '(max-width: 640px) 60vw, 280px', false)}
             <div class="spot-text"><p class="spot-kicker">Spotlight</p><h3><a href="${f.href}">${esc(f.c.name)}</a></h3><p class="spot-sub">${f.img.role === 'voices' ? 'Voiced' : 'Played'} by ${esc(f.img.subject)}. In ${f.c.titles.length} MCU titles, first in <a href="${titleHref(m, f.c.first)}">${esc(f.c.first)}</a>.</p>
                 ${spotInfo(m, f)}</div>
             </div>`).join('\n            ')}
@@ -152,6 +152,79 @@ export function homeTop(m) {
             ${wall.map((f) => face(f, '(max-width: 640px) 30vw, 160px', false)).join('\n            ')}
         </div>
         <p class="media-more"><a href="/characters/all/">See all ${m.mcu.characters.length} characters</a></p>
+    </section>`;
+}
+
+// Home lead (ADR-017, Doug 2026-10-15: "the top of the home screen ... should be our most thrilling content.
+// Use your theories. Busy message boards, cool easter eggs"). The newest movie's poster and trailer, the theory
+// of the week, the newest board posts, and three easter eggs. The actor wall follows it.
+const slug = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const readJson = (f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', f), 'utf8'));
+export const NEWEST = { film: 'Spider-Man: Brand New Day', href: '/articles/spider-man-brand-new-day-easter-eggs',
+  line: 'Every easter egg, callback and comic reference fans have found so far, checked and explained.' };
+const BOARD_PICKS = ['fan-theories', 'spider-man', 'easter-eggs'];
+
+export function homeHero(m) {
+  const p = (m.credits.posters || []).find((x) => x.film === NEWEST.film);
+  const t = heroTrailer(m, NEWEST.film, null, 'Watch the trailer');
+  return `<section class="home-hero" aria-label="Newest Marvel movie"${p ? ` style="--hh-bg:url('${p.file}')"` : ''}>
+        <div class="hh-in">
+            ${p ? `<img class="hh-poster" src="${p.file}" alt="${esc(p.subject)}" width="${p.width}" height="${p.height}" fetchpriority="high" decoding="async">` : ''}
+            <div class="hh-text">
+                <p class="hh-kicker">Newest Marvel movie</p>
+                <h2 class="hh-title">${esc(NEWEST.film)}</h2>
+                <p class="hh-sub">${esc(NEWEST.line)}</p>
+                <a class="hh-cta" href="${NEWEST.href}">See the easter eggs</a>
+            </div>
+            ${t ? `<div class="hh-trailer">${t}</div>` : ''}
+        </div>
+    </section>`;
+}
+
+export function homeLead(m) {
+  const holes = readJson('rabbit-holes.json').rabbitHoles;
+  const boards = readJson('boards.json');
+  const blist = Array.isArray(boards) ? boards : boards.boards;
+  const cbs = readJson('callbacks.json');
+  const callbacks = Array.isArray(cbs) ? cbs : Object.values(cbs).find(Array.isArray);
+  const week = Math.floor(Date.now() / 604800000) % holes.length;
+  const filmFor = (h) => m.mcu.titles.find((x) => (h.movies || []).some((id) => slug(x.title) === id))?.title;
+  const theory = (h, i) => {
+    const film = filmFor(h);
+    const t = film ? heroTrailer(m, film, null, 'Watch the trailer') : '';
+    return `<article class="hl-theory" data-week-item${i === week ? '' : ' hidden'}>
+                ${t}
+                <h3><a href="/rabbit-holes/${h.slug || h.id}">${esc(h.title)}</a></h3>
+                <p>${esc(h.summary)}</p>
+                <a class="hh-cta" href="/rabbit-holes/${h.slug || h.id}">Read the theory</a>
+            </article>`;
+  };
+  const starters = BOARD_PICKS.map((b) => blist.find((x) => x.slug === b)).filter(Boolean);
+  const cb = callbacks[0];
+  const pick = (id) => holes.find((h) => h.id === id);
+  const eggs = [
+    { k: 'Callback', href: `/callbacks/callback-${cb.id}`, t: cb.title, d: cb.explanation },
+    ...['steve-rogers-timeline', 'mind-stone-corruption'].map(pick).filter(Boolean).map((h) => ({ k: 'Rabbit hole', href: `/rabbit-holes/${h.slug || h.id}`, t: h.title, d: h.tagline || h.summary })),
+  ];
+  const short = (s) => { const x = String(s || ''); const end = x.search(/[.!?](\s|$)/); return end > 0 ? x.slice(0, end + 1) : x; };
+  return `<section class="home-lead" aria-label="Theories, boards and easter eggs">
+        <div class="hl-two">
+            <div class="hl-card" data-weekly>
+                <p class="hl-kicker">Theory of the week</p>
+            ${holes.map(theory).join('\n            ')}
+            </div>
+            <div class="hl-card hl-boards">
+                <p class="hl-kicker">On the boards</p>
+                <ul class="d-recent hl-feed" data-recent data-keep data-max="4">
+                ${starters.map((b) => `<li><a href="/boards/${b.slug}"><b>${esc(b.name)}</b> <span class="small">Starter question from us</span><span class="d-snip">${esc(b.starter)}</span><span class="small">Be the first to answer</span></a></li>`).join('\n                ')}
+                </ul>
+                <a class="hh-cta" href="/boards/">Join the boards</a>
+            </div>
+        </div>
+        <h2 class="hl-h">Easter eggs people argue about</h2>
+        <div class="hl-eggs">
+            ${eggs.map((e) => `<a class="hl-egg" href="${e.href}"><span class="hl-kicker">${e.k}</span><strong>${esc(e.t)}</strong><span>${esc(short(e.d))}</span></a>`).join('\n            ')}
+        </div>
     </section>`;
 }
 
@@ -337,6 +410,9 @@ const addScript = (html) => (/src="\/js\/media\.js(\?v=[0-9a-f]+)?"/.test(html) 
 export function build() {
   const m = loadMedia();
   let home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  home = home.replace(/\n[ \t]*<section class="promo-banner"[\s\S]*?<\/section>\n?/, '\n');
+  home = between(home, 'home-hero', homeHero(m), /<div class="container">\s*(?:<!-- media:home-lead -->|<!-- media:home-top -->)/);
+  home = between(home, 'home-lead', homeLead(m), /<!-- media:home-top -->/);
   home = between(home, 'home-top', homeTop(m), /<h2 class="section-title">Newest Findings/);
   home = between(home, 'home-watch', homeWatch(m), /<h2 class="section-title">Featured Movies/);
   fs.writeFileSync(path.join(ROOT, 'index.html'), addScript(home));

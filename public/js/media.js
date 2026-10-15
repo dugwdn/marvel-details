@@ -21,6 +21,14 @@
     if (window.gtag) window.gtag('event', 'play_trailer', { video_id: btn.dataset.yt });
   });
 
+  // Home "Theory of the week": the same theory for everyone all week (ADR-017).
+  for (const box of document.querySelectorAll('[data-weekly]')) {
+    const items = [...box.querySelectorAll('[data-week-item]')];
+    if (!items.length) continue;
+    const pick = Math.floor(Date.now() / 604800000) % items.length;
+    items.forEach((el, n) => { el.hidden = n !== pick; });
+  }
+
   for (const box of document.querySelectorAll('.faces-spotlight')) {
     const slides = [...box.querySelectorAll('.spot-slide')];
     if (slides.length < 2) continue;

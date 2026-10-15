@@ -363,7 +363,9 @@ if (threadBox) {
 const recent = document.querySelector('[data-recent]');
 if (recent) {
   api('/api/discuss/recent').then(async v => {
-    const posts = (v.posts || []).filter(p => !mine.blocks.has(p.by) && !mine.hides.has(p.id));
+    const posts = (v.posts || []).filter(p => !mine.blocks.has(p.by) && !mine.hides.has(p.id)).slice(0, +recent.dataset.max || 50);
+    // Home keeps its board starter questions until someone has posted (data-keep).
+    if (!posts.length && recent.hasAttribute('data-keep')) return;
     recent.innerHTML = posts.length ? (await Promise.all(posts.map(async p => {
       const href = p.thread.startsWith('p:') ? `/${p.thread.slice(2)}#c-${p.id}` : `/boards/thread?id=${encodeURIComponent(p.root)}#c-${p.id}`;
       const where = p.thread.startsWith('p:') ? pageName(p.thread.slice(2)) : (p.rootTitle || 'a thread');

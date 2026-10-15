@@ -94,7 +94,7 @@ test('the home page carries the photo wall, the spotlight and every film trailer
   assert.ok((html.match(/class="face-tile"/g) || []).length >= 24, 'photo wall is too small');
   assert.match(html, /class="faces-spotlight"/);
   assert.match(html, /src="\/js\/media\.js(\?v=[0-9a-f]{8})?"/);
-  // Only the first spotlight photo loads eagerly; everything else waits until it is near the screen.
+  // Only the newest-movie poster at the top loads eagerly (ADR-017); everything else waits until it is near the screen.
   assert.equal((html.match(/fetchpriority="high"/g) || []).length, 1);
 });
 
@@ -135,7 +135,9 @@ test('posters: one per movie page, only there, small and credited', () => {
   assert.ok(posters.length >= 5);
   const credits_html = fs.readFileSync(path.join(ROOT, 'credits.html'), 'utf8');
   for (const p of posters) {
-    assert.match(p.page, /^\/movies\/[a-z0-9-]+$/, p.file);
+    // A film's own page; the newest movie's poster may also lead the home page (ADR-017).
+    assert.match(p.page, /^\/(movies|articles)\/[a-z0-9-]+$/, p.file);
+    for (const extra of p.pages || []) assert.equal(extra, '/', p.file);
     assert.match(p.file, /^\/img\/posters\/[a-z0-9-]+\.jpg$/);
     assert.ok(p.width <= 480 && fs.statSync(path.join(ROOT, p.file)).size < 120 * 1024, p.file);
     assert.ok(p.owner && p.sourceUrl.startsWith('https://'), p.file);
@@ -147,6 +149,7 @@ test('posters: one per movie page, only there, small and credited', () => {
     if (!used.length) continue;
     const page = '/' + path.relative(ROOT, file).replace(/\.html$/, '');
     assert.equal(used.length, 1, `${file} shows ${used.length} posters`);
-    assert.ok(posters.some((p) => p.page === page && used[0].includes(p.file)), `${file} shows a poster that is not its own`);
+    const own = (p) => p.page === page || (page === '/index' && (p.pages || []).includes('/'));
+    assert.ok(posters.some((p) => own(p) && used[0].includes(p.file)), `${file} shows a poster that is not its own`);
   }
 });
