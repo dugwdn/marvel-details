@@ -89,7 +89,7 @@ ${works.map(w => `                <li><a href="/trivia/${w.slug}">${esc(w.work)}
 
 export function workPage(data, w) {
   const groups = KINDS.map(k => [k, w.facts.filter(f => f.kind === k)]).filter(([, fs]) => fs.length);
-  const toc = groups.length > 1 ? `            <nav class="tv-toc" aria-label="On this page">${groups.map(([k]) => `<a href="#${KIND_ID(k)}">${esc(k)}</a>`).join('')}</nav>\n` : '';
+  const toc = groups.length > 1 ? `            <div class="tv-toc" role="navigation" aria-label="On this page">${groups.map(([k]) => `<a href="#${KIND_ID(k)}">${esc(k)}</a>`).join('')}</div>\n` : '';
   const desc = `${w.work} trivia: ${w.facts[0].text}`.slice(0, 155).replace(/\s+\S*$/, '') + '…';
   return page({
     url: `/trivia/${w.slug}`,

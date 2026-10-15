@@ -27,7 +27,13 @@ export const theories = (root = ROOT) => JSON.parse(fs.readFileSync(path.join(ro
 const stamp = s => `<span class="th-stamp ${esc(s)}">${esc(STATUS[s].label)}</span>`;
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 const ext = (u, text) => `<a href="${esc(u)}" rel="noopener nofollow" target="_blank">${esc(text || host(u))}</a>`;
-const startedIn = t => [t.origin?.where && t.origin.where !== 'unknown' ? t.origin.where : '', t.origin?.when || ''].filter(Boolean).join(' · ');
+const place = t => { const w = t.origin?.where || ''; return /^unknown/i.test(w) ? '' : w.split(' (')[0]; };
+// Card line: "Started on r/FanTheories, 2019", "Fans talking since 2024" or nothing.
+const startedIn = t => { const p = place(t), when = t.origin?.when; return p ? `Started on ${p}${when ? `, ${when}` : ''}` : when ? `Fans talking since ${when}` : ''; };
+// Page line: the full note, or that nobody knows the first post.
+const originNote = t => { const w = t.origin?.where || '', when = t.origin?.when; const extra = (w.match(/\((.*)\)\s*$/) || [])[1];
+  if (/^unknown/i.test(w)) return `We could not find the first post${when ? `; fans have talked about it since ${when}` : ''}.`;
+  return `Started on ${w.split(' (')[0]}${when ? ` in ${when}` : ''}${extra ? ` (${extra})` : ''}.`; };
 
 function page({ url, title, desc, body, jsonld }) {
   return `<!DOCTYPE html>
@@ -59,7 +65,7 @@ ${body}
 
 export function card(t) {
   const from = startedIn(t);
-  return `<li><article class="th-card">${stamp(t.status)}<h3><a href="/theories/${esc(t.id)}">${esc(t.title)}</a></h3><p>${esc(t.one_line)}</p>${from ? `<p class="th-from">Started on ${esc(from)}</p>` : ''}</article></li>`;
+  return `<li><article class="th-card">${stamp(t.status)}<h3><a href="/theories/${esc(t.id)}">${esc(t.title)}</a></h3><p>${esc(t.one_line)}</p>${from ? `<p class="th-from">${esc(from)}</p>` : ''}</article></li>`;
 }
 
 export function hub(list) {
@@ -72,7 +78,7 @@ export function hub(list) {
     body: `            <p><a class="back-button" href="/">&larr; Home</a></p>
             <h1>MCU fan theories</h1>
             <p class="tv-lede">The theories fans argue about most on Reddit and fan forums. Each one lays out the clues from the films, the best case for and against, and whether it came true. Got your own? Post it on the <a href="/boards/fan-theories">Fan Theories board</a>.</p>
-            <nav class="tv-toc" aria-label="Jump to">${groups.map(([s]) => `<a href="#${s}">${esc(STATUS[s].label)}</a>`).join('')}</nav>
+            <div class="tv-toc" role="navigation" aria-label="Jump to">${groups.map(([s]) => `<a href="#${s}">${esc(STATUS[s].label)}</a>`).join('')}</div>
 ${groups.map(([s, l], i) => `            <section aria-labelledby="${s}"${i === 1 ? ' data-ad-mid' : ''}><h2 id="${s}">${esc(STATUS[s].label)}</h2>
             <p>${esc(STATUS[s].blurb)}</p>
             <ul class="th-grid">
@@ -84,7 +90,6 @@ ${l.map(t => `                ${card(t)}`).join('\n')}
 export function theoryPage(t, list) {
   const sources = [...new Set([t.origin?.origin_url, t.status_source, ...(t.evidence || []).map(e => e.source), ...(t.against || []).map(a => a.source), ...(t.coverage || [])].filter(Boolean))];
   const related = list.filter(x => x.id !== t.id && x.films?.some(f => t.films?.includes(f))).slice(0, 3);
-  const from = startedIn(t);
   return page({
     url: `/theories/${t.id}`,
     title: `${t.title}: MCU Fan Theory`,
@@ -104,8 +109,8 @@ ${(t.evidence || []).map(e => `                <li class="th-clue"><p>${esc(e.po
             <section aria-labelledby="h-against"><h2 id="h-against">The case against</h2><ul>${(t.against || []).map(a => `<li>${esc(a.point)}</li>`).join('')}</ul></section>
             <section aria-labelledby="h-verdict"><h2 id="h-verdict">${esc(STATUS[t.status].label)}</h2><p>${esc(t.status_note)}</p></section>
             </div>
-            <section aria-labelledby="h-origin"><h2 id="h-origin">Where it started</h2>
-            <p>${from ? `${esc(from)}. ` : ''}${t.origin?.origin_url ? `${ext(t.origin.origin_url, 'The original post')}. ` : ''}${esc(t.popularity || '')}</p></section>
+            <section aria-labelledby="h-origin" data-ad-mid><h2 id="h-origin">Where it started</h2>
+            <p>${esc(originNote(t))} ${t.origin?.origin_url ? `${ext(t.origin.origin_url, 'The original post')}. ` : ''}${esc(t.popularity || '')}</p></section>
 ${related.length ? `            <section aria-labelledby="h-more"><h2 id="h-more">More theories about these films</h2><ul class="th-grid">${related.map(card).join('')}</ul></section>\n` : ''}            <section class="th-sources" aria-labelledby="h-sources"><h2 id="h-sources">Sources</h2>
             <ul>${sources.map(u => `<li>${ext(u, host(u))}</li>`).join('')}</ul></section>`,
   });

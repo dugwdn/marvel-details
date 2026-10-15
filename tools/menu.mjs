@@ -11,7 +11,8 @@ import { htmlFiles } from './check-links.mjs';
 const SELF = fileURLToPath(import.meta.url);
 const ROOT = path.join(path.dirname(SELF), '..', 'public');
 
-// Ten buttons so the menu grid has no orphan (5 x 2, or 2 x 5 on phones).
+// Twelve buttons so the menu grid has no orphan (6 x 2, or 2 x 6 on phones); Trivia and
+// Theories joined on 2026-10-15 (ADR-018).
 // My Marvel lives in the header bar's member chip instead; About moved to the
 // footer's legal line when Quiz took its button (2026-10-06). Boards took
 // Home's button (2026-10-15, ADR-015): the logo in the header bar is the way home.
@@ -23,6 +24,8 @@ export const MENU = [
   ['Callbacks', '/callbacks/', 'callbacks'],
   ['Characters', '/characters/', 'characters'],
   ['Universe Map', '/map/', 'map'],
+  ['Trivia', '/trivia/', 'trivia'],
+  ['Theories', '/theories/', 'theories'],
   ['Rabbit Holes', '/rabbit-holes/', 'rabbit-holes'],
   ['Coming Soon', '/upcoming/', 'upcoming'],
   ['Quiz', '/quiz/', 'quiz'],
