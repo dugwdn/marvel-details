@@ -207,3 +207,45 @@ three mockups.
   discuss.js; until anyone posts it shows three board starter questions, labeled as
   ours, never invented posts), and three easter eggs (a callback and two rabbit holes).
 - The "Faces of the MCU" actor wall stays, below these.
+
+## ADR-018: Scene trivia with an Ask box, and fan theory pages (2026-10-15)
+Doug, 2026-10-15: "search reddit, and other places where theories would be had by
+standard users and illustrate those theories here. especially the popular ones."
+Then: "Someone should be able to ask silly trivia ... What was the time on the clock
+behind iron man as he spoke, that sort of thing should be included ... Find that
+level of content and import it." Layout A ("Ask first") built while he picks from
+three mockups.
+- **Trivia:** `/trivia/` opens with "Ask about any scene" (`public/js/trivia.js`,
+  rules in `trivia-core.js`): answered in the browser from `public/data/trivia.json`,
+  no server, no AI, no cost. Words match only at the start of a word; when no fact
+  matches every word, the closest are shown and labeled as close. One page per film
+  or show at `/trivia/<slug>`, facts grouped by kind, with a discussion box.
+- **Where trivia comes from:** the fan-run Marvel Cinematic Universe Wiki's
+  "<title>/Trivia" pages, whose text is CC BY-SA 3.0 (Fandom's license), imported by
+  `python3 tools/import-wiki-trivia.py`. Text only; the wiki's pictures are film stills
+  and stay off the site. CC BY-SA asks for credit, a link, the license and a note of
+  changes: each trivia page links its wiki page and `/credits#trivia` carries the rest
+  (Doug's rule: no license lines on pages). Our trivia text is shared under the same
+  license. Facts are labeled "not yet checked by us"; readers can flag errors below.
+- **Fan theories:** `/theories/` and `/theories/<id>` from `public/data/theories.json`
+  (`python3 tools/import-theories.py` copies the checked research from
+  /mnt/project-files/Marvel-Details/fan-theories/, then `node tools/build-theories.mjs`).
+  Each theory is told in our own words (Reddit posts are their authors'), stamped
+  Still open, Partly true, Confirmed or Debunked, and "illustrated" with our own
+  evidence board: numbered clue cards naming the film and scene. No stills needed.
+  A Confirmed, Partly or Debunked stamp needs a source that settles it; every clue
+  needs a source; `test/trivia.test.mjs` enforces both.
+- **Menu:** Trivia and Theories join it; twelve buttons in two rows of six on every
+  wide screen (two columns on phones), so there is no orphan.
+- **Home:** Theory of the week now rotates through the most talked-about fan theories.
+- **Pull readers in and back (Doug: "take notes from credibletheories.com ... draw in readers,
+  get them talking to each other, get them coming back"; "draw inspiration from other popular
+  websites that have community conversation"; he picked layout A of three mockups):** each theory
+  page has a hook ("Why fans can't let it go"), a one-tap "Do you buy it?" vote (Buy it, Not sure,
+  No way; no account, one vote per device, the totals show after you vote; `/api/vote`, table
+  `theory_votes`, like Credible Theories' "Credible or not?"), Ask a friend (the phone's share
+  sheet, or a copied link), and "The open question" at the end, which is also the discussion's
+  opening question, with a Next theory button and "Your trail" of theories read (this browser
+  only). From Stack Exchange and Reddit: when the trivia box has no answer, "Ask the fans" opens a
+  new thread on the Quiz and Trivia board with the question filled in. From Reddit and Discord:
+  spoiler tags `>!like this!<` stay hidden until tapped.

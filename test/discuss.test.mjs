@@ -181,3 +181,17 @@ test('Delete my account removes posts, hides, blocks, reports and the reply-emai
   assert.equal(all("SELECT 1 FROM post_hides WHERE member_id = 'ann'").length, 0);
   assert.equal(all("SELECT 1 FROM users WHERE id = 'ann'").length, 0);
 });
+
+test('"Do you buy it?" on theory pages: anyone votes once per device, can change it, and sees the counts', async () => {
+  const { call } = await setup();
+  const p = 'theories/peter-parker-in-iron-man-2';
+  const v1 = 'device-one-0123456789', v2 = 'device-two-0123456789';
+  assert.deepEqual((await call(`/api/vote?p=${p}&v=${v1}`)).counts, { buy: 0, unsure: 0, no: 0 });
+  assert.equal((await call('/api/vote', { body: { p, v: 'buy', voter: v1 } })).mine, 'buy');
+  await call('/api/vote', { body: { p, v: 'no', voter: v2 } });
+  const changed = await call('/api/vote', { body: { p, v: 'unsure', voter: v1 } });
+  assert.deepEqual(changed.counts, { buy: 0, unsure: 1, no: 1 }, 'one vote per device; a new tap replaces it');
+  assert.equal((await call('/api/vote', { body: { p: 'articles/x', v: 'buy', voter: v1 } })).status, 400, 'theory pages only');
+  assert.equal((await call('/api/vote', { body: { p, v: 'maybe', voter: v1 } })).status, 400, 'known answers only');
+  assert.equal((await call('/api/vote', { body: { p, v: 'buy', voter: 'short' } })).status, 400, 'needs a device id');
+});

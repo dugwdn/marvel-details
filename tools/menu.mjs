@@ -11,7 +11,8 @@ import { htmlFiles } from './check-links.mjs';
 const SELF = fileURLToPath(import.meta.url);
 const ROOT = path.join(path.dirname(SELF), '..', 'public');
 
-// Ten buttons so the menu grid has no orphan (5 x 2, or 2 x 5 on phones).
+// Twelve buttons so the menu grid has no orphan (6 x 2, or 2 x 6 on phones); Trivia and
+// Theories joined on 2026-10-15 (ADR-018).
 // My Marvel lives in the header bar's member chip instead; About moved to the
 // footer's legal line when Quiz took its button (2026-10-06). Boards took
 // Home's button (2026-10-15, ADR-015): the logo in the header bar is the way home.
@@ -23,6 +24,8 @@ export const MENU = [
   ['Callbacks', '/callbacks/', 'callbacks'],
   ['Characters', '/characters/', 'characters'],
   ['Universe Map', '/map/', 'map'],
+  ['Trivia', '/trivia/', 'trivia'],
+  ['Theories', '/theories/', 'theories'],
   ['Rabbit Holes', '/rabbit-holes/', 'rabbit-holes'],
   ['Coming Soon', '/upcoming/', 'upcoming'],
   ['Quiz', '/quiz/', 'quiz'],
@@ -47,13 +50,16 @@ const DISCUSS_JS = '<script type="module" src="/js/discuss.js"></script>';
 // hole, plus Coming Soon and the Quiz. Not section front pages (lists of links), home, legal, account or the map.
 // Home loads the discussion script without a box: its "On the boards" card shows the newest posts (ADR-017).
 export function discussFor(rel) {
-  if (/^(articles|movies|scenes|callbacks|characters|rabbit-holes)\/(?!index\.html$)[\w-]+\.html$/.test(rel)) return rel.replace(/\.html$/, '');
+  if (/^(articles|movies|scenes|callbacks|characters|rabbit-holes|trivia|theories)\/(?!index\.html$)[\w-]+\.html$/.test(rel)) return rel.replace(/\.html$/, '');
   if (rel === 'upcoming/index.html' || rel === 'quiz/index.html') return rel.replace(/\/index\.html$/, '');
   return '';
 }
 const plain = h => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;|&rsquo;/g, "'").replace(/\s+/g, ' ').trim();
 /** The question at the top of a page's discussion (same wording rule as Credible Theories, Doug 2026-10-14). */
 export function starterFor(html) {
+  // A page can name its own question (fan theories end on "The open question", ADR-018).
+  const own = (html.match(/<meta name="discuss-starter" content="([^"]*)">/) || [])[1];
+  if (own) return own.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
   const h1 = plain((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '');
   const title = h1 || plain((html.match(/<title>([^<]*)<\/title>/) || [])[1] || '').replace(/\s*\|\s*MCU Easter Eggs\s*$/i, '');
   if (!title) return 'What did you notice here?';

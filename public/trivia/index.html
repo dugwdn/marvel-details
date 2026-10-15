@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>MCU Trivia: Ask About Any Scene | MCU Easter Eggs</title>
+    <meta name="description" content="Ask about any Marvel movie or show scene and get the background details, easter eggs, comic references and behind-the-scenes facts fans have spotted.">
+    <link rel="canonical" href="https://mcueastereggs.com/trivia/">
+    <meta property="og:title" content="MCU Trivia: Ask About Any Scene">
+    <meta property="og:description" content="Ask about any Marvel movie or show scene and get the background details, easter eggs, comic references and behind-the-scenes facts fans have spotted.">
+    <meta property="og:url" content="https://mcueastereggs.com/trivia/">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"MCU Trivia","url":"https://mcueastereggs.com/trivia/"}</script>
+    <link rel="stylesheet" href="/css/trivia.css?v=995c7e36">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+    <link rel="stylesheet" href="/css/theme.css?v=e52c4f50">
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+        gtag('js', new Date());
+        gtag('config', 'G-NESPZD6XSQ', { allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname });
+    </script>
+</head>
+<body>
+    <header class="site-brand site-bar">
+        <p class="site-brand-title"><a class="site-brand-link" href="/" aria-label="MCU Easter Eggs home"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">MCU <em>Easter</em> Eggs</span></a></p>
+        <div class="site-search" hidden>
+            <label class="site-search-label" for="site-q">Search the site</label>
+            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">
+            <ul id="site-results" class="site-results" role="listbox" aria-label="Search results" hidden></ul>
+        </div>
+        <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>
+        <a class="site-member" href="/me/"><span class="site-member-text">My Marvel</span></a>
+    </header>
+    <nav class="site-nav" aria-label="Main menu">
+        <a href="/boards/">Boards</a>
+        <a href="/articles/">Articles</a>
+        <a href="/movies/">Movies</a>
+        <a href="/scenes/">Deleted Scenes</a>
+        <a href="/callbacks/">Callbacks</a>
+        <a href="/characters/">Characters</a>
+        <a href="/map/">Universe Map</a>
+        <a href="/trivia/" aria-current="page">Trivia</a>
+        <a href="/theories/">Theories</a>
+        <a href="/rabbit-holes/">Rabbit Holes</a>
+        <a href="/upcoming/">Coming Soon</a>
+        <a href="/quiz/">Quiz</a>
+    </nav>
+    <div class="ad-box" data-ad-box="top" data-ad-placeholder="top" data-ad-stamp><div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div></div>
+
+    <main class="container tv">
+            <p><a class="back-button" href="/">&larr; Home</a></p>
+            <h1>MCU Trivia</h1>
+            <p class="tv-lede">The small stuff: what is on the screen behind Tony, which comic a line comes from, what the actors made up on the day. Ask, or pick a film or show.</p>
+            <form class="tv-ask" role="search" action="/trivia/" method="get" data-trivia-ask data-kb-block>
+                <label class="tv-ask-label" for="tv-q">Ask about any scene</label>
+                <p class="tv-ask-help" id="tv-q-help">Type a few words: a thing, a line, a character or a film. Try <a href="/trivia/?q=shawarma">shawarma</a>, <a href="/trivia/?q=clock">clock</a>, <a href="/trivia/?q=license+plate">license plate</a>, <a href="/trivia/?q=stan+lee">Stan Lee</a> or <a href="/trivia/?q=iron+man+suit">Iron Man suit</a>.</p>
+                <div class="tv-ask-row">
+                    <input id="tv-q" name="q" type="search" placeholder="What do you want to know?" aria-describedby="tv-q-help" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <button type="submit">Ask</button>
+                </div>
+            </form>
+            <div class="tv-chips" role="group" aria-label="Show only" data-trivia-chips hidden><button type="button" class="tv-chip" data-kind="" aria-pressed="true">All</button><button type="button" class="tv-chip" data-kind="Spotted on screen" aria-pressed="false">Spotted on screen</button><button type="button" class="tv-chip" data-kind="Scene details" aria-pressed="false">Scene details</button><button type="button" class="tv-chip" data-kind="MCU connections" aria-pressed="false">MCU connections</button><button type="button" class="tv-chip" data-kind="Comics references" aria-pressed="false">Comics references</button><button type="button" class="tv-chip" data-kind="Behind the scenes" aria-pressed="false">Behind the scenes</button><button type="button" class="tv-chip" data-kind="Pop culture" aria-pressed="false">Pop culture</button><button type="button" class="tv-chip" data-kind="Episode titles" aria-pressed="false">Episode titles</button></div>
+            <p class="tv-status" data-trivia-status aria-live="polite"></p>
+            <p class="tv-fans" data-ask-fans hidden><a href="/boards/quiz-and-trivia">Ask the fans</a> Someone on the Quiz and Trivia board may know. We add good answers to the trivia.</p>
+            <ol class="tv-results" data-trivia-results></ol>
+            <p data-trivia-more-wrap hidden><button type="button" class="tv-more" data-trivia-more>Show more answers</button></p>
+            <section aria-labelledby="h-works" data-ad-mid><h2 id="h-works">Pick a film or show</h2>
+            <ul class="tv-works">
+                <li><a href="/trivia/agatha-all-along">Agatha All Along</a></li>
+                <li><a href="/trivia/agent-carter">Agent Carter</a></li>
+                <li><a href="/trivia/agents-of-s-h-i-e-l-d">Agents of S.H.I.E.L.D.</a></li>
+                <li><a href="/trivia/ant-man">Ant-Man</a></li>
+                <li><a href="/trivia/ant-man-and-the-wasp">Ant-Man and the Wasp</a></li>
+                <li><a href="/trivia/ant-man-and-the-wasp-quantumania">Ant-Man and the Wasp: Quantumania</a></li>
+                <li><a href="/trivia/avengers-age-of-ultron">Avengers: Age of Ultron</a></li>
+                <li><a href="/trivia/avengers-doomsday">Avengers: Doomsday</a></li>
+                <li><a href="/trivia/avengers-endgame">Avengers: Endgame</a></li>
+                <li><a href="/trivia/avengers-infinity-war">Avengers: Infinity War</a></li>
+                <li><a href="/trivia/avengers-secret-wars">Avengers: Secret Wars</a></li>
+                <li><a href="/trivia/black-panther">Black Panther</a></li>
+                <li><a href="/trivia/black-panther-wakanda-forever">Black Panther: Wakanda Forever</a></li>
+                <li><a href="/trivia/black-widow">Black Widow</a></li>
+                <li><a href="/trivia/blade">Blade</a></li>
+                <li><a href="/trivia/captain-america-brave-new-world">Captain America: Brave New World</a></li>
+                <li><a href="/trivia/captain-america-civil-war">Captain America: Civil War</a></li>
+                <li><a href="/trivia/captain-america-the-first-avenger">Captain America: The First Avenger</a></li>
+                <li><a href="/trivia/captain-america-the-winter-soldier">Captain America: The Winter Soldier</a></li>
+                <li><a href="/trivia/captain-marvel">Captain Marvel</a></li>
+                <li><a href="/trivia/cloak-and-dagger">Cloak &amp; Dagger</a></li>
+                <li><a href="/trivia/daredevil">Daredevil</a></li>
+                <li><a href="/trivia/daredevil-born-again">Daredevil: Born Again</a></li>
+                <li><a href="/trivia/deadpool-and-wolverine">Deadpool &amp; Wolverine</a></li>
+                <li><a href="/trivia/director-by-night">Director by Night</a></li>
+                <li><a href="/trivia/doctor-strange">Doctor Strange</a></li>
+                <li><a href="/trivia/doctor-strange-in-the-multiverse-of-madness">Doctor Strange in the Multiverse of Madness</a></li>
+                <li><a href="/trivia/echo">Echo</a></li>
+                <li><a href="/trivia/eternals">Eternals</a></li>
+                <li><a href="/trivia/expanding-the-universe">Expanding the Universe</a></li>
+                <li><a href="/trivia/eyes-of-wakanda">Eyes of Wakanda</a></li>
+                <li><a href="/trivia/guardians-of-the-galaxy">Guardians of the Galaxy</a></li>
+                <li><a href="/trivia/guardians-of-the-galaxy-vol-2">Guardians of the Galaxy Vol. 2</a></li>
+                <li><a href="/trivia/guardians-of-the-galaxy-vol-3">Guardians of the Galaxy Vol. 3</a></li>
+                <li><a href="/trivia/hawkeye">Hawkeye</a></li>
+                <li><a href="/trivia/helstrom">Helstrom</a></li>
+                <li><a href="/trivia/i-am-groot">I Am Groot</a></li>
+                <li><a href="/trivia/inhumans">Inhumans</a></li>
+                <li><a href="/trivia/iron-fist">Iron Fist</a></li>
+                <li><a href="/trivia/iron-man">Iron Man</a></li>
+                <li><a href="/trivia/iron-man-2">Iron Man 2</a></li>
+                <li><a href="/trivia/iron-man-3">Iron Man 3</a></li>
+                <li><a href="/trivia/ironheart">Ironheart</a></li>
+                <li><a href="/trivia/jessica-jones">Jessica Jones</a></li>
+                <li><a href="/trivia/loki">Loki</a></li>
+                <li><a href="/trivia/luke-cage">Luke Cage</a></li>
+                <li><a href="/trivia/marvel-zombies-the-fist-of-khonshu">Marvel Zombies: The Fist of Khonshu</a></li>
+                <li><a href="/trivia/marvel-zombies-the-last-guardian">Marvel Zombies: The Last Guardian</a></li>
+                <li><a href="/trivia/marvel-zombies-the-winter-soldier">Marvel Zombies: The Winter Soldier</a></li>
+                <li><a href="/trivia/moon-knight">Moon Knight</a></li>
+                <li><a href="/trivia/ms-marvel">Ms. Marvel</a></li>
+                <li><a href="/trivia/new-warriors">New Warriors</a></li>
+                <li><a href="/trivia/runaways">Runaways</a></li>
+                <li><a href="/trivia/secret-invasion">Secret Invasion</a></li>
+                <li><a href="/trivia/shang-chi-and-the-legend-of-the-ten-rings">Shang-Chi and the Legend of the Ten Rings</a></li>
+                <li><a href="/trivia/she-hulk-attorney-at-law">She-Hulk: Attorney at Law</a></li>
+                <li><a href="/trivia/spider-man-brand-new-day">Spider-Man: Brand New Day</a></li>
+                <li><a href="/trivia/spider-man-far-from-home">Spider-Man: Far From Home</a></li>
+                <li><a href="/trivia/spider-man-homecoming">Spider-Man: Homecoming</a></li>
+                <li><a href="/trivia/spider-man-no-way-home">Spider-Man: No Way Home</a></li>
+                <li><a href="/trivia/the-avengers">The Avengers</a></li>
+                <li><a href="/trivia/the-defenders">The Defenders</a></li>
+                <li><a href="/trivia/the-falcon-and-the-winter-soldier">The Falcon and The Winter Soldier</a></li>
+                <li><a href="/trivia/the-fantastic-four-first-steps">The Fantastic Four: First Steps</a></li>
+                <li><a href="/trivia/the-guardians-of-the-galaxy-holiday-special">The Guardians of the Galaxy Holiday Special</a></li>
+                <li><a href="/trivia/the-incredible-hulk">The Incredible Hulk</a></li>
+                <li><a href="/trivia/the-marvels">The Marvels</a></li>
+                <li><a href="/trivia/the-punisher">The Punisher</a></li>
+                <li><a href="/trivia/the-punisher-one-last-kill">The Punisher: One Last Kill</a></li>
+                <li><a href="/trivia/thor">Thor</a></li>
+                <li><a href="/trivia/thor-love-and-thunder">Thor: Love and Thunder</a></li>
+                <li><a href="/trivia/thor-ragnarok">Thor: Ragnarok</a></li>
+                <li><a href="/trivia/thor-the-dark-world">Thor: The Dark World</a></li>
+                <li><a href="/trivia/thunderbolts">Thunderbolts*</a></li>
+                <li><a href="/trivia/visionquest">VisionQuest</a></li>
+                <li><a href="/trivia/wandavision">WandaVision</a></li>
+                <li><a href="/trivia/werewolf-by-night">Werewolf by Night</a></li>
+                <li><a href="/trivia/what-if">What If...?</a></li>
+                <li><a href="/trivia/whih-newsfront-web-series">WHiH Newsfront (web series)</a></li>
+                <li><a href="/trivia/wonder-man">Wonder Man</a></li>
+            </ul></section>
+            <p class="tv-credit">"Spotted on screen" details were found by fans and reported by the sites linked on each one. The rest comes from the fan-written Marvel Cinematic Universe Wiki, split into single facts. We have not checked each one against the film yet; if one is wrong, say so in the discussion. <a href="/credits#trivia">License and credits</a>.</p>
+    </main>
+    <div class="ad-box" data-ad-box="end" data-ad-placeholder="end" data-ad-stamp><div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div></div>
+    <footer><p>&copy; 2026 MCU Easter Eggs. Not affiliated with Marvel or Disney.</p><p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Photos and Credits</a></p>
+    <div class="site-footer-links">
+        <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
+        <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
+    </div></footer>
+    <script src="/js/ads.js?v=46d2d40a" defer></script>
+    <script type="module" src="/js/trivia.js?v=9e5b0e6b"></script>
+    <script type="module" src="/js/members.js?v=e59b7b8f"></script>
+    <script type="module" src="/js/search.js?v=3f64106c"></script>
+    <script type="module" src="/js/keyboard.js?v=bd0f7407"></script>
+    <script type="module" src="/js/signin-popup.js?v=19dab9ed"></script>
+</body>
+</html>

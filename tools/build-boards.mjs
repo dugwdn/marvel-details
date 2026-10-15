@@ -98,7 +98,7 @@ export function rules() {
             <h1>Discussion rules</h1>
             <ol class="rules">
                 <li><b>Be civil.</b> Argue with the idea, not the person. No insults, threats or slurs.</li>
-                <li><b>Mark spoilers.</b> Start your post with "Spoiler:" when it gives away a recent movie or show.</li>
+                <li><b>Hide spoilers.</b> Wrap anything that gives away a recent movie or show like this: &gt;!Tony snaps!&lt;. Readers tap it to see it.</li>
                 <li><b>Name your source.</b> Rumors and leaks are fine on Coming Soon and Rumors if you say where you read them and call them rumors.</li>
                 <li><b>Nothing made up about real people.</b> Actors, directors and crew are real people. No invented quotes or claims about their private lives.</li>
                 <li><b>No spam or selling.</b> At most two links a post. A new account's first links wait for a quick check.</li>

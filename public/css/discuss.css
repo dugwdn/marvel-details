@@ -103,3 +103,7 @@ html body .acct-check { display: flex; gap: .5rem; align-items: center; font-wei
   html body .d-pick { color: #5fd47a; }
 }
 @media (prefers-reduced-motion: reduce) { html body .d-tip { transition: none; } }
+/* Spoiler tags >!...!< (ADR-018): a solid bar until tapped. */
+html body .d-spoiler { background: var(--dym-text, #151517); color: transparent; border-radius: 3px; padding: 0 .2em; cursor: pointer; }
+html body .d-spoiler.on { background: color-mix(in srgb, var(--dym-text, #151517) 12%, transparent); color: inherit; cursor: auto; }
+html body .d-spoiler:focus-visible { outline: 3px solid #ffd60a; }

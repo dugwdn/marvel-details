@@ -25,6 +25,14 @@ const vids = data.videos.map((v) =>
   `<li><strong>${esc(v.title)}</strong>${v.film ? ` (${esc(v.film)})` : ''}<br>Channel: ${esc(v.channel)}, <a href="${esc(v.sourceUrl)}" rel="nofollow noopener">watch on YouTube</a>.<br>Used on ${usedOn(v)}${v.film ? ' and the pages of characters in it' : ''}.</li>`
 ).join('\n            ');
 
+// Scene trivia text adapted from the fan-run MCU Wiki (ADR-018). CC BY-SA asks for the
+// source, the license and a note of our changes: one line per title lives here.
+const triviaFile = path.join(ROOT, 'data/trivia.json');
+const trivia = fs.existsSync(triviaFile) ? JSON.parse(fs.readFileSync(triviaFile, 'utf8')) : null;
+const triviaList = trivia ? trivia.works.map((w) =>
+  `<li><a href="/trivia/${esc(w.slug)}">${esc(w.work)} trivia</a>: adapted from <a href="${esc(w.source)}" rel="nofollow noopener">${esc(w.work)}/Trivia</a> on the Marvel Cinematic Universe Wiki (revision ${esc(w.revid)}).</li>`
+).join('\n            ') : '';
+
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +40,7 @@ const html = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>Photos and Credits | MCU Easter Eggs</title>
-    <meta name="description" content="Who took each photo on the site, the license it is under, where each poster and trailer comes from.">
+    <meta name="description" content="Who took each photo on the site, the license it is under, where each poster, trailer and trivia fact comes from.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
@@ -63,6 +71,11 @@ const html = `<!DOCTYPE html>
             <ul class="credits-list">
             ${vids}
             </ul>
+            ${trivia ? `<h2 id="trivia">Trivia text (${trivia.works.length} films and shows)</h2>
+            <p>The facts on our <a href="/trivia/">trivia pages</a> come from the Marvel Cinematic Universe Wiki on Fandom, written by its many fan editors. Its text is under the <a href="${esc(trivia.licenseUrl)}" rel="nofollow noopener">${esc(trivia.license)}</a> license, so our trivia text is shared under the same license. Our changes: we split each list into single facts, removed footnote marks and grouped the facts by kind. We do not use the wiki's pictures. Imported ${esc(trivia.imported)}.</p>
+            <ul class="credits-list">
+            ${triviaList}
+            </ul>` : ''}
             <p>Not affiliated with Marvel or Disney. The same list is in <a href="/data/media-credits.json">media-credits.json</a>.</p>
         </div>
     </main>

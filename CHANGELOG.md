@@ -3,6 +3,24 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-15 (Trivia and fan theories, goes live when merged)
+- New Trivia section: ask about any scene and get the matching facts from 2,615
+  fan-found details across 78 MCU films and shows, or browse one title at a time.
+- New Fan Theories section: 100 of the most popular theories from Reddit and fan forums,
+  each with an evidence board of clues from the films, the case against, and
+  whether it came true (ADR-018).
+- Trivia and Theories are in the menu, which is now two even rows of six.
+- Theory of the week on the home page now shows these fan theories.
+- Theory pages open with a hook and end with a question to argue about, a Next
+  theory button and your trail of theories read. A one-tap "Do you buy it?" vote
+  (no account) shows how other fans voted, and Ask a friend shares the theory.
+- When the trivia box has no answer, "Ask the fans" starts a board thread with the
+  question already typed in. Posts can hide spoilers >!like this!<.
+- 576 "Spotted on screen" details fans found in the frame (clocks, watches, license
+  plates, screens, props, cameos) across 80 titles, each with its scene, the question
+  it answers and the site that reported it. Example: Doctor Strange's watch reads
+  February 2, Groundhog Day.
+
 ## 2026-10-15 (New home page top, goes live when merged)
 - The home page opens with the real Spider-Man: Brand New Day poster and trailer,
   then the theory of the week, the newest board posts and three easter eggs.

@@ -414,10 +414,10 @@ html body nav.site-nav a:focus-visible { outline: 3px solid #ffd60a; outline-off
 /* The page you're on: yellow, like the "POW!" panel. */
 html body nav.site-nav a[aria-current] { --hero: #ffd60a; --hero-ink: #111; text-shadow: none; }
 
-/* Under 1000px the menu is an even grid with no orphan: 5 columns, then
-   2 columns on phones. The bar loses the search box (a button opens it). */
-@media (max-width: 999px) {
-  html body nav.site-nav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .5rem; }
+/* The menu is an even grid with no orphan at every width: 6 columns (two rows
+   of six), then 2 columns on phones. Under 800px the bar loses the search box (a button opens it). */
+@media (min-width: 0) {
+  html body nav.site-nav { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .5rem; }
   html body nav.site-nav a { font-size: clamp(1rem, 2.1vw, 1.25rem); }
 }
 @media (max-width: 800px) {
@@ -1390,6 +1390,7 @@ html body .hl-card { background: #15151b; color: #f2f2f5; border: 3px solid #000
 html body .hl-theory { display: grid; gap: .6rem; }
 html body .hl-theory h3 { margin: 0; font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: 1.9rem; line-height: 1.05; letter-spacing: .02em; text-wrap: balance; }
 html body .hl-card :is(h3, h3 a, p, li, span:not(.hl-kicker):not(.yt-kind):not(.yt-film)) { color: #f2f2f5 !important; }
+html body .hl-card .hl-verdict { display: inline-block; justify-self: start; margin: .2rem 0 0; padding: .05rem .5rem; border: 2px solid #ffd60a; border-radius: 3px; font: 800 .875rem var(--dym-head); letter-spacing: .08em; text-transform: uppercase; color: #ffd60a !important; transform: rotate(-2deg); }
 html body .hl-theory h3 a { text-decoration: none; }
 html body .hl-theory p { margin: 0; }
 html body .hl-feed { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }

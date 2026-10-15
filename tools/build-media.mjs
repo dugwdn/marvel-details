@@ -187,16 +187,19 @@ export function homeLead(m) {
   const blist = Array.isArray(boards) ? boards : boards.boards;
   const cbs = readJson('callbacks.json');
   const callbacks = Array.isArray(cbs) ? cbs : Object.values(cbs).find(Array.isArray);
-  const week = Math.floor(Date.now() / 604800000) % holes.length;
-  const filmFor = (h) => m.mcu.titles.find((x) => (h.movies || []).some((id) => slug(x.title) === id))?.title;
+  // Theory of the week: the most talked-about fan theories (ADR-018, public/data/theories.json), one a week.
+  const STAMP = { open: 'Still open', partly: 'Partly true', confirmed: 'Confirmed', debunked: 'Debunked' };
+  const fan = readJson('theories.json').theories.filter((t) => t.rank < 50).sort((a, b) => a.rank - b.rank);
+  const week = Math.floor(Date.now() / 604800000) % fan.length;
   const theory = (h, i) => {
-    const film = filmFor(h);
+    const film = (h.films || []).find((f) => heroTrailer(m, f, null, 'x'));
     const t = film ? heroTrailer(m, film, null, 'Watch the trailer') : '';
     return `<article class="hl-theory" data-week-item${i === week ? '' : ' hidden'}>
                 ${t}
-                <h3><a href="/rabbit-holes/${h.slug || h.id}">${esc(h.title)}</a></h3>
-                <p>${esc(h.summary)}</p>
-                <a class="hh-cta" href="/rabbit-holes/${h.slug || h.id}">Read the theory</a>
+                <p class="hl-verdict">${STAMP[h.status]}</p>
+                <h3><a href="/theories/${h.id}">${esc(h.title)}</a></h3>
+                <p>${esc(h.one_line)}</p>
+                <a class="hh-cta" href="/theories/${h.id}">See the evidence</a>
             </article>`;
   };
   const starters = BOARD_PICKS.map((b) => blist.find((x) => x.slug === b)).filter(Boolean);
@@ -211,7 +214,7 @@ export function homeLead(m) {
         <div class="hl-two">
             <div class="hl-card" data-weekly>
                 <p class="hl-kicker">Theory of the week</p>
-            ${holes.map(theory).join('\n            ')}
+            ${fan.map(theory).join('\n            ')}
             </div>
             <div class="hl-card hl-boards">
                 <p class="hl-kicker">On the boards</p>
