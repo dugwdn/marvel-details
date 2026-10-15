@@ -26,6 +26,10 @@ need his OK, accounts or his laptop; the rest Claude does on a branch with a PR.
    Avengers post-credits scene, Whiplash's whips, the Quantum Realm's color.
    (4 articles exist today.) Run `node tools/menu.mjs` and `python3 tools/comic-panels.py` after.
 
+- **Discussions and boards (ADR-015, PR open):** once merged, Doug adds his
+  member id to `MOD_MEMBERS` and the free Turnstile keys (RUNBOOK
+  "Message boards"). Reply emails need a Resend key later.
+
 ## Next
 - Swap the Iron Man and Iron Man 2 trailers for Marvel's own uploads if they appear.
 - Portraits: 139 characters now have a credited actor photo (PR #35). 11 have no free photo on Wikipedia (Ebony Maw, Batroc, Cooper and Lila Barton, Karpov, Nomble, Yama, Corvus Glaive, Harley Keener, Cameron Klein, Carina); add a Commons file by hand in `tools/media-wanted.json` if one turns up.

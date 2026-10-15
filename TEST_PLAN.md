@@ -20,6 +20,16 @@ The member-perks tests run in the same `npm test`:
   two devices merge, 16 KB cap (413), and "Delete my account" removes the
   saved list with the account.
 
+`test/discuss.test.mjs` (ADR-015): the discussion helpers, `tools/menu.mjs`
+putting a box on every discussion page (and running twice changes nothing),
+and the `/api/discuss` handler on Node's SQLite: posting, replies, the fold,
+hide and block, deleting a post, boards, moderator actions, the rank count,
+other-site posts refused, unknown pages refused, and Delete my account
+removing posts and alerts. `test/keyboard.test.mjs` checks the post box.
+Browser check (2026-10-15, `npx wrangler pages dev public`): posts on a
+character page, Coming Soon and a board; desktop and 390px screenshots, no
+script errors.
+
 ## Before every publish
 - Sign-in pop-up (2026-10-07): signed out, in a fresh window, stay 12 s on any
   page (or 6 s on two pages): the pop-up shows Google, then Facebook (dimmed

@@ -142,3 +142,28 @@ now sends every page to Functions, with `/css/*`, `/js/*`, `/img/*` and
 `/data/*` excluded. Header and footer edits apply on every page; forms, ads and
 the quiz are never editable. To make a wording change permanent, edit the
 source and then use Changes > Original on that edit.
+
+## ADR-015: Discussions on every detail page, plus message boards (2026-10-15)
+Doug, 2026-10-05: "Make sure we've got discussion features all over the Marvel
+site. Just like the credible theory site". Credible Theories has run the same
+system since 2026-10-07 (its ADR 0010 and 0012), so this is a port of that
+code, not a new design: `functions/_lib/discuss.js` (from rabbit-hole-files
+`worker/discuss.js`) behind `/api/discuss/*`, `public/js/discuss.js` and
+`public/css/discuss.css` in the browser. Reading needs no account; posting
+needs the site's sign-in (ADR-007). Every article, movie hub, deleted scene,
+callback, character, rabbit hole, Coming Soon and the quiz gets a box
+(`addDiscussion` in `tools/menu.mjs`); `/boards/` has 12 topic boards
+(`public/data/boards.json`, pages from `tools/build-boards.mjs`). Boards
+replaced Home as the first menu item (the banner already links home).
+Moderation is by the readers first: Hide and Block on every post, a post
+folds after `HIDE_THRESHOLD` hides or reports (default 5), and moderators
+listed in `MOD_MEMBERS` work the queue at `/boards/moderate`. Spam guards are
+CT's: Turnstile when keyed, a honeypot, a too-fast check, rate limits, a link
+limit, duplicate and blocked-word checks, and a new member's first links held
+for review. Reply emails are opt-in (the member types an address on
+/account); they send through Resend when `RESEND_API_KEY` is set and wait in
+`mail_queue` until then. The tables are created on first use (same as CT),
+so no migration step. Delete my account removes the member's posts, marks,
+alerts and queued mail. The rank badge beside a name is the member's
+found-details rank (ADR-008). Drops CT's file votes and day streaks: this
+site has neither.

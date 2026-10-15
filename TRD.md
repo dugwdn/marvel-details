@@ -104,3 +104,20 @@ the stored copy (same `merge` as the browser), drops removals older than 180
 days, refuses over 16 KB (413) and returns the result. `POST
 /api/auth/delete` also deletes the `saves` row. My Marvel shows the shared
 sign-in panel (`fillSignIn` from `public/js/account.js`).
+
+## Discussions (ADR-015, port of Credible Theories)
+```
+functions/_lib/discuss.js        all /api/discuss/* routes, tables made on first use
+functions/api/discuss/index.js, [[path]].js   Pages Function entry points
+public/js/discuss.js             the box and the boards (ES module)
+public/css/discuss.css           styles (comic look, dark mode)
+public/data/boards.json          the 12 boards (slugs match BOARDS)
+tools/build-boards.mjs           /boards/ hub, board pages, thread, rules, moderate
+tools/menu.mjs                   addDiscussion(): box before the footer
+test/discuss.test.mjs
+```
+Thread keys: `p:<page path without .html>` for pages (checked against
+`env.ASSETS` so only real pages get threads), `b:<slug>` for boards.
+Tables in D1 `marvel-details`: posts, post_votes, post_reports, post_hides,
+reader_blocks, discuss_blocks, reply_alerts and mail_queue (see SCHEMA). Badge rank counts the
+member's found details in `saves`.

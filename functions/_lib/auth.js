@@ -197,7 +197,10 @@ export async function handleAuth(req, env) {
   if (path === '/api/auth/delete' && req.method === 'POST') {
     const user = await who(env.DB, token);
     if (!user) return new Response('not signed in', { status: 401 });
+    // Their posts, hides, blocks, reports and reply-email address go too (ADR-015, functions/_lib/discuss.js FORGET).
+    const { forgetStatements } = await import('./discuss.js');
     await env.DB.batch([
+      ...(await forgetStatements(env, user.id)),
       // Member perks synced to the account (migrations/0002_member_saves.sql).
       env.DB.prepare('DELETE FROM saves WHERE user_id = ?').bind(user.id),
       env.DB.prepare('DELETE FROM sessions WHERE user_id = ?').bind(user.id),

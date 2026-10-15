@@ -3,6 +3,17 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-15 (Discussions and message boards, goes live when merged)
+- Every article, movie page, deleted scene, callback, character page, rabbit
+  hole, Coming Soon and the quiz now has a discussion box at the bottom.
+  Anyone can read; signed-in members post and reply (ADR-015).
+- New message boards at `/boards/`: 12 topics (Easter eggs, fan theories,
+  deleted scenes, characters, Iron Man, Avengers, Spider-Man, coming soon,
+  rankings, quiz and trivia, general, site ideas), board rules and a
+  moderator page. Boards is first in the menu.
+- Readers can hide or block any post; a post that enough readers hide folds
+  away. Optional reply emails on the account page. Privacy policy updated.
+
 ## 2026-10-12 (Live Edit, not live yet)
 - Doug can change words and pictures on any page himself: add `?wdn-edit`
   to an address, sign in through webdesignnerd.com, click **Edit page**.
