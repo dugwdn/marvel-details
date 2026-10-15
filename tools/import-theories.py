@@ -14,9 +14,11 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public', '
 # Most talked-about first (research report 2026-10-15: cast and crew asked about it, outlets covering it).
 TOP = ['ant-man-inside-thanos', 'peter-parker-in-iron-man-2', 'stan-lee-watcher', 'no-way-home-three-spider-men',
        'agnes-is-agatha', 'doom-is-tony-variant', 'soul-stone-in-wakanda-or-heimdall', 'mephisto-in-wandavision',
-       'cap-worthy-since-ultron', 'quantum-realm-time-heist']
+       'cap-worthy-since-ultron', 'quantum-realm-time-heist', 'ultron-lives-inside-vision', 'time-heist-created-doom',
+       'rhodey-skrull-since-civil-war', 'loki-disguised-as-banner', 'uncle-ben-suitcase', 'bucky-killed-tonys-parents',
+       'fury-skrull-since-winter-soldier', 'endgame-rat-is-ant-man-rat', 'riri-sold-her-soul', 'adult-toussaint-other-timeline']
 KEEP = ('id', 'title', 'one_line', 'summary', 'films', 'characters', 'status', 'status_note', 'status_source',
-        'evidence', 'against', 'origin', 'popularity', 'coverage')
+        'evidence', 'against', 'origin', 'popularity', 'coverage', 'hook', 'open_question')
 
 items = json.load(open(SRC))
 out, skipped = [], []

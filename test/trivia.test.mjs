@@ -65,6 +65,7 @@ const theoriesFile = path.join(ROOT, 'data/theories.json');
 test('every fan theory is sourced and every verdict is backed', { skip: !fs.existsSync(theoriesFile) }, () => {
   const { theories } = JSON.parse(fs.readFileSync(theoriesFile, 'utf8'));
   assert.ok(theories.length >= 20);
+  for (const t of theories) assert.ok(t.hook && t.open_question, `${t.id} needs a hook and an open question`);
   const ids = new Set();
   for (const t of theories) {
     assert.match(t.id, /^[a-z0-9-]+$/);
