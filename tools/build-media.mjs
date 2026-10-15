@@ -222,7 +222,8 @@ export function stripCredits(html) {
 }
 
 // Header media for every page about one film: a click-to-play official trailer whose
-// cover is a mosaic of the film's cast photos, plus a strip of cast faces.
+// cover is the trailer's own YouTube thumbnail (Doug 2026-10-15: action, not headshots),
+// plus a strip of cast faces.
 const filmYear = (m, film) => (m.mcu.titles.find((t) => t.title === film) || {}).date?.slice(0, 4) || '';
 
 function trailerFor(m, film, page) {
@@ -233,11 +234,10 @@ function trailerFor(m, film, page) {
 export function heroTrailer(m, film, page, label = 'Watch the official trailer') {
   const v = trailerFor(m, film, page);
   if (!v) return '';
-  const cast = filmCast(m, film).slice(0, 4);
   const year = filmYear(m, film);
   return `<div class="yt-tile film-trailer">
                 <button type="button" class="yt-play film-trailer-btn" data-yt="${v.youtubeId}" data-title="${esc(v.title)}" aria-label="Play the official trailer: ${esc(film)}${year ? ` (${year})` : ''}">
-                    <span class="film-mosaic" aria-hidden="true">${cast.map((f) => `<img src="${f.img.file}" alt="" width="${f.img.width}" height="${f.img.height}" loading="lazy" decoding="async">`).join('')}</span>
+                    <span class="film-mosaic film-cover" aria-hidden="true"><img src="https://i.ytimg.com/vi/${v.youtubeId}/${v.cover || 'maxresdefault'}.jpg" alt="" width="1280" height="720" decoding="async"></span>
                     <span class="yt-kind">${esc(label)}</span>
                     <span class="yt-film">${esc(film)}${year ? ` (${year})` : ''}</span>
                     <span class="yt-icon" aria-hidden="true"></span>
@@ -255,9 +255,21 @@ export function castStrip(m, film, more) {
             </ul>`;
 }
 
-export function filmHero(m, film, page, more) {
+// Movie hubs only: the film's theatrical poster beside the trailer (ADR-016, fair use:
+// one poster, on that film's own page, next to our commentary; credit on /credits).
+export const posterFor = (m, page) => (m.credits.posters || []).find((p) => p.page === page);
+
+export function filmHero(m, film, page, more, withPoster = false) {
   const t = heroTrailer(m, film, page);
   if (!t) return '';
+  const p = withPoster && posterFor(m, page);
+  if (p) return `<div class="film-hero film-hero-poster">
+            <figure class="film-poster"><img src="${p.file}" alt="${esc(p.subject)}" width="${p.width}" height="${p.height}" fetchpriority="high" decoding="async"></figure>
+            <div class="film-hero-main">
+            ${t}
+            ${castStrip(m, film, more)}
+            </div>
+        </div>`;
   return `<div class="film-hero">
             ${t}
             ${castStrip(m, film, more)}
@@ -299,13 +311,13 @@ export function addFilmHeroes(m = loadMedia()) {
     const file = path.join(ROOT, 'movies', `${id}.html`);
     let html = fs.readFileSync(file, 'utf8');
     html = html.replace(/\n[ \t]*<section class="trailer-block">[\s\S]*?<\/section>\n?/, '\n');
-    html = intoHeader(html, '<div class="movie-header"', filmHero(m, film, `/movies/${id}`, '#cast'));
+    html = intoHeader(html, '<div class="movie-header"', filmHero(m, film, `/movies/${id}`, null, true));
     fs.writeFileSync(file, addScript(html)); n++;
   }
   for (const [name, [id, film]] of Object.entries(SCENE_PAGES)) {
     const file = path.join(ROOT, 'scenes', `${name}.html`);
     if (!fs.existsSync(file)) continue;
-    const html = intoHeader(fs.readFileSync(file, 'utf8'), '<div class="movie-header"', filmHero(m, film, `/movies/${id}`, `/movies/${id}#cast`));
+    const html = intoHeader(fs.readFileSync(file, 'utf8'), '<div class="movie-header"', filmHero(m, film, `/movies/${id}`, null));
     fs.writeFileSync(file, addScript(html)); n++;
   }
   const dir = path.join(ROOT, 'callbacks');

@@ -36,7 +36,7 @@ test('photos are not credited twice and every list portrait names its character'
 // Doug 2026-10-06: no source or license lines on the pages; credits live on /credits,
 // which every footer links to (the CC licenses need the credit to be reachable).
 test('every photo on a page is in media-credits.json, has size and alt, and no caption credit', () => {
-  const credited = new Set(credits.images.map((i) => i.file));
+  const credited = new Set([...credits.images, ...(credits.posters || [])].map((i) => i.file));
   for (const file of htmlFiles(ROOT)) {
     const html = fs.readFileSync(file, 'utf8');
     for (const tag of html.match(/<img[^>]*src="\/img\/[^>]*>/g) || []) {
@@ -79,7 +79,10 @@ test('every embedded video is a credited official or licensed-channel upload, no
       assert.match(m[0], /data-title="[^"]+"/);
       assert.match(m[0], /aria-label="[^"]+"/);
     }
-    assert.ok(!/i\.ytimg\.com|img\.youtube\.com/.test(html), `${file} shows a YouTube thumbnail outside the player`);
+    // ADR-016: a trailer's own YouTube thumbnail may be the cover of its play button, loaded
+    // from YouTube's image server; nowhere else, and never another video's frame.
+    const bare = html.replace(/<button[^>]*data-yt="([^"]*)"[^>]*>[\s\S]*?<\/button>/g, (b, id) => b.replace(new RegExp(`https://i\\.ytimg\\.com/vi/${id}/(?:maxresdefault|hqdefault)\\.jpg`, 'g'), ''));
+    assert.ok(!/i\.ytimg\.com|img\.youtube\.com/.test(bare), `${file} shows a YouTube thumbnail outside its own play button`);
   }
 });
 
@@ -122,5 +125,28 @@ test('spotlight data names real characters and has a source; every spotlight lin
     const file = p.endsWith('/') ? `${p}index.html` : `${p}.html`;
     assert.ok(fs.existsSync(path.join(ROOT, file)), `${h}: no page`);
     if (hash) assert.ok(ids.has(hash), `${h}: no such character row`);
+  }
+});
+
+// ADR-016 (Doug 2026-10-15, "Embeds + posters"): a film's poster only on that film's own
+// movie page, at most one, small (480 px, under 120 KB), credited on /credits.
+test('posters: one per movie page, only there, small and credited', () => {
+  const posters = credits.posters || [];
+  assert.ok(posters.length >= 5);
+  const credits_html = fs.readFileSync(path.join(ROOT, 'credits.html'), 'utf8');
+  for (const p of posters) {
+    assert.match(p.page, /^\/movies\/[a-z0-9-]+$/, p.file);
+    assert.match(p.file, /^\/img\/posters\/[a-z0-9-]+\.jpg$/);
+    assert.ok(p.width <= 480 && fs.statSync(path.join(ROOT, p.file)).size < 120 * 1024, p.file);
+    assert.ok(p.owner && p.sourceUrl.startsWith('https://'), p.file);
+    assert.ok(credits_html.includes(p.subject), `${p.file} not on /credits`);
+  }
+  for (const file of htmlFiles(ROOT)) {
+    const html = fs.readFileSync(file, 'utf8');
+    const used = html.match(/src="\/img\/posters\/[^"]+"/g) || [];
+    if (!used.length) continue;
+    const page = '/' + path.relative(ROOT, file).replace(/\.html$/, '');
+    assert.equal(used.length, 1, `${file} shows ${used.length} posters`);
+    assert.ok(posters.some((p) => p.page === page && used[0].includes(p.file)), `${file} shows a poster that is not its own`);
   }
 });

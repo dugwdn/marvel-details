@@ -2943,7 +2943,8 @@
    "title": "Thor - Trailer (OFFICIAL)",
    "channel": "Marvel Entertainment",
    "sourceUrl": "https://www.youtube.com/watch?v=JOddp-nlNvQ",
-   "verified": "2026-10-06 via youtube.com/oembed"
+   "verified": "2026-10-06 via youtube.com/oembed",
+   "cover": "hqdefault"
   },
   {
    "page": "/",
@@ -2954,7 +2955,8 @@
    "title": "Captain America: The First Avenger - Trailer",
    "channel": "Marvel Entertainment",
    "sourceUrl": "https://www.youtube.com/watch?v=JerVrbLldXw",
-   "verified": "2026-10-06 via youtube.com/oembed"
+   "verified": "2026-10-06 via youtube.com/oembed",
+   "cover": "hqdefault"
   },
   {
    "page": "/",
@@ -3075,7 +3077,8 @@
    "title": "Spider-Man: Homecoming - Trailer 3",
    "channel": "Marvel Entertainment",
    "sourceUrl": "https://www.youtube.com/watch?v=U0D3AOldjMU",
-   "verified": "2026-10-06 via youtube.com/oembed"
+   "verified": "2026-10-06 via youtube.com/oembed",
+   "cover": "hqdefault"
   },
   {
    "page": "/",
@@ -3549,6 +3552,63 @@
    "channel": "Marvel Entertainment",
    "sourceUrl": "https://www.youtube.com/watch?v=U1MqJBVn8Rk",
    "verified": "2026-10-06 via youtube.com/oembed"
+  }
+ ],
+ "posters": [
+  {
+   "page": "/movies/iron-man-1",
+   "film": "Iron Man",
+   "file": "/img/posters/iron-man-1.jpg",
+   "width": 480,
+   "height": 720,
+   "subject": "Iron Man (2008) theatrical poster",
+   "owner": "Marvel Studios",
+   "basis": "fair use",
+   "sourceUrl": "https://www.themoviedb.org/movie/1726"
+  },
+  {
+   "page": "/movies/iron-man-2",
+   "film": "Iron Man 2",
+   "file": "/img/posters/iron-man-2.jpg",
+   "width": 480,
+   "height": 720,
+   "subject": "Iron Man 2 (2010) theatrical poster",
+   "owner": "Marvel Studios",
+   "basis": "fair use",
+   "sourceUrl": "https://www.themoviedb.org/movie/10138"
+  },
+  {
+   "page": "/movies/iron-man-3",
+   "film": "Iron Man 3",
+   "file": "/img/posters/iron-man-3.jpg",
+   "width": 480,
+   "height": 720,
+   "subject": "Iron Man 3 (2013) theatrical poster",
+   "owner": "Marvel Studios",
+   "basis": "fair use",
+   "sourceUrl": "https://www.themoviedb.org/movie/68721"
+  },
+  {
+   "page": "/movies/avengers-1",
+   "film": "The Avengers",
+   "file": "/img/posters/avengers-1.jpg",
+   "width": 480,
+   "height": 720,
+   "subject": "The Avengers (2012) theatrical poster",
+   "owner": "Marvel Studios",
+   "basis": "fair use",
+   "sourceUrl": "https://www.themoviedb.org/movie/24428"
+  },
+  {
+   "page": "/movies/endgame",
+   "film": "Avengers: Endgame",
+   "file": "/img/posters/endgame.jpg",
+   "width": 480,
+   "height": 720,
+   "subject": "Avengers: Endgame (2019) theatrical poster",
+   "owner": "Marvel Studios",
+   "basis": "fair use",
+   "sourceUrl": "https://www.themoviedb.org/movie/299534"
   }
  ]
 }

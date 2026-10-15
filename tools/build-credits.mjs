@@ -18,6 +18,9 @@ const usedOn = (x) => {
 const imgs = data.images.map((i) =>
   `<li><strong>${esc(i.subject)}</strong><br>Photo: ${esc(i.author)}, <a href="${esc(i.licenseUrl)}" rel="nofollow noopener">${esc(i.license)}</a>, <a href="${esc(i.sourceUrl)}" rel="nofollow noopener">via Wikimedia Commons</a>${i.changes ? ` (${esc(i.changes)})` : ''}.<br>Used on ${usedOn(i)}.</li>`
 ).join('\n            ');
+const posters = (data.posters || []).map((p) =>
+  `<li><strong>${esc(p.subject)}</strong><br>Poster: © ${esc(p.owner)}. Shown once, on <a href="${esc(p.page)}">the ${esc(p.film)} page</a>, beside our write-up of the film (fair use). <a href="${esc(p.sourceUrl)}" rel="nofollow noopener">Poster source</a>.</li>`
+).join('\n            ');
 const vids = data.videos.map((v) =>
   `<li><strong>${esc(v.title)}</strong>${v.film ? ` (${esc(v.film)})` : ''}<br>Channel: ${esc(v.channel)}, <a href="${esc(v.sourceUrl)}" rel="nofollow noopener">watch on YouTube</a>.<br>Used on ${usedOn(v)}${v.film ? ' and the pages of characters in it' : ''}.</li>`
 ).join('\n            ');
@@ -29,7 +32,7 @@ const html = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>Photos and Credits | MCU Easter Eggs</title>
-    <meta name="description" content="Who took each photo on the site, the license it is under, and where each trailer comes from.">
+    <meta name="description" content="Who took each photo on the site, the license it is under, where each poster and trailer comes from.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
@@ -47,11 +50,15 @@ const html = `<!DOCTYPE html>
     <main class="container">
         <div class="content">
             <h1>Photos and Credits</h1>
-            <p>We never use studio posters, film stills or character art. Photos here are free-license pictures from Wikimedia Commons, credited to the people who took them. Trailers are YouTube videos from official Marvel and Sony channels or licensed trailer channels, played with YouTube's own player. We never host video. Photos and trailers around the site carry no caption credits; every one is credited here, and every page links here from its footer.</p>
+            <p>We never use film stills or character art. Each movie page shows that film's theatrical poster beside our write-up, credited below; we take any poster down on request. Photos here are free-license pictures from Wikimedia Commons, credited to the people who took them. Trailers are YouTube videos from official Marvel and Sony channels or licensed trailer channels, played with YouTube's own player. We never host video. Photos and trailers around the site carry no caption credits; every one is credited here, and every page links here from its footer.</p>
             <h2>Photos (${data.images.length})</h2>
             <ul class="credits-list">
             ${imgs}
             </ul>
+            ${posters ? `<h2>Movie posters (${data.posters.length})</h2>
+            <ul class="credits-list">
+            ${posters}
+            </ul>` : ''}
             <h2>Trailers (${data.videos.length})</h2>
             <ul class="credits-list">
             ${vids}
