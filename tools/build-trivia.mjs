@@ -1,7 +1,8 @@
 // Writes the scene trivia pages (ADR-018) from public/data/trivia.json:
 //   /trivia/          "Ask about any scene" box (public/js/trivia.js) and every film and show
 //   /trivia/<slug>    one film or show: its facts grouped by kind, with the wiki credit
-// The facts come from the fan-run MCU Wiki (CC BY-SA): python3 tools/import-wiki-trivia.py
+// The facts come from the fan-run MCU Wiki (CC BY-SA): python3 tools/import-wiki-trivia.py, plus the
+// details fans spotted on screen (tools/scene-details.json, python3 tools/import-scene-details.py).
 // Run after importing: node tools/build-trivia.mjs && node tools/menu.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,13 +15,24 @@ const SITE = 'https://mcueastereggs.com';
 const esc = v => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
 // Order of the groups on a title page and of the filter chips on /trivia/.
-export const KINDS = ['Scene details', 'MCU connections', 'Comics references', 'Behind the scenes', 'Pop culture', 'Episode titles'];
+export const KINDS = ['Spotted on screen', 'Scene details', 'MCU connections', 'Comics references', 'Behind the scenes', 'Pop culture', 'Episode titles'];
 const KIND_ID = k => k.toLowerCase().replace(/[^a-z]+/g, '-');
 
 export const trivia = (root = ROOT) => JSON.parse(fs.readFileSync(path.join(root, 'data', 'trivia.json'), 'utf8'));
 
+const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
+// A fan-spotted detail: the scene, what to look for, and who reported it (so it can be checked).
+export function factHtml(f) {
+  if (!f.spotted) return esc(f.text);
+  const by = f.by ? `Spotted by ${esc(f.by)}, reported by ` : 'Reported by ';
+  return `<span class="tv-scene">${esc(f.scene)}</span> ${esc(f.text)} <span class="tv-src">${by}${f.sources.map(u => `<a href="${esc(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a>`).join(' and ')}</span>`;
+}
+
 export function credit(data, w) {
+  if (w && !w.source) return `<p class="tv-credit">Details spotted by fans and reported by the sites linked on each one. We have not checked each one against the film yet; if one is wrong, say so in the discussion.</p>`;
+  const spotted = w ? w.facts.some(f => f.spotted) : true;
   const src = w ? `the <a href="${esc(w.source)}" rel="noopener" target="_blank">${esc(w.work)} trivia page</a> on ` : '';
+  if (spotted) return `<p class="tv-credit">"Spotted on screen" details were found by fans and reported by the sites linked on each one. The rest comes from ${src}the fan-written Marvel Cinematic Universe Wiki, split into single facts. We have not checked each one against the film yet; if one is wrong, say so in the discussion. <a href="/credits#trivia">License and credits</a>.</p>`;
   return `<p class="tv-credit">From ${src}the fan-written Marvel Cinematic Universe Wiki, split into single facts. We have not checked each one yet; if one is wrong, say so in the discussion. <a href="/credits#trivia">License and credits</a>.</p>`;
 }
 
@@ -54,7 +66,7 @@ ${script ? '    <script type="module" src="/js/trivia.js"></script>\n' : ''}</bo
 export function askBox() {
   return `            <form class="tv-ask" role="search" action="/trivia/" method="get" data-trivia-ask data-kb-block>
                 <label class="tv-ask-label" for="tv-q">Ask about any scene</label>
-                <p class="tv-ask-help" id="tv-q-help">Type a few words: a thing, a line, a character or a film. Try <a href="/trivia/?q=shawarma">shawarma</a>, <a href="/trivia/?q=clock">clock</a>, <a href="/trivia/?q=stan+lee">Stan Lee</a> or <a href="/trivia/?q=iron+man+suit">Iron Man suit</a>.</p>
+                <p class="tv-ask-help" id="tv-q-help">Type a few words: a thing, a line, a character or a film. Try <a href="/trivia/?q=shawarma">shawarma</a>, <a href="/trivia/?q=clock">clock</a>, <a href="/trivia/?q=license+plate">license plate</a>, <a href="/trivia/?q=stan+lee">Stan Lee</a> or <a href="/trivia/?q=iron+man+suit">Iron Man suit</a>.</p>
                 <div class="tv-ask-row">
                     <input id="tv-q" name="q" type="search" placeholder="What do you want to know?" aria-describedby="tv-q-help" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                     <button type="submit">Ask</button>
@@ -96,13 +108,13 @@ export function workPage(data, w) {
     url: `/trivia/${w.slug}`,
     title: `${w.work} Trivia and Easter Eggs`,
     desc,
-    jsonld: { '@context': 'https://schema.org', '@type': 'WebPage', name: `${w.work} Trivia`, url: `${SITE}/trivia/${w.slug}`, isBasedOn: w.source, license: data.licenseUrl },
+    jsonld: { '@context': 'https://schema.org', '@type': 'WebPage', name: `${w.work} Trivia`, url: `${SITE}/trivia/${w.slug}`, ...(w.source ? { isBasedOn: w.source, license: data.licenseUrl } : {}) },
     body: `            <p><a class="back-button" href="/trivia/">&larr; All trivia</a></p>
             <h1>${esc(w.work)} trivia</h1>
             <p class="tv-lede">Background details, easter eggs and behind-the-scenes facts fans have spotted in ${esc(w.work)}.</p>
 ${toc}${groups.map(([k, list]) => `            <section aria-labelledby="${KIND_ID(k)}"><h2 id="${KIND_ID(k)}">${esc(k)}</h2>
             <ul class="tv-facts">
-${list.map(f => `                <li id="${esc(f.id)}">${esc(f.text)}</li>`).join('\n')}
+${list.map(f => `                <li id="${esc(f.id)}">${factHtml(f)}</li>`).join('\n')}
             </ul></section>`).join('\n')}
             <p><a class="tv-ask-link" href="/trivia/">Ask about another scene</a></p>
             ${credit(data, w)}`,

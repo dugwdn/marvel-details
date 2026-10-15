@@ -12,7 +12,11 @@
     <meta property="og:url" content="https://mcueastereggs.com/trivia/">
     <meta property="og:type" content="website">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"MCU Trivia","url":"https://mcueastereggs.com/trivia/"}</script>
-    <link rel="stylesheet" href="/css/trivia.css?v=63155719">
+    <link rel="stylesheet" href="/css/trivia.css?v=995c7e36">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+    <link rel="stylesheet" href="/css/theme.css?v=e52c4f50">
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
     <script>
@@ -22,10 +26,6 @@
         gtag('js', new Date());
         gtag('config', 'G-NESPZD6XSQ', { allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname });
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
-    <link rel="stylesheet" href="/css/theme.css?v=e52c4f50">
 </head>
 <body>
     <header class="site-brand site-bar">
@@ -60,13 +60,13 @@
             <p class="tv-lede">The small stuff: what is on the screen behind Tony, which comic a line comes from, what the actors made up on the day. Ask, or pick a film or show.</p>
             <form class="tv-ask" role="search" action="/trivia/" method="get" data-trivia-ask data-kb-block>
                 <label class="tv-ask-label" for="tv-q">Ask about any scene</label>
-                <p class="tv-ask-help" id="tv-q-help">Type a few words: a thing, a line, a character or a film. Try <a href="/trivia/?q=shawarma">shawarma</a>, <a href="/trivia/?q=clock">clock</a>, <a href="/trivia/?q=stan+lee">Stan Lee</a> or <a href="/trivia/?q=iron+man+suit">Iron Man suit</a>.</p>
+                <p class="tv-ask-help" id="tv-q-help">Type a few words: a thing, a line, a character or a film. Try <a href="/trivia/?q=shawarma">shawarma</a>, <a href="/trivia/?q=clock">clock</a>, <a href="/trivia/?q=license+plate">license plate</a>, <a href="/trivia/?q=stan+lee">Stan Lee</a> or <a href="/trivia/?q=iron+man+suit">Iron Man suit</a>.</p>
                 <div class="tv-ask-row">
                     <input id="tv-q" name="q" type="search" placeholder="What do you want to know?" aria-describedby="tv-q-help" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                     <button type="submit">Ask</button>
                 </div>
             </form>
-            <div class="tv-chips" role="group" aria-label="Show only" data-trivia-chips hidden><button type="button" class="tv-chip" data-kind="" aria-pressed="true">All</button><button type="button" class="tv-chip" data-kind="Scene details" aria-pressed="false">Scene details</button><button type="button" class="tv-chip" data-kind="MCU connections" aria-pressed="false">MCU connections</button><button type="button" class="tv-chip" data-kind="Comics references" aria-pressed="false">Comics references</button><button type="button" class="tv-chip" data-kind="Behind the scenes" aria-pressed="false">Behind the scenes</button><button type="button" class="tv-chip" data-kind="Pop culture" aria-pressed="false">Pop culture</button><button type="button" class="tv-chip" data-kind="Episode titles" aria-pressed="false">Episode titles</button></div>
+            <div class="tv-chips" role="group" aria-label="Show only" data-trivia-chips hidden><button type="button" class="tv-chip" data-kind="" aria-pressed="true">All</button><button type="button" class="tv-chip" data-kind="Spotted on screen" aria-pressed="false">Spotted on screen</button><button type="button" class="tv-chip" data-kind="Scene details" aria-pressed="false">Scene details</button><button type="button" class="tv-chip" data-kind="MCU connections" aria-pressed="false">MCU connections</button><button type="button" class="tv-chip" data-kind="Comics references" aria-pressed="false">Comics references</button><button type="button" class="tv-chip" data-kind="Behind the scenes" aria-pressed="false">Behind the scenes</button><button type="button" class="tv-chip" data-kind="Pop culture" aria-pressed="false">Pop culture</button><button type="button" class="tv-chip" data-kind="Episode titles" aria-pressed="false">Episode titles</button></div>
             <p class="tv-status" data-trivia-status aria-live="polite"></p>
             <p class="tv-fans" data-ask-fans hidden><a href="/boards/quiz-and-trivia">Ask the fans</a> Someone on the Quiz and Trivia board may know. We add good answers to the trivia.</p>
             <ol class="tv-results" data-trivia-results></ol>
@@ -115,6 +115,7 @@
                 <li><a href="/trivia/iron-man">Iron Man</a></li>
                 <li><a href="/trivia/iron-man-2">Iron Man 2</a></li>
                 <li><a href="/trivia/iron-man-3">Iron Man 3</a></li>
+                <li><a href="/trivia/ironheart">Ironheart</a></li>
                 <li><a href="/trivia/jessica-jones">Jessica Jones</a></li>
                 <li><a href="/trivia/loki">Loki</a></li>
                 <li><a href="/trivia/luke-cage">Luke Cage</a></li>
@@ -148,11 +149,12 @@
                 <li><a href="/trivia/thunderbolts">Thunderbolts*</a></li>
                 <li><a href="/trivia/visionquest">VisionQuest</a></li>
                 <li><a href="/trivia/wandavision">WandaVision</a></li>
+                <li><a href="/trivia/werewolf-by-night">Werewolf by Night</a></li>
                 <li><a href="/trivia/what-if">What If...?</a></li>
                 <li><a href="/trivia/whih-newsfront-web-series">WHiH Newsfront (web series)</a></li>
                 <li><a href="/trivia/wonder-man">Wonder Man</a></li>
             </ul></section>
-            <p class="tv-credit">From the fan-written Marvel Cinematic Universe Wiki, split into single facts. We have not checked each one yet; if one is wrong, say so in the discussion. <a href="/credits#trivia">License and credits</a>.</p>
+            <p class="tv-credit">"Spotted on screen" details were found by fans and reported by the sites linked on each one. The rest comes from the fan-written Marvel Cinematic Universe Wiki, split into single facts. We have not checked each one against the film yet; if one is wrong, say so in the discussion. <a href="/credits#trivia">License and credits</a>.</p>
     </main>
     <div class="ad-box" data-ad-box="end" data-ad-placeholder="end" data-ad-stamp><div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div></div>
     <footer><p>&copy; 2026 MCU Easter Eggs. Not affiliated with Marvel or Disney.</p><p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Photos and Credits</a></p>
@@ -161,7 +163,7 @@
         <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
     </div></footer>
     <script src="/js/ads.js?v=46d2d40a" defer></script>
-    <script type="module" src="/js/trivia.js?v=11c4d918"></script>
+    <script type="module" src="/js/trivia.js?v=9e5b0e6b"></script>
     <script type="module" src="/js/members.js?v=e59b7b8f"></script>
     <script type="module" src="/js/search.js?v=3f64106c"></script>
     <script type="module" src="/js/keyboard.js?v=bd0f7407"></script>

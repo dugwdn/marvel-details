@@ -82,7 +82,10 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   `/trivia/` "Ask about any scene" (browser-only search, `public/js/trivia-core.js`)
   over `public/data/trivia.json` (MCU Wiki trivia text, CC BY-SA, credit on
   `/credits#trivia`; refresh with `python3 tools/import-wiki-trivia.py`, then
-  `node tools/build-trivia.mjs`). `/theories/` from `public/data/theories.json`
+  `node tools/build-trivia.mjs`), plus 576 fan-spotted scene details ("Spotted on
+  screen": the scene, the detail, the question it answers, who reported it) from
+  `tools/scene-details.json` via `python3 tools/import-scene-details.py` (the wiki
+  importer runs it too). `/theories/` from `public/data/theories.json`
   (`python3 tools/import-theories.py`, then `node tools/build-theories.mjs`): own
   words, stamped verdicts with sources, evidence board of sourced clues. Both
   builders keep their pages in sitemap.xml. Run `node tools/menu.mjs` after.

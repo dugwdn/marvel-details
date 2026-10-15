@@ -210,6 +210,8 @@ def main():
     with open(OUT, 'w') as fh:
         json.dump(data, fh, ensure_ascii=False, separators=(',', ':'))
     print(f'{len(works)} titles, {sum(len(w["facts"]) for w in works)} facts -> {os.path.relpath(OUT)}')
+    # Put the fan-spotted scene details back (they live in tools/scene-details.json).
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'import-scene-details.py')], check=True)
 
 
 if __name__ == '__main__':

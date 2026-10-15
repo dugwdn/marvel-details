@@ -13,6 +13,10 @@ const more = document.querySelector('[data-trivia-more]');
 const PAGE = 20;
 let data = null, answers = [], shown = 0, kind = '';
 
+const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
+// A fan-spotted detail shows its scene first and who reported it last, so it can be checked.
+const factHtml = (f, words) => !f.spotted ? mark(f.text, words)
+  : `<span class="tv-scene">${mark(f.scene, words)}</span> ${mark(f.text, words)} <span class="tv-src">${f.by ? `Spotted by ${esc(f.by)}, reported by ` : 'Reported by '}${f.sources.map(u => `<a href="${esc(u)}" rel="noopener nofollow" target="_blank">${esc(host(u))}</a>`).join(' and ')}</span>`;
 const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 function mark(text, words) {
   let html = esc(text);
@@ -50,7 +54,7 @@ function render(reset) {
     askFans(q, pick[0].close);
   }
   const words = terms(q);
-  const html = pick.slice(shown, shown + PAGE).map(a => `<li class="tv-answer${a.close ? ' tv-close' : ''}"><p class="tv-answer-meta"><a href="/trivia/${a.work.slug}#${a.fact.id}">${esc(a.work.work)}</a><span>${esc(a.fact.kind)}</span></p><p>${mark(a.fact.text, words)}</p></li>`).join('');
+  const html = pick.slice(shown, shown + PAGE).map(a => `<li class="tv-answer${a.close ? ' tv-close' : ''}"><p class="tv-answer-meta"><a href="/trivia/${a.work.slug}#${a.fact.id}">${esc(a.work.work)}</a><span>${esc(a.fact.kind)}</span></p><p>${factHtml(a.fact, words)}</p></li>`).join('');
   list.insertAdjacentHTML('beforeend', html);
   shown = Math.min(pick.length, shown + PAGE);
   moreWrap.hidden = shown >= pick.length;

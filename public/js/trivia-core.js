@@ -38,7 +38,7 @@ export function ask(data, q) {
   for (const work of data.works) {
     const title = words(work.work);
     for (const fact of work.facts) {
-      const text = words(fact.text);
+      const text = words(fact.text + ' ' + (fact.scene || '') + ' ' + (fact.q || ''));
       let hits = 0, score = 0;
       for (const w of ws) {
         if (found(text, w)) { hits++; score += 3; } else if (found(title, w)) { hits++; score += 1; }

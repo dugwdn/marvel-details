@@ -100,3 +100,8 @@ html body .th-trail a { color: #ddd; }
 .th-trail li[aria-current] { font-weight: 700; }
 .tv-fans { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding: .8rem 1rem; background: var(--dym-surface); border: 2px dashed var(--dym-line); border-radius: 8px; }
 html body .tv-fans a { display: inline-flex; align-items: center; min-height: 2.8rem; padding: .3rem 1rem; background: #ffd60a; color: #111; border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 #000; font: 700 1.05rem var(--dym-head); text-transform: uppercase; }
+/* Fan-spotted details: the scene on its own line, who reported it last. */
+.tv-scene { display: block; font-weight: 700; font-size: .875rem; text-transform: uppercase; letter-spacing: .04em; color: var(--dym-red); margin-bottom: .2rem; }
+.tv-src { display: block; font-size: .875rem; color: var(--dym-muted); margin-top: .3rem; }
+.tv-src a { color: inherit; font-weight: 600; text-decoration: none; }
+.tv-fans[hidden], .th-bars[hidden], .th-trail[hidden], [data-share-out][hidden], .tv-chips[hidden] { display: none; }

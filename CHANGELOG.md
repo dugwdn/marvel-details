@@ -16,6 +16,10 @@ merged-but-unpublished work.
   (no account) shows how other fans voted, and Ask a friend shares the theory.
 - When the trivia box has no answer, "Ask the fans" starts a board thread with the
   question already typed in. Posts can hide spoilers >!like this!<.
+- 576 "Spotted on screen" details fans found in the frame (clocks, watches, license
+  plates, screens, props, cameos) across 80 titles, each with its scene, the question
+  it answers and the site that reported it. Example: Doctor Strange's watch reads
+  February 2, Groundhog Day.
 
 ## 2026-10-15 (New home page top, goes live when merged)
 - The home page opens with the real Spider-Man: Brand New Day poster and trailer,

@@ -8,7 +8,7 @@ import { ask, terms } from '../public/js/trivia-core.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const trivia = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/trivia.json'), 'utf8'));
-const KINDS = ['Scene details', 'MCU connections', 'Comics references', 'Behind the scenes', 'Pop culture', 'Episode titles'];
+const KINDS = ['Spotted on screen', 'Scene details', 'MCU connections', 'Comics references', 'Behind the scenes', 'Pop culture', 'Episode titles'];
 
 test('every trivia fact has an id, a known kind and a source', () => {
   assert.ok(trivia.works.length >= 50, 'expected most MCU films and shows');
@@ -16,13 +16,16 @@ test('every trivia fact has an id, a known kind and a source', () => {
   const ids = new Set();
   for (const w of trivia.works) {
     assert.match(w.slug, /^[a-z0-9-]+$/);
-    assert.ok(w.source.startsWith('https://marvelcinematicuniverse.fandom.com/wiki/') || w.facts.every(f => f.source), `${w.work} has no source`);
+    assert.ok(w.source?.startsWith('https://marvelcinematicuniverse.fandom.com/wiki/') || w.facts.every(f => f.spotted), `${w.work} has no source`);
     for (const f of w.facts) {
       assert.ok(!ids.has(f.id), `duplicate id ${f.id}`);
       ids.add(f.id);
       assert.ok(KINDS.includes(f.kind), `${f.id} kind ${f.kind}`);
       assert.ok(f.text.length >= 30 && !/\[\d+\]/.test(f.text), `${f.id} text`);
-      if (f.source) assert.match(f.source, /^https:\/\//);
+      if (f.spotted) {
+        assert.ok(f.scene && f.q && f.sources.length, `${f.id} needs its scene, question and source`);
+        for (const u of f.sources) assert.match(u, /^https:\/\//);
+      }
     }
   }
 });
@@ -31,7 +34,7 @@ test('every film and show has its trivia page, with its facts and the credit lin
   for (const w of trivia.works) {
     const html = fs.readFileSync(path.join(ROOT, 'trivia', `${w.slug}.html`), 'utf8');
     assert.ok(html.includes(`id="${w.facts[0].id}"`), `${w.slug} is missing its first fact`);
-    assert.ok(html.includes('href="/credits#trivia"'), `${w.slug} has no license link`);
+    if (w.source) assert.ok(html.includes('href="/credits#trivia"'), `${w.slug} has no license link`);
     assert.ok(/<h1>[^<]+<\/h1>/.test(html));
   }
   const credits = fs.readFileSync(path.join(ROOT, 'credits.html'), 'utf8');
@@ -48,11 +51,14 @@ test('the ask box has a visible label and asks for a small keyboard', () => {
 test('asking: words match only at the start of a word, and natural questions still answer', () => {
   assert.deepEqual(terms('What time was it on the clock?'), ['time', 'clock']);
   const shawarma = ask(trivia, 'shawarma');
-  assert.ok(shawarma.length > 0 && shawarma.every(a => /shawarma/i.test(a.fact.text)));
-  assert.ok(ask(trivia, 'thor').every(a => /\bthor/i.test(a.fact.text + ' ' + a.work.work)), '"thor" must never match inside "authority"');
+  assert.ok(shawarma.length > 0 && shawarma.every(a => /shawarma/i.test(a.fact.text + a.fact.scene + a.fact.q)));
+  assert.ok(ask(trivia, 'thor').every(a => /\bthor/i.test([a.fact.text, a.fact.scene, a.fact.q, a.work.work].join(' '))), '"thor" must never match inside "authority"');
   const plate = ask(trivia, 'what license plate is on the car');
   assert.ok(plate.length && !plate[0].close && /license plate/i.test(plate[0].fact.text));
   assert.deepEqual(ask(trivia, 'the of and'), []);
+  // Scene-level questions like Doug's example: what does the clock (or a watch, or a plate) show.
+  const watch = ask(trivia, "what time is on doctor strange's watch");
+  assert.ok(watch.length && !watch[0].close && watch[0].fact.spotted, 'a spotted detail answers the watch question');
 });
 
 const theoriesFile = path.join(ROOT, 'data/theories.json');
