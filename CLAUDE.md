@@ -78,6 +78,14 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   menu item). Port of Credible Theories' system: `functions/_lib/discuss.js`,
   `public/js/discuss.js`, `public/data/boards.json`, `tools/build-boards.mjs`.
   Setup Doug does once: RUNBOOK "Message boards" (MOD_MEMBERS, Turnstile).
+- **Trivia and fan theories (2026-10-15, ADR-018, branch `trivia-and-theories`):**
+  `/trivia/` "Ask about any scene" (browser-only search, `public/js/trivia-core.js`)
+  over `public/data/trivia.json` (MCU Wiki trivia text, CC BY-SA, credit on
+  `/credits#trivia`; refresh with `python3 tools/import-wiki-trivia.py`, then
+  `node tools/build-trivia.mjs`). `/theories/` from `public/data/theories.json`
+  (`python3 tools/import-theories.py`, then `node tools/build-theories.mjs`): own
+  words, stamped verdicts with sources, evidence board of sourced clues. Both
+  builders keep their pages in sitemap.xml. Run `node tools/menu.mjs` after.
 - **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
   anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
   Never add a card that looks clickable without a link behind it.
