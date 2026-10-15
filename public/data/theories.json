@@ -569,6 +569,52 @@
    "rank": 50
   },
   {
+   "id": "loki-mind-controlled",
+   "title": "Loki was under the scepter's spell too",
+   "one_line": "In The Avengers, the Mind Stone in Loki's scepter was controlling Loki as well as his victims.",
+   "summary": "Fans noticed Loki's eyes and behavior in The Avengers seemed off compared with Thor, and that Thanos gave him the scepter. The theory says the Mind Stone was twisting Loki, which would explain his worst acts. Marvel's official character page later added that the scepter was secretly influencing Loki as well. The films never say it out loud.",
+   "films": [
+    "The Avengers",
+    "Avengers: Infinity War"
+   ],
+   "characters": [
+    "Loki",
+    "Thanos"
+   ],
+   "status": "partly",
+   "status_note": "Marvel's own character bio was updated to say the scepter influenced Loki; no film states it.",
+   "status_source": "https://www.mentalfloss.com/entertainment/movies/marvel-confirms-loki-avengers-fan-theory",
+   "evidence": [
+    {
+     "point": "Loki uses the scepter to control Hawkeye and Selvig; the scepter came from Thanos's side.",
+     "scene": "The Avengers (2012)",
+     "source": "https://www.mentalfloss.com/entertainment/movies/marvel-confirms-loki-avengers-fan-theory"
+    },
+    {
+     "point": "Once the scepter is gone, Loki turns friendlier and more playful, which fits the stone having bent his mind before.",
+     "scene": "Thor: Ragnarok",
+     "source": "https://www.looper.com/275568/the-unexpected-way-marvel-fixed-lokis-mind-stone-plothole"
+    }
+   ],
+   "against": [
+    {
+     "point": "Nothing in the first Avengers film tells us Loki himself was under the stone's influence.",
+     "source": "https://bgr.com/2018/12/31/avengers-endgame-spoilers-marvel-just-made-a-huge-change-to-canon/"
+    }
+   ],
+   "origin": {
+    "where": "unknown",
+    "origin_url": null,
+    "when": null
+   },
+   "popularity": "Covered by Mental Floss, BGR, JoBlo and Inverse when Marvel.com's bio changed.",
+   "coverage": [
+    "https://www.joblo.com/marvel-confirms-loki-theory/",
+    "https://inverse.com/article/52115-avengers-4-endgame-spoilers-mind-stone-theory-confirmed"
+   ],
+   "rank": 50
+  },
+  {
    "id": "loki-escapes-with-tesseract",
    "title": "Loki isn't gone: a 2012 Loki escapes",
    "one_line": "Even after Loki dies in Infinity War, a past Loki lives on through Endgame's time travel.",
@@ -613,6 +659,106 @@
     "https://www.bustle.com/entertainment/loki-tv-show-timeline-explained"
    ],
    "rank": 50
+  },
+  {
+   "id": "no-way-home-three-spider-men",
+   "title": "Tobey and Andrew are in No Way Home",
+   "one_line": "Spider-Man: No Way Home brings back Tobey Maguire's and Andrew Garfield's Spider-Men.",
+   "summary": "Once No Way Home confirmed villains from the older films (Doctor Octopus, Electro), fans concluded the earlier Spider-Men had to come too. They studied trailers for edited-out figures and watched every denial. Andrew Garfield said repeatedly he wasn't involved. The film brought both back, side by side with Tom Holland.",
+   "films": [
+    "Spider-Man: No Way Home"
+   ],
+   "characters": [
+    "Peter Parker",
+    "Doctor Octopus",
+    "Electro"
+   ],
+   "status": "confirmed",
+   "status_note": "Both actors appear in the finished film.",
+   "status_source": "https://www.thewrap.com/spider-man-no-way-home-theories-true",
+   "evidence": [
+    {
+     "point": "Alfred Molina's Doctor Octopus and Jamie Foxx's Electro were confirmed, pointing at their universes.",
+     "scene": "No Way Home trailers",
+     "source": "https://www.techradar.com/news/andrew-garfield-repeats-hes-not-in-spider-man-no-way-home-or-does-he"
+    },
+    {
+     "point": "Leaked set photos and videos plus oddly edited trailer shots made fans think the older Spider-Men were cut out of the footage.",
+     "scene": "No Way Home trailers and set leaks",
+     "source": "https://www.thewrap.com/spider-man-no-way-home-theories-true"
+    },
+    {
+     "point": "A trailer shot of MJ falling from scaffolding echoed Gwen Stacy's death in The Amazing Spider-Man 2; in the film, Garfield's Peter catches her.",
+     "scene": "Spider-Man: No Way Home trailer, then the final battle",
+     "source": "https://www.thewrap.com/spider-man-no-way-home-theories-true"
+    }
+   ],
+   "against": [
+    {
+     "point": "Garfield denied it on the record several times before release.",
+     "source": "https://www.hollywoodreporter.com/movies/movie-news/andrew-garfield-spider-man-no-way-home-4177357"
+    }
+   ],
+   "origin": {
+    "where": "unknown (also fed by leaks)",
+    "origin_url": null,
+    "when": "2020-2021"
+   },
+   "popularity": "A huge pre-release guessing game; covered by The Hollywood Reporter, TechRadar and TheWrap.",
+   "coverage": [
+    "https://www.techradar.com/news/andrew-garfield-repeats-hes-not-in-spider-man-no-way-home-or-does-he"
+   ],
+   "rank": 3
+  },
+  {
+   "id": "ant-man-inside-thanos",
+   "title": "Ant-Man would shrink inside Thanos and grow",
+   "one_line": "Ant-Man shrinks, gets inside Thanos, then grows to full size and bursts him apart from within.",
+   "summary": "Before Endgame, fans brainstormed the silliest ways to stop Thanos, and the one that stuck was Scott shrinking, slipping inside Thanos, and growing to full size. It went viral on Twitter and Reddit and turned into songs and memes. Paul Rudd said, 'I've been asked about it a bunch.' Endgame writer Christopher Markus said it would fail because Thanos's body is tough enough to crush Scott.",
+   "films": [
+    "Avengers: Endgame"
+   ],
+   "characters": [
+    "Scott Lang",
+    "Thanos"
+   ],
+   "status": "debunked",
+   "status_note": "It does not happen in Endgame, and co-writer Christopher Markus explained why it would not work.",
+   "status_source": "https://www.slashfilm.com/566947/ant-man-attacking-thanos-butt-debunked/",
+   "evidence": [
+    {
+     "point": "Scott can shrink and grow at will.",
+     "scene": "Ant-Man and Ant-Man and the Wasp",
+     "source": "https://nofilmschool.com/Ant-Man-Goes-In-Thanos-Butt"
+    },
+    {
+     "point": "Scott survives the snap and returns from the Quantum Realm, so he is one of the few heroes left to fight.",
+     "scene": "Avengers: Endgame teaser trailer",
+     "source": "https://www.syfy.com/syfy-wire/10-avengers-endgame-fan-theories-that-are-actually-worth-your-time"
+    }
+   ],
+   "against": [
+    {
+     "point": "Markus said Thanos's body resists the Hulk's punches, so Scott would just be crushed.",
+     "source": "https://www.slashfilm.com/566947/ant-man-attacking-thanos-butt-debunked/"
+    },
+    {
+     "point": "Anthony Russo called it the most ridiculous fan theory they had heard.",
+     "source": "https://www.gamespot.com/articles/avengers-endgame-director-and-an-astrophysicist-ta/1100-6466146/"
+    }
+   ],
+   "origin": {
+    "where": "Reddit, then Twitter (credited to @filmgloss by reports)",
+    "origin_url": null,
+    "when": "2018"
+   },
+   "popularity": "Viral joke theory; Paul Rudd, the Russos, Markus and Neil deGrasse Tyson were all asked about it; covered by NME, /Film, GameSpot and CinemaBlend.",
+   "coverage": [
+    "https://www.cinemablend.com/news/2469105/viral-avengers-endgame-theory-involves-ant-man-and-thanos-purple-butt",
+    "https://dailydot.com/ant-man-thanos-butt-song-youtube",
+    "https://joblo.com/?p=149171"
+   ],
+   "rank": 0
   },
   {
    "id": "soul-stone-in-wakanda-or-heimdall",
@@ -662,6 +808,95 @@
     "https://www.elitedaily.com/p/does-heimdall-have-the-soul-stone-this-avengers-infinity-war-theory-has-fans-shook-8681426"
    ],
    "rank": 6
+  },
+  {
+   "id": "mephisto-in-wandavision",
+   "title": "Mephisto is behind WandaVision",
+   "one_line": "The devil-like Mephisto is the hidden villain pulling Wanda's strings.",
+   "summary": "WandaVision's odd commercials and comics stories in which Wanda's twins are tied to Mephisto led fans to expect him to appear. Every week, fans hunted for clues and many were sure he would show up in the finale. He never did. Showrunner Jac Schaeffer said the real villain was grief and Agatha was the outside threat, and that Mephisto was never part of the plan.",
+   "films": [
+    "WandaVision"
+   ],
+   "characters": [
+    "Wanda Maximoff",
+    "Agatha Harkness"
+   ],
+   "status": "debunked",
+   "status_note": "Mephisto never appears, and the showrunner said he was never planned.",
+   "status_source": "https://www.syfy.com/syfywire/wandavision-showrunner-talks-no-mephisto",
+   "evidence": [
+    {
+     "point": "The twins Billy and Tommy are linked to Mephisto in the comics.",
+     "scene": "WandaVision episodes 2 to 9",
+     "source": "https://looper.com/351364/wandavision-the-real-reason-this-popular-fan-theory-never-came-true"
+    },
+    {
+     "point": "Fans read the show's many devil references and dark, magical mood as hints; the showrunner later called them a coincidence.",
+     "scene": "WandaVision, across the season",
+     "source": "https://comicbook.com/tv-shows/news/wandavision-writer-admits-never-heard-mephisto-before-this-year/"
+    }
+   ],
+   "against": [
+    {
+     "point": "Schaeffer: 'The big bad is grief.' She said she didn't know who Mephisto was until press.",
+     "source": "https://comicbook.com/tv-shows/news/wandavision-writer-admits-never-heard-mephisto-before-this-year/"
+    }
+   ],
+   "origin": {
+    "where": "unknown (Reddit and Twitter during the run)",
+    "origin_url": null,
+    "when": "2021"
+   },
+   "popularity": "So widespread that the showrunner was asked about it in several interviews; covered by SYFY, Looper and ComicBook.com.",
+   "coverage": [
+    "https://comicbook.com/tv-shows/news/wandavision-writer-admits-never-heard-mephisto-before-this-year/"
+   ],
+   "rank": 7
+  },
+  {
+   "id": "fietro-x-men-quicksilver",
+   "title": "WandaVision's Pietro is the X-Men's Quicksilver",
+   "one_line": "Evan Peters' Pietro is the Fox X-Men Quicksilver, opening the door to the mutants.",
+   "summary": "When Wanda's dead brother arrived played by Evan Peters, the Quicksilver of Fox's X-Men films, fans thought the multiverse had brought the X-Men into the MCU. The finale revealed he was Ralph Bohner, Agnes's never-seen husband, under Agatha's spell. Jac Schaeffer said the casting was there to set up a joke about the surname, not the multiverse.",
+   "films": [
+    "WandaVision"
+   ],
+   "characters": [
+    "Pietro Maximoff",
+    "Ralph Bohner",
+    "Agatha Harkness"
+   ],
+   "status": "debunked",
+   "status_note": "Episode 9 reveals 'Pietro' is Ralph Bohner under a spell.",
+   "status_source": "https://screencrush.com/wandavision-creator-quicksilver-fan-theories/",
+   "evidence": [
+    {
+     "point": "Wanda's brother turns up played by the X-Men films' Quicksilver actor.",
+     "scene": "WandaVision episode 5, end",
+     "source": "https://inverse.com/entertainment/wandavision-theory-pietro-quicksilver-evan-peters-true-identity"
+    },
+    {
+     "point": "Wanda looks truly shocked when he arrives, and he has little in common with the Age of Ultron Pietro apart from his speed.",
+     "scene": "WandaVision episode 5, the doorstep scene",
+     "source": "https://inverse.com/entertainment/wandavision-theory-pietro-quicksilver-evan-peters-true-identity"
+    }
+   ],
+   "against": [
+    {
+     "point": "He was Ralph, hypnotized into thinking he was Pietro.",
+     "source": "https://inverse.com/entertainment/wandavision-ralph-bohner-evan-peters-pietro"
+    }
+   ],
+   "origin": {
+    "where": "unknown",
+    "origin_url": null,
+    "when": "2021"
+   },
+   "popularity": "Huge online reaction to the casting; covered by ScreenCrush, Inverse and Looper.",
+   "coverage": [
+    "https://inverse.com/entertainment/wandavision-ralph-bohner-evan-peters-pietro"
+   ],
+   "rank": 50
   },
   {
    "id": "tony-left-arm",
@@ -758,6 +993,193 @@
    "coverage": [
     "https://www.looper.com/212861/the-craziest-black-widow-fan-theories",
     "https://newsweek.com/entertainment/comics/scarlett-johansson-shuts-door-black-widow-appearing-mcu-again-2043176"
+   ],
+   "rank": 50
+  },
+  {
+   "id": "hulk-afraid-of-thanos",
+   "title": "Hulk hid because he's scared of Thanos",
+   "one_line": "After losing to Thanos, the Hulk refused to come out because he was afraid.",
+   "summary": "Infinity War opens with Thanos beating the Hulk, and for the rest of the film Bruce cannot turn into him. Many viewers decided the Hulk was simply scared. Joe Russo said the real reason is the fight between Bruce and the Hulk for control, which began in Ragnarok. Mark Ruffalo put it this way: 'The only thing Hulk is afraid of is Banner.'",
+   "films": [
+    "Avengers: Infinity War",
+    "Thor: Ragnarok"
+   ],
+   "characters": [
+    "Bruce Banner",
+    "Hulk",
+    "Thanos"
+   ],
+   "status": "debunked",
+   "status_note": "The directors and Mark Ruffalo said Hulk wasn't afraid of Thanos.",
+   "status_source": "https://www.syfy.com/syfy-wire/infinity-war-directors-explain-the-real-reason-hulk-wont-come-out-why-we-didnt-see-happy",
+   "evidence": [
+    {
+     "point": "Thanos beats Hulk, then Bruce cannot transform, even in Wakanda.",
+     "scene": "Avengers: Infinity War, opening and Wakanda battle",
+     "source": "https://www.denofgeek.com/us/movies/avengers-infinity-war/275419/why-hulk-wouldnt-come-out-in-avengers-infinity-war"
+    },
+    {
+     "point": "Unable to become the Hulk, Bruce fights the Wakanda battle inside the Hulkbuster armor.",
+     "scene": "Avengers: Infinity War, the battle in Wakanda",
+     "source": "https://www.denofgeek.com/?p=819316"
+    }
+   ],
+   "against": [
+    {
+     "point": "Joe Russo: the two halves are fighting over control, not afraid of Thanos.",
+     "source": "https://inverse.com/article/47646-avengers-infinity-war-hulk-wont-transform-banner-real-reason"
+    }
+   ],
+   "origin": {
+    "where": "unknown",
+    "origin_url": null,
+    "when": "2018"
+   },
+   "popularity": "Common enough that both directors and Ruffalo answered it; covered by SYFY, Den of Geek and Inverse.",
+   "coverage": [
+    "https://www.denofgeek.com/us/movies/avengers-infinity-war/275419/why-hulk-wouldnt-come-out-in-avengers-infinity-war"
+   ],
+   "rank": 50
+  },
+  {
+   "id": "mysterio-multiverse-real",
+   "title": "Mysterio really is from another Earth",
+   "one_line": "Quentin Beck's story about coming from Earth-833 is true and the multiverse has arrived.",
+   "summary": "In Far From Home, Mysterio tells Peter and Nick Fury he comes from another Earth destroyed by the Elementals, and fans took it as the MCU's first look at the multiverse. Mid-film, the movie shows Beck is a former Stark employee using drones and illusions. Some fans kept parts of the theory alive, and a few noted the 'Earth-616' name as a clue. Kevin Feige said the reveal just means Beck was lying.",
+   "films": [
+    "Spider-Man: Far From Home"
+   ],
+   "characters": [
+    "Quentin Beck",
+    "Peter Parker",
+    "Nick Fury"
+   ],
+   "status": "debunked",
+   "status_note": "The film itself reveals Beck invented his backstory.",
+   "status_source": "https://www.looper.com/157893/we-finally-know-whether-the-multiverse-exists-in-the-mcu",
+   "evidence": [
+    {
+     "point": "Beck says he comes from Earth-833 and calls the MCU Earth-616.",
+     "scene": "Spider-Man: Far From Home, Beck's story to Peter",
+     "source": "https://whatculture.com/film/spider-man-far-from-home-theory-mysterio-is-spider-man-from-an-alternate-universe"
+    },
+    {
+     "point": "Beck calls the MCU's world 'Earth-616', the name later used in Doctor Strange 2; writer Michael Waldron asked 'What did Quentin know?'",
+     "scene": "Spider-Man: Far From Home; Doctor Strange in the Multiverse of Madness",
+     "source": "https://looper.com/1378159/spider-man-mysterio-marvel-plot-hole-doctor-strange-2-deepens"
+    }
+   ],
+   "against": [
+    {
+     "point": "Beck and ex-Stark staff fake the Elemental attacks with drones and illusions.",
+     "source": "https://www.looper.com/157893/we-finally-know-whether-the-multiverse-exists-in-the-mcu"
+    },
+    {
+     "point": "Feige said it just means Beck was lying, not that there is no multiverse.",
+     "source": "https://whatculture.com/film/spider-man-far-from-home-kevin-feige-explains-the-mcus-multiverse"
+    }
+   ],
+   "origin": {
+    "where": "unknown (plus a Reddit 'two Mysterios' spin-off)",
+    "origin_url": null,
+    "when": "2019"
+   },
+   "popularity": "Covered by Looper, WhatCulture, We Got This Covered and Inverse.",
+   "coverage": [
+    "https://www.inverse.com/article/57255-spider-man-far-from-home-spoilers-ending-explained-j-jonah-jameson-cameo-teases-a-real-multiverse"
+   ],
+   "rank": 50
+  },
+  {
+   "id": "bucky-becomes-captain-america",
+   "title": "Bucky will be the next Captain America",
+   "one_line": "When Steve retires, his best friend Bucky takes the shield, like in the comics.",
+   "summary": "In the comics Bucky took over as Captain America after Steve's death, so many fans expected the same in Endgame. Instead old Steve gives the shield to Sam Wilson while Bucky watches and nods. Sebastian Stan said Bucky becoming Cap 'makes no sense,' and the Russos said Sam deserved it. Sam carries the shield in The Falcon and the Winter Soldier and Captain America: Brave New World.",
+   "films": [
+    "Avengers: Endgame",
+    "The Falcon and the Winter Soldier"
+   ],
+   "characters": [
+    "Bucky Barnes",
+    "Sam Wilson",
+    "Steve Rogers"
+   ],
+   "status": "debunked",
+   "status_note": "Steve gives the shield to Sam at the end of Endgame.",
+   "status_source": "https://blend.cinemablend.com/news/2471393/avengers-endgame-directors-explain-why-bucky-didnt-get-that-captain-america-moment",
+   "evidence": [
+    {
+     "point": "Bucky took the role in the comics.",
+     "scene": "Comics (not film)",
+     "source": "https://www.looper.com/204745/we-now-know-why-bucky-didnt-get-the-shield-in-endgame"
+    },
+    {
+     "point": "The Endgame writers said Bucky as the next Cap was 'Considered, but quickly dropped.'",
+     "scene": "Behind the scenes of Avengers: Endgame (writers' tweet)",
+     "source": "https://www.comicbookmovie.com/avengers/avengers_endgame/marvel-studios-did-consider-having-bucky-become-captain-america-after-avengers-endgame-a174905"
+    }
+   ],
+   "against": [
+    {
+     "point": "Old Steve hands the shield to Sam on the bench by the lake.",
+     "source": "https://www.nme.com/news/film/marvel-sebastian-stan-bucky-barnes-new-captain-america-2533136"
+    }
+   ],
+   "origin": {
+    "where": "unknown",
+    "origin_url": null,
+    "when": "2014-2019"
+   },
+   "popularity": "Covered by CinemaBlend, NME, Looper and MovieWeb; the cast and directors were asked about it.",
+   "coverage": [
+    "https://movieweb.com/bucky-new-captain-america-explained-avengers-endgame-directors/"
+   ],
+   "rank": 50
+  },
+  {
+   "id": "snapped-trapped-in-soul-stone",
+   "title": "The snapped heroes are alive inside the Soul Stone",
+   "one_line": "Everyone dusted by Thanos is trapped in the Soul Stone, waiting to be let out.",
+   "summary": "After the snap, Thanos visits an orange dreamlike place and talks to young Gamora, the same color as the Soul Stone. Fans reasoned that all snap victims went there too, as in the Infinity Gauntlet comics, so Endgame would free them from the stone. Instead the Avengers use time travel to get the stones and Hulk snaps everyone back, with no 'Soul World' rescue.",
+   "films": [
+    "Avengers: Infinity War",
+    "Avengers: Endgame"
+   ],
+   "characters": [
+    "Thanos",
+    "Gamora",
+    "Bruce Banner"
+   ],
+   "status": "debunked",
+   "status_note": "Endgame brings the victims back with a new snap, not from inside the Soul Stone.",
+   "status_source": "https://www.watchmojo.com/en-gb/articles/top-10-avengers-endgame-fan-theories-that-were-wrong",
+   "evidence": [
+    {
+     "point": "Thanos talks to young Gamora in an orange space.",
+     "scene": "Avengers: Infinity War, after the snap",
+     "source": "https://stanforddaily.com/2019/04/25/avengers-endgame-theories-the-serious-and-the-silly/"
+    },
+    {
+     "point": "Joe Russo confirmed the young Gamora scene happens inside the Soul Stone, which fans stretched to cover everyone who was snapped.",
+     "scene": "Avengers: Infinity War, after the snap",
+     "source": "https://www.slashfilm.com/558036/infinity-war-soul-stone-theory/"
+    }
+   ],
+   "against": [
+    {
+     "point": "Time travel and a second snap, not a Soul World, undo the losses.",
+     "source": "https://www.watchmojo.com/en-gb/articles/top-10-avengers-endgame-fan-theories-that-were-wrong"
+    }
+   ],
+   "origin": {
+    "where": "unknown",
+    "origin_url": null,
+    "when": "2018"
+   },
+   "popularity": "Listed in GamesRadar, Stanford Daily and SYFY Endgame theory roundups; WatchMojo counts it among top wrong ones.",
+   "coverage": [
+    "https://www.syfy.com/syfy-wire/watch-avengers-endgame-fan-theories-legit-or-bs"
    ],
    "rank": 50
   },
@@ -994,6 +1416,56 @@
    "rank": 50
   },
   {
+   "id": "thor-dies-in-doomsday",
+   "title": "Thor dies in Doomsday",
+   "one_line": "Thor's teaser is a goodbye: Doom kills him to show how dangerous he is.",
+   "summary": "Thor's Doomsday teaser shows him kneeling and praying to get home safely to his daughter, which many read as a farewell. Fans add a crew member's thank-you post when Chris Hemsworth wrapped and a pirate-ship fight clip they place in the final act. Some even imagine Thor recognizing Tony's face under Doom's mask just before Doom kills him. Hemsworth said the moment was about gratitude.",
+   "films": [
+    "Avengers: Doomsday",
+    "Thor: Love and Thunder"
+   ],
+   "characters": [
+    "Thor",
+    "Doctor Doom"
+   ],
+   "status": "open",
+   "status_note": "Doomsday opens December 18, 2026.",
+   "status_source": "https://www.superherohype.com/movies/680076-avengers-doomsday-trailer-ignites-fan-fear-this-mcu-hero-will-die-before-secret-wars",
+   "evidence": [
+    {
+     "point": "Thor kneels and prays to return to his daughter.",
+     "scene": "Avengers: Doomsday Thor teaser (December 2025)",
+     "source": "https://www.superherohype.com/?p=623570"
+    },
+    {
+     "point": "A fan on X (@vikku60879) spotted a pirate ship behind Thor in a fight that may be with Doom, and placed it in the Void late in the film.",
+     "scene": "Avengers: Doomsday trailer",
+     "source": "https://www.superherohype.com/movies/680076-avengers-doomsday-trailer-ignites-fan-fear-this-mcu-hero-will-die-before-secret-wars"
+    },
+    {
+     "point": "Another fan (@amirdrassil) argued Thor gets so much trailer time that his story must be ending.",
+     "scene": "Avengers: Doomsday trailers",
+     "source": "https://www.superherohype.com/movies/680076-avengers-doomsday-trailer-ignites-fan-fear-this-mcu-hero-will-die-before-secret-wars"
+    }
+   ],
+   "against": [
+    {
+     "point": "Hemsworth said the kneeling moment was gratitude, not a farewell; a crew post proves nothing.",
+     "source": "https://www.superherohype.com/movies/680076-avengers-doomsday-trailer-ignites-fan-fear-this-mcu-hero-will-die-before-secret-wars"
+    }
+   ],
+   "origin": {
+    "where": "X (Twitter) and fan forums",
+    "origin_url": null,
+    "when": "2025-2026"
+   },
+   "popularity": "Covered by SuperHeroHype, ComingSoon and FandomWire.",
+   "coverage": [
+    "https://fandomwire.com/avengers-doomsday-thor-teaser-trailer-chris-hemsworth-one-last-battle/"
+   ],
+   "rank": 50
+  },
+  {
    "id": "steve-returns-as-nomad",
    "title": "Steve comes back as Nomad",
    "one_line": "Steve Rogers returns in Doomsday not as Captain America but as Nomad.",
@@ -1140,6 +1612,52 @@
    "rank": 50
   },
   {
+   "id": "wanda-survived-wundagore",
+   "title": "Wanda survived Mount Wundagore",
+   "one_line": "The Scarlet Witch didn't die when the temple fell and will return, maybe near Doom.",
+   "summary": "Doctor Strange in the Multiverse of Madness ends with Wanda bringing Mount Wundagore down on herself, but we never see a body. Fans have floated America Chavez pulling her out through a portal and pointed to a 'Latverian Witch' costume shown at Comic-Con, echoing comics where Wanda lives in Doom's Latveria. Kevin Feige said Marvel is excited to find out when and how she can return. Elizabeth Olsen has said nothing is agreed.",
+   "films": [
+    "Doctor Strange in the Multiverse of Madness",
+    "Avengers: Doomsday"
+   ],
+   "characters": [
+    "Wanda Maximoff",
+    "Doctor Doom",
+    "America Chavez"
+   ],
+   "status": "open",
+   "status_note": "Nothing official confirms she survived or is in Doomsday.",
+   "status_source": null,
+   "evidence": [
+    {
+     "point": "Wanda destroys Wundagore and her death is not shown on screen.",
+     "scene": "Doctor Strange in the Multiverse of Madness, climax",
+     "source": "https://epicstream.com/article/how-the-scarlet-witch-could-return-in-avengers-doomsday-latverian-witch-theory"
+    },
+    {
+     "point": "Kevin Feige said Marvel is 'excited to find out when and how Scarlet Witch can return.'",
+     "scene": "Press for Agatha All Along (not a film scene)",
+     "source": "https://www.disneyfanatic.com/kevin-feige-confirms-the-unthinkable-dead-marvel-star-is-coming-back-ad1/"
+    }
+   ],
+   "against": [
+    {
+     "point": "Olsen has said nothing has been agreed for her MCU future.",
+     "source": "https://arynews.tv/avengers-doomsday-is-wanda-coming-back-elizabeth-olsen-addresses-rumors"
+    }
+   ],
+   "origin": {
+    "where": "unknown",
+    "origin_url": null,
+    "when": "2022"
+   },
+   "popularity": "Covered by Epicstream, Murphy's Multiverse and SuperHeroHype.",
+   "coverage": [
+    "https://epicstream.com/article/how-the-scarlet-witch-could-return-in-avengers-doomsday-latverian-witch-theory"
+   ],
+   "rank": 50
+  },
+  {
    "id": "tony-ai-backup",
    "title": "Tony left behind an AI copy of himself",
    "one_line": "Before dying, Tony uploaded his mind, and his hologram message was that AI talking.",
@@ -1274,6 +1792,52 @@
    "popularity": "Covered by Looper, Tom's Guide and Epicstream.",
    "coverage": [
     "https://epicstream.com/article/spider-man-brand-new-day-peter-parkers-mutation-explained"
+   ],
+   "rank": 50
+  },
+  {
+   "id": "spider-signal-in-space",
+   "title": "Ned's tracker found a Spider-Man in space",
+   "one_line": "The post-credits tracker ping off Earth points to another Spider-Man or the coming multiverse war.",
+   "summary": "After the credits of Brand New Day, Ned's 'Spidey Tracker' app picks up a Spider-Man sighting away from Earth. Fans have guessed Miles Morales, Tobey Maguire's or Andrew Garfield's Spider-Man, a new incursion, or a bridge to Doomsday and Secret Wars. Andrew Garfield, asked about it, said he had no idea and joked it could be Tobey or Miles.",
+   "films": [
+    "Spider-Man: Brand New Day",
+    "Avengers: Doomsday"
+   ],
+   "characters": [
+    "Ned Leeds",
+    "Peter Parker",
+    "Miles Morales"
+   ],
+   "status": "open",
+   "status_note": "Marvel has not said what the signal is.",
+   "status_source": "https://en.wikipedia.org/wiki/Spider-Man:_Brand_New_Day",
+   "evidence": [
+    {
+     "point": "Ned's app detects a Spider-Man sighting away from Earth.",
+     "scene": "Spider-Man: Brand New Day, post-credits",
+     "source": "https://en.wikipedia.org/wiki/Spider-Man:_Brand_New_Day"
+    },
+    {
+     "point": "The signal stops moving on Earth and seems to point into outer space, then a 'Spider-Man will return' card appears.",
+     "scene": "Spider-Man: Brand New Day, post-credits",
+     "source": "https://www.kinocheck.com/news/apa6iy/spider-man-brand-new-day-whats-behind-the-post-credit-scene"
+    }
+   ],
+   "against": [
+    {
+     "point": "The scene never says who the signal belongs to, so each guess has equal footing.",
+     "source": "https://www.kinocheck.com/news/apa6iy/spider-man-brand-new-day-whats-behind-the-post-credit-scene"
+    }
+   ],
+   "origin": {
+    "where": "unknown",
+    "origin_url": null,
+    "when": "2026"
+   },
+   "popularity": "Covered by Kinocheck, ComingSoon and Ground News; Andrew Garfield was asked about it.",
+   "coverage": [
+    "https://www.comingsoon.net/?p=2170481"
    ],
    "rank": 50
   },
