@@ -47,7 +47,7 @@ const DISCUSS_JS = '<script type="module" src="/js/discuss.js"></script>';
 // hole, plus Coming Soon and the Quiz. Not section front pages (lists of links), home, legal, account or the map.
 // Home loads the discussion script without a box: its "On the boards" card shows the newest posts (ADR-017).
 export function discussFor(rel) {
-  if (/^(articles|movies|scenes|callbacks|characters|rabbit-holes)\/(?!index\.html$)[\w-]+\.html$/.test(rel)) return rel.replace(/\.html$/, '');
+  if (/^(articles|movies|scenes|callbacks|characters|rabbit-holes|trivia|theories)\/(?!index\.html$)[\w-]+\.html$/.test(rel)) return rel.replace(/\.html$/, '');
   if (rel === 'upcoming/index.html' || rel === 'quiz/index.html') return rel.replace(/\/index\.html$/, '');
   return '';
 }

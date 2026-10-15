@@ -20,6 +20,7 @@ const CASES = [
   { name: 'callbacks', url: '/callbacks/', field: '#callback-search', ctx: ['label[for=callback-search]'] },
   { name: 'rabbit-holes', url: '/rabbit-holes/', field: '#hole-search', ctx: ['label[for=hole-search]'] },
   { name: 'universe-map', url: '/map/', field: '#search-input', ctx: ['label[for=search-input]', '#search-clear'] },
+  { name: 'trivia-ask', url: '/trivia/', field: '#tv-q', ctx: ['label[for=tv-q]', '.tv-ask button'] },
 ]
 
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined })
