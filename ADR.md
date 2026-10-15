@@ -238,3 +238,14 @@ three mockups.
 - **Menu:** Trivia and Theories join it; twelve buttons in two rows of six on every
   wide screen (two columns on phones), so there is no orphan.
 - **Home:** Theory of the week now rotates through the most talked-about fan theories.
+- **Pull readers in and back (Doug: "take notes from credibletheories.com ... draw in readers,
+  get them talking to each other, get them coming back"; "draw inspiration from other popular
+  websites that have community conversation"; he picked layout A of three mockups):** each theory
+  page has a hook ("Why fans can't let it go"), a one-tap "Do you buy it?" vote (Buy it, Not sure,
+  No way; no account, one vote per device, the totals show after you vote; `/api/vote`, table
+  `theory_votes`, like Credible Theories' "Credible or not?"), Ask a friend (the phone's share
+  sheet, or a copied link), and "The open question" at the end, which is also the discussion's
+  opening question, with a Next theory button and "Your trail" of theories read (this browser
+  only). From Stack Exchange and Reddit: when the trivia box has no answer, "Ask the fans" opens a
+  new thread on the Quiz and Trivia board with the question filled in. From Reddit and Discord:
+  spoiler tags `>!like this!<` stay hidden until tapped.

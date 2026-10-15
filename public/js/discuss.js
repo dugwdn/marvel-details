@@ -41,10 +41,14 @@ function ago(at) {
 }
 
 // Plain text in, safe HTML out: links become nofollow links that open in a new tab.
+// Spoiler tags, written >!like this!< as on Reddit and Discord: hidden behind a bar until tapped (ADR-018).
 function rich(t) {
-  return esc(t).replace(/(https?:\/\/[^\s<]+[^\s<.,;:!?)\]'"])/g, '<a href="$1" rel="ugc nofollow noopener" target="_blank">$1</a>')
+  return esc(t).replace(/&gt;!([\s\S]{1,600}?)!&lt;/g, '<span class="d-spoiler" tabindex="0" role="button" aria-label="Spoiler, tap to show">$1</span>').replace(/(https?:\/\/[^\s<]+[^\s<.,;:!?)\]'"])/g, '<a href="$1" rel="ugc nofollow noopener" target="_blank">$1</a>')
     .replace(/^(@[\p{L}\p{N} .'-]{1,24}?) /u, '<b class="d-at">$1</b> ').replace(/\n/g, '<br>');
 }
+
+document.addEventListener('click', e => { const s = e.target.closest('.d-spoiler'); if (s) { s.classList.add('on'); s.removeAttribute('role'); s.removeAttribute('aria-label'); } });
+document.addEventListener('keydown', e => { const s = e.target.closest?.('.d-spoiler'); if (s && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); s.click(); } });
 
 // ---------- Hide and Block (guests: this device; members: the server too) ----------
 const HIDE_KEY = 'dym-hide', BLOCK_KEY = 'dym-block';
@@ -149,7 +153,8 @@ function composerHtml({ id, label, title, button, me }) {
   return `<form class="d-form" data-kb-block>
     ${title ? `<label class="label" for="${id}-t">Thread title</label><input id="${id}-t" name="title" type="text" maxlength="120" required inputmode="text" enterkeyhint="next" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="false" placeholder="A short question or claim">` : ''}
     <label class="label" for="${id}-b">${esc(label)}</label>
-    <textarea id="${id}-b" name="body" rows="4" maxlength="3000" required inputmode="text" enterkeyhint="enter" autocomplete="off" autocapitalize="sentences" placeholder="Spoilers? Say so at the start. Name your source when you can."></textarea>
+    <textarea id="${id}-b" name="body" rows="4" maxlength="3000" required inputmode="text" enterkeyhint="enter" autocomplete="off" autocapitalize="sentences" placeholder="Name your source when you can." aria-describedby="${id}-sp"></textarea>
+    <p class="small" id="${id}-sp">Hide spoilers like this: &gt;!Tony snaps!&lt;</p>
     <div class="d-hp" aria-hidden="true"><label>Leave this empty <input name="website" type="text" tabindex="-1" inputmode="text" enterkeyhint="done" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></label></div>
     <div class="d-cf"></div>
     <div class="d-form-row"><button type="submit" class="dym-btn">${esc(button)}</button><span class="small">Posting as ${esc(me.name)} · <a href="/boards/rules" target="_blank" rel="noopener">Discussion rules</a></span></div>
@@ -320,7 +325,12 @@ if (boardBox) {
     const v = await api(`/api/discuss?t=b:${slug}&sort=${boardBox.dataset.sort || 'active'}`);
     const me = v.me;
     learn(v);
-    boardBox.querySelector('[data-composer]').innerHTML = `<details class="d-new"${v.posts?.length ? '' : ' open'}><summary class="dym-btn">Start a thread</summary>${composerHtml({ id: 'nt', label: 'What do you want to talk about?', title: true, button: 'Post thread', me })}</details>`;
+    // ?ask=... comes from the trivia Ask box when no fact answered it (ADR-018): open the form with the question
+    // as the title, so asking the fans is one tap (like asking on Stack Exchange or Reddit).
+    const asked = (new URLSearchParams(location.search).get('ask') || '').slice(0, 120);
+    boardBox.querySelector('[data-composer]').innerHTML = `<details class="d-new"${v.posts?.length && !asked ? '' : ' open'}><summary class="dym-btn">Start a thread</summary>${composerHtml({ id: 'nt', label: asked ? 'Add anything that helps fans answer (which film, which scene).' : 'What do you want to talk about?', title: true, button: 'Post thread', me })}</details>`;
+    const tIn = boardBox.querySelector('#nt-t');
+    if (asked && tIn && !tIn.value) tIn.value = asked.endsWith('?') ? asked : asked + '?';
     const posts = (v.posts || []).filter(p => p.mine || !(mine.blocks.has(p.by) || p.hidByMe || mine.hides.has(p.id)));
     const open = posts.filter(p => !p.folded), folded = posts.filter(p => p.folded);
     const skipped = (v.posts || []).length - posts.length;

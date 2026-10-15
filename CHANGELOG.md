@@ -11,6 +11,11 @@ merged-but-unpublished work.
   whether it came true (ADR-018).
 - Trivia and Theories are in the menu, which is now two even rows of six.
 - Theory of the week on the home page now shows these fan theories.
+- Theory pages open with a hook and end with a question to argue about, a Next
+  theory button and your trail of theories read. A one-tap "Do you buy it?" vote
+  (no account) shows how other fans voted, and Ask a friend shares the theory.
+- When the trivia box has no answer, "Ask the fans" starts a board thread with the
+  question already typed in. Posts can hide spoilers >!like this!<.
 
 ## 2026-10-15 (New home page top, goes live when merged)
 - The home page opens with the real Spider-Man: Brand New Day poster and trailer,

@@ -20,6 +20,14 @@ function mark(text, words) {
   return html;
 }
 
+// No fact answers every word: offer to put the question to the fans on the Quiz and Trivia board.
+const fans = document.querySelector('[data-ask-fans]');
+function askFans(q, show) {
+  if (!fans) return;
+  fans.hidden = !show;
+  fans.querySelector('a').href = `/boards/quiz-and-trivia?ask=${encodeURIComponent(q)}`;
+}
+
 async function load() {
   if (!data) data = await (await fetch('/data/trivia.json')).json();
   return data;
@@ -29,16 +37,18 @@ function render(reset) {
   const q = input.value.trim();
   if (reset) { list.innerHTML = ''; shown = 0; }
   const pick = kind ? answers.filter(a => a.fact.kind === kind) : answers;
-  if (!q) { status.textContent = ''; moreWrap.hidden = true; chips.hidden = true; return; }
+  if (!q) { status.textContent = ''; moreWrap.hidden = true; chips.hidden = true; askFans('', false); return; }
   chips.hidden = !answers.length;
   if (!pick.length) {
-    status.textContent = answers.length ? `Nothing under ${kind} for "${q}". Try All.` : `No answer for "${q}" yet. Try fewer or different words, or ask on the boards.`;
+    status.textContent = answers.length ? `Nothing under ${kind} for "${q}". Try All.` : `No answer for "${q}" yet. Try fewer words, or ask the fans.`;
+    askFans(q, !answers.length);
     moreWrap.hidden = true;
     return;
   }
-  if (!shown) status.textContent = pick[0].close
-    ? `No fact matches every word of "${q}" yet. These are the closest. Still stuck? Ask on the boards.`
-    : `Answers for "${q}"`;
+  if (!shown) {
+    status.textContent = pick[0].close ? `No fact matches every word of "${q}" yet. These are the closest.` : `Answers for "${q}"`;
+    askFans(q, pick[0].close);
+  }
   const words = terms(q);
   const html = pick.slice(shown, shown + PAGE).map(a => `<li class="tv-answer${a.close ? ' tv-close' : ''}"><p class="tv-answer-meta"><a href="/trivia/${a.work.slug}#${a.fact.id}">${esc(a.work.work)}</a><span>${esc(a.fact.kind)}</span></p><p>${mark(a.fact.text, words)}</p></li>`).join('');
   list.insertAdjacentHTML('beforeend', html);

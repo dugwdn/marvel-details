@@ -57,6 +57,9 @@ export function discussFor(rel) {
 const plain = h => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;|&rsquo;/g, "'").replace(/\s+/g, ' ').trim();
 /** The question at the top of a page's discussion (same wording rule as Credible Theories, Doug 2026-10-14). */
 export function starterFor(html) {
+  // A page can name its own question (fan theories end on "The open question", ADR-018).
+  const own = (html.match(/<meta name="discuss-starter" content="([^"]*)">/) || [])[1];
+  if (own) return own.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
   const h1 = plain((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '');
   const title = h1 || plain((html.match(/<title>([^<]*)<\/title>/) || [])[1] || '').replace(/\s*\|\s*MCU Easter Eggs\s*$/i, '');
   if (!title) return 'What did you notice here?';

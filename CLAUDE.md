@@ -86,6 +86,11 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   (`python3 tools/import-theories.py`, then `node tools/build-theories.mjs`): own
   words, stamped verdicts with sources, evidence board of sourced clues. Both
   builders keep their pages in sitemap.xml. Run `node tools/menu.mjs` after.
+  Theory pages: hook, "Do you buy it?" vote (`/api/vote`, `public/js/theory.js`),
+  Ask a friend, "The open question" (also the discussion starter, via
+  `<meta name="discuss-starter">`), Next theory and Your trail. Trivia with no
+  answer offers "Ask the fans" (Quiz and Trivia board, `?ask=`). Spoiler tags
+  `>!...!<` in posts.
 - **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
   anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
   Never add a card that looks clickable without a link behind it.

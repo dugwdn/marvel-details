@@ -34,6 +34,7 @@
 import { readCookie, hashToken, SESSION } from './auth.js';
 
 export const MAX_DEPTH = 5;
+export const VOTES = ['buy', 'unsure', 'no'];   // "Do you buy it?" on theory pages: Buy it, Not sure, No way
 export const BOARDS = ['easter-eggs', 'fan-theories', 'deleted-scenes', 'characters', 'iron-man', 'avengers', 'spider-man',
   'coming-soon', 'rankings', 'quiz-and-trivia', 'general', 'site-ideas'];   // keep in step with public/data/boards.json (test/discuss.test.mjs checks)
 const LIMITS = { perTen: 5, perDay: 40, links: 2, body: 3000, title: 120, fastMs: 1500 };
@@ -115,6 +116,7 @@ export const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS mail_queue (id INTEGER PRIMARY KEY AUTOINCREMENT, to_email TEXT NOT NULL, subject TEXT NOT NULL, body TEXT NOT NULL,
     created_at TEXT NOT NULL DEFAULT (datetime('now')), sent_at TEXT)`,
   `CREATE TABLE IF NOT EXISTS post_hides (post_id TEXT NOT NULL, member_id TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT (datetime('now')), PRIMARY KEY (post_id, member_id))`,
+  `CREATE TABLE IF NOT EXISTS theory_votes (page TEXT NOT NULL, voter TEXT NOT NULL, vote TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT (datetime('now')), PRIMARY KEY (page, voter))`,
   `CREATE TABLE IF NOT EXISTS reader_blocks (member_id TEXT NOT NULL, blocked TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT (datetime('now')), PRIMARY KEY (member_id, blocked))`,
   // Rank badges read the found counter from member perks; same table as migrations/0002_member_saves.sql, made here too so
   // the boards work even before that migration has run.
@@ -204,7 +206,7 @@ async function who(d, token) {
 
 export async function handleDiscuss(req, env, url, ctx) {
   const path = url.pathname;
-  const mine = path === '/api/discuss' || path.startsWith('/api/discuss/');
+  const mine = path === '/api/discuss' || path.startsWith('/api/discuss/') || path === '/api/vote';
   if (!mine) return null;
   if (!env.DB) return new Response('boards are off', { status: 503 });
   if (req.method === 'POST') {
@@ -215,6 +217,22 @@ export async function handleDiscuss(req, env, url, ctx) {
   const d = await store(env);
   const me = await who(d, readCookie(req.headers.get('cookie'), SESSION));
   const body = req.method === 'POST' ? await req.json().catch(() => ({})) : {};
+
+  // ----- "Do you buy it?" on fan theory pages (ADR-018; anyone, one vote per device per theory, like Credible
+  // Theories' "Credible or not?"). The browser keeps a random id; only a scrambled form of it is stored. -----
+  if (path === '/api/vote') {
+    const page = String(body.p ?? url.searchParams.get('p') ?? '');
+    if (!/^theories\/[a-z0-9-]{1,80}$/.test(page)) return oops('bad page');
+    const voterRaw = String(body.voter ?? url.searchParams.get('v') ?? '');
+    const voter = /^[\w-]{16,64}$/.test(voterRaw) ? await sha(voterRaw) : '';
+    if (req.method === 'POST') {
+      if (!voter || !VOTES.includes(body.v)) return oops('bad vote');
+      await d.prepare('INSERT INTO theory_votes (page, voter, vote) VALUES (?, ?, ?) ON CONFLICT (page, voter) DO UPDATE SET vote = excluded.vote').bind(page, voter, body.v).run();
+    } else if (req.method !== 'GET') return new Response('not found', { status: 404 });
+    const rows = (await d.prepare('SELECT vote, COUNT(*) AS n FROM theory_votes WHERE page = ? GROUP BY vote').bind(page).all()).results;
+    const mineV = voter ? (await d.prepare('SELECT vote FROM theory_votes WHERE page = ? AND voter = ?').bind(page, voter).first())?.vote || null : null;
+    return json({ counts: Object.fromEntries(VOTES.map(v => [v, rows.find(r => r.vote === v)?.n || 0])), mine: mineV });
+  }
 
   // ----- reading -----
   if (path === '/api/discuss' && req.method === 'GET') {

@@ -77,6 +77,7 @@ export function hub(data) {
 ${askBox()}
             <div class="tv-chips" role="group" aria-label="Show only" data-trivia-chips hidden>${chips}</div>
             <p class="tv-status" data-trivia-status aria-live="polite"></p>
+            <p class="tv-fans" data-ask-fans hidden><a href="/boards/quiz-and-trivia">Ask the fans</a> Someone on the Quiz and Trivia board may know. We add good answers to the trivia.</p>
             <ol class="tv-results" data-trivia-results></ol>
             <p data-trivia-more-wrap hidden><button type="button" class="tv-more" data-trivia-more>Show more answers</button></p>
             <section aria-labelledby="h-works" data-ad-mid><h2 id="h-works">Pick a film or show</h2>
