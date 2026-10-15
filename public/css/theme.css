@@ -1366,3 +1366,47 @@ html body .film-hero-poster .film-cast img { border-color: #fff; }
 }
 html body .film-trailer-btn { aspect-ratio: 16 / 9; }
 html body .film-cover img { object-position: 50% 50%; }
+
+/* Home lead (ADR-017, layout A picked 2026-10-15): newest movie poster and trailer, theory of the
+   week, newest board posts, easter eggs. Built by homeHero and homeLead in tools/build-media.mjs. */
+html body .home-hero { position: relative; overflow: hidden; color: #fff; background: #0b0b0e; border-bottom: 4px solid var(--dym-red); }
+html body .home-hero::before { content: ''; position: absolute; inset: -40px; background: var(--hh-bg) center 30% / cover no-repeat; filter: blur(28px) brightness(.45) saturate(1.2); transform: scale(1.1); }
+html body .hh-in { position: relative; max-width: 1600px; margin: 0 auto; padding: 2rem 16px; display: grid; gap: 1.25rem 2rem; grid-template-columns: minmax(0, 240px) minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; }
+html body .hh-poster { display: block; width: 100%; height: auto; border: 3px solid #fff; border-radius: 4px; box-shadow: 6px 6px 0 #000; }
+html body .hh-text { display: grid; gap: .6rem; min-width: 0; }
+html body .home-hero :is(.hh-kicker, .hl-kicker), html body .home-lead .hl-kicker { margin: 0; font-family: var(--dym-head); font-weight: 800; font-size: .875rem; letter-spacing: .12em; text-transform: uppercase; color: #ffd60a !important; }
+html body .home-hero .hh-title { margin: 0; font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1; letter-spacing: .02em; color: #fff !important; text-wrap: balance; }
+html body .home-hero .hh-sub { margin: 0; color: #e6e6ec !important; max-width: 40ch; }
+html body .hh-cta { justify-self: start; display: inline-block; background: #ffd60a; color: #111 !important; font-family: var(--dym-head); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: .55rem 1rem; border: 3px solid #000; box-shadow: 3px 3px 0 #000; border-radius: 4px; text-decoration: none; }
+html body .hh-cta:hover, html body .hh-cta:focus-visible { background: #fff; }
+html body .hh-trailer { min-width: 0; }
+@media (max-width: 900px) {
+  html body .hh-in { grid-template-columns: minmax(0, 130px) minmax(0, 1fr); padding: 1.25rem 16px; }
+  html body .hh-trailer { grid-column: 1 / -1; }
+}
+html body .home-lead { margin: 2rem 0; display: grid; gap: 1.25rem; }
+html body .hl-two { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: start; }
+html body .hl-card { background: #15151b; color: #f2f2f5; border: 3px solid #000; box-shadow: 4px 4px 0 #000; border-radius: 6px; padding: 1rem; display: grid; gap: .75rem; min-width: 0; }
+html body .hl-theory { display: grid; gap: .6rem; }
+html body .hl-theory h3 { margin: 0; font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: 1.9rem; line-height: 1.05; letter-spacing: .02em; text-wrap: balance; }
+html body .hl-card :is(h3, h3 a, p, li, span:not(.hl-kicker):not(.yt-kind):not(.yt-film)) { color: #f2f2f5 !important; }
+html body .hl-theory h3 a { text-decoration: none; }
+html body .hl-theory p { margin: 0; }
+html body .hl-feed { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+html body .hl-feed li a { display: block; background: #23232c; border-left: 5px solid #ffd60a; border-radius: 4px; padding: .6rem .75rem; text-decoration: none; }
+html body .hl-feed .small { font-size: .875rem; opacity: .8; }
+html body .home-lead .hl-h { margin: .5rem 0 0; }
+html body .hl-eggs { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+html body .hl-egg { display: grid; gap: .3rem; align-content: start; background: #fff7d1; color: #111 !important; border: 3px solid #000; box-shadow: 4px 4px 0 #000; border-radius: 4px; padding: .9rem; text-decoration: none; }
+html body .hl-egg strong { font-family: 'Bangers', Impact, 'Arial Black', sans-serif; font-size: 1.45rem; line-height: 1.05; letter-spacing: .02em; font-weight: 400; color: #111 !important; }
+html body .hl-egg span:not(.hl-kicker) { color: #222 !important; }
+html body .home-lead .hl-egg .hl-kicker { color: #b3202b !important; }
+html body .hl-egg:hover, html body .hl-egg:focus-visible { box-shadow: 4px 4px 0 var(--dym-red); }
+@media (max-width: 760px) {
+  html body .hl-two, html body .hl-eggs { grid-template-columns: 1fr; }
+}
+html body .hl-theory[hidden] { display: none !important; }
+html body .home-lead .hl-theory { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; }
+html body .home-lead .hl-theory :is(h3, h3 a) { color: #fff !important; }
+html body .home-lead .hl-theory p { color: #e6e6ec !important; }
+html body .home-lead .hl-feed b { color: #ffd60a !important; }

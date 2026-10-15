@@ -45,6 +45,7 @@ const DISCUSS_CSS = '<link rel="stylesheet" href="/css/discuss.css">';
 const DISCUSS_JS = '<script type="module" src="/js/discuss.js"></script>';
 // Pages that end with a discussion: every article, movie hub, deleted-scenes page, callback, character and rabbit
 // hole, plus Coming Soon and the Quiz. Not section front pages (lists of links), home, legal, account or the map.
+// Home loads the discussion script without a box: its "On the boards" card shows the newest posts (ADR-017).
 export function discussFor(rel) {
   if (/^(articles|movies|scenes|callbacks|characters|rabbit-holes)\/(?!index\.html$)[\w-]+\.html$/.test(rel)) return rel.replace(/\.html$/, '');
   if (rel === 'upcoming/index.html' || rel === 'quiz/index.html') return rel.replace(/\/index\.html$/, '');
@@ -68,7 +69,7 @@ export function addDiscussion(html, rel) {
     const box = `<section class="disc" id="discuss" data-thread="p:${key}" data-starter="${escAttr(starterFor(html))}" aria-label="Discussion" data-disc-stamp><h2 class="d-h">Discussion</h2><noscript><p>The discussion needs JavaScript.</p></noscript></section>`;
     html = html.replace(/(\n?)([ \t]*)(<footer[\s>])/, `$1$2${box}\n$2$3`);
   }
-  if (key || rel.startsWith('boards/') || rel === 'account.html') {
+  if (key || rel.startsWith('boards/') || rel === 'account.html' || rel === 'index.html') {
     if (!html.includes('/css/discuss.css')) html = html.replace('</head>', `    ${DISCUSS_CSS}\n</head>`);
     if (!html.includes('/js/discuss.js')) html = html.replace('</body>', `    ${DISCUSS_JS}\n</body>`);
   }

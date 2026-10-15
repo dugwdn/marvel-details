@@ -3,6 +3,11 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-15 (New home page top, goes live when merged)
+- The home page opens with the real Spider-Man: Brand New Day poster and trailer,
+  then the theory of the week, the newest board posts and three easter eggs.
+  The actor photo wall moved below them (ADR-017).
+
 ## 2026-10-15 (Posters on movie pages, goes live when merged)
 - Each movie page opens with the film's poster beside a big trailer whose
   cover is a frame from the trailer itself, in a dark band (ADR-016).

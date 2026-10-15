@@ -191,3 +191,19 @@ and layout A from three mockups, and added: no buttons for more pictures,
 - **Saved for later:** official posters for all 59 titles, and free-license
   photos (cosplay, Avengers Campus, D23, exhibits) each with a saved copy of
   its license page, in /mnt/project-files/Marvel-Details/image-library/.
+
+## ADR-017: The home page opens with the newest movie, a theory, the boards and easter eggs (2026-10-15)
+Doug, 2026-10-15: "I don't want actors. Regular photos at the top of the home
+screen ... should be our most thrilling content. Use your theories. Busy message
+boards cool easter eggs that people theorize about." He picked layout A from
+three mockups.
+- The plain red "newest movie" banner is replaced by `homeHero` (tools/build-media.mjs):
+  the newest movie's real poster (the same art Wikipedia uses), its official trailer
+  with the trailer's own frame as cover, and the link to its easter-egg article. Change
+  `NEWEST` when a new film comes out. This extends ADR-016: the newest movie's poster
+  may also lead the home page (`pages: ["/"]` in its `posters` entry).
+- `homeLead` follows it: "Theory of the week" (one rabbit hole, the same for everyone
+  each week, picked in public/js/media.js), "On the boards" (the newest posts through
+  discuss.js; until anyone posts it shows three board starter questions, labeled as
+  ours, never invented posts), and three easter eggs (a callback and two rabbit holes).
+- The "Faces of the MCU" actor wall stays, below these.
