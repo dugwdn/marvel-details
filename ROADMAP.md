@@ -1,6 +1,6 @@
 # MCU Easter Eggs: roadmap
 
-Last updated 2026-10-06 (overnight audit). Work top to bottom. "Doug" items
+Last updated 2026-10-15. Work top to bottom. "Doug" items
 need his OK, accounts or his laptop; the rest Claude does on a branch with a PR.
 
 ## Now (Doug)
@@ -63,7 +63,7 @@ need his OK, accounts or his laptop; the rest Claude does on a branch with a PR.
 
 ## Media rules (standing)
 YouTube embeds from official or licensed channels are allowed (YouTube's own
-player, no downloads). No studio posters, stills or character art. Actor photos
+player, no downloads); the trailer's own YouTube thumbnail may cover its play button. One theatrical poster per movie page, fair use (ADR-016). No downloaded stills or character art. No "more pictures" buttons (Doug 2026-10-15). Actor photos
 only from Wikimedia Commons under a free license, with a credit line.
 
 ## Done

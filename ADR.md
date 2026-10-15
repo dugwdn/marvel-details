@@ -167,3 +167,27 @@ so no migration step. Delete my account removes the member's posts, marks,
 alerts and queued mail. The rank badge beside a name is the member's
 found-details rank (ADR-008). Drops CT's file votes and day streaks: this
 site has neither.
+
+## ADR-016: Posters on movie pages, trailer thumbnails as covers (2026-10-15)
+Doug, 2026-10-15: "I want photos of the superheroes in action. I want it big,
+I want it exciting. I want movie posters used." He picked "Embeds + posters"
+and layout A from three mockups, and added: no buttons for more pictures,
+"they're coming for lore and easter eggs and conversation."
+- **Posters:** each movie hub shows that film's theatrical poster beside the
+  trailer in a dark band at the top of the header. One poster, only on that
+  film's own page, next to our commentary, 480 px wide, credited to Marvel
+  Studios on /credits, removed on any takedown request. Listed under
+  `posters` in `public/data/media-credits.json`; `test/media.test.mjs`
+  enforces one per page and only its own film. Fair use is on the lawyer
+  list (2026-10-15) and does not block. Supersedes the "no studio posters"
+  line of ADR-010.
+- **Trailer covers:** every trailer play button in a page header now shows
+  that trailer's own YouTube thumbnail, loaded from i.ytimg.com (YouTube's
+  image server, the same frame YouTube shows before play), in place of the
+  cast-photo mosaic. Never downloaded, never used for any other video.
+  Supersedes the "no YouTube thumbnail" line of ADR-012 for header buttons.
+- **Kept:** no downloaded film stills or character art; no "+N more" photo
+  links in headers.
+- **Saved for later:** official posters for all 59 titles, and free-license
+  photos (cosplay, Avengers Campus, D23, exhibits) each with a saved copy of
+  its license page, in /mnt/project-files/Marvel-Details/image-library/.

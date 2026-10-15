@@ -3,6 +3,12 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-15 (Posters on movie pages, goes live when merged)
+- Each movie page opens with the film's poster beside a big trailer whose
+  cover is a frame from the trailer itself, in a dark band (ADR-016).
+- Trailer buttons on deleted-scene and callback pages also show the
+  trailer's own frame instead of cast headshots.
+
 ## 2026-10-15 (Discussions and message boards, goes live when merged)
 - Every article, movie page, deleted scene, callback, character page, rabbit
   hole, Coming Soon and the quiz now has a discussion box at the bottom.
