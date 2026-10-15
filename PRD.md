@@ -58,8 +58,16 @@ account; an account only carries it to other devices.
 - Success: share of visitors who save, mark or star something (needs GA4
   events later); share who sign in.
 
+## Discussions (added 2026-10-15, ADR-015)
+- A discussion box on every detail page and 12 message boards at /boards/.
+- Anyone reads; members signed in with the site's sign-in post and reply.
+- Readers hide or block posts; enough hides fold a post; moderators clear
+  reports. Reply emails only when the member turns them on and types an
+  address; deleting the account deletes posts, alerts and the address.
+- Success: posts per week, share of members who post.
+
 ## Not building (for now)
-- Comments, email (weekly digest).
+- Email digests (weekly). Comments are now built (Discussions, below).
 - Storing email addresses or anything beyond the member list above.
 - Video or copied film stills (copyright).
 - A framework or build pipeline.
@@ -69,6 +77,10 @@ account; an account only carries it to other devices.
 - 2026-10-06: "Accounts ... anything that stores visitor data" moved out of
   "Not building" into the new Members section (local-first perks; sync for
   members signed in with the site's sign-in, ADR-007/ADR-008).
+
+- 2026-10-15: comments moved out of "Not building" (Doug: "discussion
+  features all over the Marvel site"). Opt-in reply emails are the one place
+  an email address is stored.
 
 ## Open questions for Doug
 - Rank titles use Marvel character names (trademark question; see the PR).

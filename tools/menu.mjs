@@ -13,9 +13,10 @@ const ROOT = path.join(path.dirname(SELF), '..', 'public');
 
 // Ten buttons so the menu grid has no orphan (5 x 2, or 2 x 5 on phones).
 // My Marvel lives in the header bar's member chip instead; About moved to the
-// footer's legal line when Quiz took its button (2026-10-06).
+// footer's legal line when Quiz took its button (2026-10-06). Boards took
+// Home's button (2026-10-15, ADR-015): the logo in the header bar is the way home.
 export const MENU = [
-  ['Home', '/', ''],
+  ['Boards', '/boards/', 'boards'],
   ['Articles', '/articles/', 'articles'],
   ['Movies', '/movies/', 'movies'],
   ['Deleted Scenes', '/scenes/', 'scenes'],
@@ -39,6 +40,40 @@ const SEARCH = '<script type="module" src="/js/search.js"></script>';
 const KEYBOARD = '<script type="module" src="/js/keyboard.js"></script>';
 // Sign-in pop-up for signed-out visitors after 12 seconds (Doug's standing rule, 2026-10-07; see CLAUDE.md).
 const SIGNIN_POPUP = '<script type="module" src="/js/signin-popup.js"></script>';
+// Discussions (ADR-015): the comment box at the end of content pages, the boards and the reply-email box on /account.
+const DISCUSS_CSS = '<link rel="stylesheet" href="/css/discuss.css">';
+const DISCUSS_JS = '<script type="module" src="/js/discuss.js"></script>';
+// Pages that end with a discussion: every article, movie hub, deleted-scenes page, callback, character and rabbit
+// hole, plus Coming Soon and the Quiz. Not section front pages (lists of links), home, legal, account or the map.
+export function discussFor(rel) {
+  if (/^(articles|movies|scenes|callbacks|characters|rabbit-holes)\/(?!index\.html$)[\w-]+\.html$/.test(rel)) return rel.replace(/\.html$/, '');
+  if (rel === 'upcoming/index.html' || rel === 'quiz/index.html') return rel.replace(/\/index\.html$/, '');
+  return '';
+}
+const plain = h => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;|&rsquo;/g, "'").replace(/\s+/g, ' ').trim();
+/** The question at the top of a page's discussion (same wording rule as Credible Theories, Doug 2026-10-14). */
+export function starterFor(html) {
+  const h1 = plain((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '');
+  const title = h1 || plain((html.match(/<title>([^<]*)<\/title>/) || [])[1] || '').replace(/\s*\|\s*MCU Easter Eggs\s*$/i, '');
+  if (!title) return 'What did you notice here?';
+  if (title.endsWith('?')) return `${title} What do you think?`;
+  const topic = title.split(/[:(|]/)[0].trim().replace(/^(The|A|An) /, m => m.toLowerCase());
+  return `What are your thoughts about ${topic}?`;
+}
+const escAttr = v => String(v).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+export function addDiscussion(html, rel) {
+  html = html.replace(/\n?[ \t]*<section class="disc" id="discuss"[^>]*data-disc-stamp[^>]*>[\s\S]*?<\/section>/g, '');
+  const key = discussFor(rel);
+  if (key) {
+    const box = `<section class="disc" id="discuss" data-thread="p:${key}" data-starter="${escAttr(starterFor(html))}" aria-label="Discussion" data-disc-stamp><h2 class="d-h">Discussion</h2><noscript><p>The discussion needs JavaScript.</p></noscript></section>`;
+    html = html.replace(/(\n?)([ \t]*)(<footer[\s>])/, `$1$2${box}\n$2$3`);
+  }
+  if (key || rel.startsWith('boards/') || rel === 'account.html') {
+    if (!html.includes('/css/discuss.css')) html = html.replace('</head>', `    ${DISCUSS_CSS}\n</head>`);
+    if (!html.includes('/js/discuss.js')) html = html.replace('</body>', `    ${DISCUSS_JS}\n</body>`);
+  }
+  return html;
+}
 // Android Chrome shrinks the page above the keyboard instead of covering it.
 export function viewportFor(html) {
   return html.replace(/<meta name="viewport" content="([^"]*)">/g, (all, c) =>
@@ -223,7 +258,7 @@ export function addMenu(html, rel) {
   } else {
     html = html.replace(/(<\/body>)/, `    <footer>\n${FOOTER}\n    </footer>\n$1`);
   }
-  return versionAssets(addAdBoxes(html));
+  return versionAssets(addAdBoxes(addDiscussion(html, rel)));
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === SELF) {

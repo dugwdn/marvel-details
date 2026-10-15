@@ -1,0 +1,17 @@
+{
+  "note": "Message boards (ADR-015). Keep the slugs in step with BOARDS in functions/_lib/discuss.js (test/discuss.test.mjs checks). After editing, run node tools/build-boards.mjs then node tools/menu.mjs. Starters are questions written by us and shown as ours, never posted as if a reader wrote them.",
+  "boards": [
+    { "slug": "easter-eggs", "name": "Easter Eggs You Spotted", "blurb": "Post the hidden details, background jokes and comic nods you caught on a rewatch.", "starter": "What is the best easter egg you found on your own, without a video pointing it out?" },
+    { "slug": "fan-theories", "name": "MCU Fan Theories", "blurb": "Your theories about where the story goes and what a scene really meant. Say what in the films backs it up.", "starter": "Which MCU fan theory do you think the films actually support, and which scene is your proof?" },
+    { "slug": "deleted-scenes", "name": "Deleted Scenes", "blurb": "Scenes that were cut, extended or changed, and whether the film was better without them.", "starter": "Which deleted scene should have stayed in the movie?" },
+    { "slug": "characters", "name": "Characters", "blurb": "Arcs, turning points and the characters you think were handled best or worst.", "starter": "Whose character arc across the MCU do you think was written best?" },
+    { "slug": "iron-man", "name": "Iron Man Films", "blurb": "Iron Man (2008), Iron Man 2 and Iron Man 3: details, callbacks and debates.", "starter": "Which Iron Man film holds up best on a rewatch, and why?" },
+    { "slug": "avengers", "name": "Avengers Films", "blurb": "The Avengers through Endgame and the Avengers films still to come.", "starter": "What small moment in The Avengers (2012) pays off later in Endgame?" },
+    { "slug": "spider-man", "name": "Spider-Man", "blurb": "Peter Parker in the MCU, from Civil War to Brand New Day.", "starter": "What do you most want to see in Spider-Man: Brand New Day?" },
+    { "slug": "coming-soon", "name": "Coming Soon and Rumors", "blurb": "Upcoming movies and shows. Label rumors as rumors and link where you read them.", "starter": "Which upcoming MCU release are you most looking forward to?" },
+    { "slug": "rankings", "name": "Rankings and Favorites", "blurb": "Rank the films, villains, suits and scenes. Tell us why.", "starter": "Rank your top three MCU villains and say why." },
+    { "slug": "quiz-and-trivia", "name": "Quiz and Trivia", "blurb": "Share your quiz rank, argue about answers and post trivia questions of your own.", "starter": "Which quiz question tripped you up the most?" },
+    { "slug": "general", "name": "General Marvel Talk", "blurb": "Anything Marvel that does not fit another board.", "starter": "What got you into the MCU?" },
+    { "slug": "site-ideas", "name": "Site Ideas", "blurb": "Tell us what to add or fix on MCU Easter Eggs.", "starter": "What should we add to the site next?" }
+  ]
+}

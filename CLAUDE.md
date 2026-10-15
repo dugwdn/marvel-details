@@ -71,6 +71,12 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
   0 after.
 - **Sign-in pop-up (2026-10-07, branch `sign-in-popup`, not live):** Doug's
   standing rule for every site with accounts. See "Sign-in pop-up" below.
+- **Discussions and boards (2026-10-15, ADR-015, branch `discussions`):** a
+  discussion box on every article, movie hub, scene, callback, character,
+  rabbit hole, Coming Soon and the quiz, plus 12 boards at `/boards/` (first
+  menu item). Port of Credible Theories' system: `functions/_lib/discuss.js`,
+  `public/js/discuss.js`, `public/data/boards.json`, `tools/build-boards.mjs`.
+  Setup Doug does once: RUNBOOK "Message boards" (MOD_MEMBERS, Turnstile).
 - **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
   anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
   Never add a card that looks clickable without a link behind it.
@@ -123,7 +129,7 @@ live in `public/js/signin-popup-core.js`, tested by `test/signin-popup.test.mjs`
 
 ## Plan
 See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: write the 7 missing articles, finish PR #28 media, keep link checks green.
-Waiting on Doug: the typed deploy line, Facebook and X sign-in keys, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
+Waiting on Doug: his member id in MOD_MEMBERS and the Turnstile keys (boards), the typed deploy line, Facebook and X sign-in keys, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
 
 ## Working rules
 - Project-wide rules (branch and PR, never merge or deploy without Doug's

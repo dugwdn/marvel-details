@@ -43,7 +43,8 @@ test('every typing box asks for a small keyboard and has a visible label', () =>
       const where = `${path.relative(ROOT, f)}: ${tag.slice(0, 90)}`;
       assert.match(attr(tag, 'inputmode') ?? '', /^(text|search|numeric|decimal|tel|email|url)$/, where);
       assert.match(attr(tag, 'enterkeyhint') ?? '', /^(go|done|next|send|search|enter)$/, where);
-      assert.equal(attr(tag, 'autocomplete'), 'off', where);
+      // Email boxes keep autocomplete="email" so one tap fills them (CLAUDE.md "Typing boxes" exception).
+      assert.equal(attr(tag, 'autocomplete'), type === 'email' ? 'email' : 'off', where);
       assert.equal(attr(tag, 'autocorrect'), 'off', where);
       assert.equal(attr(tag, 'spellcheck'), 'false', where);
       assert.match(attr(tag, 'autocapitalize') ?? '', /^(off|characters|words|sentences)$/, where);
@@ -52,11 +53,18 @@ test('every typing box asks for a small keyboard and has a visible label', () =>
       const at = src.indexOf(tag);
       const before = src.slice(0, at);
       const wrapped = before.lastIndexOf('<label') > before.lastIndexOf('</label>');
-      const labelled = wrapped || (id && new RegExp(`<label\\b[^>]*\\sfor="${id}"`).test(src));
+      const forId = id && id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');   // ids built in JS, like ${id}-t
+      const labelled = wrapped || (id && new RegExp(`<label\\b[^>]*\\sfor="${forId}"`).test(src));
       assert.ok(labelled, `${where} has no label`);
     }
     for (const [tag] of src.matchAll(/<textarea\b[^>]*>/g)) {
-      throw new Error(`${f}: a new textarea needs the keyboard attributes and a line in this test: ${tag}`);
+      // The discussion box (public/js/discuss.js, ADR-015): a label, Enter for new lines, sentence capitals.
+      if (!f.endsWith(`js${path.sep}discuss.js`)) throw new Error(`${f}: a new textarea needs the keyboard attributes and a line in this test: ${tag}`);
+      n++;
+      assert.equal(attr(tag, 'inputmode'), 'text', tag);
+      assert.equal(attr(tag, 'enterkeyhint'), 'enter', tag);
+      assert.equal(attr(tag, 'autocapitalize'), 'sentences', tag);
+      assert.match(src, new RegExp(`<label\\b[^>]*\\sfor="${attr(tag, 'id').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`), tag);
     }
   }
   assert.ok(n > 90, `found ${n} typing boxes`);

@@ -60,6 +60,26 @@ until the table exists, `/api/sync` and "Delete my account" return errors.
 Check: sign in on /me/, save something, open /me/ on another device.
 Look at the data: `npx wrangler d1 execute marvel-details --remote --command "SELECT COUNT(*) FROM saves"`.
 
+## Message boards (ADR-015)
+Works with no setup: tables are made on the first post. Settings live in
+Cloudflare dashboard > Workers & Pages > mcueastereggs > Settings >
+Variables and Secrets (add each to Production, then redeploy or merge
+anything for it to take effect):
+- `MOD_MEMBERS`: moderator member ids, comma separated. Find yours: sign in,
+  open https://mcueastereggs.com/boards/moderate ; it shows "Its member id is ...".
+- `TURNSTILE_SITE_KEY` (text) and `TURNSTILE_SECRET` (secret): free bot check
+  from Cloudflare dashboard > Turnstile > Add widget (domain
+  mcueastereggs.com, Managed). Without them the other spam guards still run.
+- `RESEND_API_KEY` (secret) and `MAIL_FROM` (text, like
+  `MCU Easter Eggs <replies@mcueastereggs.com>`): reply emails. Until set,
+  emails wait in `mail_queue`.
+- `HIDE_THRESHOLD` (default 5) and `NTFY_TOPIC` (optional phone alerts for
+  new reports) are optional.
+To add or rename a board: edit `public/data/boards.json` and the `BOARDS`
+list in `functions/_lib/discuss.js` (same slugs), then
+`node tools/build-boards.mjs && node tools/menu.mjs`.
+Look at posts: `npx wrangler d1 execute marvel-details --remote --command "SELECT thread, name, substr(body,1,60) FROM posts ORDER BY created_at DESC LIMIT 20"`.
+
 ## Add photos or trailers
 1. Photos: add a row to `tools/media-wanted.json` (a portrait names the
    character and actors; a place names its Wikipedia article and a
