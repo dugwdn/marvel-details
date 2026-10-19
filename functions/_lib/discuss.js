@@ -171,15 +171,37 @@ async function alertOps(env, d, text) {
   await fetch(`https://ntfy.sh/${env.NTFY_TOPIC}`, { method: 'POST', body: text.slice(0, 300), headers: { title: 'MCU Easter Eggs boards' } }).catch(() => {});
 }
 
-/** Send one email. Resend (free plan) when RESEND_API_KEY is set; otherwise it waits in mail_queue until a sender exists. */
-export async function sendMail(env, d, to, subject, body) {
-  const r = await d.prepare('INSERT INTO mail_queue (to_email, subject, body) VALUES (?, ?, ?) RETURNING id').bind(to, subject, body).first();
-  if (!env.RESEND_API_KEY) return false;
-  const res = await fetch('https://api.resend.com/emails', {
+/** Which sender is set up: 'brevo' (BREVO_API_KEY, free plan, 300 a day), else 'resend' (RESEND_API_KEY), else ''. */
+export function mailSender(env) {
+  return env.BREVO_API_KEY ? 'brevo' : env.RESEND_API_KEY ? 'resend' : '';
+}
+
+/** The send request for one email as [url, init], or null when no sender is set up (pure, tested). */
+export function mailRequest(env, to, subject, body) {
+  const from = (env.MAIL_FROM || 'MCU Easter Eggs <replies@mcueastereggs.com>').trim();
+  const kind = mailSender(env);
+  if (kind === 'brevo') {
+    const m = from.match(/^(.*?)\s*<([^>]+)>$/);
+    return ['https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: { 'api-key': env.BREVO_API_KEY, 'content-type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify({ sender: m ? { name: m[1], email: m[2] } : { email: from }, to: [{ email: to }], subject, textContent: body }),
+    }];
+  }
+  if (kind === 'resend') return ['https://api.resend.com/emails', {
     method: 'POST',
     headers: { authorization: `Bearer ${env.RESEND_API_KEY}`, 'content-type': 'application/json' },
-    body: JSON.stringify({ from: env.MAIL_FROM || 'MCU Easter Eggs <replies@mcueastereggs.com>', to: [to], subject, text: body }),
-  }).catch(() => null);
+    body: JSON.stringify({ from, to: [to], subject, text: body }),
+  }];
+  return null;
+}
+
+/** Send one email through Brevo or Resend (mailSender); with neither set up it waits in mail_queue until a sender exists. */
+export async function sendMail(env, d, to, subject, body) {
+  const r = await d.prepare('INSERT INTO mail_queue (to_email, subject, body) VALUES (?, ?, ?) RETURNING id').bind(to, subject, body).first();
+  const req = mailRequest(env, to, subject, body);
+  if (!req) return false;
+  const res = await fetch(...req).catch(() => null);
   if (res?.ok) await d.prepare("UPDATE mail_queue SET sent_at = datetime('now') WHERE id = ?").bind(r.id).run();
   return !!res?.ok;
 }
@@ -415,7 +437,7 @@ export async function handleDiscuss(req, env, url, ctx) {
       await withKeys(rows);
       const blocked = (await d.prepare('SELECT b.member_id, u.name FROM discuss_blocks b LEFT JOIN users u ON u.id = b.member_id').all()).results;
       const queued = await d.prepare('SELECT COUNT(*) AS n FROM mail_queue WHERE sent_at IS NULL').first();
-      return json({ mod: true, you: me.id, hideAt: hideAt(env), posts: rows.map(r => ({ ...shown(r, me, env), status: r.status, reports: r.reports, member: r.member_id })), blocked, unsentMail: queued.n, mailOn: !!env.RESEND_API_KEY });
+      return json({ mod: true, you: me.id, hideAt: hideAt(env), posts: rows.map(r => ({ ...shown(r, me, env), status: r.status, reports: r.reports, member: r.member_id })), blocked, unsentMail: queued.n, mailOn: !!mailSender(env) });
     }
     const id = String(body.id || '');
     const act = {

@@ -249,3 +249,15 @@ three mockups.
   only). From Stack Exchange and Reddit: when the trivia box has no answer, "Ask the fans" opens a
   new thread on the Quiz and Trivia board with the question filled in. From Reddit and Discord:
   spoiler tags `>!like this!<` stay hidden until tapped.
+
+## ADR-019: Reply emails through Brevo's free plan (2026-10-19)
+
+- **Context:** board reply emails were written for Resend, but no key was ever set, so they wait in
+  `mail_queue`. Doug's free Resend account holds one domain and getrightplace.app already uses it.
+  Doug picked Brevo on 2026-10-19 (ChordLyric sign-in mail) and asked for senders for his other projects.
+- **Decision:** `functions/_lib/discuss.js` sends through Brevo's transactional API when the secret
+  `BREVO_API_KEY` is set, else Resend when `RESEND_API_KEY` is set, else the email stays queued.
+  Sender `MCU Easter Eggs <replies@mcueastereggs.com>` (`MAIL_FROM` overrides). mcueastereggs.com is
+  authenticated in Brevo with its Brevo code and DKIM records in Cloudflare DNS; the existing DMARC stays.
+- **Consequences:** free, 300 emails a day shared by all of Doug's Brevo senders. A Brevo key with no
+  successful call for 90 days is deactivated; a free account with no activity for 4 months is deleted.

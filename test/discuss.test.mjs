@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
-import { cleanThread, linkCount, cleanText, blockedWord, postProblem, placeReply, BOARDS, MAX_DEPTH, hideAt, sameText, botSign, handleDiscuss } from '../functions/_lib/discuss.js';
+import { cleanThread, linkCount, cleanText, blockedWord, postProblem, placeReply, BOARDS, MAX_DEPTH, hideAt, sameText, botSign, mailRequest, mailSender, handleDiscuss } from '../functions/_lib/discuss.js';
 import { handleAuth, hashToken, SESSION } from '../functions/_lib/auth.js';
 import { discussFor, starterFor, addDiscussion } from '../tools/menu.mjs';
 
@@ -194,4 +194,20 @@ test('"Do you buy it?" on theory pages: anyone votes once per device, can change
   assert.equal((await call('/api/vote', { body: { p: 'articles/x', v: 'buy', voter: v1 } })).status, 400, 'theory pages only');
   assert.equal((await call('/api/vote', { body: { p, v: 'maybe', voter: v1 } })).status, 400, 'known answers only');
   assert.equal((await call('/api/vote', { body: { p, v: 'buy', voter: 'short' } })).status, 400, 'needs a device id');
+});
+
+test('reply email request: Brevo first, Resend second, none queues', () => {
+  const env = { BREVO_API_KEY: 'k', RESEND_API_KEY: 'r' };
+  assert.equal(mailSender(env), 'brevo', 'Brevo wins when both keys are set');
+  assert.equal(mailSender({ RESEND_API_KEY: 'r' }), 'resend');
+  assert.equal(mailSender({}), '');
+  assert.equal(mailRequest({}, 'a@b.co', 's', 'b'), null);
+  const [url, init] = mailRequest(env, 'a@b.co', 'Hi', 'Body');
+  assert.equal(url, 'https://api.brevo.com/v3/smtp/email');
+  assert.equal(init.headers['api-key'], 'k');
+  assert.deepEqual(JSON.parse(init.body), { sender: { name: 'MCU Easter Eggs', email: 'replies@mcueastereggs.com' }, to: [{ email: 'a@b.co' }], subject: 'Hi', textContent: 'Body' });
+  assert.deepEqual(JSON.parse(mailRequest({ ...env, MAIL_FROM: 'x@y.co' }, 'a@b.co', 's', 'b')[1].body).sender, { email: 'x@y.co' });
+  const [rurl, rinit] = mailRequest({ RESEND_API_KEY: 'r' }, 'a@b.co', 'Hi', 'Body');
+  assert.equal(rurl, 'https://api.resend.com/emails');
+  assert.equal(JSON.parse(rinit.body).from, 'MCU Easter Eggs <replies@mcueastereggs.com>');
 });

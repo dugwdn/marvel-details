@@ -70,9 +70,16 @@ anything for it to take effect):
 - `TURNSTILE_SITE_KEY` (text) and `TURNSTILE_SECRET` (secret): free bot check
   from Cloudflare dashboard > Turnstile > Add widget (domain
   mcueastereggs.com, Managed). Without them the other spam guards still run.
-- `RESEND_API_KEY` (secret) and `MAIL_FROM` (text, like
-  `MCU Easter Eggs <replies@mcueastereggs.com>`): reply emails. Until set,
-  emails wait in `mail_queue`.
+- `BREVO_API_KEY` (secret) and optional `MAIL_FROM` (text, default
+  `MCU Easter Eggs <replies@mcueastereggs.com>`): reply emails through
+  Brevo's free plan (picked 2026-10-19, 300 a day shared by Doug's Brevo
+  senders). Brevo: Settings > Senders, Domains, IPs > Domains > Add a domain
+  `mcueastereggs.com` > Authenticate the domain yourself; add the Brevo code
+  and DKIM records in Cloudflare DNS (DKIM CNAMEs with Proxy off; skip
+  Brevo's DMARC, the domain has one); Senders > Add a sender
+  (`MCU Easter Eggs`, `replies@mcueastereggs.com`); then Settings > SMTP &
+  API > API Keys & MCP > Generate a new API key. `RESEND_API_KEY` still
+  works when no Brevo key is set. Until one is set, emails wait in `mail_queue`.
 - `HIDE_THRESHOLD` (default 5) and `NTFY_TOPIC` (optional phone alerts for
   new reports) are optional.
 To add or rename a board: edit `public/data/boards.json` and the `BOARDS`

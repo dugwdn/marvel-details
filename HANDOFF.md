@@ -20,7 +20,7 @@ MCU Easter Eggs is a free fan site about hidden details in Marvel movies: source
 | Other storage | Cloudflare KV namespace (binding `LIVE_EDIT`) | Doug's saved on-page edits. |
 | Server code / workers | Pages Functions in `functions/` (`_middleware.js`, `api/auth`, `api/discuss`, `api/sync.js`, `_lib/`) | `public/_routes.json` keeps CSS, JS, images and data off the Functions. |
 | Scheduled jobs (timers) | None | GitHub Action `fetch-media.yml` runs only when started by hand or by pushing a `media/fetch-*` branch. |
-| Email / SMS | Resend for reply emails (opt-in), not confirmed set up | Emails wait in `mail_queue` until the key exists. No SMS. |
+| Email / SMS | Brevo free plan for reply emails (opt-in), sender `replies@mcueastereggs.com`, being set up 2026-10-19; Resend still works as a second choice | Emails wait in `mail_queue` until `BREVO_API_KEY` (or `RESEND_API_KEY`) exists. No SMS. |
 | Analytics and ads | GA4: ID in `GA_ID` in `tools/menu.mjs`, written into every page by the build tool. AdSense: slot in `public/js/ads.js`, `public/ads.txt` | AdSense status "Getting ready" as of the last notes. Three "Ad space" boxes show on ad pages. |
 | Repo | `dugwdn/marvel-details`, default branch `phase-1-build` | `main` is old and not used. Many old merged branches. |
 
@@ -57,7 +57,7 @@ MCU Easter Eggs is a free fan site about hidden details in Marvel movies: source
 | Meta (Facebook) developer app | Facebook sign-in, not yet turned on | Doug's Meta account | Secrets `FACEBOOK_APP_ID`, `FACEBOOK_APP_SECRET` |
 | X sign-in | Off on purpose (paid) | none | `X_CLIENT_ID`, `X_CLIENT_SECRET` stay unset |
 | Cloudflare Turnstile | Spam check on board posts | Doug's Cloudflare account | `TURNSTILE_SITE_KEY` (text), `TURNSTILE_SECRET` (secret) |
-| Resend | Reply emails | Doug's account once created | `RESEND_API_KEY` (secret), `MAIL_FROM` (text) |
+| Brevo | Reply emails | Doug's Brevo account (also sends ChordLyric sign-in mail) | `BREVO_API_KEY` (secret), `MAIL_FROM` (text) |
 | ntfy | Optional phone alerts | Unknown | `NTFY_TOPIC` |
 | Google Analytics 4, AdSense | Stats, ads | Doug's Google account | Public IDs in `tools/menu.mjs` and `public/js/ads.js`; no secret |
 | webdesignnerd.com WordPress | Signs Doug in for Live Edit | Doug (Web Design Nerd) | See ADR-014 |
