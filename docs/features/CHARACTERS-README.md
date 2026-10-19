@@ -484,8 +484,8 @@ console.log(heroes.length);  // 6
 
 ## MCU Character List (/characters/all/)
 
-A plain-HTML list of every main and recurring MCU character (797 on
-2026-10-06), so search engines can read it. Data: `public/data/mcu-characters.json`
+A plain-HTML list of every main and recurring MCU character (804 on
+2026-10-19, after VisionQuest), so search engines can read it. Data: `public/data/mcu-characters.json`
 (titles with US release dates, then characters with actors, titles, first
 appearance, and `page` when the character has a full page here). The page is
 written by `python3 tools/build-directory.py`; run `node tools/menu.mjs` after.

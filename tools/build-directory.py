@@ -95,7 +95,7 @@ page = f'''<!DOCTYPE html>
         <section class="character-header dir-head">
             <h1>MCU Character List</h1>
             <p><strong>{N}</strong> main and recurring characters from all {films} Marvel Cinematic Universe movies and {seasons} Disney+ series seasons released so far, with who plays them, where they first appear and every title they are in. Characters with a <span class="dir-badge-full">Full page</span> badge have a full story page on this site.</p>
-            <p class="dir-source">Facts come from the studios' cast credits, as compiled in Wikipedia's MCU cast lists (checked {data["updated"]}). Small one-scene roles are not listed yet. Only released titles are counted: Avengers: Doomsday, VisionQuest and other upcoming titles are added when they come out. "Animated only" means the character has only appeared in an animated series such as What If...?, where many characters are alternate versions.</p>
+            <p class="dir-source">Facts come from the studios' cast credits, as compiled in Wikipedia's MCU cast lists (checked {data["updated"]}). Small one-scene roles are not listed yet. Only released titles are counted: Avengers: Doomsday and other upcoming titles are added when they come out. "Animated only" means the character has only appeared in an animated series such as What If...?, where many characters are alternate versions.</p>
         </section>
 
         <form class="dir-controls" role="search" onsubmit="return false">
