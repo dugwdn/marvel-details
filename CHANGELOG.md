@@ -3,6 +3,15 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-10-19 (Weekly news scan, not live yet)
+- VisionQuest came out October 14, so it is now in the MCU Character List:
+  804 characters (was 797). Added it to Vision, Ultron, J.A.R.V.I.S.,
+  F.R.I.D.A.Y., E.D.I.T.H., Raza, Billy and Tommy Maximoff, plus 7 new
+  characters (D.U.M.-E., Fiona Guthrie, Handler, Jocasta, Lisa Molinari,
+  Paladin, U.), from Wikipedia's series cast list checked 2026-10-19.
+- Coming Soon: VisionQuest marked out now, with the split reviews from
+  Variety and The Hollywood Reporter. No other new announcements this week.
+
 ## 2026-10-15 (Trivia and fan theories, goes live when merged)
 - New Trivia section: ask about any scene and get the matching facts from 2,615
   fan-found details across 78 MCU films and shows, or browse one title at a time.
