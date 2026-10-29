@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "wrangler pages dev public --port 8788",
     "deploy": "wrangler pages deploy public --project-name marvel-details --branch phase-1-build",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "share": "node tools/share-tags.mjs"
   },
   "keywords": [
     "marvel",

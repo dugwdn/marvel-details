@@ -150,6 +150,9 @@ live in `public/js/signin-popup-core.js`, tested by `test/signin-popup.test.mjs`
 See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: write the 7 missing articles, finish PR #28 media, keep link checks green.
 Waiting on Doug: his member id in MOD_MEMBERS and the Turnstile keys (boards), the typed deploy line, Facebook and X sign-in keys, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
 
+## Link previews (standing rule, Doug 2026-10-28)
+Every page sends the full Open Graph set with `public/img/share-2026-10.jpg` (1200x630, Web Design Nerd style), so a texted link shows a picture. `npm run share` (tools/share-tags.mjs) writes the tags into every page; run it after any `tools/build-*` script. `test/share.test.mjs` fails if a page is missing them. A changed picture gets a new file name (apps cache by address).
+
 ## Working rules
 - **HANDOFF.md (Doug, 2026-10-15, standing):** update HANDOFF.md in the same PR as any change to hosting, domain/DNS, the data model or migrations, the build/deploy path, scheduled jobs, outside services, or a key decision (new ADR).
 - Project-wide rules (branch and PR, never merge or deploy without Doug's
