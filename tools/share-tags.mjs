@@ -6,8 +6,8 @@ import { join, relative, sep } from 'node:path';
 
 const SITE = 'MCU Easter Eggs';
 const BASE = 'https://mcueastereggs.com';
-const IMAGE = '/img/share-2026-10.jpg';
-const ALT = 'MCU Easter Eggs: hidden details in every Marvel movie';
+const IMAGE = '/img/share-2026-11.jpg';
+const ALT = 'MCU Easter Eggs: every easter egg, callback and comic reference, with the fan theory boards';
 const ROOT = new URL('../public/', import.meta.url).pathname;
 const SKIP = new Set(['404.html']);
 
