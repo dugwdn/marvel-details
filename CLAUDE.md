@@ -151,7 +151,7 @@ See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: writ
 Waiting on Doug: his member id in MOD_MEMBERS and the Turnstile keys (boards), the typed deploy line, Facebook and X sign-in keys, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
 
 ## Link previews (standing rule, Doug 2026-10-28)
-Every page sends the full Open Graph set with `public/img/share-2026-10.jpg` (1200x630, Web Design Nerd style), so a texted link shows a picture. `npm run share` (tools/share-tags.mjs) writes the tags into every page; run it after any `tools/build-*` script. `test/share.test.mjs` fails if a page is missing them. A changed picture gets a new file name (apps cache by address).
+Every page sends the full Open Graph set with `public/img/share-2026-11.jpg` (1200x630, look 2 from 2026-11-03: the site's own comic look, red bar, logo, tabs and a boards card; no movie art), so a texted link shows a picture. `npm run share` (tools/share-tags.mjs) writes the tags into every page; run it after any `tools/build-*` script. `test/share.test.mjs` fails if a page is missing them. A changed picture gets a new file name (apps cache by address).
 
 ## Working rules
 - **HANDOFF.md (Doug, 2026-10-15, standing):** update HANDOFF.md in the same PR as any change to hosting, domain/DNS, the data model or migrations, the build/deploy path, scheduled jobs, outside services, or a key decision (new ADR).
