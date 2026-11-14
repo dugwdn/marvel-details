@@ -12,8 +12,9 @@ A free, static fan site about hidden details in Marvel movies, branded
 "MCU Easter Eggs" (renamed from "Details You Missed" on 2026-10-06, ADR-009). Phase 1 covers Iron Man 1 to 3, The Avengers and
 Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
-## Current state (2026-10-06, audited overnight)
+## Current state (2026-11-14; audited 2026-10-06)
 
+- In-app browser zoom (2026-11-14, Doug: pages opened from Facebook Messenger looked zoomed in, "do it for all sites"): `public/css/theme.css` (on all 292 pages) sets `html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100% }`; `node tools/menu.mjs` refreshed the `?v=` links; `test/text-size.test.mjs` checks every page has it plus `width=device-width, initial-scale=1`.
 - HANDOFF.md added 2026-10-15 (how it was built, why, how to take over).
 - **Live Edit (2026-10-12, ADR-014, goes live with the next laptop deploy):**
   `?wdn-edit` on any page signs Doug in through webdesignnerd.com and shows
