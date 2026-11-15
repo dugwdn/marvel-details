@@ -32,6 +32,8 @@
   }
 }
 
+/* Facebook Messenger and other in-app browsers enlarge text unless the page opts out. */
+html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; }
 html body {
   background: var(--dym-bg);
   color: var(--dym-text);

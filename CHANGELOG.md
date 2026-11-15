@@ -3,6 +3,9 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-11-14 (in-app browser zoom, not live yet)
+- Every page: no more zoomed-in text when a link is opened inside Facebook Messenger or other in-app browsers.
+
 ## 2026-11-03 (link preview, not live yet)
 - New link preview picture in the site's own look: the red comic bar with the logo, the colored section tabs and an On the boards card. No movie posters or stills. New file `img/share-2026-11.jpg` so apps fetch it fresh.
 
