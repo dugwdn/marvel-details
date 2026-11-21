@@ -105,3 +105,7 @@ html body .tv-fans a { display: inline-flex; align-items: center; min-height: 2.
 .tv-src { display: block; font-size: .875rem; color: var(--dym-muted); margin-top: .3rem; }
 .tv-src a { color: inherit; font-weight: 600; text-decoration: none; }
 .tv-fans[hidden], .th-bars[hidden], .th-trail[hidden], [data-share-out][hidden], .tv-chips[hidden] { display: none; }
+/* Behind the theory (theory-notes.json): background paragraphs, each with its source */
+.th-more p { margin: 0 0 1rem; }
+.th-more .th-where { display: block; margin-top: .25rem; font-size: 1.0625rem; color: var(--dym-muted); }
+.th-more a { text-decoration: none; }
