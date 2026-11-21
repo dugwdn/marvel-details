@@ -3,6 +3,11 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-11-21 (site sweep fixes, not live yet)
+- Ad boxes: AdSense was holding about 390px of blank space for each unit it did not fill (the account is not approved yet). Unfilled units are now hidden (Google's documented fix), so the dashed "Ad space" boxes are back to their planned size.
+- Phones: the top ad box takes no room until an ad fills it, so each page's words start on the first screen.
+- No underlined links anywhere, including the styles written inside single pages.
+
 ## 2026-11-14 (in-app browser zoom, not live yet)
 - Every page: no more zoomed-in text when a link is opened inside Facebook Messenger or other in-app browsers.
 

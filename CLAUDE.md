@@ -14,6 +14,7 @@ Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
 
 ## Current state (2026-11-14; audited 2026-10-06)
 
+- Site sweep fixes (2026-11-21, Doug "build all"): `theme.css` hides AdSense units marked `data-ad-status="unfilled"` (they held ~390px of blank), collapses the unfilled top ad box under 768px, and sets `text-decoration: none !important` on every link. The 12 s sign-in pop-up is unchanged (standing rule).
 - In-app browser zoom (2026-11-14, Doug: pages opened from Facebook Messenger looked zoomed in, "do it for all sites"): `public/css/theme.css` (on all 292 pages) sets `html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100% }`; `node tools/menu.mjs` refreshed the `?v=` links; `test/text-size.test.mjs` checks every page has it plus `width=device-width, initial-scale=1`.
 - HANDOFF.md added 2026-10-15 (how it was built, why, how to take over).
 - **Live Edit (2026-10-12, ADR-014, goes live with the next laptop deploy):**
