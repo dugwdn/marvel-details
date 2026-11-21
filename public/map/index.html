@@ -1,14 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="robots" content="noindex, follow">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>Marvel Universe Map - Connected Universe Visualization</title>
     <meta name="description" content="Explore the interconnected MCU universe with our interactive network visualization. See how characters, movies, artifacts, and events connect across the Marvel Cinematic Universe.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MCU Easter Eggs">
+    <meta property="og:title" content="Marvel Universe Map - Connected Universe Visualization">
+    <meta property="og:description" content="Explore the interconnected MCU universe with our interactive network visualization. See how characters, movies, artifacts, and events connect across the Marvel Cinematic Universe.">
+    <meta property="og:url" content="https://mcueastereggs.com/map/">
+    <meta property="og:image" content="https://mcueastereggs.com/img/share-2026-11.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MCU Easter Eggs: every easter egg, callback and comic reference, with the fan theory boards">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://mcueastereggs.com/map/">
     <meta name="keywords" content="MCU, Marvel Cinematic Universe, network graph, connections, characters, movies, timeline">
-    <link rel="stylesheet" href="/css/map.css">
+    <link rel="stylesheet" href="/css/style.css?v=43576d79">
+    <link rel="stylesheet" href="/css/map.css?v=56ead2ab">
+    <meta name="google-adsense-account" content="ca-pub-7178251279168670">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css?v=39aceacc">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+    <style>
+        /* Connected nodes are buttons that jump to that node on the map. */
+        #connections-list .connection-node {
+            display: inline; background: none; border: 0; padding: 0; margin: 0;
+            font: inherit; font-weight: 500; color: inherit; text-align: left;
+            cursor: pointer; text-decoration: underline;
+        }
+        .node-page { margin: 10px 0 0; }
+        .node-page-link, .map-sources a { color: inherit; text-decoration: underline; font-weight: 600; }
+        .map-sources { margin: 4px 0 0; padding-left: 18px; font-size: 0.85rem; }
+    </style>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+        gtag('js', new Date());
+        gtag('config', 'G-NESPZD6XSQ', { allow_google_signals: false, allow_ad_personalization_signals: false, page_location: location.origin + location.pathname });
+    </script>
 </head>
-<body>
+<body class="map-open">
+    <header class="site-brand site-bar">
+        <h1 class="site-brand-title"><a class="site-brand-link" href="/" aria-label="MCU Easter Eggs home"><svg class="site-brand-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M41 41 58 58" stroke="#000" stroke-width="11" stroke-linecap="round"/><path d="M41 41 58 58" stroke="#7b3fc4" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="26" r="20" fill="#fff" stroke="#000" stroke-width="5"/><circle cx="26" cy="26" r="15" fill="none" stroke="#ffd60a" stroke-width="4"/><path d="M26 14v14" stroke="#e23636" stroke-width="6" stroke-linecap="round"/><circle cx="26" cy="36" r="3.5" fill="#e23636"/></svg><span class="site-brand-name">MCU <em>Easter</em> Eggs</span></a></h1>
+        <div class="site-search" hidden>
+            <label class="site-search-label" for="site-q">Search the site</label>
+            <input id="site-q" class="site-search-input" type="search" placeholder="Search movies, characters, easter eggs" inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="site-results" aria-autocomplete="list">
+            <ul id="site-results" class="site-results" role="listbox" aria-label="Search results" hidden></ul>
+        </div>
+        <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>
+        <a class="site-member" href="/me/"><span class="site-member-text">My Marvel</span></a>
+    </header>
+    <nav class="site-nav" aria-label="Main menu">
+        <a href="/boards/">Boards</a>
+        <a href="/articles/">Articles</a>
+        <a href="/movies/">Movies</a>
+        <a href="/scenes/">Deleted Scenes</a>
+        <a href="/callbacks/">Callbacks</a>
+        <a href="/characters/">Characters</a>
+        <a href="/map/" aria-current="page">Universe Map</a>
+        <a href="/trivia/">Trivia</a>
+        <a href="/theories/">Theories</a>
+        <a href="/rabbit-holes/">Rabbit Holes</a>
+        <a href="/upcoming/">Coming Soon</a>
+        <a href="/quiz/">Quiz</a>
+    </nav>
+
+    <!-- The map opens as a full-screen window over the site; Back returns to it. -->
+    <div class="map-overlay" id="map-overlay" role="dialog" aria-modal="true" aria-labelledby="map-overlay-title">
+    <div class="map-overlay-bar">
+        <a class="map-back" id="map-back" href="/">&#9664; Back to the site</a>
+        <h2 class="map-overlay-title" id="map-overlay-title">Universe Map</h2>
+        <a class="map-close" id="map-close" href="/" aria-label="Close the map">&times;</a>
+    </div>
     <div class="map-container">
         <!-- Left Panel: Network Visualization -->
         <div class="map-panel-left">
@@ -27,12 +98,13 @@
                 <h2>Filters & Search</h2>
 
                 <!-- Search Box -->
+                <label for="search-input" class="map-search-label">Find a movie, character or item</label>
                 <div class="search-box">
                     <input
                         type="text"
                         id="search-input"
                         placeholder="Search by name..."
-                        aria-label="Search nodes"
+                        inputmode="search" enterkeyhint="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                     >
                     <button id="search-clear" aria-label="Clear search" title="Clear">✕</button>
                 </div>
@@ -110,14 +182,37 @@
                     <li><span class="color-dot" style="background-color: #20B2AA;"></span> Artifacts</li>
                     <li><span class="color-dot" style="background-color: #9370DB;"></span> Events</li>
                 </ul>
+                <p>Movies and characters that have a page on this site get an "Open the page" link in their details.</p>
+                <p><strong>Sources:</strong> the map's facts were checked against these pages.</p>
+                <ul id="map-sources" class="map-sources"></ul>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vis-network/standalone/umd/vis-network.min.js"></script>
-    <script src="/js/shared-data.js"></script>
-    <script src="/js/map-sidebar.js"></script>
-    <script src="/js/universe-map.js"></script>
+    <script src="/js/shared-data.js?v=a0e2688e"></script>
+    <script src="/js/map-sidebar.js?v=c51f0c4e"></script>
+    <script src="/js/universe-map.js?v=133d3cda"></script>
+    <script src="/js/map-overlay.js?v=c0500274"></script>
+    <script type="module" src="/js/members.js?v=e59b7b8f"></script>
+    <footer><p class="site-legal"><a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/credits">Photos and Credits</a></p>
+    <div class="site-footer-links">
+        <p class="site-footer-projects"><strong>More from us:</strong> <a href="https://partygamesarcade.com" target="_blank" rel="noopener">Party Games Arcade</a> • <a href="https://kidslearningarcade.com" target="_blank" rel="noopener">Kids Learning Arcade</a> • <a href="https://getrightplace.app" target="_blank" rel="noopener">RightPlace</a> • <a href="https://credibletheories.com" target="_blank" rel="noopener">Credible Theories</a> • <a href="/more/">All our sites</a></p>
+        <p class="site-footer-credit"><a href="https://www.webdesignnerd.com" target="_blank" rel="noopener">Powered by Web Design Nerd</a></p>
+    </div>
+
+
+
+
+
+
+
+
+    </footer>
+    <script type="module" src="/js/search.js?v=3f64106c"></script>
+    <script type="module" src="/js/keyboard.js?v=bd0f7407"></script>
+    <script type="module" src="/js/signin-popup.js?v=19dab9ed"></script>
 </body>
 </html>

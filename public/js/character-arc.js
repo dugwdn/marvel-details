@@ -3,6 +3,21 @@
  * Handles the grid view, modal preview, filtering, sorting, and favorites
  */
 
+// Films with a hub page on this site. Other films are shown as plain text.
+const FILM_HUBS = {
+  'Iron Man': '/movies/iron-man-1',
+  'Iron Man 2': '/movies/iron-man-2',
+  'Iron Man 3': '/movies/iron-man-3',
+  'The Avengers': '/movies/avengers-1',
+  "Marvel's The Avengers": '/movies/avengers-1',
+  'Avengers: Endgame': '/movies/endgame'
+};
+
+function filmHubFor(name) {
+  const bare = String(name || '').replace(/\s*\(\d{4}\)\s*$/, '').trim();
+  return FILM_HUBS[bare] || null;
+}
+
 class CharacterArcTracker {
   constructor() {
     this.allCharacters = [];
@@ -40,27 +55,30 @@ class CharacterArcTracker {
   }
 
   /**
-   * Load favorites from localStorage
+   * Favorites live in the member store (public/js/members.js, saved on this
+   * device and synced when signed in). That script loads as a module, so it
+   * may arrive after this one: read its saved copy directly until it's ready.
    */
   async loadFavorites() {
-    try {
-      const stored = localStorage.getItem('characterFavorites');
-      if (stored) {
-        this.favorites = new Set(JSON.parse(stored));
-      }
-    } catch (error) {
-      console.warn('Could not load favorites:', error);
-    }
+    this.favorites = new Set(this.readStoredFavorites());
+    const refresh = () => {
+      if (!window.dymMembers) return;
+      this.favorites = new Set(window.dymMembers.favIds());
+      this.render();
+    };
+    document.addEventListener('dym:ready', refresh);
+    document.addEventListener('dym:change', refresh);
   }
 
-  /**
-   * Save favorites to localStorage
-   */
-  saveFavorites() {
+  readStoredFavorites() {
+    if (window.dymMembers) return window.dymMembers.favIds();
     try {
-      localStorage.setItem('characterFavorites', JSON.stringify(Array.from(this.favorites)));
+      const store = JSON.parse(localStorage.getItem('dym-members-v1') || '{}');
+      const favs = Object.keys(store.favs || {}).filter((id) => store.favs[id].on);
+      const old = JSON.parse(localStorage.getItem('characterFavorites') || '[]');
+      return [...favs, ...old];
     } catch (error) {
-      console.warn('Could not save favorites:', error);
+      return [];
     }
   }
 
@@ -180,20 +198,14 @@ class CharacterArcTracker {
     const sorted = [...this.filteredCharacters];
 
     switch (this.currentSort) {
-      case 'arc-length':
-        sorted.sort((a, b) => b.arcLength - a.arcLength);
-        break;
-      case 'appearances':
-        sorted.sort((a, b) => b.appearances - a.appearances);
-        break;
-      case 'kill-count':
-        sorted.sort((a, b) => b.killCount - a.killCount);
-        break;
       case 'name':
-        sorted.sort((a, b) => a.fullName.localeCompare(b.fullName));
+        sorted.sort((a, b) => a.heroName.localeCompare(b.heroName));
         break;
-      case 'complexity':
-        sorted.sort((a, b) => (b.nearDeathExperiences + b.betrayalsByAllies) - (a.nearDeathExperiences + a.betrayalsByAllies));
+      case 'first-appearance':
+        sorted.sort((a, b) => a.firstYear - b.firstYear || a.heroName.localeCompare(b.heroName));
+        break;
+      case 'site-films':
+        sorted.sort((a, b) => b.siteFilms.length - a.siteFilms.length || a.heroName.localeCompare(b.heroName));
         break;
       default:
         // Keep original order
@@ -226,10 +238,9 @@ class CharacterArcTracker {
       .map(char => this.createCharacterCard(char))
       .join('');
 
-    // Add event listeners to cards
-    container.querySelectorAll('.character-card').forEach(card => {
-      const slug = card.dataset.slug;
-      card.addEventListener('click', () => this.openModal(slug));
+    // "Quick look" buttons open the summary popup; the name links to the full page.
+    container.querySelectorAll('.character-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => this.openModal(btn.dataset.slug));
     });
 
     // Add event listeners to favorite buttons
@@ -255,14 +266,15 @@ class CharacterArcTracker {
       <div class="character-card" data-slug="${char.slug}" data-id="${char.id}">
         <div class="character-card-header">
           <div class="character-info">
-            <h3>${this.escapeHtml(char.heroName)}</h3>
+            <h3><a class="character-page-link" href="/characters/${encodeURIComponent(char.slug)}">${this.escapeHtml(char.heroName)}</a></h3>
             <p class="character-actor">${this.escapeHtml(char.actor)}</p>
           </div>
-          <button class="character-favorite-btn ${isFavorite ? 'favorited' : ''}"
+          <button type="button" class="character-favorite-btn ${isFavorite ? 'favorited' : ''}"
                   data-slug="${char.slug}"
-                  title="Add to favorites"
+                  title="${isFavorite ? 'Favorite (tap to remove)' : 'Add to favorites'}"
+                  aria-pressed="${isFavorite ? 'true' : 'false'}"
                   aria-label="Favorite ${char.heroName}">
-            ♡
+            ${isFavorite ? '★' : '☆'}
           </button>
         </div>
         <div class="character-role ${roleClass}">
@@ -271,11 +283,16 @@ class CharacterArcTracker {
         <p class="character-thesis">${this.escapeHtml(char.arcThesis)}</p>
         <div class="character-stats">
           <span class="stat-item">
-            <strong>${char.appearances}</strong> appearances
+            First seen: <strong>${this.escapeHtml(char.firstFilm)}</strong> (${char.firstYear})
           </span>
           <span class="stat-item">
-            <strong>${char.arcLength}</strong> year arc
+            In <strong>${char.siteFilms.length}</strong> of our 5 films
           </span>
+        </div>
+        <div class="character-card-actions">
+          <a class="character-full-link" href="/characters/${encodeURIComponent(char.slug)}">Full arc timeline</a>
+          <button type="button" class="character-quick-btn" data-slug="${this.escapeHtml(char.slug)}"
+                  aria-label="Quick look at ${this.escapeHtml(char.heroName)}">Quick look</button>
         </div>
       </div>
     `;
@@ -288,13 +305,15 @@ class CharacterArcTracker {
     const character = await MarvelDataHub.findCharacter(slug);
     if (!character) return;
 
+    if (window.dymMembers) {
+      window.dymMembers.toggleFav(character.id); // fires dym:change, which re-renders
+      return;
+    }
     if (this.favorites.has(character.id)) {
       this.favorites.delete(character.id);
     } else {
       this.favorites.add(character.id);
     }
-
-    this.saveFavorites();
     this.render();
   }
 
@@ -319,6 +338,7 @@ class CharacterArcTracker {
     const closeBtn = modal.querySelector('.character-modal-close');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => this.closeModal());
+      closeBtn.focus();
     }
 
     // Set up similar arcs section
@@ -352,7 +372,7 @@ class CharacterArcTracker {
             <h2>${this.escapeHtml(char.heroName)}</h2>
             <p class="modal-full-name">${this.escapeHtml(char.fullName)}</p>
           </div>
-          <button class="character-modal-close" aria-label="Close">×</button>
+          <button type="button" class="character-modal-close" aria-label="Close">×</button>
         </div>
 
         <div class="modal-body">
@@ -364,37 +384,23 @@ class CharacterArcTracker {
 
             <div class="modal-section">
               <h3>Character Journey</h3>
-              <div class="arc-stages">
-                ${char.arcStages.map(stage => `
-                  <div class="arc-stage">${this.escapeHtml(stage)}</div>
+              <ol class="arc-stages">
+                ${char.arcStages.map((stage, i) => `
+                  <li class="arc-stage"><span class="arc-step">${i + 1}</span><span class="arc-stage-name">${this.escapeHtml(stage)}</span></li>
                 `).join('')}
-              </div>
+              </ol>
             </div>
 
             <div class="modal-stats-grid">
               <div class="modal-stat">
-                <span class="stat-label">Appearances</span>
-                <span class="stat-value">${char.appearances}</span>
+                <span class="stat-label">First MCU film</span>
+                <span class="stat-value">${this.escapeHtml(char.firstFilm)} (${char.firstYear})</span>
+                ${char.firstNote ? `<span class="stat-note">${this.escapeHtml(char.firstNote)}</span>` : ''}
               </div>
               <div class="modal-stat">
-                <span class="stat-label">Arc Length</span>
-                <span class="stat-value">${char.arcLength} years</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Kill Count</span>
-                <span class="stat-value">${char.killCount}</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Near-Death</span>
-                <span class="stat-value">${char.nearDeathExperiences}</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Times Saved</span>
-                <span class="stat-value">${char.timesSavedUniverse}</span>
-              </div>
-              <div class="modal-stat">
-                <span class="stat-label">Betrayals</span>
-                <span class="stat-value">${char.betrayalsByAllies}</span>
+                <span class="stat-label">In our 5 films</span>
+                <span class="stat-value">${char.siteFilms.length}</span>
+                <span class="stat-note">${char.siteFilms.map(f => this.filmHtml(f)).join(', ')}</span>
               </div>
             </div>
 
@@ -406,15 +412,11 @@ class CharacterArcTracker {
                 ${char.loveInterests.length > 0 ? `
                   <li><strong>Love Interests:</strong> ${this.escapeHtml(char.loveInterests.join(', '))}</li>
                 ` : ''}
-                ${char.armorVariations > 0 ? `
-                  <li><strong>Armor Variations:</strong> ${char.armorVariations}</li>
-                ` : ''}
-                ${char.timesMindsControlled > 0 ? `
-                  <li><strong>Times Mind-Controlled:</strong> ${char.timesMindsControlled}</li>
-                ` : ''}
               </ul>
             </div>
           </div>
+
+          <p class="modal-full-page"><a href="/characters/${encodeURIComponent(char.slug)}">Read ${this.escapeHtml(char.heroName)}'s full arc timeline &rarr;</a></p>
 
           <div class="modal-sidebar">
             <div class="modal-section">
@@ -444,18 +446,24 @@ class CharacterArcTracker {
         return;
       }
 
+      // Each similar character is a button that opens its own popup.
       container.innerHTML = similar.map(item => `
-        <div class="similar-arc-item">
-          <p class="similar-name">${this.escapeHtml(item.character.heroName)}</p>
-          <p class="similar-match">
+        <button type="button" class="similar-arc-item" data-slug="${item.character.slug}"
+                aria-label="Open ${this.escapeHtml(item.character.heroName)}">
+          <span class="similar-name">${this.escapeHtml(item.character.heroName)}</span>
+          <span class="similar-match">
             <span class="similarity-bar">
               <span class="similarity-fill" style="width: ${item.similarity}%"></span>
             </span>
             ${item.similarity}% match
-          </p>
-          <p class="similar-thesis">${this.escapeHtml(item.character.arcThesis.substring(0, 60))}...</p>
-        </div>
+          </span>
+          <span class="similar-thesis">${this.escapeHtml(item.character.arcThesis)}</span>
+          <span class="similar-open" aria-hidden="true">Open file ▸</span>
+        </button>
       `).join('');
+      container.querySelectorAll('.similar-arc-item').forEach(btn => {
+        btn.addEventListener('click', () => this.openModal(btn.dataset.slug));
+      });
     } catch (error) {
       console.error('Error loading similar arcs:', error);
       container.innerHTML = '<p class="error">Could not load similar characters.</p>';
@@ -487,6 +495,15 @@ class CharacterArcTracker {
     if (container) {
       container.innerHTML = `<div class="error-message"><p>${this.escapeHtml(message)}</p></div>`;
     }
+  }
+
+  /**
+   * A film name, linked to its hub page when the site has one.
+   */
+  filmHtml(name) {
+    const hub = filmHubFor(name);
+    const text = this.escapeHtml(name);
+    return hub ? `<a href="${hub}">${text}</a>` : text;
   }
 
   /**

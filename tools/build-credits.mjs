@@ -1,0 +1,86 @@
+// Writes public/credits.html from public/data/media-credits.json.
+// Run after changing the credits file: node tools/build-credits.mjs, then node tools/menu.mjs
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
+const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/media-credits.json'), 'utf8'));
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+// Where each item shows up. Portraits of list characters also appear on the home page
+// and movie pages (tools/build-media.mjs); film trailers on the home page and character pages.
+const usedOn = (x) => {
+  const pages = [x.page, ...(x.pages || [])];
+  if (x.character || /^\/characters\//.test(x.page)) pages.push('/');
+  return [...new Set(pages)].map((p) => `<a href="${esc(p)}">${p === '/' ? 'home page' : esc(p)}</a>`).join(', ');
+};
+const imgs = data.images.map((i) =>
+  `<li><strong>${esc(i.subject)}</strong><br>Photo: ${esc(i.author)}, <a href="${esc(i.licenseUrl)}" rel="nofollow noopener">${esc(i.license)}</a>, <a href="${esc(i.sourceUrl)}" rel="nofollow noopener">via Wikimedia Commons</a>${i.changes ? ` (${esc(i.changes)})` : ''}.<br>Used on ${usedOn(i)}.</li>`
+).join('\n            ');
+const posters = (data.posters || []).map((p) =>
+  `<li><strong>${esc(p.subject)}</strong><br>Poster: © ${esc(p.owner)}. Shown once, on <a href="${esc(p.page)}">the ${esc(p.film)} page</a>, beside our write-up of the film (fair use). <a href="${esc(p.sourceUrl)}" rel="nofollow noopener">Poster source</a>.</li>`
+).join('\n            ');
+const vids = data.videos.map((v) =>
+  `<li><strong>${esc(v.title)}</strong>${v.film ? ` (${esc(v.film)})` : ''}<br>Channel: ${esc(v.channel)}, <a href="${esc(v.sourceUrl)}" rel="nofollow noopener">watch on YouTube</a>.<br>Used on ${usedOn(v)}${v.film ? ' and the pages of characters in it' : ''}.</li>`
+).join('\n            ');
+
+// Scene trivia text adapted from the fan-run MCU Wiki (ADR-018). CC BY-SA asks for the
+// source, the license and a note of our changes: one line per title lives here.
+const triviaFile = path.join(ROOT, 'data/trivia.json');
+const trivia = fs.existsSync(triviaFile) ? JSON.parse(fs.readFileSync(triviaFile, 'utf8')) : null;
+const triviaList = trivia ? trivia.works.map((w) =>
+  `<li><a href="/trivia/${esc(w.slug)}">${esc(w.work)} trivia</a>: adapted from <a href="${esc(w.source)}" rel="nofollow noopener">${esc(w.work)}/Trivia</a> on the Marvel Cinematic Universe Wiki (revision ${esc(w.revid)}).</li>`
+).join('\n            ') : '';
+
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>Photos and Credits | MCU Easter Eggs</title>
+    <meta name="description" content="Who took each photo on the site, the license it is under, where each poster, trailer and trivia fact comes from.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
+        .container { max-width: 1600px; margin: 0 auto; padding: 2rem 16px; }
+        .content { max-width: 760px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 8px; }
+        h1 { font-size: 2rem; margin-bottom: .75rem; }
+        h2 { font-size: 1.3rem; margin: 1.5rem 0 .5rem; }
+        p { margin-bottom: 1rem; }
+        footer { background: #222; color: #fff; text-align: center; padding: 2rem; margin-top: 3rem; }
+        @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } .content { background: #1c1c1c; } }
+    </style>
+    <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+    <main class="container">
+        <div class="content">
+            <h1>Photos and Credits</h1>
+            <p>We never use film stills or character art. Each movie page shows that film's theatrical poster beside our write-up, credited below; we take any poster down on request. Photos here are free-license pictures from Wikimedia Commons, credited to the people who took them. Trailers are YouTube videos from official Marvel and Sony channels or licensed trailer channels, played with YouTube's own player. We never host video. Photos and trailers around the site carry no caption credits; every one is credited here, and every page links here from its footer.</p>
+            <h2>Photos (${data.images.length})</h2>
+            <ul class="credits-list">
+            ${imgs}
+            </ul>
+            ${posters ? `<h2>Movie posters (${data.posters.length})</h2>
+            <ul class="credits-list">
+            ${posters}
+            </ul>` : ''}
+            <h2>Trailers (${data.videos.length})</h2>
+            <ul class="credits-list">
+            ${vids}
+            </ul>
+            ${trivia ? `<h2 id="trivia">Trivia text (${trivia.works.length} films and shows)</h2>
+            <p>The facts on our <a href="/trivia/">trivia pages</a> come from the Marvel Cinematic Universe Wiki on Fandom, written by its many fan editors. Its text is under the <a href="${esc(trivia.licenseUrl)}" rel="nofollow noopener">${esc(trivia.license)}</a> license, so our trivia text is shared under the same license. Our changes: we split each list into single facts, removed footnote marks and grouped the facts by kind. We do not use the wiki's pictures. Imported ${esc(trivia.imported)}.</p>
+            <ul class="credits-list">
+            ${triviaList}
+            </ul>` : ''}
+            <p>Not affiliated with Marvel or Disney. The same list is in <a href="/data/media-credits.json">media-credits.json</a>.</p>
+        </div>
+    </main>
+</body>
+</html>
+`;
+fs.writeFileSync(path.join(ROOT, 'credits.html'), html);
+console.log('credits.html written');

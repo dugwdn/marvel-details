@@ -1,0 +1,171 @@
+# MCU Easter Eggs (repo: marvel-details)
+
+Read this first. It says what the project is, where it runs, and what's next.
+Handoff (how it was built, why, how to take over): `HANDOFF.md`.
+The other standard docs: `PRD.md` (what and why), `TRD.md` (how it's built),
+`ADR.md` (decisions), `ROADMAP.md`, `RUNBOOK.md` (how to deploy and fix),
+`TEST_PLAN.md`, `CHANGELOG.md`. Feature details are in `docs/features/`
+.
+
+## What it is
+A free, static fan site about hidden details in Marvel movies, branded
+"MCU Easter Eggs" (renamed from "Details You Missed" on 2026-10-06, ADR-009). Phase 1 covers Iron Man 1 to 3, The Avengers and
+Endgame. Owner: Doug (dugwdn). Not affiliated with Marvel or Disney.
+
+## Current state (2026-11-14; audited 2026-10-06)
+
+- In-app browser zoom (2026-11-14, Doug: pages opened from Facebook Messenger looked zoomed in, "do it for all sites"): `public/css/theme.css` (on all 292 pages) sets `html { -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100% }`; `node tools/menu.mjs` refreshed the `?v=` links; `test/text-size.test.mjs` checks every page has it plus `width=device-width, initial-scale=1`.
+- HANDOFF.md added 2026-10-15 (how it was built, why, how to take over).
+- **Live Edit (2026-10-12, ADR-014, goes live with the next laptop deploy):**
+  `?wdn-edit` on any page signs Doug in through webdesignnerd.com and shows
+  **Edit page**; edits live in KV `LIVE_EDIT` (`marvel-details-live-edit`) and
+  `functions/_middleware.js` adds them to pages. Module copy in
+  `functions/_lib/live-edit/` (from dugwdn/wdn-website `tools/live-edit/`).
+- **What is live:** https://mcueastereggs.com and https://marvel-details.pages.dev serve the same deploy: commit **79366ad** (PR #23 rebrand, which already carried sign-in #18 and member perks #21). Checked from the sandbox on 2026-10-06: the brand banner reads MCU Easter Eggs, `/me/` returns 200, `/api/auth` answers with Google on and Facebook and X off, GA4 is still the placeholder `G-XXXXXXXXXX`, `/more/` is a 404 and the home page has no search box.
+- **Merged to `phase-1-build` but NOT deployed** (needs Doug's typed laptop line, RUNBOOK "Publish"): #24 More from us (`/more/`, footer link), #25 GA4 `G-NESPZD6XSQ` on every page, #26 compact header with search and member chip plus the readability pass, #27 AdSense slot `7081225657` in `js/ads.js` (ads stay off `/me/` and `/account`). Tip of `phase-1-build` is 3c44f57 plus whatever docs and link fixes merge after it.
+- **Open:** draft PR #28 (`feat/images-and-trailers`: credits page, place photos, official-trailer rule), still being worked on. Stale branches (all merged or superseded, safe for Doug to prune later): design/marvel-style, design/marvel-style-2, docs/live-ecf0b8b, docs/standard-docs, feat/* and fix/* already merged, heroic-menu-buttons, map-popup, popup-buttons, member-perks, `main` (old, not used).
+- **Brand:** MCU Easter Eggs (ADR-009), canonical https://mcueastereggs.com. Not affiliated with Marvel or Disney. Trademark question is on the lawyer list.
+- **Pages:** home, about, privacy, account, My Marvel (`/me/`, noindex), 5 movie hubs, 4 articles (Loki's scepter, Endgame final portal, Iron Man 2 green drink, Spider-Man Brand New Day) plus the index, and the features: Deleted Scenes Registry (40 real scenes, sourced), Foreshadowing and Callbacks (34, sourced; `node build-callbacks.js`), Character Arc Tracker (20), MCU Character List (`/characters/all/`, 804, rebuilt by `python3 tools/build-directory.py`), Universe Map (25 nodes, 54 links, full-screen window), Rabbit Holes (8), Coming Soon (`/upcoming/`, upcoming movies and shows, each item labeled confirmed, reported or rumor with a source). Trailers on the 5 movie pages and the Brand New Day article are YouTube embeds of official uploads; the 10 original character pages show credited Wikimedia Commons actor photos.
+- **Sign-in (ADR-007):** Google works (client ID in `wrangler.toml`). Facebook and X are off until Doug adds their keys (RUNBOOK "Sign-in keys").
+- **Member perks (ADR-008):** Seen it, Save, favorite characters, found counter and ranks, My Marvel. Work with no account; sync needs the D1 `saves` table. I could not confirm from the sandbox whether Doug ran `npx wrangler d1 migrations apply marvel-details --remote` for `0002_member_saves.sql`; until it is run, `/api/sync` and Delete my account error for signed-in members.
+- **GA4:** the ID is set in one place, `GA_ID` in `tools/menu.mjs` (empty or `G-XXXXXXXXXX` = off, no tag). Tag sends no ads signals and no query strings (PR for branch `ga4-everywhere-2026-10-06`); goes live with the next deploy, then run `node tools/menu.mjs` only if the ID changes.
+- **Ads:** AdSense publisher ca-pub-7178251279168670, slot 7081225657 in `js/ads.js`. Since PR `ads-placeholders-2026-10-06` every ad page shows three always-visible dashed "Ad space" boxes (top below the menu, mid, end; 280px phone / 250px desktop, styles in `theme.css`) that turn into the ad once AdSense fills; top and end are written into the HTML by `node tools/menu.mjs` with `data-ad-placeholder`. No ads on `/me/`, `/account`, `/map/` (full-screen map), privacy, credits, more. AdSense is "Getting ready" (not approved).
+- **Menu and look:** shared comic banner and menu written into each page by `node tools/menu.mjs` (run after adding a page, and after any CSS or JS change: it stamps `?v=<file hash>` on CSS and JS links because the zone caches them 4 hours). Articles are comic strips (`python3 tools/comic-panels.py`).
+- **Home top (ADR-017, 2026-10-15):** newest movie poster and trailer (`homeHero`, change `NEWEST` in tools/build-media.mjs for the next film), then Theory of the week, On the boards and three easter eggs (`homeLead`); actor wall below.
+- **Images rule (ADR-016, 2026-10-15):** each movie hub shows that film's theatrical poster (fair use, one per film page, `posters` in media-credits.json, files in `public/img/posters/`), and trailer buttons use the trailer's own YouTube thumbnail as the cover. Still no downloaded film stills or character art. Doug: no "more pictures" buttons; people come for lore, easter eggs and talk. Poster library for all 59 titles and the free-license photo library (with saved license proof) are in /mnt/project-files/Marvel-Details/image-library/. Allowed: YouTube embeds of official or licensed channels (YouTube's own player), and free-license Wikimedia Commons photos with a credit line. IMDb text and photos can't be copied; plain facts (dates, cast) can be stated.
+- **Known gaps:** 7 articles still unwritten (below). The About page and bylines name "house writers" (pen names, not people): Doug has not decided how to present them. marveldetails.com still serves Doug's old Wix site; moving it waits on Doug. Search Console: mcueastereggs.com is a Domain property in Doug's account; sitemap.xml (91 pages, only final non-redirecting addresses, checked by test/links.test.mjs) submitted 2026-10-14.
+- **Images and trailers (PR #28, ADR-010):** all media is listed in
+  `public/data/media-credits.json`; `node tools/build-credits.mjs` rebuilds
+  `/credits`, then `node tools/menu.mjs`. Trailers on all 5 hubs and 4
+  articles (official or licensed channels). 20 character portraits, 7 list
+  portraits, 2 place photos (Iron Man hubs). `test/media.test.mjs` checks it.
+- **More media (PR #35, ADR-012):** `node tools/build-media.mjs` writes the
+  home page "Faces of the MCU" and "Watch the Trailers" (59 official
+  trailers), movie-hub cast galleries and character-page trailer rows from
+  media-credits.json. New photos: list them in `tools/media-wanted.json`, run
+  `python3 tools/fetch-media.py` (or push a `media/fetch-*` branch so the
+  GitHub Action fetches them: Wikimedia rate-limits cloud IPs). RUNBOOK
+  "Add photos or trailers".
+- **Header media and credits (ADR-013):** movie hubs, deleted-scene pages and
+  callback pages carry the official trailer (cover = the film's cast photos)
+  and a cast strip inside the header, written by `addFilmHeroes` in
+  `tools/build-media.mjs` (build-hubs.mjs and build-callbacks.js call it).
+  No photo or trailer shows a source line anywhere; all credits are on
+  `/credits` ("Photos and Credits", in every footer). `RECAST` and `LEADS`
+  in build-media.mjs keep recast actors off a film and put the stars first.
+- **Home spotlight:** the "Faces of the MCU" spotlight panel (abilities,
+  allies, enemies, every title linked) comes from `public/data/spotlight.json`
+  plus mcu-characters.json and characters.json, written by `homeTop` in
+  `tools/build-media.mjs`. A character with no spotlight.json entry just shows
+  its titles. Add allies/enemies only as mcu-characters.json ids, with a source.
+- **Movie hubs** are built by `node tools/build-hubs.mjs` from
+  `public/data/movie-hubs.json` (every detail needs a source URL; trailer
+  blocks and figures on the page are kept). Run `node tools/menu.mjs` after.
+- **Quiz (`/quiz/`, ADR-011):** questions, levels, quiz ranks and film
+  sources are all in `public/data/quiz.json`; logic in `public/js/quiz-core.js`
+  (tested by `test/quiz.test.mjs`), page script `public/js/quiz.js`. To add a
+  question, add it to the JSON with a film key and a scene note; every level
+  needs at least 20. The page's level cards and rank table are written into
+  the HTML, so update `public/quiz/index.html` if levels or ranks change.
+  Menu: Quiz replaced About (About is in the footer legal line).
+- **Typing boxes (2026-10-06, branch `keyboard-fit`):** every page loads
+  `/js/keyboard.js` and lets Android shrink the page around the keyboard;
+  every search box asks for a small keyboard and has a visible label. See
+  "Typing boxes and the keyboard" below. On-screen check: 16 failing before,
+  0 after.
+- **Sign-in pop-up (2026-10-07, branch `sign-in-popup`, not live):** Doug's
+  standing rule for every site with accounts. See "Sign-in pop-up" below.
+- **Discussions and boards (2026-10-15, ADR-015, branch `discussions`):** a
+  discussion box on every article, movie hub, scene, callback, character,
+  rabbit hole, Coming Soon and the quiz, plus 12 boards at `/boards/` (first
+  menu item). Port of Credible Theories' system: `functions/_lib/discuss.js`,
+  `public/js/discuss.js`, `public/data/boards.json`, `tools/build-boards.mjs`.
+  Setup Doug does once: RUNBOOK "Message boards" (MOD_MEMBERS, Turnstile).
+- **Trivia and fan theories (2026-10-15, ADR-018, branch `trivia-and-theories`):**
+  `/trivia/` "Ask about any scene" (browser-only search, `public/js/trivia-core.js`)
+  over `public/data/trivia.json` (MCU Wiki trivia text, CC BY-SA, credit on
+  `/credits#trivia`; refresh with `python3 tools/import-wiki-trivia.py`, then
+  `node tools/build-trivia.mjs`), plus 576 fan-spotted scene details ("Spotted on
+  screen": the scene, the detail, the question it answers, who reported it) from
+  `tools/scene-details.json` via `python3 tools/import-scene-details.py` (the wiki
+  importer runs it too). `/theories/` from `public/data/theories.json`
+  (`python3 tools/import-theories.py`, then `node tools/build-theories.mjs`): own
+  words, stamped verdicts with sources, evidence board of sourced clues. Both
+  builders keep their pages in sitemap.xml. Run `node tools/menu.mjs` after.
+  Theory pages: hook, "Do you buy it?" vote (`/api/vote`, `public/js/theory.js`),
+  Ask a friend, "The open question" (also the discussion starter, via
+  `<meta name="discuss-starter">`), Next theory and Your trail. Trivia with no
+  answer offers "Ask the fans" (Quiz and Trivia board, `?ask=`). Spoiler tags
+  `>!...!<` in posts.
+- **Links:** `test/links.test.mjs` fails on empty/"#" links, missing pages or
+  anchors; `node tools/crawl-site.mjs` clicks through every page in Chromium.
+  Never add a card that looks clickable without a link behind it.
+
+## Typing boxes and the keyboard (standing rule, Doug 2026-10-06)
+"Ensure that any time a text input field is needed. That the input field
+itself, and anything else needed to understand what is supposed to go into
+that field is visible. And that we keep the keyboard as small as possible."
+`node tools/menu.mjs` gives every page
+`<script type="module" src="/js/keyboard.js"></script>` and adds
+`interactive-widget=resizes-content` to its viewport tag. `public/js/keyboard.js`
+keeps the focused box's group (its label, the heading, its button; the biggest
+group that fits above the keyboard and below the sticky header, or
+`data-kb-block` on a group) in view by scrolling, or by sliding a fixed
+window (the Universe Map) up, undone when the box loses focus. Every typing
+box has a visible label (a placeholder alone isn't enough) and asks for a
+small keyboard: `inputmode`, `enterkeyhint`, `autocomplete="off"`,
+`autocorrect="off"`, `spellcheck="false"`, `autocapitalize` (`off` for
+searches, `words` for names). Sign-in fields, if ever added, keep their real
+`autocomplete` token (email, current-password) so one tap fills them.
+The header search box lives in `brandFor` in `tools/menu.mjs`; the Character
+List box in `tools/build-directory.py`. `test/keyboard.test.mjs` enforces the
+tags and attributes; `scripts/keyboard-check.mjs` taps every box at 390x640
+with a 300px keyboard (add a line to its `CASES` for a new box; run it against
+`npm run dev` or `python3 -m http.server -d public 8788`).
+
+## Sign-in pop-up (standing rule, Doug 2026-10-07)
+"After ten or fifteen seconds on the website, if a user isn't logged in, a
+pop up with big, nice, easy buttons ... in one click, they can create the
+account or sign in." And: never pay for a sign-in provider (no X).
+`public/js/signin-popup.js` (loaded on every page by `node tools/menu.mjs`)
+counts visible time in sessionStorage across pages; at 12 s it asks
+`GET /api/auth` and, if no one is signed in, shows the pop-up in its final
+form: "Create your free account", one line on the perks (Seen it, saves,
+favorites, found-details rank on every device), the 13+ box (the site's
+existing account rule; a click before ticking it shows a note), then always
+Google, then Facebook, one equal-size button per row. A provider `/api/auth`
+reports as on is live (Google's own button scaled to 48px; Facebook links to
+`/api/auth/facebook`). One that is off (today Facebook, until
+`FACEBOOK_APP_ID` and `FACEBOOK_APP_SECRET` are set) shows the same button
+dimmed to 45% with a "Coming soon" tag: no link, `aria-disabled`, out of Tab
+order, so it can never lead to an error page; it goes live by itself once
+`/api/auth` reports it. It shows even if no provider is on (all dimmed). X is
+never shown even if its keys exist. Shows once a visit; closing it rests
+it 3 days (localStorage `dym-pop-rest`). Never on `/account`, `/me/`,
+privacy, `?from=rightplace`, during a quiz round, over another dialog, or
+while a typing box has focus. Focus is trapped inside (the rest of the page is
+`inert`) and returns where it was; the device's back button closes it. Rules
+live in `public/js/signin-popup-core.js`, tested by `test/signin-popup.test.mjs`.
+
+## Plan
+See `ROADMAP.md` (priority order, brainstorms included). Next without Doug: write the 7 missing articles, finish PR #28 media, keep link checks green.
+Waiting on Doug: his member id in MOD_MEMBERS and the Turnstile keys (boards), the typed deploy line, Facebook and X sign-in keys, AdSense status, the marveldetails.com move, the pen-name decision, confirming the D1 migration.
+
+## Link previews (standing rule, Doug 2026-10-28)
+Every page sends the full Open Graph set with `public/img/share-2026-11.jpg` (1200x630, look 2 from 2026-11-03: the site's own comic look, red bar, logo, tabs and a boards card; no movie art), so a texted link shows a picture. `npm run share` (tools/share-tags.mjs) writes the tags into every page; run it after any `tools/build-*` script. `test/share.test.mjs` fails if a page is missing them. A changed picture gets a new file name (apps cache by address).
+
+## Working rules
+- **HANDOFF.md (Doug, 2026-10-15, standing):** update HANDOFF.md in the same PR as any change to hosting, domain/DNS, the data model or migrations, the build/deploy path, scheduled jobs, outside services, or a key decision (new ADR).
+- Project-wide rules (branch and PR, never merge or deploy without Doug's
+  OK, plain-English replies, most-traffic wins for names and wording) come
+  from the Business HQ project.
+- No build step: what's in `public/` is what goes live. Don't add a
+  framework unless a feature truly needs one.
+- Every fact about a film must be checkable (scene, timestamp, interview or
+  official source). If it can't be confirmed, say so on the page.
+- Never invent people, quotes or statistics.
+- No deploy secrets in the repo. wrangler on Doug's laptop is already
+  signed in to his Cloudflare account.
+
+## Rules
+- Thin page check (ADR-116 in dugwdn/wdn-website, 2026-11-21): every public page passes `scripts/thin-check.mjs` (settings and the noindex baseline in `thin-check.json`); `npm test` runs it (`test/thin.test.mjs`). The site is deployed from `public/` with no build step, so the noindex on baseline pages is written into the committed files by `node scripts/thin-check.mjs --write`; run it again after `node build-callbacks.js`, `python3 tools/build-directory.py` or any page generator. Never lower a bar or add a page to the baseline to get a page through, give it its own words. Day one: 287 pages checked, 194 on the baseline: 94 theories (159 to 291 own words), 35 callbacks (about 80 to 115), 21 character pages (49 to 91), 18 trivia, 14 boards, 6 scene lists, 2 articles, and the map, more, movies and rabbit-holes hubs.

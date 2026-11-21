@@ -36,19 +36,11 @@ class UniverseMap {
    * Load data from shared data hub
    */
   async loadData() {
-    return new Promise((resolve) => {
-      if (window.marvelData && window.marvelData.hub && window.marvelData.hub.cache.connections) {
-        this.data = window.marvelData.hub.cache.connections;
-        this.processData();
-        resolve();
-      } else {
-        document.addEventListener('marvelDataReady', () => {
-          this.data = window.marvelData.hub.cache.connections;
-          this.processData();
-          resolve();
-        });
-      }
-    });
+    // Load the connections directly: the hub only auto-starts on pages marked
+    // data-feature, so waiting for its ready event alone left the map blank.
+    this.data = await window.marvelData.hub.loadConnections();
+    this.processData();
+    if (typeof mapSidebar !== 'undefined' && mapSidebar) mapSidebar.showSources(this.data.sources);
   }
 
   /**
@@ -67,22 +59,26 @@ class UniverseMap {
       phase: node.phase,
       description: node.description,
       year: node.year,
+      url: node.url,
       shape: this.getNodeShape(node.type),
       size: this.getNodeSize(node.type),
+      // Light labels with a dark outline so they read on the dark map.
       font: {
-        size: 14,
-        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto',
-        color: '#333',
+        size: 15,
+        face: '"Barlow Condensed", "Arial Narrow", Arial, sans-serif',
+        color: '#f2fbff',
+        strokeWidth: 4,
+        strokeColor: '#030b15',
         align: 'center'
       },
       borderWidth: 2,
-      borderWidthSelected: 3,
+      borderWidthSelected: 4,
       shadow: {
         enabled: true,
-        color: 'rgba(0,0,0,0.2)',
-        size: 8,
-        x: 3,
-        y: 3
+        color: node.color || 'rgba(76,201,255,0.6)',
+        size: 18,
+        x: 0,
+        y: 0
       }
     }));
 
@@ -92,14 +88,21 @@ class UniverseMap {
       to: edge.to,
       label: edge.label,
       title: `${edge.label}`,
-      color: edge.strength === 'strong' ? '#666' : '#ccc',
+      color: {
+        color: edge.strength === 'strong' ? 'rgba(76,201,255,0.75)' : 'rgba(76,201,255,0.35)',
+        highlight: '#ffb347',
+        hover: '#9be6ff'
+      },
       width: edge.strength === 'strong' ? 2 : 1,
       smooth: {
         type: 'continuous'
       },
       font: {
         size: 11,
-        face: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto'
+        face: 'Barlow, system-ui, sans-serif',
+        color: '#a9cfe0',
+        strokeWidth: 3,
+        strokeColor: '#030b15'
       },
       arrows: 'to'
     }));
@@ -139,15 +142,22 @@ class UniverseMap {
    * Create tooltip text for nodes
    */
   createNodeTooltip(node) {
-    let tooltip = `<strong>${node.label}</strong>`;
-    if (node.description) {
-      tooltip += `<br/>${node.description}`;
-    }
-    if (node.year) {
-      tooltip += `<br/>Year: ${node.year}`;
-    }
-    tooltip += `<br/>Phase: ${node.phase}`;
-    return tooltip;
+    // vis-network shows a string title as plain text, which printed the raw
+    // <strong>/<br/> tags in a long white bar. An element renders properly.
+    const tip = document.createElement('div');
+    tip.className = 'map-tip';
+    const add = (tag, cls, text) => {
+      const el = document.createElement(tag);
+      el.className = cls;
+      el.textContent = text;
+      tip.appendChild(el);
+    };
+    add('strong', 'map-tip-title', node.label);
+    if (node.description) add('p', 'map-tip-text', node.description);
+    const meta = [node.year ? `Year ${node.year}` : '', node.phase ? `Phase ${node.phase}` : '']
+      .filter(Boolean).join(' · ');
+    if (meta) add('p', 'map-tip-meta', meta);
+    return tip;
   }
 
   /**
@@ -532,91 +542,10 @@ class MapSidebar {
   }
 
   static showNodeDetails(node, connections) {
-    const detailsSection = document.getElementById('details-section');
-    const welcomeSection = document.getElementById('welcome-section');
-    const nodeDetailsDiv = document.getElementById('node-details');
-    const connectionsList = document.getElementById('connections-list');
-
-    // Hide welcome, show details
-    if (detailsSection) detailsSection.style.display = 'block';
-    if (welcomeSection) welcomeSection.style.display = 'none';
-
-    // Build node details HTML
-    let html = `
-      <div class="node-header">
-        <div class="node-title">${node.label}</div>
-        <span class="node-type">${node.type.charAt(0).toUpperCase() + node.type.slice(1)}</span>
-      </div>
-    `;
-
-    if (node.description) {
-      html += `<div class="node-description">${node.description}</div>`;
-    }
-
-    html += '<div class="node-meta">';
-    if (node.phase) {
-      html += `
-        <div class="meta-item">
-          <div class="meta-label">Phase</div>
-          <div class="meta-value">${node.phase}</div>
-        </div>
-      `;
-    }
-    if (node.year) {
-      html += `
-        <div class="meta-item">
-          <div class="meta-label">Year</div>
-          <div class="meta-value">${node.year}</div>
-        </div>
-      `;
-    }
-    html += '</div>';
-
-    if (nodeDetailsDiv) {
-      nodeDetailsDiv.innerHTML = html;
-    }
-
-    // Build connections HTML
-    let connectionsHtml = '';
-
-    if (connections.outgoing.length > 0) {
-      connectionsHtml += '<div class="connections-title">Connected To:</div>';
-      connections.outgoing.forEach(({ node: connNode, edge }) => {
-        connectionsHtml += `
-          <div class="connection-item">
-            <div class="connection-label">${edge.label}</div>
-            <div class="connection-node" data-node-id="${connNode.id}">
-              ${connNode.label}
-            </div>
-          </div>
-        `;
-      });
-    }
-
-    if (connections.incoming.length > 0) {
-      connectionsHtml += '<div class="connections-title">Connected From:</div>';
-      connections.incoming.forEach(({ node: sourceNode, edge }) => {
-        connectionsHtml += `
-          <div class="connection-item">
-            <div class="connection-label">${edge.label}</div>
-            <div class="connection-node" data-node-id="${sourceNode.id}">
-              ${sourceNode.label}
-            </div>
-          </div>
-        `;
-      });
-    }
-
-    if (connectionsList) {
-      connectionsList.innerHTML = connectionsHtml;
-
-      // Add click handlers to connection nodes
-      connectionsList.querySelectorAll('.connection-node').forEach(el => {
-        el.addEventListener('click', () => {
-          const nodeId = el.dataset.nodeId;
-          universalMap.selectNode(nodeId);
-        });
-      });
+    // One renderer for the details panel: MapSidebarController in map-sidebar.js
+    // escapes the text, uses real buttons and links the node's page if it has one.
+    if (typeof mapSidebar !== 'undefined' && mapSidebar) {
+      mapSidebar.showNodeDetails(node, connections);
     }
   }
 

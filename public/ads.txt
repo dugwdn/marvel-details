@@ -1,13 +1,1 @@
-# ads.txt file for Details You Missed
-# Phase 1: Free tier without ads
-# Phase 3 will include Google AdSense
-
-# This is a placeholder ads.txt file
-# When monetization begins in Phase 3, Google AdSense credentials will be added here
-
-# Format reference:
-# Domain, Publisher ID, Account type, Certification Authority ID
-# Example: google.com, pub-xxxxxxxxxxxxxxxx, DIRECT, f08c47fec0942fa0
-
-# For inquiries about advertising:
-# Not accepting ads during Phase 1 (free tier)
+google.com, pub-7178251279168670, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,85 @@
+# Marvel Details: test plan
+
+Last updated 2026-10-06.
+
+## Automated
+With PR #1: `node tools/check-links.mjs` fails when a page in `public/`
+links to a site address with no file behind it, or the sitemap lists one.
+The "Check links" GitHub workflow runs it on every pull request.
+`npm test` (`node --test test/*.test.mjs`) runs the sign-in tests: Google
+token checks (signature, audience, issuer, expiry), sign in, who am I, sign
+out, delete, other-site posts refused, Facebook and X redirects and a bad
+return. The same workflow runs them.
+
+The member-perks tests run in the same `npm test`:
+- `test/members-core.test.mjs`: merge (union, newer change wins, settings
+  last-write-wins), sanitize, 16 KB size, found-counter math against the
+  real data (69 details), rank thresholds and progress.
+- `test/sync.test.mjs`: `/api/sync` against Node's built-in SQLite with all
+  migrations: signed-out refused, other-site and non-JSON writes refused,
+  two devices merge, 16 KB cap (413), and "Delete my account" removes the
+  saved list with the account.
+
+`test/discuss.test.mjs` (ADR-015): the discussion helpers, `tools/menu.mjs`
+putting a box on every discussion page (and running twice changes nothing),
+and the `/api/discuss` handler on Node's SQLite: posting, replies, the fold,
+hide and block, deleting a post, boards, moderator actions, the rank count,
+other-site posts refused, unknown pages refused, and Delete my account
+removing posts and alerts. `test/keyboard.test.mjs` checks the post box.
+Browser check (2026-10-15, `npx wrangler pages dev public`): posts on a
+character page, Coming Soon and a board; desktop and 390px screenshots, no
+script errors.
+
+## Before every publish
+- Sign-in pop-up (2026-10-07): signed out, in a fresh window, stay 12 s on any
+  page (or 6 s on two pages): the pop-up shows Google, then Facebook (dimmed
+  with "Coming soon" and not clickable until its keys are in), never X. Tick 13+, sign in, it says "You're in". Close it and
+  reload: it stays away for 3 days. It never shows on /account, /me/,
+  privacy, during a quiz round, or while typing in the search box.
+1. Preview with `npx wrangler pages dev public --port 8788` (see RUNBOOK).
+2. Each feature loads and its list fills in: scenes (21), callbacks (40),
+   characters (20), rabbit holes (8), map (25 nodes, 51 links in the
+   sidebar statistics).
+3. The browser console shows no errors on those five pages.
+4. Dark mode (device or browser set to dark): headings, labels and body
+   text are readable on every feature page. Light mode looks unchanged.
+5. A made-up address returns the 404 page.
+6. Filters and search on scenes, callbacks and rabbit holes narrow the list
+   and the count updates.
+7. Phone width (about 375px): no sideways scrolling; the map sidebar is usable.
+
+8. Members (any static server is enough; the API isn't needed): on a movie
+   hub "Seen it?" and Save toggle; with "Hide spoilers" on, details of films
+   not marked Seen are blurred and a tap reveals one; Save on a scene,
+   callback, character, rabbit hole and article shows up on /me/; the star
+   on /characters/ and on a character page shows on /me/; opening 4
+   callbacks shows the "Promoted! Spider-Man" toast, the rank chip on the My
+   Marvel menu button and the home line "You've found 4 of 69". /me/ at
+   390px and 1440px, light and dark: no sideways scroll, text readable.
+9. Members with the API (after RUNBOOK "Sign-in keys" and "Member perks
+   sync"): /me/ shows the sign-in panel (13+ box, then the providers),
+   sign-in works, the list appears on a second device, Sign out and Delete
+   my account work.
+
+## After publishing
+Repeat checks 2 and 5 on https://mcueastereggs.com and https://marvel-details.pages.dev. Also check View Source has G-NESPZD6XSQ and /more/ loads.
+
+## Last results
+- 2026-10-06, member-perks branch (stacked on sign-in): `npm test` all
+  pass (sign-in and member tests); `node tools/check-links.mjs` no broken
+  links; check 8 passed in Chromium (Playwright) at 390x700 and 1440x900,
+  light and dark, no console errors, no sideways scroll. Check 9 not run
+  (needs real sign-in keys; Google's script can't load in the sandbox).
+- 2026-10-05, PR #1 branch, local preview: checks 2 to 5 pass. Map draws
+  25 nodes and 51 links. A contrast scan of scenes, callbacks, rabbit holes,
+  character and movie pages in dark and light mode flags only colored badges
+  on gradient backgrounds (fine) and the outline star on character cards.
+  Checks 6 and 7 not run yet.
+
+## Links (2026-10-06)
+- `node --test test/links.test.mjs`: no empty or "#" links, every site address
+  and #anchor exists, every page the data links to exists, every movie hub
+  detail has a source and the hub pages match `movie-hubs.json`.
+- `node tools/crawl-site.mjs` (needs Playwright + Chromium; run locally):
+  loads all pages, checks every link after scripts run, reports script errors
+  and "Read more →" text that isn't a link.

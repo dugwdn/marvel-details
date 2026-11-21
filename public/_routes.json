@@ -4,11 +4,9 @@
     "/*"
   ],
   "exclude": [
-    "/robots.txt",
-    "/ads.txt",
-    "/sitemap.xml",
-    "/*.html",
-    "/articles/*",
-    "/movies/*"
+    "/css/*",
+    "/js/*",
+    "/img/*",
+    "/data/*"
   ]
 }

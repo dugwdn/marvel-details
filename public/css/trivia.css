@@ -1,0 +1,107 @@
+/* Scene trivia (/trivia/) and fan theories (/theories/), ADR-018. Colors come from
+   theme.css tokens so light and dark both work. */
+.tv { display: grid; gap: 1.25rem; max-width: 900px; margin-inline: auto; }
+.tv h1 { margin: 0; }
+.tv h2 { margin: 1.5rem 0 .5rem; }
+.tv-lede { margin: 0; font-size: 1.15rem; color: var(--dym-muted); }
+
+/* Ask box */
+.tv-ask { display: grid; gap: .5rem; padding: 1rem; background: var(--dym-surface); border: 2px solid var(--dym-line); border-radius: 8px; }
+.tv-ask-label { font-family: var(--dym-head); font-size: 1.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; }
+.tv-ask-help { margin: 0; color: var(--dym-muted); }
+.tv-ask-row { display: flex; gap: .5rem; }
+.tv-ask-row input { flex: 1; min-width: 0; font: inherit; font-size: 1.1rem; padding: .7rem .8rem; border: 2px solid var(--dym-line); border-radius: 6px; background: var(--dym-bg); color: var(--dym-text); }
+.tv-ask-row input:focus { outline: 3px solid var(--dym-red); outline-offset: 1px; }
+.tv-ask-row button { flex: 0 0 auto; min-width: 5.5rem; }
+
+/* Filter chips (same height, wrap to equal rows) */
+.tv-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+html body .tv-chip { font: 600 .95rem var(--dym-body); text-transform: none; letter-spacing: 0; padding: .35rem .8rem; border-radius: 999px; border: 2px solid var(--dym-line); background: var(--dym-surface); color: var(--dym-text); box-shadow: none; }
+html body .tv-chip[aria-pressed="true"] { background: var(--dym-text); color: var(--dym-bg); border-color: var(--dym-text); }
+.tv-status { margin: 0; font-weight: 600; min-height: 1.5em; }
+
+/* Answers and fact lists */
+.tv-results, .tv-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.tv-answer, .tv-facts li { background: var(--dym-surface); border: 1px solid var(--dym-line); border-radius: 8px; padding: .8rem 1rem; line-height: 1.6; }
+.tv-answer p { margin: 0; }
+.tv-answer-meta { display: flex; flex-wrap: wrap; gap: .25rem 1rem; font-size: .875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--dym-muted); margin-bottom: .3rem !important; }
+.tv-answer mark { background: color-mix(in srgb, var(--dym-red) 22%, transparent); color: inherit; padding: 0 .1em; border-radius: 2px; }
+.tv-facts li:target { outline: 3px solid var(--dym-red); }
+.tv-more { justify-self: start; }
+
+/* Film and show list: equal cells, no orphans on wide screens */
+.tv-works { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); gap: .5rem; }
+.tv-works a { display: flex; align-items: center; min-height: 3rem; height: 100%; box-sizing: border-box; padding: .5rem .8rem; background: var(--dym-surface); border: 1px solid var(--dym-line); border-radius: 6px; font-weight: 600; text-decoration: none; }
+.tv-toc { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tv-toc a { padding: .3rem .7rem; border: 1px solid var(--dym-line); border-radius: 999px; text-decoration: none; background: var(--dym-surface); }
+.tv-credit { font-size: .875rem; color: var(--dym-muted); margin: 1rem 0 0; }
+.tv-ask-link { font-weight: 700; }
+
+/* Fan theories: stamps, cards and the evidence board */
+.th-stamp { display: inline-block; justify-self: start; font: 800 .875rem var(--dym-head); letter-spacing: .08em; text-transform: uppercase; border: 2px solid currentColor; padding: .05rem .5rem; border-radius: 3px; transform: rotate(-3deg); }
+.th-stamp.confirmed { color: #1d7a3e; } .th-stamp.debunked { color: var(--dym-link); } .th-stamp.open { color: #8a5d00; } .th-stamp.partly { color: #3f51b5; }
+@media (prefers-color-scheme: dark) { .th-stamp.confirmed { color: #5fd38a; } .th-stamp.open { color: #f0c14b; } .th-stamp.partly { color: #9fa8ff; } }
+.th-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: .8rem; }
+.th-card { display: grid; gap: .5rem; align-content: start; height: 100%; box-sizing: border-box; padding: 1rem; background: var(--dym-surface); border: 1px solid var(--dym-line); border-radius: 8px; }
+.th-card h3 { margin: 0; font-size: 1.25rem; }
+.th-card h3 a { text-decoration: none; }
+.th-card p { margin: 0; }
+.th-card .th-from { font-size: .875rem; color: var(--dym-muted); }
+.th-board { display: grid; gap: 1rem; padding: 1.1rem; border: 1px solid var(--dym-line); border-radius: 8px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--dym-text) 7%, transparent) 1px, transparent 1.5px) 0 0 / 14px 14px, var(--dym-surface-2); }
+.th-board h2 { margin: 0; }
+.th-clues { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .9rem; counter-reset: clue; }
+.th-clue { display: grid; gap: .3rem; align-content: start; padding: .8rem .9rem; background: var(--dym-surface); border: 1px solid var(--dym-line); border-top: 5px solid var(--dym-red); border-radius: 3px; box-shadow: 0 3px 0 var(--dym-line); }
+.th-clue:nth-child(even) { transform: rotate(.6deg); } .th-clue:nth-child(3n) { transform: rotate(-.5deg); }
+.th-clue::before { counter-increment: clue; content: 'Clue ' counter(clue); font: 800 1rem var(--dym-head); text-transform: uppercase; color: var(--dym-link); }
+.th-clue p { margin: 0; }
+.th-clue .th-where { font-size: .875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--dym-muted); }
+.th-sides { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: .8rem; }
+.th-sides > section { padding: .9rem 1rem; background: var(--dym-surface); border: 1px solid var(--dym-line); border-radius: 8px; }
+.th-sides h2 { margin: 0 0 .4rem; font-size: 1.2rem; }
+.th-sides ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.th-sources { font-size: .9rem; }
+.th-sources ul { padding-left: 1.2rem; }
+@media (prefers-reduced-motion: reduce) { .th-clue, .th-stamp { transform: none !important; } }
+
+/* Doug's rule: no underlined links. Buttons in the theme are black; the Ask button is the page's one red action. */
+.tv a { text-decoration: none; }
+html body .tv-ask-row button { background: var(--dym-red); color: #fff; border-color: var(--dym-red); font-size: 1.1rem; }
+html body .tv-ask-row button:hover { background: var(--dym-red-dark); }
+
+/* Theory page hooks (Doug picked layout A, 2026-10-15): hook, vote, Ask a friend, the open question and your trail. */
+.th-hook { display: grid; gap: .25rem; padding: .8rem 1rem; background: #ffd60a; color: #111; border: 3px solid #000; border-radius: 8px; box-shadow: 4px 4px 0 #000; }
+.th-hook b { font: 800 .95rem var(--dym-head); letter-spacing: .08em; text-transform: uppercase; }
+.th-hook p { margin: 0; font-size: 1.15rem; font-weight: 600; }
+.th-vote { display: grid; gap: .7rem; padding: 1rem; background: var(--dym-surface); border: 2px solid var(--dym-line); border-radius: 8px; }
+.th-vote h2 { margin: 0; }
+.th-vbtns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+html body .th-vbtns button { min-height: 3rem; padding: .5rem .3rem; font: 700 1.1rem var(--dym-head); text-transform: uppercase; letter-spacing: .04em; color: #fff; background: #217a35; border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 #000; }
+html body .th-vbtns button[data-v="unsure"] { background: #5d6b7a; }
+html body .th-vbtns button[data-v="no"] { background: #c62828; }
+html body .th-vbtns button[aria-pressed="true"] { outline: 4px solid #ffd60a; outline-offset: 2px; }
+.th-bars { display: grid; gap: .4rem; }
+.th-bar { display: grid; grid-template-columns: 6.5em minmax(0, 1fr) 3em; gap: .5rem; align-items: center; }
+.th-bar i { display: block; height: 12px; width: var(--w); min-width: 2px; border-radius: 6px; background: var(--dym-red); }
+.th-bar span:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.th-vnote { margin: 0; color: var(--dym-muted); font-size: .95rem; }
+html body .th-share { justify-self: start; font: 700 1rem var(--dym-head); text-transform: uppercase; background: var(--dym-surface); color: var(--dym-text); border: 2px solid var(--dym-line); border-radius: 6px; padding: .5rem 1rem; box-shadow: none; }
+.th-oq { display: grid; gap: .7rem; padding: 1.1rem; background: #000; color: #fff; border-radius: 8px; border-bottom: 5px solid var(--dym-red); }
+html body .th-oq h2 { margin: 0; color: #ffd60a; }
+.th-oq-q { margin: 0; font-size: 1.25rem; line-height: 1.45; }
+.th-oq-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+.th-oq-row a { display: inline-flex; align-items: center; min-height: 2.8rem; padding: .4rem 1rem; border-radius: 6px; font: 700 1.05rem var(--dym-head); text-transform: uppercase; letter-spacing: .03em; }
+html body .th-oq-row a.th-talk { background: #ffd60a; color: #111; }
+html body .th-oq-row a.th-next { background: var(--dym-red); color: #fff; }
+.th-trail { display: grid; gap: .3rem; }
+.th-trail b { font: 800 .95rem var(--dym-head); letter-spacing: .08em; text-transform: uppercase; color: #ffd60a; }
+.th-trail ol { margin: 0; padding-left: 1.4rem; display: grid; gap: .2rem; }
+html body .th-trail a { color: #ddd; }
+.th-trail li[aria-current] { font-weight: 700; }
+.tv-fans { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding: .8rem 1rem; background: var(--dym-surface); border: 2px dashed var(--dym-line); border-radius: 8px; }
+html body .tv-fans a { display: inline-flex; align-items: center; min-height: 2.8rem; padding: .3rem 1rem; background: #ffd60a; color: #111; border: 3px solid #000; border-radius: 6px; box-shadow: 3px 3px 0 #000; font: 700 1.05rem var(--dym-head); text-transform: uppercase; }
+/* Fan-spotted details: the scene on its own line, who reported it last. */
+.tv-scene { display: block; font-weight: 700; font-size: .875rem; text-transform: uppercase; letter-spacing: .04em; color: var(--dym-red); margin-bottom: .2rem; }
+.tv-src { display: block; font-size: .875rem; color: var(--dym-muted); margin-top: .3rem; }
+.tv-src a { color: inherit; font-weight: 600; text-decoration: none; }
+.tv-fans[hidden], .th-bars[hidden], .th-trail[hidden], [data-share-out][hidden], .tv-chips[hidden] { display: none; }

@@ -8,16 +8,15 @@
       "role": "hero",
       "actor": "Robert Downey Jr.",
       "arcThesis": "From self-centered industrialist to selfless savior willing to sacrifice everything for others",
-      "arcStages": ["Reckless Egoist", "Reluctant Protector", "Determined Avenger", "Selfless Martyr"],
-      "arcLength": 11,
-      "appearances": 10,
-      "killCount": 12,
-      "timesMindsControlled": 0,
-      "armorVariations": 7,
-      "loveInterests": ["Pepper Potts"],
-      "nearDeathExperiences": 4,
-      "timesSavedUniverse": 2,
-      "betrayalsByAllies": 0,
+      "arcStages": [
+        "Reckless Egoist",
+        "Reluctant Protector",
+        "Determined Avenger",
+        "Selfless Martyr"
+      ],
+      "loveInterests": [
+        "Pepper Potts"
+      ],
       "milestones": [
         {
           "id": "m1",
@@ -129,7 +128,17 @@
           "tagline": "The billionaire who learned to care",
           "description": "Tony stands shoulder to shoulder with Earth's mightiest heroes, no longer the lone wolf but a vital part of the collective defense of Earth."
         }
-      ]
+      ],
+      "siteFilms": [
+        "Iron Man (2008)",
+        "Iron Man 2 (2010)",
+        "The Avengers (2012)",
+        "Iron Man 3 (2013)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Iron Man",
+      "firstYear": 2008,
+      "firstNote": ""
     },
     {
       "id": "steve-rogers",
@@ -139,16 +148,16 @@
       "role": "hero",
       "actor": "Chris Evans",
       "arcThesis": "From frozen relic to modern leader who must balance old ideals with new realities",
-      "arcStages": ["Fish Out of Water", "Reluctant Leader", "Moral Compass", "Protector of Earth"],
-      "arcLength": 11,
-      "appearances": 8,
-      "killCount": 8,
-      "timesMindsControlled": 0,
-      "armorVariations": 0,
-      "loveInterests": ["Peggy Carter", "Sharon Carter"],
-      "nearDeathExperiences": 3,
-      "timesSavedUniverse": 2,
-      "betrayalsByAllies": 1,
+      "arcStages": [
+        "Fish Out of Water",
+        "Reluctant Leader",
+        "Moral Compass",
+        "Protector of Earth"
+      ],
+      "loveInterests": [
+        "Peggy Carter",
+        "Sharon Carter"
+      ],
       "milestones": [
         {
           "id": "m1",
@@ -260,7 +269,14 @@
           "tagline": "A man from another era finds his place",
           "description": "Steve accepts his new role as an Avenger. Though displaced in time, he has found a family and a purpose that transcends any era."
         }
-      ]
+      ],
+      "siteFilms": [
+        "The Avengers (2012)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Captain America: The First Avenger",
+      "firstYear": 2011,
+      "firstNote": ""
     },
     {
       "id": "thor",
@@ -270,16 +286,15 @@
       "role": "hero",
       "actor": "Chris Hemsworth",
       "arcThesis": "From arrogant warrior prince to humble defender willing to sacrifice his throne for love and duty",
-      "arcStages": ["Arrogant Prince", "Exile", "Humbled", "Worthy Defender"],
-      "arcLength": 2,
-      "appearances": 3,
-      "killCount": 15,
-      "timesMindsControlled": 0,
-      "armorVariations": 1,
-      "loveInterests": ["Jane Foster"],
-      "nearDeathExperiences": 2,
-      "timesSavedUniverse": 1,
-      "betrayalsByAllies": 1,
+      "arcStages": [
+        "Arrogant Prince",
+        "Exile",
+        "Humbled",
+        "Worthy Defender"
+      ],
+      "loveInterests": [
+        "Jane Foster"
+      ],
       "milestones": [
         {
           "id": "m1",
@@ -391,26 +406,30 @@
           "tagline": "A warrior with a cause beyond himself",
           "description": "Thor joins the Avengers, using his power not for glory but to protect the realm he's come to love. He's found a family beyond Asgard."
         }
-      ]
+      ],
+      "siteFilms": [
+        "The Avengers (2012)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Thor",
+      "firstYear": 2011,
+      "firstNote": ""
     },
     {
       "id": "loki",
       "slug": "loki",
       "fullName": "Loki Laufeyson",
-      "heroName": "The God of Mischief",
+      "heroName": "Loki",
       "role": "villain",
       "actor": "Tom Hiddleston",
       "arcThesis": "From resentful outcast seeking approval to ambitious villain tasting power and responsibility",
-      "arcStages": ["Resentful Outsider", "Ambitious Schemer", "Betrayed Avenger", "Power-Hungry Villain"],
-      "arcLength": 2,
-      "appearances": 3,
-      "killCount": 80,
-      "timesMindsControlled": 0,
-      "armorVariations": 3,
+      "arcStages": [
+        "Resentful Outsider",
+        "Ambitious Schemer",
+        "Betrayed Avenger",
+        "Power-Hungry Villain"
+      ],
       "loveInterests": [],
-      "nearDeathExperiences": 1,
-      "timesSavedUniverse": 0,
-      "betrayalsByAllies": 1,
       "milestones": [
         {
           "id": "m1",
@@ -522,7 +541,14 @@
           "tagline": "Ambition ends in chains",
           "description": "Loki's invasion fails. The Avengers defeat him, and he's returned to Asgard in chains, his bid for conquest ended before it truly began."
         }
-      ]
+      ],
+      "siteFilms": [
+        "The Avengers (2012)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Thor",
+      "firstYear": 2011,
+      "firstNote": ""
     },
     {
       "id": "black-widow",
@@ -532,16 +558,15 @@
       "role": "hero",
       "actor": "Scarlett Johansson",
       "arcThesis": "From lethal assassin seeking redemption to trusted hero proving her worth beyond her training",
-      "arcStages": ["Instrument of Death", "Redeemed Agent", "Trusted Ally", "Living Testament"],
-      "arcLength": 8,
-      "appearances": 5,
-      "killCount": 25,
-      "timesMindsControlled": 0,
-      "armorVariations": 2,
-      "loveInterests": ["Bruce Banner"],
-      "nearDeathExperiences": 3,
-      "timesSavedUniverse": 1,
-      "betrayalsByAllies": 0,
+      "arcStages": [
+        "Instrument of Death",
+        "Redeemed Agent",
+        "Trusted Ally",
+        "Living Testament"
+      ],
+      "loveInterests": [
+        "Bruce Banner"
+      ],
       "milestones": [
         {
           "id": "m1",
@@ -566,17 +591,6 @@
           "description": "When the moment arrives, Black Widow effortlessly subdues Happy Hogan, demonstrating that her role is far more than secretarial. She's a lethal operative."
         },
         {
-          "id": "m3",
-          "movie": "Iron Man 2",
-          "year": 2010,
-          "phase": 1,
-          "emotionalState": "Assured, controlled",
-          "keyMoment": "Works with Barton to contain Iron Man threats",
-          "arcStage": "Partnership",
-          "tagline": "Two assassins make a perfect team",
-          "description": "Black Widow and Hawkeye work seamlessly together, suggesting a long history of collaboration. Their synchronization hints at a shared past and mutual trust."
-        },
-        {
           "id": "m4",
           "movie": "Iron Man 2",
           "year": 2010,
@@ -593,10 +607,10 @@
           "year": 2012,
           "phase": 1,
           "emotionalState": "Tense, conflicted",
-          "keyMoment": "Interrogates Loki; realizes he's been under mind control",
+          "keyMoment": "Interrogates Loki and tricks him into revealing his plan",
           "arcStage": "Vulnerability",
           "tagline": "Her past catches up with her",
-          "description": "Loki reveals he knows Natasha's past as an assassin, her many kills, her scarlet ledger. For the first time, she confronts how fully she's been a weapon."
+          "description": "Natasha lets Loki taunt her about the 'red in her ledger', then turns it around: his gloating gives away that he means to unleash the Hulk on the Helicarrier."
         },
         {
           "id": "m6",
@@ -626,12 +640,20 @@
           "year": 2012,
           "phase": 1,
           "emotionalState": "Protective, connected",
-          "keyMoment": "Works with Bruce Banner to close the portal",
+          "keyMoment": "Closes the portal with the scepter",
           "arcStage": "Connection",
           "tagline": "A hint of something beyond duty",
-          "description": "Black Widow and Bruce Banner's interaction suggests a growing bond. Even amid chaos, there's a moment of personal connection and mutual respect."
+          "description": "On the roof of Stark Tower, Natasha uses Loki's scepter to shut down the Tesseract device and close the portal once Tony is through."
         }
-      ]
+      ],
+      "siteFilms": [
+        "Iron Man 2 (2010)",
+        "The Avengers (2012)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Iron Man 2",
+      "firstYear": 2010,
+      "firstNote": ""
     },
     {
       "id": "hawkeye",
@@ -641,38 +663,24 @@
       "role": "hero",
       "actor": "Jeremy Renner",
       "arcThesis": "From loyal soldier following orders to independent hero making his own moral choices",
-      "arcStages": ["Obedient Operative", "Controlled Asset", "Freed Agent", "Trusted Hero"],
-      "arcLength": 3,
-      "appearances": 3,
-      "killCount": 30,
-      "timesMindsControlled": 1,
-      "armorVariations": 2,
+      "arcStages": [
+        "Obedient Operative",
+        "Controlled Asset",
+        "Freed Agent",
+        "Trusted Hero"
+      ],
       "loveInterests": [],
-      "nearDeathExperiences": 2,
-      "timesSavedUniverse": 1,
-      "betrayalsByAllies": 0,
       "milestones": [
         {
           "id": "m1",
-          "movie": "Iron Man 2",
-          "year": 2010,
+          "movie": "Thor",
+          "year": 2011,
           "phase": 1,
           "emotionalState": "Loyal, restrained",
-          "keyMoment": "Watches Stark from a distance per Fury's orders",
+          "keyMoment": "Watches Thor from a S.H.I.E.L.D. perch with his bow drawn",
           "arcStage": "Observation",
-          "tagline": "A weapon awaiting its target",
-          "description": "Hawkeye is positioned as a S.H.I.E.L.D. sniper to monitor Tony Stark. He follows every order precisely, his considerable skill entirely at Fury's command."
-        },
-        {
-          "id": "m2",
-          "movie": "Iron Man 2",
-          "year": 2010,
-          "phase": 1,
-          "emotionalState": "Professional, focused",
-          "keyMoment": "Teams with Black Widow on field operations",
-          "arcStage": "Partnership",
-          "tagline": "Two precision operators in sync",
-          "description": "Hawkeye and Black Widow work together seamlessly, demonstrating years of collaboration and trust. He's not just a sniper—he's a full operative."
+          "tagline": "A cameo with orders to shoot",
+          "description": "In Thor, S.H.I.E.L.D. agent Clint Barton watches Thor fight his way to Mjolnir from a high perch, bow drawn, waiting on Coulson's order to take the shot. It is his first MCU appearance."
         },
         {
           "id": "m3",
@@ -729,7 +737,14 @@
           "tagline": "From Fury's tool to Earth's defender",
           "description": "Hawkeye joins the Avengers not as a soldier awaiting orders, but as an equal hero. He's transitioned from an asset to an actual team member."
         }
-      ]
+      ],
+      "siteFilms": [
+        "The Avengers (2012)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Thor",
+      "firstYear": 2011,
+      "firstNote": "a short cameo"
     },
     {
       "id": "bruce-banner",
@@ -739,16 +754,15 @@
       "role": "hero",
       "actor": "Mark Ruffalo",
       "arcThesis": "From scientist afraid of his own power to hero learning to work with it toward noble ends",
-      "arcStages": ["Hunted Scientist", "Monster Fearing", "Reluctant Partner", "Controlled Contributor"],
-      "arcLength": 8,
-      "appearances": 4,
-      "killCount": 8,
-      "timesMindsControlled": 0,
-      "armorVariations": 0,
-      "loveInterests": ["Betty Ross"],
-      "nearDeathExperiences": 3,
-      "timesSavedUniverse": 1,
-      "betrayalsByAllies": 0,
+      "arcStages": [
+        "Hunted Scientist",
+        "Monster Fearing",
+        "Reluctant Partner",
+        "Controlled Contributor"
+      ],
+      "loveInterests": [
+        "Betty Ross"
+      ],
       "milestones": [
         {
           "id": "m1",
@@ -822,10 +836,10 @@
           "year": 2012,
           "phase": 1,
           "emotionalState": "Conflicted, testing",
-          "keyMoment": "Loki attacks him; transforms in rage and fear",
+          "keyMoment": "Loki's attack on the Helicarrier triggers the Hulk",
           "arcStage": "Breaking Point",
           "tagline": "The dam finally breaks",
-          "description": "Loki personally attacks Bruce, taunting him about the Hulk. Bruce's carefully maintained control shatters, and the Hulk emerges more powerful and reckless than ever before."
+          "description": "When Loki's forces attack the Helicarrier, an explosion throws Bruce and Natasha below deck and the Hulk breaks loose, just as Loki planned."
         },
         {
           "id": "m8",
@@ -849,26 +863,31 @@
           "tagline": "A monster becomes a hero",
           "description": "Bruce joins the Avengers not despite his curse, but as part of it. He's finally made peace with the Hulk, understanding that both sides have value."
         }
-      ]
+      ],
+      "siteFilms": [
+        "The Avengers (2012)",
+        "Iron Man 3 (2013)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "The Incredible Hulk",
+      "firstYear": 2008,
+      "firstNote": "played by Edward Norton; Mark Ruffalo took over in The Avengers"
     },
     {
       "id": "nick-fury",
       "slug": "nick-fury",
       "fullName": "Nicholas Joseph Fury",
-      "heroName": "Director Fury",
+      "heroName": "Nick Fury",
       "role": "supporting",
       "actor": "Samuel L. Jackson",
       "arcThesis": "From shadowy spymaster to visionary leader building Earth's mightiest defense",
-      "arcStages": ["Master Strategist", "Keeper of Secrets", "Visionary Leader", "Assembler"],
-      "arcLength": 6,
-      "appearances": 5,
-      "killCount": 6,
-      "timesMindsControlled": 0,
-      "armorVariations": 0,
+      "arcStages": [
+        "Master Strategist",
+        "Keeper of Secrets",
+        "Visionary Leader",
+        "Assembler"
+      ],
       "loveInterests": [],
-      "nearDeathExperiences": 0,
-      "timesSavedUniverse": 0,
-      "betrayalsByAllies": 1,
       "milestones": [
         {
           "id": "m1",
@@ -936,26 +955,34 @@
           "tagline": "His vision proven right",
           "description": "As the Avengers defeat Loki and his alien army, Fury's vision is proven correct. Earth has a defense force worthy of the threats it faces."
         }
-      ]
+      ],
+      "siteFilms": [
+        "Iron Man (2008)",
+        "Iron Man 2 (2010)",
+        "The Avengers (2012)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Iron Man",
+      "firstYear": 2008,
+      "firstNote": "after-credits scene"
     },
     {
       "id": "pepper-potts",
       "slug": "pepper-potts",
       "fullName": "Virginia Potts",
-      "heroName": "Rescue",
+      "heroName": "Pepper Potts",
       "role": "supporting",
       "actor": "Gwyneth Paltrow",
       "arcThesis": "From assistant to CEO to the human heart that keeps Iron Man grounded",
-      "arcStages": ["Executive Assistant", "Business Leader", "Moral Guide", "True Partner"],
-      "arcLength": 4,
-      "appearances": 4,
-      "killCount": 0,
-      "timesMindsControlled": 0,
-      "armorVariations": 0,
-      "loveInterests": ["Tony Stark"],
-      "nearDeathExperiences": 2,
-      "timesSavedUniverse": 1,
-      "betrayalsByAllies": 0,
+      "arcStages": [
+        "Executive Assistant",
+        "Business Leader",
+        "Moral Guide",
+        "True Partner"
+      ],
+      "loveInterests": [
+        "Tony Stark"
+      ],
       "milestones": [
         {
           "id": "m1",
@@ -996,31 +1023,38 @@
           "year": 2012,
           "phase": 1,
           "emotionalState": "Supportive, trusting",
-          "keyMoment": "Watches Tony prepare to sacrifice himself",
+          "keyMoment": "Misses Tony's call as he flies the nuke into the portal",
           "arcStage": "Faith",
           "tagline": "She believes in his heroism",
-          "description": "As Tony prepares to fly a nuke through a portal, Pepper watches and waits. She trusts him completely, even as she fears for his life. She's his anchor to humanity."
+          "description": "While Tony carries the nuclear missile toward the portal, he tries to call Pepper. She is watching the news and does not hear her phone in time."
         }
-      ]
+      ],
+      "siteFilms": [
+        "Iron Man (2008)",
+        "Iron Man 2 (2010)",
+        "The Avengers (2012)",
+        "Iron Man 3 (2013)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Iron Man",
+      "firstYear": 2008,
+      "firstNote": ""
     },
     {
       "id": "happy-hogan",
       "slug": "happy-hogan",
       "fullName": "Harold Joseph Hogan",
-      "heroName": "Happy",
+      "heroName": "Happy Hogan",
       "role": "supporting",
       "actor": "Jon Favreau",
       "arcThesis": "From boxer-turned-bodyguard to loyal friend and unexpected hero",
-      "arcStages": ["Loyal Bodyguard", "Protective Friend", "Tested Ally", "Dedicated Protector"],
-      "arcLength": 4,
-      "appearances": 4,
-      "killCount": 2,
-      "timesMindsControlled": 0,
-      "armorVariations": 0,
+      "arcStages": [
+        "Loyal Bodyguard",
+        "Protective Friend",
+        "Tested Ally",
+        "Dedicated Protector"
+      ],
       "loveInterests": [],
-      "nearDeathExperiences": 2,
-      "timesSavedUniverse": 0,
-      "betrayalsByAllies": 0,
       "milestones": [
         {
           "id": "m1",
@@ -1039,34 +1073,681 @@
           "year": 2010,
           "phase": 1,
           "emotionalState": "Loyal, dutiful",
-          "keyMoment": "Works alongside Black Widow; protective of Pepper",
+          "keyMoment": "Drives Natasha and Pepper to the Stark Expo",
           "arcStage": "Evolution",
           "tagline": "More than just a bodyguard",
-          "description": "Happy expands his role, working with S.H.I.E.L.D. while protecting Pepper Potts. He shows he's more than muscle—he's a trusted member of Tony's inner circle."
+          "description": "Happy drives Natasha and Pepper to Hammer Industries, then struggles with a single guard while Natasha takes down the rest of the hallway in seconds."
+        }
+      ],
+      "siteFilms": [
+        "Iron Man (2008)",
+        "Iron Man 2 (2010)",
+        "Iron Man 3 (2013)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Iron Man",
+      "firstYear": 2008,
+      "firstNote": ""
+    },
+    {
+      "id": "thanos",
+      "slug": "thanos",
+      "fullName": "Thanos",
+      "heroName": "Thanos",
+      "role": "villain",
+      "actor": "Josh Brolin",
+      "arcThesis": "A warlord convinced that wiping out half of all life is mercy, who gets exactly what he wanted and then loses it",
+      "arcStages": [
+        "Hidden Mastermind",
+        "Collector of Stones",
+        "Victor",
+        "Undone"
+      ],
+      "loveInterests": [],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "The Avengers",
+          "year": 2012,
+          "phase": 1,
+          "emotionalState": "Amused, patient",
+          "keyMoment": "Revealed as the power behind the Chitauri invasion",
+          "arcStage": "Introduction",
+          "tagline": "The smile after the credits",
+          "description": "In the mid-credits scene, Thanos's servant tells him that attacking Earth means 'to court death'. Thanos turns and smiles."
+        },
+        {
+          "id": "m2",
+          "movie": "Avengers: Infinity War",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Grieving, resolved",
+          "keyMoment": "Sacrifices Gamora on Vormir for the Soul Stone",
+          "arcStage": "Point of No Return",
+          "tagline": "Everything for the plan",
+          "description": "Thanos throws his adopted daughter Gamora from the cliff on Vormir, because the Soul Stone demands the loss of someone he loves."
         },
         {
           "id": "m3",
-          "movie": "Iron Man 2",
-          "year": 2010,
-          "phase": 1,
-          "emotionalState": "Defeated, resilient",
-          "keyMoment": "Defeated by Black Widow; keeps fighting anyway",
-          "arcStage": "Humility",
-          "tagline": "He's outmatched but doesn't quit",
-          "description": "Black Widow easily subdues Happy in combat, showing him he's outgunned by trained operatives. But he doesn't give up—he keeps trying to protect his charges."
+          "movie": "Avengers: Infinity War",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Weary, satisfied",
+          "keyMoment": "Snaps his fingers and erases half of all life",
+          "arcStage": "Victory",
+          "tagline": "The snap",
+          "description": "Wearing the completed gauntlet, Thanos snaps. Half of all living things turn to dust, and he retires to a farm to watch 'the sunrise on a grateful universe'."
         },
         {
           "id": "m4",
-          "movie": "Marvel's The Avengers",
-          "year": 2012,
-          "phase": 1,
-          "emotionalState": "Vigilant, protective",
-          "keyMoment": "Guards Pepper and Tony; waits through final battle",
-          "arcStage": "Steadfast",
-          "tagline": "A friend through anything",
-          "description": "During the Avengers' battle in New York, Happy remains at Pepper's side, ready to protect her. He's not a superhero, but his loyalty is absolute and his bravery undeniable."
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Defiant, then defeated",
+          "keyMoment": "Turned to dust by Tony Stark's snap",
+          "arcStage": "Undone",
+          "tagline": "I am inevitable",
+          "description": "An earlier Thanos follows the Avengers to 2023. He snaps, but nothing happens: Tony has taken the stones. Tony snaps instead, and Thanos and his army turn to dust."
         }
-      ]
+      ],
+      "siteFilms": [
+        "The Avengers (2012)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "The Avengers",
+      "firstYear": 2012,
+      "firstNote": "mid-credits scene, played by Damion Poitier; Josh Brolin from Guardians of the Galaxy (2014)"
+    },
+    {
+      "id": "spider-man",
+      "slug": "spider-man",
+      "fullName": "Peter Parker",
+      "heroName": "Spider-Man",
+      "role": "hero",
+      "actor": "Tom Holland",
+      "arcThesis": "A kid from Queens who wants to be an Avenger, then learns what it costs",
+      "arcStages": [
+        "Eager Recruit",
+        "Student",
+        "Fallen",
+        "Returned"
+      ],
+      "loveInterests": [
+        "Michelle Jones"
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Captain America: Civil War",
+          "year": 2016,
+          "phase": 3,
+          "emotionalState": "Thrilled, out of his depth",
+          "keyMoment": "Recruited by Tony Stark for the airport fight",
+          "arcStage": "Call to Adventure",
+          "tagline": "A new suit from Mr. Stark",
+          "description": "Tony visits Peter in Queens, gives him an upgraded suit and brings him to Germany to fight on his side at the airport."
+        },
+        {
+          "id": "m2",
+          "movie": "Spider-Man: Homecoming",
+          "year": 2017,
+          "phase": 3,
+          "emotionalState": "Ashamed, determined",
+          "keyMoment": "Lifts the collapsed building off himself without the Stark suit",
+          "arcStage": "Growth",
+          "tagline": "Nothing without the suit?",
+          "description": "Tony took the suit back after the ferry disaster. Trapped under rubble in his homemade suit, Peter lifts the building and goes on to stop the Vulture."
+        },
+        {
+          "id": "m3",
+          "movie": "Avengers: Infinity War",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Frightened",
+          "keyMoment": "Turns to dust in Tony's arms on Titan",
+          "arcStage": "Loss",
+          "tagline": "I don't want to go",
+          "description": "After Thanos snaps, Peter tells Tony he doesn't feel so good, holds on to him and fades away."
+        },
+        {
+          "id": "m4",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Overjoyed, then grieving",
+          "keyMoment": "Returns through a portal and is with Tony when he dies",
+          "arcStage": "Return",
+          "tagline": "We won, Mr. Stark",
+          "description": "Back from the snap, Peter hugs Tony in the middle of the battle. After Tony's snap he kneels beside him and says 'We won, Mr. Stark.'"
+        }
+      ],
+      "siteFilms": [
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Captain America: Civil War",
+      "firstYear": 2016,
+      "firstNote": ""
+    },
+    {
+      "id": "war-machine",
+      "slug": "war-machine",
+      "fullName": "James Rupert Rhodes",
+      "heroName": "War Machine",
+      "role": "hero",
+      "actor": "Don Cheadle",
+      "arcThesis": "Tony's best friend and the military's man in the suit, always a step from the spotlight",
+      "arcStages": [
+        "Loyal Friend",
+        "Soldier in Armor",
+        "Avenger",
+        "Survivor"
+      ],
+      "loveInterests": [],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Iron Man",
+          "year": 2008,
+          "phase": 1,
+          "emotionalState": "Tempted",
+          "keyMoment": "Eyes the silver armor: \"Next time, baby\"",
+          "arcStage": "Seed",
+          "tagline": "Next time, baby",
+          "description": "In Tony's workshop, Rhodey (played then by Terrence Howard) looks at a spare armor and says 'Next time, baby.'"
+        },
+        {
+          "id": "m2",
+          "movie": "Iron Man 2",
+          "year": 2010,
+          "phase": 1,
+          "emotionalState": "Angry, protective",
+          "keyMoment": "Takes the Mark II armor after Tony's birthday party",
+          "arcStage": "Transformation",
+          "tagline": "Becoming War Machine",
+          "description": "After a drunk Tony endangers his party guests, Rhodey suits up in the Mark II, fights him and flies the armor to the Air Force, where it becomes War Machine."
+        },
+        {
+          "id": "m3",
+          "movie": "Iron Man 3",
+          "year": 2013,
+          "phase": 2,
+          "emotionalState": "Professional",
+          "keyMoment": "Rebranded as the Iron Patriot",
+          "arcStage": "Public Face",
+          "tagline": "Red, white and blue",
+          "description": "The government repaints the War Machine armor as the Iron Patriot, and Rhodey hunts for the Mandarin under that name."
+        },
+        {
+          "id": "m4",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Steady, hopeful",
+          "keyMoment": "Travels to 2014 Morag with Nebula for the Power Stone",
+          "arcStage": "Heist",
+          "tagline": "A ride to Morag",
+          "description": "In the time heist, Rhodey and Nebula go to Morag in 2014. They take the Power Stone before Peter Quill can."
+        }
+      ],
+      "siteFilms": [
+        "Iron Man (2008)",
+        "Iron Man 2 (2010)",
+        "Iron Man 3 (2013)",
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Iron Man",
+      "firstYear": 2008,
+      "firstNote": "played by Terrence Howard; Don Cheadle from Iron Man 2"
+    },
+    {
+      "id": "captain-marvel",
+      "slug": "captain-marvel",
+      "fullName": "Carol Danvers",
+      "heroName": "Captain Marvel",
+      "role": "hero",
+      "actor": "Brie Larson",
+      "arcThesis": "A pilot who learns her power was always her own, then carries it into the fight for half the universe",
+      "arcStages": [
+        "Kree Soldier",
+        "Remembering",
+        "Unleashed",
+        "Cosmic Defender"
+      ],
+      "loveInterests": [],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Captain Marvel",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Free",
+          "keyMoment": "Breaks the Supreme Intelligence's hold and unlocks her full power",
+          "arcStage": "Awakening",
+          "tagline": "I have nothing to prove",
+          "description": "Carol remembers she is a human Air Force pilot, pulls out the Kree implant and fights at full strength for the first time."
+        },
+        {
+          "id": "m2",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Calm, decisive",
+          "keyMoment": "Rescues Tony and Nebula from deep space",
+          "arcStage": "Rescue",
+          "tagline": "A light in the dark",
+          "description": "Tony and Nebula are adrift on the Benatar with no air left. Carol finds the ship and carries it home to Earth."
+        },
+        {
+          "id": "m3",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Fierce",
+          "keyMoment": "Destroys Thanos's warship and carries the gauntlet",
+          "arcStage": "Final Battle",
+          "tagline": "Here comes the cavalry",
+          "description": "Carol arrives in the final battle, flies straight through Thanos's warship and takes over carrying the gauntlet."
+        }
+      ],
+      "siteFilms": [
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Captain Marvel",
+      "firstYear": 2019,
+      "firstNote": ""
+    },
+    {
+      "id": "doctor-strange",
+      "slug": "doctor-strange",
+      "fullName": "Stephen Strange",
+      "heroName": "Doctor Strange",
+      "role": "hero",
+      "actor": "Benedict Cumberbatch",
+      "arcThesis": "An arrogant surgeon who learns to bet everything on the one future that works",
+      "arcStages": [
+        "Broken Surgeon",
+        "Student",
+        "Sorcerer Supreme",
+        "Strategist"
+      ],
+      "loveInterests": [
+        "Christine Palmer"
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Doctor Strange",
+          "year": 2016,
+          "phase": 3,
+          "emotionalState": "Desperate",
+          "keyMoment": "A car crash wrecks his hands",
+          "arcStage": "Fall",
+          "tagline": "The end of a career",
+          "description": "Speeding while on the phone, Stephen crashes his car. Nerve damage ends his career as a surgeon and sends him to Kamar-Taj looking for a cure."
+        },
+        {
+          "id": "m2",
+          "movie": "Doctor Strange",
+          "year": 2016,
+          "phase": 3,
+          "emotionalState": "Stubborn, selfless",
+          "keyMoment": "Traps Dormammu in a time loop until he bargains",
+          "arcStage": "Mastery",
+          "tagline": "Dormammu, I've come to bargain",
+          "description": "Strange uses the Time Stone to lock Dormammu in a loop, dying again and again until Dormammu agrees to leave Earth."
+        },
+        {
+          "id": "m3",
+          "movie": "Avengers: Infinity War",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Grim, certain",
+          "keyMoment": "Sees 14,000,605 futures and finds one win",
+          "arcStage": "Foresight",
+          "tagline": "One in fourteen million",
+          "description": "On Titan, Strange looks at 14,000,605 possible futures. The Avengers win in one. He later hands Thanos the Time Stone to spare Tony's life."
+        },
+        {
+          "id": "m4",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Resolute",
+          "keyMoment": "Holds up one finger to Tony in the final battle",
+          "arcStage": "Sign",
+          "tagline": "This is the one",
+          "description": "Back from the snap, Strange opens the portals that bring the armies in. At the key moment he shows Tony one finger: this is the future that works."
+        }
+      ],
+      "siteFilms": [
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Doctor Strange",
+      "firstYear": 2016,
+      "firstNote": ""
+    },
+    {
+      "id": "black-panther",
+      "slug": "black-panther",
+      "fullName": "T'Challa",
+      "heroName": "Black Panther",
+      "role": "hero",
+      "actor": "Chadwick Boseman",
+      "arcThesis": "A king who turns from revenge and opens a hidden nation to the world",
+      "arcStages": [
+        "Grieving Son",
+        "Avenger of His Father",
+        "King",
+        "Ally"
+      ],
+      "loveInterests": [
+        "Nakia"
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Captain America: Civil War",
+          "year": 2016,
+          "phase": 3,
+          "emotionalState": "Furious, grieving",
+          "keyMoment": "His father T'Chaka is killed in the Vienna bombing",
+          "arcStage": "Catalyst",
+          "tagline": "Revenge",
+          "description": "A bomb at the Accords signing in Vienna kills King T'Chaka. T'Challa hunts Bucky, the man framed for it, then spares the real bomber, Zemo."
+        },
+        {
+          "id": "m2",
+          "movie": "Black Panther",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Humbled, then resolved",
+          "keyMoment": "Defeats Killmonger and opens Wakanda to the world",
+          "arcStage": "Kingship",
+          "tagline": "Wakanda shares its knowledge",
+          "description": "After nearly losing his throne to Killmonger, T'Challa wins it back and announces at the United Nations that Wakanda will share its resources."
+        },
+        {
+          "id": "m3",
+          "movie": "Avengers: Infinity War",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Commanding",
+          "keyMoment": "Leads the battle for Wakanda against Thanos's army",
+          "arcStage": "War",
+          "tagline": "Wakanda forever",
+          "description": "T'Challa leads Wakanda's army and the Avengers against Thanos's forces to protect Vision. He turns to dust after the snap."
+        },
+        {
+          "id": "m4",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Determined",
+          "keyMoment": "Returns through a portal with Wakanda's army",
+          "arcStage": "Return",
+          "tagline": "The armies arrive",
+          "description": "T'Challa steps out of one of Strange's portals at the head of Wakanda's army and later carries the gauntlet through the battle."
+        }
+      ],
+      "siteFilms": [
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Captain America: Civil War",
+      "firstYear": 2016,
+      "firstNote": ""
+    },
+    {
+      "id": "scarlet-witch",
+      "slug": "scarlet-witch",
+      "fullName": "Wanda Maximoff",
+      "heroName": "Scarlet Witch",
+      "role": "hero",
+      "actor": "Elizabeth Olsen",
+      "arcThesis": "A girl made into a weapon whose power grows with every loss",
+      "arcStages": [
+        "Experiment",
+        "Enemy",
+        "Avenger",
+        "Grieving"
+      ],
+      "loveInterests": [
+        "Vision"
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Captain America: The Winter Soldier",
+          "year": 2014,
+          "phase": 2,
+          "emotionalState": "Unknown",
+          "keyMoment": "Shown as one of Hydra's experiments",
+          "arcStage": "Origin",
+          "tagline": "The twins",
+          "description": "In the mid-credits scene, Baron Strucker shows off his 'miracles': Wanda and her brother Pietro, held in Hydra cells."
+        },
+        {
+          "id": "m2",
+          "movie": "Avengers: Age of Ultron",
+          "year": 2015,
+          "phase": 2,
+          "emotionalState": "Shattered",
+          "keyMoment": "Her twin Pietro dies in Sokovia",
+          "arcStage": "Loss",
+          "tagline": "A scream across a city",
+          "description": "Pietro is killed shielding Clint. Wanda feels it, leaves her post and tears Ultron's main body apart."
+        },
+        {
+          "id": "m3",
+          "movie": "Avengers: Infinity War",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Heartbroken",
+          "keyMoment": "Destroys the Mind Stone, killing Vision; Thanos reverses it",
+          "arcStage": "Sacrifice",
+          "tagline": "It was for nothing",
+          "description": "Wanda destroys the Mind Stone in Vision's head. Thanos uses the Time Stone to undo it and takes the stone, killing Vision again."
+        },
+        {
+          "id": "m4",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Enraged",
+          "keyMoment": "Overpowers Thanos in the final battle",
+          "arcStage": "Wrath",
+          "tagline": "You took everything from me",
+          "description": "Wanda tears Thanos's armor apart. He has to order his ship to fire on his own army to get free of her."
+        }
+      ],
+      "siteFilms": [
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Captain America: The Winter Soldier",
+      "firstYear": 2014,
+      "firstNote": "mid-credits scene"
+    },
+    {
+      "id": "ant-man",
+      "slug": "ant-man",
+      "fullName": "Scott Lang",
+      "heroName": "Ant-Man",
+      "role": "hero",
+      "actor": "Paul Rudd",
+      "arcThesis": "An ex-con who wants to be a good dad and ends up holding the key to undoing the snap",
+      "arcStages": [
+        "Ex-Con",
+        "Ant-Man",
+        "Lost in Time",
+        "Key to the Heist"
+      ],
+      "loveInterests": [
+        "Hope van Dyne"
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Ant-Man",
+          "year": 2015,
+          "phase": 2,
+          "emotionalState": "Hopeful",
+          "keyMoment": "Hank Pym recruits him to wear the Ant-Man suit",
+          "arcStage": "Second Chance",
+          "tagline": "A suit and a heist",
+          "description": "Fresh out of prison, Scott breaks into Hank Pym's house. Pym meant for him to find the suit, and recruits him to steal the Yellowjacket suit."
+        },
+        {
+          "id": "m2",
+          "movie": "Ant-Man and the Wasp",
+          "year": 2018,
+          "phase": 3,
+          "emotionalState": "Alone, afraid",
+          "keyMoment": "Trapped in the Quantum Realm when the snap hits",
+          "arcStage": "Stranded",
+          "tagline": "No one at the controls",
+          "description": "In the mid-credits scene, Scott is in the Quantum Realm when Hank, Hope and Janet turn to dust. No one is left to bring him back."
+        },
+        {
+          "id": "m3",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Urgent, hopeful",
+          "keyMoment": "Freed by a rat, he brings the idea of a time heist",
+          "arcStage": "Insight",
+          "tagline": "Five hours, five years",
+          "description": "A rat walks over the van's controls and frees Scott. Five years have passed for him in five hours, and he takes the idea of using the Quantum Realm to travel in time to the Avengers."
+        }
+      ],
+      "siteFilms": [
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Ant-Man",
+      "firstYear": 2015,
+      "firstNote": ""
+    },
+    {
+      "id": "nebula",
+      "slug": "nebula",
+      "fullName": "Nebula",
+      "heroName": "Nebula",
+      "role": "anti-hero",
+      "actor": "Karen Gillan",
+      "arcThesis": "Thanos's abused daughter, rebuilt piece by piece, who helps beat him",
+      "arcStages": [
+        "Weapon",
+        "Rival Sister",
+        "Ally",
+        "Avenger"
+      ],
+      "loveInterests": [],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Guardians of the Galaxy",
+          "year": 2014,
+          "phase": 2,
+          "emotionalState": "Bitter",
+          "keyMoment": "Serves Ronan as Thanos's adopted daughter",
+          "arcStage": "Weapon",
+          "tagline": "The other daughter",
+          "description": "Nebula fights alongside Ronan against her adoptive sister Gamora, and blames Thanos for the parts of her body he replaced."
+        },
+        {
+          "id": "m2",
+          "movie": "Guardians of the Galaxy Vol. 2",
+          "year": 2017,
+          "phase": 3,
+          "emotionalState": "Raw, honest",
+          "keyMoment": "Reconciles with Gamora",
+          "arcStage": "Turning Point",
+          "tagline": "I just wanted a sister",
+          "description": "After a vicious fight, Nebula tells Gamora she only ever wanted a sister. The two start to make peace."
+        },
+        {
+          "id": "m3",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Quietly kind",
+          "keyMoment": "Stranded in space with Tony Stark",
+          "arcStage": "Bond",
+          "tagline": "Paper football",
+          "description": "Adrift on the Benatar, Nebula patches up the ship with Tony and learns to play paper football with him."
+        },
+        {
+          "id": "m4",
+          "movie": "Avengers: Endgame",
+          "year": 2019,
+          "phase": 3,
+          "emotionalState": "Resolved",
+          "keyMoment": "Shoots her past self to save Gamora and the others",
+          "arcStage": "Choice",
+          "tagline": "Nebula against Nebula",
+          "description": "Her 2014 self, working for Thanos, holds a gun on Gamora. Present-day Nebula kills her past self."
+        }
+      ],
+      "siteFilms": [
+        "Avengers: Endgame (2019)"
+      ],
+      "firstFilm": "Guardians of the Galaxy",
+      "firstYear": 2014,
+      "firstNote": ""
+    },
+    {
+      "id": "obadiah-stane",
+      "slug": "obadiah-stane",
+      "fullName": "Obadiah Stane",
+      "heroName": "Obadiah Stane",
+      "role": "villain",
+      "actor": "Jeff Bridges",
+      "arcThesis": "Tony's mentor and business partner who wanted the company, and the armor, for himself",
+      "arcStages": [
+        "Mentor",
+        "Betrayer",
+        "Iron Monger"
+      ],
+      "loveInterests": [],
+      "milestones": [
+        {
+          "id": "m1",
+          "movie": "Iron Man",
+          "year": 2008,
+          "phase": 1,
+          "emotionalState": "Smiling, calculating",
+          "keyMoment": "Is revealed to have paid the Ten Rings to kill Tony",
+          "arcStage": "Betrayal",
+          "tagline": "A hit gone wrong",
+          "description": "Tony learns that Obadiah paid the Ten Rings to kill him in Afghanistan, and has been selling Stark weapons to them."
+        },
+        {
+          "id": "m2",
+          "movie": "Iron Man",
+          "year": 2008,
+          "phase": 1,
+          "emotionalState": "Cold",
+          "keyMoment": "Pulls the arc reactor out of Tony's chest",
+          "arcStage": "Theft",
+          "tagline": "Even Tony can't build one?",
+          "description": "Obadiah paralyzes Tony with a sonic device and takes the arc reactor from his chest to power his own suit."
+        },
+        {
+          "id": "m3",
+          "movie": "Iron Man",
+          "year": 2008,
+          "phase": 1,
+          "emotionalState": "Furious",
+          "keyMoment": "Dies when Pepper overloads the arc reactor",
+          "arcStage": "Downfall",
+          "tagline": "The Iron Monger falls",
+          "description": "Fighting Tony on the roof of Stark Industries in the Iron Monger suit, Obadiah falls into the giant arc reactor when Pepper overloads it."
+        }
+      ],
+      "siteFilms": [
+        "Iron Man (2008)"
+      ],
+      "firstFilm": "Iron Man",
+      "firstYear": 2008,
+      "firstNote": ""
     }
   ]
 }

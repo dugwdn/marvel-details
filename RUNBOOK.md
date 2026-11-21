@@ -1,0 +1,114 @@
+# Marvel Details: runbook
+
+How to preview, publish, roll back and fix the live site.
+
+## Preview on the laptop
+```
+cd C:\Users\doug\Documents\marvel-details
+npm run dev        (same as: npx wrangler pages dev public --port 8788)
+```
+Open http://localhost:8788. This behaves like Pages, including 404s.
+
+## Publish (needs Doug's OK)
+Once the Pages project `mcueastereggs` is connected to this repo (Cloudflare
+dashboard, production branch `phase-1-build`, no build command, output
+`public`) and holds the mcueastereggs.com domain, merging a PR into
+`phase-1-build` is the publish: Cloudflare builds it by itself and nobody runs
+anything. The steps below are the by-hand fallback to the old project.
+
+From the repo folder, on the branch being published (normally
+`phase-1-build` after a PR is merged), with a clean working copy:
+```
+git pull
+npx wrangler pages deploy public --project-name marvel-details --branch phase-1-build --commit-hash <commit>
+```
+`--branch phase-1-build` makes it production. Any other branch name makes a
+preview at `https://<branch>.marvel-details.pages.dev` instead.
+
+After publishing, check:
+1. https://mcueastereggs.com/ (and marvel-details.pages.dev) and each feature: `/scenes/`,
+   `/callbacks/`, `/characters/`, `/map/` (the graph draws), `/rabbit-holes/`.
+2. A made-up address shows "That page isn't here" (after PR #1).
+3. `npx wrangler pages deployment list --project-name marvel-details`
+   shows the new commit as Production.
+
+## Sign-in keys (once per provider)
+Google's client ID goes in `wrangler.toml` under `[vars]` (it is public). It is the
+"MCU Easter Eggs website" client in the MCU Easter Eggs Google Cloud project;
+its allowed origins are mcueastereggs.com, www.mcueastereggs.com and
+marvel-details.pages.dev. A new domain must be added there before sign-in works on it.
+Facebook and X are secrets, typed on the laptop from the repo folder:
+```
+npx wrangler pages secret put FACEBOOK_APP_ID --project-name marvel-details
+npx wrangler pages secret put FACEBOOK_APP_SECRET --project-name marvel-details
+npx wrangler pages secret put X_CLIENT_ID --project-name marvel-details
+npx wrangler pages secret put X_CLIENT_SECRET --project-name marvel-details
+```
+Each asks for the value; paste it and press Enter. Then publish again.
+Check: `https://<site>/api/auth` lists the provider, and `/account` shows its
+button after the 13+ box. The database tables already exist; if the database
+is ever rebuilt, run `npx wrangler d1 migrations apply marvel-details --remote`.
+
+## Member perks sync (PRs #18 and #21 are merged and live)
+The perks work without this; it lets signed-in members keep their list on
+every device. Add the `saves` table once, then publish:
+```
+npx wrangler d1 migrations apply marvel-details --remote
+```
+Do this before (or right after) the first deploy that includes PR #21:
+until the table exists, `/api/sync` and "Delete my account" return errors.
+Check: sign in on /me/, save something, open /me/ on another device.
+Look at the data: `npx wrangler d1 execute marvel-details --remote --command "SELECT COUNT(*) FROM saves"`.
+
+## Message boards (ADR-015)
+Works with no setup: tables are made on the first post. Settings live in
+Cloudflare dashboard > Workers & Pages > mcueastereggs > Settings >
+Variables and Secrets (add each to Production, then redeploy or merge
+anything for it to take effect):
+- `MOD_MEMBERS`: moderator member ids, comma separated. Find yours: sign in,
+  open https://mcueastereggs.com/boards/moderate ; it shows "Its member id is ...".
+- `TURNSTILE_SITE_KEY` (text) and `TURNSTILE_SECRET` (secret): free bot check
+  from Cloudflare dashboard > Turnstile > Add widget (domain
+  mcueastereggs.com, Managed). Without them the other spam guards still run.
+- `BREVO_API_KEY` (secret) and optional `MAIL_FROM` (text, default
+  `MCU Easter Eggs <replies@mcueastereggs.com>`): reply emails through
+  Brevo's free plan (picked 2026-10-19, 300 a day shared by Doug's Brevo
+  senders). Brevo: Settings > Senders, Domains, IPs > Domains > Add a domain
+  `mcueastereggs.com` > Authenticate the domain yourself; add the Brevo code
+  and DKIM records in Cloudflare DNS (DKIM CNAMEs with Proxy off; skip
+  Brevo's DMARC, the domain has one); Senders > Add a sender
+  (`MCU Easter Eggs`, `replies@mcueastereggs.com`); then Settings > SMTP &
+  API > API Keys & MCP > Generate a new API key. `RESEND_API_KEY` still
+  works when no Brevo key is set. Until one is set, emails wait in `mail_queue`.
+- `HIDE_THRESHOLD` (default 5) and `NTFY_TOPIC` (optional phone alerts for
+  new reports) are optional.
+To add or rename a board: edit `public/data/boards.json` and the `BOARDS`
+list in `functions/_lib/discuss.js` (same slugs), then
+`node tools/build-boards.mjs && node tools/menu.mjs`.
+Look at posts: `npx wrangler d1 execute marvel-details --remote --command "SELECT thread, name, substr(body,1,60) FROM posts ORDER BY created_at DESC LIMIT 20"`.
+
+## Add photos or trailers
+1. Photos: add a row to `tools/media-wanted.json` (a portrait names the
+   character and actors; a place names its Wikipedia article and a
+   `factSource` link for the film fact). Trailers are found for every title in
+   `public/data/mcu-characters.json`.
+2. Run `python3 tools/fetch-media.py` (and `python3 tools/find-trailers.py`),
+   then `python3 tools/build-directory.py && node tools/build-media.mjs && node tools/build-credits.mjs && node tools/menu.mjs`.
+3. If Wikimedia answers 429, push the branch as `media/fetch-<name>` instead:
+   the `Fetch media` GitHub Action does steps 2 and commits the result.
+
+## Roll back
+Cloudflare dashboard > Workers & Pages > marvel-details > Deployments >
+pick the last good one > the three-dot menu > **Rollback to this deployment**.
+
+## Common problems
+- **A feature page shows the home page:** before PR #1, every missing file
+  did that. Check the file exists in `public/` and was in the upload.
+- **Universe Map is blank:** open the browser console; the map needs
+  `/data/connections.json` and the vis-network script from jsDelivr.
+- **My Marvel says "Sign-in is coming soon":** no sign-in provider is set
+  up yet (see "Sign-in keys"); the perks still work on each device.
+- **My Marvel can't sync / Delete my account fails:** the `saves` table is
+  missing; run the migration in "Member perks sync".
+- **wrangler asks to log in:** run `npx wrangler login` on the laptop and
+  sign in as Doug (Doug does this step).

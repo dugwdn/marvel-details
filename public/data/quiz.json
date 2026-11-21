@@ -1,0 +1,1315 @@
+{
+ "note": "MCU Easter Eggs quiz. Every answer must be checkable in the named film (note says where). Add questions here; ids must stay unique. tiers: points per right answer; seconds = timer per question (0 = none). ranks: quiz rank by lifetime points (separate from the found-details rank).",
+ "tiers": [
+  {
+   "id": "easy",
+   "name": "Sidekick",
+   "level": "Easy",
+   "points": 10,
+   "seconds": 0,
+   "blurb": "The big names and moments. Seen the movies once? Start here."
+  },
+  {
+   "id": "medium",
+   "name": "Hero",
+   "level": "Medium",
+   "points": 20,
+   "seconds": 0,
+   "blurb": "Villains, places and plot points from across the Infinity Saga."
+  },
+  {
+   "id": "hard",
+   "name": "Avenger",
+   "level": "Hard",
+   "points": 40,
+   "seconds": 0,
+   "blurb": "Names, relics and twists that casual fans forget."
+  },
+  {
+   "id": "inevitable",
+   "name": "Inevitable",
+   "level": "Insanely hard",
+   "points": 75,
+   "seconds": 15,
+   "blurb": "Thanos-level trivia: exact numbers, years and tiny details. 15 seconds a question."
+  }
+ ],
+ "ranks": [
+  {
+   "id": "recruit",
+   "title": "Recruit",
+   "min": 0
+  },
+  {
+   "id": "trainee",
+   "title": "Trainee",
+   "min": 100
+  },
+  {
+   "id": "field-agent",
+   "title": "Field Agent",
+   "min": 300
+  },
+  {
+   "id": "specialist",
+   "title": "Specialist",
+   "min": 700
+  },
+  {
+   "id": "avenger",
+   "title": "Avenger",
+   "min": 1500
+  },
+  {
+   "id": "earths-mightiest",
+   "title": "Earth's Mightiest",
+   "min": 3000
+  },
+  {
+   "id": "cosmic",
+   "title": "Cosmic",
+   "min": 6000
+  },
+  {
+   "id": "inevitable",
+   "title": "Inevitable",
+   "min": 10000
+  }
+ ],
+ "films": {
+  "im1": {
+   "title": "Iron Man (2008)",
+   "url": "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)"
+  },
+  "im2": {
+   "title": "Iron Man 2 (2010)",
+   "url": "https://en.wikipedia.org/wiki/Iron_Man_2"
+  },
+  "im3": {
+   "title": "Iron Man 3 (2013)",
+   "url": "https://en.wikipedia.org/wiki/Iron_Man_3"
+  },
+  "thor": {
+   "title": "Thor (2011)",
+   "url": "https://en.wikipedia.org/wiki/Thor_(film)"
+  },
+  "cafa": {
+   "title": "Captain America: The First Avenger (2011)",
+   "url": "https://en.wikipedia.org/wiki/Captain_America:_The_First_Avenger"
+  },
+  "avengers": {
+   "title": "The Avengers (2012)",
+   "url": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+  },
+  "cawis": {
+   "title": "Captain America: The Winter Soldier (2014)",
+   "url": "https://en.wikipedia.org/wiki/Captain_America:_The_Winter_Soldier"
+  },
+  "gotg": {
+   "title": "Guardians of the Galaxy (2014)",
+   "url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)"
+  },
+  "aou": {
+   "title": "Avengers: Age of Ultron (2015)",
+   "url": "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron"
+  },
+  "antman": {
+   "title": "Ant-Man (2015)",
+   "url": "https://en.wikipedia.org/wiki/Ant-Man_(film)"
+  },
+  "cw": {
+   "title": "Captain America: Civil War (2016)",
+   "url": "https://en.wikipedia.org/wiki/Captain_America:_Civil_War"
+  },
+  "strange": {
+   "title": "Doctor Strange (2016)",
+   "url": "https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)"
+  },
+  "gotg2": {
+   "title": "Guardians of the Galaxy Vol. 2 (2017)",
+   "url": "https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_Vol._2"
+  },
+  "homecoming": {
+   "title": "Spider-Man: Homecoming (2017)",
+   "url": "https://en.wikipedia.org/wiki/Spider-Man:_Homecoming"
+  },
+  "ragnarok": {
+   "title": "Thor: Ragnarok (2017)",
+   "url": "https://en.wikipedia.org/wiki/Thor:_Ragnarok"
+  },
+  "bp": {
+   "title": "Black Panther (2018)",
+   "url": "https://en.wikipedia.org/wiki/Black_Panther_(film)"
+  },
+  "iw": {
+   "title": "Avengers: Infinity War (2018)",
+   "url": "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+  },
+  "cm": {
+   "title": "Captain Marvel (2019)",
+   "url": "https://en.wikipedia.org/wiki/Captain_Marvel_(film)"
+  },
+  "endgame": {
+   "title": "Avengers: Endgame (2019)",
+   "url": "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+  },
+  "ffh": {
+   "title": "Spider-Man: Far From Home (2019)",
+   "url": "https://en.wikipedia.org/wiki/Spider-Man:_Far_From_Home"
+  },
+  "shangchi": {
+   "title": "Shang-Chi and the Legend of the Ten Rings (2021)",
+   "url": "https://en.wikipedia.org/wiki/Shang-Chi_and_the_Legend_of_the_Ten_Rings"
+  }
+ },
+ "questions": [
+  {
+   "id": "easy-1",
+   "tier": "easy",
+   "q": "What is the name of Tony Stark's company?",
+   "a": "Stark Industries",
+   "wrong": [
+    "Oscorp",
+    "Pym Technologies",
+    "Roxxon"
+   ],
+   "why": "Tony runs Stark Industries, the weapons company his father Howard started.",
+   "film": "im1",
+   "note": "Opening act: Tony is presented as CEO of Stark Industries."
+  },
+  {
+   "id": "easy-2",
+   "tier": "easy",
+   "q": "Which actor plays Tony Stark?",
+   "a": "Robert Downey Jr.",
+   "wrong": [
+    "Chris Evans",
+    "Chris Hemsworth",
+    "Mark Ruffalo"
+   ],
+   "why": "Robert Downey Jr. played Tony Stark from Iron Man (2008) to Avengers: Endgame (2019).",
+   "film": "im1",
+   "note": "Cast list."
+  },
+  {
+   "id": "easy-3",
+   "tier": "easy",
+   "q": "What are the last words Tony says at the press conference that ends Iron Man (2008)?",
+   "a": "\"I am Iron Man.\"",
+   "wrong": [
+    "\"I love you 3000.\"",
+    "\"Avengers, assemble.\"",
+    "\"Suit up.\""
+   ],
+   "why": "He drops the cover story on the cards and tells the world he is Iron Man.",
+   "film": "im1",
+   "note": "Final scene, press conference."
+  },
+  {
+   "id": "easy-4",
+   "tier": "easy",
+   "q": "What is the name of Tony Stark's AI assistant in his house?",
+   "a": "J.A.R.V.I.S.",
+   "wrong": [
+    "F.R.I.D.A.Y.",
+    "E.D.I.T.H.",
+    "K.A.R.E.N."
+   ],
+   "why": "J.A.R.V.I.S. runs Tony's house and workshop and helps build the suits.",
+   "film": "im1",
+   "note": "Workshop scenes in Malibu."
+  },
+  {
+   "id": "easy-5",
+   "tier": "easy",
+   "q": "What is the name of Thor's hammer?",
+   "a": "Mjolnir",
+   "wrong": [
+    "Stormbreaker",
+    "Gungnir",
+    "Jarnbjorn"
+   ],
+   "why": "Odin enchants Mjolnir so only the worthy can lift it.",
+   "film": "thor",
+   "note": "Odin banishes Thor and sends Mjolnir to Earth."
+  },
+  {
+   "id": "easy-6",
+   "tier": "easy",
+   "q": "Who is Thor's adopted brother?",
+   "a": "Loki",
+   "wrong": [
+    "Heimdall",
+    "Odin",
+    "Hogun"
+   ],
+   "why": "Loki learns he is a Frost Giant child Odin took in as a baby.",
+   "film": "thor",
+   "note": "Loki confronts Odin in the weapons vault."
+  },
+  {
+   "id": "easy-7",
+   "tier": "easy",
+   "q": "What is the name of the realm Thor comes from?",
+   "a": "Asgard",
+   "wrong": [
+    "Jotunheim",
+    "Xandar",
+    "Sakaar"
+   ],
+   "why": "Thor is a prince of Asgard and Odin's son.",
+   "film": "thor",
+   "note": "Opening scenes in Asgard."
+  },
+  {
+   "id": "easy-8",
+   "tier": "easy",
+   "q": "What metal is Captain America's round shield made of?",
+   "a": "Vibranium",
+   "wrong": [
+    "Adamantium",
+    "Uru",
+    "Titanium"
+   ],
+   "why": "Howard Stark says vibranium is stronger than steel and a third of the weight.",
+   "film": "cafa",
+   "note": "Howard shows Steve the shield in his lab."
+  },
+  {
+   "id": "easy-9",
+   "tier": "easy",
+   "q": "Who becomes Captain America?",
+   "a": "Steve Rogers",
+   "wrong": [
+    "Bucky Barnes",
+    "Sam Wilson",
+    "Peggy Carter"
+   ],
+   "why": "Steve Rogers takes the super-soldier serum in 1943 and becomes Captain America.",
+   "film": "cafa",
+   "note": "Project Rebirth scene."
+  },
+  {
+   "id": "easy-10",
+   "tier": "easy",
+   "q": "Which city do the Chitauri attack at the end of The Avengers (2012)?",
+   "a": "New York City",
+   "wrong": [
+    "Los Angeles",
+    "London",
+    "Washington, D.C."
+   ],
+   "why": "Loki opens the portal over Stark Tower in Manhattan.",
+   "film": "avengers",
+   "note": "Battle of New York."
+  },
+  {
+   "id": "easy-11",
+   "tier": "easy",
+   "q": "What does Bruce Banner turn into when he gets angry?",
+   "a": "The Hulk",
+   "wrong": [
+    "The Abomination",
+    "The Leader",
+    "Thanos"
+   ],
+   "why": "Banner's secret in The Avengers: \"I'm always angry.\"",
+   "film": "avengers",
+   "note": "Banner changes before the Chitauri leviathan."
+  },
+  {
+   "id": "easy-12",
+   "tier": "easy",
+   "q": "What is Natasha Romanoff's code name?",
+   "a": "Black Widow",
+   "wrong": [
+    "Scarlet Witch",
+    "Mockingbird",
+    "Wasp"
+   ],
+   "why": "Natasha Romanoff is the S.H.I.E.L.D. agent known as Black Widow.",
+   "film": "avengers",
+   "note": "Introduction scene, interrogation in Russia."
+  },
+  {
+   "id": "easy-13",
+   "tier": "easy",
+   "q": "What is the only thing Groot says?",
+   "a": "\"I am Groot.\"",
+   "wrong": [
+    "\"We are Groot.\"",
+    "\"Hail Groot.\"",
+    "\"Groot smash.\""
+   ],
+   "why": "Groot only says \"I am Groot\" (and once \"We are Groot\" at the end).",
+   "film": "gotg",
+   "note": "Throughout the film."
+  },
+  {
+   "id": "easy-14",
+   "tier": "easy",
+   "q": "What is Star-Lord's real name?",
+   "a": "Peter Quill",
+   "wrong": [
+    "Peter Parker",
+    "Scott Lang",
+    "Clint Barton"
+   ],
+   "why": "Peter Quill was taken from Earth in 1988 by Yondu's Ravagers.",
+   "film": "gotg",
+   "note": "Opening scenes, 1988 and Morag."
+  },
+  {
+   "id": "easy-15",
+   "tier": "easy",
+   "q": "What is Ant-Man's real name in Ant-Man (2015)?",
+   "a": "Scott Lang",
+   "wrong": [
+    "Hank Pym",
+    "Darren Cross",
+    "Luis"
+   ],
+   "why": "Hank Pym hands the suit to Scott Lang, a thief just out of prison.",
+   "film": "antman",
+   "note": "Scott takes the suit from Hank's house."
+  },
+  {
+   "id": "easy-16",
+   "tier": "easy",
+   "q": "What country is Black Panther king of?",
+   "a": "Wakanda",
+   "wrong": [
+    "Sokovia",
+    "Genosha",
+    "Latveria"
+   ],
+   "why": "T'Challa becomes king of Wakanda after his father's death.",
+   "film": "bp",
+   "note": "Coronation at Warrior Falls."
+  },
+  {
+   "id": "easy-17",
+   "tier": "easy",
+   "q": "What was Stephen Strange's job before he learned magic?",
+   "a": "Neurosurgeon",
+   "wrong": [
+    "Heart surgeon",
+    "Physics professor",
+    "Army doctor"
+   ],
+   "why": "Strange is a top neurosurgeon until a car crash ruins his hands.",
+   "film": "strange",
+   "note": "Opening hospital scenes."
+  },
+  {
+   "id": "easy-18",
+   "tier": "easy",
+   "q": "What is the name of Peter Parker's aunt?",
+   "a": "May",
+   "wrong": [
+    "Martha",
+    "Mary",
+    "Marie"
+   ],
+   "why": "Aunt May raises Peter in Queens.",
+   "film": "homecoming",
+   "note": "Throughout the film."
+  },
+  {
+   "id": "easy-19",
+   "tier": "easy",
+   "q": "How many Infinity Stones are there?",
+   "a": "Six",
+   "wrong": [
+    "Four",
+    "Five",
+    "Seven"
+   ],
+   "why": "Space, Mind, Reality, Power, Time and Soul.",
+   "film": "iw",
+   "note": "Thanos gathers all six."
+  },
+  {
+   "id": "easy-20",
+   "tier": "easy",
+   "q": "Who snaps his fingers to wipe out half of all life in Avengers: Infinity War?",
+   "a": "Thanos",
+   "wrong": [
+    "Ultron",
+    "Loki",
+    "Red Skull"
+   ],
+   "why": "Thanos snaps with the full Infinity Gauntlet in Wakanda.",
+   "film": "iw",
+   "note": "Final battle in Wakanda."
+  },
+  {
+   "id": "easy-21",
+   "tier": "easy",
+   "q": "What color is the Tesseract, which holds the Space Stone?",
+   "a": "Blue",
+   "wrong": [
+    "Red",
+    "Green",
+    "Purple"
+   ],
+   "why": "The Tesseract glows blue.",
+   "film": "avengers",
+   "note": "Opening scene at the S.H.I.E.L.D. base."
+  },
+  {
+   "id": "medium-1",
+   "tier": "medium",
+   "q": "In what country is Tony Stark held captive in Iron Man (2008)?",
+   "a": "Afghanistan",
+   "wrong": [
+    "Iraq",
+    "Sokovia",
+    "Pakistan"
+   ],
+   "why": "Tony is captured during a weapons demo in Afghanistan.",
+   "film": "im1",
+   "note": "Opening convoy attack."
+  },
+  {
+   "id": "medium-2",
+   "tier": "medium",
+   "q": "Who is the main villain of Iron Man (2008)?",
+   "a": "Obadiah Stane",
+   "wrong": [
+    "Justin Hammer",
+    "Aldrich Killian",
+    "Ivan Vanko"
+   ],
+   "why": "Obadiah Stane, Tony's partner at Stark Industries, builds his own giant suit.",
+   "film": "im1",
+   "note": "Final fight on the Stark Industries roof."
+  },
+  {
+   "id": "medium-3",
+   "tier": "medium",
+   "q": "In Iron Man 2, what is slowly poisoning Tony Stark?",
+   "a": "The palladium core in his arc reactor",
+   "wrong": [
+    "Shrapnel near his heart",
+    "A nanite virus",
+    "Extremis"
+   ],
+   "why": "The palladium in the reactor poisons his blood until he makes a new element.",
+   "film": "im2",
+   "note": "Blood toxicity readings throughout the film."
+  },
+  {
+   "id": "medium-4",
+   "tier": "medium",
+   "q": "In Iron Man 2, where does Ivan Vanko first attack Tony?",
+   "a": "At the Monaco Historic Grand Prix",
+   "wrong": [
+    "At the Stark Expo",
+    "At Tony's Malibu house",
+    "At a Senate hearing"
+   ],
+   "why": "Vanko walks onto the race track with electric whips.",
+   "film": "im2",
+   "note": "Monaco race scene."
+  },
+  {
+   "id": "medium-5",
+   "tier": "medium",
+   "q": "What time of year is Iron Man 3 set?",
+   "a": "Christmas",
+   "wrong": [
+    "Halloween",
+    "Fourth of July",
+    "New Year's Eve"
+   ],
+   "why": "The film is set over Christmas, with a giant toy bunny gift for Pepper.",
+   "film": "im3",
+   "note": "Opening narration and holiday decorations."
+  },
+  {
+   "id": "medium-6",
+   "tier": "medium",
+   "q": "What is the name of the Nazi science division led by the Red Skull?",
+   "a": "Hydra",
+   "wrong": [
+    "A.I.M.",
+    "The Hand",
+    "The Ten Rings"
+   ],
+   "why": "Red Skull runs Hydra and splits from the Nazis.",
+   "film": "cafa",
+   "note": "Hydra base scenes."
+  },
+  {
+   "id": "medium-7",
+   "tier": "medium",
+   "q": "Which scientist gives Steve Rogers the super-soldier serum?",
+   "a": "Dr. Abraham Erskine",
+   "wrong": [
+    "Dr. Arnim Zola",
+    "Howard Stark",
+    "Dr. Bruce Banner"
+   ],
+   "why": "Erskine picks Steve for Project Rebirth and is shot right after it works.",
+   "film": "cafa",
+   "note": "Project Rebirth lab."
+  },
+  {
+   "id": "medium-8",
+   "tier": "medium",
+   "q": "What is Hawkeye's real name?",
+   "a": "Clint Barton",
+   "wrong": [
+    "Sam Wilson",
+    "Bucky Barnes",
+    "Scott Lang"
+   ],
+   "why": "Clint Barton is the S.H.I.E.L.D. archer Loki takes over.",
+   "film": "avengers",
+   "note": "Opening scene at the S.H.I.E.L.D. base."
+  },
+  {
+   "id": "medium-9",
+   "tier": "medium",
+   "q": "What Infinity Stone is inside Loki's scepter?",
+   "a": "The Mind Stone",
+   "wrong": [
+    "The Power Stone",
+    "The Space Stone",
+    "The Reality Stone"
+   ],
+   "why": "Age of Ultron (2015) confirms the scepter holds the Mind Stone, later in Vision's forehead.",
+   "film": "avengers",
+   "note": "Loki uses the scepter to control Hawkeye and Selvig; named in Age of Ultron."
+  },
+  {
+   "id": "medium-10",
+   "tier": "medium",
+   "q": "What is the name of the cassette Peter Quill keeps from his mother?",
+   "a": "Awesome Mix Vol. 1",
+   "wrong": [
+    "Greatest Hits 1988",
+    "Mixtape for Peter",
+    "Awesome Mix Vol. 3"
+   ],
+   "why": "His mother made it for him; he plays it on his Walkman.",
+   "film": "gotg",
+   "note": "Morag opening and the prison scene."
+  },
+  {
+   "id": "medium-11",
+   "tier": "medium",
+   "q": "What gives each Black Panther their powers?",
+   "a": "The heart-shaped herb",
+   "wrong": [
+    "The Mind Stone",
+    "A super-soldier serum",
+    "Vibranium armor alone"
+   ],
+   "why": "Wakandans drink a potion made from the heart-shaped herb.",
+   "film": "bp",
+   "note": "Coronation and the ancestral plane scenes."
+  },
+  {
+   "id": "medium-12",
+   "tier": "medium",
+   "q": "What is the name of T'Challa's younger sister?",
+   "a": "Shuri",
+   "wrong": [
+    "Nakia",
+    "Okoye",
+    "Ramonda"
+   ],
+   "why": "Shuri runs Wakanda's science lab and builds the Panther suits.",
+   "film": "bp",
+   "note": "Wakanda lab scenes."
+  },
+  {
+   "id": "medium-13",
+   "tier": "medium",
+   "q": "On what planet does Thor fight the Hulk in an arena?",
+   "a": "Sakaar",
+   "wrong": [
+    "Xandar",
+    "Knowhere",
+    "Titan"
+   ],
+   "why": "Thor lands on the trash planet Sakaar and is forced into the Contest of Champions.",
+   "film": "ragnarok",
+   "note": "Arena fight."
+  },
+  {
+   "id": "medium-14",
+   "tier": "medium",
+   "q": "Who rules Sakaar?",
+   "a": "The Grandmaster",
+   "wrong": [
+    "The Collector",
+    "Ego",
+    "Ronan"
+   ],
+   "why": "The Grandmaster runs the Contest of Champions.",
+   "film": "ragnarok",
+   "note": "Sakaar scenes."
+  },
+  {
+   "id": "medium-15",
+   "tier": "medium",
+   "q": "What is Captain Marvel's real name?",
+   "a": "Carol Danvers",
+   "wrong": [
+    "Maria Rambeau",
+    "Monica Rambeau",
+    "Wendy Lawson"
+   ],
+   "why": "Carol Danvers was a US Air Force pilot before she got her powers.",
+   "film": "cm",
+   "note": "Memory flashbacks and Maria's house."
+  },
+  {
+   "id": "medium-16",
+   "tier": "medium",
+   "q": "Who is the villain in Spider-Man: Homecoming?",
+   "a": "Adrian Toomes, the Vulture",
+   "wrong": [
+    "Quentin Beck, Mysterio",
+    "Norman Osborn",
+    "Herman Schultz"
+   ],
+   "why": "Toomes builds the Vulture wings from salvaged Chitauri tech.",
+   "film": "homecoming",
+   "note": "Ferry and plane scenes."
+  },
+  {
+   "id": "medium-17",
+   "tier": "medium",
+   "q": "Who does Thanos sacrifice on Vormir to get the Soul Stone?",
+   "a": "Gamora",
+   "wrong": [
+    "Nebula",
+    "Natasha Romanoff",
+    "Mantis"
+   ],
+   "why": "The Soul Stone demands \"a soul for a soul\", someone he loves.",
+   "film": "iw",
+   "note": "Vormir cliff scene."
+  },
+  {
+   "id": "medium-18",
+   "tier": "medium",
+   "q": "How long after the Snap does Avengers: Endgame jump ahead?",
+   "a": "Five years",
+   "wrong": [
+    "One year",
+    "Two years",
+    "Ten years"
+   ],
+   "why": "The title card reads \"Five years later\".",
+   "film": "endgame",
+   "note": "Title card after the Thanos farm scene."
+  },
+  {
+   "id": "medium-19",
+   "tier": "medium",
+   "q": "What is the name of Tony Stark's daughter?",
+   "a": "Morgan",
+   "wrong": [
+    "Pepper",
+    "Cassie",
+    "Maria"
+   ],
+   "why": "Tony and Pepper's daughter Morgan says she loves him \"3000\".",
+   "film": "endgame",
+   "note": "Lake house scenes."
+  },
+  {
+   "id": "medium-20",
+   "tier": "medium",
+   "q": "Who says \"Avengers... assemble\" in the final battle of Endgame?",
+   "a": "Captain America",
+   "wrong": [
+    "Iron Man",
+    "Thor",
+    "Black Panther"
+   ],
+   "why": "Steve says it as every hero arrives through the portals.",
+   "film": "endgame",
+   "note": "Final battle."
+  },
+  {
+   "id": "medium-21",
+   "tier": "medium",
+   "q": "Who directed Avengers: Endgame?",
+   "a": "Anthony and Joe Russo",
+   "wrong": [
+    "Joss Whedon",
+    "Jon Favreau",
+    "James Gunn"
+   ],
+   "why": "The Russo brothers directed Winter Soldier, Civil War, Infinity War and Endgame.",
+   "film": "endgame",
+   "note": "Credits."
+  },
+  {
+   "id": "hard-1",
+   "tier": "hard",
+   "q": "What terrorist group holds Tony Stark captive in Iron Man (2008)?",
+   "a": "The Ten Rings",
+   "wrong": [
+    "Hydra",
+    "A.I.M.",
+    "The Hand"
+   ],
+   "why": "The Ten Rings' symbol is on the banner in the cave; the group returns in Shang-Chi (2021).",
+   "film": "im1",
+   "note": "Cave scenes."
+  },
+  {
+   "id": "hard-2",
+   "tier": "hard",
+   "q": "What does Pepper have printed on the case she makes for Tony's first arc reactor?",
+   "a": "\"Proof that Tony Stark has a heart\"",
+   "wrong": [
+    "\"Made in a cave\"",
+    "\"I am Iron Man\"",
+    "\"Mark I\""
+   ],
+   "why": "Tony later uses this old reactor to survive Stane's attack.",
+   "film": "im1",
+   "note": "Pepper's gift; final act."
+  },
+  {
+   "id": "hard-3",
+   "tier": "hard",
+   "q": "Who is the actor hired to play the Mandarin in Iron Man 3?",
+   "a": "Trevor Slattery",
+   "wrong": [
+    "Aldrich Killian",
+    "Eric Savin",
+    "Happy Hogan"
+   ],
+   "why": "The Mandarin is a front: an actor named Trevor Slattery.",
+   "film": "im3",
+   "note": "Tony finds Trevor in the Miami mansion."
+  },
+  {
+   "id": "hard-4",
+   "tier": "hard",
+   "q": "Who is the real villain behind the Mandarin in Iron Man 3?",
+   "a": "Aldrich Killian",
+   "wrong": [
+    "Justin Hammer",
+    "Maya Hansen",
+    "Obadiah Stane"
+   ],
+   "why": "Killian of A.I.M. invented the Mandarin as a cover.",
+   "film": "im3",
+   "note": "Killian reveals it at the mansion."
+  },
+  {
+   "id": "hard-5",
+   "tier": "hard",
+   "q": "What is the name of the program that makes people heat up and regenerate in Iron Man 3?",
+   "a": "Extremis",
+   "wrong": [
+    "Project Insight",
+    "Project Rebirth",
+    "Ultron"
+   ],
+   "why": "Maya Hansen and Killian's Extremis treatment.",
+   "film": "im3",
+   "note": "Maya explains Extremis."
+  },
+  {
+   "id": "hard-6",
+   "tier": "hard",
+   "q": "After waking up in a fake 1940s room, where does Steve Rogers run out into?",
+   "a": "Times Square",
+   "wrong": [
+    "Central Park",
+    "Brooklyn Bridge",
+    "Grand Central"
+   ],
+   "why": "He runs into modern Times Square, where Nick Fury meets him.",
+   "film": "cafa",
+   "note": "Final scene."
+  },
+  {
+   "id": "hard-7",
+   "tier": "hard",
+   "q": "Which Avenger calls Loki a \"puny god\"?",
+   "a": "The Hulk",
+   "wrong": [
+    "Thor",
+    "Tony Stark",
+    "Captain America"
+   ],
+   "why": "Hulk slams Loki into the floor of Stark Tower.",
+   "film": "avengers",
+   "note": "Stark Tower, battle of New York."
+  },
+  {
+   "id": "hard-8",
+   "tier": "hard",
+   "q": "What food do the Avengers eat in The Avengers (2012) post-credits scene?",
+   "a": "Shawarma",
+   "wrong": [
+    "Pizza",
+    "Hot dogs",
+    "Tacos"
+   ],
+   "why": "Tony suggests it after the battle; the scene is after the full credits.",
+   "film": "avengers",
+   "note": "Post-credits scene."
+  },
+  {
+   "id": "hard-9",
+   "tier": "hard",
+   "q": "In Age of Ultron, which country's city does Ultron lift into the sky?",
+   "a": "Sokovia",
+   "wrong": [
+    "Wakanda",
+    "Latveria",
+    "Madripoor"
+   ],
+   "why": "Ultron raises the Sokovian capital to drop it like a meteor.",
+   "film": "aou",
+   "note": "Final battle."
+  },
+  {
+   "id": "hard-10",
+   "tier": "hard",
+   "q": "What are the laws to put the Avengers under UN control called in Civil War?",
+   "a": "The Sokovia Accords",
+   "wrong": [
+    "The Superhuman Registration Act",
+    "The Avengers Charter",
+    "The Lagos Treaty"
+   ],
+   "why": "Named after the damage in Sokovia.",
+   "film": "cw",
+   "note": "Secretary Ross presents them."
+  },
+  {
+   "id": "hard-11",
+   "tier": "hard",
+   "q": "What relic does Doctor Strange wear that holds the Time Stone?",
+   "a": "The Eye of Agamotto",
+   "wrong": [
+    "The Cloak of Levitation",
+    "The Book of Cagliostro",
+    "The Staff of the Living Tribunal"
+   ],
+   "why": "The Eye of Agamotto is the amulet holding the Time Stone.",
+   "film": "strange",
+   "note": "Kamar-Taj library and the Dormammu scene."
+  },
+  {
+   "id": "hard-12",
+   "tier": "hard",
+   "q": "Who is Peter Quill's father in Guardians Vol. 2?",
+   "a": "Ego",
+   "wrong": [
+    "Yondu",
+    "Thanos",
+    "The Collector"
+   ],
+   "why": "Ego is a Celestial; Yondu is the one who raised him.",
+   "film": "gotg2",
+   "note": "Ego's planet."
+  },
+  {
+   "id": "hard-13",
+   "tier": "hard",
+   "q": "Who beats T'Challa at Warrior Falls and takes the throne?",
+   "a": "Erik Killmonger",
+   "wrong": [
+    "M'Baku",
+    "Ulysses Klaue",
+    "W'Kabi"
+   ],
+   "why": "Killmonger wins the ritual combat and throws T'Challa over the falls.",
+   "film": "bp",
+   "note": "Second Warrior Falls challenge."
+  },
+  {
+   "id": "hard-14",
+   "tier": "hard",
+   "q": "What is Thanos's home planet?",
+   "a": "Titan",
+   "wrong": [
+    "Vormir",
+    "Xandar",
+    "Knowhere"
+   ],
+   "why": "The Avengers fight Thanos on the ruins of Titan.",
+   "film": "iw",
+   "note": "Titan battle."
+  },
+  {
+   "id": "hard-15",
+   "tier": "hard",
+   "q": "Where is Thor's new axe Stormbreaker forged?",
+   "a": "Nidavellir",
+   "wrong": [
+    "Asgard",
+    "Vanaheim",
+    "Sakaar"
+   ],
+   "why": "Eitri the dwarf forges it at Nidavellir's star-powered forge.",
+   "film": "iw",
+   "note": "Nidavellir scene."
+  },
+  {
+   "id": "hard-16",
+   "tier": "hard",
+   "q": "What is the name of Thor's new axe in Infinity War?",
+   "a": "Stormbreaker",
+   "wrong": [
+    "Mjolnir",
+    "Jarnbjorn",
+    "Hofund"
+   ],
+   "why": "Stormbreaker can summon the Bifrost.",
+   "film": "iw",
+   "note": "Thor arrives in Wakanda."
+  },
+  {
+   "id": "hard-17",
+   "tier": "hard",
+   "q": "What scratches out Nick Fury's eye?",
+   "a": "Goose the Flerken",
+   "wrong": [
+    "A Skrull",
+    "Thanos",
+    "A Chitauri soldier"
+   ],
+   "why": "Captain Marvel (2019) reveals Goose, a Flerken that looks like a cat, scratched him.",
+   "film": "cm",
+   "note": "End of the film."
+  },
+  {
+   "id": "hard-18",
+   "tier": "hard",
+   "q": "What is Mysterio's real name?",
+   "a": "Quentin Beck",
+   "wrong": [
+    "Adrian Toomes",
+    "Mac Gargan",
+    "Otto Octavius"
+   ],
+   "why": "Beck is a former Stark Industries employee who fakes being a hero.",
+   "film": "ffh",
+   "note": "Beck reveals his team in the bar."
+  },
+  {
+   "id": "hard-19",
+   "tier": "hard",
+   "q": "What weapon set gives Wenwu his power and long life?",
+   "a": "The Ten Rings",
+   "wrong": [
+    "The Infinity Gauntlet",
+    "The Darkhold",
+    "The Eye of Agamotto"
+   ],
+   "why": "Wenwu has worn the Ten Rings for about a thousand years.",
+   "film": "shangchi",
+   "note": "Opening narration."
+  },
+  {
+   "id": "hard-20",
+   "tier": "hard",
+   "q": "Who sacrifices herself on Vormir in Avengers: Endgame?",
+   "a": "Natasha Romanoff",
+   "wrong": [
+    "Gamora",
+    "Nebula",
+    "Wanda Maximoff"
+   ],
+   "why": "Natasha lets go so Clint can bring back the Soul Stone.",
+   "film": "endgame",
+   "note": "Vormir 2014."
+  },
+  {
+   "id": "inevitable-1",
+   "tier": "inevitable",
+   "q": "In the Iron Man (2008) post-credits scene, what does Nick Fury say he wants to talk to Tony about?",
+   "a": "The Avenger Initiative",
+   "wrong": [
+    "Project Pegasus",
+    "S.H.I.E.L.D. Level 7",
+    "The Tesseract"
+   ],
+   "why": "Fury's first appearance: \"I'm here to talk to you about the Avenger Initiative.\"",
+   "film": "im1",
+   "note": "Post-credits scene."
+  },
+  {
+   "id": "inevitable-2",
+   "tier": "inevitable",
+   "q": "What is the name of the New Mexico town where Thor lands in Thor (2011)?",
+   "a": "Puente Antiguo",
+   "wrong": [
+    "Roswell",
+    "Los Alamos",
+    "Santa Fe"
+   ],
+   "why": "Puente Antiguo is the made-up desert town where Jane Foster works.",
+   "film": "thor",
+   "note": "Thor hits Jane's van; diner scenes."
+  },
+  {
+   "id": "inevitable-3",
+   "tier": "inevitable",
+   "q": "What does Tony build in his workshop to create a new element in Iron Man 2?",
+   "a": "A particle accelerator",
+   "wrong": [
+    "A Tesseract copy",
+    "A second arc reactor",
+    "A nanite forge"
+   ],
+   "why": "He uses his father's Stark Expo model as the plan.",
+   "film": "im2",
+   "note": "Workshop rebuild scene."
+  },
+  {
+   "id": "inevitable-4",
+   "tier": "inevitable",
+   "q": "What is the name of the boy who helps Tony in Tennessee in Iron Man 3?",
+   "a": "Harley Keener",
+   "wrong": [
+    "Peter Parker",
+    "Ned Leeds",
+    "Cooper Barton"
+   ],
+   "why": "Harley appears again at Tony's funeral in Endgame.",
+   "film": "im3",
+   "note": "Rose Hill, Tennessee scenes."
+  },
+  {
+   "id": "inevitable-5",
+   "tier": "inevitable",
+   "q": "What birth year is shown for Steve Rogers on the Smithsonian exhibit?",
+   "a": "1918",
+   "wrong": [
+    "1920",
+    "1917",
+    "1924"
+   ],
+   "why": "The Smithsonian Captain America exhibit lists his birth year as 1918.",
+   "film": "cawis",
+   "note": "Smithsonian exhibit scene."
+  },
+  {
+   "id": "inevitable-6",
+   "tier": "inevitable",
+   "q": "What is the name of Thanos's servant who talks to Loki in The Avengers (2012)?",
+   "a": "The Other",
+   "wrong": [
+    "Corvus Glaive",
+    "Ebony Maw",
+    "Ronan"
+   ],
+   "why": "The Other warns Loki about failing Thanos.",
+   "film": "avengers",
+   "note": "Opening and mid-credits scenes."
+  },
+  {
+   "id": "inevitable-7",
+   "tier": "inevitable",
+   "q": "What soundtrack does Sam Wilson tell Steve to add to his catch-up list?",
+   "a": "Trouble Man by Marvin Gaye",
+   "wrong": [
+    "What's Going On by Marvin Gaye",
+    "Thriller by Michael Jackson",
+    "Purple Rain by Prince"
+   ],
+   "why": "Steve writes \"Trouble Man soundtrack\" in his notebook.",
+   "film": "cawis",
+   "note": "Sam and Steve meet in DC; notebook shot."
+  },
+  {
+   "id": "inevitable-8",
+   "tier": "inevitable",
+   "q": "Whose algorithm picks Project Insight's targets in The Winter Soldier?",
+   "a": "Arnim Zola",
+   "wrong": [
+    "Alexander Pierce",
+    "Brock Rumlow",
+    "Nick Fury"
+   ],
+   "why": "Zola's mind lives on in a computer at Camp Lehigh and explains his algorithm.",
+   "film": "cawis",
+   "note": "Camp Lehigh bunker."
+  },
+  {
+   "id": "inevitable-9",
+   "tier": "inevitable",
+   "q": "What is the name of Peter Quill's mother?",
+   "a": "Meredith Quill",
+   "wrong": [
+    "Mary Quill",
+    "Maria Quill",
+    "Margaret Quill"
+   ],
+   "why": "Meredith Quill dies in 1988 at the start of the film.",
+   "film": "gotg",
+   "note": "Hospital opening scene."
+  },
+  {
+   "id": "inevitable-10",
+   "tier": "inevitable",
+   "q": "What is Yondu's whistle-controlled weapon called?",
+   "a": "The Yaka arrow",
+   "wrong": [
+    "The Kree arrow",
+    "The Ravager dart",
+    "The Zatoan spear"
+   ],
+   "why": "Yondu steers the Yaka arrow with whistles; his fin controls it.",
+   "film": "gotg2",
+   "note": "Yondu's escape from the Ravager ship."
+  },
+  {
+   "id": "inevitable-11",
+   "tier": "inevitable",
+   "q": "Who lifts Mjolnir and hands it to Thor in Age of Ultron?",
+   "a": "Vision",
+   "wrong": [
+    "Captain America",
+    "Ultron",
+    "Scarlet Witch"
+   ],
+   "why": "Proof Vision is \"worthy\", shocking the Avengers.",
+   "film": "aou",
+   "note": "Avengers Tower, Vision's birth."
+  },
+  {
+   "id": "inevitable-12",
+   "tier": "inevitable",
+   "q": "How many possible futures does Doctor Strange look at in Infinity War?",
+   "a": "14,000,605",
+   "wrong": [
+    "14,000,506",
+    "1,400,605",
+    "One"
+   ],
+   "why": "He says they won in only one.",
+   "film": "iw",
+   "note": "Titan, before the battle."
+  },
+  {
+   "id": "inevitable-13",
+   "tier": "inevitable",
+   "q": "About how old does Thor tell Rocket he is in Infinity War?",
+   "a": "1,500 years",
+   "wrong": [
+    "5,000 years",
+    "500 years",
+    "1,000 years"
+   ],
+   "why": "Thor: \"I'm 1500 years old.\"",
+   "film": "iw",
+   "note": "Thor rides in Rocket's pod."
+  },
+  {
+   "id": "inevitable-14",
+   "tier": "inevitable",
+   "q": "In what year is Captain Marvel (2019) set?",
+   "a": "1995",
+   "wrong": [
+    "1989",
+    "1991",
+    "2001"
+   ],
+   "why": "It's set in the 1990s, before the other Avengers films.",
+   "film": "cm",
+   "note": "Opening and Blockbuster scene."
+  },
+  {
+   "id": "inevitable-15",
+   "tier": "inevitable",
+   "q": "What store does Carol Danvers crash into when she lands on Earth?",
+   "a": "Blockbuster Video",
+   "wrong": [
+    "RadioShack",
+    "Toys \"R\" Us",
+    "Circuit City"
+   ],
+   "why": "She falls through the roof of a Blockbuster in Los Angeles.",
+   "film": "cm",
+   "note": "Arrival on Earth."
+  },
+  {
+   "id": "inevitable-16",
+   "tier": "inevitable",
+   "q": "What name do the Kree call Carol Danvers?",
+   "a": "Vers",
+   "wrong": [
+    "Mar-Vell",
+    "Yon-Rogg",
+    "Talos"
+   ],
+   "why": "The Kree gave her the name Vers after taking her memory.",
+   "film": "cm",
+   "note": "Kree scenes on Hala."
+  },
+  {
+   "id": "inevitable-17",
+   "tier": "inevitable",
+   "q": "In Endgame, what year do Tony and Steve go to at Camp Lehigh for the Tesseract and Pym Particles?",
+   "a": "1970",
+   "wrong": [
+    "1943",
+    "1989",
+    "2012"
+   ],
+   "why": "Tony meets his father Howard there.",
+   "film": "endgame",
+   "note": "Camp Lehigh 1970."
+  },
+  {
+   "id": "inevitable-18",
+   "tier": "inevitable",
+   "q": "In Endgame, what year in Asgard do Thor and Rocket visit for the Reality Stone?",
+   "a": "2013",
+   "wrong": [
+    "2012",
+    "2011",
+    "2014"
+   ],
+   "why": "They take the Aether from Jane Foster in 2013.",
+   "film": "endgame",
+   "note": "Asgard trip."
+  },
+  {
+   "id": "inevitable-19",
+   "tier": "inevitable",
+   "q": "Which Infinity Stone do Rhodey and Nebula get on Morag in 2014?",
+   "a": "The Power Stone",
+   "wrong": [
+    "The Soul Stone",
+    "The Space Stone",
+    "The Mind Stone"
+   ],
+   "why": "Morag is where Quill finds the Orb in Guardians of the Galaxy.",
+   "film": "endgame",
+   "note": "Morag 2014."
+  },
+  {
+   "id": "inevitable-20",
+   "tier": "inevitable",
+   "q": "Which Infinity Stone does Bruce get from the Ancient One in 2012?",
+   "a": "The Time Stone",
+   "wrong": [
+    "The Mind Stone",
+    "The Space Stone",
+    "The Reality Stone"
+   ],
+   "why": "He promises to return it.",
+   "film": "endgame",
+   "note": "New York 2012, Sanctum roof."
+  }
+ ]
+}

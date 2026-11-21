@@ -1,0 +1,45 @@
+/* Shared base for the feature pages (scenes, callbacks, map, rabbit holes).
+   Each feature stylesheet darkens its cards and lightens its text under
+   prefers-color-scheme: dark, so the page behind them has to go dark too,
+   or headings end up light-on-light. "html body" outranks the pages' own
+   inline rules, which load later. The rest covers text and boxes the
+   feature stylesheets left in their light-mode colors. */
+@media (prefers-color-scheme: dark) {
+  html body {
+    background: #121212;
+    color: #ddd;
+  }
+
+  html body .movie-header {
+    background: #1e1e1e;
+  }
+
+  html body .search-box label,
+  html body .filter-group label,
+  html body .movie-filter-item label,
+  html body .hole-meta strong,
+  html body .hole-characters strong,
+  html body .hole-detail-meta strong {
+    color: #ddd;
+  }
+
+  html body .movie-header p,
+  html body .hole-detail-meta,
+  html body .hole-detail-summary p,
+  html body .hole-detail-tagline,
+  html body .related-hole-tagline,
+  html body .no-results p,
+  html body .holes-header p,
+  html body #result-count,
+  html body .clear-filters-btn {
+    color: #aaa;
+  }
+
+  html body .fulfillment .movie-title {
+    color: #64b5f6;
+  }
+
+  html body a:not([class]) {
+    color: #ff6b7d;
+  }
+}

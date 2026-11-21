@@ -1,0 +1,28 @@
+{
+  "note": "Rank ladder for the found counter on My Marvel. minPct = share of all hidden details (deleted scenes + callbacks + rabbit holes) a visitor must open to hold the rank; 100 means every one. Edit titles, reasons or thresholds here; keep ids unique and lowercase. Reasons must be checkable: name the film where it is shown.",
+  "ranks": [
+    { "id": "civilian", "title": "Civilian", "minPct": 0,
+      "reason": "Everyone starts here: you've seen the movies, now you're starting to notice things." },
+    { "id": "spider-man", "title": "Spider-Man", "minPct": 5,
+      "reason": "A teenager from Queens pulled into the Avengers' fight in Captain America: Civil War (2016). Sharp senses, still learning.",
+      "source": "Captain America: Civil War (2016)" },
+    { "id": "iron-man", "title": "Iron Man", "minPct": 15,
+      "reason": "A genius who built his first suit in a cave in Iron Man (2008) and kept upgrading.",
+      "source": "Iron Man (2008)" },
+    { "id": "captain-america", "title": "Captain America", "minPct": 30,
+      "reason": "Born in 1918 and asleep in the ice for almost 70 years, so he has seen a lot of history.",
+      "source": "Captain America: The First Avenger (2011), Fury: \"You've been asleep, Cap, for almost 70 years\"; 1918 birth year on the Smithsonian exhibit in Captain America: The Winter Soldier (2014)" },
+    { "id": "thor", "title": "Thor", "minPct": 50,
+      "reason": "Around 1,500 years old, as he tells Rocket in Avengers: Infinity War (2018). Centuries of stories.",
+      "source": "Avengers: Infinity War (2018)" },
+    { "id": "doctor-strange", "title": "Doctor Strange", "minPct": 70,
+      "reason": "Looked through 14,000,605 possible futures in Avengers: Infinity War (2018).",
+      "source": "Avengers: Infinity War (2018)" },
+    { "id": "ancient-one", "title": "The Ancient One", "minPct": 85,
+      "reason": "Sorcerer Supreme who trained Doctor Strange in Doctor Strange (2016) and explains how the Infinity Stones hold time together in Avengers: Endgame (2019).",
+      "source": "Doctor Strange (2016); Avengers: Endgame (2019)" },
+    { "id": "the-watcher", "title": "The Watcher", "minPct": 100,
+      "reason": "Sees across the whole multiverse in the animated series What If...? (2021). You found every hidden detail.",
+      "source": "What If...? (2021)" }
+  ]
+}
