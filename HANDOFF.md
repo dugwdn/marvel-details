@@ -143,3 +143,6 @@ Task: <describe the task here>
 1. Repo access: Doug adds the person on GitHub (repo > Settings > Collaborators > Add people).
 2. Service access: invite them to Doug's Cloudflare account (Pages, D1, KV, Turnstile). Google Cloud, Meta, AdSense and Analytics only for those tasks. Secrets are set in Cloudflare, never in the repo.
 3. Run locally: section 6. Publish: section 7.
+
+## Thin page check (2026-11-21)
+Shared WDN checker (dugwdn/wdn-website `tools/thin-check/`, ADR-116) copied to `scripts/thin-check.mjs`, settings in `thin-check.json`. `npm test` runs it (`test/thin.test.mjs`). The site is deployed from `public/` with no build step, so the noindex on baseline pages is written into the committed files by `node scripts/thin-check.mjs --write`; run it again after `node build-callbacks.js`, `python3 tools/build-directory.py` or any page generator. Pages on the baseline carry `noindex, follow` and are out of the sitemap until they pass; when one passes, the check says "Ready to leave the baseline" and it comes out of `baseline` in the same PR as the fix. Day one: 287 pages checked, 194 on the baseline: 94 theories (159 to 291 own words), 35 callbacks (about 80 to 115), 21 character pages (49 to 91), 18 trivia, 14 boards, 6 scene lists, 2 articles, and the map, more, movies and rabbit-holes hubs.

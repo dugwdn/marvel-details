@@ -166,3 +166,6 @@ Every page sends the full Open Graph set with `public/img/share-2026-11.jpg` (12
 - Never invent people, quotes or statistics.
 - No deploy secrets in the repo. wrangler on Doug's laptop is already
   signed in to his Cloudflare account.
+
+## Rules
+- Thin page check (ADR-116 in dugwdn/wdn-website, 2026-11-21): every public page passes `scripts/thin-check.mjs` (settings and the noindex baseline in `thin-check.json`); `npm test` runs it (`test/thin.test.mjs`). The site is deployed from `public/` with no build step, so the noindex on baseline pages is written into the committed files by `node scripts/thin-check.mjs --write`; run it again after `node build-callbacks.js`, `python3 tools/build-directory.py` or any page generator. Never lower a bar or add a page to the baseline to get a page through, give it its own words. Day one: 287 pages checked, 194 on the baseline: 94 theories (159 to 291 own words), 35 callbacks (about 80 to 115), 21 character pages (49 to 91), 18 trivia, 14 boards, 6 scene lists, 2 articles, and the map, more, movies and rabbit-holes hubs.
