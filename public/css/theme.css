@@ -194,9 +194,23 @@ html body .ad-box .ad-label {
   text-transform: uppercase; margin-bottom: .25rem;
 }
 html body .ad-box ins.adsbygoogle { position: relative; width: 100%; }
+/* AdSense reserves ~390px of blank space for a unit it does not fill (account not
+   approved yet); Google's documented fix is to hide unfilled units. */
+html body ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
 html body .ad-box:has(ins[data-ad-status="filled"]) { border-color: transparent; background: none; }
 html body .ad-box:has(ins[data-ad-status="filled"]) .ad-ph { display: none; }
 html body .ad-box:has(ins[data-ad-status="filled"]) .ad-label { display: block; }
+/* Phones (site sweep 2026-11-21): an empty top box pushed every page's words
+   below the first screen. Until AdSense fills it, the top box takes no room on
+   phones; the mid and end placeholders stay as they were. */
+@media (max-width: 767px) {
+  html body .ad-box[data-ad-box="top"]:not(:has(ins[data-ad-status="filled"])) {
+    min-height: 0; margin: 0; border: 0; background: none;
+  }
+  html body .ad-box[data-ad-box="top"]:not(:has(ins[data-ad-status="filled"])) .ad-ph { display: none; }
+}
+/* No underlined links anywhere (WDN standing rule), page styles included. */
+html body a, html body a:hover, html body a:focus { text-decoration: none !important; }
 
 /* Movie cards: a typographic poster panel (no film art), white title below */
 html body .movie-card > div[style] {
