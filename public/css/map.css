@@ -134,7 +134,7 @@ html, body {
 }
 
 .sidebar-section p {
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   line-height: 1.5;
   color: var(--text-secondary);
   margin-bottom: 10px;
@@ -152,7 +152,7 @@ html, body {
   gap: 10px;
   margin-bottom: 8px;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
 }
 
 /* Sections Visibility */
@@ -179,7 +179,7 @@ html, body {
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
 }
 
 .search-box {
@@ -192,7 +192,7 @@ html, body {
   padding: 10px 32px 10px 12px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   background: var(--secondary-bg);
   color: var(--text-primary);
   transition: border-color 0.2s ease;
@@ -236,7 +236,7 @@ html, body {
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
 }
 
 .checkbox-group,
@@ -252,7 +252,7 @@ html, body {
   gap: 8px;
   cursor: pointer;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
   transition: color 0.2s ease;
 }
 
@@ -281,12 +281,12 @@ html, body {
   padding: 12px;
   background: var(--secondary-bg);
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
 }
 
 .statistics h3 {
   margin-bottom: 8px;
-  font-size: 1rem;
+  font-size: max(17px, 1rem);
 }
 
 #stats-container {
@@ -325,7 +325,7 @@ html, body {
   display: inline-block;
   padding: 4px 8px;
   border-radius: 3px;
-  font-size: 0.85rem;
+  font-size: max(17px, 0.85rem);
   font-weight: 600;
   background: var(--secondary-bg);
   color: var(--text-secondary);
@@ -337,7 +337,7 @@ html, body {
   color: var(--text-secondary);
   line-height: 1.5;
   margin-top: 10px;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
 }
 
 .node-meta {
@@ -345,7 +345,7 @@ html, body {
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-top: 12px;
-  font-size: 0.85rem;
+  font-size: max(17px, 0.85rem);
 }
 
 .meta-item {
@@ -356,7 +356,7 @@ html, body {
 
 .meta-label {
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: max(17px, 0.8rem);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -372,7 +372,7 @@ html, body {
 }
 
 .connections-title {
-  font-size: 1rem;
+  font-size: max(17px, 1rem);
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--text-primary);
@@ -384,13 +384,13 @@ html, body {
   background: var(--secondary-bg);
   border-left: 3px solid var(--accent-color);
   border-radius: 3px;
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
 }
 
 .connection-label {
   display: block;
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: max(17px, 0.8rem);
   margin-bottom: 4px;
 }
 
@@ -486,7 +486,7 @@ html, body {
   .map-controls button {
     width: 36px;
     height: 36px;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .sidebar-section {
@@ -503,7 +503,7 @@ html, body {
   }
 
   .checkbox-label {
-    font-size: 0.85rem;
+    font-size: max(17px, 0.85rem);
     gap: 6px;
   }
 
@@ -523,12 +523,12 @@ html, body {
   border-radius: 4px;
   color: white;
   padding: 8px 12px;
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
 }
 
 .vis-label {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   color: var(--text-primary);
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
 }

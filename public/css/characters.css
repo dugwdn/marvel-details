@@ -38,7 +38,7 @@
 }
 
 .control-group label {
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
   font-weight: 600;
   color: #333;
 }
@@ -48,7 +48,7 @@
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: max(17px, 1rem);
   font-family: inherit;
   background: white;
   color: #333;
@@ -71,7 +71,7 @@
 }
 
 #character-result-count {
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   color: #666;
   margin-left: auto;
 }
@@ -128,7 +128,7 @@
 }
 
 .character-actor {
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
   color: #666;
   margin: 0;
 }
@@ -158,7 +158,7 @@
   display: inline-block;
   padding: 0.35rem 0.75rem;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: max(17px, 0.85rem);
   font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -187,7 +187,7 @@
 
 /* Character Thesis */
 .character-thesis {
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   color: #555;
   line-height: 1.5;
   margin: 0.75rem 0 1rem 0;
@@ -203,7 +203,7 @@
 }
 
 .stat-item {
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
   color: #666;
 }
 
@@ -225,7 +225,7 @@
 }
 
 .no-results-hint {
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
 }
 
 /* Modal */
@@ -274,7 +274,7 @@
 .modal-full-name {
   margin: 0;
   color: #666;
-  font-size: 1rem;
+  font-size: max(17px, 1rem);
 }
 
 .character-modal-close {
@@ -357,7 +357,7 @@
   padding: 0.5rem 1rem;
   background: #f5f5f5;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
   color: #333;
   border-left: 3px solid #e0303c;
 }
@@ -380,7 +380,7 @@
 
 .stat-label {
   display: block;
-  font-size: 0.8rem;
+  font-size: max(17px, 0.8rem);
   color: #999;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -404,7 +404,7 @@
 .modal-fact-list li {
   padding: 0.75rem 0;
   border-bottom: 1px solid #f5f5f5;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   color: #555;
 }
 
@@ -441,12 +441,12 @@
   margin: 0 0 0.5rem 0;
   font-weight: 600;
   color: #1a1a1a;
-  font-size: 1rem;
+  font-size: max(17px, 1rem);
 }
 
 .similar-match {
   margin: 0.5rem 0;
-  font-size: 0.85rem;
+  font-size: max(17px, 0.85rem);
   color: #666;
 }
 
@@ -470,7 +470,7 @@
 
 .similar-thesis {
   margin: 0.5rem 0 0 0;
-  font-size: 0.85rem;
+  font-size: max(17px, 0.85rem);
   color: #999;
   font-style: italic;
 }
@@ -507,7 +507,7 @@
 /* Loading State */
 .loading {
   color: #999;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
 }
 
 /* Responsive adjustments */
