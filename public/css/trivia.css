@@ -109,3 +109,5 @@ html body .tv-fans a { display: inline-flex; align-items: center; min-height: 2.
 .th-more p { margin: 0 0 1rem; }
 .th-more .th-where { display: block; margin-top: .25rem; font-size: 1.0625rem; color: var(--dym-muted); }
 .th-more a { text-decoration: none; }
+.tv-about p { margin: 0 0 1rem; font-size: 1.0625rem; line-height: 1.6; }
+.tv-about .tv-about-src { display: block; margin-top: .25rem; color: var(--dym-muted); }
