@@ -204,13 +204,13 @@ function generateCallbackPage(callback, prev, next) {
             background: white;
             padding: 0.3rem 0.8rem;
             border-radius: 6px;
-            font-size: 0.9rem;
+            font-size: max(17px, 0.9rem);
             color: #666;
             margin-bottom: 1rem;
         }
 
         .description {
-            font-size: 1rem;
+            font-size: max(17px, 1rem);
             line-height: 1.7;
             color: #555;
             margin: 1rem 0 0 0;
@@ -250,7 +250,7 @@ function generateCallbackPage(callback, prev, next) {
 
         .metadata-item h3 {
             margin: 0 0 1rem 0;
-            font-size: 0.95rem;
+            font-size: max(17px, 0.95rem);
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #666;
@@ -264,7 +264,7 @@ function generateCallbackPage(callback, prev, next) {
 
         .metadata-list li {
             padding: 0.5rem 0;
-            font-size: 0.95rem;
+            font-size: max(17px, 0.95rem);
             color: #555;
         }
 
@@ -359,7 +359,7 @@ function generateCallbackPage(callback, prev, next) {
 
         .callback-source {
             margin: 1rem 0 0 0;
-            font-size: 0.95rem;
+            font-size: max(17px, 0.95rem);
         }
 
         .callback-source a {

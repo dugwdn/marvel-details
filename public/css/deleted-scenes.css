@@ -46,7 +46,7 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #333;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
 }
 
 #scene-search {
@@ -54,7 +54,7 @@
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: max(17px, 1rem);
   box-sizing: border-box;
   transition: border-color 0.2s ease;
 }
@@ -82,7 +82,7 @@
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   background-color: white;
   cursor: pointer;
   transition: border-color 0.2s ease;
@@ -104,7 +104,7 @@
   text-align: center;
   margin: 1.5rem 0;
   color: #666;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
 }
 
 /* Scenes Container and Cards */
@@ -154,7 +154,7 @@
   display: inline-block;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
-  font-size: 0.75rem;
+  font-size: max(17px, 0.75rem);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -182,14 +182,14 @@
 }
 
 .scene-movie {
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   color: #555;
   margin: 1rem 1.5rem 0.75rem;
 }
 
 .scene-description {
   color: #666;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   line-height: 1.6;
   margin: 0.75rem 1.5rem;
 }
@@ -199,7 +199,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   margin: 1rem 1.5rem;
-  font-size: 0.85rem;
+  font-size: max(17px, 0.85rem);
   color: #777;
 }
 
@@ -212,7 +212,7 @@
 }
 
 .scene-where {
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
   color: #555;
   margin: 0.75rem 1.5rem;
   padding-top: 0.75rem;
@@ -225,7 +225,7 @@
 
 .scene-synopsis {
   color: #777;
-  font-size: 0.9rem;
+  font-size: max(17px, 0.9rem);
   line-height: 1.5;
   margin: 0.75rem 1.5rem 1.5rem;
   flex-grow: 1;
@@ -247,7 +247,7 @@
 }
 
 .no-results-hint {
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   color: #999;
 }
 
@@ -275,7 +275,7 @@
 .movie-scenes-count {
   text-align: center;
   color: #777;
-  font-size: 0.95rem;
+  font-size: max(17px, 0.95rem);
   margin: 1rem 0;
 }
 
@@ -317,7 +317,7 @@
   }
 
   .scenes-header p {
-    font-size: 0.95rem;
+    font-size: max(17px, 0.95rem);
   }
 
   .search-filter-section {
@@ -333,7 +333,7 @@
   }
 
   .scene-card-header h3 {
-    font-size: 1rem;
+    font-size: max(17px, 1rem);
   }
 
   .scene-formats {
@@ -342,7 +342,7 @@
 
   .format-badge {
     padding: 0.2rem 0.5rem;
-    font-size: 0.65rem;
+    font-size: max(17px, 0.65rem);
   }
 
   .scene-details {
