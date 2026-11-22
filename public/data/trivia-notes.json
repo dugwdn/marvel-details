@@ -1,0 +1,40 @@
+{
+ "about": "About this title notes on trivia pages, written in our own words and rendered by tools/build-trivia.mjs. Each note names its source. No Wikipedia. Added 2026-11-22 for the thin page check.",
+ "notes": {
+  "avengers-doomsday": [
+   {"t": "Doctor Doom first appeared in 1962 as Victor von Doom, the ruler of the small country of Latveria and Reed Richards's old college rival. He is also the villain at the center of the 2015 comic Secret Wars, where he rebuilds a broken multiverse into one world, Battleworld, and rules it.", "src": "Fantastic Four #5 (1962), by Stan Lee and Jack Kirby; Secret Wars #1 to #9 (2015), by Jonathan Hickman and Esad Ribic"},
+   {"t": "Marvel announced at San Diego Comic-Con in July 2024 that Robert Downey Jr., who played Tony Stark from 2008 to 2019, would play Doom, and that Anthony and Joe Russo, the directors of Infinity War and Endgame, would direct.", "src": "Marvel Studios panel, San Diego Comic-Con (July 2024)"},
+   {"t": "In March 2025 Marvel revealed much of the cast in a long livestream that showed actors' names on the backs of chairs, one at a time.", "src": "Marvel Entertainment livestream (March 2025)"}
+  ],
+  "whih-newsfront-web-series": [
+   {"t": "WHIH Newsfront was a run of short fake news videos Marvel posted online in 2015 and 2016 to build up Ant-Man and Captain America: Civil War. Leslie Bibb returned as reporter Christine Everhart, who first met Tony Stark in Iron Man (2008).", "src": "WHIH Newsfront (Marvel, 2015 to 2016); Iron Man (2008)"}
+  ],
+  "i-am-groot": [
+   {"t": "I Am Groot is a set of short cartoons on Disney+ starring Baby Groot, written and directed by Kirsten Lepore. The first five shorts came out in August 2022 and a second season followed in 2023. Vin Diesel voices Groot, who only ever says \"I am Groot\".", "src": "I Am Groot (Disney+, 2022 and 2023)"},
+   {"t": "Groot began as a tree monster from another planet in a 1960 comic, years before he joined the Guardians.", "src": "Tales to Astonish #13 (1960), by Stan Lee, Larry Lieber and Jack Kirby"}
+  ],
+  "werewolf-by-night": [
+   {"t": "Werewolf by Night was Marvel Studios' first Special Presentation, released on Disney+ in October 2022 for Halloween. It was directed by Michael Giacchino, the composer of the MCU's Spider-Man and Doctor Strange scores, runs under an hour, and is shot mostly in black and white in the style of old monster films. A color version followed in 2023.", "src": "Werewolf by Night (Disney+, 2022); Werewolf by Night in Color (Disney+, 2023)"},
+   {"t": "Gael Garcia Bernal plays Jack Russell, a monster hunter who is secretly a werewolf, and Laura Donnelly plays Elsa Bloodstone, who comes home to compete for her late father's Bloodstone. Jack's friend Ted is the swamp creature Man-Thing.", "src": "Werewolf by Night (Disney+, 2022)"},
+   {"t": "All three come from 1970s and later comics: Jack Russell first appeared in 1972, Man-Thing in 1971, and Elsa Bloodstone in 2001.", "src": "Marvel Spotlight #2 (1972), by Gerry Conway, Roy Thomas and Mike Ploog; Savage Tales #1 (1971); Bloodstone #1 (2001)"}
+  ],
+  "the-defenders": [
+   {"t": "The Defenders was an eight-episode Netflix series from 2017 that brought together the heroes of four earlier Netflix shows: Daredevil, Jessica Jones, Luke Cage and Iron Fist. They fight the Hand, a secret group led by Alexandra, played by Sigourney Weaver, who has brought Elektra back from the dead as their weapon, the Black Sky.", "src": "The Defenders (Netflix, 2017)"},
+   {"t": "The comic Defenders were a very different team: in 1971, Doctor Strange, the Hulk and Namor formed a group of loners who only came together when needed.", "src": "Marvel Feature #1 (1971), by Roy Thomas and Ross Andru"},
+   {"t": "The Netflix shows moved to Disney+ in 2022, and Daredevil: Born Again brought Charlie Cox and Vincent D'Onofrio back in 2025.", "src": "Daredevil: Born Again (Disney+, 2025)"}
+  ],
+  "wonder-man": [
+   {"t": "Simon Williams first appeared in a 1964 Avengers comic, given ionic powers by Baron Zemo so he could destroy the team. He later became a hero, and the comics made him a Hollywood actor as well.", "src": "The Avengers #9 (1964), by Stan Lee, Don Heck and Jack Kirby"},
+   {"t": "The Disney+ series stars Yahya Abdul-Mateen II as Simon, an actor trying to land a superhero role, with Ben Kingsley back as Trevor Slattery, the actor who played the fake Mandarin in Iron Man 3.", "src": "Wonder Man (Disney+, 2026); Iron Man 3 (2013)"}
+  ],
+  "blade": [
+   {"t": "Blade first appeared in 1973 in The Tomb of Dracula, as a vampire hunter with a bandolier of teak knives. Wesley Snipes played him in three films from 1998 to 2004, and the first one was a hit years before the MCU began.", "src": "The Tomb of Dracula #10 (1973), by Marv Wolfman and Gene Colan; Blade (1998); Blade II (2002); Blade: Trinity (2004)"},
+   {"t": "Marvel announced Mahershala Ali as its Blade at San Diego Comic-Con in 2019. So far his voice is the only part of him on screen: he speaks to Dane Whitman in the post-credits scene of Eternals.", "src": "Marvel Studios panel, San Diego Comic-Con (July 2019); Eternals (2021), post-credits scene"}
+  ],
+  "ironheart": [
+   {"t": "Riri Williams first appeared in a 2016 Iron Man comic as a teenage genius who builds her own armor in a dorm room. Dominique Thorne first played her in Black Panther: Wakanda Forever, as the MIT student whose vibranium detector draws Namor's attention.", "src": "Invincible Iron Man vol. 3 #7 (2016), by Brian Michael Bendis and Mike Deodato; Black Panther: Wakanda Forever (2022)"},
+   {"t": "The six-episode series came to Disney+ in June 2025. Riri goes home to Chicago, joins the crew of Parker Robbins, the Hood, played by Anthony Ramos, and builds an AI named N.A.T.A.L.I.E. from the memory of her late best friend.", "src": "Ironheart (Disney+, 2025)"},
+   {"t": "The finale reveals the man behind the Hood's power as Mephisto, played by Sacha Baron Cohen, a demon the comics have used since 1968.", "src": "Ironheart, episode 6 (Disney+, 2025); Silver Surfer #3 (1968), by Stan Lee and John Buscema"}
+  ]
+ }
+}

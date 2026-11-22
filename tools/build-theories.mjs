@@ -22,6 +22,17 @@ export const STATUS = {
   debunked: { label: 'Debunked', order: 3, blurb: 'The films went another way.' },
 };
 
+// Extra background per theory (2026-11-21, thin page check): our own words, each paragraph with a
+// checkable source (a scene, a comic issue or an article). Kept apart from theories.json because
+// tools/import-theories.py rewrites that file.
+export const notes = (root = ROOT) => { const f = path.join(root, 'data', 'theory-notes.json'); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).notes : {}; };
+const NOTES = notes();
+const cite = c => c.url ? ext(c.url, c.src || host(c.url)) : esc(c.src);
+const background = t => { const n = NOTES[t.id]; if (!n?.length) return '';
+  return `            <section class="th-more" aria-labelledby="h-more-bg"><h2 id="h-more-bg">Behind the theory</h2>
+${n.map(c => `            <p>${esc(c.t)} <span class="th-where">Source: ${cite(c)}</span></p>`).join('\n')}
+            </section>\n`; };
+
 export const theories = (root = ROOT) => JSON.parse(fs.readFileSync(path.join(root, 'data', 'theories.json'), 'utf8')).theories;
 
 const stamp = s => `<span class="th-stamp ${esc(s)}">${esc(STATUS[s].label)}</span>`;
@@ -88,7 +99,7 @@ ${l.map(t => `                ${card(t)}`).join('\n')}
 }
 
 export function theoryPage(t, list, next) {
-  const sources = [...new Set([t.origin?.origin_url, t.status_source, ...(t.evidence || []).map(e => e.source), ...(t.against || []).map(a => a.source), ...(t.coverage || [])].filter(Boolean))];
+  const sources = [...new Set([t.origin?.origin_url, t.status_source, ...(t.evidence || []).map(e => e.source), ...(t.against || []).map(a => a.source), ...(t.coverage || []), ...(NOTES[t.id] || []).map(c => c.url)].filter(Boolean))];
   const related = list.filter(x => x.id !== t.id && x.films?.some(f => t.films?.includes(f))).slice(0, 3);
   return page({
     url: `/theories/${t.id}`,
@@ -103,7 +114,7 @@ export function theoryPage(t, list, next) {
             <p class="tv-lede">${esc(t.one_line)}</p>
 ${t.hook ? `            <aside class="th-hook" aria-label="Why fans can't let it go"><b>Why fans can't let it go</b><p>${esc(t.hook)}</p></aside>\n` : ''}            <section aria-labelledby="h-what"><h2 id="h-what">What fans think</h2>
             <p>${esc(t.summary)}</p></section>
-            <section class="th-board" aria-labelledby="h-board"><h2 id="h-board">The evidence board</h2>
+${background(t)}            <section class="th-board" aria-labelledby="h-board"><h2 id="h-board">The evidence board</h2>
             <ol class="th-clues">
 ${(t.evidence || []).map(e => `                <li class="th-clue"><p>${esc(e.point)}</p><span class="th-where">${esc(e.scene)}</span></li>`).join('\n')}
             </ol></section>

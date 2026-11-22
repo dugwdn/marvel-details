@@ -1427,3 +1427,13 @@ html body .home-lead .hl-theory { background: transparent !important; border: 0 
 html body .home-lead .hl-theory :is(h3, h3 a) { color: #fff !important; }
 html body .home-lead .hl-theory p { color: #e6e6ec !important; }
 html body .home-lead .hl-feed b { color: #ffd60a !important; }
+
+/* Hub notes and pre-drawn hub lists (thin page check, 2026-11-22) */
+.hub-notes { margin: 2.5rem 0 1rem; max-width: 60rem; }
+.hub-notes h2 { margin: 1.5rem 0 .75rem; }
+.hub-notes p, .prerender-list li { font-size: 1.0625rem; line-height: 1.6; }
+.hub-notes p { margin: 0 0 1rem; }
+.hub-notes a, .prerender-list a, .prerender-h a { text-decoration: none; font-weight: 700; }
+.prerender-list { margin: 0 0 1.5rem; padding-left: 1.25rem; }
+.prerender-list li { margin: 0 0 .5rem; }
+.char-notes .note-src { display: block; margin-top: .25rem; font-size: 1.0625rem; color: #555; }
