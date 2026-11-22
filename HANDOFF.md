@@ -96,6 +96,7 @@ None. The `fetch-media.yml` Action is manual only. If it is never run, new photo
 - The D1 `saves` migration (`0002`) was never confirmed as applied. Until it is, member sync and "Delete my account" error for signed-in members.
 - `wrangler.toml` holds a public Google client ID, which is fine. Database and KV IDs are in there too; do not copy them into docs.
 - Must run `node tools/menu.mjs` after any CSS, JS or page-list change.
+- Phones show four menu tabs (ADR-020): the three in `PHONE_TABS` in tools/menu.mjs plus More (`public/js/menu.js`).
 - Wikimedia blocks cloud IPs (error 429); use the `media/fetch-*` branch route in `RUNBOOK.md`.
 - `package.json` pins wrangler `^3.78.0`; dev command is `wrangler pages dev`.
 - Seven planned articles are still unwritten. The "house writers" bylines are pen names; Doug has not decided how to present them.
