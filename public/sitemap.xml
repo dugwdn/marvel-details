@@ -1609,4 +1609,34 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/natalie-rushman-black-widow-iron-man-2</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/iron-man-2-whiplash-ivan-vanko</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/iron-man-mark-i-cave-box-of-scraps</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/how-vision-got-the-mind-stone</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/avengers-shawarma-post-credits-scene</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

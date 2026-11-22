@@ -21,10 +21,10 @@ need his OK, accounts or his laptop; the rest Claude does on a branch with a PR.
 ## Now (Claude, no Doug needed)
 1. Finish draft PR #28: images, trailers, credits page, official-trailer rule.
 2. Dead-link fixes (another thread); keep `node tools/check-links.mjs` green.
-3. Write the 7 missing articles, each with sources, then list them: first armor,
-   Black Widow's intel, the Iron Man 3 Mandarin scene, Endgame's final fight, the
-   Avengers post-credits scene, Whiplash's whips, the Quantum Realm's color.
-   (4 articles exist today.) Run `node tools/menu.mjs` and `python3 tools/comic-panels.py` after.
+3. Articles: first armor, Black Widow's intel, the Avengers post-credits scene and
+   Whiplash's whips were written 2026-11-22, plus how Vision got the Mind Stone
+   (9 articles now). The Mandarin and Cap's worthiness are covered by theory pages,
+   so no second page. Left: Endgame's final fight, the Quantum Realm's color. Run `node tools/menu.mjs` and `python3 tools/comic-panels.py` after.
 
 - **Discussions and boards (ADR-015, PR open):** once merged, Doug adds his
   member id to `MOD_MEMBERS` and the free Turnstile keys (RUNBOOK
