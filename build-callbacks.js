@@ -17,6 +17,17 @@ const __dirname = path.dirname(__filename);
 // Read the callbacks data
 const callbacksPath = path.join(__dirname, 'public/data/callbacks.json');
 const callbacksData = JSON.parse(fs.readFileSync(callbacksPath, 'utf8'));
+// Sourced background per callback (thin page check, 2026-11-22). Kept apart from callbacks.json.
+const notesPath = path.join(__dirname, 'public/data/callback-notes.json');
+const NOTES = fs.existsSync(notesPath) ? JSON.parse(fs.readFileSync(notesPath, 'utf8')).notes : {};
+const noteCite = (c) => c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.src)}</a>` : escapeHtml(c.src);
+const notesHtml = (id) => (NOTES[id] || []).length ? `
+        <!-- More to know -->
+        <section class="detail-section cb-more">
+            <h2><span class="section-icon">🔎</span> More to know</h2>
+${NOTES[id].map(n => `            <p>${escapeHtml(n.t)} <span class="cb-src">Source: ${noteCite(n)}</span></p>`).join('\n')}
+        </section>
+` : '';
 
 const movies = {
   'iron-man-1': { title: 'Iron Man', year: 2008, slug: 'iron-man-1' },
@@ -213,9 +224,12 @@ function generateCallbackPage(callback, prev, next) {
             margin-top: 1.5rem;
         }
 
+        .cb-more p { margin: 0 0 1rem; font-size: 1.0625rem; line-height: 1.7; }
+        .cb-more .cb-src { display: block; margin-top: .25rem; color: #555; }
+        .cb-more a { text-decoration: none; font-weight: 700; }
         .explanation-box p {
             margin: 0;
-            font-size: 1rem;
+            font-size: 1.0625rem;
             line-height: 1.7;
             color: #5d4037;
         }
@@ -393,7 +407,7 @@ function generateCallbackPage(callback, prev, next) {
             </div>
             ${sourceHtml(callback.source)}
         </section>
-
+${notesHtml(callback.id)}
         <!-- Metadata -->
         <section class="detail-section">
             <div class="metadata-grid">
