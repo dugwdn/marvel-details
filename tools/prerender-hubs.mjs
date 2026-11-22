@@ -14,7 +14,7 @@ const START = '<!-- prerender:start -->', END = '<!-- prerender:end -->';
 function fill(file, id, html) {
   const f = path.join(ROOT, file);
   let s = fs.readFileSync(f, 'utf8');
-  const open = s.search(new RegExp(`<div id="${id}"[^>]*>`));
+  const open = s.search(new RegExp(`<div[^>]*\\bid="${id}"[^>]*>`));
   if (open < 0) throw new Error(`${file}: no #${id}`);
   const after = s.indexOf('>', open) + 1;
   const block = `${START}\n${html}\n${END}`;
@@ -45,6 +45,15 @@ fill('scenes/index.html', 'scenes-container', films.map(([id, name]) => {
   const list = scenes.filter(s => s.movieId === id);
   return `<h2 class="prerender-h"><a href="/scenes/${esc(id)}-scenes">${esc(name)}</a></h2>\n<p>Released on: ${esc(list[0].whereToWatch)}.</p>\n<ul class="prerender-list">${list.map(s => `<li>${esc(s.title)}${s.runtime ? ` (${esc(s.runtime)})` : ''}</li>`).join('')}</ul>`;
 }).join('\n'));
+
+// One film's deleted-scene page: every scene with its running time, what happens (when a source says) and where it was released.
+const NOT_KNOWN = /not guessing/;
+for (const [id] of films) {
+  const file = `scenes/${id}-scenes.html`;
+  if (!fs.existsSync(path.join(ROOT, file))) continue;
+  fill(file, 'movie-scenes-list', `<ul class="prerender-list">\n${scenes.filter(s => s.movieId === id).map(s =>
+    `<li><strong>${esc(s.title)}</strong>${s.runtime ? ` (${esc(s.runtime)})` : ''}: ${NOT_KNOWN.test(s.description) ? esc(s.synopsis) : `${esc(s.description)}${s.synopsis && !/^Listed among/.test(s.synopsis) ? ' ' + esc(s.synopsis) : ''}`} Source: <a href="${esc(s.source.url)}" target="_blank" rel="noopener">${esc(s.source.name)}</a>.</li>`).join('\n')}\n</ul>`);
+}
 
 // Character arcs: hero name, who plays them, and the arc in one line.
 const chars = data('characters.json').characters;
