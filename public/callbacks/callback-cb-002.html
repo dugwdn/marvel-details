@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex, follow">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -127,9 +127,12 @@
             margin-top: 1.5rem;
         }
 
+        .cb-more p { margin: 0 0 1rem; font-size: 1.0625rem; line-height: 1.7; }
+        .cb-more .cb-src { display: block; margin-top: .25rem; color: #555; }
+        .cb-more a { text-decoration: none; font-weight: 700; }
         .explanation-box p {
             margin: 0;
-            font-size: 1rem;
+            font-size: 1.0625rem;
             line-height: 1.7;
             color: #5d4037;
         }
@@ -272,7 +275,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
-    <link rel="stylesheet" href="/css/theme.css?v=39aceacc">
+    <link rel="stylesheet" href="/css/theme.css?v=fb10283b">
     <link rel="stylesheet" href="/css/discuss.css?v=f30c40f2">
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NESPZD6XSQ"></script>
@@ -360,6 +363,15 @@
             <p class="callback-source">Source: <a href="https://en.wikipedia.org/wiki/Iron_Man_(2008_film)#Post-production" target="_blank" rel="noopener">Wikipedia: Iron Man (2008 film), Post-production</a></p>
         </section>
 
+        <!-- More to know -->
+        <section class="detail-section cb-more">
+            <h2><span class="section-icon">🔎</span> More to know</h2>
+            <p>Tony finds the icing problem while chasing a record: he flies the silver Mark II higher than the SR-71 Blackbird&#039;s altitude record, and the suit freezes and drops until the ice breaks off. Back in the workshop he fixes it with a gold-titanium alloy he says he took from a satellite, which is why the Mark III is gold, with hot-rod red added on top. <span class="cb-src">Source: Iron Man (2008), the test flight and the workshop</span></p>
+            <p>Stane builds the Iron Monger from the pieces of the Mark I that the Ten Rings recovered from the desert, plus the reactor stolen from Tony&#039;s chest. Because his engineers copied the older design, the frozen flaw is still in it. <span class="cb-src">Source: Iron Man (2008), the Ten Rings camp and the Stark Industries lab</span></p>
+            <p>Fighting Stane over Los Angeles, Tony asks him how he solved the icing problem. Stane&#039;s suit stops working in the cold air, falls back toward the roof, and the fight ends on the building with the giant reactor. <span class="cb-src">Source: Iron Man (2008), the final battle</span></p>
+            <p>The scene also shows how Tony works: he tests everything on himself, with J.A.R.V.I.S. warning him the whole way, and he only asks about the record after he is already climbing. <span class="cb-src">Source: Iron Man (2008), the test flight</span></p>
+        </section>
+
         <!-- Metadata -->
         <section class="detail-section">
             <div class="metadata-grid">
@@ -389,9 +401,9 @@
     </footer>
     <script type="module" src="/js/members.js?v=e59b7b8f"></script>
     <script type="module" src="/js/search.js?v=3f64106c"></script>
-    <script src="/js/media.js?v=754294a9" defer></script>
     <script type="module" src="/js/keyboard.js?v=bd0f7407"></script>
     <script type="module" src="/js/signin-popup.js?v=19dab9ed"></script>
     <script type="module" src="/js/discuss.js?v=46921818"></script>
+    <script src="/js/media.js?v=754294a9" defer></script>
 </body>
 </html>

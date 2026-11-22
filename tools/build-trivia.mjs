@@ -20,6 +20,13 @@ const KIND_ID = k => k.toLowerCase().replace(/[^a-z]+/g, '-');
 
 export const trivia = (root = ROOT) => JSON.parse(fs.readFileSync(path.join(root, 'data', 'trivia.json'), 'utf8'));
 
+// Our own sourced notes per title (thin page check, 2026-11-22), shown above the wiki facts.
+const notesFile = path.join(ROOT, 'data', 'trivia-notes.json');
+const TNOTES = fs.existsSync(notesFile) ? JSON.parse(fs.readFileSync(notesFile, 'utf8')).notes : {};
+const tnotes = slug => (TNOTES[slug] || []).length ? `            <section class="tv-about" aria-labelledby="h-about"><h2 id="h-about">About this title</h2>
+${TNOTES[slug].map(n => `            <p>${esc(n.t)} <span class="tv-about-src">Source: ${esc(n.src)}</span></p>`).join('\n')}
+            </section>
+` : '';
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
 // A fan-spotted detail: the scene, what to look for, and who reported it (so it can be checked).
 export function factHtml(f) {
@@ -112,7 +119,7 @@ export function workPage(data, w) {
     body: `            <p><a class="back-button" href="/trivia/">&larr; All trivia</a></p>
             <h1>${esc(w.work)} trivia</h1>
             <p class="tv-lede">Background details, easter eggs and behind-the-scenes facts fans have spotted in ${esc(w.work)}.</p>
-${toc}${groups.map(([k, list]) => `            <section aria-labelledby="${KIND_ID(k)}"><h2 id="${KIND_ID(k)}">${esc(k)}</h2>
+${tnotes(w.slug)}${toc}${groups.map(([k, list]) => `            <section aria-labelledby="${KIND_ID(k)}"><h2 id="${KIND_ID(k)}">${esc(k)}</h2>
             <ul class="tv-facts">
 ${list.map(f => `                <li id="${esc(f.id)}">${factHtml(f)}</li>`).join('\n')}
             </ul></section>`).join('\n')}

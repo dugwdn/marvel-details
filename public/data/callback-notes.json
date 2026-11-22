@@ -1,0 +1,845 @@
+{
+ "about": "More to know notes on callback pages, rendered by build-callbacks.js. Every note names its source: a film scene, a series or a comic issue. No Wikipedia. Added 2026-11-22 for the thin page check.",
+ "notes": {
+  "cb-001": [
+   {
+    "t": "The reactor itself goes back to Iron Man's first comic in 1963, where Tony is captured in Vietnam and builds a chest plate with fellow prisoner Professor Yinsen to keep shrapnel from reaching his heart. The film moved the cave to Afghanistan and turned the chest plate into the glowing arc reactor.",
+    "src": "Tales of Suspense #39 (1963), by Stan Lee, Larry Lieber, Don Heck and Jack Kirby; Iron Man (2008)"
+   },
+   {
+    "t": "The reactor in Tony's chest stays a problem for two more films. In Iron Man 2 its palladium core is slowly poisoning him until he builds a new element, and at the end of Iron Man 3 he has the shrapnel taken out and throws the old reactor into the sea, saying he is still Iron Man without it.",
+    "src": "Iron Man 2 (2010); Iron Man 3 (2013), ending"
+   },
+   {
+    "t": "Before the funeral, Tony's family watches the goodbye he recorded in his helmet, which ends with \"I love you 3000\", the line Morgan uses with him earlier in the film. The heroes stand in silence on the lawn while the reactor floats away.",
+    "src": "Avengers: Endgame (2019), the lake house"
+   },
+   {
+    "t": "Pepper's engraving also matches how she sees him from the start: in the first film she is the only one who calls out his selfishness to his face, and the one he trusts with the reactor.",
+    "src": "Iron Man (2008)"
+   }
+  ],
+  "cb-002": [
+   {
+    "t": "Tony finds the icing problem while chasing a record: he flies the silver Mark II higher than the SR-71 Blackbird's altitude record, and the suit freezes and drops until the ice breaks off. Back in the workshop he fixes it with a gold-titanium alloy he says he took from a satellite, which is why the Mark III is gold, with hot-rod red added on top.",
+    "src": "Iron Man (2008), the test flight and the workshop"
+   },
+   {
+    "t": "Stane builds the Iron Monger from the pieces of the Mark I that the Ten Rings recovered from the desert, plus the reactor stolen from Tony's chest. Because his engineers copied the older design, the frozen flaw is still in it.",
+    "src": "Iron Man (2008), the Ten Rings camp and the Stark Industries lab"
+   },
+   {
+    "t": "Fighting Stane over Los Angeles, Tony asks him how he solved the icing problem. Stane's suit stops working in the cold air, falls back toward the roof, and the fight ends on the building with the giant reactor.",
+    "src": "Iron Man (2008), the final battle"
+   },
+   {
+    "t": "The scene also shows how Tony works: he tests everything on himself, with J.A.R.V.I.S. warning him the whole way, and he only asks about the record after he is already climbing.",
+    "src": "Iron Man (2008), the test flight"
+   }
+  ],
+  "cb-003": [
+   {
+    "t": "In the comics, Obadiah Stane arrived in 1982 and took over Stark International by driving Tony into alcoholism. The film made him something closer to family: Howard Stark's old partner, the man who ran the company after Howard died and who brought pizza to Tony's house soon after he got home.",
+    "src": "Iron Man #163 (1982), by Dennis O'Neil and Luke McKenzie; Iron Man (2008)"
+   },
+   {
+    "t": "The clues are on screen before the reveal. Stane goes to the board to lock Tony out of the company after the press conference, and Tony is the one who finds out the truth: his company's weapons are in the Ten Rings' hands in Gulmira. Pepper then copies files from Stane's computer and finds proof that he had been dealing with the Ten Rings.",
+    "src": "Iron Man (2008), Gulmira and the Stark Industries offices"
+   },
+   {
+    "t": "Jeff Bridges shaved his head for the part. The film shows Stane's other face in the desert: he meets Raza, the Ten Rings leader, takes the pieces of the Mark I, and has his own men kill Raza and his fighters.",
+    "src": "Iron Man (2008), the Ten Rings camp"
+   },
+   {
+    "t": "Stane's suit is the first enemy armor in the MCU. Iron Man 2 follows with Vanko's whip suit and Justin Hammer's drones.",
+    "src": "Iron Man (2008); Iron Man 2 (2010)"
+   }
+  ],
+  "cb-004": [
+   {
+    "t": "J.A.R.V.I.S. is a nod to Edwin Jarvis, the Stark family butler in the comics, who first appeared in 1964. Paul Bettany voiced the film's AI from 2008 until he played Vision, the android J.A.R.V.I.S. becomes part of in Age of Ultron.",
+    "src": "Tales of Suspense #59 (1964), by Stan Lee and Don Heck; Iron Man (2008); Avengers: Age of Ultron (2015)"
+   },
+   {
+    "t": "The Iron Man 3 ending is called the House Party Protocol. J.A.R.V.I.S. flies dozens of the suits Tony built during his sleepless months to the oil rig at once. Afterwards Tony orders the Clean Slate Protocol, and J.A.R.V.I.S. blows up every one of those suits as a gift to Pepper.",
+    "src": "Iron Man 3 (2013), the oil rig and the ending"
+   },
+   {
+    "t": "When J.A.R.V.I.S. is gone, Tony uses a new AI, F.R.I.D.A.Y., from Age of Ultron onward. Peter Parker later inherits another, E.D.I.T.H., in Spider-Man: Far From Home.",
+    "src": "Avengers: Age of Ultron (2015); Spider-Man: Far From Home (2019)"
+   },
+   {
+    "t": "In the Iron Man 3 escape, J.A.R.V.I.S. flies on a flight plan Tony had set for the Mandarin investigation, which is how Tony wakes up in the snow in Rose Hill, Tennessee, instead of somewhere safe. The suit runs out of power and Tony has to drag it to a garage by himself.",
+    "src": "Iron Man 3 (2013), the Malibu attack and Rose Hill"
+   }
+  ],
+  "cb-005": [
+   {
+    "t": "Pepper and Tony's first close moment is in the same film as the reactor swap. At the Firefighters Family Fund benefit, they dance, step out onto the roof and almost kiss, and Pepper stops it.",
+    "src": "Iron Man (2008), the benefit at Disney Hall"
+   },
+   {
+    "t": "Iron Man 2 puts them to the test before the kiss. Tony hands Pepper the company and pushes her away while he is dying from palladium, then gives her a box of strawberries for her birthday, not knowing she is allergic to them.",
+    "src": "Iron Man 2 (2010)"
+   },
+   {
+    "t": "By Endgame they are married with a daughter, Morgan, living by a lake. Pepper is with Tony at the end of the final battle and tells him he can rest now.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "The reactor swap is played as a comic scene: Pepper has to pull a wire out of the socket in Tony's chest without touching the sides, and Tony jokes through it. Afterwards he asks her to destroy the old reactor, and she has it mounted instead, which is the start of cb-001.",
+    "src": "Iron Man (2008), Tony's workshop"
+   },
+   {
+    "t": "In The Avengers, the couple are in Stark Tower together when Coulson arrives with the files, and Tony tries to call her as he carries the missile into the portal. Gwyneth Paltrow came back for the Rescue armor in Endgame's final battle and for the funeral.",
+    "src": "The Avengers (2012); Avengers: Endgame (2019)"
+   }
+  ],
+  "cb-006": [
+   {
+    "t": "Yinsen is a doctor in the film, played by Shaun Toub, and he is the reason Tony survives the attack at all: he puts a car battery-powered electromagnet in Tony's chest to keep the shrapnel back. In the 1963 comic he is a physicist who builds the first suit with Tony and dies buying him time, the part the film kept.",
+    "src": "Iron Man (2008), the cave; Tales of Suspense #39 (1963), by Stan Lee, Larry Lieber, Don Heck and Jack Kirby"
+   },
+   {
+    "t": "Yinsen's last words to Tony are \"Don't waste it. Don't waste your life.\" The line is the reason Tony gives for ending weapons work and becoming Iron Man.",
+    "src": "Iron Man (2008), the escape from the cave"
+   },
+   {
+    "t": "Yinsen also tells Tony he is going to see his family, who he says were killed. In Endgame, Tony's choice comes after he has a family of his own, and he records a goodbye for them first.",
+    "src": "Iron Man (2008), the cave; Avengers: Endgame (2019)"
+   },
+   {
+    "t": "Yinsen sums Tony up in one line in the cave: \"So you're a man who has everything, and nothing.\" He also speaks the Ten Rings' languages and translates their orders for Tony while they build.",
+    "src": "Iron Man (2008), the cave; The Avengers (2012)"
+   },
+   {
+    "t": "Shaun Toub came back as Yinsen for a short scene at the 1999 party that opens Iron Man 3.",
+    "src": "Iron Man 3 (2013), the opening"
+   }
+  ],
+  "cb-007": [
+   {
+    "t": "Whiplash in the comics is a different man: Mark Scarlotti, a Maggia weapons designer who first appeared in 1968. The film borrowed the whips and the name and built Ivan Vanko, played by Mickey Rourke, around a feud with the Stark family.",
+    "src": "Tales of Suspense #97 (1968), by Stan Lee and Gene Colan; Iron Man 2 (2010)"
+   },
+   {
+    "t": "Ivan's arc reactor is the same basic idea Howard and Anton had worked on together. After he is arrested in Monaco, Justin Hammer breaks him out of prison to build armor for Hammer Industries, and Ivan builds drones instead.",
+    "src": "Iron Man 2 (2010), Monaco and Hammer Industries"
+   },
+   {
+    "t": "Howard's old film reels also give Tony the answer to his own problem. He finds a message from his father that leads him to the Stark Expo model, which hides the structure of a new element that replaces palladium.",
+    "src": "Iron Man 2 (2010), the Stark Expo model"
+   },
+   {
+    "t": "The Monaco attack is the first fight where Tony uses a suit carried in a briefcase, the Mark V, which Happy and Pepper bring onto the track in the car.",
+    "src": "Iron Man 2 (2010), Monaco"
+   },
+   {
+    "t": "Sam Rockwell plays Justin Hammer, Tony's rival weapons maker, who breaks Vanko out of prison after Monaco.",
+    "src": "Iron Man 2 (2010)"
+   }
+  ],
+  "cb-008": [
+   {
+    "t": "The missiles that hit Tony's convoy in Afghanistan have \"Stark Industries\" printed on the side. It is the first thing he sees before the explosion, and it is why he ends weapons work at the press conference.",
+    "src": "Iron Man (2008), the opening attack"
+   },
+   {
+    "t": "On the Helicarrier, Tony has J.A.R.V.I.S. hack S.H.I.E.L.D.'s files, and Steve goes looking himself and finds the plans for Tesseract weapons. Loki's scepter is in the room during the argument, and the film suggests it is pushing them toward a fight.",
+    "src": "The Avengers (2012), the Helicarrier lab"
+   },
+   {
+    "t": "Weapons follow Tony into later films too. In Age of Ultron, Wanda and Pietro say a Stark shell landed next to them as children and did not go off, and their anger at Tony started there.",
+    "src": "Avengers: Age of Ultron (2015), the Maximoffs' story"
+   },
+   {
+    "t": "Tony's new path in The Avengers is clean energy: Stark Tower runs on its own arc reactor, which is why Loki and Selvig use the roof to power the Tesseract portal.",
+    "src": "The Avengers (2012), Stark Tower"
+   },
+   {
+    "t": "The theme returns in Age of Ultron: Tony makes Ultron to protect the world, and it turns on him.",
+    "src": "Avengers: Age of Ultron (2015)"
+   },
+   {
+    "t": "Howard Stark built weapons for the Army in the Second World War, as Captain America: The First Avenger shows.",
+    "src": "Captain America: The First Avenger (2011)"
+   }
+  ],
+  "cb-009": [
+   {
+    "t": "The post-credits scene was a surprise in 2008: Samuel L. Jackson's casting was kept quiet. Comic readers knew him already, because the Ultimate Nick Fury of 2002 was drawn to look like him, years before he played the part.",
+    "src": "Iron Man (2008), post-credits scene; The Ultimates #1 (2002), by Mark Millar and Bryan Hitch"
+   },
+   {
+    "t": "The Initiative is mentioned again in Iron Man 2, where Fury tells Tony he is wanted as a consultant but not as a member, based on Natasha's report about him. That report is shown at the end with a stamp: Iron Man yes, Tony Stark not recommended.",
+    "src": "Iron Man 2 (2010), Natasha's report"
+   },
+   {
+    "t": "The Avengers shows Fury's case for the team in his own words to the World Security Council: the idea of bringing together remarkable people to fight the battles no one else could.",
+    "src": "The Avengers (2012), Fury and the Council"
+   },
+   {
+    "t": "Fury's line in the 2008 scene is that Tony is not the only superhero in the world, and that he has become part of a bigger universe, he just doesn't know it yet. Fury's eyepatch and long coat came straight from the comics.",
+    "src": "Iron Man (2008), post-credits scene"
+   },
+   {
+    "t": "Fury's next post-credits visit is in Thor (2011), where he shows Erik Selvig the Tesseract, and Iron Man 2 ends with Coulson finding Thor's hammer in New Mexico.",
+    "src": "Thor (2011); Iron Man 2 (2010), post-credits scene"
+   }
+  ],
+  "cb-010": [
+   {
+    "t": "The line was not the cover story. S.H.I.E.L.D. had Agent Coulson hand Tony an alibi that he was on his yacht. Tony looks at the cards, then puts them down and says it.",
+    "src": "Iron Man (2008), final press conference"
+   },
+   {
+    "t": "Iron Man 2 opens six months later, and the fallout is everywhere: Senator Stern calls Tony to a Senate hearing to make him hand over the suit, and Tony answers that he has privatized world peace.",
+    "src": "Iron Man 2 (2010), the Senate hearing"
+   },
+   {
+    "t": "Public identity later becomes the line between Tony and Steve. In Civil War, Tony supports the Sokovia Accords, which would put the Avengers under the United Nations, and Steve refuses to sign.",
+    "src": "Captain America: Civil War (2016)"
+   },
+   {
+    "t": "The comics kept Tony's identity secret for decades: Iron Man was introduced to the world as Tony's bodyguard. The film's choice made Tony famous as himself from the first film on.",
+    "src": "Tales of Suspense (Iron Man stories, 1963 to 1968); Iron Man (2008)"
+   },
+   {
+    "t": "At the end of Spider-Man: Far From Home, Mysterio's recording reveals Peter's name to the world, the reverse of Tony choosing to say his.",
+    "src": "Spider-Man: Far From Home (2019), mid-credits scene"
+   },
+   {
+    "t": "Iron Man 3 ends on the same words. After the reactor is removed, Tony says the suit was never the point: \"I am Iron Man.\"",
+    "src": "Iron Man 3 (2013), ending"
+   }
+  ],
+  "cb-011": [
+   {
+    "t": "James Rhodes first appeared in a 1979 Iron Man comic as a pilot, and he wore the Iron Man armor himself for a long stretch in the 1980s. The War Machine armor came in 1992.",
+    "src": "Iron Man #118 (1979), by David Michelinie, Bob Layton and John Byrne; Iron Man #282 (1992)"
+   },
+   {
+    "t": "The setup line is in the first film: looking at the silver Mark II in Tony's workshop, Rhodey says \"Next time, baby\", wishing for a suit of his own. In Iron Man 2 he wears that same suit to fight Tony at the birthday party. Justin Hammer then loads it with weapons for the Air Force, and it ends the film as War Machine.",
+    "src": "Iron Man (2008), the workshop; Iron Man 2 (2010)"
+   },
+   {
+    "t": "In Iron Man 3 the armor is painted red, white and blue and renamed the Iron Patriot.",
+    "src": "Iron Man 3 (2013)"
+   },
+   {
+    "t": "Rhodey's line \"Next time, baby\" also shows that the friendship drives the story more than the armor does. In Civil War he is badly hurt, and in Endgame he travels to Morag in 2014 with Nebula to get the Power Stone.",
+    "src": "Iron Man (2008); Captain America: Civil War (2016); Avengers: Endgame (2019)"
+   }
+  ],
+  "cb-012": [
+   {
+    "t": "Clark Gregg's Coulson introduces himself with his agency's full name, the Strategic Homeland Intervention, Enforcement and Logistics Division, and by the end of the film he tells Tony to just call them S.H.I.E.L.D. In Iron Man 2 he watches Tony; in Thor he runs the S.H.I.E.L.D. camp around Thor's hammer in New Mexico.",
+    "src": "Iron Man (2008); Iron Man 2 (2010); Thor (2011)"
+   },
+   {
+    "t": "His death was not the end for the character. The TV series Agents of S.H.I.E.L.D. brought him back alive in 2013 with his own team, and the show explained that Fury had him revived.",
+    "src": "Agents of S.H.I.E.L.D., season 1 (ABC, 2013)"
+   },
+   {
+    "t": "The films returned to him once more: Captain Marvel, set in 1995, shows a young Coulson working with Fury, again played by Clark Gregg.",
+    "src": "Captain Marvel (2019)"
+   },
+   {
+    "t": "Coulson's death is on the Helicarrier's prison level. Loki tricks Thor into the cell built for the Hulk, then stabs Coulson from behind with the scepter, and Fury reaches him just before he dies.",
+    "src": "The Avengers (2012), the Helicarrier"
+   },
+   {
+    "t": "Coulson is one of the few characters in Iron Man, Iron Man 2, Thor and The Avengers, the four films that set up the team.",
+    "src": "Iron Man (2008); Iron Man 2 (2010); Thor (2011); The Avengers (2012)"
+   }
+  ],
+  "cb-013": [
+   {
+    "t": "Natasha Romanoff first appeared in 1964 as a Soviet spy sent after Tony Stark. She changed sides in the comics before joining the Avengers, which the films echo in her ledger of past sins.",
+    "src": "Tales of Suspense #52 (1964), by Stan Lee, Don Rico and Don Heck"
+   },
+   {
+    "t": "Iron Man 2 shows her skills before it names her. During the boxing session, Natalie takes Happy down in seconds. In the finale she fights through a hall of Hammer guards while Happy deals with one.",
+    "src": "Iron Man 2 (2010)"
+   },
+   {
+    "t": "In The Avengers she gets Loki to reveal his plan by letting him think he is beating her in an interrogation. Black Widow (2021) later told her own story, set between Civil War and Infinity War, with her sister Yelena.",
+    "src": "The Avengers (2012), the Helicarrier cell; Black Widow (2021)"
+   },
+   {
+    "t": "Scarlett Johansson replaced Emily Blunt, who was first cast as Natasha but had another commitment. The Avengers places her in Russia at the start, being interrogated, until Coulson calls her in.",
+    "src": "Iron Man 2 (2010); The Avengers (2012), the opening"
+   },
+   {
+    "t": "Endgame's Vormir scene was the end of her story on screen. Yelena carries on as the next Black Widow in Hawkeye and Thunderbolts*.",
+    "src": "Hawkeye (Disney+, 2021); Thunderbolts* (2025)"
+   },
+   {
+    "t": "In Iron Man 2 she also gives Tony the shot of lithium dioxide that slows his palladium poisoning.",
+    "src": "Iron Man 2 (2010), the doughnut scene"
+   }
+  ],
+  "cb-016": [
+   {
+    "t": "The Tesseract first appeared in Captain America: The First Avenger, where Red Skull finds it in Norway and uses its power for Hydra. Howard Stark fishes it out of the ocean after Steve's plane goes down, which is how S.H.I.E.L.D. ends up with it.",
+    "src": "Captain America: The First Avenger (2011)"
+   },
+   {
+    "t": "In 2012 the heist fails when the 2012 Hulk storms down the stairs and knocks the present-day Tony over, and the case lands at Loki's feet. At Camp Lehigh in 1970 Tony also meets his own father, Howard, who is waiting for his son to be born.",
+    "src": "Avengers: Endgame (2019), the 1970 scene"
+   },
+   {
+    "t": "The cube had already been lost and found in between. Captain Marvel shows it in 1995 inside Mar-Vell's lab, where Goose the Flerken swallows it and spits it out on Fury's desk.",
+    "src": "Captain Marvel (2019)"
+   },
+   {
+    "t": "The 1970 trip also lets Steve see Peggy through a window at her office in Camp Lehigh, still working for S.H.I.E.L.D. He takes the Pym particles from Hank's lab there.",
+    "src": "Avengers: Endgame (2019), Camp Lehigh"
+   },
+   {
+    "t": "S.H.I.E.L.D.'s research base at the start of The Avengers is destroyed when the Tesseract's portal collapses.",
+    "src": "The Avengers (2012), the opening"
+   }
+  ],
+  "cb-017": [
+   {
+    "t": "Bruce's \"always angry\" line comes right before he hits a Chitauri Leviathan with one punch. Earlier in the film he tells the team he once tried to end his life and the Hulk spat out the bullet.",
+    "src": "The Avengers (2012), the Helicarrier and the Battle of New York"
+   },
+   {
+    "t": "The merge happens offscreen in the five years after the Snap. Bruce explains it to the others in a diner, saying he spent eighteen months in a gamma lab and treated the Hulk and himself as one problem.",
+    "src": "Avengers: Endgame (2019), the diner"
+   },
+   {
+    "t": "The comics had a similar idea in 1991: Doc Samson unites Banner and the Hulk into one smart, calm green giant, called the Merged Hulk or the Professor.",
+    "src": "The Incredible Hulk #377 (1991), by Peter David and Dale Keown"
+   },
+   {
+    "t": "Mark Ruffalo was the third actor to play Bruce on film, after Eric Bana in Hulk (2003) and Edward Norton in The Incredible Hulk (2008).",
+    "src": "Hulk (2003); The Incredible Hulk (2008); The Avengers (2012)"
+   },
+   {
+    "t": "In Infinity War the Hulk refuses to come out after his fight with Thanos, which Bruce fixes only by the merge.",
+    "src": "Avengers: Infinity War (2018)"
+   },
+   {
+    "t": "Bruce's merged form also appears in She-Hulk: Attorney at Law, where he trains his cousin Jennifer at his beach house in Mexico.",
+    "src": "She-Hulk: Attorney at Law, episode 1 (Disney+, 2022)"
+   }
+  ],
+  "cb-018": [
+   {
+    "t": "The pair talk about Budapest twice in The Avengers, and they remember it differently. The film never shows the mission; Black Widow later shows a part of it in a flashback.",
+    "src": "The Avengers (2012); Black Widow (2021)"
+   },
+   {
+    "t": "Clint is the reason Natasha joined S.H.I.E.L.D.: she says he was sent to kill her and made a different call. In Age of Ultron she knows his family by name and helps on his farm.",
+    "src": "The Avengers (2012); Avengers: Age of Ultron (2015)"
+   },
+   {
+    "t": "Red Skull guards the Stone on Vormir and tells them the price. The later Hawkeye series has Clint tell Natasha's sister Yelena what happened there.",
+    "src": "Avengers: Endgame (2019), Vormir; Hawkeye, episode 6 (Disney+, 2021)"
+   },
+   {
+    "t": "Jeremy Renner's Clint spends most of The Avengers on the other side. Natasha frees him by hitting him hard on the head. In Endgame, Clint's grief after losing his family drives him to five years of violence as Ronin, and Natasha finds him in Tokyo.",
+    "src": "The Avengers (2012), the Helicarrier; Avengers: Endgame (2019), Tokyo"
+   },
+   {
+    "t": "Hawkeye's Christmas series picks up Clint's grief for Natasha, including the Avengers musical he walks out of in New York.",
+    "src": "Hawkeye, episode 1 (Disney+, 2021)"
+   },
+   {
+    "t": "Of the six founding Avengers, Clint and Natasha are the only two with no powers and no armor.",
+    "src": "The Avengers (2012)"
+   }
+  ],
+  "cb-020": [
+   {
+    "t": "Loki first appeared in a Thor comic in 1962, but the 2011 Thor film gave him his MCU start, where he learns he is a Frost Giant adopted by Odin. Tom Hiddleston has played him since.",
+    "src": "Journey into Mystery #85 (1962), by Stan Lee, Larry Lieber and Jack Kirby; Thor (2011)"
+   },
+   {
+    "t": "At the end of The Avengers the cube goes back to Asgard in a case, and Thor uses it to take Loki home, gagged. Loki later gets it again from Odin's vault during Ragnarok, before Asgard falls.",
+    "src": "The Avengers (2012), ending; Thor: Ragnarok (2017)"
+   },
+   {
+    "t": "The Loki series opens with the 2012 Loki landing in the Gobi Desert and being arrested by the Time Variance Authority for breaking the timeline.",
+    "src": "Loki, episode 1 (Disney+, 2021)"
+   },
+   {
+    "t": "In the 2012 heist, Loki grabs the dropped Tesseract while everyone in the lobby is looking at the Hulk and the fallen Tony, and he is gone before anyone can stop him. The Loki series shows the TVA arresting him right after for breaking the timeline.",
+    "src": "Avengers: Endgame (2019), the Stark Tower lobby; Loki, episode 1 (Disney+, 2021)"
+   },
+   {
+    "t": "Tom Hiddleston first played Loki in Thor (2011) and has played him in every appearance since.",
+    "src": "Thor (2011)"
+   }
+  ],
+  "cb-021": [
+   {
+    "t": "Before the wormhole, Steve tells Tony he is not the guy to make the sacrifice play and lie down on a wire. Tony does it at the end of the film, which is why Steve and Tony's argument comes back so often.",
+    "src": "The Avengers (2012), the Helicarrier"
+   },
+   {
+    "t": "Tony tries to call Pepper on the way through, but the call does not connect. Inside the wormhole he watches the missile hit the Chitauri ship, then falls back as his suit runs dry.",
+    "src": "The Avengers (2012), the Battle of New York"
+   },
+   {
+    "t": "The trip shapes Tony's next films: panic attacks in Iron Man 3, and in Age of Ultron, the vision Wanda gives him of the dead Avengers while the fleet waits in space.",
+    "src": "Iron Man 3 (2013); Avengers: Age of Ultron (2015)"
+   },
+   {
+    "t": "The missile was fired by the World Security Council against Fury's orders, aimed at Manhattan to stop the invasion. Tony takes it, flies it up the side of Stark Tower and into the portal, and Natasha closes the portal with the scepter as he falls back.",
+    "src": "The Avengers (2012), the Battle of New York"
+   },
+   {
+    "t": "Endgame's version has no way back: the Stones burn him and he dies at the scene.",
+    "src": "Avengers: Endgame (2019), the final battle"
+   },
+   {
+    "t": "The wormhole is also the first time Tony sees Thanos's forces in space.",
+    "src": "The Avengers (2012)"
+   }
+  ],
+  "cb-022": [
+   {
+    "t": "Aldrich Killian first appeared in the Extremis comic story of 2005, where he gives the formula to a terrorist and kills himself. The film made him Guy Pearce's polished scientist who runs the plot himself.",
+    "src": "Iron Man vol. 4 #1 to #6 (2005), Extremis, by Warren Ellis and Adi Granov; Iron Man 3 (2013)"
+   },
+   {
+    "t": "Tony leaves Killian waiting on a hotel roof in Bern in 1999. The same party is where Tony meets Maya Hansen, the scientist who made Extremis, and Ho Yinsen, the doctor who later saves his life in the cave.",
+    "src": "Iron Man 3 (2013), the opening"
+   },
+   {
+    "t": "A.I.M. in the comics stands for Advanced Idea Mechanics. The film kept the name for Killian's company.",
+    "src": "Strange Tales #146 (1966), by Stan Lee and Jack Kirby; Iron Man 3 (2013)"
+   },
+   {
+    "t": "Killian's test subjects are wounded veterans, and every failed subject who explodes is covered up as a Mandarin attack. The Vice President is also in on the plot, which is how Killian gets close to the President.",
+    "src": "Iron Man 3 (2013)"
+   },
+   {
+    "t": "Killian's tattoos of a dragon on his chest connect him to the comic Mandarin's dragon look, and he says at the end that he is the Mandarin.",
+    "src": "Iron Man 3 (2013), the oil rig"
+   },
+   {
+    "t": "Killian's chief soldier, Eric Savin, played by James Badge Dale, is on Extremis too.",
+    "src": "Iron Man 3 (2013)"
+   }
+  ],
+  "cb-023": [
+   {
+    "t": "Tony's lead comes from a bombing in Rose Hill, Tennessee, where Harley Keener, a boy who helps him, shows him the scorched shadows. The burn marks match the Chinese Theatre blast that hurt Happy.",
+    "src": "Iron Man 3 (2013), Rose Hill"
+   },
+   {
+    "t": "Maya Hansen reveals the problem: Extremis lets the body regrow lost parts, but in some people it runs too hot and they explode.",
+    "src": "Iron Man 3 (2013), Maya at the Malibu house"
+   },
+   {
+    "t": "The comic Extremis story gave Tony the formula himself, which let him link his body to the armor. The film gives the story to Pepper, and ends with her treated and Tony's chest reactor removed in the same epilogue.",
+    "src": "Iron Man vol. 4 #1 to #6 (2005), Extremis, by Warren Ellis and Adi Granov; Iron Man 3 (2013), ending"
+   },
+   {
+    "t": "The film shows the danger again at the oil rig, where Killian's soldiers breathe fire and regrow limbs. The Mark 42 armor that Tony uses through the film comes apart and flies to him piece by piece, a new trick Tony is still testing.",
+    "src": "Iron Man 3 (2013)"
+   },
+   {
+    "t": "Maya Hansen, played by Rebecca Hall, made Extremis, and Killian kills her when she turns against him.",
+    "src": "Iron Man 3 (2013)"
+   }
+  ],
+  "cb-024": [
+   {
+    "t": "Iron Man 3 is set at Christmas, months after New York. Tony panics when a child asks about the wormhole and when people mention New York, and he tells Rhodey that gods, aliens and other dimensions are more than he can handle.",
+    "src": "Iron Man 3 (2013)"
+   },
+   {
+    "t": "The suits he builds are numbered up to the Mark 42 used in the film, with more in the cellar, which is where the House Party Protocol comes from at the end.",
+    "src": "Iron Man 3 (2013), the oil rig"
+   },
+   {
+    "t": "Age of Ultron shows the fear still driving him: he builds Ultron to protect the world after a vision of the dead team in front of the fleet.",
+    "src": "Avengers: Age of Ultron (2015)"
+   },
+   {
+    "t": "The film's narrator is Tony himself, and the post-credits scene shows who he was telling: Bruce, who fell asleep partway through.",
+    "src": "Iron Man 3 (2013), post-credits scene"
+   },
+   {
+    "t": "In Endgame, Tony is the first to say no to the time heist. He has Morgan now and is not willing to risk her, which shows how much he has changed.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "In one scene the Mark 42 comes to Tony while he is having a nightmare and frightens Pepper, who goes to sleep downstairs. In Tennessee, Harley tells him that as a mechanic he should just build something, and Tony does.",
+    "src": "Iron Man 3 (2013)"
+   }
+  ],
+  "cb-025": [
+   {
+    "t": "The comic Mandarin first appeared in 1964 as Iron Man's great enemy, with ten alien rings of power. The film's twist upset some fans, and Marvel answered in 2014.",
+    "src": "Tales of Suspense #50 (1964), by Stan Lee and Don Heck"
+   },
+   {
+    "t": "The Marvel One-Shot All Hail the King shows Trevor in prison. A filmmaker interviews him, then reveals he works for the real Ten Rings, who are angry Trevor used the name.",
+    "src": "All Hail the King (Marvel One-Shot, 2014)"
+   },
+   {
+    "t": "Shang-Chi and the Legend of the Ten Rings introduced the real leader, Wenwu, played by Tony Leung. Trevor is in his prison, now living with a creature called Morris.",
+    "src": "Shang-Chi and the Legend of the Ten Rings (2021)"
+   },
+   {
+    "t": "Ben Kingsley played both sides of the joke: the terrifying man in the broadcasts and the confused actor in the house in Miami. Trevor is a stage actor from Liverpool with a drug problem, and Killian gave him the house and the role.",
+    "src": "Iron Man 3 (2013), the broadcasts and Miami"
+   },
+   {
+    "t": "The film's real Ten Rings appear in Iron Man in 2008 as the group that kidnaps Tony in Afghanistan, and Shang-Chi in 2021 tied the group to Wenwu, who has led it for about a thousand years.",
+    "src": "Iron Man (2008); Shang-Chi and the Legend of the Ten Rings (2021)"
+   }
+  ],
+  "cb-026": [
+   {
+    "t": "In Iron Man, Pepper hits the reactor's override on Tony's order while he holds Stane on the glass roof, then runs. Tony survives the blast; Stane falls into the reactor.",
+    "src": "Iron Man (2008), the final battle"
+   },
+   {
+    "t": "In Iron Man 3, the Extremis in Pepper's body keeps her alive after a fall that looks fatal. She picks up a piece of Tony's armor and blasts a missile into Killian.",
+    "src": "Iron Man 3 (2013), the oil rig"
+   },
+   {
+    "t": "Pepper's own armor, Rescue, arrives in Endgame. She flies into the final battle beside Tony and stays with him at the end.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "The films set up a pattern: Pepper saves Tony more than once. In Iron Man 2 she takes over the company while Tony is dying, and in Iron Man 3 the Mark 42 protects her during the attack on the Malibu house before Tony takes it back.",
+    "src": "Iron Man 2 (2010); Iron Man 3 (2013), the Malibu attack"
+   },
+   {
+    "t": "In Endgame, she fights beside Tony and is with him as he dies.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "Pepper's fall in Iron Man 3 looks like a death: she drops into the fire from a tower on the oil rig while Tony watches. She comes back walking out of the flames.",
+    "src": "Iron Man 3 (2013), the oil rig"
+   }
+  ],
+  "cb-028": [
+   {
+    "t": "Steve went into the ice crashing the Valkyrie in the Arctic to keep Red Skull's bombs from hitting the US. On the radio, he and Peggy plan a dance for a Saturday night at the Stork Club.",
+    "src": "Captain America: The First Avenger (2011), ending"
+   },
+   {
+    "t": "The dance happens in the last scene of Endgame, in a kitchen with music from the 1940s. In The Winter Soldier, Steve visits an older Peggy in her care home, and in Civil War he carries her coffin at her funeral in London.",
+    "src": "Avengers: Endgame (2019), ending; Captain America: The Winter Soldier (2014); Captain America: Civil War (2016)"
+   },
+   {
+    "t": "Sam's road to the shield took the series The Falcon and the Winter Soldier, and his first film as Captain America is Brave New World.",
+    "src": "The Falcon and the Winter Soldier (Disney+, 2021); Captain America: Brave New World (2025)"
+   },
+   {
+    "t": "Steve wakes up in the present in a fake 1940s room built by S.H.I.E.L.D. He notices that the ball game on the radio is one he had attended, runs out into Times Square, and Fury tells him he has been asleep for almost seventy years.",
+    "src": "Captain America: The First Avenger (2011), ending"
+   }
+  ],
+  "cb-029": [
+   {
+    "t": "Thanos was created by Jim Starlin and first appeared in a 1973 Iron Man comic. In the 1991 comic The Infinity Gauntlet he wipes out half of all life with one snap.",
+    "src": "Iron Man #55 (1973), by Jim Starlin and Mike Friedrich; The Infinity Gauntlet (1991)"
+   },
+   {
+    "t": "After the 2012 tease, Josh Brolin played Thanos in Guardians of the Galaxy and the Age of Ultron mid-credits scene, where he takes up the Gauntlet and says he will do it himself.",
+    "src": "Guardians of the Galaxy (2014); Avengers: Age of Ultron (2015), mid-credits scene"
+   },
+   {
+    "t": "Infinity War gives him the six Stones and the Snap. Endgame finds him on a farm, using the Stones to destroy the Stones, which is why the team needs the time heist.",
+    "src": "Avengers: Infinity War (2018); Avengers: Endgame (2019), the Garden"
+   },
+   {
+    "t": "The Other is the alien who sends Loki to Earth with the scepter and warns him what will happen if he fails.",
+    "src": "The Avengers (2012), the Other"
+   },
+   {
+    "t": "Brolin wore a motion capture suit and a head rig for Infinity War, and the effects teams built Thanos's face from his acting.",
+    "src": "Avengers: Infinity War (2018)"
+   },
+   {
+    "t": "Thanos's warship in the films is the Sanctuary II, which attacks the Avengers compound from the air in Endgame.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "In Infinity War, Thanos takes Gamora to Vormir for the Soul Stone before the battle in Wakanda.",
+    "src": "Avengers: Infinity War (2018)"
+   }
+  ],
+  "cb-030": [
+   {
+    "t": "The 2012 scenes in Endgame put new action into the old battle. Steve runs into his own 2012 self in the halls of Stark Tower, and the two Captains fight while the 2012 Steve thinks the other is Loki in disguise.",
+    "src": "Avengers: Endgame (2019), the 2012 heist"
+   },
+   {
+    "t": "The heist also shows new sides of familiar moments: the elevator full of S.H.I.E.L.D. agents who are secret Hydra, where Steve says \"Hail Hydra\" to get the scepter.",
+    "src": "Avengers: Endgame (2019), the Stark Tower elevator"
+   },
+   {
+    "t": "Bruce gets the Time Stone from the Ancient One on the roof of the Sanctum in New York, after a talk about branching timelines.",
+    "src": "Avengers: Endgame (2019), the Sanctum"
+   },
+   {
+    "t": "Tony and Scott's part of the 2012 heist is to get the Tesseract, and they almost do: Scott shrinks into Tony's arc reactor to give the 2012 Tony a heart attack-like shock. The plan fails when the Hulk comes down the stairs.",
+    "src": "Avengers: Endgame (2019), the Stark Tower lobby"
+   },
+   {
+    "t": "The heist plan only works because the Avengers know where each Stone was on that day. Tony, Steve, Bruce and Scott take the Space, Mind and Time Stones, and fail only with the cube.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "The trip uses Pym particles, and the team has only enough for one trip each, so a failure in 2012 cannot be tried again.",
+    "src": "Avengers: Endgame (2019)"
+   }
+  ],
+  "cb-031": [
+   {
+    "t": "Coulson owns a full set of vintage Captain America trading cards and asks Steve to sign them. After Coulson's death, Fury throws the blood-stained cards on the table to get the team moving.",
+    "src": "The Avengers (2012)"
+   },
+   {
+    "t": "Coulson also helped design Steve's new suit, telling Steve that people might need a little old-fashioned now.",
+    "src": "The Avengers (2012), the Helicarrier"
+   },
+   {
+    "t": "Coulson's last act is to fire an experimental gun at Loki after telling him he lacks conviction.",
+    "src": "The Avengers (2012), after Loki's escape"
+   },
+   {
+    "t": "The trading cards are more than a gag. Coulson tells Steve he watched him while he was unconscious, meaning he was there when Steve was brought in from the ice, and he says people might need a little old-fashioned.",
+    "src": "The Avengers (2012), the Helicarrier"
+   },
+   {
+    "t": "Steve's answer to Coulson's death is to take charge. In the next scenes, he and Tony go after Loki together, and in New York Steve gives the orders to the whole team, down to telling the Hulk to smash.",
+    "src": "The Avengers (2012), the Battle of New York"
+   },
+   {
+    "t": "Captain Marvel, set in 1995, shows Coulson as a young agent working beside Fury, years before either meets Steve.",
+    "src": "Captain Marvel (2019)"
+   },
+   {
+    "t": "Maria Hill notices that Fury's speech was a trick: the cards were in Coulson's locker, not his jacket.",
+    "src": "The Avengers (2012)"
+   },
+   {
+    "t": "Coulson is killed before the Battle of New York begins, while the team is still split up.",
+    "src": "The Avengers (2012)"
+   }
+  ],
+  "cb-032": [
+   {
+    "t": "Guardians of the Galaxy was the first film to set out all six Infinity Stones, in the Collector's slideshow, which matched the Tesseract to the cube Loki took.",
+    "src": "Guardians of the Galaxy (2014), the Collector"
+   },
+   {
+    "t": "Infinity War names it outright: Thanos crushes the Tesseract and takes the Space Stone out of it on the Asgardian refugee ship.",
+    "src": "Avengers: Infinity War (2018), the opening"
+   },
+   {
+    "t": "After Bruce's snap, Steve returns every Stone to its time. The Space Stone goes back to 1970 with the Tesseract.",
+    "src": "Avengers: Endgame (2019), ending"
+   },
+   {
+    "t": "Before The Avengers, the cube had already been part of two films. In Thor's post-credits scene, Fury shows Selvig the Tesseract and asks him to study it, and Loki is watching through Selvig's eyes. That is how Loki knows to come for it.",
+    "src": "Thor (2011), post-credits scene"
+   },
+   {
+    "t": "In The Avengers, the cube powers Selvig's portal on top of Stark Tower. Selvig built a way to shut it off and only hid it inside the portal, which Natasha uses with the scepter.",
+    "src": "The Avengers (2012), Stark Tower"
+   },
+   {
+    "t": "Each of the six stones has a color in the films: the Space Stone is blue.",
+    "src": "Guardians of the Galaxy (2014), the Collector"
+   },
+   {
+    "t": "Captain Marvel later shows the cube in 1995, inside Mar-Vell's laboratory hidden in orbit.",
+    "src": "Captain Marvel (2019)"
+   },
+   {
+    "t": "Thor: Ragnarok shows the cube in Odin's vault, where Loki takes it before Asgard falls.",
+    "src": "Thor: Ragnarok (2017)"
+   }
+  ],
+  "cb-033": [
+   {
+    "t": "Hydra had the scepter after the Battle of New York: The Winter Soldier's mid-credits scene shows Baron Strucker studying it, along with the twins Wanda and Pietro.",
+    "src": "Captain America: The Winter Soldier (2014), mid-credits scene"
+   },
+   {
+    "t": "In Age of Ultron, the Stone in the scepter is used to make Ultron and then Vision, who wears it in his forehead. Infinity War ends with Thanos pulling it out and Vision dying.",
+    "src": "Avengers: Age of Ultron (2015); Avengers: Infinity War (2018)"
+   },
+   {
+    "t": "In the Stark Tower heist, Steve fights his own 2012 self and stuns him with the scepter. Afterwards Steve looks at his younger self and says \"That is America's ass.\"",
+    "src": "Avengers: Endgame (2019), the 2012 heist"
+   },
+   {
+    "t": "The scepter is also how Loki controls the room on the Helicarrier: it glows when the team argues. Bruce has the scepter in his hand as the fight goes on.",
+    "src": "The Avengers (2012), the Helicarrier lab"
+   },
+   {
+    "t": "Vision is born with the Mind Stone in his forehead in Age of Ultron, made from Ultron's body, J.A.R.V.I.S.'s code and Thor's lightning.",
+    "src": "Avengers: Age of Ultron (2015)"
+   }
+  ],
+  "cb-034": [
+   {
+    "t": "Bruce first appeared in a 1962 comic, where a gamma bomb test makes him the Hulk. Mark Ruffalo took the role in 2012, after Edward Norton played him in The Incredible Hulk (2008).",
+    "src": "The Incredible Hulk #1 (1962), by Stan Lee and Jack Kirby; The Incredible Hulk (2008); The Avengers (2012)"
+   },
+   {
+    "t": "Bruce wears the gauntlet because the Stones give off gamma radiation and he is the one built to take it. The arm he snaps with is badly burned, and he wears it in a sling for the rest of the film.",
+    "src": "Avengers: Endgame (2019), the compound and the final battle"
+   },
+   {
+    "t": "His story continued in She-Hulk: Attorney at Law, where his blood turns his cousin Jennifer Walters into the She-Hulk.",
+    "src": "She-Hulk: Attorney at Law (Disney+, 2022)"
+   },
+   {
+    "t": "Natasha finds Bruce in Kolkata, where he works as a doctor and has gone a year without changing. He tests her by shouting suddenly, and she draws her gun, which tells both of them how scared S.H.I.E.L.D. still is.",
+    "src": "The Avengers (2012), Kolkata"
+   },
+   {
+    "t": "His work with Tony starts in the same film: they become science friends on the Helicarrier.",
+    "src": "The Avengers (2012), the Helicarrier"
+   },
+   {
+    "t": "The snap brings back everyone lost five years earlier, and they reappear where they vanished, like Peter on Titan.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "He snaps inside the compound, and moments later Thanos's ship attacks it.",
+    "src": "Avengers: Endgame (2019)"
+   }
+  ],
+  "cb-035": [
+   {
+    "t": "\"Avengers Assemble!\" has been the team's battle cry in the comics for decades, and it was the title of the first film in the United Kingdom, where The Avengers was renamed Marvel Avengers Assemble.",
+    "src": "The Avengers (2012), UK release"
+   },
+   {
+    "t": "In Age of Ultron, Steve starts the line in the new compound at the end, says \"Avengers...\", and the film cuts to black.",
+    "src": "Avengers: Age of Ultron (2015), ending"
+   },
+   {
+    "t": "In Endgame, Sam's voice on the radio says \"On your left\" just before the portals open, the line Steve used on him during the run in The Winter Soldier.",
+    "src": "Avengers: Endgame (2019), the portals scene; Captain America: The Winter Soldier (2014)"
+   },
+   {
+    "t": "The full line is held for the moment when every portal has opened. Steve says it quietly, the hero army charges, and the battle begins.",
+    "src": "Avengers: Endgame (2019), the final battle"
+   },
+   {
+    "t": "The first film ended without it on purpose. Fury tells the Council the team will come back when they are needed, which is the promise Endgame keeps.",
+    "src": "The Avengers (2012), ending"
+   },
+   {
+    "t": "The cry also gave its name to the animated series Avengers Assemble (2013 to 2019). In the same Endgame battle, Steve has already lifted Mjolnir.",
+    "src": "Avengers Assemble (Disney XD, 2013 to 2019); Avengers: Endgame (2019)"
+   },
+   {
+    "t": "The line is the last thing Steve says before the charge, and the next shot is the armies running at Thanos's forces.",
+    "src": "Avengers: Endgame (2019)"
+   }
+  ],
+  "cb-038": [
+   {
+    "t": "Tony's famous Mark I was made, as Stane complains later, in a cave with a box of scraps.",
+    "src": "Iron Man (2008); Iron Man 2 (2010)"
+   },
+   {
+    "t": "The idea of a gauntlet comes from the comic The Infinity Gauntlet (1991). Endgame's Nano Gauntlet is built in the compound lab with Rocket, Bruce and Tony.",
+    "src": "The Infinity Gauntlet (1991), by Jim Starlin; Avengers: Endgame (2019)"
+   },
+   {
+    "t": "Tony's Mark 85 armor in the final battle is built on nanotech, which lets it pull the Stones from Thanos's gauntlet into his own hand.",
+    "src": "Avengers: Endgame (2019), the final battle"
+   },
+   {
+    "t": "Tony's first reactor is made from palladium in the cave. The arc reactor stays the core of every suit after that, and Tony builds a smaller one each time, until in Infinity War his suit forms out of a small nanotech housing in his chest.",
+    "src": "Iron Man (2008), the cave; Avengers: Infinity War (2018)"
+   },
+   {
+    "t": "Infinity War shows the new suit as Bleeding Edge, which forms around Tony from the chest and makes weapons on demand. In Endgame the same tech lets him build the gauntlet and steal the Stones.",
+    "src": "Avengers: Infinity War (2018); Avengers: Endgame (2019)"
+   },
+   {
+    "t": "Tony's last build is also for his family: he records a goodbye for Morgan in his helmet.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "The cave suit's first job is the escape from the Ten Rings.",
+    "src": "Iron Man (2008)"
+   }
+  ],
+  "cb-039": [
+   {
+    "t": "The 2012 Battle of New York has the famous circling shot of the six together on a street, back to back. In Endgame the line is hundreds long before Steve calls the charge.",
+    "src": "The Avengers (2012); Avengers: Endgame (2019)"
+   },
+   {
+    "t": "Wong, Shuri and Okoye are among those who arrive, alongside T'Challa, Valkyrie and Pepper.",
+    "src": "Avengers: Endgame (2019), the portals scene"
+   },
+   {
+    "t": "The scene is set at the ruins of the Avengers compound, which the 2014 Thanos destroys after following the team to the present.",
+    "src": "Avengers: Endgame (2019), the compound"
+   },
+   {
+    "t": "The 2012 team is six: Iron Man, Captain America, Thor, the Hulk, Black Widow and Hawkeye. By Endgame, the arrivals include Spider-Man, the Guardians of the Galaxy, Doctor Strange, Black Panther, Scarlet Witch, Ant-Man, the Wasp and Captain Marvel.",
+    "src": "The Avengers (2012); Avengers: Endgame (2019), the final battle"
+   },
+   {
+    "t": "The battle also has moments for many of them: Scarlet Witch faces Thanos alone, the women of the MCU line up to help Captain Marvel get the gauntlet across the field, and Thor and Steve fight with Mjolnir and Stormbreaker.",
+    "src": "Avengers: Endgame (2019), the final battle"
+   },
+   {
+    "t": "In 2012, the team won with six. In 2023, they needed everyone.",
+    "src": "Avengers: Endgame (2019)"
+   },
+   {
+    "t": "Howard the Duck is in the crowd of returned fighters, standing with the Ravagers.",
+    "src": "Avengers: Endgame (2019), the final battle"
+   },
+   {
+    "t": "The Asgardians arrive led by Valkyrie on her winged horse.",
+    "src": "Avengers: Endgame (2019)"
+   }
+  ],
+  "cb-040": [
+   {
+    "t": "Tony's last words before the snap answer Thanos's \"I am inevitable\". Strange looks at Tony and lifts one finger.",
+    "src": "Avengers: Endgame (2019), the final battle"
+   },
+   {
+    "t": "Infinity War had already shown what the Stones cost: Thanos's arm is scarred after his snap, and Tony's snap burns the right side of his body.",
+    "src": "Avengers: Infinity War (2018), Wakanda; Avengers: Endgame (2019)"
+   },
+   {
+    "t": "The 2008 line came at the end of the first film's press conference, where Tony was supposed to read the cover story.",
+    "src": "Iron Man (2008), the final press conference"
+   },
+   {
+    "t": "The words are also how the MCU began. In 2008 Robert Downey Jr. ended the film with the line, and it set the tone for a superhero who tells the world who he is. Endgame has him use the same words in his last moment as a hero.",
+    "src": "Iron Man (2008); Avengers: Endgame (2019)"
+   },
+   {
+    "t": "The end credits begin with the sound of Tony hammering metal in the cave, the sound of the Mark I being built.",
+    "src": "Avengers: Endgame (2019), end credits"
+   },
+   {
+    "t": "In the credits, the original six actors are shown with their signatures, a goodbye for the cast as well as the characters.",
+    "src": "Avengers: Endgame (2019), end credits"
+   },
+   {
+    "t": "Stan Lee's last cameo is in the same film, as a driver passing Camp Lehigh in 1970.",
+    "src": "Avengers: Endgame (2019)"
+   }
+  ]
+ }
+}

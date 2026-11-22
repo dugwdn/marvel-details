@@ -1,0 +1,60 @@
+{
+ "about": "Behind the character notes on character pages, written by tools/prerender-hubs.mjs. Each note names its source: a comic issue, a film or a series. No Wikipedia. Added 2026-11-22 for the thin page check.",
+ "notes": {
+  "ant-man": [
+   {"t": "Scott Lang first appeared in the comics in 1979 as a thief who steals the Ant-Man suit to save his sick daughter, Cassie. Hank Pym, the first Ant-Man from 1962, lets him keep it. The 2015 film kept that core: Scott is fresh out of prison for burgling his own employer, and Hank picks him to steal the Yellowjacket suit from Darren Cross.", "src": "The Avengers #181 (1979) and Marvel Premiere #47 (1979), by David Michelinie and John Byrne; Tales to Astonish #35 (1962), by Stan Lee and Jack Kirby; Ant-Man (2015)"},
+   {"t": "Paul Rudd has played Scott in five films. He sits out Infinity War under house arrest after Civil War, then is trapped in the Quantum Realm during the Snap. A rat stepping on the van's controls sets him free five years later, and he brings the time-heist idea to the Avengers compound.", "src": "Ant-Man and the Wasp (2018), mid-credits scene; Avengers: Endgame (2019), opening"}
+  ],
+  "black-panther": [
+   {"t": "T'Challa was the first Black superhero in mainstream American comics. He first appeared in a 1966 Fantastic Four story as the king of Wakanda, a hidden African nation built on a mound of vibranium, the metal that later went into Captain America's shield.", "src": "Fantastic Four #52 (1966), by Stan Lee and Jack Kirby"},
+   {"t": "Chadwick Boseman played him first in Captain America: Civil War, where his father, King T'Chaka, dies in the bombing in Vienna. Black Panther (2018) followed him home to take the throne and face his cousin Erik Killmonger. Boseman died in August 2020, and Black Panther: Wakanda Forever opens with T'Challa's funeral instead of recasting the role.", "src": "Captain America: Civil War (2016); Black Panther (2018); Black Panther: Wakanda Forever (2022)"}
+  ],
+  "captain-marvel": [
+   {"t": "Carol Danvers first appeared in 1968 as an Air Force officer working security at a base where the Kree hero Mar-Vell was stationed. An explosion with a Kree machine gave her powers, and she starred as Ms. Marvel from 1977. She took the name Captain Marvel in a 2012 series by Kelly Sue DeConnick.", "src": "Marvel Super-Heroes #13 (1968), by Roy Thomas and Gene Colan; Ms. Marvel #1 (1977); Captain Marvel #1 (2012), by Kelly Sue DeConnick and Dexter Soy"},
+   {"t": "Brie Larson's Carol is set in 1995. The film shows how Fury lost his eye (a Flerken named Goose scratches it) and where the name of the Avengers came from: Carol's call sign, Avenger. Infinity War's post-credits scene shows Fury paging her as he turns to dust, and she answers in Endgame by bringing Tony and Nebula home from space.", "src": "Captain Marvel (2019); Avengers: Infinity War (2018), post-credits scene; Avengers: Endgame (2019)"},
+   {"t": "Her story continues on Disney+: the Ms. Marvel finale ends with Kamala Khan's bangle swapping her place with Carol's, which leads straight into The Marvels.", "src": "Ms. Marvel, episode 6 (Disney+, 2022); The Marvels (2023)"}
+  ],
+  "doctor-strange": [
+   {"t": "Stephen Strange first appeared in 1963 in a five-page story drawn by Steve Ditko, whose strange shapes and other dimensions made the comic famous. He is a gifted, arrogant surgeon whose hands are ruined in a car crash, and he goes looking for a cure in the Himalayas and finds the Ancient One instead.", "src": "Strange Tales #110 (1963), by Stan Lee and Steve Ditko"},
+   {"t": "Benedict Cumberbatch's Strange follows that same path in Doctor Strange, then becomes the keeper of the Time Stone. In Infinity War he looks at 14,000,605 possible futures and finds only one where they win, which is why he gives Thanos the stone. In Endgame he opens the portals that bring every hero to the final battle.", "src": "Doctor Strange (2016); Avengers: Infinity War (2018); Avengers: Endgame (2019)"}
+  ],
+  "happy-hogan": [
+   {"t": "Happy Hogan first appeared in a 1963 Iron Man story as a former boxer whom Tony Stark hires as his driver after Happy saves his life at a racetrack. In the comics he later marries Pepper Potts.", "src": "Tales of Suspense #45 (1963), by Stan Lee and Don Heck"},
+   {"t": "Jon Favreau directed Iron Man and Iron Man 2 and cast himself as Happy. In Iron Man 3 Happy is Stark Industries' head of security and is badly hurt in the explosion at the Chinese Theatre, which sends Tony after the Mandarin. He then becomes Peter Parker's minder: he brings Peter home from Berlin in Spider-Man: Homecoming, and in Far From Home he helps Peter build a new suit.", "src": "Iron Man 3 (2013); Spider-Man: Homecoming (2017); Spider-Man: Far From Home (2019)"},
+   {"t": "After Tony's funeral, Happy sits with Morgan Stark on the porch and promises her all the cheeseburgers she wants, one of Tony's favorite foods since his first meal back from Afghanistan.", "src": "Avengers: Endgame (2019), the lake house; Iron Man (2008)"}
+  ],
+  "hawkeye": [
+   {"t": "Clint Barton first appeared in 1964 as a circus archer who was mistaken for a criminal, and he joined the Avengers the next year. Jeremy Renner first appears as Hawkeye in a cameo in Thor (2011), aiming down at the hammer site in New Mexico.", "src": "Tales of Suspense #57 (1964), by Stan Lee and Don Heck; Thor (2011)"}
+  ],
+  "nebula": [
+   {"t": "Nebula first appeared in a 1985 Avengers comic as a space pirate who claimed to be Thanos's granddaughter. The films made her his adopted daughter instead, raised beside Gamora and rebuilt with machine parts each time she lost a fight to her sister.", "src": "The Avengers #257 (1985), by Roger Stern and John Buscema; Guardians of the Galaxy Vol. 2 (2017)"},
+   {"t": "Karen Gillan has played her since Guardians of the Galaxy (2014). In Endgame she and Tony drift in space on the Benatar until Carol brings them home, and her past self's memory data gives the heist away: 2014 Nebula takes her place and brings Thanos to 2023. Present-day Nebula kills her past self at the compound.", "src": "Guardians of the Galaxy (2014); Avengers: Endgame (2019)"},
+   {"t": "She stays with the Guardians after that, and at the end of Vol. 3 she stays on Knowhere with Drax to help look after its people.", "src": "Guardians of the Galaxy Vol. 3 (2023), ending"}
+  ],
+  "obadiah-stane": [
+   {"t": "Obadiah Stane first appeared in a 1982 Iron Man comic as a businessman who plots to take over Stark International. In the comics he drives Tony back to drinking and steals the company before building the Iron Monger armor.", "src": "Iron Man #163 (1982), by Dennis O'Neil and Luke McKenzie; Iron Man #200 (1985)"},
+   {"t": "Jeff Bridges played him in Iron Man (2008). Stane is Tony's father's old partner and runs the company for him, and he is the one who paid the Ten Rings to kill Tony in Afghanistan. When Tony comes home and stops making weapons, Stane takes the arc reactor from Tony's chest and builds his own giant suit from the Mark I designs.", "src": "Iron Man (2008)"},
+   {"t": "The fight ends on the roof of Stark Industries. Pepper overloads the big arc reactor, and the blast drops Stane into it.", "src": "Iron Man (2008), the final battle"}
+  ],
+  "pepper-potts": [
+   {"t": "Virginia \"Pepper\" Potts first appeared in 1963 in the same story that introduced Happy Hogan, as Tony Stark's secretary. The comics gave her the Rescue armor in 2009.", "src": "Tales of Suspense #45 (1963), by Stan Lee and Don Heck; Invincible Iron Man #10 (2009), by Matt Fraction and Salvador Larroca"},
+   {"t": "Gwyneth Paltrow's Pepper becomes CEO of Stark Industries in Iron Man 2, survives Extremis in Iron Man 3, and wears her own armor, Rescue, into the final battle of Endgame.", "src": "Iron Man 2 (2010); Iron Man 3 (2013); Avengers: Endgame (2019)"}
+  ],
+  "scarlet-witch": [
+   {"t": "Wanda Maximoff first appeared in 1964 with her twin brother Pietro, as members of Magneto's Brotherhood of Evil Mutants. The next year they switched sides and joined the Avengers.", "src": "The X-Men #4 (1964), by Stan Lee and Jack Kirby; The Avengers #16 (1965)"},
+   {"t": "Elizabeth Olsen's Wanda gets her powers from the Mind Stone in Hydra's labs, a mid-credits reveal in The Winter Soldier, and loses Pietro in Sokovia. WandaVision shows her grief take over a whole town and gives her the name Scarlet Witch, and in Doctor Strange in the Multiverse of Madness she hunts America Chavez with the Darkhold before bringing Mount Wundagore down on herself.", "src": "Captain America: The Winter Soldier (2014), mid-credits scene; WandaVision (Disney+, 2021); Doctor Strange in the Multiverse of Madness (2022)"}
+  ],
+  "spider-man": [
+   {"t": "Peter Parker first appeared in 1962 in the last issue of Amazing Fantasy, where a spider bite gives him powers and the death of his Uncle Ben teaches him that with great power comes great responsibility.", "src": "Amazing Fantasy #15 (1962), by Stan Lee and Steve Ditko"},
+   {"t": "Tom Holland's Peter joins the MCU in Captain America: Civil War, when Tony recruits him for the airport fight. His three solo films carry Homecoming, Home, and Home in their titles. No Way Home ends with Strange's spell making the whole world forget Peter Parker.", "src": "Captain America: Civil War (2016); Spider-Man: Homecoming (2017); Spider-Man: Far From Home (2019); Spider-Man: No Way Home (2021)"}
+  ],
+  "thanos": [
+   {"t": "Thanos was created by Jim Starlin and first appeared in a 1973 Iron Man comic. In the comics he worships Death, and in The Infinity Gauntlet (1991) he wipes out half of all life to win her love. The films changed his reason to a plan to save the universe from running out of resources.", "src": "Iron Man #55 (1973), by Jim Starlin and Mike Friedrich; The Infinity Gauntlet (1991), by Jim Starlin, George Perez and Ron Lim; Avengers: Infinity War (2018)"},
+   {"t": "Josh Brolin played him by motion capture in Infinity War and Endgame. Damion Poitier played the first glimpse in The Avengers' mid-credits scene.", "src": "Avengers: Infinity War (2018); The Avengers (2012), mid-credits scene"}
+  ],
+  "war-machine": [
+   {"t": "James Rhodes first appeared in 1979 as Tony's pilot and friend, and he wore the Iron Man armor himself for a long stretch of the 1980s. The War Machine armor came in 1992.", "src": "Iron Man #118 (1979), by David Michelinie, Bob Layton and John Byrne; Iron Man #282 (1992)"},
+   {"t": "Terrence Howard played Rhodey in Iron Man (2008), and Don Cheadle took over from Iron Man 2 on. In Captain America: Civil War, a stray beam from Vision brings him down at the airport and breaks his back.", "src": "Iron Man (2008); Iron Man 2 (2010); Captain America: Civil War (2016)"}
+  ]
+ }
+}
