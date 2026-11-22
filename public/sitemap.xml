@@ -10,6 +10,54 @@
 
     <!-- Main Pages -->
     <url>
+        <loc>https://mcueastereggs.com/movies/</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/endgame-final-portal-detail</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/map/</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/scenes/</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/callbacks/</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/characters/</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/rabbit-holes/</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://mcueastereggs.com/about</loc>
         <lastmod>2026-10-05</lastmod>
         <changefreq>monthly</changefreq>
