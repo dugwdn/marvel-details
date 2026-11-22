@@ -3,6 +3,14 @@
 Newest first. Dates are when the change went live, or "not live" for
 merged-but-unpublished work.
 
+## 2026-11-22 (five new articles and two corrections, not live yet)
+- New articles, picked because Search Console shows our single-question articles (the green drink, Loki's scepter) get most of the site's search impressions: Who Is Natalie Rushman in Iron Man 2?, Who Is Whiplash?, How Tony Stark Built the Mark I in a Cave, How Did Vision Get the Mind Stone?, and The Avengers Shawarma Scene. Each one has an official trailer, a Sources list and internal links.
+- Green drink article: the unsourced claim that Robert Downey Jr. and Jon Favreau discussed the drink in interviews is gone; it now quotes the scene ("Chlorophyll.", about 21 minutes in) and explains the new element fix, with sources.
+- Theory "Cap could lift Mjolnir all along": it said the Russos answered in a Reddit AMA; that was Kevin Feige. Added his quote and writer Christopher Markus's opposite answer, both sourced.
+- Article text is 17px on every article page.
+- VisionQuest and Eyes of Wakanda trivia pages: new "About this title" notes (release, cast, premise, sources), so both now pass the thin page check and are open to Google.
+- sitemap.xml: added 10 trivia pages that were indexable but missing from it (Avengers: Doomsday, Blade, I Am Groot, Ironheart, The Defenders, Werewolf by Night, WHIH Newsfront, Wonder Man, VisionQuest, Eyes of Wakanda).
+
 ## 2026-11-21 (site sweep fixes, not live yet)
 - Ad boxes: AdSense was holding about 390px of blank space for each unit it did not fill (the account is not approved yet). Unfilled units are now hidden (Google's documented fix), so the dashed "Ad space" boxes are back to their planned size.
 - Phones: the top ad box takes no room until an ad fills it, so each page's words start on the first screen.

@@ -269,6 +269,12 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://mcueastereggs.com/trivia/avengers-doomsday</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://mcueastereggs.com/trivia/avengers-endgame</loc>
         <lastmod>2026-10-15</lastmod>
         <changefreq>monthly</changefreq>
@@ -294,6 +300,12 @@
     </url>
     <url>
         <loc>https://mcueastereggs.com/trivia/black-widow</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/trivia/blade</loc>
         <lastmod>2026-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -407,6 +419,12 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://mcueastereggs.com/trivia/i-am-groot</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://mcueastereggs.com/trivia/inhumans</loc>
         <lastmod>2026-10-15</lastmod>
         <changefreq>monthly</changefreq>
@@ -432,6 +450,12 @@
     </url>
     <url>
         <loc>https://mcueastereggs.com/trivia/iron-man-3</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/trivia/ironheart</loc>
         <lastmod>2026-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -521,6 +545,12 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://mcueastereggs.com/trivia/the-defenders</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://mcueastereggs.com/trivia/the-falcon-and-the-winter-soldier</loc>
         <lastmod>2026-10-15</lastmod>
         <changefreq>monthly</changefreq>
@@ -593,7 +623,25 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://mcueastereggs.com/trivia/werewolf-by-night</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://mcueastereggs.com/trivia/what-if</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/trivia/whih-newsfront-web-series</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/trivia/wonder-man</loc>
         <lastmod>2026-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -1605,6 +1653,48 @@
     </url>
     <url>
         <loc>https://mcueastereggs.com/trivia/wonder-man</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/natalie-rushman-black-widow-iron-man-2</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/iron-man-2-whiplash-ivan-vanko</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/iron-man-mark-i-cave-box-of-scraps</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/how-vision-got-the-mind-stone</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/articles/avengers-shawarma-post-credits-scene</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/trivia/visionquest</loc>
+        <lastmod>2026-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://mcueastereggs.com/trivia/eyes-of-wakanda</loc>
         <lastmod>2026-11-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
