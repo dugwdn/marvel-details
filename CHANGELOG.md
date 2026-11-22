@@ -8,6 +8,8 @@ merged-but-unpublished work.
 - Green drink article: the unsourced claim that Robert Downey Jr. and Jon Favreau discussed the drink in interviews is gone; it now quotes the scene ("Chlorophyll.", about 21 minutes in) and explains the new element fix, with sources.
 - Theory "Cap could lift Mjolnir all along": it said the Russos answered in a Reddit AMA; that was Kevin Feige. Added his quote and writer Christopher Markus's opposite answer, both sourced.
 - Article text is 17px on every article page.
+- VisionQuest and Eyes of Wakanda trivia pages: new "About this title" notes (release, cast, premise, sources), so both now pass the thin page check and are open to Google.
+- sitemap.xml: added 10 trivia pages that were indexable but missing from it (Avengers: Doomsday, Blade, I Am Groot, Ironheart, The Defenders, Werewolf by Night, WHIH Newsfront, Wonder Man, VisionQuest, Eyes of Wakanda).
 
 ## 2026-11-21 (site sweep fixes, not live yet)
 - Ad boxes: AdSense was holding about 390px of blank space for each unit it did not fill (the account is not approved yet). Unfilled units are now hidden (Google's documented fix), so the dashed "Ad space" boxes are back to their planned size.
