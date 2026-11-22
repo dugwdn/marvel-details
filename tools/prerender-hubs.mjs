@@ -60,4 +60,24 @@ fill('map/index.html', 'map-contents', `<p><strong>On the map:</strong> ${map.no
   return n.length ? `<p><strong>${name}:</strong> ${n.map(x => esc(x.label) + (x.year ? ` (${x.year})` : '')).join(', ')}.</p>` : '';
 }).join('\n')}`);
 
-console.log('prerender-hubs: rabbit holes, callbacks, deleted scenes, character arcs and the map list written');
+// Character pages: the arc line under the name (it used to say "loading"), the milestones as a list inside the
+// timeline box (timeline.js draws its cards over it), and the sourced "Behind the character" notes.
+const cnotesFile = path.join(ROOT, 'data', 'character-notes.json');
+const CNOTES = fs.existsSync(cnotesFile) ? JSON.parse(fs.readFileSync(cnotesFile, 'utf8')).notes : {};
+const cite = c => c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.src)}</a>` : esc(c.src);
+for (const c of chars) {
+  const file = `characters/${c.slug}.html`;
+  if (!fs.existsSync(path.join(ROOT, file))) continue;
+  fill(file, 'character-timeline', `<ol class="prerender-list">\n${(c.milestones || []).map(m =>
+    `<li><strong>${esc(m.movie)} (${m.year}): ${esc(m.keyMoment)}.</strong> ${esc(m.description)}</li>`).join('\n')}\n</ol>`);
+  const f = path.join(ROOT, file);
+  let s = fs.readFileSync(f, 'utf8');
+  s = s.replace(/<p class="character-thesis">[^<]*<\/p>/, `<p class="character-thesis">${esc(c.arcThesis)}.</p>`);
+  const n = CNOTES[c.slug] || [];
+  const block = n.length ? `<!-- notes:start -->\n        <section class="hub-notes char-notes" aria-labelledby="h-char-bg"><h3 id="h-char-bg">Behind the character</h3>\n${n.map(x => `            <p>${esc(x.t)} <span class="note-src">Source: ${cite(x)}</span></p>`).join('\n')}\n        </section>\n<!-- notes:end -->` : '<!-- notes:start --><!-- notes:end -->';
+  if (s.includes('<!-- notes:start -->')) s = s.replace(/<!-- notes:start -->[\s\S]*?<!-- notes:end -->/, block);
+  else s = s.replace(/(<section class="timeline-section">[\s\S]*?<\/section>)/, `$1\n${block}`);
+  fs.writeFileSync(f, s);
+}
+
+console.log('prerender-hubs: rabbit holes, callbacks, deleted scenes, character arcs, character pages and the map list written');

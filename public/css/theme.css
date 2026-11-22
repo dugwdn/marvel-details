@@ -1422,3 +1422,4 @@ html body .home-lead .hl-feed b { color: #ffd60a !important; }
 .hub-notes a, .prerender-list a, .prerender-h a { text-decoration: none; font-weight: 700; }
 .prerender-list { margin: 0 0 1.5rem; padding-left: 1.25rem; }
 .prerender-list li { margin: 0 0 .5rem; }
+.char-notes .note-src { display: block; margin-top: .25rem; font-size: 1.0625rem; color: #555; }
