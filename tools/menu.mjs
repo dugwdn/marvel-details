@@ -31,6 +31,13 @@ export const MENU = [
   ['Quiz', '/quiz/', 'quiz'],
 ];
 
+// Phones (under 641px) show four tabs instead of all twelve (Doug picked option B, 2026-11-22): these three
+// sections plus More, which opens all twelve. Picked by phone page views in GA4, 2026-08-24 to 2026-11-21
+// (Characters 45, Theories 16, Rabbit Holes 14 of 241). Mockup: /mnt/project-files/Marvel-Details/phone-menu-mockups-2026-11-22/.
+export const PHONE_TABS = ['characters', 'theories', 'rabbit-holes'];
+// Opens and closes the More sheet on phones.
+const MENU_JS = '<script type="module" src="/js/menu.js"></script>';
+
 const FONT =
   '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
   '    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
@@ -129,9 +136,15 @@ export function menuFor(rel) {
   const isSectionHome = rel === 'index.html' || rel === 'about.html' || rel === `${section}/index.html`;
   const links = MENU.map(([label, href, key]) => {
     const current = key === section ? ` aria-current="${isSectionHome ? 'page' : 'true'}"` : '';
-    return `        <a href="${href}"${current}>${label}</a>`;
+    // Phone tabs carry data-tab; every other section link stays plain and hides on phones until More opens.
+    const tab = PHONE_TABS.includes(key) ? ' data-tab' : '';
+    return `        <a href="${href}"${tab}${current}>${label}</a>`;
   });
-  return `<nav class="site-nav" aria-label="Main menu">\n${links.join('\n')}\n    </nav>`;
+  // The More button only shows on phones; without JavaScript it is a link to the home page, which lists every section.
+  const more = '        <a class="site-nav-more" href="#site-nav" role="button" aria-expanded="false" aria-controls="site-nav">' +
+    '<span class="site-nav-more-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>More</span>' +
+    '<span class="site-nav-more-close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Close</span></a>';
+  return `<nav class="site-nav" id="site-nav" aria-label="Main menu">\n${links.join('\n')}\n${more}\n    </nav>`;
 }
 
 // Magnifying glass with a "!" in it: the site's own mark, drawn here.
@@ -246,6 +259,7 @@ export function addMenu(html, rel) {
   if (!html.includes('/js/members.js')) html = html.replace('</body>', `    ${MEMBERS}\n</body>`);
   if (!html.includes('/js/search.js')) html = html.replace('</body>', `    ${SEARCH}\n</body>`);
   if (!html.includes('/js/keyboard.js')) html = html.replace('</body>', `    ${KEYBOARD}\n</body>`);
+  if (!html.includes('/js/menu.js')) html = html.replace('</body>', `    ${MENU_JS}\n</body>`);
   if (!html.includes('/js/signin-popup.js')) html = html.replace('</body>', `    ${SIGNIN_POPUP}\n</body>`);
   html = viewportFor(html);
   // Remove the project links from a previous run (every copy) first.

@@ -261,3 +261,10 @@ three mockups.
   authenticated in Brevo with its Brevo code and DKIM records in Cloudflare DNS; the existing DMARC stays.
 - **Consequences:** free, 300 emails a day shared by all of Doug's Brevo senders. A Brevo key with no
   successful call for 90 days is deactivated; a free account with no activity for 4 months is deleted.
+
+## ADR-020: Four menu tabs on phones (2026-11-22)
+
+**Context.** The 11/21 site sweep found that on a 390px phone the twelve menu buttons (2 x 6) took 297px of an 844px screen, so a visitor from Google saw the menu, not the page (title at 435px).
+**Decision.** Doug picked option B from the mockups (`/mnt/project-files/Marvel-Details/phone-menu-mockups-2026-11-22/`): under 641px, one row of four equal buttons, three sections plus More. More opens all twelve sections as a sheet under the header bar, with Close at the end. The three sections are the most viewed on phones in GA4 (2026-08-24 to 2026-11-21: Characters 45, Theories 16, Rabbit Holes 14 of 241 phone views); change `PHONE_TABS` in tools/menu.mjs when the numbers change. More lights yellow when the current page is one of the hidden sections. Desktop is unchanged.
+**Trade-off.** Nine sections take one more tap on phones. The numbers behind the pick are small (241 phone views in 90 days), so check them again after a few months.
+

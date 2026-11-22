@@ -314,7 +314,7 @@
     </style>
     <meta name="google-adsense-account" content="ca-pub-7178251279168670">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/theme.css?v=9d9c49d8">
+    <link rel="stylesheet" href="/css/theme.css?v=2b54c127">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
@@ -344,19 +344,20 @@
         <button type="button" class="site-search-toggle" aria-label="Search" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg></button>
         <a class="site-member" href="/me/"><span class="site-member-text">My Marvel</span></a>
     </header>
-    <nav class="site-nav" aria-label="Main menu">
+    <nav class="site-nav" id="site-nav" aria-label="Main menu">
         <a href="/boards/">Boards</a>
         <a href="/articles/">Articles</a>
         <a href="/movies/">Movies</a>
         <a href="/scenes/">Deleted Scenes</a>
         <a href="/callbacks/">Callbacks</a>
-        <a href="/characters/" aria-current="true">Characters</a>
+        <a href="/characters/" data-tab aria-current="true">Characters</a>
         <a href="/map/">Universe Map</a>
         <a href="/trivia/">Trivia</a>
-        <a href="/theories/">Theories</a>
-        <a href="/rabbit-holes/">Rabbit Holes</a>
+        <a href="/theories/" data-tab>Theories</a>
+        <a href="/rabbit-holes/" data-tab>Rabbit Holes</a>
         <a href="/upcoming/">Coming Soon</a>
         <a href="/quiz/">Quiz</a>
+        <a class="site-nav-more" href="#site-nav" role="button" aria-expanded="false" aria-controls="site-nav"><span class="site-nav-more-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>More</span><span class="site-nav-more-close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Close</span></a>
     </nav>
     <div class="ad-box" data-ad-box="top" data-ad-placeholder="top" data-ad-stamp><div class="ad-label">Advertisement</div><div class="ad-ph">Ad space</div></div>
 
@@ -536,5 +537,6 @@
     <script type="module" src="/js/keyboard.js?v=bd0f7407"></script>
     <script type="module" src="/js/signin-popup.js?v=19dab9ed"></script>
     <script type="module" src="/js/discuss.js?v=46921818"></script>
+    <script type="module" src="/js/menu.js?v=fdaa8f05"></script>
 </body>
 </html>
